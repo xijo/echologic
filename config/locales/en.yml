@@ -2,6 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+
+  some: bla
   
   static_content:
   
@@ -9,7 +11,7 @@ en:
     echologic:
       title: echoLogic
       subtitle: The Mission
-      mission_statement: echoLogic is a network of free minds united to realize echo: the planetary agora.
+      mission_statement: echoLogic is a network of free minds united to realize echo - the planetary agora.
       agora_tooltip: Agora was the central place of ... in the cradle of democracy.
       video: Coming later... Can you help?
       header: echo means end of powerlessness! echo means beginning of self-determination!
