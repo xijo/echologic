@@ -9,19 +9,28 @@ en:
     echologic:
       title: echoLogic
       subtitle: The Mission
-      mission_statement: echoLogic is a network of free minds united to realize echo - the planetary agora.
-      agora_tooltip: Agora was the central place of ... in the cradle of democracy.
+      mission_statement: 'echoLogic is a network of free minds united to realize echo: the planetary agora.'
+      agora_tooltip: >-
+        Agora was the central place of ... in the cradle of democracy.
       video: Coming later... Can you help?
-      header: echo means end of powerlessness! echo means beginning of self-determination!
-      aid: ... Short text for Attention, Interest, Desire ...
-      action: Build our future society! Voice your view! Make an echo!
+      header: |-
+        echo means end of powerlessness!
+        echo means beginning of self-determination!
+      aid: >-
+        Short text for Attention, Interest, Desire ...
+      action: |-
+        Build our future society!
+        Voice your view!
+        Make an echo!
+      
 
     # Static content for the echo main menu point
     echo:
       title: echo
       subtitle: The Platform
-      description: "echo unites technical innovation scientific knowledge into a unique concept... 
-Platform-wide concept to create a Win-Win situation for all parties including all other internet platforms..."  
+      description: >-
+        echo unites technical innovation scientific knowledge into a unique concept... 
+        Platform-wide concept to create a Win-Win situation for all parties including all other internet platforms...  
       
       discuss:
         title: "Decide"
