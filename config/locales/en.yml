@@ -2,8 +2,6 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-
-  some: bla
   
   static_content:
   
@@ -22,15 +20,17 @@ en:
     echo:
       title: echo
       subtitle: The Platform
+      description: "echo unites technical innovation scientific knowledge into a unique concept... 
+Platform-wide concept to create a Win-Win situation for all parties including all other internet platforms..."  
       
       discuss:
-        title: Decide
+        title: "Decide"
         
       connect:
-        title: Connect
+        title: "Connect"
       
       act:
-        title: Act
+        title: "Act"
         
     # Static content for the echocracy main menu point
     echocracy:
