@@ -1,0 +1,2 @@
+module StaticContentHelper
+end
