@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title><%= t('.title') + " - " + t('.subtitle') %></title>
+	</head>
+	<body>
+		<h1><%= t('.title') + " - " + t('.subtitle') %></h1>
+		<ul>
+			<li><%= link_to t('static_content.echo.discuss.title'), :action => "echo_discuss" %></li>
+			<li><%= link_to t('static_content.echo.connect.title'), :action => "echo_connect" %></li>
+			<li><%= link_to t('static_content.echo.act.title'), :action => "echo_act" %></li>
+		</ul>
+	</body>
+</html>
