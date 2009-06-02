@@ -2,4 +2,60 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  
+  static_content:
+  
+    # Static content for the echoLogic main menu point
+    echologic:
+      title: echoLogic
+      subtitle: The Mission
+      mission_statement: echoLogic is a network of free minds united to realize echo: the planetary agora.
+      agora_tooltip: Agora was the central place of ... in the cradle of democracy.
+      video: Coming later... Can you help?
+      header: echo means end of powerlessness! echo means beginning of self-determination!
+      aid: ... Short text for Attention, Interest, Desire ...
+      action: Build our future society! Voice your view! Make an echo!
+
+    # Static content for the echo main menu point
+    echo:
+      title: echo
+      subtitle: The Platform
+      
+      discuss:
+        title: Decide
+        
+      connect:
+        title: Connect
+      
+      act:
+        title: Act
+        
+    # Static content for the echocracy main menu point
+    echocracy:
+      title: echocracy
+      subtitle: The Actors
+      
+      citizens:
+        title: Engaged Citizens
+        
+      experts:
+        title: Experts & Scientists
+        
+      orgas:
+        title: NGOs and Political Organisations
+        
+    # Static content for the echonomy main menu point
+    echonomy:
+      title: echonomy
+      subtitle: The Philosophy
+      
+      business_model:
+        title: Your-profit
+        
+      open_source:
+        title: Open Source
+        
+      public_property:
+        title: Public Property
+           
+     
