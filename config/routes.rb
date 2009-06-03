@@ -1,7 +1,24 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
-  map.echologic '/echologic', :controller => 'static_content', :action => 'echologic'  
+  map.echologic 'echologic', :controller => 'static_content', :action => 'echologic'
+  
+  map.with_options :controller => 'static_content' do |static|
+    # echo - the platform
+    static.echo_discuss 'echo/discuss', :action => 'echo_discuss'
+    static.echo_connect 'echo/connect', :action => 'echo_connect'
+    static.echo_act 'echo/act', :action => 'echo_act'
+    
+    # echocracy
+    static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
+    static.echocracy_experts 'echocracy/experts', :action => 'echocracy_experts'
+    static.echocracy_orgs 'echocracy/orgas', :action => 'echocracy_orgas'
+    
+    # echonomy
+    static.echonomy_business_model 'echonomy/business_model', :action => 'echonomy_business_model'
+    static.echonomy_open_source 'echonomy/open_source', :action => 'echonomy_open_source'
+    static.echonomy_public_property 'echonomy/public_property', :action => 'echonomy_public_property'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
