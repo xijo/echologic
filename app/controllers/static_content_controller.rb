@@ -2,7 +2,7 @@ class StaticContentController < ApplicationController
   
   # Default page redirected to echoLogic - The Mission
   def index
-    echologic
+    redirect_to (:action => 'echologic')
   end
   
   # Start page: echoLogic - The Mission

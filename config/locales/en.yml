@@ -32,41 +32,41 @@ en:
         echo unites technical innovation scientific knowledge into a unique concept... 
         Platform-wide concept to create a Win-Win situation for all parties including all other internet platforms...  
       
-      discuss:
-        title: "Decide"
+    echo_discuss:
+      title: "Decide"
         
-      connect:
-        title: "Connect"
+    echo_connect:
+      title: "Connect"
       
-      act:
-        title: "Act"
+    echo_act:
+      title: "Act"
         
     # Static content for the echocracy main menu point
     echocracy:
       title: echocracy
       subtitle: The Actors
       
-      citizens:
-        title: Engaged Citizens
+    echocracy_citizens:
+      title: Engaged Citizens
         
-      experts:
-        title: Experts & Scientists
+    echocracy_experts:
+      title: Experts & Scientists
         
-      orgas:
-        title: NGOs and Political Organisations
+    echocracy_orgas:
+      title: NGOs and Political Organisations
         
     # Static content for the echonomy main menu point
     echonomy:
       title: echonomy
       subtitle: The Philosophy
       
-      business_model:
-        title: Your-profit
+    echonomy_business_model:
+      title: Your-profit
         
-      open_source:
-        title: Open Source
+    echonomy_open_source:
+      title: Open Source
         
-      public_property:
-        title: Public Property
+    echonomy_public_property:
+      title: Public Property
            
      
