@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>StaticContents: <%= controller.action_name %></title>
+  	<%= stylesheet_link_tag 'echologic' %>
+    <%= javascript_include_tag 'shadedborder' %>
+  </head>
+  <body>
+  
+  <p style="color: green"><%= flash[:notice] %></p>
+  
+  <div style="float:left;">
+  	<%= image_tag 'page/headlogo_echologic.png' %>
+  </div>
+  <div>
+  	<%= image_tag 'page/invitebubble_left.png' %>
+  	<%= image_tag 'page/invitebubble_right.png' %>
+  </div>
+  
+  <%= yield %>
+  
+  </body>
+</html>
