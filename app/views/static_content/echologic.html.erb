@@ -1,15 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>echoLogic</title>
-	</head>
-	<body>
-		<h1><%= t('.title') %></h1>
-		<ul>
-			<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
-			<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
-			<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
-		</ul>
-	</body>
-</html>
+<div id="statementContainer">
+  <%= image_tag 'page/statement_claim.png' %>
+</div>
+
+<div id="videoContainer">
+  the promotion video goes here..
+</div>
+
+<div id="echologicContainer">
+  <%= render :partial => "menu" %>
+  <h1><%= t('.title') %></h1>
+  <ul>
+  	<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
+  	<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
+  	<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
+  </ul>
+</div>
+
+<script language="javascript" type="text/javascript">
+  var border = RUZEE.ShadedBorder.create({ corner:18, shadow:36, border:1 });
+  border.render('statementContainer');
+  border.render('videoContainer');
+  border.render('echologicContainer');
+</script>
