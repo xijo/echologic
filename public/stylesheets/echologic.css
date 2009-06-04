@@ -1,13 +1,6 @@
 body { 
 	background:		#a8c642 url(../images/page/background.png) repeat-x;
 	margin: 			0px;
-	color: 				#333;
-}
-
-#staticMenuButton {
-	background:		url(../images/page/staticMenu/sidemenubutton_off.png) no-repeat;
-	background-position: 10px 0px;
-  width:        285px;
 }
 
 #statementContainer {
@@ -15,7 +8,6 @@ body {
   width:      600px;
   margin:     0 0 0 20px;
   padding:    15px;
-  color:      #fff;
   clear:      both;
   float:      left;
 }
@@ -25,7 +17,6 @@ body {
   width:      300px;
   margin:     0 20px 0 0;
   padding:    15px;
-  color:      #fff;
   float:      left;
 }
 
@@ -33,9 +24,33 @@ body {
   width:      930px;
   margin:     0 20px 0 20px;
   padding:    15px;
-  color:      #fff;
   clear:      both;
 }
+
+#staticMenuButton {
+	background:		url(../images/page/staticMenu/sidemenubutton_off.png) no-repeat;
+	background-position: 10px 0px;
+  width:        285px;
+}
+
+.staticMenuButton2 {
+  width:      250px;
+  height:     55px;
+  overflow:   visible;
+}
+
+.staticMenuButtonImage {
+  position:    relative;
+  top:         -22px;
+  left:        -40px;
+}
+
+#staticMenu {
+  float:      right;
+}
+
+.staticMenuButton2 .sb-border { background:#bac8d0 !important; }
+.staticMenuButton2:hover .sb-inner { background:#bbb !important; }
 
 #statementContainer .sb-inner,  #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
 #statementContainer .sb-shadow, #videoContainer .sb-shadow, #echologicContainer .sb-shadow { background:#444; }
