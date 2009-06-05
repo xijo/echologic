@@ -1,6 +1,18 @@
 body { 
 	background:		#a8c642 url(../images/page/background.png) repeat-x;
 	margin: 			0px;
+  padding:      0px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;  
+}
+
+#HeadLogo {
+  background:transparent url(../images/page/headlogo_echologic.png) no-repeat scroll 0 0;
+  border:0 solid black;
+  height:110px;
+  position:absolute;
+  width:225px;
+  z-index:-1;
 }
 
 #statementContainer {
@@ -22,48 +34,45 @@ body {
 
 #echologicContainer {
   width:      930px;
+  min-height: 600px; 
   margin:     0 20px 0 20px;
   padding:    15px;
   clear:      both;
 }
 
-#staticMenuButton {
-	background:		url(../images/page/staticMenu/sidemenubutton_off.png) no-repeat;
-	background-position: 10px 0px;
-  width:        285px;
-}
-
-.staticMenuButton2 {
+.staticMenuButton {
   width:      250px;
   height:     55px;
   overflow:   visible;
+  margin:     0 0 20px 0;
 }
 
 .staticMenuButtonImage {
-  position:    relative;
+  position:    absolute;
   top:         -22px;
   left:        -40px;
+}
+
+.staticMenuButtonImage img {
+  vertical-align: middle;
 }
 
 #staticMenu {
   float:      right;
 }
 
-.staticMenuButton2 .sb-border { background:#bac8d0 !important; }
-.staticMenuButton2:hover .sb-inner { background:#bbb !important; }
+.staticMenuButton .sb-border { background:#bac8d0 !important; }
+/*
+.staticMenuButton:hover .sb-border { background:#bbb !important; }
+*/
 
 #statementContainer .sb-inner,  #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
 #statementContainer .sb-shadow, #videoContainer .sb-shadow, #echologicContainer .sb-shadow { background:#444; }
 #statementContainer .sb-border, #videoContainer .sb-border, #echologicContainer .sb-border { background:#7ab031; }
 
-div {
-  margin:	      0px;
-}
-
-body, p, ol, ul, td {
+p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
-  line-height: 18px;
 }
 
 pre {

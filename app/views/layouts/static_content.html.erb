@@ -10,9 +10,7 @@
     <%= javascript_include_tag 'shadedborder' %>
   </head>
   <body>
-  
-  <p style="color: green"><%= flash[:notice] %></p>
-  
+
   <div style="float:left;">
   	<%= image_tag 'page/headlogo_echologic.png' %>
   </div>
@@ -22,6 +20,10 @@
   </div>
   
   <%= yield %>
+  
+    
+  <p style="color: green"><%= flash[:notice] %></p>
+  
   
   </body>
 </html>
