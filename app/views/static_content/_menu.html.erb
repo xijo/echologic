@@ -1,29 +1,46 @@
 <div id="staticMenu">
-  <div id="staticMenuButton">
-    <%= image_tag 'page/staticMenu/sidemenuicon_mission_off.png' %>
-    <div style="float:left;"><%= link_to 'echologic', echologic_path %></div>
-    
-  </div>
   
-  <div class="staticMenuButton2">
-    <div class="staticMenuButtonImage" style="float:left;">
-      <%= image_tag 'page/staticMenu/sidemenuicon_mission_off.png' %>
+  <div class="staticMenuButton">
+    <div class="staticMenuButtonImage">
+      <%= image_tag 'page/staticMenu/sidemenuicon_mission_off.png' %> 
+      <%= link_to 'echologic - The Mission', echologic_path %>
     </div>
-    <div style="float:left;">
-      blabla
+    <div>
+      
     </div>
   </div>
   
+  <div class="staticMenuButton">
+    <div class="staticMenuButtonImage">
+      <%= image_tag 'page/staticMenu/sidemenuicon_platform_off.png' %>
+    </div>
+    <div>
+      <%= link_to 'echo - The Platform', echo_path %>
+    </div>
+  </div>
+  
+  <div class="staticMenuButton">
+    <div class="staticMenuButtonImage">
+      <%= image_tag 'page/staticMenu/sidemenuicon_actors_off.png' %>
+    </div>
+    <div>
+      <%= link_to 'echocracy - The Actors', echocracy_path %>
+    </div>
+  </div>
   
   
-  <%= link_to 'echologic - The Mission', echologic_path %><br/>
-  <%= link_to 'echo - The Platform', echo_path %><br/>
-  <%= link_to 'echocracy - The Actors', echocracy_path %><br/>
-  <%= link_to 'echonomy - Your Profit', echonomy_path %>
+  <div class="staticMenuButton">
+    <div class="staticMenuButtonImage">
+      <%= image_tag 'page/staticMenu/sidemenuicon_philosophy_off.png' %>
+    </div>
+    <div>
+      <%= link_to 'echonomy - Your Profit', echonomy_path %>
+    </div>
+  </div>
   
   <script language="javascript" type="text/javascript">
     var border = RUZEE.ShadedBorder.create({ corner:10, border:1 });
-    border.render($$('#staticMenu .staticMenuButton2'));
+    border.render($$('#staticMenu .staticMenuButton'));
   </script>
   
 </div>
