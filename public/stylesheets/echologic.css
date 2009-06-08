@@ -2,17 +2,50 @@ body {
 	background:		#a8c642 url(../images/page/background.png) repeat-x;
 	margin: 			0px;
   padding:      0px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;  
+  font-family:  verdana, arial, helvetica, sans-serif;
+  font-size:    13px;  
+}
+
+#headlogo {
+  float:       left;
+  margin:      0 0 0 20px;
+}
+
+#invitebubble {
+  position:    relative;  
+  float:       left;
+  background:  url(../images/page/invitebubble_left.png) no-repeat;
+  left:        -25px;
+}
+
+#invitebubble span {
+  background:  transparent url(../images/page/invitebubble_right.png) no-repeat scroll right top;
+  color:       #fff;
+  display:     block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size:   9pt;
+  height:      65px;
+  left:        29px;
+  padding:     20px 30px 0 15px;
+  position:    relative;
 }
 
 #statementContainer {
   min-height: 160px;
-  width:      600px;
+  width:      60%;
+  min-width:  580px;
   margin:     20px 0 0 20px;
-  padding:    15px;
   clear:      both;
   float:      left;
+  white-space:nowrap;  
+}
+
+#statement {
+  margin:     0px;
+  margin:     15px;
+  height:     160px;
+  background:  transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
+  
 }
 
 #videoContainer {
@@ -21,6 +54,7 @@ body {
   margin:     20px 20px 0 0;
   padding:    15px;
   float:      left;
+  white-space:nowrap;
 }
 
 #echologicContainer {
@@ -57,7 +91,11 @@ body {
 .staticMenuButton:hover .sb-border { background:#bbb !important; }
 */
 
-#statementContainer .sb-inner,  #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
+#statementContainer .sb-inner {
+  background:    #fff;
+}
+
+#videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
 #statementContainer .sb-shadow, #videoContainer .sb-shadow, #echologicContainer .sb-shadow { background:#444; }
 #statementContainer .sb-border, #videoContainer .sb-border, #echologicContainer .sb-border { background:#7ab031; }
 
