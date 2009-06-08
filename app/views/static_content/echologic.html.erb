@@ -1,5 +1,7 @@
 <div id="statementContainer">
-  <%= image_tag 'page/statement_claim.png' %>
+  <div id="statement">
+    <%= image_tag 'page/statement_claim.png' %>
+  </div>    
 </div>
 
 <div id="videoContainer">
@@ -17,7 +19,7 @@
 </div>
 
 <script language="javascript" type="text/javascript">
-  var border = RUZEE.ShadedBorder.create({ corner:18, shadow:36, border:1 });
+  var border = RUZEE.ShadedBorder.create({ corner:14, shadow:30, border:1 });
   border.render('statementContainer');
   border.render('videoContainer');
   border.render('echologicContainer');
