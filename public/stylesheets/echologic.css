@@ -3,7 +3,8 @@ body {
 	margin: 			0px;
   padding:      0px;
   font-family:  verdana, arial, helvetica, sans-serif;
-  font-size:    13px;  
+  font-size:    13px;
+  color:        #1A4864;
 }
 
 #headlogo {
@@ -34,67 +35,90 @@ body {
   min-height: 160px;
   width:      60%;
   min-width:  580px;
-  margin:     20px 0 0 20px;
+  margin:     20px 15px 15px 30px;
   clear:      both;
   float:      left;
   white-space:nowrap;  
 }
 
 #statement {
-  margin:     0px;
   margin:     15px;
   height:     160px;
   background:  transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
-  
 }
 
 #videoContainer {
   min-height: 160px;
-  width:      300px;
-  margin:     20px 20px 0 0;
+  width:      30%;
+  min-width:  300px;
+  margin:     20px 20px 15px 0px;
   padding:    15px;
   float:      left;
-  white-space:nowrap;
+}
+
+#echologicPromoContainer {
+  min-width:  1000px;
+  z-index:    1;
 }
 
 #echologicContainer {
-  width:      930px;
+  width:      90%;
   min-height: 600px; 
-  margin:     0 20px 0 20px;
+  margin:     30px 20px 0 30px;
   padding:    15px;
   clear:      both;
 }
 
-.staticMenuButton {
-  width:      250px;
-  height:     55px;
-  overflow:   visible;
-  margin:     0 0 20px 0;
+.staticMenuButton:hover {
+  background:  url(../images/page/staticMenu/sidemenubutton_over.png) no-repeat !important;
+  display:     block;
+  height:      67px;
+  width:       225px;
+  padding:     30px 0 0 55px;
 }
 
-.staticMenuButtonImage {
-  position:    absolute;
-  top:         -22px;
-  left:        -40px;
+.staticMenuButton, .staticMenuButton:visited {
+  background:  url(../images/page/staticMenu/sidemenubutton_off.png) no-repeat;
+  display:     block;
+  height:      67px;
+  width:       225px;
+  padding:     30px 0 0 55px;
 }
 
-.staticMenuButtonImage img {
-  vertical-align: middle;
+#staticMenu a {
+  text-decoration: none;
+  overflow:    visible;  
+}
+
+#staticMenu a img {
+  float:       left;
+  position:    relative;
+  top:         -30px;
+  border:      0;
+  left:        -80px;
+}
+
+#staticMenu a .staticMenuButtonTitle {
+  color:       #3a9401;
+  font-size:   12pt;
+  left:        -80px;
+  overflow:    visible;  
+}
+
+#staticMenu a .staticMenuButtonSubtitle {
+  color:       #1a4864;
+  font-size:   14pt;
+  left:        -80px;
+  overflow:    visible;  
 }
 
 #staticMenu {
   float:      right;
+  z-index:    20;
 }
 
-.staticMenuButton .sb-border { background:#bac8d0 !important; }
-/*
-.staticMenuButton:hover .sb-border { background:#bbb !important; }
-*/
 
-#statementContainer .sb-inner {
-  background:    #fff;
-}
-
+#statementContainer .sb-inner {background: #fff;}
 #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
 #statementContainer .sb-shadow, #videoContainer .sb-shadow, #echologicContainer .sb-shadow { background:#444; }
 #statementContainer .sb-border, #videoContainer .sb-border, #echologicContainer .sb-border { background:#7ab031; }
@@ -110,10 +134,12 @@ pre {
   font-size: 11px;
 }
 
+/*
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
+*/
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
