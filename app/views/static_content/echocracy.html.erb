@@ -1,15 +1,27 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title><%= t('.title') + " - " + t('.subtitle') %></title>
-	</head>
-	<body>
-		<h1><%= t('.title') + " - " + t('.subtitle') %></h1>
-		<ul>
-			<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
-			<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
-			<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
-		</ul>
-	</body>
-</html>
+
+<div style="clear:both;">
+  <h1><%= t('.title') + " - " + t('.subtitle') %></h1>
+  <ul>
+  	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
+  	<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
+  	<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
+  </ul>
+</div>
+
+<div class="testContainer">
+  <div class="testContainerTop">
+    <div class="testContainerTopLeft"></div>
+    <div class="testContainerTopRight"></div>
+  </div>
+  <div class="testContainerMiddle">
+    <div class="testContainerLeft"></div>
+    <div class="testContainerContent">
+      content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
+    </div>
+    <div class="testContainerRight"></div>    
+  </div>
+  <div class="testContainerBottom">
+    <div class="testContainerBottomLeft"></div>
+    <div class="testContainerBottomRight"></div>
+  </div>  
+</div>

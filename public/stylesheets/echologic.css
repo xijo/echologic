@@ -114,6 +114,80 @@ body {
   z-index:    20;
 }
 
+.testContainer {
+  background:  #a8c642;
+  width:       90%;
+  margin:      50px;
+  overflow:    visible;
+}
+
+.testContainerTop {
+  background:  url(../images/page/box/top.png) repeat-x;
+  height:      23px;
+  margin:      0 23px 0 23px;
+}
+
+.testContainerTopLeft {
+  background: #a8c642 url(../images/page/box/topleft.png) no-repeat;
+  width:    23px;
+  height:   23px;
+  left:     23px;
+  float:    left;
+}
+
+.testContainerTopRight {
+  background: #a8c642 url(../images/page/box/topright.png) no-repeat;
+  width:    23px;
+  height:   23px;
+  right:    23px;  
+  float:    right;
+}
+
+.testContainerMiddle {
+  background: #a8c642 url(../images/page/box/right.png) repeat-y scroll right;
+  position: relative;
+  margin:   0 23px 0 23px;
+}
+
+.testContainerLeft {
+  background: #a8c642 url(../images/page/box/left.png) repeat-y;
+  float:    left;
+  position: absolute;
+  height:   100%;
+  width:    23px;
+}
+
+.testContainerContent {
+  background: #fff;
+  margin:     0 23px 0 23px;
+}
+
+.testContainerBottom {
+  background:  url(../images/page/box/bottom.png) repeat-x;
+  height:      23px;
+  margin:      0 23px 0 23px;
+}
+
+.testContainerBottomLeft {
+  background: #a8c642 url(../images/page/box/bottomleft.png) no-repeat;
+  width:    23px;
+  height:   23px;
+  left:     23px;
+  float:    left;
+}
+
+.testContainerBottomRight {
+  background: #a8c642 url(../images/page/box/bottomright.png) no-repeat;
+  width:    23px;
+  height:   23px;
+  right:    23px;  
+  float:    right;
+}
+
+.nase {
+  top: -200px;
+}
+
 
 #statementContainer .sb-inner {background: #fff;}
 #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
