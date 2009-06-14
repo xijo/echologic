@@ -1,13 +1,3 @@
-
-<div style="clear:both;">
-  <h1><%= t('.title') + " - " + t('.subtitle') %></h1>
-  <ul>
-  	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
-  	<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
-  	<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
-  </ul>
-</div>
-
 <div class="testContainer">
   <div class="testContainerTop">
     <div class="testContainerTopLeft"></div>
@@ -16,7 +6,12 @@
   <div class="testContainerMiddle">
     <div class="testContainerLeft"></div>
     <div class="testContainerContent">
-      content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
+  <h1><%= t('.title') + " - " + t('.subtitle') %></h1>
+  <ul>
+  	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
+  	<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
+  	<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
+  </ul>
     </div>
     <div class="testContainerRight"></div>    
   </div>
