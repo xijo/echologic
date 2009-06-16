@@ -9,7 +9,7 @@ body {
 
 #headlogo {
   float:       left;
-  margin:      0 0 40px 20px;
+  margin:      0 0 -9px 20px;
 }
 
 #invitebubble {
@@ -100,13 +100,13 @@ body {
 #staticMenu a .staticMenuButtonTitle {
   color:       #3a9401;
   font-size:   12pt;
-  left:        -80px;
+  margin:      0 0 0 -80px;
 }
 
 #staticMenu a .staticMenuButtonSubtitle {
   color:       #1a4864;
   font-size:   14pt;
-  left:        -80px;
+  margin:      0 0 0 -80px;
 }
 
 #staticMenu {
@@ -114,11 +114,28 @@ body {
   z-index:    20;
 }
 
+#echocracyContainer {
+  min-height:  510px;
+}
+
 .testContainer {
   width:       90%;
-  overflow:    visible;
-  clear:       both;
-  margin:      0 0 0 23px;
+  margin:      0 auto;
+  z-index:     5;
+}
+
+.boxRight {
+  width:    23px;
+  height:   23px;
+  margin:   0 -23px 0 0;
+  float:    right;
+}
+
+.boxLeft {
+  width:    23px;
+  height:   23px;
+  margin:   0 0 0 -23px;
+  float:    left;
 }
 
 .testContainerTop {
@@ -126,21 +143,15 @@ body {
   height:      23px;
 }
 
-.testContainerTopLeft {
-  background: url(../images/page/box/topleft.png) no-repeat;
-  width:    23px;
-  height:   23px;
-  margin:   0 0 0 -23px;
-  float:    left;
+.testContainerBottom {
+  background:  url(../images/page/box/bottom.png) repeat-x;
+  height:      23px;
 }
 
-.testContainerTopRight {
-  background: url(../images/page/box/topright.png) no-repeat;
-  width:    23px;
-  height:   23px;
-  margin:   0 -23px 0 0;
-  float:    right;
-}
+.testContainerTop .boxRight { background: url(../images/page/box/topright.png) no-repeat; }
+.testContainerTop .boxLeft { background: url(../images/page/box/topleft.png) no-repeat; }
+.testContainerBottom .boxRight { background: url(../images/page/box/bottomright.png) no-repeat; }
+.testContainerBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
 
 .testContainerMiddle {
   background: url(../images/page/box/right.png) repeat-y scroll right;
@@ -163,31 +174,45 @@ body {
   padding:    5px;
 }
 
-.testContainerBottom {
-  background:  url(../images/page/box/bottom.png) repeat-x;
-  height:      23px;
+.tabContainer {
+  height:     61px;
+  margin:     0 0 -23px 0;
+  clear:      both;
+  z-index:    10;
+  overflow:   visible;
+  left:       220px;
+  position:   relative;
+  max-width:  600px;
 }
 
-.testContainerBottomLeft {
-  background: url(../images/page/box/bottomleft.png) no-repeat;
-  width:    23px;
-  height:   23px;
-  margin:   0 0 0 -23px;
-  float:    left;
+.tabContainer a, .tabContainer a:visited {
+  display:    inline-block;
+  height:     61px;  
+  color:      #7bb031;
+  font-size:  14px;
+  font-weight:500;
+  text-decoration: none; 
 }
 
-.testContainerBottomRight {
-  background: url(../images/page/box/bottomright.png) no-repeat;
-  width:    23px;
-  height:   23px;
-  margin:   0 -23px 0 0;
-  float:    right;
+.tabContainer a:hover {
+  color:      #1b4864;
 }
 
-.nase {
-  top: -200px;
+.tabContainer a div {
+  height:  61px;
+  margin:  0 0 0 21px;
+  padding: 0 21px 0 0;
+  float:   left;
 }
 
+.activeTab, .activeTab:visited {
+  background: url(../images/page/tabs/left_on.png) no-repeat scroll left;
+  color:   #1b4864 !important;
+}
+
+.activeTab div {
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right;
+}
 
 #statementContainer .sb-inner {background: #fff;}
 #videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }

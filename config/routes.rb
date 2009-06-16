@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     static.echocracy 'echocracy', :action => 'echocracy'
     static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
     static.echocracy_experts 'echocracy/experts', :action => 'echocracy_experts'
-    static.echocracy_orgs 'echocracy/orgas', :action => 'echocracy_orgas'
+    static.echocracy_orgas 'echocracy/orgas', :action => 'echocracy_orgas'
     
     # echonomy
     static.echonomy 'echonomy', :action => 'echonomy'
