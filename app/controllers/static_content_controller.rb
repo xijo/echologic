@@ -65,10 +65,9 @@ class StaticContentController < ApplicationController
   
   # echocracy - NGOs & Political Organisations
   def echocracy_orgas
-    render :template => "static_content/echocracy"
-#    respond_to do |format|
-#      format.html
-#    end
+    respond_to do |format|
+      format.html { render :template => "static_content/echocracy" }
+    end
   end
   
   # echonomy - The Philosophy
