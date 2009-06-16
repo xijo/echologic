@@ -49,23 +49,26 @@ class StaticContentController < ApplicationController
 
   # echocracy - Engaged Citizens
   def echocracy_citizens
-    respond_to do |format|
-      format.html
-    end
+    render :template => "static_content/echocracy"
+#    respond_to do |format|
+#      format.html
+#    end
   end
   
   # echocracy - Experts & Scientists
   def echocracy_experts
-    respond_to do |format|
-      format.html
-    end
+    render :template => "static_content/echocracy"
+#    respond_to do |format|
+#      format.html
+#    end
   end
   
   # echocracy - NGOs & Political Organisations
   def echocracy_orgas
-    respond_to do |format|
-      format.html
-    end
+    render :template => "static_content/echocracy"
+#    respond_to do |format|
+#      format.html
+#    end
   end
   
   # echonomy - The Philosophy

@@ -1,22 +1,27 @@
+<div class="tabContainer">
+  <%= insert_tab(:Citizens, echocracy_citizens_path) %>
+  <%= insert_tab(:Experts, echocracy_experts_path) %>
+  <%= insert_tab(:Organisations, echocracy_orgas_path) %>
+</div>
+
 <div class="testContainer">
   <div class="testContainerTop">
-    <div class="testContainerTopLeft"></div>
-    <div class="testContainerTopRight"></div>
+    <div class="boxLeft"></div>
+    <div class="boxRight"></div>
   </div>
   <div class="testContainerMiddle">
     <div class="testContainerLeft"></div>
-    <div class="testContainerContent">
-  <h1><%= t('.title') + " - " + t('.subtitle') %></h1>
-  <ul>
-  	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
-  	<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
-  	<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
-  </ul>
+    <div class="testContainerContent" id="echocracyContainer">
+      
+  <%= render :partial => "menu" %>
+  
+  <%= insert_content %>
+  
     </div>
     <div class="testContainerRight"></div>    
   </div>
   <div class="testContainerBottom">
-    <div class="testContainerBottomLeft"></div>
-    <div class="testContainerBottomRight"></div>
+    <div class="boxLeft"></div>
+    <div class="boxRight"></div>
   </div>  
 </div>

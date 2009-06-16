@@ -1,0 +1,8 @@
+<h1><%= t('.title') + " - " + t('.subtitle') %></h1>
+<ul>
+	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
+	<li><%= link_to t('static_content.echocracy_experts.title'), :action => "echocracy_experts" %></li>
+	<li><%= link_to t('static_content.echocracy_orgas.title'), :action => "echocracy_orgas" %></li>
+</ul>
+<%= debug request %>
+<%= request.methods.inspect %>
