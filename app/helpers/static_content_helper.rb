@@ -33,4 +33,39 @@ module StaticContentHelper
     end
   end
   
+  # Insert the top elements of a rounded box
+  def insert_rounded_box_top
+    top = <<-TOP
+<div class="boxTop">
+    <div class="boxLeft"></div>
+    <div class="boxRight"></div>
+  </div>
+  <div class="boxMiddle">
+    <div class="boxMiddleLeft"></div>
+    TOP
+  end
+  
+  # Insert the bottom elements of a rounded box
+  def insert_rounded_box_bottom
+    bottom = <<-BOTTOM
+  <div class="boxMiddleRight"></div>    
+  </div>
+  <div class="boxBottom">
+    <div class="boxLeft"></div>
+    <div class="boxRight"></div>
+  </div>  
+    BOTTOM
+  end
+  
+  # Inserts a static menu button.
+  def insert_static_menu_button
+    button = <<-BUTTON
+  <a class="staticMenuButton" href="<%= echologic_path %>">
+      #{image_tag "page/staticMenu/sidemenuicon_mission_off.png"}
+      <span class="staticMenuButtonTitle">echologic</span><br/>
+      <span class="staticMenuButtonSubtitle">The Mission</span>
+    </a>
+    BUTTON
+  end
+  
 end

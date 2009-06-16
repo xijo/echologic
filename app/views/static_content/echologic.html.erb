@@ -1,28 +1,30 @@
 <div id="echologicPromoContainer">
   <div id="statementContainer">
-    <div id="statement">
-      <%= image_tag 'page/statement_claim.png' %>
-    </div>    
+    <%= insert_rounded_box_top %>
+      <div id="statement">
+        <%= image_tag 'page/statement_claim.png' %>
+      </div>
+    <%= insert_rounded_box_bottom %>
   </div>
-  
   <div id="videoContainer">
-    the promotion video goes here..
+    <%= insert_rounded_box_top %>
+    <div id="video">
+      the promotion video goes here..
+    </div>
+    <%= insert_rounded_box_bottom %>
   </div>
 </div>
 
-<div id="echologicContainer">
-  <%= render :partial => "menu" %>
-  <h1><%= t('.title') %></h1>
-  <ul>
-  	<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
-  	<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
-  	<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
-  </ul>
+<div class="mainBox">
+  <%= insert_rounded_box_top %>
+  <div id="echologicContainer" class="boxContent">
+    <%= render :partial => "menu" %>
+    <h1><%= t('.title') %></h1>
+    <ul>
+    	<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
+    	<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
+    	<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
+    </ul> 
+  </div>
+  <%= insert_rounded_box_bottom %>
 </div>
-
-<script language="javascript" type="text/javascript">
-  var border = RUZEE.ShadedBorder.create({ corner:14, shadow:30, border:1 });
-  border.render('statementContainer');
-  border.render('videoContainer');
-  border.render('echologicContainer');
-</script>

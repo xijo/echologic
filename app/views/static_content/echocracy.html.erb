@@ -4,24 +4,17 @@
   <%= insert_tab(:Organisations, echocracy_orgas_path) %>
 </div>
 
+
+
 <div class="testContainer">
-  <div class="testContainerTop">
-    <div class="boxLeft"></div>
-    <div class="boxRight"></div>
-  </div>
-  <div class="testContainerMiddle">
-    <div class="testContainerLeft"></div>
-    <div class="testContainerContent" id="echocracyContainer">
+
+  <%= insert_rounded_box_top %>
+    <div class="boxContent" id="echocracyContainer">
       
-  <%= render :partial => "menu" %>
-  
-  <%= insert_content %>
+      <%= render :partial => "menu" %>
+      
+      <%= insert_content %>
   
     </div>
-    <div class="testContainerRight"></div>    
-  </div>
-  <div class="testContainerBottom">
-    <div class="boxLeft"></div>
-    <div class="boxRight"></div>
-  </div>  
+  <%= insert_rounded_box_bottom%>
 </div>
