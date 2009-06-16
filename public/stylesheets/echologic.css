@@ -9,7 +9,7 @@ body {
 
 #headlogo {
   float:       left;
-  margin:      0 0 -9px 20px;
+  margin:      0 0 -15px 20px;
 }
 
 #invitebubble {
@@ -32,41 +32,40 @@ body {
 }
 
 #statementContainer {
-  min-height: 160px;
-  width:      60%;
-  min-width:  580px;
-  margin:     0 0 0 30px;
+  width:      65%;
+  min-width:  540px;
   clear:      both;
-  float:      left;
-  white-space:nowrap;  
+  float: left;
+  margin:     30px 0 0 0;
 }
 
 #statement {
-  margin:     15px;
+  margin:     0 18px 0 0;
   height:     160px;
-  background:  transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
+  background: transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
 }
 
 #videoContainer {
-  min-height: 160px;
-  width:      30%;
-  min-width:  300px;
+  width:      31%;
+  min-width:  200px;
+  float: right;
+  margin:     30px 0 0 0;
+}
 
-  padding:    15px;
-  float:      left;
+#video {
+  height:     160px;  
 }
 
 #echologicPromoContainer {
-  min-width:  1000px;
-  z-index:    1;
+  width:       90%;
+  min-width:   850px;
+  margin:      0 auto;
+  z-index:     5;
+  position:    relative;
 }
 
 #echologicContainer {
-  width:      90%;
   min-height: 600px; 
-  margin:     30px 20px 0 30px;
-  padding:    15px;
-  clear:      both;
 }
 
 .staticMenuButton:hover {
@@ -124,6 +123,14 @@ body {
   z-index:     5;
 }
 
+.mainBox {
+  width:       90%;
+  min-width:   850px;
+  margin:      0 auto;
+  z-index:     5;
+  clear:       both;
+}
+
 .boxRight {
   width:    23px;
   height:   23px;
@@ -138,28 +145,28 @@ body {
   float:    left;
 }
 
-.testContainerTop {
+.boxTop {
   background:  url(../images/page/box/top.png) repeat-x;
   height:      23px;
 }
 
-.testContainerBottom {
+.boxBottom {
   background:  url(../images/page/box/bottom.png) repeat-x;
   height:      23px;
 }
 
-.testContainerTop .boxRight { background: url(../images/page/box/topright.png) no-repeat; }
-.testContainerTop .boxLeft { background: url(../images/page/box/topleft.png) no-repeat; }
-.testContainerBottom .boxRight { background: url(../images/page/box/bottomright.png) no-repeat; }
-.testContainerBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
+.boxTop .boxRight { background: url(../images/page/box/topright.png) no-repeat; }
+.boxTop .boxLeft { background: url(../images/page/box/topleft.png) no-repeat; }
+.boxBottom .boxRight { background: url(../images/page/box/bottomright.png) no-repeat; }
+.boxBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
 
-.testContainerMiddle {
+.boxMiddle {
   background: url(../images/page/box/right.png) repeat-y scroll right;
   position: relative;
   margin:   0 -23px 0 0;
 }
 
-.testContainerLeft {
+.boxMiddleLeft {
   background: url(../images/page/box/left.png) repeat-y;
   float:    left;
   position: absolute;
@@ -168,7 +175,7 @@ body {
   margin:   0 0 0 -23px;
 }
 
-.testContainerContent {
+.boxContent {
   background: #fff;
   margin:     0 23px 0 23px;
   padding:    5px;
@@ -214,11 +221,6 @@ body {
   background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right;
 }
 
-#statementContainer .sb-inner {background: #fff;}
-#videoContainer .sb-inner, #echologicContainer .sb-inner { background:#fff; }
-#statementContainer .sb-shadow, #videoContainer .sb-shadow, #echologicContainer .sb-shadow { background:#444; }
-#statementContainer .sb-border, #videoContainer .sb-border { background:#7ab031; }
-#echologicContainer .sb-border { background:#7ab031; z-index:21;}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
