@@ -9,7 +9,7 @@ body {
 
 #headlogo {
   float:       left;
-  margin:      0 0 -15px 20px;
+  margin:      0 0 -15px 30px;
 }
 
 #invitebubble {
@@ -187,7 +187,7 @@ body {
   clear:      both;
   z-index:    10;
   overflow:   visible;
-  left:       220px;
+  left:       225px;
   position:   relative;
   max-width:  600px;
 }
