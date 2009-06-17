@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     static.echocracy 'echocracy', :action => 'echocracy'
     static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
     static.echocracy_experts 'echocracy/experts', :action => 'echocracy_experts'
-    static.echocracy_orgas 'echocracy/orgas', :action => 'echocracy_orgas'
+    static.echocracy_organisations 'echocracy/organisations', :action => 'echocracy_organisations'
     
     # echonomy
     static.echonomy 'echonomy', :action => 'echonomy'
@@ -56,7 +56,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
-  map.root :controller => 'static_content'
+  map.root :controller => 'static_content', :action => 'echologic'
 
   # See how all your routes lay out with "rake routes"
 
