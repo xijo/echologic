@@ -9,10 +9,10 @@ module StaticContentHelper
   # ATT2: small workaround.
   def insert_tab(name, link)
     tab = "<a href='#{link}'"
-    if request[:action].include?(name.downcase.tr(' ', '_'))
+    if request[:action] == name
       tab << " class='activeTab'"
     end
-    tab << "><div><br/>#{name}</div></a>"
+    tab << "><div><br/>#{t('static_content.' + name + '.title')}</div></a>"
   end
   
   # Insert the top elements of a rounded box
@@ -34,7 +34,7 @@ module StaticContentHelper
   <div class="boxBottom">
     <div class="boxLeft"></div>
     <div class="boxRight"></div>
-  </div>  
+  </div>
     BOTTOM
   end
   
