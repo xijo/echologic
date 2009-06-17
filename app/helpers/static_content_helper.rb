@@ -29,8 +29,7 @@ module StaticContentHelper
   
   # Insert the bottom elements of a rounded box
   def insert_rounded_box_bottom
-    bottom = <<-BOTTOM
-  <div class="boxMiddleRight"></div>    
+    bottom = <<-BOTTOM   
   </div>
   <div class="boxBottom">
     <div class="boxLeft"></div>
