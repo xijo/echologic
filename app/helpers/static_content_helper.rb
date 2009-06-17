@@ -7,9 +7,10 @@ module StaticContentHelper
   # displayed highlighted.
   # ATTENTION: not optimal yet.
   # ATT2: small workaround.
-  def insert_tab(name, link)
+  def insert_tab(link)
+    name = link.tr('/', '_')[1..-1]
     tab = "<a href='#{link}'"
-    if request[:action] == name
+    if request[:action].eql?(name)
       tab << " class='activeTab'"
     end
     tab << "><div><br/>#{t('static_content.' + name + '.title')}</div></a>"
