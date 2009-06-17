@@ -1,10 +1,10 @@
 body { 
-	background:		#a8c642 url(../images/page/background.png) repeat-x;
-	margin: 			0px;
-  padding:      0px;
-  font-family:  verdana, arial, helvetica, sans-serif;
-  font-size:    13px;
-  color:        #1A4864;
+  background:  #a8c642 url(../images/page/background.png) repeat-x;
+  margin:      0px;
+  padding:     0px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  color:       #1A4864;
 }
 
 #headlogo {
@@ -32,28 +32,28 @@ body {
 }
 
 #statementContainer {
-  width:      65%;
-  min-width:  540px;
-  clear:      both;
-  float: left;
-  margin:     30px 0 0 0;
+  width:       65%;
+  min-width:   540px;
+  clear:       both;
+  float:       left;
+  margin:      30px 0 0 0;
 }
 
 #statement {
-  margin:     0 18px 0 0;
-  height:     160px;
-  background: transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
+  margin:      0 18px 0 0;
+  height:      160px;
+  background:  transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
 }
 
 #videoContainer {
-  width:      31%;
-  min-width:  200px;
-  float: right;
-  margin:     30px 0 0 0;
+  width:       31%;
+  min-width:   200px;
+  float:       right;
+  margin:      30px 0 0 0;
 }
 
 #video {
-  height:     160px;  
+  height:      160px;  
 }
 
 #echologicPromoContainer {
@@ -65,7 +65,53 @@ body {
 }
 
 #echologicContainer {
-  min-height: 600px; 
+  min-height:  600px; 
+}
+
+#echocracyContainer {
+  min-height:  510px;
+}
+
+.tabContainer {
+  height:       61px;
+  margin:       0 0 -23px 0;
+  clear:        both;
+  z-index:      10;
+  overflow:     visible;
+  left:         225px;
+  position:     relative;
+  max-width:    600px;
+}
+
+.tabContainer a, .tabContainer a:visited {
+  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;  
+  display:      inline-block;
+  height:       61px;  
+  color:        #7bb031;
+  font-size:    14px;
+  font-weight:  500;
+  text-decoration: none; 
+}
+
+.tabContainer a:hover {
+  color:        #1b4864;
+}
+
+.tabContainer a div {
+  background: transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
+  height:       61px;
+  margin:       0 0 0 21px;
+  padding:      0 21px 0 0;
+  float:        left;
+}
+
+.activeTab, .activeTab:visited {
+  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
+  color:        #1b4864 !important;
+}
+
+.activeTab div {
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
 }
 
 .staticMenuButton:hover {
@@ -113,9 +159,6 @@ body {
   z-index:    20;
 }
 
-#echocracyContainer {
-  min-height:  510px;
-}
 
 .testContainer {
   width:       90%;
@@ -131,23 +174,23 @@ body {
   clear:       both;
 }
 
-.boxRight {
-  width:    23px;
-  height:   23px;
-  margin:   0 -23px 0 0;
-  float:    right;
-}
-
-.boxLeft {
-  width:    23px;
-  height:   23px;
-  margin:   0 0 0 -23px;
-  float:    left;
-}
-
 .boxTop {
   background:  url(../images/page/box/top.png) repeat-x;
   height:      23px;
+}
+
+.boxLeft {
+  width:       23px;
+  height:      23px;
+  margin:      0 0 0 -23px;
+  float:       left;
+}
+
+.boxRight {
+  width:       23px;
+  height:      23px;
+  margin:      0 -23px 0 0;
+  float:       right;
 }
 
 .boxBottom {
@@ -161,71 +204,29 @@ body {
 .boxBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
 
 .boxMiddle {
-  background: url(../images/page/box/right.png) repeat-y scroll right;
-  position: relative;
-  margin:   0 -23px 0 0;
+  background:   url(../images/page/box/right.png) repeat-y scroll right;
+  position:     relative;
+  margin:       0 -23px 0 0;
 }
 
 .boxMiddleLeft {
-  background: url(../images/page/box/left.png) repeat-y;
-  float:    left;
-  position: absolute;
-  height:   100%;
-  width:    23px;
-  margin:   0 0 0 -23px;
+  background:   url(../images/page/box/left.png) repeat-y;
+  float:        left;
+  position:     absolute;
+  height:       100%;
+  width:        23px;
+  margin:       0 0 0 -23px;
 }
 
 .boxContent {
-  background: #fff;
-  margin:     0 23px 0 23px;
-  padding:    5px;
-}
-
-.tabContainer {
-  height:     61px;
-  margin:     0 0 -23px 0;
-  clear:      both;
-  z-index:    10;
-  overflow:   visible;
-  left:       225px;
-  position:   relative;
-  max-width:  600px;
-}
-
-.tabContainer a, .tabContainer a:visited {
-  background: url(../images/page/tabs/left_off.png) no-repeat scroll left;  
-  display:    inline-block;
-  height:     61px;  
-  color:      #7bb031;
-  font-size:  14px;
-  font-weight:500;
-  text-decoration: none; 
-}
-
-.tabContainer a:hover {
-  color:      #1b4864;
-}
-
-.tabContainer a div {
-  background: transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
-  height:  61px;
-  margin:  0 0 0 21px;
-  padding: 0 21px 0 0;
-  float:   left;
-}
-
-.activeTab, .activeTab:visited {
-  background: url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
-  color:   #1b4864 !important;
-}
-
-.activeTab div {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
+  background:   #fff;
+  margin:       0 23px 0 0px;
+  padding:      5px 10px 5px 15px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-family:  verdana, arial, helvetica, sans-serif;
+  font-size:    13px;
 }
 
 pre {
