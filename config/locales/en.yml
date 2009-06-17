@@ -48,6 +48,9 @@ en:
       
     echocracy_citizens:
       title: Engaged Citizens
+      
+    citizens:
+      title: Engaged Citizens
         
     echocracy_experts:
       title: Experts & Scientists

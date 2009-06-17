@@ -6,31 +6,13 @@ module StaticContentHelper
   # If the relating action was requested, the tab will be
   # displayed highlighted.
   # ATTENTION: not optimal yet.
+  # ATT2: small workaround.
   def insert_tab(name, link)
-    tab = "<a href='#{link}' class='"
-    case request[:action]
-      when "echocracy_citizens"
-        tab << "activeTab" if name.eql?(:Citizens)
-      when "echocracy_experts"
-        tab << "activeTab" if name.eql?(:Experts)
-      when "echocracy_orgas"
-        tab << "activeTab" if name.eql?(:Organisations)
+    tab = "<a href='#{link}'"
+    if request[:action].include?(name.downcase.tr(' ', '_'))
+      tab << " class='activeTab'"
     end
-    tab << "'><div><br/>#{name}</div></a>"
-  end
-  
-  # Inserts partials that belongs to the action.
-  def insert_content
-    case request[:action]
-      when "echocracy_citizens"
-        render :partial => "citizens"
-      when "echocracy_experts"
-        render :partial => "experts"
-      when "echocracy_orgas"
-        render :partial => "orgas"
-      when "echocracy"
-        render :partial => "echocracy"
-    end
+    tab << "><div><br/>#{name}</div></a>"
   end
   
   # Insert the top elements of a rounded box

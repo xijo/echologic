@@ -1,3 +1,7 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs_echocracy' %>
+<% end %>
+
 <h1><%= t('.title') + " - " + t('.subtitle') %></h1>
 <ul>
 	<li><%= link_to t('static_content.echocracy_citizens.title'), :action => "echocracy_citizens" %></li>
