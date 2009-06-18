@@ -18,7 +18,7 @@ module StaticContentHelper
   
   # Insert the top elements of a rounded box
   def insert_rounded_box_top
-    top = <<-TOP
+    <<-TOP
 <div class="boxTop">
     <div class="boxLeft"></div>
     <div class="boxRight"></div>
@@ -30,7 +30,7 @@ module StaticContentHelper
   
   # Insert the bottom elements of a rounded box
   def insert_rounded_box_bottom
-    bottom = <<-BOTTOM   
+    <<-BOTTOM   
   </div>
   <div class="boxBottom">
     <div class="boxLeft"></div>
@@ -45,7 +45,7 @@ module StaticContentHelper
     item = link.split('/')[1]
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
-    button = <<-BUTTON
+    <<-BUTTON
   <a class='staticMenuButton' href='#{link}'>
     #{image_tag insert_static_menu_image(item)}
     <span class='staticMenuButtonTitle'>#{t(title)}</span><br/>
