@@ -1,0 +1,44 @@
+.staticMenuButton:hover {
+  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat scroll 0 100% !important;
+  display:     block;
+  height:      67px;
+  width:       220px;
+  padding:     30px 0 0 55px;
+}
+
+.staticMenuButton, .staticMenuButton:visited {
+  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat;
+  display:     block;
+  height:      67px;
+  width:       220px;
+  padding:     30px 0 0 55px;
+}
+
+#staticMenu a {
+  text-decoration: none;
+}
+
+#staticMenu a img {
+  float:       left;
+  position:    relative;
+  top:         -30px;
+  border:      0;
+  left:        -80px;
+}
+
+#staticMenu a .staticMenuButtonTitle {
+  color:       #3a9401;
+  font-size:   12pt;
+  margin:      0 0 0 -80px;
+}
+
+#staticMenu a .staticMenuButtonSubtitle {
+  color:       #1a4864;
+  font-size:   14pt;
+  margin:      0 0 0 -80px;
+}
+
+#staticMenu {
+  float:      right;
+  z-index:    20;
+}
