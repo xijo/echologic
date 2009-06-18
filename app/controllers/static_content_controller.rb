@@ -61,7 +61,7 @@ class StaticContentController < ApplicationController
     end
   end
   
-  # echocracy - NGOs & Political Organisations
+  # echocracy - Organisations
   def echocracy_organisations
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy_organisations', :layout => 'static' }
@@ -81,19 +81,47 @@ class StaticContentController < ApplicationController
       format.html { render :partial => 'static_content/echonomy_business_model', :layout => 'static' }
     end
   end
-
-  # echonomy - Open Source
-  def echonomy_open_source
+  
+  # echonomy - Foundation
+  def echonomy_foundation
     respond_to do |format|
-      format.html { render :partial => 'static_content/echonomy_open_source', :layout => 'static' }
+      format.html { render :partial => 'static_content/echonomy_foundation', :layout => 'static' }
     end
   end
-  
+
   # echonomy - Public Property
   def echonomy_public_property
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy_public_property', :layout => 'static' }
     end    
+  end
+
+  # echo on waves - The Project
+  def echoonwaves
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echoonwaves', :layout => 'static' }
+    end
+  end
+
+  # echo on waves - Win Win
+  def echoonwaves_win_win
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echoonwaves_win_win', :layout => 'static' }
+    end
+  end
+  
+  # echo on waves - Open Source
+  def echoonwaves_open_source
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echoonwaves_open_source', :layout => 'static' }
+    end
+  end
+
+  # echo on waves - Joint effort
+  def echoonwaves_joint_effort
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echoonwaves_joint_effort', :layout => 'static' }
+    end
   end
   
 end
