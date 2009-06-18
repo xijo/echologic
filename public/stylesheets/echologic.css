@@ -1,3 +1,7 @@
+@import "tabs.css";
+@import "static_menu.css";
+@import "box.css";
+
 body { 
   background:  #a8c642 url(../images/page/background.png) repeat-x;
   margin:      0px;
@@ -64,164 +68,8 @@ body {
   position:    relative;
 }
 
-#echologicContainer {
-  min-height:  600px; 
-}
-
-#echocracyContainer {
+#mainBoxContent {
   min-height:  510px;
-}
-
-.tabContainer {
-  height:       61px;
-  margin:       0 0 -23px 0;
-  clear:        both;
-  z-index:      10;
-  overflow:     visible;
-  left:         225px;
-  position:     relative;
-  max-width:    800px;
-}
-
-.tabContainer a, .tabContainer a:visited {
-  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;  
-  display:      inline-block;
-  height:       61px;  
-  color:        #7bb031;
-  font-size:    14px;
-  font-weight:  500;
-  text-decoration: none; 
-}
-
-.tabContainer a:hover {
-  color:        #1b4864;
-}
-
-.tabContainer a div {
-  background: transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
-  height:       61px;
-  margin:       0 0 0 21px;
-  padding:      0 21px 0 0;
-  float:        left;
-}
-
-.activeTab, .activeTab:visited {
-  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
-  color:        #1b4864 !important;
-}
-
-.activeTab div {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
-}
-
-.staticMenuButton:hover {
-  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat scroll 0 100% !important;
-  display:     block;
-  height:      67px;
-  width:       220px;
-  padding:     30px 0 0 55px;
-}
-
-.staticMenuButton, .staticMenuButton:visited {
-  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat;
-  display:     block;
-  height:      67px;
-  width:       220px;
-  padding:     30px 0 0 55px;
-}
-
-#staticMenu a {
-  text-decoration: none;
-}
-
-#staticMenu a img {
-  float:       left;
-  position:    relative;
-  top:         -30px;
-  border:      0;
-  left:        -80px;
-}
-
-#staticMenu a .staticMenuButtonTitle {
-  color:       #3a9401;
-  font-size:   12pt;
-  margin:      0 0 0 -80px;
-}
-
-#staticMenu a .staticMenuButtonSubtitle {
-  color:       #1a4864;
-  font-size:   14pt;
-  margin:      0 0 0 -80px;
-}
-
-#staticMenu {
-  float:      right;
-  z-index:    20;
-}
-
-
-.testContainer {
-  width:       90%;
-  margin:      0 auto;
-  z-index:     5;
-}
-
-.mainBox {
-  width:       90%;
-  min-width:   850px;
-  margin:      0 auto;
-  z-index:     5;
-  clear:       both;
-}
-
-.boxTop {
-  background:  url(../images/page/box/top.png) repeat-x;
-  height:      23px;
-}
-
-.boxLeft {
-  width:       23px;
-  height:      23px;
-  margin:      0 0 0 -23px;
-  float:       left;
-}
-
-.boxRight {
-  width:       23px;
-  height:      23px;
-  margin:      0 -23px 0 0;
-  float:       right;
-}
-
-.boxBottom {
-  background:  url(../images/page/box/bottom.png) repeat-x;
-  height:      23px;
-}
-
-.boxTop .boxRight { background: url(../images/page/box/topright.png) no-repeat; }
-.boxTop .boxLeft { background: url(../images/page/box/topleft.png) no-repeat; }
-.boxBottom .boxRight { background: url(../images/page/box/bottomright.png) no-repeat; }
-.boxBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
-
-.boxMiddle {
-  background:   url(../images/page/box/right.png) repeat-y scroll right;
-  position:     relative;
-  margin:       0 -23px 0 0;
-}
-
-.boxMiddleLeft {
-  background:   url(../images/page/box/left.png) repeat-y;
-  float:        left;
-  position:     absolute;
-  height:       100%;
-  width:        23px;
-  margin:       0 0 0 -23px;
-}
-
-.boxContent {
-  background:   #fff;
-  margin:       0 23px 0 0;
-  padding:      5px 10px 5px 15px;
 }
 
 p, ol, ul, td {
@@ -235,12 +83,6 @@ pre {
   font-size: 11px;
 }
 
-/*
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-
-*/
 .fieldWithErrors {
   padding: 2px;
   background-color: red;

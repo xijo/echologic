@@ -1,0 +1,58 @@
+.mainBox {
+  width:       90%;
+  min-width:   850px;
+  margin:      0 auto;
+  z-index:     5;
+  clear:       both;
+}
+
+.boxTop {
+  background:  url(../images/page/box/top.png) repeat-x;
+  height:      23px;
+}
+
+.boxLeft {
+  width:       23px;
+  height:      23px;
+  margin:      0 0 0 -23px;
+  float:       left;
+}
+
+.boxRight {
+  width:       23px;
+  height:      23px;
+  margin:      0 -23px 0 0;
+  float:       right;
+}
+
+.boxBottom {
+  background:  url(../images/page/box/bottom.png) repeat-x;
+  height:      23px;
+}
+
+.boxTop .boxRight { background: url(../images/page/box/topright.png) no-repeat; }
+.boxTop .boxLeft { background: url(../images/page/box/topleft.png) no-repeat; }
+.boxBottom .boxRight { background: url(../images/page/box/bottomright.png) no-repeat; }
+.boxBottom .boxLeft { background: url(../images/page/box/bottomleft.png) no-repeat; }
+
+.boxMiddle {
+  background:   url(../images/page/box/right.png) repeat-y scroll right;
+  position:     relative;
+  margin:       0 -23px 0 0;
+}
+
+.boxMiddleLeft {
+  background:   url(../images/page/box/left.png) repeat-y;
+  float:        left;
+  position:     absolute;
+  height:       100%;
+  width:        23px;
+  margin:       0 0 0 -23px;
+}
+
+.boxContent {
+  background:   #fff;
+  margin:       0 23px 0 0;
+  padding:      5px 10px 5px 15px;
+}
+

@@ -1,0 +1,41 @@
+.tabContainer {
+  height:       61px;
+  margin:       0 0 -23px 0;
+  clear:        both;
+  z-index:      10;
+  overflow:     visible;
+  left:         225px;
+  position:     relative;
+  max-width:    800px;
+}
+
+.tabContainer a, .tabContainer a:visited {
+  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;  
+  display:      inline-block;
+  height:       61px;  
+  color:        #7bb031;
+  font-size:    14px;
+  font-weight:  500;
+  text-decoration: none; 
+}
+
+.tabContainer a:hover {
+  color:        #1b4864;
+}
+
+.tabContainer a div {
+  background: transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
+  height:       61px;
+  margin:       0 0 0 21px;
+  padding:      0 21px 0 0;
+  float:        left;
+}
+
+.activeTab, .activeTab:visited {
+  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
+  color:        #1b4864 !important;
+}
+
+.activeTab div {
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
+}
