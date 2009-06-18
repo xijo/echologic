@@ -33,13 +33,13 @@ en:
         Platform-wide concept to create a Win-Win situation for all parties including all other internet platforms...  
       
     echo_discuss:
-      title: "Decide"
+      title: Discuss
         
     echo_connect:
-      title: "Connect"
+      title: Connect
       
     echo_act:
-      title: "Act"
+      title: Act
         
     # Static content for the echocracy main menu point
     echocracy:
@@ -52,8 +52,11 @@ en:
     echocracy_experts:
       title: Experts & Scientists
         
+    # NGOs, political & government organisations and their representatives & employees
     echocracy_organisations:
-      title: NGOs and Political Organisations
+      title: Organisations
+      
+    echocracy_administration:
         
     # Static content for the echonomy main menu point
     echonomy:
@@ -62,11 +65,25 @@ en:
       
     echonomy_business_model:
       title: Your-profit
-        
-    echonomy_open_source:
-      title: Open Source
+    
+    echonomy_foundation:
+      title: The Foundation    
         
     echonomy_public_property:
       title: Public Property
-           
-     
+    
+    # Static content for the echo on waves main menu point
+    echoonwaves:
+      title: echo on waves
+      subtitle: The Project
+    
+    echoonwaves_win_win:
+      title: Win-Win
+      
+    echoonwaves_open_source:
+      title: Open Source
+      
+    echoonwaves_joint_effort:
+      title: Joint Effort
+
+      
