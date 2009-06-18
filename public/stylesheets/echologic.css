@@ -69,7 +69,12 @@ body {
 }
 
 #mainBoxContent {
-  min-height:  610px;
+  min-height:  620px;
+}
+
+#staticContent {
+  float:       left;
+  width:       600px;
 }
 
 p, ol, ul, td {

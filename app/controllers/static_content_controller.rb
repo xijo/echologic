@@ -37,6 +37,7 @@ class StaticContentController < ApplicationController
   def echo_act
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_act', :layout => 'static' }
+      format.js
     end
   end
   

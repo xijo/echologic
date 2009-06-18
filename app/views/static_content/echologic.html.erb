@@ -15,16 +15,22 @@
   </div>
 </div>
 
+<div class="tabContainer" id="tabContainer" style="display:none;">
+
+</div>
+  
 <div class="mainBox">
   <%= insert_rounded_box_top %>
   <div id="mainBoxContent" class="boxContent">
     <%= render :partial => "menu" %>
-    <h1><%= t('.title') %></h1>
-    <ul>
-    	<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
-    	<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
-    	<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
-    </ul> 
+    <div id="staticContent">
+      <h1><%= t('.title') %></h1>
+      <ul>
+      	<li><%= link_to t('static_content.echo.title') + " - " + t('static_content.echo.subtitle'), :action => "echo" %></li>
+      	<li><%= link_to t('static_content.echocracy.title') + " - " + t('static_content.echocracy.subtitle'), :action => "echocracy" %></li>
+      	<li><%= link_to t('static_content.echonomy.title') + " - " + t('static_content.echonomy.subtitle'), :action => "echonomy" %></li>
+      </ul>
+    </div> 
   </div>
   <%= insert_rounded_box_bottom %>
 </div>

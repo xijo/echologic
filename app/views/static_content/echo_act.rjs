@@ -1,0 +1,21 @@
+page.visual_effect :fade, 'statementContainer', :duration => 0.5
+page.visual_effect :fade, 'statement', :duration => 0.5
+#
+page.visual_effect :fade, 'videoContainer', :duration => 0.5
+page.visual_effect :fade, 'video', :duration => 0.5
+
+page.delay(0.5) do
+  page.visual_effect :appear, 'tabContainer'
+  page.replace_html 'tabContainer', :partial => "tabs_echo"
+end
+
+#page.visual_effect :drop_out, 'echologicPromoContainer', :duration => 1.0
+#
+#page.visual_effect :blind_left, 'staticContent', :duration => 1.0
+
+
+page.replace_html 'staticContent', :partial => "echo_act"
+
+page.replace 'staticMenu', :partial => "menu"
+
+page.visual_effect :blind_right, 'staticContent', :duration => 1.0
