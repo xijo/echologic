@@ -23,10 +23,10 @@ ActionController::Routing::Routes.draw do |map|
     static.echonomy_public_property 'echonomy/public_property', :action => 'echonomy_public_property'
     
     # echo on waves
-    static.echoonwaves 'echoonwaves', :action => 'echoonwaves'
-    static.echoonwaves_win_win 'echoonwaves/win_win', :action => 'echoonwaves_win_win'
-    static.echoonwaves_open_source 'echoonwaves/open_source', :action => 'echoonwaves_open_source'
-    static.echoonwaves_joint_effort 'echoonwaves/joint_effort', :action => 'echoonwaves_joint_effort'
+    static.echoonwaves 'echo_on_waves', :action => 'echo_on_waves'
+    static.echoonwaves_win_win 'echo_on_waves/win_win', :action => 'echo_on_waves_win_win'
+    static.echoonwaves_open_source 'echo_on_waves/open_source', :action => 'echo_on_waves_open_source'
+    static.echoonwaves_joint_effort 'echo_on_waves/joint_effort', :action => 'echo_on_waves_joint_effort'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

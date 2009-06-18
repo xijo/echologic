@@ -73,17 +73,17 @@ en:
       title: Public Property
     
     # Static content for the echo on waves main menu point
-    echoonwaves:
+    echo_on_waves:
       title: echo on waves
       subtitle: The Project
     
-    echoonwaves_win_win:
+    echo_on_waves_win_win:
       title: Win-Win
       
-    echoonwaves_open_source:
+    echo_on_waves_open_source:
       title: Open Source
       
-    echoonwaves_joint_effort:
+    echo_on_waves_joint_effort:
       title: Joint Effort
 
       
