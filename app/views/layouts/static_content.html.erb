@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>StaticContents: <%= controller.action_name %></title>
   	<%= stylesheet_link_tag 'echologic' %>
-    <%= javascript_include_tag :defaults %>    
+    <%= javascript_include_tag :defaults %>
   </head>
   <body>
 
@@ -16,9 +16,38 @@
   <div id="invitebubble">
     <span><b>THE TEXT GOES HERE</b><br/>Bubble grows depending on the text </span>
   </div>
-    
-  <%= yield %>
   
+  <div id="echologicPromoContainer" <%= display_echologic_promo_container %>>
+    <div id="statementContainer">
+      <%= insert_rounded_box_top %>
+        <div id="statement">
+          <%= image_tag 'page/statement_claim.png' %>
+        </div>
+      <%= insert_rounded_box_bottom %>
+    </div>
+    <div id="videoContainer">
+      <%= insert_rounded_box_top %>
+      <div id="video">
+        the promotion video goes here..
+      </div>
+      <%= insert_rounded_box_bottom %>
+    </div>
+  </div>  
+  
+  <div class="tabContainer" id="tabContainer" <%= display_tab_container %>>
+    <%= yield :tabContainer %>
+  </div>
+  
+  <div class="mainBox">
+    <%= insert_rounded_box_top %>
+    <div class="boxContent" id="mainBoxContent">
+      <%= render :partial => "menu" %>
+      <div id="staticContent">
+        <%= yield %>
+      </div>
+    </div>
+    <%= insert_rounded_box_bottom %>
+  </div>
     
   <p style="color: green"><%= flash[:notice] %></p>
   

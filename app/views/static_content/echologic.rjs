@@ -1,8 +1,10 @@
 
 page << "if ($('echologicPromoContainer')) {"
-  page.visual_effect :blind_down, 'echologicPromoContainer', :duration => 0.5
+  page << "if (!$('echologicPromoContainer').visible()) {"
+    page.visual_effect :blind_down, 'echologicPromoContainer', :duration => 0.5
+  page << "}"
 page << '} else {'
-
+  page.insert_html :before, 'tabContainer', 'blabla'
 page << '}'
 
 page << "if ($('tabContainer').visible()) {"
@@ -14,4 +16,3 @@ page.replace_html 'staticContent', :template => 'echologic'
 page.replace 'staticMenu', :partial => "menu"
 
 page.visual_effect :blind_down, 'staticContent', :duration => 1.0
- 

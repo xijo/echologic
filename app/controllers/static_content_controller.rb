@@ -8,7 +8,7 @@ class StaticContentController < ApplicationController
   # Start page: echoLogic - The Mission
   def echologic
     respond_to do |format|
-      format.html
+      format.html { render :partial => 'static_content/echologic', :layout => 'static' }
       format.js
     end
   end

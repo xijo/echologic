@@ -89,4 +89,14 @@ module StaticContentHelper
     end
   end
   
+  # promoContainer is only visible in echlogic
+  def display_echologic_promo_container
+    request[:action].eql?('echologic') ? '' : "style='display:none'"
+  end
+  
+  # tabContainer is not visible in echlogic
+  def display_tab_container
+    request[:action].eql?('echologic') ? "style='display:none'" : ''
+  end  
+  
 end
