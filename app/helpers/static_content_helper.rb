@@ -30,14 +30,12 @@ module StaticContentHelper
   
   # Insert the top elements of a rounded box
   def insert_rounded_box_top
-    <<-TOP
-<div class="boxTop">
-    <div class="boxLeft"></div>
-    <div class="boxRight"></div>
-  </div>
-  <div class="boxMiddle">
-    <div class="boxMiddleLeft"></div>
-    TOP
+    top =  "<div class='boxTop'>"
+    top += "  <div class='boxLeft'></div>"
+    top += "  <div class='boxRight'></div>"
+    top += "</div>"
+    top += "<div class='boxMiddle'>"
+    top += "  <div class='boxMiddleLeft'></div>"
   end
   
   # Insert the bottom elements of a rounded box
