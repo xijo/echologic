@@ -1,14 +1,6 @@
-
-#page.visual_effect :fade, 'statementContainer', :duration => 0.5
-#page.visual_effect :blind_up, 'statementContainer', :duration => 0.5
-#page.visual_effect :blind_up, 'statement', :duration => 0.5
-#
-##
-##page.visual_effect :fade, 'videoContainer', :duration => 0.5
-#page.visual_effect :blind_up, 'videoContainer', :duration => 0.5
-#page.visual_effect :blind_up, 'video', :duration => 0.5
-page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
-
+page << "if ($('echologicPromoContainer')) {"
+  page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+page << '}' 
 
 page.delay(0) do
   page.visual_effect :appear, 'tabContainer', :duration => 0.7
