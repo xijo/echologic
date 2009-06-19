@@ -66,6 +66,7 @@ body {
   margin:      0 auto;
   z-index:     5;
   position:    relative;
+  clear:       both;
 }
 
 #mainBoxContent {
