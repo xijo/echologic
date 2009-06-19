@@ -2,6 +2,7 @@
 #
 module StaticContentHelper
   
+  # DEPRICATED
   # Creates a css tab object with a specific name and link.
   # If the relating action was requested, the tab will be
   # displayed highlighted.
@@ -15,6 +16,17 @@ module StaticContentHelper
     end
     tab << "><div><br/>#{t('static_content.' + name + '.title')}</div></a>"
   end
+  
+  # Inserts a tab with a remote link.
+  # If the relating action was requested, the tab will be
+  # displayed highlighted.  
+  def insert_remote_tab(link)
+    name = link.tr('/', '_')[1..-1]
+    tab = "<div><br/>#{t('static_content.' + name + '.title')}</div>"
+    request[:action].eql?(name) ? classname = 'activeTab' : classname = ''
+    link_to_remote (tab, {:url => link}, :href => link, :class => classname)
+  end
+  
   
   # Insert the top elements of a rounded box
   def insert_rounded_box_top
