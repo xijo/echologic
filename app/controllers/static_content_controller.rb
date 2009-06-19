@@ -9,6 +9,7 @@ class StaticContentController < ApplicationController
   def echologic
     respond_to do |format|
       format.html
+      format.js
     end
   end
   
@@ -16,6 +17,7 @@ class StaticContentController < ApplicationController
   def echo
     respond_to do |format|
       format.html { render :partial => 'static_content/echo', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo' } }            
     end
   end
   
@@ -23,6 +25,7 @@ class StaticContentController < ApplicationController
   def echo_discuss
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_discuss', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo', :submenu_item => 'discuss' } }
     end
   end
 
@@ -30,6 +33,7 @@ class StaticContentController < ApplicationController
   def echo_connect
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_connect', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo', :submenu_item => 'connect' } }      
     end
   end
 
@@ -37,7 +41,7 @@ class StaticContentController < ApplicationController
   def echo_act
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_act', :layout => 'static' }
-      format.js
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo', :submenu_item => 'act' } }
     end
   end
   
@@ -45,6 +49,7 @@ class StaticContentController < ApplicationController
   def echocracy
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy' } } 
     end
   end
 
@@ -52,6 +57,7 @@ class StaticContentController < ApplicationController
   def echocracy_citizens
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy_citizens', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'citizens' } }            
     end
   end
   
@@ -59,6 +65,7 @@ class StaticContentController < ApplicationController
   def echocracy_experts
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy_experts', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'experts' } }            
     end
   end
   
@@ -66,6 +73,7 @@ class StaticContentController < ApplicationController
   def echocracy_organisations
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy_organisations', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'organisations' } }              
     end
   end
   
@@ -73,6 +81,7 @@ class StaticContentController < ApplicationController
   def echonomy
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy' } }     
     end
   end
   
@@ -80,6 +89,7 @@ class StaticContentController < ApplicationController
   def echonomy_business_model
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy_business_model', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'business_model' } }      
     end
   end
   
@@ -87,6 +97,7 @@ class StaticContentController < ApplicationController
   def echonomy_foundation
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy_foundation', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'foundation' } }            
     end
   end
 
@@ -94,6 +105,7 @@ class StaticContentController < ApplicationController
   def echonomy_public_property
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy_public_property', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'public_property' } }            
     end    
   end
 
@@ -101,6 +113,7 @@ class StaticContentController < ApplicationController
   def echo_on_waves
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_on_waves', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves' } }
     end
   end
 
@@ -108,6 +121,7 @@ class StaticContentController < ApplicationController
   def echo_on_waves_win_win
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_on_waves_win_win', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'win_win' } }            
     end
   end
   
@@ -115,6 +129,7 @@ class StaticContentController < ApplicationController
   def echo_on_waves_open_source
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_on_waves_open_source', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'open_source' } }                  
     end
   end
 
@@ -122,7 +137,8 @@ class StaticContentController < ApplicationController
   def echo_on_waves_joint_effort
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_on_waves_joint_effort', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'joint_effort' } }                  
     end
   end
-  
+
 end
