@@ -39,19 +39,32 @@ module StaticContentHelper
     BOTTOM
   end
   
+  # DEPRICATED
   # Inserts a static menu button with the information
   # provided through the given link.
   def insert_static_menu_button(link)
     item = link.split('/')[1]
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
-    <<-BUTTON
+    button = <<-BUTTON
   <a class='staticMenuButton' href='#{link}'>
     #{image_tag insert_static_menu_image(item)}
     <span class='staticMenuButtonTitle'>#{t(title)}</span><br/>
     <span class='staticMenuButtonSubtitle'>#{t(subtitle)}</span>
   </a>
     BUTTON
+  end
+
+  # Inserts a static remote menu button with the information
+  # provided through the given link.  
+  def insert_static_remote_button(link)
+    item = link.split('/')[1]
+    title = 'static_content.'+item+'.title'
+    subtitle = 'static_content.'+item+'.subtitle'
+    button =  image_tag insert_static_menu_image(item)
+    button += "<span class='staticMenuButtonTitle'>#{t(title)}</span><br/>"
+    button += "<span class='staticMenuButtonSubtitle'>#{t(subtitle)}</span>"
+    link_to_remote (button, {:url => link}, :href => link, :class => 'staticMenuButton')
   end
   
   # Returns the image filename (on of off state) for a specific item.

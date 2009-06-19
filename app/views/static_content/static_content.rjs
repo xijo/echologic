@@ -1,0 +1,29 @@
+menu_item = local_assigns[:menu_item]
+
+if local_assigns.include?(:submenu_item)
+  submenu_item = '_' + local_assigns[:submenu_item]
+else
+  submenu_item = ''
+end
+
+page << "if ($('echologicPromoContainer')) {"
+  page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+page << '}' 
+
+page << "if ($('tabContainer').visible()) {"
+  page.visual_effect :opacity, 'tabContainer', :from => 1.0, :to => 0.3, :duration => 0.3
+  page.delay(0.3) do
+    page.replace_html 'tabContainer', :partial => "tabs_" + menu_item    
+    page.visual_effect :opacity, 'tabContainer', :from => 0.3, :to => 1.0, :duration => 0.3
+  end
+page << "} else {"
+  page.visual_effect :appear, 'tabContainer', :duration => 0.7
+  page.replace_html 'tabContainer', :partial => "tabs_" + menu_item
+page << "}"
+
+page.replace_html 'staticContent', :partial => menu_item + submenu_item
+
+page.replace 'staticMenu', :partial => "menu"
+
+page.visual_effect :blind_down, 'staticContent', :duration => 1.0
+ 
