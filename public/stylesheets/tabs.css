@@ -1,10 +1,13 @@
 .tabContainer {
   height:       61px;
+/*
   margin:       0 0 -23px 0;
+*/
+  margin:       0 auto -23px auto;
   clear:        both;
   z-index:      10;
   overflow:     visible;
-  left:         225px;
+  left:         150px;
   position:     relative;
   max-width:    800px;
 }
