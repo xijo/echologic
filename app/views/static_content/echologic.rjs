@@ -11,7 +11,9 @@ page << "if ($('tabContainer').visible()) {"
   page.visual_effect :fade, 'tabContainer', :duration => 0.5
 page << "}"
 
-page.replace_html 'staticContent', :template => 'echologic'
+page.hide 'staticContent'
+
+page.replace_html 'staticContent', :partial => 'echologic'
 
 page.replace 'staticMenu', :partial => "menu"
 

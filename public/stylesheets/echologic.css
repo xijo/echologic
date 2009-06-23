@@ -11,9 +11,14 @@ body {
   color:       #1A4864;
 }
 
+#head {
+  width:       900px;
+  margin:      0 auto;
+}
+
 #headlogo {
   float:       left;
-  margin:      0 0 -15px 30px;
+  margin:      0 0 -15px 0;
 }
 
 #invitebubble {
@@ -33,6 +38,73 @@ body {
   left:        29px;
   padding:     20px 30px 0 15px;
   position:    relative;
+}
+
+#loginContainer {
+  float:       right;
+  clear:       right;
+}
+
+.rightFloating {
+  float:       right;
+}
+
+#loginContainer .label {
+  width:       114px;
+  display:     inline-block;
+  margin:      15px 0 3px 0;
+  padding:     0 7px;
+  font-size:   11px;
+  font-weight: bold;
+  cursor:      default;
+}
+
+#loginContainer .field {
+  width:       112px;
+  background:  transparent url(../images/page/loginfield.png) no-repeat;
+  border:      none;
+  height:      19px;
+  padding:     0 7px;
+}
+
+#loginContainer .submit {
+  background:  transparent url(../images/page/button_login_off.png) no-repeat;
+  width:       48px;
+  border:      none;
+  height:      19px;
+  color:       #fff;
+  font-size:   9px;
+  font-weight: bold;
+}
+
+#loginContainer .submit:hover {
+  background:  transparent url(../images/page/button_login_on.png) no-repeat !important;
+}
+
+#loginContainer .sublabel {
+  width:       114px;
+  display:     inline-block;
+  margin:      3px 0;
+  padding:     0 7px;
+  font-size:   9px;
+  cursor:      default;
+}
+
+#metaMenuContainer {
+  float:       right;
+}
+
+#metaMenuContainer a, #metaMenuContainer a:visited {
+  color:       #7691A2;
+  font-family: arial,Helvetica,sans-serif;
+  font-size:   9pt;
+  line-height: 25px;
+  padding:     0 0 0 15px;
+  text-decoration:none;
+}
+
+#metaMenuContainer a:hover {
+  color:       #1A4864;
 }
 
 #statementContainer {
