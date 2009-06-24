@@ -18,15 +18,7 @@
       <span><b>THE TEXT GOES HERE</b><br/>Bubble grows depending on the text </span>
     </div>
     <%= render :partial => "layouts/metaMenu" %>
-    <div id="loginContainer">
-      <span class="label">E-Mail:</span>
-      <span class="label">Password:</span><br>
-      <%= text_field 'login', 'login', :class => 'field' %>
-      <%= text_field 'pw', 'pw', :class => 'field' %>
-      <%= submit_tag 'Login', :class => 'submit' %><br>
-      <span class="sublabel"><% check_box('remember', 'me') %> remember me</span>
-      <span class="sublabel">forgot your password?</span>
-    </div>
+    <%= render :partial => "layouts/loginContainer" %>
 
     
   </div>
@@ -55,7 +47,7 @@
   <div class="mainBox">
     <%= insert_rounded_box_top %>
     <div class="boxContent" id="mainBoxContent">
-      <%= render :partial => "menu" %>
+      <%= render :partial => "layouts/menu" %>
       <div id="staticContent">
         <%= yield %>
       </div>

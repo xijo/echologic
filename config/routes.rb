@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :interested_people
+
+  map.resources :interested_people
+
+  map.join 'join', :controller => 'interested_people', :action => 'new'
+
 
   map.with_options :controller => 'static_content' do |static|
     

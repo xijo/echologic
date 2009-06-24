@@ -9,9 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090602155533) do
+ActiveRecord::Schema.define(:version => 20090624081947) do
 
-  create_table "users", :force => true do |t|
+  create_table "interested_people", :force => true do |t|
+    t.string   "email"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
