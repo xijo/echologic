@@ -45,7 +45,7 @@ class StaticContentController < ApplicationController
     end
   end
   
-  # echocracy - The Actors
+  # echocracy - The Vision
   def echocracy
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy', :layout => 'static' }
@@ -53,43 +53,27 @@ class StaticContentController < ApplicationController
     end
   end
 
-  # echocracy - Engaged Citizens
-  def echocracy_citizens
+  # echocracy - Actors
+  def echocracy_actors
     respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_citizens', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'citizens' } }            
+      format.html { render :partial => 'static_content/echocracy_actors', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'actors' } }            
     end
   end
-  
-  # echocracy - Experts & Scientists
-  def echocracy_experts
+
+  # echocracy - Synergy
+  def echocracy_synergy
     respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_experts', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'experts' } }            
+      format.html { render :partial => 'static_content/echocracy_synergy', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'synergy' } }            
     end
   end
-  
-  # echocracy - Organisations
-  def echocracy_organisations
-    respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_organisations', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'organisations' } }              
-    end
-  end
-  
-  # echonomy - The Philosophy
+
+  # echonomy - Your Profit
   def echonomy
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy', :layout => 'static' }
       format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy' } }     
-    end
-  end
-  
-  # echonomy - Your-profit
-  def echonomy_business_model
-    respond_to do |format|
-      format.html { render :partial => 'static_content/echonomy_business_model', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'business_model' } }      
     end
   end
   
@@ -100,45 +84,24 @@ class StaticContentController < ApplicationController
       format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'foundation' } }            
     end
   end
-
-  # echonomy - Public Property
-  def echonomy_public_property
+  
+  # echonomy - Fundraising
+  def echonomy_fundraising
     respond_to do |format|
-      format.html { render :partial => 'static_content/echonomy_public_property', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'public_property' } }            
-    end    
-  end
-
-  # echo on waves - The Project
-  def echo_on_waves
-    respond_to do |format|
-      format.html { render :partial => 'static_content/echo_on_waves', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves' } }
-    end
-  end
-
-  # echo on waves - Win Win
-  def echo_on_waves_win_win
-    respond_to do |format|
-      format.html { render :partial => 'static_content/echo_on_waves_win_win', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'win_win' } }            
+      format.html { render :partial => 'static_content/echonomy_fundraising', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'fundraising' } }            
     end
   end
   
-  # echo on waves - Open Source
-  def echo_on_waves_open_source
+  # meta menu content
+  
+  # imprint
+  def imprint
     respond_to do |format|
-      format.html { render :partial => 'static_content/echo_on_waves_open_source', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'open_source' } }                  
+      format.html { render :template => 'static_content/imprint', :layout => 'static' }
+      format.js
     end
   end
-
-  # echo on waves - Joint effort
-  def echo_on_waves_joint_effort
-    respond_to do |format|
-      format.html { render :partial => 'static_content/echo_on_waves_joint_effort', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo_on_waves', :submenu_item => 'joint_effort' } }                  
-    end
-  end
-
+  
+  
 end

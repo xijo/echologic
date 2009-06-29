@@ -3,8 +3,6 @@ page << "if ($('echologicPromoContainer')) {"
   page << "if (!$('echologicPromoContainer').visible()) {"
     page.visual_effect :blind_down, 'echologicPromoContainer', :duration => 0.5
   page << "}"
-page << '} else {'
-  page.insert_html :before, 'tabContainer', 'blabla'
 page << '}'
 
 page << "if ($('tabContainer').visible()) {"

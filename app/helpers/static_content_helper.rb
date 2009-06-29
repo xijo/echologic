@@ -21,12 +21,11 @@ module StaticContentHelper
   # If the relating action was requested, the tab will be
   # displayed highlighted.  
   def insert_remote_tab(link)
-    name = link.tr('/', '_')[1..-1]
+    name = link.tr('/', '_')[4..-1]
     tab = "<div><br/>#{t('static_content.' + name + '.title')}</div>"
-    request[:action].eql?(name) ? classname = 'activeTab' : classname = ''
-    link_to_remote (tab, {:url => link}, :href => link, :class => classname)
+    classname = request[:action].eql?(name) ? 'activeTab' : ''
+    link_to_remote(tab, {:url => link}, :href => link, :class => classname)
   end
-  
   
   # Insert the top elements of a rounded box
   def insert_rounded_box_top
@@ -49,32 +48,16 @@ module StaticContentHelper
     BOTTOM
   end
   
-  # DEPRICATED
-  # Inserts a static menu button with the information
-  # provided through the given link.
-  def insert_static_menu_button(link)
-    item = link.split('/')[1]
-    title = 'static_content.'+item+'.title'
-    subtitle = 'static_content.'+item+'.subtitle'
-    button = <<-BUTTON
-  <a class='staticMenuButton' href='#{link}'>
-    #{image_tag insert_static_menu_image(item)}
-    <span class='staticMenuButtonTitle'>#{t(title)}</span><br/>
-    <span class='staticMenuButtonSubtitle'>#{t(subtitle)}</span>
-  </a>
-    BUTTON
-  end
-
   # Inserts a static remote menu button with the information
   # provided through the given link.  
   def insert_static_remote_button(link)
-    item = link.split('/')[1]
+    item = link.split('/')[2]
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
     button =  image_tag insert_static_menu_image(item)
     button += "<span class='staticMenuButtonTitle'>#{t(title)}</span><br/>"
     button += "<span class='staticMenuButtonSubtitle'>#{t(subtitle)}</span>"
-    link_to_remote (button, {:url => link}, :href => link, :class => 'staticMenuButton')
+    link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
   end
   
   # Returns the image filename (on of off state) for a specific item.
@@ -98,5 +81,9 @@ module StaticContentHelper
   def display_tab_container
     request[:action].eql?('echologic') ? "style='display:none'" : ''
   end  
+  
+  def insert_breadcrump
+    link_to_remote(t('static_content.echologic.title'), {:url => echo_path}, :href => echo_path)    
+  end
   
 end

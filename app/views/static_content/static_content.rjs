@@ -4,6 +4,7 @@ submenu_item = local_assigns.include?(:submenu_item) ? '_'+local_assigns[:submen
 
 page << "if ($('echologicPromoContainer')) {"
   page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+  page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
 page << '}' 
 
 page << "if ($('tabContainer').visible()) {"

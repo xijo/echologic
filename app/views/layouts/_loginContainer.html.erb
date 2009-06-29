@@ -1,9 +1,9 @@
 <div id="loginContainer">
-  <span class="label">E-Mail:</span>
-  <span class="label">Password:</span><br>
+  <span class="label"><%= t('.email') %></span>
+  <span class="label"><%= t('.password') %></span><br>
   <%= text_field 'login', 'login', :class => 'field' %>
-  <%= text_field 'pw', 'pw', :class => 'field' %>
+  <%= password_field 'pw', 'pw', :class => 'field' %>
   <%= submit_tag 'Login', :class => 'submit' %><br>
-  <span class="sublabel"><% check_box('remember', 'me') %> remember me</span>
-  <span class="sublabel">forgot your password?</span>
+  <span class="sublabel"><%= link_to(t('.remember'), '#') %></span>
+  <span class="sublabel"><%= link_to(t('.forgot'), '#') %></span>
 </div>
