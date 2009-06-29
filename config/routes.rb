@@ -1,12 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :interested_people
 
   map.resources :interested_people
 
-  map.join 'join', :controller => 'interested_people', :action => 'new'
+  map.join 'join', :controller => 'interested_people', :action => 'new', :path_prefix => ':locale'
 
-
-  map.with_options :controller => 'static_content' do |static|
+  map.with_options :controller => 'static_content', :path_prefix => ':locale' do |static|
     
     static.echologic 'echologic', :action => 'echologic'
     
@@ -18,23 +16,25 @@ ActionController::Routing::Routes.draw do |map|
     
     # echocracy
     static.echocracy 'echocracy', :action => 'echocracy'
-    static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
-    static.echocracy_experts 'echocracy/experts', :action => 'echocracy_experts'
-    static.echocracy_organisations 'echocracy/organisations', :action => 'echocracy_organisations'
+    static.echocracy_actors 'echocracy/actors', :action => 'echocracy_actors'
+    static.echocracy_synergy 'echocracy/synergy', :action => 'echocracy_synergy'
     
     # echonomy
     static.echonomy 'echonomy', :action => 'echonomy'
-    static.echonomy_business_model 'echonomy/business_model', :action => 'echonomy_business_model'
     static.echonomy_foundation 'echonomy/foundation', :action => 'echonomy_foundation'
-    static.echonomy_public_property 'echonomy/public_property', :action => 'echonomy_public_property'
+    static.echonomy_fundraising 'echonomy/fundraising', :action => 'echonomy_fundraising'
     
     # echo on waves
     static.echoonwaves 'echo_on_waves', :action => 'echo_on_waves'
     static.echoonwaves_win_win 'echo_on_waves/win_win', :action => 'echo_on_waves_win_win'
     static.echoonwaves_open_source 'echo_on_waves/open_source', :action => 'echo_on_waves_open_source'
     static.echoonwaves_joint_effort 'echo_on_waves/joint_effort', :action => 'echo_on_waves_joint_effort'
+    
+    # meta menu routes
+    static.imprint 'imprint', :action => 'imprint'
+    
   end
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

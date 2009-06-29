@@ -5,21 +5,24 @@ en:
 
   # Localizations for the layout components
   layouts:
-    metaMenu:
+    meta_menu:
       language: Language
       imprint: Imprint
       about: About
       feedback: Feedback
       logout: Logout
-    
-      
+    loginContainer:
+      password: 'Password:'
+      email: 'E-Mail:'
+      forgot: Forgot your password?
+      remember: Remember me!
   
   
   static_content:
   
     # Static content for the echoLogic main menu point
     echologic:
-      title: echoLogic
+      title: echologic
       subtitle: The Mission
       mission_statement: 'echoLogic is a network of free minds united to realize echo: the planetary agora.'
       agora_tooltip: >-
@@ -56,46 +59,25 @@ en:
     # Static content for the echocracy main menu point
     echocracy:
       title: echocracy
-      subtitle: The Actors
+      subtitle: The Vision
+    
+    echocracy_actors:
+      title: Actors
       
-    echocracy_citizens:
-      title: Engaged Citizens
-           
-    echocracy_experts:
-      title: Experts & Scientists
-        
-    # NGOs, political & government organisations and their representatives & employees
-    echocracy_organisations:
-      title: Organisations
+    echocracy_synergy:
+      title: Synergy
       
-    echocracy_administration:
-        
     # Static content for the echonomy main menu point
     echonomy:
       title: echonomy
-      subtitle: The Philosophy
+      subtitle: Your Profit
       
-    echonomy_business_model:
-      title: Your-profit
-    
     echonomy_foundation:
-      title: The Foundation    
-        
-    echonomy_public_property:
-      title: Public Property
+      title: The Foundation
     
-    # Static content for the echo on waves main menu point
-    echo_on_waves:
-      title: echo on waves
-      subtitle: The Project
+    echonomy_fundraising:
+      title: Fundraising
     
-    echo_on_waves_win_win:
-      title: Win-Win
-      
-    echo_on_waves_open_source:
-      title: Open Source
-      
-    echo_on_waves_joint_effort:
-      title: Joint Effort
-
-      
+    # Static content for imprint
+    imprint:
+      title: Imprint      
