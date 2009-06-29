@@ -1,4 +1,12 @@
 class InterestedPeopleController < ApplicationController
+
+  uses_tiny_mce :options => {
+                              :theme => 'advanced',
+                              :language => 'de',
+                              :theme_advanced_resizing => true,
+                              :theme_advanced_resize_horizontal => false
+                            }
+
   # GET /interested_people
   # GET /interested_people.xml
   def index

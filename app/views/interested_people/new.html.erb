@@ -9,11 +9,14 @@
   </p>
   <p>
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'mceEditor' %>
   </p>
   <p>
     <%= f.submit 'Create' %>
   </p>
+  
+  <%= f.text_area :name, :class => 'mceEditor' %>
+  
 <% end %>
 
 <%= link_to 'Back', interested_people_path %>
