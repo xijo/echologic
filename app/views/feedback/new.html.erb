@@ -1,0 +1,22 @@
+<h1>Feedback</h1>
+
+<% form_tag({:controller => 'feedback', :action => 'create'}) do %>
+
+  <p>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, 'Name' %>
+  </p>
+  
+  <p>
+    <%= label_tag t('.email') %><br />
+    <%= text_field_tag :sender, 'name@mail.com' %>
+  </p>
+
+  <p>
+    <%= label_tag :text %><br />
+    <%= text_area_tag :text, 'example', :class => 'mceEditor' %>
+  </p>
+
+  <%= submit_tag 'Submit' %>
+
+<% end -%>

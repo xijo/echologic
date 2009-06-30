@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :interested_people
+  
+  map.resources :feedback, :path_prefix => ':locale'
 
   map.join 'join', :controller => 'interested_people', :action => 'new', :path_prefix => ':locale'
 
