@@ -1,8 +1,8 @@
 <div id="topMenuContainer">
-  <%= link_to t('.language'), '#' %>
+  <a onclick="new Effect.toggle('languageSelector', 'blind', {duration:0.5})" href="#"><%= t('.language') %></a>
   <%= link_to t('.about'), '#' %>
   <%= link_to_remote t('.feedback'), {:url => new_feedback_path, :method => :get}, :href => new_feedback_path %>
-  <div id="languageSelector">
+  <div id="languageSelector" style="display:none;">
     <ul>
       <li><%= link_to("English", :locale => "en") %></li>
       <li><%= link_to("Deutsch", :locale => "de") %></li>
