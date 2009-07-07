@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   
-  before_filter :set_locale 
+  before_filter :set_locale_from_url
+#  before_filter :set_locale 
   
   def set_locale 
     # if params[:locale] is nil then I18n.default_locale will be used  

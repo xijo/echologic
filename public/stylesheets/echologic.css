@@ -105,7 +105,11 @@ body {
 }
 
 #topMenuContainer {
+  position:    relative;
   float:       right;
+  width:       300px;
+  overflow:    visible;
+  height:      20px;
 }
 
 #topMenuContainer a, #topMenuContainer a:visited {
@@ -115,10 +119,39 @@ body {
   line-height: 25px;
   padding:     0 0 0 15px;
   text-decoration:none;
+  float:       right;
 }
 
 #topMenuContainer a:hover {
   color:       #1A4864;
+}
+
+#languageSelector {
+  position:    absolute;
+  top:         23px;
+  left:        230px;
+  background:  #fff;
+  border:      1px solid #ccc;
+  text-align:  left;
+}
+
+#languageSelector li {
+  border-top:1px solid #C8C8C8;
+}
+
+#languageSelector li:first-child {
+  border-top: none;
+}
+
+#languageSelector ul {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+#languageSelector a, #languageSelector a:visited {
+  float: none;
+  padding: 0 10px;
 }
 
 #statementContainer {

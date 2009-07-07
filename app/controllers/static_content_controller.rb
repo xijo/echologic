@@ -122,16 +122,16 @@ class StaticContentController < ApplicationController
   # Imprint
   def imprint
     respond_to do |format|
-      format.html { render :template => 'static_content/imprint', :layout => 'static' }
-      format.js
+      format.html { render :partial => 'static_content/imprint', :layout => 'static' }
+      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'imprint' }}
     end
   end
   
-  # Imprint
-  def imprint
+  # Data privacy
+  def data_privacy
     respond_to do |format|
-      format.html { render :template => 'static_content/data_privacy', :layout => 'static' }
-      format.js
+      format.html { render :partial => 'static_content/data_privacy', :layout => 'static' }
+      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'data_privacy' }}
     end
   end
   
