@@ -9,11 +9,11 @@ class StaticContentController < ApplicationController
   def echologic
     respond_to do |format|
       format.html { render :partial => 'static_content/echologic', :layout => 'static' }
-      format.js
+      format.js { render :template => 'static_content/echologic' }
     end
   end
   
-  # echo - The Platform
+  # echo - The Project
   def echo
     respond_to do |format|
       format.html { render :partial => 'static_content/echo', :layout => 'static' }
@@ -29,7 +29,7 @@ class StaticContentController < ApplicationController
     end
   end
 
-  #echo - Connect
+  # echo - Connect
   def echo_connect
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_connect', :layout => 'static' }
@@ -37,7 +37,7 @@ class StaticContentController < ApplicationController
     end
   end
 
-  #echo - Act
+  # echo - Act
   def echo_act
     respond_to do |format|
       format.html { render :partial => 'static_content/echo_act', :layout => 'static' }
@@ -45,7 +45,15 @@ class StaticContentController < ApplicationController
     end
   end
   
-  # echocracy - The Vision
+  # echo - echo on waves
+  def echo_echo_on_waves
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echo_echo_on_waves', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echo', :submenu_item => 'echo_on_waves' } }
+    end
+  end
+  
+  # echocracy - The Benefits / The Actors
   def echocracy
     respond_to do |format|
       format.html { render :partial => 'static_content/echocracy', :layout => 'static' }
@@ -53,27 +61,43 @@ class StaticContentController < ApplicationController
     end
   end
 
-  # echocracy - Actors
-  def echocracy_actors
+  # echocracy - Citizens
+  def echocracy_citizens
     respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_actors', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'actors' } }            
+      format.html { render :partial => 'static_content/echocracy_citizens', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'citizens' } }            
     end
   end
 
-  # echocracy - Synergy
-  def echocracy_synergy
+  # echocracy - Scientists
+  def echocracy_scientists
     respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_synergy', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'synergy' } }            
+      format.html { render :partial => 'static_content/echocracy_scientists', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'scientists' } }            
     end
   end
 
-  # echonomy - Your Profit
+  # echocracy - Representatives
+  def echocracy_representatives
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echocracy_representatives', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'representatives' } }            
+    end
+  end
+
+  # echonomy - The Values
   def echonomy
     respond_to do |format|
       format.html { render :partial => 'static_content/echonomy', :layout => 'static' }
       format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy' } }     
+    end
+  end
+  
+  # echonomy - Your-Profit
+  def echonomy_your_profit
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echonomy_your_profit', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'your_profit' } }            
     end
   end
   
@@ -85,17 +109,17 @@ class StaticContentController < ApplicationController
     end
   end
   
-  # echonomy - Fundraising
-  def echonomy_fundraising
+  # echonomy - Public Property
+  def echonomy_public_property
     respond_to do |format|
-      format.html { render :partial => 'static_content/echonomy_fundraising', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'fundraising' } }            
+      format.html { render :partial => 'static_content/echonomy_public_property', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echonomy', :submenu_item => 'public_property' } }            
     end
   end
   
-  # meta menu content
+  # Bottom menu
   
-  # imprint
+  # Imprint
   def imprint
     respond_to do |format|
       format.html { render :template => 'static_content/imprint', :layout => 'static' }
@@ -103,5 +127,12 @@ class StaticContentController < ApplicationController
     end
   end
   
+  # Imprint
+  def imprint
+    respond_to do |format|
+      format.html { render :template => 'static_content/data_privacy', :layout => 'static' }
+      format.js
+    end
+  end
   
 end

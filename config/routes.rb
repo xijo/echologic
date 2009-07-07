@@ -8,32 +8,37 @@ ActionController::Routing::Routes.draw do |map|
 
   map.with_options :controller => 'static_content', :path_prefix => ':locale' do |static|
     
+    # echologic - The Mission
     static.echologic 'echologic', :action => 'echologic'
     
-    # echo - the platform
+    # echo - The Project
     static.echo 'echo', :action => 'echo'
     static.echo_discuss 'echo/discuss', :action => 'echo_discuss'
     static.echo_connect 'echo/connect', :action => 'echo_connect'
     static.echo_act 'echo/act', :action => 'echo_act'
+    static.echo_echo_on_waves 'echo/echo_on_waves', :action => 'echo_echo_on_waves'
     
-    # echocracy
+    # echocracy - The Actors
     static.echocracy 'echocracy', :action => 'echocracy'
-    static.echocracy_actors 'echocracy/actors', :action => 'echocracy_actors'
-    static.echocracy_synergy 'echocracy/synergy', :action => 'echocracy_synergy'
+    static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
+    static.echocracy_scientists 'echocracy/scientists', :action => 'echocracy_scientists'
+    static.echocracy_representatives 'echocracy/representatives', :action => 'echocracy_representatives'
     
-    # echonomy
+    # echonomy - The Values
     static.echonomy 'echonomy', :action => 'echonomy'
+    static.echonomy_your_profit 'echonomy/your_profit', :action => 'echonomy_your_profit'
     static.echonomy_foundation 'echonomy/foundation', :action => 'echonomy_foundation'
-    static.echonomy_fundraising 'echonomy/fundraising', :action => 'echonomy_fundraising'
+    static.echonomy_public_property 'echonomy/public_property', :action => 'echonomy_public_property'
+   
+    # your echo - Join echologic
+    static.your_echo 'your_echo', :action => 'your_echo'
     
-    # echo on waves
-    static.echoonwaves 'echo_on_waves', :action => 'echo_on_waves'
-    static.echoonwaves_win_win 'echo_on_waves/win_win', :action => 'echo_on_waves_win_win'
-    static.echoonwaves_open_source 'echo_on_waves/open_source', :action => 'echo_on_waves_open_source'
-    static.echoonwaves_joint_effort 'echo_on_waves/joint_effort', :action => 'echo_on_waves_joint_effort'
     
-    # meta menu routes
+    # Top menu
+    
+    # Bottom menu
     static.imprint 'imprint', :action => 'imprint'
+    static.data_privacy 'data_privacy', :action => 'data_privacy'
     
   end
   
