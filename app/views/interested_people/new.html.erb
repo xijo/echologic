@@ -14,5 +14,11 @@
   <p>
     <%= f.submit 'Create' %>
   </p>
+  
+  <p>
+    <%= text_area_tag :wmd_text_area, "# heading 1 \n\n## heading 1.1 \n\ntext *italic* and **bold**." %>
+  </p>
+  
+  <div class="wmd-preview"></div>
 
 <% end %>
