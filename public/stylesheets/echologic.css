@@ -117,7 +117,7 @@ body {
   font-family: arial,Helvetica,sans-serif;
   font-size:   9pt;
   line-height: 25px;
-  padding:     0 0 0 15px;
+  padding:     0 2px 0 15px;
   text-decoration:none;
   float:       right;
 }
@@ -128,11 +128,12 @@ body {
 
 #languageSelector {
   position:    absolute;
-  top:         23px;
-  left:        230px;
+  top:         25px;
+  left:        226px;
   background:  #fff;
   border:      1px solid #ccc;
   text-align:  left;
+  width:       130px;
 }
 
 #languageSelector li {
