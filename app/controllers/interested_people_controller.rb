@@ -28,8 +28,9 @@ class InterestedPeopleController < ApplicationController
     @interested_person = InterestedPerson.new
 
     respond_to do |format|
-      format.html { render :template => 'interested_people/new', :layout => 'static' }
+      format.html { render :partial => 'interested_people/new', :layout => 'static' }
       format.xml  { render :xml => @interested_person }
+      format.js   { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'interested_people/new' }}
     end
   end
 

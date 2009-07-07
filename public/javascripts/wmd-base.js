@@ -896,7 +896,7 @@ Attacklab.wmdBase = function(){
             _c0.push("|");
         };
         var _d0 = function(){
-            var _d1 = _6.createImage("images/separator.png", 20, 20);
+            var _d1 = _6.createImage("../images/wmd/separator.png", 20, 20);
             _d1.style.padding = "4px";
             _d1.style.paddingTop = "0px";
             _b9.appendChild(_d1);

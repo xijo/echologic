@@ -2,11 +2,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :interested_people
   
-  map.resources :feedback, :path_prefix => ':locale'
+  map.resources :feedback
 
-  map.join 'join', :controller => 'interested_people', :action => 'new', :path_prefix => ':locale'
+  map.join 'join', :controller => 'interested_people', :action => 'new'
 
-  map.with_options :controller => 'static_content', :path_prefix => ':locale' do |static|
+#  map.with_options :controller => 'static_content' do |static|
+#    static.echologic 'echologic', :action => 'echologic'
+#  end
+
+  map.with_options :controller => 'static_content' do |static|
     
     # echologic - The Mission
     static.echologic 'echologic', :action => 'echologic'
@@ -89,3 +93,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
+
+# load german i18n file
+#ActionController::Routing::Translator.i18n('es')
+#ActionController::Routing::Translator.i18n('en')
+ActionController::Routing::Translator.i18n

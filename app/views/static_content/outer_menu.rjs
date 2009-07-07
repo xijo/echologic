@@ -1,0 +1,20 @@
+# if promo container is part of the layout, hide it.
+page << "if ($('echologicPromoContainer')) {"
+  page << "if ($('echologicPromoContainer').visible()) {"
+    page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+    page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
+  page << "}"
+page << '}'
+
+# if tabContainer contains content, remove it, if it's hidden, show it.
+page << "if ($('tabContainer').visible()) {"
+  page.replace_html 'tabContainer', ''
+page << "} else {"
+  page.show 'tabContainer'
+  page.replace_html 'tabContainer', ''  
+page << "}"
+
+# insert the right partial and add some visual effect
+page.hide 'staticContent'
+page.replace_html 'staticContent', :partial => local_assigns[:menu_item]
+page.visual_effect :appear, 'staticContent', :duration => 0.3
