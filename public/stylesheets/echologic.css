@@ -11,6 +11,14 @@ body {
   color:       #1A4864;
 }
 
+#wmd_text_area {
+  width:       450px;
+  height:      150px;
+  border:      1px solid #999999;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  font-size:   90%;
+}
+
 #head {
   width:       970px;
   margin:      0 auto;
