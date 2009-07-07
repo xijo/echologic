@@ -7,9 +7,10 @@
   clear:        both;
   z-index:      10;
   overflow:     visible;
-  left:         150px;
+/*  left:         100px;*/
   position:     relative;
-  max-width:    800px;
+  max-width:    900px;
+  text-align:   center;
 }
 
 .tabContainer a, .tabContainer a:visited {
