@@ -48,15 +48,26 @@ en:
         So k&ouml;nnen die Menschen auf echo konstruktiv zusammen arbeiten und mit wenigem Aufwand ihren unmittelbaren Lebensraum sowie 
         die Zukunft unserer Einen Welt gemeinsam bestimmen. 
          
-      action: |-
-        F&uuml;r eine neue Gesellschaft!\n
-        Erheb Deine Stimme!\n
-        Bewirk ein Echo!\n
+      action1: 'F&uuml;r eine neue Gesellschaft!'
+      action2: 'Erheb Deine Stimme!'
+      action3: 'Bewirk ein Echo!'
 
     # Static content for the echo main menu point
     echo:
       title: echo
       subtitle: The Project
+      why:
+        title: Warum brauchen wir echo?
+        text: |-
+          Die Welt ist im Umbruch. Die Menschheit sieht sich mit &ouml;kologischen, &ouml;konomischen und humanit&auml;ren Problemen von nie gesehenem Ausma&szlig; konfrontiert. Zufriedenstellende L&ouml;sungen sind jedoch nicht in Sicht. Intransparente Entscheidungen rufen ein wachsendes Gef&uuml;hl der Machtlosigkeit und politischen Resignation in der Bev&ouml;lkerung hervor und schw&auml;chen den Glauben an die heutigen Demokratien. Rufe nach mehr Transparenz und Mitspracherecht werden immer lauter. 
+          Es gilt daher den Menschen eine M&ouml;glichkeit zu geben, gemeinsam konstruktive L&ouml;sungen zu finden, um den glokalen Herausforderungen unserer Zeit effektiv begegnen zu k&ouml;nnen.
+      what:
+        title: Was ist echo?
+        text: |-
+          echo ist das Instrument f&uuml;r eine neue Form partizipativer Demokratie, das es anstrebt, dieser unausweichlichen Anforderung gerecht zu werden.
+          Anders als herk&ouml;mmliche Web 2.0 Anwendungen2, erm&ouml;glicht echo einen l&ouml;sungsorientierten &ouml;ffentlichen Diskurs und eine soziale Zusammenarbeit mit effektiver Einflussnahme auf die Realit&auml;t. Dazu vereint echo technische Innovation und wissenschaftliches Know-How in einem einzigartigen Konzept. Dieses hilft den Menschen Hintergr&uuml;nde und Zusammenh&auml;nge besser zu verstehen, gemeinsam Entscheidungen zu f&auml;llen und diese mit anderen MitstreiterInnen wirksam umzusetzen. 
+          Dementsprechend stellt echo seinen NutzerInnen drei Funktionsbereiche zur Verf&uuml;gung: Diskutieren - Vernetzen - Handeln!
+                
       text: |-
         <h2>Warum brauchen wir echo?</h2>
         Die Welt ist im Umbruch. Die Menschheit sieht sich mit &ouml;kologischen, &ouml;konomischen und humanit&auml;ren Problemen von nie gesehenem Ausma&szlig; konfrontiert. Zufriedenstellende L&ouml;sungen sind jedoch nicht in Sicht. Intransparente Entscheidungen rufen ein wachsendes Gef&uuml;hl der Machtlosigkeit und politischen Resignation in der Bev&ouml;lkerung hervor und schw&auml;chen den Glauben an die heutigen Demokratien. Rufe nach mehr Transparenz und Mitspracherecht werden immer lauter. 
@@ -68,6 +79,7 @@ en:
         Dementsprechend stellt echo seinen NutzerInnen drei Funktionsbereiche zur Verf&uuml;gung: Diskutieren - Vernetzen - Handeln!
       tooltip_agora: >-
         Unsere &ouml;kologische, &ouml;konomische und humanit&auml;re Herausforderungen sind auf lokaler und globaler Ebene miteinander eng verbunden (interrelationiert). Sie k&ouml;nnen daher nicht unabh&auml;ngig voneinander sondern nur mit Hinblick auf ihren komlexen Zusammenh&auml;ngen analysisert und zusammen gel&ouml;st werden.   
+
       
     echo_discuss:
       title: Discuss
