@@ -5,6 +5,10 @@
   text-decoration: underline;
 }
 
+.moreButton:hover {
+  color:    #000;
+}
+
 .moreContent {
   background: #ccc;
   padding:  10px;
