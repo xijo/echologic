@@ -49,9 +49,9 @@ en:
         die Zukunft unserer Einen Welt gemeinsam bestimmen. 
          
       action: |-
-        F&uuml;r eine neue Gesellschaft!<br>
-        Erheb Deine Stimme!<br>
-        Bewirk ein Echo!<br>
+        F&uuml;r eine neue Gesellschaft!\n
+        Erheb Deine Stimme!\n
+        Bewirk ein Echo!\n
 
     # Static content for the echo main menu point
     echo:

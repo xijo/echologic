@@ -1,0 +1,11 @@
+/* */
+.moreButton {
+  cursor:   pointer;
+  color:    #a8c642;
+  text-decoration: underline;
+}
+
+.moreContent {
+  background: #ccc;
+  padding:  10px;
+}

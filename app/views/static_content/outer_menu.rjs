@@ -1,8 +1,11 @@
 # if promo container is part of the layout, hide it.
+# if not ie with fade effect!
 page << "if ($('echologicPromoContainer')) {"
   page << "if ($('echologicPromoContainer').visible()) {"
     page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
-    page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
+    page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
+      page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
+    page << '}'    
   page << "}"
 page << '}'
 
@@ -18,3 +21,5 @@ page << "}"
 page.hide 'staticContent'
 page.replace_html 'staticContent', :partial => local_assigns[:menu_item]
 page.visual_effect :appear, 'staticContent', :duration => 0.3
+page.replace 'staticMenu', :partial => "layouts/menu"
+
