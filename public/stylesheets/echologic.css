@@ -1,6 +1,7 @@
 @import "tabs.css";
 @import "static_menu.css";
 @import "box.css";
+@import "static_content.css";
 
 body { 
   background:  #a8c642 url(../images/page/background.png) repeat-x;
@@ -171,7 +172,7 @@ body {
 
 #videoContainer {
   width:       31%;
-  min-width:   200px;
+  min-width:   200px;  
   float:       right;
   margin:      0 0 0 0;
 }

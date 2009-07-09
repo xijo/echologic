@@ -27,6 +27,5 @@ page.replace_html 'staticContent', :partial => menu_item + submenu_item
 
 page.replace 'staticMenu', :partial => "layouts/menu"
 
-#page.visual_effect :blind_down, 'staticContent', :duration => 1.0
 page.visual_effect :appear, 'staticContent', :duration => 0.3
  
