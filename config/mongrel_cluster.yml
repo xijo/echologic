@@ -1,8 +1,8 @@
 --- 
 cwd: /home/echologic/current
-log_file: log/mongrel.log
+log_file: /home/echologic/log/mongrel.log
 port: "8000"
 environment: production
 #address: 127.0.0.1
-pid_file: tmp/pids/mongrel.pid
+pid_file: /home/echologic/tmp/pids/mongrel.pid
 servers: 3
