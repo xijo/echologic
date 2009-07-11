@@ -1,5 +1,5 @@
 --- 
-cwd: C:/Program\ Files/ruby/bin
+cwd: /home/echologic/current
 log_file: log/mongrel.log
 port: "8000"
 environment: production
