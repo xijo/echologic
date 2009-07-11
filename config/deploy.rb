@@ -6,7 +6,11 @@ set :repository,  "http://echo-source.org/svn/echoLogic/trunk"
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
 # via the :deploy_to variable:
-set :deploy_to, "htdocs/#{application}"
+#set :deploy_to, "htdocs/#{application}"
+set :deploy_to, '.'
+
+# 
+set :use_sudo, false
 
 # user for the ssh connection
 set :user, "echologic"
