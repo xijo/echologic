@@ -2,6 +2,7 @@
 @import "static_menu.css";
 @import "box.css";
 @import "static_content.css";
+@import "tooltips.css";
 
 body { 
   background:  #a8c642 url(../images/page/background.png) repeat-x;
@@ -123,6 +124,10 @@ body {
   float:       right;
 }
 
+#topMenuContainer a img {
+  border:      0px;
+}
+
 #topMenuContainer a:hover {
   color:       #1A4864;
 }
@@ -130,30 +135,42 @@ body {
 #languageSelector {
   position:    absolute;
   top:         25px;
-  left:        226px;
-  background:  #fff;
-  border:      1px solid #ccc;
+  left:        160px;
   text-align:  left;
-  width:       130px;
+  width:       210px;
+  z-index:     100;
 }
 
 #languageSelector li {
-  border-top:1px solid #C8C8C8;
+  background: transparent url(../images/page/dropdown/middle.png) repeat-y;
+  list-style-position: inside;
 }
 
-#languageSelector li:first-child {
+#languageSelector li:first-child a {
   border-top: none;
+}
+
+#languageSelector ul:before {
+  content: url(../images/page/dropdown/top.png);
+}
+
+#languageSelector ul:after {
+  content: url(../images/page/dropdown/bottom.png); 
 }
 
 #languageSelector ul {
   list-style-type:none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 22px 0;
 }
 
 #languageSelector a, #languageSelector a:visited {
+  border-top:1px solid #efefef;
+  margin-left: 20px;
+  padding: 0;
   float: none;
-  padding: 0 10px;
+  width: 160px;
+  display: inline-block;
 }
 
 #statementContainer {
@@ -198,7 +215,7 @@ body {
 }
 
 #mainBoxContent {
-  min-height:  600px;
+  overflow:    auto;
 }
 
 #staticContent {
@@ -227,7 +244,39 @@ body {
 }
 
 body, p, ol, ul, td {
-  font-family:  verdana, arial, helvetica, sans-serif;
-  font-size:    13px;
+  font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
+  font-size:    10pt;
+}
+
+h1, h2, h3, h4 {
+  font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
+  cursor:       default;
+  font-weight:  normal;  
+}
+
+h1 {
+  color:        #1A4864;
+  font-size:    25pt;
+  margin-top:   0;
+}
+
+h2 {
+  border-top:   1px solid #EAEAEA;
+  color:        #1A4864;
+  font-size:    20pt;
+  padding:      12px 0 0;
+}
+
+h3 {
+  color:        #1A4864;
+  font-size:    14pt;
+  font-weight:  bold;
+}
+
+h4 {
+  color:        #7BB031;
+  font-size:    12pt;
+  margin-top:   -25px;
+  padding:      0 0 0 2px;
 }
 

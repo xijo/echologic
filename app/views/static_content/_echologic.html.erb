@@ -1,5 +1,3 @@
-<!--<%= insert_breadcrump %>-->
-
 <h1><%= t('.title') %></h1>
 
 <p><%= t('.aid') %></p>
@@ -16,3 +14,15 @@
 <div id='example' style='display: none;''>
   <div class='moreContent'><%= t('.aid') %></div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	$$(".ttLink").each( function(link) {
+		/*new Tooltip(link, {mouseFollow: false});*/
+    /*new Tooltip(link, {backgroundColor: "#1A4864", opacity:0.9, borderColor: "#7ab031", textColor: "#a8c642", textShadowColor: "#a8c642", delay: "100"});*/
+    /*new Tooltip(link, {backgroundColor: "#fff", opacity:1, borderColor: "#bbc9d0", textColor: "#3a9401", textShadowColor: "#fff", delay: "100"});   */
+    new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
+    
+	});
+</script>
+
+<%= auto_link("Go to http://www.rubyonrails.org and say hello to david@loudthinking.com") %>
