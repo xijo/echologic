@@ -22,7 +22,7 @@ module StaticContentHelper
   # displayed highlighted.  
   def insert_remote_tab(link)
     name = link.tr('/', '_')[4..-1]
-    tab = "<div><br/>#{t('static_content.' + name + '.title')}</div>"
+    tab = "<div>#{t('static_content.' + name + '.title')}</div>"
     classname = request[:action].eql?(name) ? 'activeTab' : ''
     link_to_remote(tab, {:url => link}, :href => link, :class => classname)
   end
@@ -46,6 +46,18 @@ module StaticContentHelper
     <div class="boxRight"></div>
   </div>
     BOTTOM
+  end
+  
+  # Inserts div structure for rounded box
+  # Pretty cooler rounded box helper with yield function! Usage makes our
+  # views simpler than before and only one method will be needed.
+  def insert_rounded_box
+    concat "<div class='boxTop'>\n  <div class='boxLeft'></div>"
+    concat "  <div class='boxRight'></div>\n</div>"
+    concat "<div class='boxMiddle'>\n  <div class='boxMiddleLeft'></div>"
+    yield
+    concat "</div>\n<div class='boxBottom'>\n  <div class='boxLeft'></div>\n"
+    concat "  <div class='boxRight'></div>\n</div>"
   end
   
   # Inserts a static remote menu button with the information
@@ -80,10 +92,64 @@ module StaticContentHelper
   # tabContainer is not visible in echlogic
   def display_tab_container
     request[:action].eql?('echologic') ? "style='display:none'" : ''
-  end  
-  
-  def insert_breadcrump
-    link_to_remote(t('static_content.echologic.title'), {:url => echo_path}, :href => echo_path)    
   end
   
+  # display_content
+  def display_content(content)
+    content.each do |key, value|
+      case key.to_s
+        when /\Atext/
+          display_text(value)
+        when /\Apart/
+          concat("part ")
+      end
+    end
+  end
+  
+  # display text
+  def display_text(value)
+    concat("<p>")
+    if value.is_a? String
+      concat("value")
+    elsif value.is_a? Array
+      concat(value.inspect)
+      value.each do |key, part|
+        case key.to_s
+          when /\Apart/
+            concat(part)
+          when /\Alink/
+            concat("<a>#{part[:title]}</a>")
+        end
+      end
+    else
+      concat(value.inspect)
+      display_content(value)
+    end
+    concat("</p>")
+  end
+  
+  #
+  def insert_list(array, options={})
+    list_type = options[:ordered] ? ["<ol>", "</ol>"] : ["<ul>", "</ul>"]
+    concat(list_type.first)
+    array.each do |li|
+      if li.is_a?(String)
+        concat("<li>#{li}</li>")
+      elsif li.is_a?(Hash)
+        concat(list_type.first)
+        li.each_value do |lii|
+          concat("<li>#{lii}</li>")
+        end
+        concat(list_type.last)
+      elsif li.is_a?(Array)
+        concat(list_type.first)
+        li.each do |lii|
+          concat("<li>#{lii}</li>")
+        end
+        concat(list_type.last)
+      end
+    end
+    concat(list_type.last)
+  end
+
 end

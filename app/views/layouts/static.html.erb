@@ -7,10 +7,9 @@
     <title>StaticContents: <%= controller.action_name %></title>
   	<%= stylesheet_link_tag 'echologic' %>
     <%= javascript_include_tag :defaults %>
-    
-    <%= include_tiny_mce_if_needed %>
+    <%= javascript_include_tag 'builder' %>
     <%= javascript_include_tag 'wmd' %>
-
+    <%= javascript_include_tag 'tooltips' %>
   </head>
   <body>
 
@@ -28,18 +27,19 @@
     
   <div id="echologicPromoContainer" <%= display_echologic_promo_container %>>
     <div id="statementContainer">
-      <%= insert_rounded_box_top %>
+      <% insert_rounded_box do %>
         <div id="statement">
           <%= image_tag 'page/statement_claim.png' %>
         </div>
-      <%= insert_rounded_box_bottom %>
+      <% end %>
     </div>
+    
     <div id="videoContainer">
-      <%= insert_rounded_box_top %>
-      <div id="video">
-        the promotion video goes here..
-      </div>
-      <%= insert_rounded_box_bottom %>
+      <% insert_rounded_box do %>
+        <div id="video">
+          the promotion video goes here..
+        </div>
+      <% end %>
     </div>
   </div>  
   
@@ -48,14 +48,14 @@
   </div>
   
   <div class="mainBox">
-    <%= insert_rounded_box_top %>
-    <div class="boxContent" id="mainBoxContent">
-      <%= render :partial => "layouts/menu" %>
-      <div id="staticContent">
-        <%= yield %>
+    <% insert_rounded_box do %>
+      <div class="boxContent" id="mainBoxContent">
+        <%= render :partial => "layouts/menu" %>
+        <div id="staticContent">
+          <%= yield %>
+        </div>
       </div>
-    </div>
-    <%= insert_rounded_box_bottom %>
+    <% end %>
   </div>
   
   <%= render :partial => "layouts/bottom_menu" %>

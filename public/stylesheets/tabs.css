@@ -3,7 +3,7 @@
 /*
   margin:       0 0 -23px 0;
 */
-  margin:       0 auto -23px auto;
+  margin:       0 auto -17px auto;
   clear:        both;
   z-index:      10;
   overflow:     visible;
@@ -14,13 +14,14 @@
 }
 
 .tabContainer a, .tabContainer a:visited {
-  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;  
+  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left 6px;  
   display:      inline-block;
   height:       61px;  
   color:        #7bb031;
   font-size:    14px;
   font-weight:  500;
   text-decoration: none; 
+  border:       0px;
 }
 
 .tabContainer a:hover {
@@ -28,18 +29,18 @@
 }
 
 .tabContainer a div {
-  background: transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
+  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right 6px;  
   height:       61px;
   margin:       0 0 0 21px;
-  padding:      0 21px 0 0;
+  padding:      25px 21px 0 0;
   float:        left;
 }
 
 .activeTab, .activeTab:visited {
-  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
+  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left 6px !important;
   color:        #1b4864 !important;
 }
 
 .activeTab div {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right 6px !important;
 }

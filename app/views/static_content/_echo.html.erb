@@ -2,10 +2,17 @@
   <%= render :partial => 'tabs_echo' %>
 <% end %>
 
-<h1><%= t('.title') + " - " + t('.subtitle') %></h1>
+<h1><%= t('.title') %></h1>
+<h4><%= t('.subtitle') %></h4>
 
 <h2><%= t('.why.title') %></h2>
 <%= t('.why.text') %>
 
 <h2><%= t('.what.title') %></h2>
 <%= t('.what.text') %>
+
+<ul>
+  <% t('.american').each do |a| %>
+  <%= "<li>#{a}</li>" %>  
+  <% end %>
+</ul>

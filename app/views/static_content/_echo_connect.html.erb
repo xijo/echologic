@@ -2,6 +2,22 @@
   <%= render :partial => 'tabs_echo' %>
 <% end %>
 
-<h1><%= t('static_content.echo.title') + " - " + t('.title') %></h1>
+<h1><%= t('static_content.echo.title') %></h1>
+<h4><%= t('.title') %></h4>
 
-<p><%= t('.text') %></p>
+<%= t('static_content.echo_connect_alpha.text') %>
+
+<p>
+<%= t('static_content.echo_connect_beta').inspect %>
+</p>
+
+<%= params.inspect %>
+
+
+<!--
+<p><%= t('.text1') %></p>
+
+<% insert_list(t('.list1'), :ordered => true) %>
+
+<p><%= t('.text2') %></p>
+-->

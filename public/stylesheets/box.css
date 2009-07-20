@@ -4,6 +4,7 @@
   margin:      0 auto;
   z-index:     5;
   clear:       both;
+  text-align:  justify;
 }
 
 .boxTop {
@@ -53,6 +54,6 @@
 .boxContent {
   background:   #fff;
   margin:       0 23px 0 0;
-  padding:      5px 10px 5px 15px;
+  padding:      0;
 }
 
