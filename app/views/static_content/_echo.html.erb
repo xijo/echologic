@@ -6,13 +6,13 @@
 <h4><%= t('.subtitle') %></h4>
 
 <h2><%= t('.why.title') %></h2>
-<%= t('.why.text') %>
+<%= t('.why.text', :tooltip => t('.why.tooltip')) %>
 
 <h2><%= t('.what.title') %></h2>
-<%= t('.what.text') %>
+<%= t('.what.text', :tooltip => t('.what.tooltip')) %>
 
-<ul>
-  <% t('.american').each do |a| %>
-  <%= "<li>#{a}</li>" %>  
-  <% end %>
-</ul>
+<script type="text/javascript" charset="utf-8">
+	$$(".ttLink").each( function(link) {
+		new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
+  });
+</script>

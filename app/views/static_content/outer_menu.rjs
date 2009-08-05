@@ -1,25 +1,41 @@
-# if promo container is part of the layout, hide it.
-# if not ie with fade effect!
-page << "if ($('echologicPromoContainer')) {"
-  page << "if ($('echologicPromoContainer').visible()) {"
-    page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
-    page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
-      page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
-    page << '}'    
-  page << "}"
-page << '}'
+## if promo container is part of the layout, hide it.
+## if not ie with fade effect!
+#page << "if ($('echologicPromoContainer')) {"
+#  page << "if ($('echologicPromoContainer').visible()) {"
+#    page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+#    page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
+#      page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
+#    page << '}'    
+#  page << "}"
+#page << '}'
+#
+## if tabContainer contains content, remove it, if it's hidden, show it.
+#page << "if ($('tabContainer').visible()) {"
+#  page.replace_html 'tabContainer', ''
+#page << "} else {"
+#  #page.show 'tabContainer'
+#  page.replace_html 'tabContainer', ''  
+#page << "}"
+#
+## insert the right partial and add some visual effect
+#page.hide 'staticContent'
+#page.replace_html 'staticContent', :partial => local_assigns[:menu_item]
+#page.visual_effect :appear, 'staticContent', :duration => 0.3
+#page.replace 'staticMenu', :partial => "layouts/menu"
 
-# if tabContainer contains content, remove it, if it's hidden, show it.
-page << "if ($('tabContainer').visible()) {"
-  page.replace_html 'tabContainer', ''
-page << "} else {"
-  page.show 'tabContainer'
-  page.replace_html 'tabContainer', ''  
+
+page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
+  page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
 page << "}"
 
-# insert the right partial and add some visual effect
+page.replace_html 'tabContainer', ''
+
 page.hide 'staticContent'
 page.replace_html 'staticContent', :partial => local_assigns[:menu_item]
 page.visual_effect :appear, 'staticContent', :duration => 0.3
-page.replace 'staticMenu', :partial => "layouts/menu"
+page.replace_html 'staticMenu', ''
 
+page.replace_html 'staticMenu', url_for(new_feedback_path)
+
+#page << "window.location.href='#{url_for(new_feedback_path)}'"

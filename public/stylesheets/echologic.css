@@ -150,18 +150,10 @@ body {
   border-top: none;
 }
 
-#languageSelector ul:before {
-  content: url(../images/page/dropdown/top.png);
-}
-
-#languageSelector ul:after {
-  content: url(../images/page/dropdown/bottom.png); 
-}
-
 #languageSelector ul {
   list-style-type:none;
   padding: 0;
-  margin: 0 0 22px 0;
+  margin: 0;
 }
 
 #languageSelector a, #languageSelector a:visited {
@@ -191,11 +183,11 @@ body {
   width:       31%;
   min-width:   200px;  
   float:       right;
-  margin:      0 0 0 0;
+	margin:      0;  
 }
 
 #video {
-  height:      160px;  
+  height:      160px;
 }
 
 #echologicPromoContainer {
@@ -215,7 +207,8 @@ body {
 }
 
 #mainBoxContent {
-  overflow:    auto;
+  overflow-y:    auto;
+  overflow-x:    hidden;
 }
 
 #staticContent {
