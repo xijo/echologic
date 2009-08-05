@@ -151,5 +151,36 @@ module StaticContentHelper
     end
     concat(list_type.last)
   end
+  
+  # gets the latest twittered content of the specified user account
+  # via json.
+  # WARNING: raises nil error if there haven't been a tweet.
+  def get_twitter_content
+    require 'open-uri'
+    require 'json'
+    buffer = open("http://twitter.com/users/show/xijo.json").read
+    result = JSON.parse(buffer)
+    result['status']['text']
+  end
+  
+  # more/hide helper
+  def insert_toggle_more(text)
+    concat("<span class='moreButton' onclick=\"")
+      #concat("$(this).next(0).toggle();")
+      concat("$(this).next(0).appear({ duration: 0.4 });")
+      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
+      concat("$(this).hide();")
+      concat("\">#{t('general.more')}</span>")
+    concat("<div class='toggleme' style='display: none;'>")
+      concat("<span>#{text} </span>")
+      concat("<span class='moreButton' onclick=\"")
+#       concat("$(this).up().toggle();")
+       concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
+       concat("Effect.Fade($(this).up(0), {duration:0.4});")
+       concat("$(this).up().previous().toggle();")
+      concat("\">#{t('general.hide')}</span>")      
+    concat("</div>")
 
+  end
+  
 end

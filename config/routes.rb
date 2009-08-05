@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :interested_people
   
-  map.resources :feedback
+  map.resources :feedback, :only => [:new, :creates]
 
   map.join 'join', :controller => 'interested_people', :action => 'new'
 
@@ -44,6 +44,16 @@ ActionController::Routing::Routes.draw do |map|
     static.imprint 'imprint', :action => 'imprint'
     static.data_privacy 'data_privacy', :action => 'data_privacy'
     
+  end
+  
+
+  map.with_options :controller => 'static_content' do |static|
+    
+    # echologic - The Mission
+    static.echologic2 '#/echologic', :action => 'echologic'
+    
+    static.echo_discuss2 '#/echo/discuss', :action => 'echo_discuss'
+
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

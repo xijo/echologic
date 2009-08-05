@@ -5,7 +5,59 @@
 <h1><%= t('static_content.echo.title') %></h1>
 <h4><%= t('.title') %></h4>
 
-<p><%= t('.text1') %></p>
+<p><%= t('.text') %></p>
+
+<ul>
+  <li>
+    <%= t('.clarity') %>
+    <% insert_toggle_more(t('.clarity_more')) %>
+  </li>
+  
+  <li>
+    <%= t('.transparency') %>
+    <% insert_toggle_more(t('.transparency_more')) %>
+  </li>
+  
+  <li>
+    <%= t('.detailed_positions') %>
+    <% insert_toggle_more(t('.detailed_positions_more')) %>
+  </li>
+  
+  <li>
+    <%= t('.democratic') %>
+    <% insert_toggle_more(t('.democratic_more', :tooltip => t('.democratic_tooltip'))) %>
+  </li>
+  
+  <li>
+    <%= t('.glocal_view') %>
+    <% insert_toggle_more(t('.glocal_view_more')) %>
+  </li>  
+</ul>
+
+<script type="text/javascript">
+function toggle_all() {
+  $$('.toggleme').each(function(item) {
+    item.toggle();
+  });
+/*  alert($$('.toggleme'))*/
+}
+</script>
+
+
+<p>
+  <a href="#" onclick="toggle_all()">toggle all</a>
+  <a href="#" onclick="toggle_all()">untoggle all</a>  
+</p>
+
+
+<br/><br/><br/>
+-----depricated!!------
 
 <% insert_list(t('.list1')) %>
+
+<script type="text/javascript" charset="utf-8">
+	$$(".ttLink").each( function(link) {
+		new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
+  });
+</script>
 
