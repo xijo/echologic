@@ -34,19 +34,12 @@
   </li>  
 </ul>
 
-<script type="text/javascript">
-function toggle_all() {
-  $$('.toggleme').each(function(item) {
-    item.toggle();
-  });
-/*  alert($$('.toggleme'))*/
-}
-</script>
+
 
 
 <p>
-  <a href="#" onclick="toggle_all()">toggle all</a>
-  <a href="#" onclick="toggle_all()">untoggle all</a>  
+  <span class="moreButton" onclick="toggle_all()">multi open</span> | 
+  <span class="moreButton" onclick="Effect.multiple($$('.toggleme'), Effect.BlindUp, {duration:0.3})">multi close</span> 
 </p>
 
 
@@ -59,5 +52,10 @@ function toggle_all() {
 	$$(".ttLink").each( function(link) {
 		new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
   });
+  
+  function toggle_all() {
+    Effect.multiple($$('.toggleme'), Effect.BlindDown, {duration:0.3});
+  }
 </script>
+
 
