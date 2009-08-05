@@ -168,7 +168,7 @@ en:
         eines Themas zu finden. Hierfür werden die gefundenen Akteure in verschiedenen Gruppen 
         zusammengefasst, welche die wichtigsten gesellschaftlichen Kompetenzbereiche widerspiegeln:
    
-      list: |
+      list: &competences |
         <li>BürgerInnen und Betroffene (Bedürfniskompetenz)</li>
         <li>ExpertInnen und WissenschaftlerInnen (Fachkompetenz)</li>
         <li>PolitikerInnen und RepräsentantInnen (Entscheidungskompetenz)</li>
@@ -222,27 +222,6 @@ en:
         modularen Aufbaus können die angebotenen Werkzeuge jederzeit um neue Möglichkeiten erweitert 
         werden.
 
-      
-      text: |-
-        <p>
-        Um sp&uuml;rbare Erfolge im Alltag der Menschen zu erzielen, motiviert echo alle TeilnehmerInnen einer Debatte, Aktionen zu starten, um ihre L&ouml;sungsvorschl&auml;ge in die Tat umzusetzen. Das Spektrum der hier erm&ouml;glichten Aktionen reicht von:
-        </p>
-        <ul>
-          <li>elektronisch signierten Petitionen</li> 
-          <li>B&uuml;rger- und Volksbegehren</li>
-          <li>Organisation von Demonstrationen</li>
-          <li>Boykotts und Sammelklagen</li>
-          <li>Gr&uuml;ndung nationaler und internationaler NRO</li>
-          <li>bis hin zu beliebigen Projekten mit einem gemeinsam definierten Ziel (wie z.B. Gr&uuml;ndung von B&uuml;rgerbewegungen oder Organisation einer Kinderkrippe).</li>
-        </ul>
-        <p> 
-        Ein Beispiel: 20 000 bayerische NutzerInnen haben auf echo f&uuml;r ein Verbot aller gentechnisch ver&auml;nderten Lebens- und Futtermittel gestimmt - genug, um einen Volksentscheid initiieren zu k&ouml;nnen. Sofort erhalten alle Stimmgeber eine Nachricht mit der Aufforderung, diesen zu organisieren. Folgen die NutzerInnen dem in der Nachricht enthaltenen Link, so finden sie sich in dem bestens ausgestatteten virtuellen Aktionsraum wieder.
-        </p><p>
-        Durch die Kombination von Diskussion, Vernetzung und Aktion, schafft echo einen v&ouml;llig neuartigen virtuellen Raum f&uuml;r eine vollkommen demokratische und l&ouml;sungsorientierte Zusammenarbeit. Durch seine Br&uuml;cke von virtuellen Diskussionen zu realen Aktionen, bietet dabei echo eine immer direkter werdende Anschluss an legislative Instrumente. Durch die Koppelung von ePartizipation und den Motivationsmechanismen von echtem, proaktivem B&uuml;rgerengagement, erm&ouml;glicht somit echo eine politische Teilhabe in bisher ungesehenen Ma&szlig;e.
-        </p> 
-      tooltip_action_space: >-
-        F&uuml;r eine effektive Zusammenarbeit im Rahmen der Aktionen, stellt echo den Beteiligten alle n&ouml;tigen Informationen sowie eine ad&auml;quate �Werkzeugkiste� zur Verf&uuml;gung. Standardm&auml;&szlig;ig sind darin, &uuml;ber die innovative Entscheidungsfindungsfunktion hinaus, die verschiedene Kommunikationsfunktionen und Verfahrenstools, Kalender, Event- und Aufgabenverwaltung, file sharing sowie eine Fundraising-Funktion mit enthalten. Dank des modularen Aufbaus k&ouml;nnen dar&uuml;ber hinaus die angebotenen Werkzeuge jederzeit um neue M&ouml;glichkeiten erweitert werden.
-
     echo_echo_on_waves:
       title: echo on waves
       text: |-
@@ -260,24 +239,53 @@ en:
     echocracy:
       title: echocracy
       subtitle: The Actors
-      text: |-
-        <p>
-        echocracy, die neue Form teilnehmender Demokratie von echo, basiert auf einen konstruktiven &ouml;ffentlichen Diskurs, der die drei wichtigsten gesellschaftlichen Kompetenzbereiche in die L&ouml;sungs- und Entscheidungsfindung mit einbezieht. So werden B&uuml;rgerInnen, WissenschaftlerInnen, ExpertInnen und Entscheidungstr&auml;gerInnen sowie deren Organisationen mit ihren Bed&uuml;rfnis-, Fach- und Entscheidungskompetenz alle Teil gesellschaftspolitischer Entscheidungen.
-        </p><p>
-        Dies schafft nicht nur eine vollst&auml;ndige Transparenz &uuml;ber den gesammten Meinungsbildung- und Entscheidungsfindungprozess. Durch die Ber&uuml;cksichtigung der verschiedenen Belange dieser Gesellschaftsgruppen, k&ouml;nnen dadurch auch die wichtigsten Probleme zeitnah identifiziert und gemeinsam die bestm&ouml;glichen L&ouml;sungen ausgearbeitet werden.
-        </p><p>
-        &uuml;ber diese allgemeine Vorteile hinaus, hilf echo jenen Akteuren der Echokratie, ihre Ziele durch weitere massgeschneiderte M&ouml;glichkeiten erfolgreich zu erreichen.
-        </p>
-    
+      text_top: |
+        „echocracy“ steht für die neue Form teilnehmender Demokratie von echo. Diese 
+        basiert auf einem deliberativen interkulturellen Diskurs, der die wichtigsten 
+        gesellschaftlichen Kompetenzbereiche in eine <b>kollektive Entscheidungsfindung</b> 
+        einbezieht:
+        
+      list: *competences
+      
+      text_bottom:
+        VertreterInnen dieser Kompetenzbereiche treten auf echo in einen gleichberechtigten 
+        Dialog. Dies schafft nicht nur vollständige Transparenz über den gesamten 
+        Meinungsbildung- und Entscheidungsfindungsprozess. Es ermöglicht allen Akteuren, 
+        in der Gestaltung unserer gemeinsamen Welt durch neuartige Möglichkeiten proaktiv 
+        mitzuwirken.</p>
+ 
+        <p>Auf echo, der globalen Agora, sind dadurch alle Beteiligten gleichberechtigte, 
+        <b>freie Weltbürger</b>!
+        
+      echocracy_more: |
+        <p>Politische Entscheidungen haben in der Regel drei gesellschaftliche Dimensionen:</p>
+        <ol>
+          <li>Sie beruhen auf einem gesellschaftlich anerkannten Wissensstand (common 
+          sense).</li>
+          <li>Sie werden von EntscheidungsträgerInnen ausgearbeitet.</li>
+          <li>Sie werden durch die demokratische Wahl der EntscheidungsträgerInnen durch 
+          die BürgerInnen legitimiert.</li>
+        </ol>
+        <p>Leider sind diese drei Dimensionen der Entscheidungsfindung in der Regel zeitlich 
+        und räumlich voneinander getrennt. So beraten sich die Entscheidungsträger zwar mit 
+        den ExpertInnen und Wissenschaftlern, nicht aber mit ihren BürgerInnen. Die BürgerInnen 
+        wiederum kennen die Hintergründer nicht und legitimieren politische Entscheidungen nur 
+        im Voraus durch periodische Wahlen, nicht aber durch ihre diskursive Teilnahme während 
+        den Entscheidungsprozessen.<br/>
+        Die hieraus resultierende Intransparenz führt zu Politikverdrossenheit und 
+        mangelnder Wahlbeteiligung.</p>
+
     echocracy_citizens:
       title: BürgerInnen und Betroffene
       
       text_top: |
-        Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen Entscheidungsprozessen 
-        und zivilgesellschaftlichen Aktionen sind das Hauptanliegen von echo.<br/>
-        Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich verantwortungsvoll für 
-        eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher <b>die wichtigsten Akteure</b> 
-        auf echo. Sie profitieren in besonderem Maße von seinen neuen Möglichkeiten:
+        Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen 
+        Entscheidungsprozessen und zivilgesellschaftlichen Aktionen sind das Hauptanliegen 
+        von echo.<br/>
+        Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich 
+        verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, 
+        sind daher <b>die wichtigsten Akteure</b> auf echo. Sie profitieren in besonderem Maße von 
+        seinen neuen Möglichkeiten:
 
       
       text: |-
