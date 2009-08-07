@@ -24,8 +24,8 @@ en:
         Make an echo!
       
   general:
-    more: 'more..'
-    hide: '..less'
+    more: More
+    hide: Less
     
 
 
