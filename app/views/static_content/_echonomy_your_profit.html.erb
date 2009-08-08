@@ -5,4 +5,14 @@
 <h1><%= t('static_content.echonomy.title') %></h1>
 <h4><%= t('.title') %></h4>
 
-<p><%= t('.text') %></p>
+<p>
+   <%= t('.text', 
+					:tooltip_nonprofit => t('.tooltip_nonprofit'), 
+					:tooltip_costneutral => t('.tooltip_costneutral')) %>
+</p>
+
+<script type="text/javascript" charset="utf-8">
+	$$(".ttLink").each( function(link) {
+		new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
+  });
+</script>

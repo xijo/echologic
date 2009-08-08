@@ -1,15 +1,25 @@
-/* */
+/* (un)sorted list */
+li {
+  margin: 4px 0;
+}
+
+/* more buttons */
 .moreButton {
   cursor:   pointer;
-  color:    #a8c642;
-  text-decoration: underline;
+  color:    #7ab031;
+  border-bottom: 1px solid #aaa;
 }
 
 .moreButton:hover {
-  color:    #000;
+  color:    #336b00;
 }
 
-.moreContent {
-  background: #ccc;
-  padding:  10px;
+/* more box styling */
+/* TESTING STATE */
+
+.moreBox {
+  margin:      3px 6px;
+  padding:     4px;
+  border:      1px solid #bcf372;
+  -moz-border-radius: 5px;
 }

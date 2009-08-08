@@ -364,7 +364,7 @@ en:
       title: &your_echo 'Your echo'
       subtitle: &join 'Join echologic'
       
-  interested_people:
+  prospects:
     new:
       title: *your_echo
       subtitle: *join
@@ -380,7 +380,7 @@ en:
 
       name: Name
       email: E-Mail  
-      send_button: Send E-Mail
+      send_button: Subscripe
       
     show:
       title: Make an echo

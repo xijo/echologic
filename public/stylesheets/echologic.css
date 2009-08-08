@@ -3,6 +3,7 @@
 @import "box.css";
 @import "static_content.css";
 @import "tooltips.css";
+@import "outer_menus.css";
 
 body { 
   background:  #a8c642 url(../images/page/background.png) repeat-x;
@@ -106,65 +107,6 @@ body {
   cursor:      default;
 }
 
-#topMenuContainer {
-  position:    relative;
-  float:       right;
-  width:       300px;
-  overflow:    visible;
-  height:      20px;
-}
-
-#topMenuContainer a, #topMenuContainer a:visited {
-  color:       #7691A2;
-  font-family: arial,Helvetica,sans-serif;
-  font-size:   9pt;
-  line-height: 25px;
-  padding:     0 2px 0 15px;
-  text-decoration:none;
-  float:       right;
-}
-
-#topMenuContainer a img {
-  border:      0px;
-}
-
-#topMenuContainer a:hover {
-  color:       #1A4864;
-}
-
-#languageSelector {
-  position:    absolute;
-  top:         25px;
-  left:        160px;
-  text-align:  left;
-  width:       210px;
-  z-index:     100;
-}
-
-#languageSelector li {
-  background: transparent url(../images/page/dropdown/middle.png) repeat-y;
-  list-style-position: inside;
-}
-
-#languageSelector li:first-child a {
-  border-top: none;
-}
-
-#languageSelector ul {
-  list-style-type:none;
-  padding: 0;
-  margin: 0;
-}
-
-#languageSelector a, #languageSelector a:visited {
-  border-top:1px solid #efefef;
-  margin-left: 20px;
-  padding: 0;
-  float: none;
-  width: 160px;
-  display: inline-block;
-}
-
 #statementContainer {
   width:       65%;
   min-width:   540px;
@@ -216,25 +158,7 @@ body {
   width:       630px;
 }
 
-#bottomMenuContainer {
-  width:       970px;
-  min-width:   970px;
-  margin:      0 auto;
-  text-align:  center;
-}
-
-#bottomMenuContainer a, #bottomMenuContainer a:visited {
-  color:       #1A4864;
-  font-family: arial,Helvetica,sans-serif;
-  font-size:   9pt;
-  line-height: 20px;
-  padding:     0 0 0 5px;
-  text-decoration: none;
-}
-
-#bottomMenuContainer a:hover {
-  color:       #FFF;
-}
+/* body and headings */
 
 body, p, ol, ul, td {
   font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;

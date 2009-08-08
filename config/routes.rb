@@ -1,10 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-
-  map.resources :interested_people
   
-  map.resources :feedback, :only => [:new, :creates]
+  map.resources :prospects
 
-  map.join 'join', :controller => 'interested_people', :action => 'new'
+  map.join 'join', :controller => 'prospects', :action => 'new'
+  
+#  map.resources :interested_people
+
+  map.resources :feedback, :only => [:new, :create]
+
+#  map.join 'join', :controller => 'interested_people', :action => 'new'
 
 #  map.with_options :controller => 'static_content' do |static|
 #    static.echologic 'echologic', :action => 'echologic'
@@ -26,7 +30,8 @@ ActionController::Routing::Routes.draw do |map|
     static.echocracy 'echocracy', :action => 'echocracy'
     static.echocracy_citizens 'echocracy/citizens', :action => 'echocracy_citizens'
     static.echocracy_scientists 'echocracy/scientists', :action => 'echocracy_scientists'
-    static.echocracy_representatives 'echocracy/representatives', :action => 'echocracy_representatives'
+    static.echocracy_decision_makers 'echocracy/decision_makers', :action => 'echocracy_decision_makers'
+    static.echocracy_organisations 'echocracy/organisations', :action => 'echocracy_organisations'
     
     # echonomy - The Values
     static.echonomy 'echonomy', :action => 'echonomy'
@@ -44,16 +49,6 @@ ActionController::Routing::Routes.draw do |map|
     static.imprint 'imprint', :action => 'imprint'
     static.data_privacy 'data_privacy', :action => 'data_privacy'
     
-  end
-  
-
-  map.with_options :controller => 'static_content' do |static|
-    
-    # echologic - The Mission
-    static.echologic2 '#/echologic', :action => 'echologic'
-    
-    static.echo_discuss2 '#/echo/discuss', :action => 'echo_discuss'
-
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
