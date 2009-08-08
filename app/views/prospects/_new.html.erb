@@ -1,0 +1,20 @@
+<h1><%= t('.title') %></h1>
+<h4><%= t('.subtitle') %></h4>
+
+<p><%= t('.text_top') %></p>
+
+<% form_for(@prospect) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label t('.name') %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label t('.email') %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.submit t('.send_button') %>
+  </p>
+<% end %>

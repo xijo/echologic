@@ -4,8 +4,8 @@ de:
 
   # General resources
   general:
-    more: More
-    hide: Less
+    more: mehr..
+    hide: ..weniger
 
 
   # Localizations for the layout components
@@ -423,20 +423,6 @@ de:
       title: Your-Profit
       
       text: |
-      
-      
-      
-
- 
-
-
-
-
-Tooltip - „Gemeinnützigkeit“: Bezüglich aller Geldflüsse, behält sich echo die Möglichkeit vor, anfangs einen geringen Anteil zur Deckung der anfallenden Kosten einzubehalten. 
-Wichtig ist dabei, dass sich die Fundraising-Provisionen auf Null reduzieren, sobald genügend Umsätze durch andere, an kommerzielle Anwender gerichtete Geschäftsmodelle erwirtschaftet werden . 
-
-Tooltip - „kostenneutral“: Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint. Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich eine strategische, verantwortungsvolle Kaufentscheidung zu treffen.
-
         <p>
         Finanzieren Sie Ihre Aktionen ohne finanziellen Aufwand!
         </p><p>
@@ -457,11 +443,9 @@ Tooltip - „kostenneutral“: Spenden kostet Geld? Nicht unbedingt! Z.B. könne
         anfallenden Kosten einzubehalten. Wichtig ist dabei, dass sich die Fundraising-Provisionen auf Null reduzieren, 
         sobald genügend Umsätze durch andere, an kommerzielle Anwender gerichtete Geschäftsmodelle erwirtschaftet werden.
 
-      tooltip_costneutral:
-        Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, 
-        wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint. 
-        Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich eine strategische, 
-        verantwortungsvolle Kaufentscheidung zu treffen.
+      tooltip_costneutral: |
+        Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint. 
+        Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich eine strategische, verantwortungsvolle Kaufentscheidung zu treffen.
       
     echonomy_foundation:
       title: Die Stiftung
@@ -515,25 +499,23 @@ Tooltip - „kostenneutral“: Spenden kostet Geld? Nicht unbedingt! Z.B. könne
       title: &your_echo 'Ihr echo'
       subtitle: &join 'echologic werden'
       
-  interested_people:
+  prospects:
     new:
       title: *your_echo
       subtitle: *join
       
       text_top: |
-        <p>
         Als ein Projekt zur Förderung des Allgemeinwohls, wird echo durch die gemeinsame Anstrengung engagierter Individuen und Organisationen vorangetrieben.
         </p><p>
         Möchten Sie auch sich in die Gestaltung von echo einbringen?<br/>
         Dann tragen Sie bitte Ihre E-Mail Adresse ein!<br/>
         Wir melden uns bei Ihnen, sobald es losgeht.
-        </p>
-        
-      waiting: engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
+        </p><p>
+        Engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
 
       name: Name
       email: E-Mail  
-      send_button: Send E-Mail
+      send_button: E-Mail eintragen
       
     show:
       title: Make an echo

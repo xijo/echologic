@@ -77,11 +77,19 @@ class StaticContentController < ApplicationController
     end
   end
 
-  # echocracy - Representatives
-  def echocracy_representatives
+  # echocracy - Decision makers
+  def echocracy_decision_makers
     respond_to do |format|
-      format.html { render :partial => 'static_content/echocracy_representatives', :layout => 'static' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'representatives' } }            
+      format.html { render :partial => 'static_content/echocracy_decision_makers', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'decision_makers' } }            
+    end
+  end
+
+  # echocracy - Organisations
+  def echocracy_organisations
+    respond_to do |format|
+      format.html { render :partial => 'static_content/echocracy_organisations', :layout => 'static' }
+      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'organisations' } }            
     end
   end
 

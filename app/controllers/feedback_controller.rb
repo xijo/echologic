@@ -1,12 +1,5 @@
 class FeedbackController < ApplicationController
 
-  uses_tiny_mce :options => {
-                            :theme => 'advanced',
-                            :language => 'de',
-                            :theme_advanced_resizing => true,
-                            :theme_advanced_resize_horizontal => false
-                          }
-  
   # POST /feedback
   def create
     FeedbackMailer.deliver_feedback(params)

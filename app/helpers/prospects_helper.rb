@@ -1,0 +1,2 @@
+module ProspectsHelper
+end

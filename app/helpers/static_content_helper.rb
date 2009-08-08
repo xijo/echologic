@@ -155,12 +155,19 @@ module StaticContentHelper
   # gets the latest twittered content of the specified user account
   # via json.
   # WARNING: raises nil error if there haven't been a tweet.
+  # rescued: SocketError, NilError
   def get_twitter_content
-    require 'open-uri'
-    require 'json'
-    buffer = open("http://twitter.com/users/show/xijo.json").read
-    result = JSON.parse(buffer)
-    result['status']['text']
+    begin
+      require 'open-uri'
+      require 'json'
+      buffer = open("http://twitter.com/users/show/xijo.json").read
+      result = JSON.parse(buffer)
+      result['status']['text']
+    rescue SocketError
+      'twitter connection failed'
+    rescue
+      'unknown error'
+    end
   end
   
   # more/hide helper
@@ -171,7 +178,7 @@ module StaticContentHelper
       concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
       concat("$(this).hide();")
       concat("\">#{t('general.more')}</span>")
-    concat("<div class='toggleme' style='display: none;'>")
+    concat("<div class='moreBox' style='display: none;'>")
       concat("<span>#{text} </span>")
       concat("<span class='moreButton' onclick=\"")
 #       concat("$(this).up().toggle();")

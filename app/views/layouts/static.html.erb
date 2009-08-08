@@ -20,7 +20,7 @@
     	<%= link_to_remote(image_tag('page/headlogo_echologic.png'), {:url => echologic_path}, :href => echologic_path) %>
     </div>
     <div id="invitebubble">
-      <span><b>THE TEXT GOES HERE</b><br/>Bubble grows depending on the text </span>
+      <span><%= t('.invite') %></span>
     </div>
     <%= render :partial => "layouts/top_menu" %>
     <%= render :partial => "layouts/login_container" %>
@@ -65,7 +65,6 @@
   <%= render :partial => "layouts/bottom_menu" %>
     
   <p style="color: green"><%= flash[:notice] %></p>
-  
   
   </body>
 </html>

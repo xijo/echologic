@@ -29,7 +29,7 @@ Tooltip.prototype = {
 			borderColor: '#666', // Default border color
 			textColor: '', // Default text color (use CSS value)
 			textShadowColor: '', // Default text shadow color (use CSS value)
-			maxWidth: 250,	// Default tooltip width
+			maxWidth: 350,	// Default tooltip width
 			align: "left", // Default align
 			delay: 250, // Default delay before tooltip appears in ms
 			mouseFollow: true, // Tooltips follows the mouse moving
