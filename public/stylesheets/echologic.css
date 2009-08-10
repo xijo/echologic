@@ -10,8 +10,11 @@ body {
   margin:      0px;
   padding:     0px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  color:       #1A4864;
+  color:       #21587f;
+}
+
+strong {
+  font-size:   105%
 }
 
 #wmd_text_area {
@@ -40,7 +43,8 @@ body {
   position:    relative;  
   float:       left;
   background:  url(../images/page/invitebubble_left.png) no-repeat;
-  left:        -25px;
+  left:        -5px;
+  top: 		   15px
 }
 
 #invitebubble span {
@@ -48,11 +52,18 @@ body {
   color:       #fff;
   display:     block;
   font-family: Arial,Helvetica,sans-serif;
-  font-size:   9pt;
+  font-size:   1.2em;
+  font-weight: bolder;
+  text-align:  center;
   height:      65px;
   left:        29px;
-  padding:     20px 30px 0 15px;
+  padding:     15px 25px 0 10px;
   position:    relative;
+}
+
+#invitebubble span:hover {
+  text-decoration: underline;
+  cursor:      pointer;
 }
 
 #loginContainer {
@@ -65,11 +76,12 @@ body {
 }
 
 #loginContainer .label {
+  color:       #1A4864;
   width:       114px;
   display:     inline-block;
   margin:      15px 0 3px 0;
   padding:     0 7px;
-  font-size:   11px;
+  font-size:   0.7em;
   font-weight: bold;
   cursor:      default;
 }
@@ -80,7 +92,7 @@ body {
   border:      none;
   height:      19px;
   padding:     2px 7px 1px 7px;
-  font-size:   12px;
+  font-size:   0.85em;
   color:       #1A4864;
 }
 
@@ -90,7 +102,7 @@ body {
   border:      none;
   height:      19px;
   color:       #fff;
-  font-size:   9px;
+  font-size:   0.65em;
   font-weight: bold;
 }
 
@@ -103,7 +115,7 @@ body {
   display:     inline-block;
   margin:      3px 0;
   padding:     0 7px;
-  font-size:   9px;
+  font-size:   0.65em;
   cursor:      default;
 }
 
@@ -156,13 +168,14 @@ body {
 #staticContent {
   float:       left;
   width:       630px;
+  padding:     2px 5px;
 }
 
 /* body and headings */
 
 body, p, ol, ul, td {
   font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
-  font-size:    10pt;
+  font-size:    14px;
 }
 
 h1, h2, h3, h4 {
@@ -172,28 +185,27 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  color:        #1A4864;
-  font-size:    25pt;
+  color:        #21587f;
+  font-size:    2.1em;
   margin-top:   0;
 }
 
 h2 {
-  border-top:   1px solid #EAEAEA;
-  color:        #1A4864;
-  font-size:    20pt;
+  color:        #21587f;
+  font-size:    1.5em;
   padding:      12px 0 0;
 }
 
 h3 {
-  color:        #1A4864;
-  font-size:    14pt;
+  color:        #21587f;
+  font-size:    1.2em;
   font-weight:  bold;
 }
 
 h4 {
   color:        #7BB031;
-  font-size:    12pt;
-  margin-top:   -25px;
+  font-size:    1.1em;
+  margin-top:   -22px;
   padding:      0 0 0 2px;
 }
 

@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :prospects
+#  map.resources :prospects
 
-  map.join 'join', :controller => 'prospects', :action => 'new'
+#  map.join 'join', :controller => 'prospects', :action => 'new'
   
 #  map.resources :interested_people
 
