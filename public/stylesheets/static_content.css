@@ -1,25 +1,27 @@
+ul.spreadedList li {
+  margin: 15px 0;
+}
+
 /* (un)sorted list */
 li {
-  margin: 4px 0;
+  margin: 6px 0;
 }
 
 /* more buttons */
 .moreButton {
   cursor:   pointer;
-  color:    #7ab031;
-  border-bottom: 1px solid #aaa;
+  color:    #7BB031;
 }
 
 .moreButton:hover {
-  color:    #336b00;
+  border-bottom: 1px dotted #7BB031;
 }
 
-/* more box styling */
-/* TESTING STATE */
+.hideButton {
+  cursor:   pointer;
+  color:    #21587f;
+}
 
-.moreBox {
-  margin:      3px 6px;
-  padding:     4px;
-  border:      1px solid #bcf372;
-  -moz-border-radius: 5px;
+.hideButton:hover {
+  border-bottom: 1px dotted #21587f;
 }

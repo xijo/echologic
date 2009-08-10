@@ -29,12 +29,12 @@
 	}
   
   .ttLink, .ttLink:visited {
-    cursor: default;
-    color: #3a9401;
+    cursor: help;
+    color: #21587f;
     text-decoration: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px dotted #7ab030;
   }
   
   .ttLink:hover {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #7ab030;
   }

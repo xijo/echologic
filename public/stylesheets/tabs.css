@@ -18,14 +18,13 @@
   display:      inline-block;
   height:       61px;  
   color:        #7bb031;
-  font-size:    14px;
-  font-weight:  500;
+  font-size:    15px;
   text-decoration: none; 
   border:       0px;
 }
 
 .tabContainer a:hover {
-  color:        #1b4864;
+  color:        #1A4864;
 }
 
 .tabContainer a div {
@@ -38,7 +37,7 @@
 
 .activeTab, .activeTab:visited {
   background:   url(../images/page/tabs/left_on.png) no-repeat scroll left 6px !important;
-  color:        #1b4864 !important;
+  color:        #1A4864 !important;
 }
 
 .activeTab div {

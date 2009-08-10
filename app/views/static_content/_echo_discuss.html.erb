@@ -7,60 +7,38 @@
 
 <p><%= t('.text') %></p>
 
-<ul>
+<ul class="spreadedList">
   <li>
-    <%= t('.clarity') %>
+    <strong><%= t('.clarity') %></strong>
     <% insert_toggle_more(t('.clarity_more')) %>
   </li>
   
   <li>
-    <%= t('.transparency') %>
+    <strong><%= t('.transparency') %></strong>
     <% insert_toggle_more(t('.transparency_more')) %>
   </li>
   
   <li>
-    <%= t('.detailed_positions') %>
-    <% insert_toggle_more(t('.detailed_positions_more')) %>
+    <strong><%= t('.detailed') %></strong>
+    <% insert_toggle_more(t('.detailed_more')) %>
   </li>
   
   <li>
-    <%= t('.democratic') %>
+    <strong><%= t('.democratic') %></strong>
     <% insert_toggle_more(t('.democratic_more', :tooltip => t('.democratic_tooltip'))) %>
   </li>
   
   <li>
-    <%= t('.glocal_view') %>
-    <% insert_toggle_more(t('.glocal_view_more')) %>
+    <strong><%= t('.glocal') %></strong>
+    <% insert_toggle_more(t('.glocal_more')) %>
   </li>  
 </ul>
 
-
-
-
-<p>
-  <span class="moreButton" onclick="toggle_all()">multi open</span> | 
-  <span class="moreButton" onclick="Effect.multiple($$('.moreBox'), Effect.BlindUp, {duration:0.3})">multi close</span> 
-</p>
-
-
-<br/><br/><br/>
------depricated!!------
-
-<% insert_list(t('.list1')) %>
-
-test if span works for tooltips - and it does! hurray!
-<span title="blabla" class="ttLink">hallo blawelt</span>
-
-<div title="tooltip" class="ttLink">hallo welt und auch sonst  und ein enede</div>
-
 <script type="text/javascript" charset="utf-8">
-	$$(".ttLink").each( function(link) {
-		new Tooltip(link, {backgroundColor: "#7ab031", opacity: 1, borderColor: "#7ab031", textColor: "#fff", textShadowColor: "#7ab031", delay: "100"});   
+  $$(".ttLink").each( function(text) {
+    new Tooltip(text);
   });
-  
-  function toggle_all() {
-    Effect.multiple($$('.moreBox'), Effect.BlindDown, {duration:0.3});
-  }
 </script>
+
 
 

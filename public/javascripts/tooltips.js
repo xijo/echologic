@@ -25,15 +25,15 @@ Tooltip.prototype = {
 	},
 	setOptions: function(options) {
 		this.options = {
-			backgroundColor: '#999', // Default background color
-			borderColor: '#666', // Default border color
-			textColor: '', // Default text color (use CSS value)
-			textShadowColor: '', // Default text shadow color (use CSS value)
+			backgroundColor: '#7ab030', // Default background color
+			borderColor: '#7ab030', // Default border color
+			textColor: '#fff', // Default text color (use CSS value)
+			textShadowColor: '#7ab030', // Default text shadow color (use CSS value)
 			maxWidth: 350,	// Default tooltip width
 			align: "left", // Default align
-			delay: 250, // Default delay before tooltip appears in ms
+			delay: 100, // Default delay before tooltip appears in ms
 			mouseFollow: true, // Tooltips follows the mouse moving
-			opacity: .75, // Default tooltips opacity
+			opacity: 1, // Default tooltips opacity
 			appearDuration: .25, // Default appear duration in sec
 			hideDuration: .25 // Default disappear duration in sec
 		};
