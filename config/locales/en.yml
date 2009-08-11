@@ -12,7 +12,7 @@ en:
     top_menu:
       language: Language
       feedback: Feedback
-      about: About
+      about: &about About
       logout: Logout
     login_container:
       password: 'Password:'
@@ -20,8 +20,8 @@ en:
       forgot: Forgot your password?
       remember: Remember me!
     bottom_menu:
-      imprint: Imprint
-      data_privacy: Data Privacy
+      imprint: &imprint Imprint
+      data_privacy: &data_privacy Data Privacy
     static:
       invite: |
         Become echologic!<br/>
@@ -522,12 +522,19 @@ en:
         of the world´s population. Details concerning this issue will later be elaborated in 
         an open and transparent process.
 
+    #About
+    about:
+      title: *about
+      text: About
+
     # Static content for imprint
     imprint:
+      title: *imprint
       text: Imprint
       
     # Static content for data privacy
     data_privacy:
+      title: *data_privacy
       text: Data Privacy
       
     join:
@@ -572,3 +579,5 @@ en:
         With the best wishes,
         </p><p>Your echo team
         </p>
+
+      
