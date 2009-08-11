@@ -160,7 +160,7 @@ module StaticContentHelper
     begin
       require 'open-uri'
       require 'json'
-      buffer = open("http://twitter.com/users/show/xijo.json").read
+      buffer = open("http://twitter.com/users/show/echologic.json").read
       result = JSON.parse(buffer)
       result['status']['text']
     rescue SocketError

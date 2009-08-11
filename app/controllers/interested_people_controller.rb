@@ -27,7 +27,7 @@ class InterestedPeopleController < ApplicationController
     @interested_person = InterestedPerson.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :partial => 'interested_people/new', :layout => 'static' }
       format.xml  { render :xml => @interested_person }
     end
   end
