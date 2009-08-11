@@ -1,6 +1,12 @@
 <h1><%= t('.title') %></h1>
 <h4><%= t('.subtitle') %></h4>
 
+<div id="echoHeader">
+  <div id=echoLogo><%= image_tag('page/echo_logo.png') %></div>
+  <div id=headerGlue><%= t('.header1') %></div>
+  <div id=headerMessage><%= t('.header2') %></div>
+</div>
+
 <%= t('.teaser') %>
 <% insert_toggle_more(t('.teaser_more')) %>
 
