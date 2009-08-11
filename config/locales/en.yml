@@ -35,10 +35,10 @@ en:
       subtitle: The Mission
       
       ms1: echologic 
-      ms2: is a network of free minds and 
-      ms3: organizations united to realize 
-      ms4: |
-        echo: the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>!
+      ms2: | 
+        is a network of free minds and<br/>organizations united to realize 
+      ms3: | 
+        echo: the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>.
 
       agora_tooltip: |
         The agora was the central place in ancient Athens – the cradle of democracy. 
@@ -73,8 +73,8 @@ en:
         echologic offers you the opportunity to actively engage in the evolution of this unique project!
         </p>
 
-      action1: Learn more about echo!
-      action2: Become echologic!
+      action: | 
+        Learn more about echo!<br/>Become echologic!
 
     # Static content for the echo main menu point
     echo:

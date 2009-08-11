@@ -75,8 +75,9 @@ module StaticContentHelper
   # Returns the image filename (on of off state) for a specific item.
   # Workaround for name convention echo <-> echo_on_waves
   def insert_static_menu_image(item)
-    action_parts = request[:action].split('_')
-    action_parts[1].eql?('on') ? action = 'echo_on_waves' : action = action_parts[0]
+    #action_parts = request[:action].split('_')
+    #action_parts[1].eql?('on') ? action = 'echo_on_waves' : action = action_parts[0]
+    action = request[:action].split('_')[0]
     if (action.eql?(item))
       'page/staticMenu/' + item + '_on2.png'
     else
