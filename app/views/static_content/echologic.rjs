@@ -1,10 +1,10 @@
 
-page << "if ($('echologicPromoContainer')) {"
-  page << "if (!$('echologicPromoContainer').visible()) {"
-    page.visual_effect :blind_down, 'echologicPromoContainer', :duration => 0.5
+page << "if ($('echologicContainer')) {"
+  page << "if (!$('echologicContainer').visible()) {"
+    page.visual_effect :blind_down, 'echologicContainer', :duration => 0.5
     # IE fade bug
     page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
-      page.visual_effect :appear, 'echologicPromoContainer', :duration => 0.5    
+      page.visual_effect :appear, 'echologicContainer', :duration => 0.5    
     page << "}"
   page << "}"
 page << '}'

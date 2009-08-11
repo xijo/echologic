@@ -84,8 +84,8 @@ module StaticContentHelper
     end
   end
   
-  # promoContainer is only visible in echlogic
-  def display_echologic_promo_container
+  # Container is only visible in echologic
+  def display_echologic_container
     request[:action].eql?('echologic') ? '' : "style='display:none'"
   end
   
@@ -179,13 +179,24 @@ module StaticContentHelper
       concat("\">#{t('general.more')}</span>")
     concat("<div style='display: none;'>")
       concat("#{text}")
-      concat("<span class='hideButton' onclick=\"")
-       concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
-       concat("Effect.Fade($(this).up(0), {duration:0.4});")
-       concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
-      concat("\">#{t('general.hide')}</span>")      
+#      concat("<span class='hideButton' onclick=\"")
+#       concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
+#       concat("Effect.Fade($(this).up(0), {duration:0.4});")
+#       concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
+#      concat("\">#{t('general.hide')}</span>")      
     concat("</div>")
-
+  end
+  
+  # more/hide helper
+  def insert_more(text)
+    concat("<span class='moreButton' onclick=\"")
+      concat("Effect.Fade($(this), {duration:0.3});")
+      concat("Effect.Appear($(this).next(0), {duration:0.4});")
+      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
+      concat("\">#{t('general.more')}</span>")
+    concat("<div style='display: none;'>")
+      concat("#{text}")
+    concat("</div>")
   end
   
 end

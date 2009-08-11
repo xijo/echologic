@@ -37,15 +37,22 @@ de:
       title: echologic
       subtitle: Die Mission
       
-      mission_statement: |
-        echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel, 
-        echo, die <span href="#" title="{{tooltip}}" class="ttLink">globale Agora </a> zu verwirklichen.
+      ms1: echologic 
+      ms2: ist ein Netzwerk von FreidenkerInnen
+      ms3: und Organisationen. Ihr Ziel ist die Verwirklichung von
+      ms4: |
+        echo: die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>.
 
       agora_tooltip: |
         Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
         Sie war der Mittelpunkt des gesellschaftlichen und politischen Geschehens der Polis, die auf einer freien, 
         sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo, die räumlichen und 
         kommunikativen Grenzen der antiken Agora zu überwinden und sie allen Menschen auf unserem Planeten zugänglich zu machen.
+        
+      yucca: Yucca elata als Symbol für einen neuen Anfang
+
+      news_title: echologic auf Twitter      
+      twitter: Folgen Sie echologic auf Twitter!
       
       header: echo bedeutet das Ende der Machtlosigkeit! den Anfang der Selbstbestimmung!
         
@@ -67,7 +74,8 @@ de:
         echologic bietet Ihnen die Möglichkeit dieses einmalige Projekt aktiv mit zu gestalten!
         </p>
 
-      action: 'Erfahren Sie mehr über echo!<br/>Werden Sie Teil von echologic!'
+      action1: Erfahren Sie mehr über echo!
+      action2: Werden Sie Teil von echologic!
 
     # Static content for the echo main menu point
     echo:
@@ -298,13 +306,14 @@ de:
         </p>
 
     echocracy_citizens:
-      title: BürgerInnen und Betroffene
+      title: BürgerInnen
+      title_long: Engagierte BürgerInnen
       
       text_top: |
         Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen Entscheidungsprozessen und zivilgesellschaftlichen 
         Aktionen sind das Hauptanliegen von echo. Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich 
         verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher 
-        <strong>die wichtigsten Akteure</strong> auf echo. <strong>Sie profitieren</strong> in besonderem Maße von seinen neuen Möglichkeiten:
+        <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen neuen Möglichkeiten:
       
       list: |-
         <li><strong>Informative Übersicht</strong> über die aktuelle öffentliche Meinung verschiedener Gesellschaftsgruppen und Regionen</li>
@@ -374,6 +383,7 @@ de:
        
     echocracy_organisations:
       title: Organisationen
+      title_long: Nichtstaatliche & staatliche Organisationen 
       
       text_top: |
         Nichtstaatliche und staatliche Organisationen (NRO, Bürgerinitiativen, politische Parteien, Gewerkschaften, 
@@ -410,7 +420,7 @@ de:
       
       text_top: |
         <p>
-        Ein kleines „h“ kann einen großen Unterschied machen! 
+        Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen! 
         </p><p>
         So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich grundlegenden ethischen Werten verpflichtet sieht:
         </p>

@@ -119,32 +119,7 @@ strong {
   cursor:      default;
 }
 
-#statementContainer {
-  width:       65%;
-  min-width:   540px;
-  clear:       both;
-  float:       left;
-  margin:      0 0 0 0;
-}
-
-#statement {
-  margin:      0 18px 0 0;
-  height:      160px;
-  background:  transparent url(../images/page/statement_people.png) no-repeat scroll right bottom;
-}
-
-#videoContainer {
-  width:       31%;
-  min-width:   200px;  
-  float:       right;
-	margin:      0;  
-}
-
-#video {
-  height:      160px;
-}
-
-#echologicPromoContainer {
+#echologicContainer {
   width:       970px;
   min-width:   970px;
   margin:      0 auto;
@@ -152,6 +127,102 @@ strong {
   z-index:     5;
   position:    relative;
   clear:       both;
+}
+
+#missionStatementContainer {
+  width:       65%;
+  min-width:   540px;
+  clear:       both;
+  float:       left;
+  margin:      0 0 0 0;
+}
+
+#missionStatement {
+  height:      140px;
+  background:  #FFF;
+}
+
+#missionStatement img {
+  position:    relative;
+  left:        -6px;
+  top:         -6px;
+}
+
+#missionStatement #yuccaHotspot {
+  position:    absolute;
+  left:        540px;
+  top:         5px;
+  width:       90px;
+  height:      140px;
+  z-index:     10;
+  background:  transparent;
+  cursor:      help;
+  border:      none;
+}
+
+#missionStatementHolder {
+  position:    absolute;
+  top:		   0px;
+  width: 	   540px;
+  text-align:  center;
+  color:       #FFF;
+}
+
+#missionStatementHolder .ms_echologic {
+  font-size:   2.5em;
+  margin:      0 4px 10px 0;
+}
+
+#missionStatementHolder .ms_text {
+  font-size:   1.45em;
+  margin:      0 0 17px 0;
+  display:     inline-block;
+}
+
+#missionStatementHolder .ms_echo {
+  font-size:   2.7em;
+  color:       #7BB031;
+}
+
+#missionStatementHolder .ms_echo .ttLink {
+  color:       #7BB031;
+}
+
+#newsContainer {
+  width:       31%;
+  min-width:   200px;  
+  float:       right;
+  margin:      0;  
+}
+
+#news {
+  height:      140px;
+}
+
+#news #twitterBird {
+  border:      none;
+  cursor:      pointer;
+}
+
+#news img {
+  position:    relative;
+  right:       -234px;
+  top:         -14px;
+  cursor:      pointer;
+  z-index:     10;
+  border:      none;
+}
+
+#newsHolder {
+  position:    absolute;
+  top:		   0px;
+  width: 	   295px;
+}
+
+#newsHolder .newsTitle {
+  font-size:   1.2em;
+  font-weight: bold;
+  margin:      2px 0 15px 0;
 }
 
 .mainBox {
@@ -171,11 +242,47 @@ strong {
   padding:     2px 5px;
 }
 
+/* echologic */
+
+#echologicAction {
+  width: 	   100%;
+  height:      128px;
+  margin:      10px 0 0 0;
+}
+
+#echologicActionPic {
+  float:       left;
+  background:  transparent url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;
+  height:      128px;
+  width:       128px;
+  margin:      0 10px 0 0;
+}
+
+#echologicActionPic:hover {
+  background-position: 0 -128px;
+  cursor:      pointer;
+}
+
+#echologicActionCallHolder {
+  padding:      27px 0 0 0;
+}
+
+#echologicAction .echologicActionCall {
+  font-size:   1.7em;
+  color:       #21587f;
+  margin:      0 0 9px 0;
+  display:     inline-block;
+}
+
 /* body and headings */
 
 body, p, ol, ul, td {
-  font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
-  font-size:    14px;
+  font-family: "Lucida Sans",Arial,Helvetica,sans-serif;
+  font-size:   14px;
+}
+
+ul, ol {
+  text-align:  left;
 }
 
 h1, h2, h3, h4 {
