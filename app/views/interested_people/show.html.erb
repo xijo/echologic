@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @interested_person.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @interested_person.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_interested_person_path(@interested_person) %> |
+<%= link_to 'Back', interested_people_path %>
