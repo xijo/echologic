@@ -1,14 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  
-#  map.resources :prospects
-
-#  map.join 'join', :controller => 'prospects', :action => 'new'
-  
-#  map.resources :interested_people
+  map.resources :interested_people
 
   map.resources :feedback, :only => [:new, :create]
 
-#  map.join 'join', :controller => 'interested_people', :action => 'new'
+  map.join 'join', :controller => 'interested_people', :action => 'new'
 
 #  map.with_options :controller => 'static_content' do |static|
 #    static.echologic 'echologic', :action => 'echologic'

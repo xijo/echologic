@@ -162,10 +162,11 @@ strong {
 
 #missionStatementHolder {
   position:    absolute;
-  top:		   0px;
-  width: 	   540px;
+  top:		     0px;
+  width: 	     540px;
   text-align:  center;
   color:       #FFF;
+  cursor:      default;
 }
 
 #missionStatementHolder .ms_echologic {
