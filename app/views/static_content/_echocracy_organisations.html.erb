@@ -3,28 +3,32 @@
 <% end %>
 
 <h1><%= t('static_content.echocracy.title') %></h1>
-<h4><%= t('.title') %></h4>
+<h4><%= t('.title_long') %></h4>
 
 <p><%= t('.text_top') %></p>
 
-<ul>
+<ul class="benefitList">
   <li>
   	<strong><%= t('.adv1') %></strong>
-    <ul><%= t('.adv1_details') %></ul>
+    <!--<ul><%= t('.adv1_details') %></ul>-->
+	<% insert_more('<ul>' + t('.adv1_details') + '</ul>') %>
   </li>
   
   <li>
   	<strong><%= t('.adv2') %></strong>
-    <ul><%= t('.adv2_details') %></ul>
+    <!--<ul><%= t('.adv2_details') %></ul>-->
+	<% insert_more('<ul>' + t('.adv2_details') + '</ul>') %>
   </li>
   
   <li>
   	<strong><%= t('.adv3') %></strong>
-    <ul><%= t('.adv3_details') %></ul>
-  </li>
+  	<!--<ul><%= t('.adv3_details') %></ul>-->
+	<% insert_more('<ul>' + t('.adv3_details') + '</ul>') %>
+  </li>	
   
   <li>
   	<strong><%= t('.adv4') %></strong>
-    <ul><%= t('.adv4_details') %></ul>
+    <!--<ul><%= t('.adv4_details') %></ul>-->
+	<% insert_more('<ul>' + t('.adv4_details') + '</ul>') %>
   </li>  
 </ul>

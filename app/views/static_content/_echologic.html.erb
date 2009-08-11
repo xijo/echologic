@@ -4,12 +4,19 @@
 <%= t('.teaser') %>
 <% insert_toggle_more(t('.teaser_more')) %>
 
-<p><%= t('.action') %></p>
+<div id="echologicAction">
+  <div id="echologicActionPic">
+  </div>
+  <div id="echologicActionCallHolder">
+    <span class="echologicActionCall"><%= t('.action1') %></span><br/>
+    <span class="echologicActionCall"><%= t('.action2') %></span>	
+  </div>
+</div>
+
+
 
 <script type="text/javascript" charset="utf-8">
   $$(".ttLink").each( function(text) {
     new Tooltip(text);
   });
 </script>
-
-

@@ -34,14 +34,22 @@ en:
       title: echologic
       subtitle: The Mission
       
-      mission_statement: |
-        echologic is a network of free minds and organizations united to realize echo, the <span href="#" title="{{tooltip}}" class="ttLink">global agora</a>!
+      ms1: echologic 
+      ms2: is a network of free minds and 
+      ms3: organizations united to realize 
+      ms4: |
+        echo: the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>!
 
       agora_tooltip: |
         The agora was the central place in ancient Athens – the cradle of democracy. 
         It was the hub of the social and political life of the polis: a society self-governed by its free citizens. 
         echo, as the global agora, overcomes the communicative and spatial limits of the ancient agora and 
         makes it accessible for all people on the planet.
+        
+      yucca: Yucca elata as a symbol of a new beginning
+      
+      news_title: echologic on Twitter
+      twitter: Follow echologic on Twitter!
       
       header: echo means the end of powerlessness and the beginning of self-determination!
         
@@ -65,7 +73,8 @@ en:
         echologic offers you the opportunity to actively engage in the evolution of this unique project!
         </p>
 
-      action: 'Learn more about echo!<br/>Become echologic!'
+      action1: Learn more about echo!
+      action2: Become echologic!
 
     # Static content for the echo main menu point
     echo:
@@ -307,6 +316,7 @@ en:
 
     echocracy_citizens:
       title: Citizens
+      title_long: Enganged Citizens
       
       text_top: |
         A vivid participation in decision making and civil engagement in all different countries is 
@@ -384,6 +394,7 @@ en:
        
     echocracy_organisations:
       title: Organisations
+      title_long: Non-governmental & Governmental Organisations 
       
       text_top: |
         Non-governmental and governmental organizations (NGOs, citizens´ initiatives, political parties, 
@@ -420,7 +431,7 @@ en:
       
       text_top: |
         <p>
-        A little “h” can make a huge difference!
+        A little <strong>“h”</strong> can make a huge difference!
         </p><p>
         Accordingly, “echonomy” stands symbolically for an <strong>eco-social democratic economy</strong> committed to basic ethical values:
         </p>
