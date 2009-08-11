@@ -216,8 +216,9 @@ strong {
 
 #newsHolder {
   position:    absolute;
-  top:		   0px;
-  width: 	   295px;
+  top:	  	   0px;
+  width: 	     295px;
+  cursor:      default;
 }
 
 #newsHolder .newsTitle {
