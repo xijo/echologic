@@ -49,7 +49,7 @@ de:
         sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo die räumlichen und 
         kommunikativen Grenzen der antiken Agora zu überwinden und sie allen Menschen auf unserem Planeten zugänglich zu machen.
         
-      yucca: Yucca elata als Symbol für einen neuen Anfang
+      yucca: | 'Yucca elata' als Symbol für einen neuen Anfang
 
       news_title: echologic auf Twitter      
       twitter: Folgen Sie echologic auf Twitter!
@@ -475,8 +475,8 @@ de:
         Neben kostenneutralem und direktem Spenden, verfolgt echo mehrere Geschäftsmodellen, durch die <strong>signifikante 
         Einnahmen</strong> über kommerzielle Anwender der Plattform erwirtschaftet werden. Alle hierdurch entstehenden 
         Überschüsse werden dabei vollständig an die <strong>Echonomy Stiftung</strong> weitergeleitet und damit vollständige 
-        Transparenz gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet, förderungswürdige Projekte, entsprechend demokratischer 
-        Entscheidungen der Nutzerschaft von echo, finanziell zu unterstützen.
+        Transparenz gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet, förderungswürdige Projekte, 
+        entsprechend <strong>demokratischer Entscheidungen</strong> der Nutzerschaft von echo, finanziell zu unterstützen.
         </p><p>
         Indem echo den Menschen eine einfache und kostenneutrale Möglichkeit zur <strong>Finanzierung von umfangreichen 
         Gemeinschaftsprojekten</strong> bietet, kann ihr virtuelles Engagement unsere Welt nachhaltig verändern.
@@ -510,7 +510,19 @@ de:
     #About
     about:
       title: *about
-      text: Über uns
+      text: |
+        <p>
+        echo wurde von einem <strong>interdisziplinären Team</strong> junger und erfahrener Akademiker initiiert. 
+        Mittlerweile hat sich um echo ein stetig <strong>wachsendes Netzwerk von UnterstützerInnen</strong> gebildet, 
+        das dem Projekt zusätzlichen Elan verleiht.
+        </p><p>
+        Darunter etliche <strong>ExpertInnen</strong> mit langjähriger Berufserfahrung in verschiedenen 
+        Bereichen (wie Geistes- und Naturwissenschaften, Unternehmensberatung und Marketing, Softwarerecht 
+        und Public Relations), die dem Team beratend zur Seite stehen.<br/>
+        Aber auch einige <strong>namhafte PolitikerInnen</strong>, wie die ehemalige Landtagsabgeordnete 
+        Ruth Paulig (die Grünen), der Bundestagsabgeordnete Axel Berg (SPD) sowie der Generalsekretär des 
+        Europäischen Wirtschafts- und Sozialausschusses, Martin Westlake, unterstützen echo mit Rat und Tat.
+        </p>
 
     # Static content for imprint
     imprint:
