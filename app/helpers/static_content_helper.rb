@@ -183,7 +183,7 @@ module StaticContentHelper
 #       concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
 #       concat("Effect.Fade($(this).up(0), {duration:0.4});")
 #       concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
-#      concat("\">#{t('general.hide')}</span>")      
+#      concat("\">#{t('general.hide')}</span>")
     concat("</div>")
   end
   
