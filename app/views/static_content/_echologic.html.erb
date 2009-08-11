@@ -4,15 +4,10 @@
 <%= t('.teaser') %>
 <% insert_toggle_more(t('.teaser_more')) %>
 
-<div id="echologicAction">
-  <div id="echologicActionPic">
-  </div>
-  <div id="echologicActionCallHolder">
-    <span class="echologicActionCall"><%= t('.action1') %></span><br/>
-    <span class="echologicActionCall"><%= t('.action2') %></span>	
-  </div>
-</div>
-
+<p>
+  <%= link_to_remote('<div id="echologicActionPic"></div>', {:url => echo_path}, :href => echo_path) %>
+  <span id="echologicActionCall"><%= t('.action') %></span>	
+</p>
 
 
 <script type="text/javascript" charset="utf-8">

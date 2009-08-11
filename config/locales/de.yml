@@ -38,9 +38,9 @@ de:
       subtitle: Die Mission
       
       ms1: echologic 
-      ms2: ist ein Netzwerk von FreidenkerInnen
-      ms3: und Organisationen. Ihr Ziel ist die Verwirklichung von
-      ms4: |
+      ms2: | 
+        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Ihr Ziel ist die Verwirklichung von
+      ms3: | 
         echo: die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>.
 
       agora_tooltip: |
@@ -74,8 +74,8 @@ de:
         echologic bietet Ihnen die Möglichkeit dieses einmalige Projekt aktiv mit zu gestalten!
         </p>
 
-      action1: Erfahren Sie mehr über echo!
-      action2: Werden Sie Teil von echologic!
+      action: | 
+        Erfahren Sie mehr über echo!<br/>Werden Sie Teil von echologic!
 
     # Static content for the echo main menu point
     echo:
