@@ -1,6 +1,6 @@
 <div id="topMenuContainer">
   <a onclick="new Effect.toggle('languageSelector', 'blind', {duration:0.5})" href="#"><%= t('.language') %><%= image_tag 'page/dropdown/arrow.gif' %></a>
-  <%= link_to t('.about'), '#' %>
+  <%= link_to_remote t('.about'), {:url => about_path}, :href => about_path %>
   <%= link_to_remote t('.feedback'), {:url => new_feedback_path, :method => :get}, :href => new_feedback_path %>
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>

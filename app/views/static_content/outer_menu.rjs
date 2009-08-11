@@ -24,12 +24,13 @@
 #page.replace 'staticMenu', :partial => "layouts/menu"
 
 
-page.visual_effect :blind_up, 'echologicPromoContainer', :duration => 0.5
+page.visual_effect :blind_up, 'echologicContainer', :duration => 0.5
 page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
-  page.visual_effect :fade, 'echologicPromoContainer', :duration => 0.5
+  page.visual_effect :fade, 'echologicContainer', :duration => 0.5
 page << "}"
 
-page.replace_html 'tabContainer', ''
+page.visual_effect :fade, 'tabContainer', :duration => 0.4
+page.visual_effect :blind_up, 'tabContainer', :duration => 0.5
 
 page.hide 'staticContent'
 page.replace_html 'staticContent', :partial => local_assigns[:menu_item]

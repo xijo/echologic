@@ -44,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
     
     
     # Top menu
+    static.about 'about', :action => 'about'
     
     # Bottom menu
     static.imprint 'imprint', :action => 'imprint'

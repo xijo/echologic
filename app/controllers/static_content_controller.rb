@@ -125,6 +125,16 @@ class StaticContentController < ApplicationController
     end
   end
   
+  # Top menu
+  
+  # About
+  def about
+    respond_to do |format|
+      format.html { render :partial => 'static_content/about', :layout => 'static' }
+      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'about' }}
+    end
+  end
+  
   # Bottom menu
   
   # Imprint
