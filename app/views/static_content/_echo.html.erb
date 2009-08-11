@@ -6,7 +6,8 @@
 <h4><%= t('.subtitle') %></h4>
 
 <h2><%= t('.why.title') %></h2>
-<p><%= t('.why.text', :tooltip => t('.why.tooltip')) %></p>
+<%= t('.why.text') %>
+<% insert_toggle_more(t('.why.text_more', :tooltip => t('.why.tooltip'))) %>
 
 <h2><%= t('.what.title') %></h2>
 <p><%= t('.what.text', :tooltip1 => t('.what.tooltip1'), :tooltip2 => t('.what.tooltip2')) %></p>

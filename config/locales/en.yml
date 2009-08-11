@@ -85,8 +85,9 @@ en:
         
         text: |
           The world is changing. Today humanity is facing some serious environmental, economic and humanitarian 
-          challenges never seen before. However, satisfactory solutions are not in sight. The lack of transparency 
-          in political decision making provokes a growing sense of <strong>powerlessnes</strong> and 
+          challenges never seen before. However, satisfactory solutions are not in sight. 
+        text_more: | 
+          The lack of transparency in political decision making provokes a growing sense of <strong>powerlessnes</strong> and 
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
           Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.<br/>
           New ways have to be found, empowering people to develop adequate solutions to effectively tackle 
@@ -112,9 +113,10 @@ en:
           </p><p>
           Through the combination of these three functional areas, echo establishes a unique virtual space for a 
           fully <strong>democratic collaboration</strong> able to lead to <strong>visible results in everyday life</strong> 
-          of the people with minimal effort.<br/>
-          Additionally, by spreading its functionality beyond the limits of individual websites, echo lets all forces be 
-          bundled for a sustainable change throughout the whole Internet.
+          of the people with minimal effort.
+          </p><p>
+          Additionally, by spreading its functionality <strong>beyond the limits of individual websites</strong>, 
+          echo lets all forces be bundled for a <strong>sustainable change</strong> throughout the whole Internet.
           </p>
 
         tooltip1: |
@@ -283,8 +285,8 @@ en:
         interest and develop the best possible solutions for them.
         </p><p>
         echo facilitates this by a deliberative intercultural discours, where competences from 
-        the most important segments of society are all incorporated into a collective 
-        <strong>decision making</strong> process. These segments of society are:
+        the most important segments of society are all incorporated into a <strong>collective 
+        decision making</strong> process. These segments of society are:
         </p>
         
       list: *competences
@@ -337,14 +339,14 @@ en:
         <li><strong>Liberation from feeling of powerlessness</strong> by visible achievements in their everyday life.</li>
       
     echocracy_scientists:
-      title: Experts & Scientists
+      title: Experts
       title_long: Experts & Scientists
       
       text_top: |
         Due to their professional know-how, experts and scientists can significantly contribute to the 
         quality of discussions and the development of adequate solution proposals. 
-        For this reason, they are <b>vitally important actors</b> of echo and can benefit 
-        from its <b>new opportunities</b> in several ways:
+        For this reason, they are <strong>vitally important actors</strong> of echo and can benefit 
+        from its <strong>new opportunities</strong> in several ways:
         
       adv1: Improved scientific discourse
       adv1_details: |
@@ -371,10 +373,10 @@ en:
         They must decide, what common good is best served by and negotiate feasible solutions 
         with all stakeholders. Therefore, their participation in discussions on echo is of 
         essential importance. To let their effort result in sustainable improvements, 
-        they need to win a <b>broad support of citizens</b> for their proposals. 
+        they need to win a <strong>broad support of citizens</strong> for their proposals. 
         Thus, a transparent presentation of their goals  and a deep understanding of 
         the citizen´s needs are basic prerequisits for their success. 
-        echo offers <b>unique opportunities</b> to politicians and other representatives 
+        echo offers <strong>unique opportunities</strong> to politicians and other representatives 
         to significantly lighten their work:
         
       adv1: Detailed opinion base
@@ -399,9 +401,9 @@ en:
       text_top: |
         Non-governmental and governmental organizations (NGOs, citizens´ initiatives, political parties, 
         trade unions, cities and municipalities) are already in the focus of societal and political life 
-        and are therefore <b>indispensable actors</b> of echo. They are opinion leaders, they plan 
+        and are therefore <strong>indispensable actors</strong> of echo. They are opinion leaders, they plan 
         actions and campaigns and seek to mobilize a broad range of supporters for them. 
-        echo provides organisations with <b>unique opportunities</b> helping them to successfully accomplish their goals:
+        echo provides organisations with <strong>unique opportunities</strong> helping them to successfully accomplish their goals:
         
       adv1: Optimized internal collaboration
       adv1_details: |

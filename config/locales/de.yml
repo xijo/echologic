@@ -46,7 +46,7 @@ de:
       agora_tooltip: |
         Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
         Sie war der Mittelpunkt des gesellschaftlichen und politischen Geschehens der Polis, die auf einer freien, 
-        sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo, die räumlichen und 
+        sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo die räumlichen und 
         kommunikativen Grenzen der antiken Agora zu überwinden und sie allen Menschen auf unserem Planeten zugänglich zu machen.
         
       yucca: Yucca elata als Symbol für einen neuen Anfang
@@ -86,8 +86,10 @@ de:
         
         text:
           Die Welt ist im Umbruch. Die Menschheit sieht sich mit ökologischen, ökonomischen und humanitären Problemen von bisher 
-          unbekannetem Ausmaß konfrontiert. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. Intransparente Entscheidungen 
-          rufen ein wachsendes Gefühl der <strong>Machtlosigkeit</strong> und <strong>politischen Resignation</strong> in der 
+          unbekannetem Ausmaß konfrontiert. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. 
+          
+        text_more: | 
+          Intransparente Entscheidungen rufen ein wachsendes Gefühl der <strong>Machtlosigkeit</strong> und <strong>politischen Resignation</strong> in der 
           Bevölkerung hervor und schwächen den Glauben an die heutigen Demokratien. Rufe nach mehr <strong>Transparenz</strong> und 
           <strong>Mitspracherecht</strong> werden immer lauter.<br/> 
           Es gilt daher den Menschen eine Möglichkeit zu geben, gemeinsam <strong>konstruktive Lösungen</strong> zu entwickeln, 
@@ -117,7 +119,8 @@ de:
           <strong>spürbaren Ergebnissen im Alltag</strong> führt.
           </p><p>
           Indem echo seine Funktionalität <strong>plattformübergreifend</strong> zur Verfügung stellt, 
-          können darüber hinaus sämtliche heute schon im Internet aktive Kräfte für einen nachhaltigen Wandel gebündelt werden.
+          können darüber hinaus sämtliche heute schon im Internet aktive Kräfte für einen 
+          <strong>nachhaltigen Wandel</strong> gebündelt werden.
           </p>
           
         tooltip1: |
@@ -317,7 +320,7 @@ de:
       
       list: |-
         <li><strong>Informative Übersicht</strong> über die aktuelle öffentliche Meinung verschiedener Gesellschaftsgruppen und Regionen</li>
-        <li><strong>Selbstbestimmung</strong> des unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt</li>
+        <li><strong>Selbstbestimmung</strong> des unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt durch</li>
           <ul>
             <li>Direkte Beteiligung an Entscheidungsfindung</li>
             <li>Überzeugung Anderer für den eigenen Standpunkt</li>
@@ -333,8 +336,8 @@ de:
       
       text_top: |
         ExpertInnen und WissenschaftlerInnen können mit ihrem Know-how einen wesentlichen Beitrag zur Qualität der 
-        Diskussionen und Lösungsvorschlägen leisten. Sie sind daher unverzichtbare Akteure auf echo und 
-        profitieren in vielfacher Weise von seinen neuen Möglichkeiten: 
+        Diskussionen und Lösungsvorschlägen leisten. Sie sind daher <strong>unverzichtbare Akteure</strong> auf echo und 
+        profitieren in vielfacher Weise von seinen <strong>neuartigen Möglichkeiten</strong>: 
         
       adv1: Verbesserung des wissenschaftlichen Diskurses
       adv1_details: |
@@ -390,7 +393,7 @@ de:
         Städte und Kommunen) stehen heute schon im Fokus des gesellschaftlichen und politischen Geschehens und sind 
         daher <strong>unentbehrliche Akteure</strong> auf echo. Sie sind Meinungsbildner, sie planen Kampagnen und Aktionen und 
         versuchen die Menschen für ihre Anliegen zu mobilisieren. echo bietet Organisationen mehrere 
-        <strong>einzigartige Möglichkeiten</strong>, um ihre Ziele erfolgreich zu erreichen:
+        einzigartige Möglichkeiten, um <strong>ihre Ziele erfolgreich zu erreichen</strong>:
 
       adv1: Optimierte organisationsinterne Zusammenarbeit
       adv1_details: |
