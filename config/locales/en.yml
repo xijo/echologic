@@ -36,9 +36,9 @@ en:
       
       ms1: echologic 
       ms2: | 
-        is a network of free minds and<br/>organizations united to realize 
+        <font size="+2">is a network of free minds and<br/>organizations united to realize</font> 
       ms3: | 
-        echo: the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>.
+        echo: the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>!
 
       agora_tooltip: |
         The agora was the central place in ancient Athens – the cradle of democracy. 
@@ -51,7 +51,9 @@ en:
       news_title: echologic on Twitter
       twitter: Follow echologic on Twitter!
       
-      header: echo means the end of powerlessness and the beginning of self-determination!
+      header1: means
+      header2: | 
+        the end of powerlessness!&nbsp;&nbsp;&nbsp;&nbsp;<br/>the beginning of self-determination! 
         
       teaser: | 
         echo is an Internet project of a special kind. We seek nothing less than to establish a new kind of 
@@ -108,13 +110,12 @@ en:
           a clearly structured <span href="#" title="{{tooltip2}}" class="ttLink">opinion base</span> and allows 
           for a solution-oriented social collaboration. It unites technical innovation and human scientific knowledge 
           into a unique concept. This helps people to better understand backgrounds and interrelations of topics, 
-          jointly make sound decisions and turn them into reality.<br/>
-          Accordingly, echo comes with three main functional areas: <strong>Discuss – Connect – Act</strong>!
+          jointly make sound decisions and turn them into reality. Accordingly, echo comes with three main functional 
+          areas:<br/><strong>Discuss – Connect – Act</strong>!
           </p><p>
           Through the combination of these three functional areas, echo establishes a unique virtual space for a 
           fully <strong>democratic collaboration</strong> able to lead to <strong>visible results in everyday life</strong> 
-          of the people with minimal effort.
-          </p><p>
+          of the people with minimal effort.<br/>
           Additionally, by spreading its functionality <strong>beyond the limits of individual websites</strong>, 
           echo lets all forces be bundled for a <strong>sustainable change</strong> throughout the whole Internet.
           </p>
@@ -233,7 +234,7 @@ en:
       text_middle: |
         echo's  action area bridges the gap between virtual discussions and real-world actions. 
         By linking these actions to existing <strong>legislative instruments</strong>, 
-        echo turns - for the first time - civil engagement into true <strong>political participation</strong>.
+        echo turns, for the first time, civil engagement into true <strong>political participation</strong>.
         
       act_more: |
         <p>

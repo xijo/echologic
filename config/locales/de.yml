@@ -41,7 +41,7 @@ de:
       ms2: | 
         ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Ihr Ziel ist die Verwirklichung von
       ms3: | 
-        echo: die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>.
+        echo: der globalen <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>!
 
       agora_tooltip: |
         Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
@@ -54,7 +54,9 @@ de:
       news_title: echologic auf Twitter      
       twitter: Folgen Sie echologic auf Twitter!
       
-      header: echo bedeutet das Ende der Machtlosigkeit! den Anfang der Selbstbestimmung!
+      header1: bedeutet
+      header2: |-
+        das Ende der Machtlosigkeit!&nbsp;&nbsp;<br/>den Anfang der Selbstbestimmung!
         
       teaser: |
         echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine neue Form 
@@ -111,13 +113,12 @@ de:
           echo ein <strong>übersichtliches Meinungsbild</strong> und können lösungsorientiert mit Anderen zusammenarbeiten. 
           Dazu vereint echo technische Innovation und wissenschaftliches Know-How in einem einzigartigen Konzept. 
           Dieses hilft den Menschen Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu 
-          fällen und wirksam umzusetzen. Dementsprechend stellt echo drei Funktionsbereiche zur Verfügung: 
+          fällen und wirksam umzusetzen. Dementsprechend stellt echo drei Funktionsbereiche zur Verfügung:<br/>
           <strong>Diskutieren – Vernetzen – Handeln!</strong> 
           </p><p>
           Durch die Kombination dieser drei Funktionsbereiche, schafft echo einen völlig neuartigen virtuellen Raum 
           für eine <strong>demokratische Zusammenarbeit</strong>, die mit geringem Aufwand zu 
-          <strong>spürbaren Ergebnissen im Alltag</strong> führt.
-          </p><p>
+          <strong>spürbaren Ergebnissen im Alltag</strong> führt.<br/>
           Indem echo seine Funktionalität <strong>plattformübergreifend</strong> zur Verfügung stellt, 
           können darüber hinaus sämtliche heute schon im Internet aktive Kräfte für einen 
           <strong>nachhaltigen Wandel</strong> gebündelt werden.

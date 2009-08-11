@@ -166,6 +166,7 @@ strong {
   width: 	   540px;
   text-align:  center;
   color:       #FFF;
+  cursor:      default;
 }
 
 #missionStatementHolder .ms_echologic {
@@ -244,8 +245,46 @@ strong {
 
 /* echologic */
 
+#echoHeader {
+  background:  url(../images/page/echo_gradient.png) no-repeat scroll;
+  position:    relative;
+  left:		   -5px;
+  top:         0px;
+  padding:     0 0 7px 0;
+}
+
+#echoLogo {
+  float:       left;
+  position:    relative;
+  left:        7px;
+  top:         10px;
+}
+
+#headerGlue {
+  font-size:   1.2em;
+  color:       #21587f;
+  position:    relative;
+  left:        17px;
+  top:         35px;
+  cursor:      default;
+}
+
+#headerMessage {
+  font-size:   1.65em;
+  font-weight: bold;
+  color:       #7bb031;
+  position:    relative;
+  right:       8px;
+  bottom:      15px;
+  text-align:  right;
+  line-height: 43px;
+  margin:      0 0 18px 0;
+  cursor:      default;
+}
+
 #echologicActionPic {
   float:       left;
+  margin:      10px 0 0 0;
   width:       100%;
   height:      128px;
   background:  url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;
@@ -259,13 +298,13 @@ strong {
 }
 
 #echologicActionCall {
-  font-size:   1.7em;
+  font-size:   1.65em;
   font-weight: bold;
   color:       #21587f;
   line-height: 38px;
   position:    relative;
   left:        140px;
-  top:         -105px;
+  bottom:      105px;
 }
 
 /* body and headings */
@@ -294,7 +333,7 @@ h1 {
 h2 {
   color:        #21587f;
   font-size:    1.5em;
-  padding:      12px 0 0;
+  padding:      4px 0 0;
 }
 
 h3 {
