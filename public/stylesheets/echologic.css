@@ -91,7 +91,7 @@ strong {
   background:  transparent url(../images/page/loginfield.png) no-repeat;
   border:      none;
   height:      19px;
-  padding:     2px 7px 1px 7px;
+  padding:     1px 7px 1px 7px;
   font-size:   0.85em;
   color:       #1A4864;
 }
@@ -162,11 +162,10 @@ strong {
 
 #missionStatementHolder {
   position:    absolute;
-  top:		     0px;
-  width: 	     540px;
+  top:		   0px;
+  width: 	   540px;
   text-align:  center;
   color:       #FFF;
-  cursor:      default;
 }
 
 #missionStatementHolder .ms_echologic {
@@ -217,7 +216,7 @@ strong {
 #newsHolder {
   position:    absolute;
   top:	  	   0px;
-  width: 	     295px;
+  width: 	   295px;
   cursor:      default;
 }
 
@@ -271,6 +270,7 @@ strong {
 
 #echologicAction .echologicActionCall {
   font-size:   1.7em;
+  font-weight: bold;
   color:       #21587f;
   margin:      0 0 9px 0;
   display:     inline-block;
