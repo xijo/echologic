@@ -2,7 +2,6 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-
   general:
     more: more » 
     hide1: « okay
@@ -102,7 +101,7 @@ en:
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
           Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.<br/>
           New ways have to be found, empowering people to develop adequate solutions to effectively tackle 
-          our <span href="#" title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
+          our <span title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
           
         tooltip: |
           Our ecological, economical and humanitarian challenges at local and global level are tightly 
@@ -115,8 +114,8 @@ en:
         text: |
           <p>
           echo is the instrument for a new kind of <strong>participatory democracy</strong> facing these challenges. 
-          Unlike <span href="#" title="{{tooltip1}}" class="ttLink">usual Web 2.0 applications</span>, echo provides 
-          a clearly structured <span href="#" title="{{tooltip2}}" class="ttLink">opinion base</span> and allows 
+          Unlike <span title="{{tooltip1}}" class="ttLink">usual Web 2.0 applications</span>, echo provides 
+          a clearly structured <span title="{{tooltip2}}" class="ttLink">opinion base</span> and allows 
           for a solution-oriented social collaboration. It unites technical innovation and human scientific knowledge 
           into a unique concept. This helps people to better understand backgrounds and interrelations of topics, 
           jointly make sound decisions and turn them into reality. Accordingly, echo comes with three main functional 
@@ -176,7 +175,7 @@ en:
       democratic: Democratic opinion formation
       democratic_more: |
         On echo, all positions represent sound statements elaborated by the users in a 
-        <span href="#" title="{{tooltip}}" class="ttLink">fully democractic process</span>. 
+        <span title="{{tooltip}}" class="ttLink">fully democractic process</span>. 
         Thus, all people can contribute to the dynamic evolution of such statements with equal chance and a minimal effort.
 
       democratic_tooltip: |
@@ -470,9 +469,9 @@ en:
         <p>
         Finance your actions without financial effort!
         </p><p>
-        echo combines a <span href="#" title="{{tooltip_nonprofit}}" class="ttLink">non-profit</span> 
+        echo combines a <span title="{{tooltip_nonprofit}}" class="ttLink">non-profit</span> 
         philosophy with <strong>powerful business models</strong>. "Powerful“ does not merely mean 
-        working <span href="#" title="{{tooltip_costneutral}}" class="ttLink">cost neutral</span>. 
+        working <span title="{{tooltip_costneutral}}" class="ttLink">cost neutral</span>. 
         It also means helping people and organizations to provide their actions with the necessary funds. 
         For this puropse, echo offers you various cost-neutral ways to collect money on your personal virtual account. 
         All funds collected in these ways can then be donated to actions and projects of organisations, interest 
@@ -607,5 +606,10 @@ en:
         With the best wishes,
         </p><p>Your echo team
         </p>
-
-      
+        
+    feedback:
+      new:
+        title: 'dritter'
+        
+    interested_people:
+      bla1: bla

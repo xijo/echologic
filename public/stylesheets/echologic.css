@@ -375,6 +375,29 @@ strong {
   color:        #7ab031;
 }
 
+/* feedback */
+
+form .floating_field {
+  display:      inline-block;
+  float:        left;
+  margin:       8px 10px 8px 0;
+}
+
+form .text_field {
+  clear:        both;
+  display:      block;
+  margin:       8px 0;
+}
+
+form input {
+  width:        140px;
+}
+
+form textarea {
+  width:        300px;
+  height:       160px;
+}
+
 /* body and headings */
 
 body, p, ol, ul, td {
