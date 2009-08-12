@@ -310,7 +310,7 @@ strong {
 /* Navigation */
 
 .backNextHolder {
-  margin:       35px auto 8px;
+  margin:       30px auto 8px;
   text-align:   center;
   height:       43px;
   overflow:     hidden;
@@ -337,7 +337,7 @@ span.backNextButton {
 }
 
 .backButton {
-  background:   transparent url(../images/page/back_button.png) no-repeat scroll left top;
+  background:   #FFF url(../images/page/back_button.png) no-repeat scroll left top;
   text-align:   right;
 }
 
@@ -355,7 +355,7 @@ span.backNextButton {
 }
 
 .nextButton {
-  background:   transparent url(../images/page/next_button.png) no-repeat scroll right top;
+  background:   #FFF url(../images/page/next_button.png) no-repeat scroll right top;
   text-align:   left;
 }
 
