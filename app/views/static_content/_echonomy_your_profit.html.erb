@@ -6,10 +6,11 @@
 <h4><%= t('.title') %></h4>
 
 <p>
-   <%= t('.text', 
-					:tooltip_nonprofit => t('.tooltip_nonprofit'), 
-					:tooltip_costneutral => t('.tooltip_costneutral')) %>
+   <%= t('.text', :tooltip_nonprofit => t('.tooltip_nonprofit'), :tooltip_costneutral => t('.tooltip_costneutral')) %>
 </p>
+
+<%= insert_back_next_buttons(echonomy_path, echonomy_foundation_path) %>
+
 
 <script type="text/javascript" charset="utf-8">
   $$(".ttLink").each( function(text) {

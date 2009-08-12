@@ -6,6 +6,9 @@ en:
   general:
     more: more » 
     hide: « hide
+    
+    next: Next
+    back: Back
 
   # Localizations for the layout components
   layouts:
