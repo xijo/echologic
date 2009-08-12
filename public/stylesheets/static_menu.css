@@ -26,15 +26,15 @@
   left:        -80px;
 }
 
-#staticMenu a .staticMenuButtonTitle {
+#staticMenu a .h1 {
   color:       #7BB031;
-  font-size:   12pt;
+  font-size:   1.15em;
   margin:      0 0 0 -80px;
 }
 
-#staticMenu a .staticMenuButtonSubtitle {
+#staticMenu a .h2 {
   color:       #1a4864;
-  font-size:   14pt;
+  font-size:   1.35em;
   margin:      0 0 0 -80px;
 }
 

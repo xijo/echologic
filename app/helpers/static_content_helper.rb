@@ -77,8 +77,8 @@ module StaticContentHelper
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
     button =  image_tag insert_static_menu_image(item)
-    button += "<span class='staticMenuButtonTitle'>#{t(title)}</span><br/>"
-    button += "<span class='staticMenuButtonSubtitle'>#{t(subtitle)}</span>"
+    button += "<span class='h1'>#{t(title)}</span><br/>"
+    button += "<span class='h2'>#{t(subtitle)}</span>"
     link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
   end
   
@@ -149,11 +149,12 @@ module StaticContentHelper
       require 'json'
       buffer = open("http://twitter.com/users/show/xijo.json").read
       result = JSON.parse(buffer)
-      result['status']['text'] + result['status']['created_at']
+      html = "<span class='newsDate'>#{result['status']['created_at']}</span><br/>"
+      html += "<span class='newsText'>#{result['status']['text']}</span>"
     rescue SocketError
       'twitter connection failed'
     rescue
-      'unknown error'
+      '...'
     end
   end
   

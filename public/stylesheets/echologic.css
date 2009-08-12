@@ -154,7 +154,7 @@ strong {
   top:         5px;
   width:       90px;
   height:      140px;
-  z-index:     100;
+  z-index:     10;
   background:  transparent;
   cursor:      help;
   border:      none;
@@ -217,13 +217,22 @@ strong {
   position:    absolute;
   top:	  	   0px;
   width: 	   295px;
-  cursor:      default;
 }
 
 #newsHolder .newsTitle {
   font-size:   1.2em;
   font-weight: bold;
-  margin:      2px 0 15px 0;
+  margin:      2px 0 20px 0;
+  cursor:      default;
+}
+
+#newsHolder .newsDate {
+  font-size:   1em;
+  font-weight: bold;
+}
+
+#newsHolder .newsText {
+  font-size:   1em;
 }
 
 .mainBox {
