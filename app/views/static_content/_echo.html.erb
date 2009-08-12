@@ -10,9 +10,9 @@
 <% insert_toggle_more(t('.why.text_more', :tooltip => t('.why.tooltip'))) %>
 
 <h2><%= t('.what.title') %></h2>
-<p><%= t('.what.text', :tooltip1 => t('.what.tooltip1'), :tooltip2 => t('.what.tooltip2')) %></p>
+<%= t('.what.text', :tooltip1 => t('.what.tooltip1'), :tooltip2 => t('.what.tooltip2')) %>
 
-<%= insert_back_next_buttons(echologic_path, echo_discuss_path) %>
+<% insert_back_next_buttons(echologic_path, echo_discuss_path) %>
 
 <script type="text/javascript" charset="utf-8">
   $$(".ttLink").each( function(text) {

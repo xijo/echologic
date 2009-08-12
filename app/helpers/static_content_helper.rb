@@ -61,15 +61,13 @@ module StaticContentHelper
   end
   
   def insert_back_next_buttons(prev_link, next_link)
-    back_button = "<span class='backButton backNextButton'>#{t('general.back')}</span>"
-    next_button = "<span class='nextButton backNextButton'>#{t('general.next')}</span>"
-    html = "<div class='backNextHolder'>"
-    html += link_to_remote(back_button, {:url => prev_link}, :href => prev_link)
-    #html += back_button
-    html += "<span class='separator'></span>"
-    html += link_to_remote(next_button, {:url => next_link}, :href => next_link)
-    #html += next_button
-    html += "</div>"
+    back_button = "<div class='back'>#{t('general.back')}</div>"
+    next_button = "<div class='next'>#{t('general.next')}</div>"
+    concat "<div class='backNextHolder'>"
+    concat link_to_remote(back_button, {:url => prev_link}, :href => prev_link)
+    concat "<div class='separator'></div>"
+    concat link_to_remote(next_button, {:url => next_link}, :href => next_link)
+    concat "</div>"
   end
   
   # Inserts a static remote menu button with the information
@@ -140,31 +138,7 @@ module StaticContentHelper
     end
     concat("</p>")
   end
-  
-  #
-  def insert_list(array, options={})
-    list_type = options[:ordered] ? ["<ol>", "</ol>"] : ["<ul>", "</ul>"]
-    concat(list_type.first)
-    array.each do |li|
-      if li.is_a?(String)
-        concat("<li>#{li}</li>")
-      elsif li.is_a?(Hash)
-        concat(list_type.first)
-        li.each_value do |lii|
-          concat("<li>#{lii}</li>")
-        end
-        concat(list_type.last)
-      elsif li.is_a?(Array)
-        concat(list_type.first)
-        li.each do |lii|
-          concat("<li>#{lii}</li>")
-        end
-        concat(list_type.last)
-      end
-    end
-    concat(list_type.last)
-  end
-  
+
   # gets the latest twittered content of the specified user account
   # via json.
   # WARNING: raises nil error if there haven't been a tweet.
@@ -173,9 +147,9 @@ module StaticContentHelper
     begin
       require 'open-uri'
       require 'json'
-      buffer = open("http://twitter.com/users/show/echologic.json").read
+      buffer = open("http://twitter.com/users/show/xijo.json").read
       result = JSON.parse(buffer)
-      result['status']['text']
+      result['status']['text'] + result['status']['created_at']
     rescue SocketError
       'twitter connection failed'
     rescue
@@ -185,11 +159,7 @@ module StaticContentHelper
   
   # more/hide helper
   def insert_toggle_more(text)
-    concat("<span class='moreButton' onclick=\"")
-      concat("Effect.Fade($(this), {duration:0.3});")
-      concat("Effect.Appear($(this).next(0), {duration:0.4});")
-      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
-      concat("\">#{t('general.more')}</span>")
+    insert_more_hide_buttons
     concat("<div style='display: none;'>")
       concat("#{text}")
 #      concat("<span class='hideButton' onclick=\"")
@@ -198,6 +168,24 @@ module StaticContentHelper
 #       concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
 #      concat("\">#{t('general.hide')}</span>")
     concat("</div>")
+  end
+  
+  def insert_more_hide_buttons
+    # hide button
+    concat("<span class='moreButton' style='display:none;' onclick=\"")
+      concat("$(this).hide();")
+      concat("Effect.Appear($(this).next(0), {duration:0.3});")
+      concat("Effect.Fade($(this).next(1), {duration:0.4});")
+      concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
+      concat("\">#{t('general.hide')}</span>")
+    # more button
+    concat("<span class='moreButton' onclick=\"")
+      concat("$(this).hide();")
+      concat("Effect.Appear($(this).previous(0), {duration:0.3});")      
+      concat("Effect.Appear($(this).next(0), {duration:0.4});")
+      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
+      concat("\">#{t('general.more')}</span>")
+
   end
   
   # more/hide helper

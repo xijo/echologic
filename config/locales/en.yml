@@ -58,9 +58,11 @@ en:
       header2: | 
         the end of powerlessness!&nbsp;&nbsp;&nbsp;&nbsp;<br/>the beginning of self-determination! 
         
-      teaser: | 
+      teaser: |
+        <p>
         echo is an Internet project of a special kind. We seek nothing less than to establish a new kind of 
         <strong>participatory democracy</strong> on the very local, as well as on the regional and global level.
+        </p>
       
       teaser_more:
         <p>
@@ -89,14 +91,19 @@ en:
         title: Why do we need echo?
         
         text: |
+          <p>
           The world is changing. Today humanity is facing some serious environmental, economic and humanitarian 
           challenges never seen before. However, satisfactory solutions are not in sight. 
+          </p>
+          
         text_more: | 
+          <p>
           The lack of transparency in political decision making provokes a growing sense of <strong>powerlessnes</strong> and 
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
           Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.<br/>
           New ways have to be found, empowering people to develop adequate solutions to effectively tackle 
           our <span href="#" title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
+          </p>
           
         tooltip: |
           Our ecological, economical and humanitarian challenges at local and global level are tightly 
