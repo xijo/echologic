@@ -163,7 +163,7 @@ strong {
 #missionStatementHolder {
   position:    absolute;
   top:		   0px;
-  width: 	   540px;
+  width: 	   560px;
   text-align:  center;
   color:       #FFF;
   cursor:      default;
@@ -254,12 +254,16 @@ strong {
 
 /* echologic */
 
+#echoTeaser {
+  font-size:  120%;
+}
+
 #echoHeader {
   background:  url(../images/page/echo_gradient.jpg) no-repeat scroll;
   position:    relative;
   left:		   -5px;
   top:         0px;
-  padding:     0 0 7px 0;
+  margin:      20px 0 0;
 }
 
 #echoLogo {
@@ -293,7 +297,7 @@ strong {
 
 #echologicActionPic {
   float:       left;
-  margin:      10px 0 0 0;
+  margin:      5px 0 0 0;
   width:       100%;
   height:      128px;
   background:  url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;

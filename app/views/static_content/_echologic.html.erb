@@ -1,15 +1,15 @@
 <h1><%= t('.title') %></h1>
 <h4><%= t('.subtitle') %></h4>
 
+<span id="echoTeaser"><%= t('.teaser') %></span>
+
 <div id="echoHeader">
   <div id=echoLogo><%= image_tag('page/echo_logo.png') %></div>
   <div id=headerGlue><%= t('.header1') %></div>
   <div id=headerMessage><%= t('.header2') %></div>
 </div>
 
-<%= t('.teaser') %>
 <%= t('.teaser_more') %>
-<!--<% insert_toggle_more(t('.teaser_more'), false) %>-->
 
 <div>
   <%= link_to_remote('<div id="echologicActionPic"></div>', {:url => echo_path}, :href => echo_path) %>
