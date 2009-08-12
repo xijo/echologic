@@ -5,7 +5,12 @@ de:
   # General resources
   general:
     more: mehr » 
-    hide: « weniger
+    hide1: « okay
+    hide2: « schön
+    hide3: « toll
+    hide4: « super
+    hide5: « klasse
+    
 
     next: Weiter
     back: Zurück
@@ -27,9 +32,8 @@ de:
       data_privacy: &data_privacy Datenschutz
     static:
       invite: |
-        Gestalten Sie echo!<br>
-        Werden Sie Teil von echologic!
-      
+        Verwirklichen Sie echo!<br/>
+        Werden Sie echologic!
 
   # All content appearing on the static pages   
   static_content:
@@ -41,9 +45,9 @@ de:
       
       ms1: echologic 
       ms2: | 
-        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Ihr Ziel ist die Verwirklichung von
+        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
       ms3: | 
-        echo: der globalen <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>!
+        echo - die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>!
 
       agora_tooltip: |
         Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
@@ -61,12 +65,12 @@ de:
         das Ende der Machtlosigkeit!&nbsp;&nbsp;<br/>den Anfang der Selbstbestimmung!
         
       teaser: |
-        echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine neue Form 
-        <strong>teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
+        echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine 
+        <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
       
       teaser_more: |
         <p>
-        Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können hier ihre Ansichten in 
+        Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können auf echo ihre Ansichten in 
         Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen. 
         Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit 
         beliebig vielen Teilnehmern. Menschen rund um den Globus können so auf echo konstruktiv zusammen arbeiten und 
@@ -75,11 +79,11 @@ de:
         Durch neuartige transnationale und interkulturelle Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert 
         und damit der Weg in eine friedlichere, gerechtere und <strong>nachhaltige Zukunft</strong> geebnet werden.
         </p><p>
-        echologic bietet Ihnen die Möglichkeit dieses einmalige Projekt aktiv mit zu gestalten!
+        echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und aktiv mit zu gestalten!
         </p>
 
       action: | 
-        Erfahren Sie mehr über echo!<br/>Werden Sie Teil von echologic!
+        Erfahren Sie mehr über echo!<br/>Werden Sie echologic!
 
     # Static content for the echo main menu point
     echo:
@@ -321,16 +325,17 @@ de:
         verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher 
         <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen neuen Möglichkeiten:
       
-      list: |-
-        <li><strong>Informative Übersicht</strong> über die aktuelle öffentliche Meinung verschiedener Gesellschaftsgruppen und Regionen</li>
-        <li><strong>Selbstbestimmung</strong> des unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt durch</li>
-          <ul>
-            <li>Direkte Beteiligung an Entscheidungsfindung</li>
-            <li>Überzeugung Anderer für den eigenen Standpunkt</li>
-            <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
-            <li>Einfache Organisation und Unterstützung realer Aktionen</li>
-          </ul>
-        <li><strong>Gestärktes „Wir-Gefühl“</strong> durch gemeinsamen, direkten Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit </li>
+      adv1: | 
+        <strong>Informative Übersicht</strong> über die aktuelle öffentliche Meinung verschiedener Gesellschaftsgruppen und Regionen
+      adv2: | 
+        <strong>Selbstbestimmung</strong> des unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt
+      adv2_details: |
+        <li>Direkte Beteiligung an Entscheidungsfindung</li>
+        <li>Überzeugung Anderer für den eigenen Standpunkt</li>
+        <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
+        <li>Einfache Organisation und Unterstützung realer Aktionen</li>
+      adv34: |
+        <li><strong>Gestärktes „Wir-Gefühl“</strong> durch gemeinsamen, direkten Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li>
         <li><strong>Befreiung vom Gefühl der Machtlosigkeit</strong> durch spürbare Auswirkungen im eigenen Alltag.</li>
       
     echocracy_scientists:

@@ -147,42 +147,33 @@ module StaticContentHelper
     begin
       require 'open-uri'
       require 'json'
-      buffer = open("http://twitter.com/users/show/xijo.json").read
+      buffer = open("http://twitter.com/users/show/echologic.json").read
       result = JSON.parse(buffer)
       html = "<span class='newsDate'>#{result['status']['created_at']}</span><br/>"
       html += "<span class='newsText'>#{result['status']['text']}</span>"
     rescue SocketError
       'twitter connection failed'
     rescue
-      '...'
+      '"Tweet! Tweet! :-)"'
     end
   end
   
   # more/hide helper
-  def insert_toggle_more(text, showHide=true, inPlace=true)
-    insert_more_hide_buttons(showHide)
+  def insert_toggle_more(text, hide_key='hide1')
+    insert_more_hide_buttons('general.' + hide_key)
     concat("<div style='display: none;'>")
       concat("#{text}")
-      if (showHide && !inPlace)
-        concat("<span class='hideButton' onclick=\"")
-        concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
-        concat("Effect.Fade($(this).up(0), {duration:0.4});")
-        concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
-        concat("\">#{t('general.hide')}</span>")
-      end
     concat("</div>")
   end
   
-  def insert_more_hide_buttons(showHide)
+  def insert_more_hide_buttons(hide_key)
     # hide button
-    if (showHide)
-      concat("<span class='moreButton' style='display:none;' onclick=\"")
-        concat("$(this).hide();")
-        concat("Effect.Appear($(this).next(0), {duration:0.3});")
-        concat("Effect.Fade($(this).next(1), {duration:0.4});")
-        concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
-      concat("\">#{t('general.hide')}</span>")
-    end
+    concat("<span class='moreButton' style='display:none;' onclick=\"")
+      concat("$(this).hide();")
+      concat("Effect.Appear($(this).next(0), {duration:0.3});")
+      concat("Effect.Fade($(this).next(1), {duration:0.4});")
+      concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
+    concat("\">#{t(hide_key)}</span>")
     # more button
     concat("<span class='moreButton' onclick=\"")
       concat("$(this).hide();")

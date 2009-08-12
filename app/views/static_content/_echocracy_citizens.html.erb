@@ -7,6 +7,19 @@
 
 <p><%= t('.text_top') %></p>
 
-<ul class="benefitList"><%= t('.list') %></ul>
+<ul class="benefitList">
+  <li>
+  	<%= t('.adv1') %>
+  </li>
+  
+  <li>
+  	<%= t('.adv2') %>
+	<% insert_toggle_more('<ul>' + t('.adv2_details') + '</ul>', 'hide3') %>
+  </li>
+  
+  <li>
+  	<%= t('.adv34') %>
+  </li>	
+</ul>
 
 <% insert_back_next_buttons(echocracy_path, echocracy_scientists_path) %>

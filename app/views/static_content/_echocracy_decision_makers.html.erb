@@ -10,20 +10,17 @@
 <ul class="benefitList">
   <li>
   	<strong><%= t('.adv1') %></strong>
-    <!--<ul><%= t('.adv1_details') %></ul>-->
-	<% insert_more('<ul>' + t('.adv1_details') + '</ul>') %>
+	<% insert_toggle_more('<ul>' + t('.adv1_details') + '</ul>', 'hide3') %>
   </li>
   
   <li>
   	<strong><%= t('.adv2') %></strong>
-    <!--<ul><%= t('.adv2_details') %></ul>-->
-	<% insert_more('<ul>' + t('.adv2_details') + '</ul>') %>
+	<% insert_toggle_more('<ul>' + t('.adv2_details') + '</ul>', 'hide4') %>
   </li>
   
   <li>
   	<strong><%= t('.adv3') %></strong>
-  	<!--<ul><%= t('.adv3_details') %></ul>-->
-	<% insert_more('<ul>' + t('.adv3_details') + '</ul>') %>
+	<% insert_toggle_more('<ul>' + t('.adv3_details') + '</ul>', 'hide5') %>
   </li>	
 </ul>
 
