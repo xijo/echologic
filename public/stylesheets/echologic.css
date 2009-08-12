@@ -154,10 +154,10 @@ strong {
   top:         5px;
   width:       90px;
   height:      140px;
-  z-index:     10;
+  z-index:     100;
   background:  transparent;
   cursor:      help;
-  border:      none;
+  border:      1px solid;
 }
 
 #missionStatementHolder {
