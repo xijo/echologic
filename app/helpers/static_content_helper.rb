@@ -60,6 +60,18 @@ module StaticContentHelper
     concat "  <div class='boxRight'></div>\n</div>"
   end
   
+  def insert_back_next_buttons(prev_link, next_link)
+    back_button = "<span class='backButton backNextButton'>#{t('general.back')}</span>"
+    next_button = "<span class='nextButton backNextButton'>#{t('general.next')}</span>"
+    html = "<div class='backNextHolder'>"
+    html += link_to_remote(back_button, {:url => prev_link}, :href => prev_link)
+    #html += back_button
+    html += "<span class='separator'></span>"
+    html += link_to_remote(next_button, {:url => next_link}, :href => next_link)
+    #html += next_button
+    html += "</div>"
+  end
+  
   # Inserts a static remote menu button with the information
   # provided through the given link.  
   def insert_static_remote_button(link)
