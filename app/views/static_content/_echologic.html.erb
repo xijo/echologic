@@ -8,12 +8,13 @@
 </div>
 
 <%= t('.teaser') %>
-<% insert_toggle_more(t('.teaser_more')) %>
+<%= t('.teaser_more') %>
+<!--<% insert_toggle_more(t('.teaser_more'), false) %>-->
 
-<p>
+<div>
   <%= link_to_remote('<div id="echologicActionPic"></div>', {:url => echo_path}, :href => echo_path) %>
   <span id="echologicActionCall"><%= t('.action') %></span>	
-</p>
+</div>
 
 
 <script type="text/javascript" charset="utf-8">

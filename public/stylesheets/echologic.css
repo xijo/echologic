@@ -25,21 +25,21 @@ strong {
   font-size:   90%;
 }
 
-#head {
+#header {
   width:       970px;
   margin:      0 auto;
 }
 
-#headlogo {
+#echologicLogo {
   float:       left;
-  margin:      0 0 -15px 0;
+  margin:      23px 0 -10px 3px;
 }
 
-#headlogo img {
+#echologicLogo img {
   border:      none;
 }
 
-#invitebubble {
+#inviteBubble {
   position:    relative;  
   float:       left;
   background:  url(../images/page/invitebubble_left.png) no-repeat;
@@ -47,7 +47,7 @@ strong {
   top: 		   15px
 }
 
-#invitebubble span {
+#inviteBubble span {
   background:  transparent url(../images/page/invitebubble_right.png) no-repeat scroll right top;
   color:       #fff;
   display:     block;
@@ -61,7 +61,7 @@ strong {
   position:    relative;
 }
 
-#invitebubble span:hover {
+#inviteBubble span:hover {
   text-decoration: underline;
   cursor:      pointer;
 }
