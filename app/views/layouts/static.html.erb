@@ -15,11 +15,11 @@
   </head>
   <body>
 
-  <div id="head">
-    <div id="headlogo">
+  <div id="header">
+    <div id="echologicLogo">
       <%= link_to_remote(image_tag('page/echologic_logo.png'), {:url => echologic_path}, :href => echologic_path) %>
     </div>
-    <div id="invitebubble">
+    <div id="inviteBubble">
       <span><%= t('.invite') %></span>
     </div>
     <%= render :partial => "layouts/top_menu" %>

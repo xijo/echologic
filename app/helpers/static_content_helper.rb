@@ -158,33 +158,37 @@ module StaticContentHelper
   end
   
   # more/hide helper
-  def insert_toggle_more(text)
-    insert_more_hide_buttons
+  def insert_toggle_more(text, showHide=true, inPlace=true)
+    insert_more_hide_buttons(showHide)
     concat("<div style='display: none;'>")
       concat("#{text}")
-#      concat("<span class='hideButton' onclick=\"")
-#       concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
-#       concat("Effect.Fade($(this).up(0), {duration:0.4});")
-#       concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
-#      concat("\">#{t('general.hide')}</span>")
+      if (showHide && !inPlace)
+        concat("<span class='hideButton' onclick=\"")
+        concat("Effect.BlindUp($(this).up(0), {duration:0.3});")
+        concat("Effect.Fade($(this).up(0), {duration:0.4});")
+        concat("Effect.Appear($(this).up().previous(), {duration:0.3});")
+        concat("\">#{t('general.hide')}</span>")
+      end
     concat("</div>")
   end
   
-  def insert_more_hide_buttons
+  def insert_more_hide_buttons(showHide)
     # hide button
-    concat("<span class='moreButton' style='display:none;' onclick=\"")
-      concat("$(this).hide();")
-      concat("Effect.Appear($(this).next(0), {duration:0.3});")
-      concat("Effect.Fade($(this).next(1), {duration:0.4});")
-      concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
+    if (showHide)
+      concat("<span class='moreButton' style='display:none;' onclick=\"")
+        concat("$(this).hide();")
+        concat("Effect.Appear($(this).next(0), {duration:0.3});")
+        concat("Effect.Fade($(this).next(1), {duration:0.4});")
+        concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
       concat("\">#{t('general.hide')}</span>")
+    end
     # more button
     concat("<span class='moreButton' onclick=\"")
       concat("$(this).hide();")
       concat("Effect.Appear($(this).previous(0), {duration:0.3});")      
       concat("Effect.Appear($(this).next(0), {duration:0.4});")
       concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
-      concat("\">#{t('general.more')}</span>")
+    concat("\">#{t('general.more')}</span>")
 
   end
   
