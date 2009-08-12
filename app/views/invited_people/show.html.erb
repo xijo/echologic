@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @invited_person.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @invited_person.email %>
+</p>
+
+<p>
+  <b>Interested person:</b>
+  <%=h @invited_person.interested_person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_invited_person_path(@invited_person) %> |
+<%= link_to 'Back', invited_people_path %>

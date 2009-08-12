@@ -9,7 +9,7 @@
   </p>
   
   <p>
-    <%= label_tag t('.email') %><br />
+    <%= label_tag :sender %><br />
     <%= text_field_tag :sender, 'name@mail.com' %>
   </p>
 
@@ -20,7 +20,4 @@
 
   <%= submit_tag 'Submit' %>
   
-<%= link_to 'join', join_path %>
-
-
 <% end -%>

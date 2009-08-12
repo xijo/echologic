@@ -1,5 +1,4 @@
 class FeedbackMailer < ActionMailer::Base
-  
 
   def feedback(params, sent_at = Time.now)
     @text         = params[:text]

@@ -106,38 +106,38 @@ module StaticContentHelper
   end
   
   # display_content
-  def display_content(content)
-    content.each do |key, value|
-      case key.to_s
-        when /\Atext/
-          display_text(value)
-        when /\Apart/
-          concat("part ")
-      end
-    end
-  end
-  
-  # display text
-  def display_text(value)
-    concat("<p>")
-    if value.is_a? String
-      concat("value")
-    elsif value.is_a? Array
-      concat(value.inspect)
-      value.each do |key, part|
-        case key.to_s
-          when /\Apart/
-            concat(part)
-          when /\Alink/
-            concat("<a>#{part[:title]}</a>")
-        end
-      end
-    else
-      concat(value.inspect)
-      display_content(value)
-    end
-    concat("</p>")
-  end
+#  def display_content(content)
+#    content.each do |key, value|
+#      case key.to_s
+#        when /\Atext/
+#          display_text(value)
+#        when /\Apart/
+#          concat("part ")
+#      end
+#    end
+#  end
+#  
+#  # display text
+#  def display_text(value)
+#    concat("<p>")
+#    if value.is_a? String
+#      concat("value")
+#    elsif value.is_a? Array
+#      concat(value.inspect)
+#      value.each do |key, part|
+#        case key.to_s
+#          when /\Apart/
+#            concat(part)
+#          when /\Alink/
+#            concat("<a>#{part[:title]}</a>")
+#        end
+#      end
+#    else
+#      concat(value.inspect)
+#      display_content(value)
+#    end
+#    concat("</p>")
+#  end
 
   # gets the latest twittered content of the specified user account
   # via json.

@@ -27,7 +27,7 @@ class InterestedPeopleController < ApplicationController
     @interested_person = InterestedPerson.new
 
     respond_to do |format|
-      format.html { render :partial => 'interested_people/new', :layout => 'static' }
+      format.html { render :partial => "interested_people/new", :layout => "static" }
       format.xml  { render :xml => @interested_person }
     end
   end
@@ -45,10 +45,11 @@ class InterestedPeopleController < ApplicationController
     respond_to do |format|
       if @interested_person.save
         flash[:notice] = 'InterestedPerson was successfully created.'
-        format.html { redirect_to(@interested_person) }
+        @invited_person = InvitedPerson.new
+        format.html { render :partial => "invited_people/new", :layout => "static" }
         format.xml  { render :xml => @interested_person, :status => :created, :location => @interested_person }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "static" }
         format.xml  { render :xml => @interested_person.errors, :status => :unprocessable_entity }
       end
     end

@@ -1,0 +1,24 @@
+<h1>Editing invited_person</h1>
+
+<% form_for(@invited_person) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :interested_person_id %><br />
+    <%= f.text_field :interested_person_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @invited_person %> |
+<%= link_to 'Back', invited_people_path %>

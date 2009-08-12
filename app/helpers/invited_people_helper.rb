@@ -1,0 +1,2 @@
+module InvitedPeopleHelper
+end
