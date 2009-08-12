@@ -310,59 +310,57 @@ strong {
 /* Navigation */
 
 .backNextHolder {
-  margin:       30px auto 8px;
+  margin:       30px auto;
   text-align:   center;
   height:       43px;
   overflow:     hidden;
 }
 
-.backNextHolder a {
-  text-decoration: none;
+.separator {
+  border-right: 1px solid #bac8d0;
+  display:      inline-block;
+  height:       31px;
+  margin:       2px 0 5px 0;
+  vertical-align: middle;
 }
 
-span.backNextButton {
-  width:        80px;
+.next {
+  background:   #FFF url(../images/page/next_button.png) no-repeat scroll right top;
   height:       43px;
+  width:        103px;
+  text-align:   left;
   display:      inline-block;
   font-size:    1.0em;
   font-weight:  bold;
   color:        #21587f;
-  padding:      13px 18px 0;
-  margin:       0 -5px 0;
+  line-height:  43px;
+  padding:      0 0 0 13px;
+  margin:       0;
 }
 
-.backNextButton:hover {
-  color:        #7ab031;
-  cursor:       pointer;
-}
-
-.backButton {
+.back {
   background:   #FFF url(../images/page/back_button.png) no-repeat scroll left top;
+  height:       43px;
+  width:        103px;
   text-align:   right;
-}
-
-.backButton:hover {
-  background-position: 0 -43px;
-}
-
-.backNextHolder .separator {
-  border:       1px solid #bac8d0;
   display:      inline-block;
-  width:        0px;
-  height:       27px;
-  vertical-align: middle;
-  margin:       0 4px 2px;
+  font-size:    1.0em;
+  font-weight:  bold;
+  color:        #21587f;
+  line-height:  43px;
+  padding:      0 13px 0 0;
+  margin:       0;
 }
 
-.nextButton {
-  background:   #FFF url(../images/page/next_button.png) no-repeat scroll right top;
-  text-align:   left;
-}
-
-.nextButton:hover {
+.next:hover {
   background-position: -84px -43px;
+  color:        #7ab031;  
 }
 
+.back:hover {
+  background-position: 0 -43px;
+  color:        #7ab031;
+}
 
 /* body and headings */
 

@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :interested_people
+  map.resources :interested_people, :only => [:create]
 
   map.resources :feedback, :only => [:new, :create]
 
