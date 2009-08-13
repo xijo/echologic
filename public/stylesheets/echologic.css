@@ -297,8 +297,8 @@ strong {
 
 #echologicActionPic {
   float:       left;
-  margin:      5px 0 0 0;
-  width:       100%;
+  margin:      5px -490px 0 0;
+  width:       630px;
   height:      128px;
   background:  url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;
   position:    relative;
@@ -316,14 +316,14 @@ strong {
   color:       #21587f;
   line-height: 38px;
   position:    relative;
-  left:        140px;
-  bottom:      105px;
+  top:         28px;
 }
 
 /* Navigation */
 
 .backNextHolder {
-  margin:       30px auto;
+  clear:        both;
+  margin:       30px auto 12px;
   text-align:   center;
   height:       43px;
   overflow:     hidden;
@@ -373,6 +373,45 @@ strong {
 .back:hover {
   background-position: 0 -43px;
   color:        #7ab031;
+}
+
+/* Illustrations */
+.illustrationHolder {
+  margin:       25px auto 0px;
+  height:       160px;
+  padding:      0 0 5px;
+}
+
+.illustrationHolder ul {
+  padding:      0px;
+}
+
+.illustrationHolder li {
+  float:        left;
+  text-align:   center;
+  list-style-type: none;
+}
+
+.illustrationHolder a {
+  border:       none;
+}
+
+.illustrationHolder h2 {
+  font-size:    1.4em;
+  font-weight:  bold;
+  margin:       0px;
+  padding:      0px;
+  border-bottom: 2px solid transparent;  
+  position:     relative;
+  top:          -10px;    
+}
+
+.illustrationHolder li:hover * {
+  cursor:       pointer;
+}
+
+.illustrationHolder li:hover h2 {
+  border-bottom: 2px dotted #7ab031;
 }
 
 /* feedback */

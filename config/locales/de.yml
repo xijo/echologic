@@ -5,12 +5,7 @@ de:
   # General resources
   general:
     more: mehr » 
-    hide1: « okay
-    hide2: « schön
-    hide3: « toll
-    hide4: « super
-    hide5: « klasse
-    
+    hide: « okay
 
     next: Weiter
     back: Zurück
