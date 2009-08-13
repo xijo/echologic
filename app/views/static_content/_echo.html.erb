@@ -13,32 +13,10 @@
 <%= t('.what.text', :tooltip1 => t('.what.tooltip1'), :tooltip2 => t('.what.tooltip2')) %>
 
 
-
-<div class="illustrationHolder">
-  <ul>
-  	<li>
-  	  <%= image_tag('page/illustrations/echo_discuss.png') %>
-  	  <h2><%= t('static_content.echo_discuss.title')%></h2>
-  	</li>
-	<li>
-  	  <%= image_tag('page/illustrations/echo_connect.png') %>
-  	  <h2><%= t('static_content.echo_connect.title')%></h2>
-  	</li>
-	<li>
-  	  <%= image_tag('page/illustrations/echo_act.png') %>
-  	  <h2><%= t('static_content.echo_act.title')%></h2>
-  	</li>
-	<li>
-  	  <%= image_tag('page/illustrations/echo_echo_on_waves.png') %>
-  	  <h2><%= t('static_content.echo_echo_on_waves.title')%></h2>
-  	</li>
-  </ul>
-</div>
-
-<!--<% insert_illustrations([echo_discuss_path, 
+<% insert_illustrations([echo_discuss_path, 
                          echo_connect_path,
                          echo_act_path,
-                         echo_echo_on_waves_path]) %>-->
+                         echo_echo_on_waves_path]) %>
 
 <% insert_back_next_buttons(echologic_path, echo_discuss_path) %>
 

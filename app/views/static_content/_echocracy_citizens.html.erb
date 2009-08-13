@@ -2,8 +2,7 @@
   <%= render :partial => 'tabs_echocracy' %>
 <% end %>
 
-<h1><%= t('static_content.echocracy.title') %></h1>
-<h4><%= t('.title_long') %></h4>
+<% insert_breadcrumb(echocracy_path) %>
 
 <p><%= t('.text_top') %></p>
 

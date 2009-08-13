@@ -2,8 +2,7 @@
   <%= render :partial => 'tabs_echonomy' %>
 <% end %>
 
-<h1><%= t('static_content.echonomy.title') %></h1>
-<h4><%= t('.title') %></h4>
+<% insert_breadcrumb(echonomy_path) %>
 
 <p>
    <%= t('.text', :tooltip_nonprofit => t('.tooltip_nonprofit'), :tooltip_costneutral => t('.tooltip_costneutral')) %>

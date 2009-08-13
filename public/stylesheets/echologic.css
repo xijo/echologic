@@ -377,26 +377,23 @@ strong {
 
 /* Illustrations */
 .illustrationHolder {
+  clear:        both;
   margin:       25px auto 0px;
   height:       160px;
   padding:      0 0 5px;
-}
-
-.illustrationHolder ul {
-  padding:      0px;
-}
-
-.illustrationHolder li {
-  float:        left;
   text-align:   center;
-  list-style-type: none;
 }
 
-.illustrationHolder a {
-  border:       none;
+.illustration {
+  padding:      0px;
+  float:        left;
 }
 
-.illustrationHolder h2 {
+.threeItems .illustration {
+  padding:      0 15px;
+}
+
+.illustration h2 {
   font-size:    1.4em;
   font-weight:  bold;
   margin:       0px;
@@ -406,11 +403,15 @@ strong {
   top:          -10px;    
 }
 
-.illustrationHolder li:hover * {
+.illustration:hover * {
   cursor:       pointer;
 }
 
-.illustrationHolder li:hover h2 {
+.illustration img {
+  border:       none;
+}
+
+.illustration:hover h2 {
   border-bottom: 2px dotted #7ab031;
 }
 
@@ -451,7 +452,7 @@ ul, ol {
 h1, h2, h3, h4 {
   font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
   cursor:       default;
-  font-weight:  normal;  
+  font-weight:  normal !important;  
 }
 
 h1 {
@@ -479,3 +480,6 @@ h4 {
   padding:      0 0 0 2px;
 }
 
+.link {
+  cursor:       pointer;
+}
