@@ -60,24 +60,29 @@ module StaticContentHelper
     BOTTOM
   end
 
+  # Inserts the breadcrumb for the given main menu path and the actual sub menu
+  def insert_breadcrumb(link, sub_menu_title='.title')
+    main_menu_resource = 'static_content.' + link.split('/')[2] + '.title'
+    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
+    concat link_to_remote(main_menu, {:url => link}, :href => link)
+    concat "<h4>#{t(sub_menu_title)}</h4>"
+  end
+
   # Inserts illustrations as a link for the given array of paths.
   def insert_illustrations(links)
-    concat "<div class='illustrationHolder'>"
-    concat   "<ul>"
+    concat "<div class='illustrationHolder" + (links.size==3 ? " threeItems" : '') + "'>"
     links.each do |link|
       parts = link.split('/')
       item = parts[2] + '_' + parts[3] 
       pic_resource = 'page/illustrations/' + item + '.png'
       text_resource = 'static_content.' + item + '.title' 
-      list_item = "<li>"
-      list_item += image_tag(pic_resource)
-      list_item += "<h2>#{t(text_resource)}</h2>"
-      list_item += "</li>"
-      concat link_to_remote(list_item, {:url => link}, :href => link)
+      illustration = "<div class='illustration'>"
+      illustration +=   image_tag(pic_resource)
+      illustration +=   "<h2>#{t(text_resource)}</h2>"
+      illustration += "</div>"
+      concat link_to_remote(illustration, {:url => link}, :href => link)
     end
-    concat   "</ul>"
     concat "</div>"
-    return
   end
   
   # Insert back and next buttons according to the given paths.
