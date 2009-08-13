@@ -1,25 +1,10 @@
-<h1>New invited_person</h1>
 
-<%= params.inspect %>
+<%= form_remote_tag( :update => "invitedList", :position => "bottom",
+			:before => "Element.show('invitedListHolder');",
+			:url => { :controller => "invited_people",
+								:action => "invite_person",
+								:interested_person_id => @interested_person } ) %>
 
-<% form_for(@invited_person) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :interested_person_id %><br />
-    <%= f.text_field :interested_person_id %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', invited_people_path %>
+  Name <%= text_field_tag :name %> E-Mail <%= text_field_tag :email %>
+  <%= submit_tag 'Invite' %>
+</form>

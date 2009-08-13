@@ -10,7 +10,7 @@ class FeedbackController < ApplicationController
 
   # POST /feedback
   def create
-    FeedbackMailer.deliver_feedback(params)
+    Mailer.deliver_feedback(params)
     respond_to do |format|
       format.html { render :template => 'feedback/create', :layout => 'static' }
     end

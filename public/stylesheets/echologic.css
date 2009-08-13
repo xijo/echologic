@@ -216,7 +216,7 @@ strong {
 #newsHolder {
   position:    absolute;
   top:	  	   0px;
-  width: 	   295px;
+  width: 	     295px;
 }
 
 #newsHolder .newsTitle {
@@ -337,40 +337,35 @@ strong {
   vertical-align: middle;
 }
 
-.next {
+#nextPageButton {
   background:   #FFF url(../images/page/next_button.png) no-repeat scroll right top;
-  height:       43px;
-  width:        103px;
   text-align:   left;
-  display:      inline-block;
-  font-size:    1.0em;
-  font-weight:  bold;
-  color:        #21587f;
-  line-height:  43px;
-  padding:      0 0 0 13px;
-  margin:       0;
+  padding:      0 0 0 13px;  
 }
 
-.back {
+#previousPageButton {
   background:   #FFF url(../images/page/back_button.png) no-repeat scroll left top;
+  text-align:   right;
+  padding:      0 13px 0 0;  
+}
+
+.changePageButton {
   height:       43px;
   width:        103px;
-  text-align:   right;
   display:      inline-block;
   font-size:    1.0em;
   font-weight:  bold;
   color:        #21587f;
   line-height:  43px;
-  padding:      0 13px 0 0;
   margin:       0;
 }
 
-.next:hover {
+#nextPageButton:hover {
   background-position: -84px -43px;
   color:        #7ab031;  
 }
 
-.back:hover {
+#previousPageButton:hover {
   background-position: 0 -43px;
   color:        #7ab031;
 }
@@ -442,6 +437,39 @@ form input {
 form textarea {
   width:        300px;
   height:       160px;
+}
+
+/* invited people */
+
+#invitedListHolder {
+  border:      1px solid green;
+  -moz-border-radius: 5px;
+  background:  #F4F7E6;
+  padding: 5px;
+  margin: 0 0 15px 0;
+  display: inline-block;
+}
+
+/* error handling */
+
+#errorExplanation {
+  border:      1px solid red;
+  -moz-border-radius: 5px;
+  background:  #F4F7E6;
+  padding: 5px;
+  margin: 0 0 15px 0;
+}
+
+#errorExplanation h2 {
+  font-size:      1em;
+  font-weight:    bold;
+  
+}
+
+.fieldWithErrors {
+  margin:         0;
+  padding:        0;
+  display: inline-block;
 }
 
 /* body and headings */

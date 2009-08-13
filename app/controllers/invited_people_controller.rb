@@ -25,10 +25,29 @@ class InvitedPeopleController < ApplicationController
   # GET /invited_people/new.xml
   def new
     @invited_person = InvitedPerson.new
-
+    if not flash[:id].nil?
+      @interested_person = InterestedPerson.find(flash[:id])
+    else
+      @interested_person = InterestedPerson.find(1)
+    end
     respond_to do |format|
-      format.html { render :partial => "new", :layout => "static" } # new.html.erb
+      format.html { render :partial => "invite", :layout => "static" }
       format.xml  { render :xml => @invited_person }
+    end
+  end
+  
+  def invite_person
+    @invited_person = InvitedPerson.new(:name => params[:name], 
+                                        :email => params[:email],
+                                        :interested_person_id => params[:interested_person_id])
+    @invited_person.save
+    begin
+      Mailer.deliver_invitation(@invited_person)
+    rescue SocketError
+      
+    end
+    respond_to do |format|
+      format.html { render :partial => 'invited_person', :locals => { :invited_person => @invited_person } }
     end
   end
 
