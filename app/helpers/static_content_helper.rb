@@ -27,6 +27,18 @@ module StaticContentHelper
     link_to_remote(tab, {:url => link}, :href => link, :class => classname)
   end
   
+  # Inserts div structure for rounded box
+  # Pretty cooler rounded box helper with yield function! Usage makes our
+  # views simpler than before and only one method will be needed.
+  def insert_rounded_box
+    concat "<div class='boxTop'>\n  <div class='boxLeft'></div>"
+    concat "  <div class='boxRight'></div>\n</div>"
+    concat "<div class='boxMiddle'>\n  <div class='boxMiddleLeft'></div>"
+    yield
+    concat "</div>\n<div class='boxBottom'>\n  <div class='boxLeft'></div>\n"
+    concat "  <div class='boxRight'></div>\n</div>"
+  end
+  
   # Insert the top elements of a rounded box
   def insert_rounded_box_top
     top =  "<div class='boxTop'>"
@@ -47,19 +59,28 @@ module StaticContentHelper
   </div>
     BOTTOM
   end
-  
-  # Inserts div structure for rounded box
-  # Pretty cooler rounded box helper with yield function! Usage makes our
-  # views simpler than before and only one method will be needed.
-  def insert_rounded_box
-    concat "<div class='boxTop'>\n  <div class='boxLeft'></div>"
-    concat "  <div class='boxRight'></div>\n</div>"
-    concat "<div class='boxMiddle'>\n  <div class='boxMiddleLeft'></div>"
-    yield
-    concat "</div>\n<div class='boxBottom'>\n  <div class='boxLeft'></div>\n"
-    concat "  <div class='boxRight'></div>\n</div>"
+
+  # Inserts illustrations as a link for the given array of paths.
+  def insert_illustrations(links)
+    concat "<div class='illustrationHolder'>"
+    concat   "<ul>"
+    links.each do |link|
+      parts = link.split('/')
+      item = parts[2] + '_' + parts[3] 
+      pic_resource = 'page/illustrations/' + item + '.png'
+      text_resource = 'static_content.' + item + '.title' 
+      list_item = "<li>"
+      list_item += image_tag(pic_resource)
+      list_item += "<h2>#{t(text_resource)}</h2>"
+      list_item += "</li>"
+      concat link_to_remote(list_item, {:url => link}, :href => link)
+    end
+    concat   "</ul>"
+    concat "</div>"
+    return
   end
   
+  # Insert back and next buttons according to the given paths.
   def insert_back_next_buttons(prev_link, next_link)
     back_button = "<div class='back'>#{t('general.back')}</div>"
     next_button = "<div class='next'>#{t('general.next')}</div>"
@@ -83,13 +104,10 @@ module StaticContentHelper
   end
   
   # Returns the image filename (on of off state) for a specific item.
-  # Workaround for name convention echo <-> echo_on_waves
   def insert_static_menu_image(item)
-    #action_parts = request[:action].split('_')
-    #action_parts[1].eql?('on') ? action = 'echo_on_waves' : action = action_parts[0]
     action = request[:action].split('_')[0]
     if (action.eql?(item))
-      'page/staticMenu/' + item + '_on2.png'
+      'page/staticMenu/' + item + '_on.png'
     else
       'page/staticMenu/' + item + '_off.png'
     end
@@ -159,21 +177,21 @@ module StaticContentHelper
   end
   
   # more/hide helper
-  def insert_toggle_more(text, hide_key='hide1')
-    insert_more_hide_buttons('general.' + hide_key)
+  def insert_toggle_more(text)
+    insert_more_hide_buttons()
     concat("<div style='display: none;'>")
       concat("#{text}")
     concat("</div>")
   end
   
-  def insert_more_hide_buttons(hide_key)
+  def insert_more_hide_buttons()
     # hide button
     concat("<span class='moreButton' style='display:none;' onclick=\"")
       concat("$(this).hide();")
       concat("Effect.Appear($(this).next(0), {duration:0.3});")
       concat("Effect.Fade($(this).next(1), {duration:0.4});")
       concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
-    concat("\">#{t(hide_key)}</span>")
+    concat("\">#{t('general.hide')}</span>")
     # more button
     concat("<span class='moreButton' onclick=\"")
       concat("$(this).hide();")
