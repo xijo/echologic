@@ -513,12 +513,32 @@ de:
     # Static content for imprint
     imprint:
       title: *imprint
-      text: Impressum
+      text: |
+        <p>
+        Dienstanbieter dieser Seite ist der <strong>echo source n.e.V</strong> (in Gründung) vertreten durch 
+        László Papp. Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
+        </p><p>
+        <strong>Ladungsfähige Anschrift</strong> gemäß TMG<br/>
+        László Papp<br/>
+        Pflugstr. 15<br/>
+        10115 Berlin<br/>
+        E-mail: team [att] echo-logic . org - (statt "att", bitte "@" eingeben)<br/>
+        </p><p>
+        <strong>Haftungshinweis</strong>:<br/>
+        Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt. 
+        Auf den Inhalt dieser Seiten haben wir keinen Einfluss; für den Inhalt ist ausschließlich der 
+        Betreiber der anderen Website verantwortlich. Trotz der Überprüfung der Inhalte im gesetzlich 
+        gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw. 
+        der verlinkten Seite ablehnen.
+        </p>
       
     # Static content for data privacy
     data_privacy:
       title: *data_privacy
-      text: Datenschutz
+      text: |
+        Wir freuen uns über Ihr Interesse an echologic.<br/>
+        Sie können hier unsere Datenschutzerklärung in PDF Format ansehen.
+      open_document: Dokument öffnen!
       
     join:
       title: &your_echo 'Ihr echo'
