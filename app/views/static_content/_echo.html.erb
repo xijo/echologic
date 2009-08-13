@@ -2,8 +2,7 @@
   <%= render :partial => 'tabs_echo' %>
 <% end %>
 
-<h1><%= t('.title') %></h1>
-<h4><%= t('.subtitle') %></h4>
+<% insert_breadcrumb(echo_path, echo_path) %>
 
 <h2><%= t('.why.title') %></h2>
 <%= t('.why.text') %>

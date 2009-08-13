@@ -60,11 +60,18 @@ module StaticContentHelper
     BOTTOM
   end
 
-  # Inserts the breadcrumb for the given main menu path and the actual sub menu
-  def insert_breadcrumb(link, sub_menu_title='.title')
-    main_menu_resource = 'static_content.' + link.split('/')[2] + '.title'
+  # Inserts the breadcrumb for the given main and sub menu point
+  def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title')
+    if main_link != sub_link
+      pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
+      image_tag(pic_resource, {:class => 'currentIllustration'})
+    else
+      sub_menu_title = '.subtitle'
+    end
+    
+    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
     main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
-    concat link_to_remote(main_menu, {:url => link}, :href => link)
+    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
     concat "<h4>#{t(sub_menu_title)}</h4>"
   end
 
