@@ -64,7 +64,7 @@ module StaticContentHelper
   def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title')
     if main_link != sub_link
       pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
-      image_tag(pic_resource, {:class => 'currentIllustration'})
+      concat image_tag(pic_resource, {:class => 'currentIllustration'})
     else
       sub_menu_title = '.subtitle'
     end

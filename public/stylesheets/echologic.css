@@ -417,7 +417,8 @@ strong {
 
 .currentIllustration {
   float:         right;
-  top:           30px;
+  height:        66px;
+  margin:        -4px 10px 0;
 }
 
 /* feedback */
