@@ -415,6 +415,11 @@ strong {
   border-bottom: 2px dotted #7ab031;
 }
 
+.currentIllustration {
+  float:         right;
+  top:           30px;
+}
+
 /* feedback */
 
 form .floating_field {

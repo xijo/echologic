@@ -2,8 +2,7 @@
   <%= render :partial => 'tabs_echonomy' %>
 <% end %>
 
-<h1><%= t('.title') %></h1>
-<h4><%= t('.subtitle') %></h4>
+<% insert_breadcrumb(echonomy_path, echonomy_path) %>
 
 <p><%= t('.text_top') %></p>
 
