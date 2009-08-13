@@ -583,19 +583,19 @@ de:
         </p><p>
         Ihr echo Team
         </p>
-
-  # Intereseted people resources      
-  interested_people:
-    title: Interessierte Menschen
-
-  # Feedback resources
-  feedback:
-    title: *feedback
-    welcome: |
-      <p>
-      <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
-      </p><p>
-      Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
-      Wenden Sie sich vertrauensvoll an uns!
-      </p> 
-    message: Nachricht
+  
+    # Intereseted people resources      
+    interested_people:
+      title: Interessierte Menschen
+  
+    # Feedback resources
+    feedback:
+      title: *feedback
+      welcome: |
+        <p>
+        <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
+        </p><p>
+        Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
+        Wenden Sie sich vertrauensvoll an uns!
+        </p> 
+      message: Nachricht

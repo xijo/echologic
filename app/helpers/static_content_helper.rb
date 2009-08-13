@@ -96,8 +96,8 @@ module StaticContentHelper
   
   # Insert back and next buttons according to the given paths.
   def insert_back_next_buttons(prev_link, next_link)
-    back_button = "<div class='back'>#{t('general.back')}</div>"
-    next_button = "<div class='next'>#{t('general.next')}</div>"
+    back_button = "<div id='previousPageButton' class='changePageButton'>#{t('general.back')}</div>"
+    next_button = "<div id='nextPageButton' class='changePageButton'>#{t('general.next')}</div>"
     concat "<div class='backNextHolder'>"
     concat link_to_remote(back_button, {:url => prev_link}, :href => prev_link)
     concat "<div class='separator'></div>"

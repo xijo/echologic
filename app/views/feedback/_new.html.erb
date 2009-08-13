@@ -5,20 +5,20 @@
 
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
-  <p>
-    <%= label_tag t('user_data.name'), nil, :class => 'formLabel' %><br/>
+  <div class="floating_field">
+    <%= label_tag t('user_data.name'), nil, :class => 'formLabel' %><br />
     <%= text_field_tag :name, 'Name' %>
-  </p>
+  </div>
   
-  <p>
-    <%= label_tag t('user_data.email'), nil, :class => 'formLabel' %><br/>
+  <div class="floating_field">
+    <%= label_tag t('user_data.email'), nil, :class => 'formLabel' %><br />
     <%= text_field_tag :sender, 'name@mail.com' %>
-  </p>
+  </div>
 
-  <p>
+  <div class="text_field">
     <%= label_tag t('feedback.message'), nil, :class => 'formLabel' %><br/>
     <%= text_area_tag :text, '...' %>
-  </p>
+  </div>
 
   <%= submit_tag 'Submit' %>
   

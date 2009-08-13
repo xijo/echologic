@@ -612,19 +612,18 @@ en:
         With the best wishes,
         </p><p>Your echo team
         </p>
-  
-  # Intereseted people resources      
-  interested_people:
-    title: Interested people
-      
-  # Feedback resources
-  feedback:
-    title: *feedback
-    welcome: |
-      <p>
-      <strong>We are happy to hear your opinion!</strong><br/>
-      </p><p>
-      Do not hesitate to ask questions, make comments and leave a criticism or kudos for us.
-      </p>
-    message: Your message
-    
+
+    # Intereseted people resources      
+    interested_people:
+      title: Interested people
+        
+    # Feedback resources
+    feedback:
+      title: *feedback
+      welcome: |
+        <p>
+        <strong>We are happy to hear your opinion!</strong><br/>
+        </p><p>
+        Do not hesitate to ask questions, make comments and leave a criticism or kudos for us.
+        </p>
+      message: Your message
