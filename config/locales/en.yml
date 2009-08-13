@@ -304,24 +304,6 @@ en:
         <br/><br/>
         On echo, the global agora, all participants are equal, <strong>free world citizens</strong>!
         
-      echocracy_more: |
-        <p>
-        Political decisions can be characterized by three different social dimensions:
-        </p><p>
-        <ol>
-          <li>They are based on a commonly recognized knowledge (common sense)</li>
-          <li>They are elaborated by decision makers.</li>
-          <li>They are legitimized by citizens democratically electing the decision makers.</li>
-        </ol>
-        </p><p>
-        Sadly, these three dimensions tend to be separated in time and space. 
-        Thus, decision makers deliberate with experts and scientists, but not with their citizens. 
-        Citizens, on the other hand, do not fully understand the background of political decisions 
-        and legitimize them only in advance by periodical elections – not by their vote in actual 
-        decision making processes. This lack of transparency results in a growing political 
-        resignation and a declining turnout of voters.
-        </p>
-
     echocracy_citizens:
       title: Citizens
       title_long: Enganged Citizens

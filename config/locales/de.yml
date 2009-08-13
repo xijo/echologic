@@ -40,7 +40,7 @@ de:
       
       ms1: echologic 
       ms2: | 
-        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel: Die Verwirklichung von
+        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
       ms3: | 
         echo - die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>!
 
@@ -293,23 +293,6 @@ de:
         <br/><br/>
         Auf echo, der globalen Agora, sind alle Beteiligten gleichberechtigte, <strong>freie Weltbürger</strong>!
         
-      echocracy_more: |
-        <p>
-        Politische Entscheidungen haben in der Regel drei gesellschaftliche Dimensionen: 
-        </p><p>
-        <ol>
-          <li>Sie beruhen auf einem gesellschaftlich anerkannten Wissensstand (common sense)</li>
-          <li>Sie werden von EntscheidungsträgerInnen ausgearbeitet.</li>
-          <li>Sie werden durch die demokratische Wahl der EntscheidungsträgerInnen durch die BürgerInnen legitimiert.</li>
-        </ol>
-        </p><p>
-        Leider sind diese drei Dimensionen der Entscheidungsfindung in der Regel zeitlich und räumlich voneinander getrennt. 
-        So beraten sich die Entscheidungsträger zwar mit den ExpertInnen und Wissenschaftlern, nicht aber mit ihren BürgerInnen. 
-        Die BürgerInnen wiederum kennen die Hintergründer nicht und legitimieren politische Entscheidungen nur im Voraus durch 
-        periodische Wahlen, nicht aber durch ihre diskursive Teilnahme während den Entscheidungsprozessen.
-        Die hieraus resultierende Intransparenz führt zu Politikverdrossenheit und mangelnder Wahlbeteiligung.
-        </p>
-
     echocracy_citizens:
       title: BürgerInnen
       title_long: Engagierte BürgerInnen
