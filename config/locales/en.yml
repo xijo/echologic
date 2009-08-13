@@ -2,18 +2,25 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+
+  # General purpose resources
   general:
     more: more » 
     hide: « okay
 
     next: Next
     back: Back
+    
+  # User data related resources
+  user_data:
+    name: Name
+    email: E-Mail
 
   # Localizations for the layout components
   layouts:
     top_menu:
       language: Language
-      feedback: Feedback
+      feedback: &feedback Feedback
       about: &about About
       logout: Logout
     login_container:
@@ -605,10 +612,19 @@ en:
         With the best wishes,
         </p><p>Your echo team
         </p>
-        
-    feedback:
-      new:
-        title: 'dritter'
-        
-    interested_people:
-      bla1: bla
+  
+  # Intereseted people resources      
+  interested_people:
+    title: Interested people
+      
+  # Feedback resources
+  feedback:
+    title: *feedback
+    welcome: |
+      <p>
+      <strong>We are happy to hear your opinion!</strong><br/>
+      </p><p>
+      Do not hesitate to ask questions, make comments and leave a criticism or kudos for us.
+      </p>
+    message: Your message
+    
