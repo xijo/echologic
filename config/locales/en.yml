@@ -108,9 +108,9 @@ en:
        
         text: |
           <p>
-          echo is the instrument for a new kind of <strong>participatory democracy</strong> facing these challenges. 
+          echo is the instrument for a <strong>new kind of participatory democracy</strong> facing these challenges. 
           Unlike <span title="{{tooltip1}}" class="ttLink">usual Web 2.0 applications</span>, echo provides 
-          a clearly structured <span title="{{tooltip2}}" class="ttLink">opinion base</span> and allows 
+          a <strong>clearly structured <span title="{{tooltip2}}" class="ttLink">opinion base</span></strong> and allows 
           for a solution-oriented social collaboration. It unites technical innovation and human scientific knowledge 
           into a unique concept. This helps people to better understand backgrounds and interrelations of topics, 
           jointly make sound decisions and turn them into reality. Accordingly, echo comes with three main functional 
@@ -375,7 +375,7 @@ en:
          
       adv2: Optimized infrastructure for internal collaboration
       adv2_details: |
-        <li>time and space independent intra- and trans-parliamentarian collaboration (e.g. national ↔ international fractions)</li>
+        <li>Time and space independent intra- and trans-parliamentarian collaboration (e.g. national ↔ international fractions)</li>
         <li>Effective and transparent decision making between different administrative levels (municipal ↔ state ↔ EU)</li>
        
       adv3: Convincing address to their voters
