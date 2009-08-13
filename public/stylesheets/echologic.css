@@ -62,8 +62,8 @@ strong {
 }
 
 #inviteBubble span:hover {
-  text-decoration: underline;
-  cursor:      pointer;
+/*  text-decoration: underline;*/
+  cursor:      default;
 }
 
 #loginContainer {
@@ -488,8 +488,25 @@ h4 {
 
 a {
   color:        #7bb031;
+  text-decoration: none;
+  cursor:       pointer;
 }
 
 .link {
   cursor:       pointer;
+}
+
+/* Form styles */
+
+.formLabel {
+  font-weight:  bold;
+  color:        #7bb031;
+}
+
+input, textarea {
+  color:        #21587f;
+}
+
+form input[type="text"] {
+  width:        300px;
 }

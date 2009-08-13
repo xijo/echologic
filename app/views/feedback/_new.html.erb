@@ -1,21 +1,23 @@
 <h1><%= t('static_content.echologic.title') %></h1>
-<h4>Feedback</h4>
+<h4><%= t('feedback.title') %></h4>
+
+<%= t('feedback.welcome') %>
 
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
   <p>
-    <%= label_tag :name %><br />
+    <%= label_tag t('user_data.name'), nil, :class => 'formLabel' %><br/>
     <%= text_field_tag :name, 'Name' %>
   </p>
   
   <p>
-    <%= label_tag :sender %><br />
+    <%= label_tag t('user_data.email'), nil, :class => 'formLabel' %><br/>
     <%= text_field_tag :sender, 'name@mail.com' %>
   </p>
 
   <p>
-    <%= label_tag :text %><br />
-    <%= text_area_tag :text, 'example' %>
+    <%= label_tag t('feedback.message'), nil, :class => 'formLabel' %><br/>
+    <%= text_area_tag :text, '...' %>
   </p>
 
   <%= submit_tag 'Submit' %>

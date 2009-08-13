@@ -2,19 +2,24 @@
 
 de:
 
-  # General resources
+  # General purpose resources
   general:
     more: mehr » 
     hide: « okay
 
     next: Weiter
     back: Zurück
+    
+  # User data related resources
+  user_data:
+    name: Name
+    email: E-Mail
 
   # Localizations for the layout components
   layouts:
     top_menu:
       language: Sprache
-      feedback: Feedback
+      feedback: &feedback Feedback
       about: &about Über uns
       logout: Logout
     login_container:
@@ -579,3 +584,18 @@ de:
         Ihr echo Team
         </p>
 
+  # Intereseted people resources      
+  interested_people:
+    title: Interessierte Menschen
+
+  # Feedback resources
+  feedback:
+    title: *feedback
+    welcome: |
+      <p>
+      <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
+      </p><p>
+      Hier können Sie Fragen stellen und Ihre Anmerkungen, Kritiken oder Lob gehör verschaffen.
+      Wenden Sie sich vertrauensvoll an uns!
+      </p> 
+    message: Nachricht

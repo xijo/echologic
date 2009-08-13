@@ -61,10 +61,12 @@ module StaticContentHelper
   end
 
   # Inserts the breadcrumb for the given main and sub menu point
-  def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title')
+  def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
     if main_link != sub_link
-      pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
-      concat image_tag(pic_resource, {:class => 'currentIllustration'})
+      if show_illustration 
+        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
+        concat image_tag(pic_resource, {:class => 'currentIllustration'})
+      end
     else
       sub_menu_title = '.subtitle'
     end
