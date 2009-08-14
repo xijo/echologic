@@ -599,6 +599,7 @@ de:
       Wenden Sie sich vertrauensvoll an uns!
       </p> 
     message: Nachricht
+    send: Nachricht senden
     
   date:
     formats:
