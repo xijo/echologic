@@ -65,7 +65,7 @@ module StaticContentHelper
     if main_link != sub_link
       if show_illustration 
         pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
-        concat image_tag(pic_resource, {:class => 'currentIllustration'})
+        concat image_tag(pic_resource, {:class => 'cornerIllustration'})
       end
     else
       sub_menu_title = '.subtitle'
