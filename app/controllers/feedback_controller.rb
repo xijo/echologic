@@ -10,9 +10,11 @@ class FeedbackController < ApplicationController
 
   # POST /feedback
   def create
-    Mailer.deliver_feedback(params)
-    respond_to do |format|
-      format.html { render :template => 'feedback/create', :layout => 'static' }
+    begin
+      Mailer.deliver_feedback(params)
+      redirect_to(echologic_path)
+    rescue
+      
     end
   end
   
