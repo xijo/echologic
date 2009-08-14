@@ -15,16 +15,16 @@ module ApplicationHelper
   
   # Builds the Google Analytics Tracker Code and stores it in a class variable.
   def build_google_analytics_tracker_code
-    concat "<script type=\"text/javascript\">"
-    concat "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");"
-    concat "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));"
-    concat "</script>"
-    concat "<script type=\"text/javascript\">"
-    concat "try{"
-    concat "var pageTracker = _gat._getTracker(\"UA-10224442-1\");"
-    concat "pageTracker._trackPageview();"
-    concat "} catch(err) {}"
-    concat "</script>"
+    @google_analytics_tracker_code = "<script type=\"text/javascript\">"
+    @google_analytics_tracker_code += "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");"
+    @google_analytics_tracker_code +=  "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));"
+    @google_analytics_tracker_code +=  "</script>"
+    @google_analytics_tracker_code +=  "<script type=\"text/javascript\">"
+    @google_analytics_tracker_code +=  "try{"
+    @google_analytics_tracker_code +=  "var pageTracker = _gat._getTracker(\"UA-10224442-1\");"
+    @google_analytics_tracker_code +=  "pageTracker._trackPageview();"
+    @google_analytics_tracker_code +=  "} catch(err) {}"
+    @google_analytics_tracker_code +=  "</script>"
   end
 
 end
