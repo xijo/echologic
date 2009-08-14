@@ -163,6 +163,7 @@ strong {
 #missionStatementHolder {
   position:    absolute;
   top:		   0px;
+  left:        -5px;
   width: 	   580px;
   text-align:  center;
   color:       #FFF;
