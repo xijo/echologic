@@ -32,6 +32,6 @@ page.replace 'staticMenu', :partial => "layouts/menu"
 
 page.visual_effect :appear, 'staticContent', :duration => 0.3
 
-#page << "alert('" + menu_item + submenu_item + "')"
+page << "alert('/" + menu_item + submenu_item.sub('_', '/') + "')"
 page << "pageTracker._trackPageview('" + menu_item + submenu_item + "');"
  
