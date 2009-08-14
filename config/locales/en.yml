@@ -3,6 +3,8 @@
 
 en:
 
+  title: echologic - for echo, the global agora
+
   # General purpose resources
   general:
     more: more » 
@@ -185,7 +187,7 @@ en:
         moderators or any users with privileged roles. This ensures that all participants have an equal 
         voice in the whole discussion process of echo.
         
-      glocal: Glocal Overview
+      glocal: Glocal overview
       glocal_more: |
         echo helps people to easily comprehend thematic interrelations between local, regional and global topics.
         <br/><br/>
