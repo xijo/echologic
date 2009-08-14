@@ -184,7 +184,7 @@ module StaticContentHelper
       html = "<span class='newsDate'>#{l(result['status']['created_at'].to_date, :format => :long)}</span><br/>"
       html += "<span class='newsText'>#{result['status']['text']}</span>"
     rescue SocketError
-      'twitter connection failed'
+      'twitter connection failed although all this magic stuff!'
     rescue
       '"Tweet! Tweet! :-)"'
     end
