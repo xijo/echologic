@@ -209,7 +209,7 @@ de:
       list: &competences |
         <li>BürgerInnen und Betroffene (Bedürfniskompetenz)</li>
         <li>ExpertInnen und WissenschaftlerInnen (Fachkompetenz)</li>
-        <li>PolitikerInnen und RepräsentantInnen (Entscheidungskompetenz)</li>
+        <li>PolitikerInnen und andere RepräsentantInnen (Entscheidungskompetenz)</li>
         <li>Nichtstaatliche und staatliche  Organisationen (Mobilisierungspotenzial)</li>
         
       text_bottom: |
@@ -294,9 +294,9 @@ de:
       
       text_bottom:
         Akteure dieser Kompetenzbereiche treten auf echo in einen <strong>gleichberechtigten Dialog</strong>. 
-        Dies schafft nicht nur <strong>vollständige Transparenz</strong> über den gesamten Meinungsbildung- und Entscheidungsfindungsprozess. 
-        echo bietet dadurch Ihnen und anderen Menschen die einzigartige Möglichkeit, 
-        gemeinsam bei der Gestaltung unserer Welt aktiv mitzuwirken.
+        Dies schafft nicht nur <strong>vollständige Transparenz</strong> über den gesamten Meinungsbildung- 
+        und Entscheidungsfindungsprozess. echo bietet dadurch Ihnen und anderen Menschen <strong>einzigartige Möglichkeiten</strong>, 
+        bei der gemeinsamen Gestaltung unserer Welt aktiv mitzuwirken.
         <br/><br/>
         Auf echo, der globalen Agora, sind alle Beteiligten gleichberechtigte, <strong>freie Weltbürger</strong>!
         
