@@ -31,7 +31,7 @@
     <div id="missionStatementContainer">
       <% insert_rounded_box do %>
         <div id="missionStatement" class="boxContent">
-          <div id="yuccaHotspot" class="ttLink" title="<%= t('static_content.echologic.yucca') %>">Yucca</div>
+          <div id="yuccaHotspot" class="ttLink" title="<%= t('static_content.echologic.yucca') %>"></div>
           <%= image_tag 'page/echologic_mission.jpg' %>
 		  <div id="missionStatementHolder">
 		  	<span class="ms_echologic"><%= t('static_content.echologic.ms1') %></span>
@@ -76,8 +76,6 @@
     
   <p style="color: green"><%= flash[:notice] %></p>
   
-  
-  <!-- insert_google_analytics_tracker_code in ApplicationHelper-->
   
   <%= insert_google_analytics_tracker_code %>
 
