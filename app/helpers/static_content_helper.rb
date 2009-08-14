@@ -179,7 +179,7 @@ module StaticContentHelper
     begin
       require 'open-uri'
       require 'json'
-      buffer = open("http://twitter.com/users/show/xijo.json").read
+      buffer = open("http://twitter.com/users/show/echologic.json").read
       result = JSON.parse(buffer)
       html = "<span class='newsDate'>#{l(result['status']['created_at'].to_date, :format => :long)}</span><br/>"
       html += "<span class='newsText'>#{result['status']['text']}</span>"
