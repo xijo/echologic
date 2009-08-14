@@ -40,15 +40,21 @@ class InvitedPeopleController < ApplicationController
     @invited_person = InvitedPerson.new(:name => params[:name], 
                                         :email => params[:email],
                                         :interested_person_id => params[:interested_person_id])
-    @invited_person.save
-    begin
-      Mailer.deliver_invitation(@invited_person)
-    rescue SocketError
+    if @invited_person.save
+      begin
+        Mailer.deliver_invitation(@invited_person)
+      rescue SocketError
       
+      rescue
+      
+      end
+      respond_to do |format|
+        format.html { render :partial => 'invited_person', :locals => { :invited_person => @invited_person } }
+      end
+    else
+      format.html { render :text => "error occured!" }
     end
-    respond_to do |format|
-      format.html { render :partial => 'invited_person', :locals => { :invited_person => @invited_person } }
-    end
+
   end
 
   # GET /invited_people/1/edit
