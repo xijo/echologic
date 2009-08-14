@@ -162,8 +162,8 @@ strong {
 
 #missionStatementHolder {
   position:    absolute;
-  top:		     0px;
-  width:   	   580px;
+  top:		   0px;
+  width: 	   580px;
   text-align:  center;
   color:       #FFF;
   cursor:      default;
@@ -410,7 +410,7 @@ strong {
   border-bottom: 2px dotted #7ab031;
 }
 
-.currentIllustration {
+.cornerIllustration {
   float:         right;
   height:        66px;
   margin:        -4px 10px 0;
@@ -443,7 +443,6 @@ form textarea {
 
 #invitedListHolder {
   border:      1px solid green;
-  -moz-border-radius: 5px;
   background:  #F4F7E6;
   padding: 5px;
   margin: 0 0 15px 0;
@@ -454,7 +453,6 @@ form textarea {
 
 #errorExplanation {
   border:      1px solid red;
-  -moz-border-radius: 5px;
   background:  #F4F7E6;
   padding: 5px;
   margin: 0 0 15px 0;
@@ -537,4 +535,23 @@ input, textarea {
 
 form input[type="text"] {
   width:        300px;
+}
+
+.formButton200 {
+  border:       none;
+  background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;
+  height:       43px;
+  width:        200px;
+  display:      inline-block;
+  font-size:    1.0em;
+  font-weight:  bold;
+  color:        #21587f;
+  text-align:   center;
+  margin:       0;
+  padding:      0 0 4px 20px;
+  overflow:     hidden;
+}
+
+.formButton200:hover {
+  background-position: 0 -43px;
 }
