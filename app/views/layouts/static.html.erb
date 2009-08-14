@@ -13,7 +13,6 @@
     <%= javascript_include_tag 'showdown' %>
     <%= javascript_include_tag 'tooltips' %>
     <%= javascript_include_tag 'wmd' %>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/gif" />    
   </head>
   <body>
 
@@ -47,7 +46,7 @@
       <% insert_rounded_box do %>
         <div id="news" class="boxContent">
 		  <div id="twitterBird" class="ttLink" title="<%= t('static_content.echologic.twitter') %>">
-		    <%= link_to (image_tag('page/echologic_twitter.png'), "http://www.twitter.com/echologic", {:target => "_blank" }) %>
+		    <%= link_to(image_tag('page/echologic_twitter.png'), "http://www.twitter.com/echologic", {:target => "_blank" }) %>
 	      </div>
 		  <div id="newsHolder">
 		    <div class="newsTitle"><%= t('static_content.echologic.news_title') %></div>
@@ -77,5 +76,18 @@
     
   <p style="color: green"><%= flash[:notice] %></p>
   
+  
+  # Google analytics code to track traffic on echologic   
+  <!--<%= insert_google_analytics_tracker_code %>-->
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-10224442-1");
+      pageTracker._trackPageview();
+     } catch(err) {}
+  </script>
   </body>
 </html>
