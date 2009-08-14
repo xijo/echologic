@@ -39,7 +39,3 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :en
 end
-
-# set up google_services, espiacally analytics, plugin:
-# http://github.com/djanowski/google_services/tree/master
-Google::Analytics.track 'UA-10224442-1'
