@@ -192,8 +192,8 @@ en:
         <u>For example:</u> Prices at the supermarket in the neighbourhood => factory farming in the EU => deforestation for soy-plantation => world climate change.
         <br/><br/>
         This “glocal” overview enables users to see local issues in their global context and to understand global 
-        problems as a result of local circumstances. People, who visit echo because of a very local topic of 
-        personal interest (prices in the supermarket), are quickly confronted with its global implications (climate change).
+        problems as a result of <strong>local circumstances</strong>. People, who visit echo because of a very local topic of 
+        personal interest (prices in the supermarket), are quickly confronted with its <strong>global implications</strong> (climate change).
     
     echo_connect:
       title: Connect
