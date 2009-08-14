@@ -617,13 +617,13 @@ en:
     interested_people:
       title: Interested people
         
-    # Feedback resources
-    feedback:
-      title: *feedback
-      welcome: |
-        <p>
-        <strong>We are happy to hear your opinion!</strong><br/>
-        </p><p>
-        Do not hesitate to ask questions, make comments and leave a criticism or kudos for us.
-        </p>
-      message: Your message
+  # Feedback resources
+  feedback_locale:
+    title: *feedback
+    welcome: |
+      <p>
+      <strong>We are happy to hear your opinion!</strong><br/>
+      </p><p>
+      Do not hesitate to ask questions, make comments and leave a criticism or kudos for us.
+      </p>
+    message: Your message

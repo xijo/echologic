@@ -1,7 +1,7 @@
 <%= link_to_remote("<h1 class='link'>#{t('static_content.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
-<h4><%= t('feedback.title') %></h4>
+<h4><%= t('feedback_locale.title') %></h4>
 
-<%= t('feedback.welcome') %>
+<%= t('feedback_locale.welcome') %>
 
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
@@ -16,7 +16,7 @@
   </div>
 
   <div class="text_field">
-    <%= label_tag t('feedback.message'), nil, :class => 'formLabel' %><br/>
+    <%= label_tag t('feedback_locale.message'), nil, :class => 'formLabel' %><br/>
     <%= text_area_tag :text, '...' %>
   </div>
 
