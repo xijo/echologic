@@ -8,17 +8,24 @@
 
 <ul class="benefitList">
   <li>
-  	<%= t('.adv1') %>
+  	<strong><%= t('.adv1') %></strong>
+	<% insert_toggle_more('<ul>' + t('.adv1_details') + '</ul>') %>
   </li>
   
   <li>
-  	<%= t('.adv2') %>
+  	<strong><%= t('.adv2') %></strong>
 	<% insert_toggle_more('<ul>' + t('.adv2_details') + '</ul>') %>
   </li>
   
   <li>
-  	<%= t('.adv34') %>
+  	<strong><%= t('.adv3') %></strong>
+	<% insert_toggle_more('<ul>' + t('.adv3_details') + '</ul>') %>
   </li>	
+  
+  <li>
+  	<strong><%= t('.adv4') %></strong>
+	<% insert_toggle_more('<ul>' + t('.adv4_details') + '</ul>') %>
+  </li>  
 </ul>
 
 <% insert_back_next_buttons(echocracy_path, echocracy_scientists_path) %>
