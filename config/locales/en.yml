@@ -404,6 +404,7 @@ en:
        
       adv3: Convincing address to voters
       adv3_details: |
+        <li>Reaching millions of politically mature citizens directly</li>
         <li>Easily comprehendible presentation of own proposals and arguments</li>
         <li>Clear comparison of different manifestos and own vs. alternative positions on specific topics.</li>
        
@@ -523,8 +524,8 @@ en:
         <p>
         echo is designed to be a <strong>self-organizing system</strong>. Its innovative decision making 
         method is perfectly apt for decisions concerning its own rules and functions.  In this way all 
-        users can participate increasingly in the evolution of echo, resulting in a stable 
-        self-administration at the end of this process.
+        users can participate increasingly in the evolution of echo, resulting in a <strong>stable 
+        self-administration</strong> at the end of this process.
         </p><p>
         As echo is an instrument of democratic decision making, maintaining 
         <strong>political and financial independence</strong> is of vital importance. 
