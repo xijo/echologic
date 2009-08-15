@@ -98,8 +98,8 @@ de:
         
         text:
           <p>
-          Die Welt ist im Umbruch. Die Menschheit sieht sich mit ökologischen, ökonomischen und humanitären Problemen von bisher 
-          unbekannetem Ausmaß konfrontiert. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. Intransparente Entscheidungen 
+          Die Welt ist im Umbruch. Die Menschheit sieht sich ökologischen, ökonomischen und humanitären Herausforderungen von bisher 
+          unbekannetem Ausmaß entgegen. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. Intransparente Entscheidungen 
           rufen ein wachsendes Gefühl der <strong>Machtlosigkeit</strong> und <strong>politischen Resignation</strong> in der 
           Bevölkerung hervor und schwächen den Glauben an die heutigen Demokratien. Rufe nach mehr <strong>Transparenz</strong> und 
           <strong>Mitspracherecht</strong> werden immer lauter.<br/> 
@@ -121,9 +121,9 @@ de:
           echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt. 
           Anders als auf <span href="#" title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf 
           echo ein <strong>übersichtliches Meinungsbild</strong> und können <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten. 
-          Dazu vereint echo technische Innovation und wissenschaftliches Know-How in einem einzigartigen Konzept. 
+          Dazu vereint echo technische Innovation und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept. 
           Dieses hilft den Menschen Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu 
-          fällen und wirksam umzusetzen. Dementsprechend stellt echo drei Funktionsbereiche zur Verfügung: 
+          fällen und wirksam umzusetzen. Dementsprechend stellt echo Ihnen drei Funktionsbereiche zur Verfügung: 
           <strong>Diskutieren – Vernetzen – Handeln!</strong> 
           </p><p>
           Durch die Kombination dieser drei Funktionsbereiche, schafft echo einen völlig neuartigen virtuellen Raum 
@@ -152,8 +152,8 @@ de:
         Diskutieren Sie mit! Überzeugen Sie Anderen von Ihrer Position!
         </p><p>
         Der Diskussionsbereich von echo ermöglicht erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem 
-        demokratischen öffentlichen Diskurs mit beliebig vielen Teilnehmern. Die <strong>neuartige Diskussionsmethode</strong> von 
-        echo vereint hierfür mehrere entscheidende Innovationen:
+        demokratischen öffentlichen Diskurs mit beliebig vielen Teilnehmern. Seine <strong>neuartige Diskussionsmethode</strong> 
+        vereint hierfür mehrere entscheidende Innovationen:
         <p> 
 
       clarity: Übersichtlichkeit
@@ -318,7 +318,8 @@ de:
         Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen Entscheidungsprozessen und zivilgesellschaftlichen 
         Aktionen sind das Hauptanliegen von echo. Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich 
         verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher 
-        <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen neuen Möglichkeiten:
+        <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen 
+        neuartigen Möglichkeiten:
         </p>
       
       adv1: | 
@@ -328,7 +329,7 @@ de:
       adv2_details: |
         <li>Direkte Beteiligung an Entscheidungsfindung</li>
         <li>Überzeugung Anderer für den eigenen Standpunkt</li>
-        <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
+        <li>Schnelles Zusammenfinden mit MitstreiterInnen</li>
         <li>Einfache Organisation und Unterstützung realer Aktionen</li>
       adv34: |
         <li><strong>Gestärktes „Wir-Gefühl“</strong> durch gemeinsamen, direkten Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li>
@@ -389,6 +390,7 @@ de:
        
       adv3: Überzeugende Ansprache der WählerInnen
       adv3_details: |
+        <li>Direkter Zugang zu Millionen von mündigen BürgerInnen</li>
         <li>Leicht nachvollziehbare Darstellung eigener Positionen, Argumente und Vorhaben</li>
         <li>Übersichtliche Gegenüberstellung von Wahlprogrammen und themenspezifischen Positionen zu jeweils anderen Standpunkten.</li>
        
@@ -401,7 +403,7 @@ de:
         Nichtstaatliche und staatliche Organisationen (NRO, Bürgerinitiativen, politische Parteien, Gewerkschaften, 
         Städte und Kommunen) stehen heute schon im Fokus des gesellschaftlichen und politischen Geschehens und sind 
         daher <strong>unentbehrliche Akteure</strong> auf echo. Sie sind Meinungsbildner, sie planen Kampagnen und Aktionen und 
-        versuchen die Menschen für ihre Anliegen zu mobilisieren. echo bietet Organisationen mehrere 
+        versuchen die Menschen für ihre Anliegen zu mobilisieren. echo bietet Organisationen zahlreiche 
         <strong>einzigartige Möglichkeiten</strong>, um ihre Ziele erfolgreich zu erreichen:
         </p>
 
@@ -416,7 +418,7 @@ de:
         
       adv3: Mobilisierung von MitstreiterInnen
       adv3_details: |
-        <li>Leichte Ansprache von Millionen mündiger, engagierter BürgerInnen</li>
+        <li>Leichte Ansprache von Millionen engagierter BürgerInnen</li>
         <li>Nachvollziehbare Darstellung ihrer Ansichten und Argumentationen</li>
         <li>Virale Verbreitung eigener Kampagnen und Aktionen</li>
         
@@ -486,9 +488,10 @@ de:
         <p>
         Neben kostenneutralem und direktem Spenden, verfolgt echo mehrere Geschäftsmodellen, durch die <strong>signifikante 
         Einnahmen</strong> über kommerzielle Anwender der Plattform erwirtschaftet werden. Alle hierdurch entstehenden 
-        Überschüsse werden dabei vollständig an die <strong>Echonomy Stiftung</strong> weitergeleitet und damit vollständige 
-        Transparenz gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet, förderungswürdige Projekte, 
-        entsprechend <strong>demokratischer Entscheidungen</strong> der Nutzerschaft von echo, finanziell zu unterstützen.
+        Überschüsse werden dabei vollständig an die <strong>Echonomy Stiftung</strong> weitergeleitet, welche vollständige 
+        Transparenz über die Finanzen von echo gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet, 
+        innovative Projekte, entsprechend <strong>demokratischer Entscheidungen</strong> der Nutzerschaft von echo, 
+        finanziell zu unterstützen.
         </p><p>
         Indem echo den Menschen eine einfache und kostenneutrale Möglichkeit zur <strong>Finanzierung von umfangreichen 
         Gemeinschaftsprojekten</strong> bietet, kann ihr virtuelles Engagement unsere Welt nachhaltig verändern.
@@ -503,7 +506,7 @@ de:
         ist für Entscheidungen über seine eigenen Regeln und Funktionen optimal geeignet. 
         So können die NutzerInnen über Diskussionen und Abstimmungen schrittweise immer stärker 
         in die Entwicklung von echo mit einbezogen werden, bis sich aus diesem Prozess 
-        eine stabile Selbstverwaltung entwickelt.
+        eine <strong>stabile Selbstverwaltung</strong> entwickelt.
         </p><p>
         Als Instrument zur Unterstützung demokratischer Entscheidungsprozesse, ist für echo die 
         Wahrung <strong>politischer und wirtschaftlicher Unabhängigkeit</strong> oberstes Gebot. 
