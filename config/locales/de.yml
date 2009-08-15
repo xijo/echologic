@@ -120,7 +120,8 @@ de:
           <p>
           echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt. 
           Anders als auf <span href="#" title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf 
-          echo ein <strong>übersichtliches Meinungsbild</strong> und können <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten. 
+          echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbasis</span></strong> und können 
+          <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten. 
           Dazu vereint echo technische Innovation und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept. 
           Dieses hilft den Menschen Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu 
           fällen und wirksam umzusetzen. Dementsprechend stellt echo Ihnen drei Funktionsbereiche zur Verfügung: 
@@ -141,7 +142,9 @@ de:
           einiger weniger Administratoren gelegt wird – was komplett undemokratisch ist.
           
         tooltip2: |
-          void
+          Analog zur Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten, 
+          soll echo die umfangreichste Meinungsbasis für subjektive Meinungen werden und konstruktive Diskussionen 
+          über die bestehenden Positionen und Themen anregen. 
           
     echo_discuss:
       title: Diskutieren
