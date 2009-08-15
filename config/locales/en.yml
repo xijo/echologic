@@ -67,8 +67,10 @@ en:
         the end of powerlessness!&nbsp;&nbsp;&nbsp;&nbsp;<br/>the beginning of self-determination! 
         
       teaser: |
+        <p>
         echo is an Internet project of a special kind. We seek nothing less than to establish a 
         <strong>new kind of participatory democracy</strong> on the very local, as well as on the regional and global level.
+        </p>
       
       teaser_more:
         <p>
@@ -97,15 +99,15 @@ en:
         title: Why do we need echo?
         
         text: |
+          <p>
           The world is changing. Today humanity is facing some serious environmental, economic and humanitarian 
-          challenges never seen before. However, satisfactory solutions are not in sight. 
-          
-        text_more: | 
-          The lack of transparency in political decision making provokes a growing sense of <strong>powerlessness</strong> and 
+          challenges never seen before. However, satisfactory solutions are not in sight. The lack of transparency 
+          in political decision making provokes a growing sense of <strong>powerlessness</strong> and 
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
           Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.<br/>
           New ways have to be found, empowering people to develop <strong>constructive solutions</strong> to effectively tackle 
           our <span title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
+          </p> 
           
         tooltip: |
           Our ecological, economical and humanitarian challenges at local and global level are tightly 
@@ -217,9 +219,11 @@ en:
         <li>Non-governmental and governmental organizations (with mobilization potential)</li>
         
       text_bottom: |
+        <p>
         echo actively motivates dialogue and collaboration between these groups. By incorporating the needs und 
         competences of these segments of society, echo enables people to jointly identify issues of common 
         interest and <strong>develop the best possible solutions</strong> to these issues.
+        </p>
 
     echo_act:
       title: Act
@@ -244,9 +248,11 @@ en:
         a day nursery in the neighborhood or a European day of bicycling).</li>
 
       text_middle: |
+        <p>
         echo's  action area bridges the gap between virtual discussions and real-world actions. 
         By linking these actions to existing <strong>legislative instruments</strong>, 
         echo turns, for the first time, civil engagement into true <strong>political participation</strong>.
+        </p>
         
       act_more: |
         <p>
@@ -287,6 +293,7 @@ en:
         development of one of the most ambitious <strong>open source</strong> projects ever:
         </p><p>
         The creation of a <strong>global agora</strong>!
+        </p>
              
     # Static content for the echocracy main menu point
     echocracy:
@@ -306,22 +313,26 @@ en:
       list: *competences
       
       text_bottom: |
+        <p>
         On echo, actors from these competence groups all engage in an <strong>equal dialogue</strong>. 
         This not only ensures <strong>total transparency</strong> throughout the whole decision making process, 
         it also enables echo to offer all its actors a unique <strong>new means of contribution</strong> 
         to the shaping of our common world.
-        <br/><br/>
+        </p><p>
         On echo, the global agora, all participants are equal, <strong>free world citizens</strong>!
+        </p>
         
     echocracy_citizens:
       title: Citizens
       title_long: Enganged Citizens
       
       text_top: |
+        <p>
         A vivid participation in decision making and civil engagement in all countries is 
         echo's main objective. Engaged citizens already actively campaigning for a peaceful, 
         equitable and sustainable future are therefore the <strong>most important actors</strong> on 
         echo and can <strong>especially benefit</strong> from the new possibilities it offers:
+        </p>
       
       adv1: |
         <strong>Informative overview</strong> of the current public opinion of different social groups and regions
@@ -341,10 +352,12 @@ en:
       title_long: Experts & Scientists
       
       text_top: |
+        <p>
         With their professional know-how, experts and scientists can make significant contributions to the 
         quality of discussions and to the development of adequate solution proposals.  
         For this reason, they are <strong>vitally important actors</strong> on echo and can benefit 
         from its <strong>new opportunities</strong> in several ways:
+        <p>
         
       adv1: Improved scientific discourse
       adv1_details: |
@@ -367,6 +380,7 @@ en:
       title: Politicians
       title_long: Politicians & Representatives
       text_top: |
+        <p>
         Political and economic decision makers carry the largest social responsibility. 
         They must decide what best serves the common good and negotiate feasible solutions 
         with all stakeholders. Therefore, their participation in discussions on echo is of 
@@ -376,6 +390,7 @@ en:
         the citizen´s needs are basic prerequisits for their success. 
         echo offers <strong>unique opportunities</strong> to politicians and other representatives 
         to significantly increase the effectivity of their work:
+        <p>
         
       adv1: Detailed opinion base
       adv1_details: |
@@ -397,12 +412,14 @@ en:
       title_long: Non-governmental & Governmental Organisations 
       
       text_top: |
+        <p>
         Non-governmental and governmental organizations (NGOs, citizens´ initiatives, political parties, 
         trade unions, cities and municipalities) are already in the focus of society and politics and 
         are therefore <strong>indispensable actors</strong> on echo. They are opinion leaders, they plan 
         actions and campaigns and seek to mobilize a broad range of supporters for them. 
         echo provides organisations with <strong>unique opportunities</strong> helping them to 
         successfully accomplish their goals:
+        </p>
         
       adv1: Optimized internal collaboration
       adv1_details: |
@@ -443,10 +460,12 @@ en:
         <li><strong>Participation</strong> instead of dependence (democratic)</li>
 
       text_bottom: |
+        <p>
         echo´s corporate philosophy reflects these values in several ways and aims to be a 
         model for a new kind of corporate culture. Its innovative solutions also seek to 
         foster socially and ecologically sustainable business management and a 
         <strong>democratization of existing corporate and economic structures</strong>.
+        </p>
 
     echonomy_your_profit:
       title: Your-Profit
@@ -506,7 +525,7 @@ en:
         method is perfectly apt for decisions concerning its own rules and functions.  In this way all 
         users can participate increasingly in the evolution of echo, resulting in a stable 
         self-administration at the end of this process.
-        <br/>
+        </p><p>
         As echo is an instrument of democratic decision making, maintaining 
         <strong>political and financial independence</strong> is of vital importance. 
         In order to ensure such independence in the long term, echo will gradually be 
@@ -568,8 +587,10 @@ en:
     data_privacy:
       title: *data_privacy
       text: |
+        <p>
         We are happy to note your interest on echologic.<br/>
         Currently, our data privacy statement is only available as a PDF document in German.
+        </p>
       open_document: Check out the document anyway!
       
     join:
@@ -612,7 +633,8 @@ en:
         or contact us at team@echo-logic.org.
         </p><p>
         With the best wishes,
-        </p><p>Your echo team
+        </p><p>
+        Your echo team
         </p>
 
     # Intereseted people resources      

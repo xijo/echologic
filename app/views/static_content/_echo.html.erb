@@ -5,9 +5,9 @@
 <% insert_breadcrumb(echo_path, echo_path) %>
 
 <h2><%= t('.why.title') %></h2>
-<%= t('.why.text') %>
-<%= t('.why.text_more', :tooltip => t('.why.tooltip')) %>
-<!--<% insert_toggle_more(t('.why.text_more', :tooltip => t('.why.tooltip'))) %>-->
+<%= t('.why.text', :tooltip => t('.why.tooltip')) %>
+<!--<%= t('.why.text_more', :tooltip => t('.why.tooltip')) %>
+<% insert_toggle_more(t('.why.text_more', :tooltip => t('.why.tooltip'))) %>-->
 
 <h2><%= t('.what.title') %></h2>
 <%= t('.what.text', :tooltip1 => t('.what.tooltip1'), :tooltip2 => t('.what.tooltip2')) %>
