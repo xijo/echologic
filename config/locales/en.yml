@@ -23,7 +23,7 @@ en:
     top_menu:
       language: Language
       feedback: &feedback Feedback
-      about: &about About
+      about: &about About us
       logout: Logout
     login_container:
       password: 'Password:'

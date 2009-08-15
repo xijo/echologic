@@ -1,16 +1,10 @@
 .tabContainer {
   height:       61px;
-/*
-  margin:       0 0 -23px 0;
-*/
   margin:       0 auto -17px auto;
   clear:        both;
-  z-index:      10;
-  overflow:     visible;
-/*  left:         100px;*/
-  position:     relative;
-  max-width:    900px;
+  width:        900px;
   text-align:   center;
+  z-index:      10;
 }
 
 .tabContainer a, .tabContainer a:visited {

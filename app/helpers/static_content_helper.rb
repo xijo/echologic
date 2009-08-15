@@ -64,7 +64,7 @@ module StaticContentHelper
   def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
     if main_link != sub_link
       if show_illustration 
-        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '.png'
+        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '_small.png'
         concat image_tag(pic_resource, {:class => 'cornerIllustration'})
       end
     else
