@@ -26,13 +26,14 @@ strong {
 }
 
 #header {
-  width:       970px;
+  width:       945px;
   margin:      0 auto;
+  padding:     0 23px;
 }
 
 #echologicLogo {
   float:       left;
-  margin:      23px 0 -10px 3px;
+  margin:      23px 0 -10px 0;
 }
 
 #echologicLogo img {
@@ -77,7 +78,7 @@ strong {
 
 #loginContainer .label {
   color:       #1A4864;
-  width:       114px;
+  width:       137px;
   display:     inline-block;
   margin:      15px 0 3px 0;
   padding:     0 7px;
@@ -87,11 +88,11 @@ strong {
 }
 
 #loginContainer .field {
-  width:       112px;
-  background:  transparent url(../images/page/loginfield.png) no-repeat;
+  width:       137px;
+  background:  transparent url(../images/page/login_field.png) no-repeat;
   border:      none;
   height:      19px;
-  padding:     1px 7px 1px 7px;
+  padding:     2px 7px 0px;
   font-size:   0.85em;
   color:       #1A4864;
 }
@@ -102,8 +103,11 @@ strong {
   border:      none;
   height:      19px;
   color:       #fff;
-  font-size:   0.65em;
+  font-size:   0.70em;
   font-weight: bold;
+  padding:      0 0 2px;
+  position:    relative;
+  top:         -1px;	 
 }
 
 #loginContainer .submit:hover {
@@ -111,27 +115,26 @@ strong {
 }
 
 #loginContainer .sublabel {
-  width:       114px;
+  width:       137px;
   display:     inline-block;
   margin:      3px 0;
   padding:     0 7px;
   font-size:   0.65em;
   cursor:      default;
+  display:     none;
 }
 
 #echologicContainer {
-  width:       970px;
-  min-width:   970px;
+  width:       945px;
   margin:      0 auto;
-  padding:     10px 23px 0 23px;
+  padding:     10px 23px;
   z-index:     5;
   position:    relative;
   clear:       both;
 }
 
 #missionStatementContainer {
-  width:       65%;
-  min-width:   540px;
+  width:       620px;
   clear:       both;
   float:       left;
   margin:      0 0 0 0;
@@ -150,7 +153,7 @@ strong {
 
 #missionStatement #yuccaHotspot {
   position:    absolute;
-  left:        540px;
+  left:        530px;
   top:         5px;
   width:       90px;
   height:      140px;
@@ -163,7 +166,7 @@ strong {
 #missionStatementHolder {
   position:    absolute;
   top:		   0px;
-  left:        -5px;
+  left:        -10px;
   width: 	   580px;
   text-align:  center;
   color:       #FFF;
@@ -190,8 +193,7 @@ strong {
 }
 
 #newsContainer {
-  width:       31%;
-  min-width:   200px;  
+  width:       285px;
   float:       right;
   margin:      0;  
 }
@@ -205,9 +207,9 @@ strong {
   cursor:      pointer;
 }
 
-#news img {
+#twitterBird img {
   position:    relative;
-  right:       -234px;
+  right:       -217px;
   top:         -14px;
   cursor:      pointer;
   z-index:     10;
@@ -217,7 +219,7 @@ strong {
 #newsHolder {
   position:    absolute;
   top:	  	   0px;
-  width: 	     295px;
+  width: 	   285px;
 }
 
 #newsHolder .newsTitle {
@@ -237,9 +239,9 @@ strong {
 }
 
 .mainBox {
-  width:       970px;
-  min-width:   970px;
+  width:       945px;
   margin:      0 auto;
+  padding:     0 23px;
 }
 
 #mainBoxContent {
@@ -249,7 +251,7 @@ strong {
 
 #staticContent {
   float:       left;
-  width:       630px;
+  width:       620px;
   padding:     2px 5px;
 }
 
@@ -288,11 +290,10 @@ strong {
   font-weight: bold;
   color:       #7bb031;
   position:    relative;
-  right:       8px;
-  bottom:      15px;
+  right:       12px;
+  bottom:      18px;
   text-align:  right;
-  line-height: 43px;
-  margin:      0 0 18px 0;
+  line-height: 45px;
   cursor:      default;
 }
 
@@ -413,7 +414,7 @@ strong {
 
 .cornerIllustration {
   float:         right;
-  height:        66px;
+  height:        68px;
   margin:        -4px 10px 0;
 }
 

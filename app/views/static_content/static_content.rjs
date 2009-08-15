@@ -1,5 +1,4 @@
 menu_item = local_assigns[:menu_item]
-
 submenu_item = local_assigns.include?(:submenu_item) ? '_'+local_assigns[:submenu_item] : ''
 
 page << "if ($('echologicContainer')) {"
@@ -21,17 +20,13 @@ page << "} else {"
   page << "if(!(navigator.userAgent.toLowerCase().indexOf('msie')>-1)) {"
     page.visual_effect :appear, 'tabContainer', :duration => 1.0
   page << "}"
-#  page.visual_effect :appear, 'tabContainer', :duration => 1.0
 page << "}"
 
+
 page.hide 'staticContent'
-
 page.replace_html 'staticContent', :partial => menu_item + submenu_item
-
 page.replace 'staticMenu', :partial => "layouts/menu"
-
 page.visual_effect :appear, 'staticContent', :duration => 0.3
 
 #page << "alert('/" + menu_item + submenu_item.sub('_', '/') + "')"
 page << "pageTracker._trackPageview('/" + menu_item + submenu_item.sub('_', '/') + "');"
- 
