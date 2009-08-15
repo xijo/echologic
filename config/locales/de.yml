@@ -322,18 +322,24 @@ de:
         neuartigen Möglichkeiten:
         </p>
       
-      adv1: | 
-        <strong>Informative Übersicht</strong> über die aktuelle öffentliche Meinung verschiedener Gesellschaftsgruppen und Regionen
-      adv2: | 
-        <strong>Selbstbestimmung</strong> des unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt
+      adv1: Informatives Meinungsbild
+      adv1_details: |
+        <li>Einfach auffindbare öffentliche Diskussionen in eigener Nachbarschaft, Region und der Welt</li>
+        <li>Leicht nachvollziehbare Positionen verschiedener Gesellschaftsgruppen und Regionen</li>
+      adv2: Selbstbestimmung 
       adv2_details: |
-        <li>Direkte Beteiligung an Entscheidungsfindung</li>
+        <li>Direkte Beteiligung an Entscheidungsfindung bezüglich Ihres unmittelbaren Lebensraums sowie der 
+        Zukunft unserer gemeinsamen Welt</li>
         <li>Überzeugung Anderer für den eigenen Standpunkt</li>
         <li>Schnelles Zusammenfinden mit MitstreiterInnen</li>
         <li>Einfache Organisation und Unterstützung realer Aktionen</li>
-      adv34: |
-        <li><strong>Gestärktes „Wir-Gefühl“</strong> durch gemeinsamen, direkten Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li>
-        <li><strong>Befreiung vom Gefühl der Machtlosigkeit</strong> durch spürbare Auswirkungen im eigenen Alltag.</li>
+      adv3: Gestärktes „Wir-Gefühl“
+      adv3_details: |
+        <li>Gemeinsamer, direkter Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li> 
+      adv4: Befreiung vom Gefühl der Machtlosigkeit
+      adv4_details: |
+        <li>Spürbare Erfolge im eigenen Alltag</li>
+        <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft.</li>
       
     echocracy_scientists:
       title: ExpertInnen
@@ -378,7 +384,7 @@ de:
         um die Effizienz ihre Arbeit wesentlich zu verbessern:
         </p>
         
-      adv1: Informatives Meinungsbild
+      adv1: Detailliertes Meinungsbild
       adv1_details: |
         <li>Klare Übersicht über die wichtigsten Bedürfnisse und Meinungen der WählerInnen</li>
         <li>Genaue Darstellung der Unterstützung bestimmter Positionen seitens unterschiedlicher gesellschaftlicher Gruppen und Regionen</li>
@@ -419,7 +425,7 @@ de:
       adv3: Mobilisierung von MitstreiterInnen
       adv3_details: |
         <li>Leichte Ansprache von Millionen engagierter BürgerInnen</li>
-        <li>Nachvollziehbare Darstellung ihrer Ansichten und Argumentationen</li>
+        <li>Nachvollziehbare Darstellung eigener Ansichten und Argumentationen</li>
         <li>Virale Verbreitung eigener Kampagnen und Aktionen</li>
         
       adv4: Steigende finanzielle Unterstützung

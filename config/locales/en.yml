@@ -334,18 +334,25 @@ en:
         echo and can <strong>especially benefit</strong> from the new possibilities it offers:
         </p>
       
-      adv1: |
-        <strong>Informative overview</strong> of the current public opinion of different social groups and regions
-      adv2: |
-        <strong>Self-determination</strong> of their very local living space and the future of our common world
+      adv1: Informative opinion base
+      adv1_details: |
+        <li>Effortless finding of public discussions in your neighbourhood, region and the world</li>
+        <li>Easily comprehensible positions of different social groups and regions</li>
+      adv2: Self-determination
       adv2_details: |
-        <li>Direct participation in decision making</li>
-        <li>Convincing others of their views</li>
-        <li>Rapid connection to like-minded people</li>
+        <li>Direct participation in decision making concerning your very local living space and the 
+        future of our common world</li>
+        <li>Convincing others of own views</li>
+        <li>Rapid connection with like-minded people</li>
         <li>Easy organization and support of real-world actions</li>
-      adv34: |
-        <li><strong>Strengthened “we“ feeling </strong> due to joint, direct contribution to sustainability and global justice</li>
-        <li><strong>Relief from a feeling of powerlessness</strong> through achievements visible in their everyday life.</li>
+      adv3: |
+        Strengthened “we“ feeling
+      adv3_details: |
+        <li>Joint, direct contribution to sustainability and global justice</li>
+      adv4: Relief from a feeling of powerlessness
+      adv4_details: |
+        <li>Achievements visible in your everyday life</li>
+        <li>Viral spreading and growing participation in society.</li>
       
     echocracy_scientists:
       title: Experts
@@ -374,7 +381,7 @@ en:
       adv3_details: |
         <li>Direct participation in decision making</li>
         <li>Raising awareness in the society for challenges of our times</li>
-        <li>Effective diffusion of scientific findings through easily comprehendible presentation of own positions and arguments.</li>
+        <li>Effective diffusion of scientific findings through easily comprehensible presentation of own positions and arguments.</li>
         
     echocracy_decision_makers:
       title: Politicians
@@ -386,7 +393,7 @@ en:
         with all stakeholders. Therefore, their participation in discussions on echo is of 
         essential importance. If their efforts are to result in sustainable improvements,  
         they need to <strong>win broad support from civil society</strong> for their proposals. 
-        Thus, a transparent presentation of their goals  and a deep understanding of 
+        Thus, a comprehensible presentation of their goals and a deep understanding of 
         the citizen´s needs are basic prerequisits for their success. 
         echo offers <strong>unique opportunities</strong> to politicians and other representatives 
         to significantly increase the effectivity of their work:
@@ -405,7 +412,7 @@ en:
       adv3: Convincing address to voters
       adv3_details: |
         <li>Reaching millions of politically mature citizens directly</li>
-        <li>Easily comprehendible presentation of own proposals and arguments</li>
+        <li>Easily comprehensible presentation of own proposals and arguments</li>
         <li>Clear comparison of different manifestos and own vs. alternative positions on specific topics.</li>
        
     echocracy_organisations:
@@ -434,7 +441,7 @@ en:
       adv3: Mobilization of supporters
       adv3_details: |
         <li>Reaching millions of engaged citizens easily</li>
-        <li>Comprehendible presentation of own views and arguments</li>
+        <li>Comprehensible presentation of own views and arguments</li>
         <li>Viral spreading of own campaigns and actions</li>
         
       adv4: Rising financial support
