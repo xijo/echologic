@@ -16,7 +16,7 @@
 #topMenuContainer a, #topMenuContainer a:visited {
   color:       #7691A2;
   font-family: arial,Helvetica,sans-serif;
-  padding:     5px 2px 0 15px;
+  margin:      5px 2px 0 15px;
   text-decoration:none;
   float:       right;
   font-size:   12px;
@@ -45,11 +45,12 @@
 }
 
 #languageSelector {
+  background:  transparent; 
   position:    absolute;
   top:         25px;
-  left:        160px;
-  text-align:  left;
-  width:       210px;
+  right:       -17px;
+  text-align:  right;
+  width:       200px;
 }
 
 #languageSelector, #languageSelector * {
@@ -57,7 +58,7 @@
 }
 
 #languageSelector li {
-  background: transparent url(../images/page/dropdown/middle.png) repeat-y;
+  background:  transparent url(../images/page/dropdown/middle.png) repeat-y;
   list-style-position: inside;
   margin:      0px;
 }
@@ -74,7 +75,7 @@
 
 #languageSelector a, #languageSelector a:visited {
   border-top:1px solid #efefef;
-  margin-left: 20px;
+  margin-right: 20px;
   padding: 4px 0;
   float: none;
   width: 160px;

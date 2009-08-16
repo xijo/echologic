@@ -58,7 +58,7 @@ en:
       
       ms1: echologic 
       ms2: | 
-        <font size="+2">is a network of free minds and<br/>organizations united to realize</font> 
+        <font size="+2">is a network of free minds <br/>and organizations united to realize</font> 
       ms3: | 
         echo - the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>!
 

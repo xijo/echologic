@@ -1,8 +1,8 @@
 <div id="topMenuContainer">
-  <%= link_to_function (t('.language') + image_tag ('page/dropdown/arrow.gif')) do |page| page[:languageSelector].visual_effect :appear, :duration => 0.3; page[:overlay].show; end %>
+  <%= link_to_function (t('.language') + image_tag ('page/dropdown/arrow.gif')) do |page| page[:languageSelector].show; page[:overlay].show; end %>
   <%= link_to_remote t('.about'), {:url => about_path}, :href => about_path %>
   <%= link_to_remote t('.feedback'), {:url => new_feedback_path, :method => :get}, :href => new_feedback_path %>
-  <%= link_to_function "<div id='overlay' style='display:none;'></div>" do |page| page[:languageSelector].visual_effect :fade, :duration => 0.3; page[:overlay].hide; end %>
+  <%= link_to_function "<div id='overlay' style='display:none;'></div>" do |page| page[:languageSelector].hide; page[:overlay].hide; end %>
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>
     <ul>

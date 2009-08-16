@@ -74,7 +74,7 @@ module StaticContentHelper
     main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
     main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
     concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
-    concat "<h4>#{t(sub_menu_title)}</h4>"
+    concat "<h2>#{t(sub_menu_title)}</h2>"
   end
 
   # Inserts illustrations as a link for the given array of paths.
@@ -112,8 +112,8 @@ module StaticContentHelper
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
     button =  image_tag insert_static_menu_image(item)
-    button += "<span class='h1'>#{t(title)}</span><br/>"
-    button += "<span class='h2'>#{t(subtitle)}</span>"
+    button += "<span class='menuTitle'>#{t(title)}</span><br/>"
+    button += "<span class='menuSubtitle'>#{t(subtitle)}</span>"
     link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
   end
   
@@ -186,7 +186,7 @@ module StaticContentHelper
     rescue SocketError
       'twitter connection failed although all this magic stuff!'
     rescue
-      '"Tweet! Tweet! :-)"'
+      "<span class='newsText'>" + '"Tweet! Tweet! :-)"' + '</span>'
     end
   end
   

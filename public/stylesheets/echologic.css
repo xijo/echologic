@@ -44,7 +44,7 @@
   color:       #fff;
   display:     block;
   font-family: Arial,Helvetica,sans-serif;
-  font-size:   1.2em;
+  font-size:   17px;
   font-weight: bolder;
   text-align:  center;
   height:      65px;
@@ -143,13 +143,12 @@
 }
 
 #missionStatement #yuccaHotspot {
+  background:  url(../images/page/yucca.jpg) no-repeat scroll;
   position:    absolute;
-  left:        530px;
-  top:         5px;
-  width:       90px;
-  height:      140px;
-  z-index:     10;
-  background:  transparent;
+  left:        533px;
+  top:         3px;
+  width:       81px;
+  height:      142px;
   cursor:      help;
   border:      none;
 }
@@ -157,25 +156,25 @@
 #missionStatementHolder {
   position:    absolute;
   top:		   0px;
-  left:        -10px;
-  width: 	   580px;
+  left:        -5px;
+  width: 	   570px;
   text-align:  center;
   color:       #FFF;
   cursor:      default;
 }
 
 #missionStatementHolder .ms_echologic {
-  font-size:   2.5em;
+  font-size:   35px;
   margin:      0 4px 10px 0;
 }
 
 #missionStatementHolder .ms_text {
-  font-size:   1.45em;
+  font-size:   20px;
   line-height: 44px;
 }
 
 #missionStatementHolder .ms_echo {
-  font-size:   2.7em;
+  font-size:   38px;
   color:       #7BB031;
 }
 
@@ -214,19 +213,19 @@
 }
 
 #newsHolder .newsTitle {
-  font-size:   1.2em;
+  font-size:   17px;
   font-weight: bold;
   margin:      2px 0 20px 0;
   cursor:      default;
 }
 
 #newsHolder .newsDate {
-  font-size:   1em;
+  font-size:   14px;
   font-weight: bold;
 }
 
 #newsHolder .newsText {
-  font-size:   1em;
+  font-size:   14px;
 }
 
 .mainBox {
@@ -268,7 +267,7 @@
 }
 
 #headerGlue {
-  font-size:   1.2em;
+  font-size:   17px;
   color:       #21587f;
   position:    relative;
   left:        17px;
@@ -277,7 +276,7 @@
 }
 
 #headerMessage {
-  font-size:   1.65em;
+  font-size:   23px;
   font-weight: bold;
   color:       #7bb031;
   position:    relative;
@@ -304,7 +303,7 @@
 }
 
 #echologicActionCall {
-  font-size:   1.65em;
+  font-size:   23px;
   font-weight: bold;
   color:       #21587f;
   line-height: 38px;
@@ -346,7 +345,7 @@
   height:       43px;
   width:        103px;
   display:      inline-block;
-  font-size:    1.0em;
+  font-size:    14px;
   font-weight:  bold;
   color:        #21587f;
   line-height:  43px;
@@ -382,8 +381,9 @@
 }
 
 .illustration h2 {
-  font-size:    1.3em;
+  font-size:    18px;
   font-weight:  bold !important;
+  color:        #21587f;
   margin:       0px;
   padding:      0px;
   border-bottom: 2px solid transparent;  
@@ -429,7 +429,7 @@
 }
 
 #errorExplanation h2 {
-  font-size:      1em;
+  font-size:      14px;
   font-weight:    bold;
   
 }
