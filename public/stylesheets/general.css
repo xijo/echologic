@@ -1,0 +1,63 @@
+/* Styles for body, headings and standard HTML elements. */
+
+body { 
+  background:  #a8c642 url(../images/page/background.png) repeat-x;
+  margin:      0px;
+  padding:     0px;
+  color:       #21587f;
+  text-align:  left;
+}
+
+body, p, ol, ul, td {
+  font-family: "Lucida Sans",Arial,Helvetica,sans-serif;
+  font-size:   14px;
+}
+
+p, li * {
+  line-height:  1.25em;
+}
+
+strong {
+  font-size:   105%
+}
+
+h1, h2, h3, h4 {
+  font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
+  cursor:       default;
+  font-weight:  normal !important;  
+}
+
+h1 {
+  color:        #21587f;
+  font-size:    2.1em;
+  margin-top:   0;
+}
+
+h2 {
+  color:        #21587f;
+  font-size:    1.5em;
+  padding:      4px 0 0;
+}
+
+h3 {
+  color:        #21587f;
+  font-size:    1.2em;
+  font-weight:  bold;
+}
+
+h4 {
+  color:        #7BB031;
+  font-size:    1.1em;
+  margin-top:   -22px;
+  padding:      0 0 0 2px;
+}
+
+a {
+  color:        #7bb031;
+  text-decoration: none;
+  cursor:       pointer;
+}
+
+.link {
+  cursor:       pointer;
+}

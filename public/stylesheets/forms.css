@@ -1,0 +1,42 @@
+/* Form styles */
+
+.formBlock {
+  margin:       10px 10px 8px 0;
+}
+
+.formLabel {
+  font-weight:  bold;
+  color:        #7bb031;
+}
+
+input, textarea {
+  color:        #21587f;
+}
+
+form input {
+  width:        200px;
+}
+
+form textarea {
+  width:        400px;
+  height:       150px;
+}
+
+.formButton200 {
+  border:       none;
+  background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;
+  height:       43px;
+  width:        200px;
+  display:      inline-block;
+  font-size:    1.0em;
+  font-weight:  bold;
+  color:        #21587f;
+  text-align:   center;
+  margin:       0;
+  padding:      0 0 4px 20px;
+  overflow:     hidden;
+}
+
+.formButton200:hover {
+  background-position: 0 -43px;
+}

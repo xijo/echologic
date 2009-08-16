@@ -2,7 +2,7 @@
  * Contains the styling information for top and bottom menu.
  */
 
-/* top menu */
+/* Top menu */
 
 #topMenuContainer {
   position:    relative;
@@ -10,16 +10,16 @@
   width:       300px;
   overflow:    visible;
   height:      20px;
+  font-size:   12px;
 }
 
 #topMenuContainer a, #topMenuContainer a:visited {
   color:       #7691A2;
   font-family: arial,Helvetica,sans-serif;
-  font-size:   9pt;
-  line-height: 25px;
-  padding:     0 2px 0 15px;
+  padding:     5px 2px 0 15px;
   text-decoration:none;
   float:       right;
+  font-size:   12px;
 }
 
 #topMenuContainer a img {
@@ -33,13 +33,27 @@
 /* language selector */
 /* BETA */
 
+#overlay {
+  background:  transparent;
+  position:    fixed;
+  left:        0;
+  top:         0;
+  width:       100%;
+  height:      100%;
+  z-index:     500;
+  cursor:      default;
+}
+
 #languageSelector {
   position:    absolute;
   top:         25px;
   left:        160px;
   text-align:  left;
   width:       210px;
-  z-index:     100;
+}
+
+#languageSelector, #languageSelector * {
+  z-index:     510;
 }
 
 #languageSelector li {
@@ -61,27 +75,25 @@
 #languageSelector a, #languageSelector a:visited {
   border-top:1px solid #efefef;
   margin-left: 20px;
-  padding: 0;
+  padding: 4px 0;
   float: none;
   width: 160px;
   display: inline-block;
 }
 
-/* top menu */
+/* Buttom menu */
 
 #bottomMenuContainer {
-  width:       970px;
-  min-width:   970px;
-  margin:      0 auto;
+  width:       945px;
+  margin:      2px auto 0;
   text-align:  center;
+  font-size:   12px;
 }
 
 #bottomMenuContainer a, #bottomMenuContainer a:visited {
-  color:       #1A4864;
-  font-family: arial,Helvetica,sans-serif;
-  font-size:   9pt;
-  line-height: 20px;
   padding:     0 0 0 5px;
+  color:       #21587f;
+  font-family: arial,Helvetica,sans-serif;
   text-decoration: none;
 }
 
