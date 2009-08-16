@@ -4,20 +4,16 @@
   width:      275px;
 }
 
-.staticMenuButton:hover {
-  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat scroll 0 100% !important;
+.staticMenuButton, .staticMenuButton:visited {
+  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat scroll 0 0;
   display:     block;
   height:      67px;
   width:       220px;
-  padding:     30px 0 0 55px;
+  padding:     29px 0 2px 55px;
 }
 
-.staticMenuButton, .staticMenuButton:visited {
-  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat;
-  display:     block;
-  height:      67px;
-  width:       220px;
-  padding:     30px 0 0 55px;
+.staticMenuButton:hover {
+  background-position: 0 -97px;
 }
 
 #staticMenu a {
@@ -32,14 +28,14 @@
   left:        -80px;
 }
 
-#staticMenu a .h1 {
+#staticMenu a .menuTitle {
   color:       #7BB031;
-  font-size:   1.15em;
+  font-size:   16px;
   margin:      0 0 0 -80px;
 }
 
-#staticMenu a .h2 {
+#staticMenu a .menuSubtitle {
   color:       #1a4864;
-  font-size:   1.35em;
+  font-size:   19px;
   margin:      0 0 0 -80px;
 }
