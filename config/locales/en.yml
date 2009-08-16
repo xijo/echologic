@@ -3,7 +3,18 @@
 
 en:
 
-  title: echologic - for echo, the global agora
+  page_title: echologic for echo - the global agora (democracy rethought)
+  
+  meta_description: |-
+    echologic is a network of free minds and organizations united to realize echo, the global agora!
+    echo is an Internet project of a special kind. We seek nothing less than to establish a new 
+    kind of participatory democracy on the very local, as well as on the regional and global level.
+    Accordingly, echo means the end of powerlessness and the beginning of self-determination!
+    
+  meta_keywords: |-
+    echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
+    collective intelligence, sustainable future, opinion base, opinion formation, decision making, 
+    transparency, your-profit, echocracy, echonomy, glocal, glocality 
 
   # General purpose resources
   general:

@@ -1,3 +1,5 @@
+@import "general.css";
+@import "forms.css";
 @import "tabs.css";
 @import "static_menu.css";
 @import "box.css";
@@ -5,17 +7,6 @@
 @import "tooltips.css";
 @import "outer_menus.css";
 
-body { 
-  background:  #a8c642 url(../images/page/background.png) repeat-x;
-  margin:      0px;
-  padding:     0px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  color:       #21587f;
-}
-
-strong {
-  font-size:   105%
-}
 
 #wmd_text_area {
   width:       450px;
@@ -68,8 +59,8 @@ strong {
 }
 
 #loginContainer {
-  float:       right;
   clear:       right;
+  float:       right;
 }
 
 .rightFloating {
@@ -250,7 +241,7 @@ strong {
 }
 
 #staticContent {
-  float:       left;
+/*  float:       left;*/
   width:       620px;
   padding:     2px 5px;
 }
@@ -418,29 +409,6 @@ strong {
   margin:        -4px 10px 0;
 }
 
-/* feedback */
-
-form .floating_field {
-  display:      inline-block;
-  float:        left;
-  margin:       8px 10px 8px 0;
-}
-
-form .text_field {
-  clear:        both;
-  display:      block;
-  margin:       8px 0;
-}
-
-form input {
-  width:        140px;
-}
-
-form textarea {
-  width:        300px;
-  height:       160px;
-}
-
 /* invited people */
 
 #invitedListHolder {
@@ -470,94 +438,4 @@ form textarea {
   margin:         0;
   padding:        0;
   display: inline-block;
-}
-
-/* body and headings */
-
-body, p, ol, ul, td {
-  font-family: "Lucida Sans",Arial,Helvetica,sans-serif;
-  font-size:   14px;
-}
-
-ul, ol {
-  text-align:  left;
-}
-
-h1, h2, h3, h4 {
-  font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
-  cursor:       default;
-  font-weight:  normal !important;  
-}
-
-h1 {
-  color:        #21587f;
-  font-size:    2.1em;
-  margin-top:   0;
-}
-
-h2 {
-  color:        #21587f;
-  font-size:    1.5em;
-  padding:      4px 0 0;
-}
-
-h3 {
-  color:        #21587f;
-  font-size:    1.2em;
-  font-weight:  bold;
-}
-
-h4 {
-  color:        #7BB031;
-  font-size:    1.1em;
-  margin-top:   -22px;
-  padding:      0 0 0 2px;
-}
-
-a {
-  color:        #7bb031;
-  text-decoration: none;
-  cursor:       pointer;
-}
-
-p, li * {
-  line-height:  1.25em;
-}
-
-.link {
-  cursor:       pointer;
-}
-
-/* Form styles */
-
-.formLabel {
-  font-weight:  bold;
-  color:        #7bb031;
-}
-
-input, textarea {
-  color:        #21587f;
-}
-
-form input[type="text"] {
-  width:        300px;
-}
-
-.formButton200 {
-  border:       none;
-  background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;
-  height:       43px;
-  width:        200px;
-  display:      inline-block;
-  font-size:    1.0em;
-  font-weight:  bold;
-  color:        #21587f;
-  text-align:   center;
-  margin:       0;
-  padding:      0 0 4px 20px;
-  overflow:     hidden;
-}
-
-.formButton200:hover {
-  background-position: 0 -43px;
 }
