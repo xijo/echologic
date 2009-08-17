@@ -115,7 +115,9 @@ en:
           challenges never seen before. However, satisfactory solutions are not in sight. The lack of transparency 
           in political decision making provokes a growing sense of <strong>powerlessness</strong> and 
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
-          Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.<br/>
+          Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.
+          </p><p> 
+          The actual crises can thus be understood as a general <strong>crisis of democracy</strong>.<br/>
           New ways have to be found, empowering people to develop <strong>constructive solutions</strong> to effectively tackle 
           our <span title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
           </p> 
@@ -363,7 +365,7 @@ en:
       adv4: Relief from a feeling of powerlessness
       adv4_details: |
         <li>Achievements visible in your everyday life</li>
-        <li>Viral spreading and growing participation in society.</li>
+        <li>Viral spreading and growing participation in society</li>
       
     echocracy_scientists:
       title: Experts
@@ -371,7 +373,8 @@ en:
       
       text_top: |
         <p>
-        With their professional know-how, experts and scientists can make significant contributions to the 
+        Through their research work and new findings, experts and scientists provide socio-political decisions 
+        with a solid fundament. With their professional know-how, they can make significant contributions to the 
         quality of discussions and to the development of adequate solution proposals.  
         For this reason, they are <strong>vitally important actors</strong> on echo and can benefit 
         from its <strong>new opportunities</strong> in several ways:
@@ -379,6 +382,7 @@ en:
         
       adv1: Improved scientific discourse
       adv1_details: |
+        <li>Joint formulation of new findings with colleagues in own working groups and networks</li>
         <li>Transparent debates with clearly differentiated positions of different scientific disciplines</li>
         <li>Efficient exchange of knowledge and experience by connecting experts transnationally and interculturally</li>
          
@@ -392,7 +396,7 @@ en:
       adv3_details: |
         <li>Direct participation in decision making</li>
         <li>Raising awareness in the society for challenges of our times</li>
-        <li>Effective diffusion of scientific findings through easily comprehensible presentation of own positions and arguments.</li>
+        <li>Effective diffusion of scientific findings through easily comprehensible presentation of own positions and arguments</li>
         
     echocracy_decision_makers:
       title: Politicians
@@ -424,7 +428,7 @@ en:
       adv3_details: |
         <li>Reaching millions of politically mature citizens directly</li>
         <li>Easily comprehensible presentation of own proposals and arguments</li>
-        <li>Clear comparison of different manifestos and own vs. alternative positions on specific topics.</li>
+        <li>Clear comparison of different manifestos and own vs. alternative positions on specific topics</li>
        
     echocracy_organisations:
       title: Organisations
@@ -459,7 +463,7 @@ en:
       adv4_details: |
         <li>Free fundraising and a growing number of supporters</li>
         <li>Increased motivation through cost-neutral donations</li>
-        <li>More trust and emotional commitment on the part of supporters through transparency and direct participation in actions.</li>
+        <li>More trust and emotional commitment on the part of supporters through transparency and direct participation in actions</li>
         
     # Static content for the echonomy main menu point
     echonomy:
@@ -493,7 +497,7 @@ en:
         <p>
         Finance your actions without financial effort!
         </p><p>
-        echo combines a <span title="{{tooltip_nonprofit}}" class="ttLink">non-profit</span> 
+        echo combines a <strong><span title="{{tooltip_nonprofit}}" class="ttLink">non-profit</span></strong> 
         philosophy with <strong>powerful business models</strong>. "Powerful“ does not merely mean 
         working <span title="{{tooltip_costneutral}}" class="ttLink">cost neutral</span>. 
         It also means helping people and organizations to provide their actions with the necessary funds. 
@@ -566,16 +570,18 @@ en:
       title: *about
       text: |
         <p> 
-        echo has been initiated by an <strong>interdisciplinary team</strong> of young and experienced professionals. 
-        Meanwhile, a <strong>growing network of supporters</strong> and consultants lends the project additional impetus.
+        <strong>The source</strong> of echo is an <strong>interdisciplinary team</strong> of young and experienced professionals.
+        They have developed its unique concept to address the global challenges of our time and have been working 
+        determined on its implementation.
         </p><p> 
-        Several <strong>experts</strong> from different fields (human- and natural science, marketing, economy, 
-        software rights, investor & public relations etc.) support the project with their 
-        know-how and engagement.<br/>
-        Furthermore, echo enjoys the backing of some <strong>renowned 
-        politicians </strong> such as Ruth Paulig (Green Party), former member of the Bavarian Parliament, 
-        Axel Berg (SPD), member of the German Parliament and Martin Westlake, Secretary-General of 
-        EESC, the European Economic and Social Committee.
+        Meanwhile, a <strong>growing network</strong> of supporters and consultants lends the project 
+        additional impetus. Several <strong>experts</strong> from different fields (human- and natural 
+        science, marketing, economy, software rights, investor & public relations etc.) support the 
+        project with their know-how and engagement.<br/>
+        Furthermore, echo enjoys the backing of some <strong>renowned politicians</strong> such as 
+        Ruth Paulig (Green Party), former member of the Bavarian Parliament, Axel Berg (SPD), 
+        member of the German Parliament and Martin Westlake, Secretary-General of EESC, 
+        the European Economic and Social Committee.
         </p>
 
     # Static content for imprint
@@ -651,8 +657,8 @@ en:
         We will contact you as soon as you can log in to echologic and participate in forming echo for a 
         peaceful and sustainable future of humanity.
         </p><p>
-        Until then, you are kindly invited to follow the news on our twitter channel 
-        or contact us at team@echo-logic.org.
+        Until then, you are kindly invited to follow our news on Twitter or contact us at 
+        team@echo-logic.org.
         </p><p>
         With the best wishes,
         </p><p>
@@ -662,7 +668,7 @@ en:
       recommend: |
         <p>
         Would you also like to call your friends' and colleagues' attention to echologic?
-        Please enter your name and the E-Mail addresses of your friends of democracy!
+        Please enter your name and the E-Mail addresses of your friends!
         </p><p>
         Spread the word!</br/>
         Make an echo!
@@ -714,15 +720,16 @@ en:
     invitation:
     
     interest:
+      subject: A warm welcome on echologic
       body: |
         <p>
-        Dear future echologic member and friend of democracy,
+        Dear future echologic member,
         </p><p>
         Many thanks for your interest on echo, the global agora.
         We will contact you as soon as you can log in to echologic and participate 
         in forming echo for a peaceful and sustainable future of humanity.
         </p><p>
-        Until then, you are kindly invited to follow the news on our twitter channel 
+        Until then, you are kindly invited to follow our news on Twitter 
         or contact us at team@echo-logic.org.
         </p><p>
         With the best wishes,
@@ -731,11 +738,12 @@ en:
         </p>
         
     invitation:
+      subject: XY recommends echologic - democracy rethought
       body: |
         <p>
         Dear world citizen and friend of democracy,
         </p><p>
-        <strong>XY</strong> has sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
+        <strong>XY</strong> sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
         echologic is a network of free minds and organizations united to realize <strong>echo - the global agora</strong>.
         </p><p>
         echo seeks nothing less than to establish a <strong>new kind of participatory democracy</strong> on the very 
@@ -743,13 +751,12 @@ en:
         echo means the end of powerlessness and the beginning of <strong>self-determination</strong>!
         </p><p>
         On echologic, you can follow and <strong>participate in the evolution</strong> of this unique project 
-        so that it can effectively smoothen the path towards a peaceful and sustainable 
-        future of humanity.
+        to jointly smoothen the path towards a peaceful and sustainable future of humanity.
         </p><p>
         Learn more about echo!<br/>
         Become echologic!
         </p><p>
         With the best wishes,
         </p><p>
-        Your echo Team
+        Your echo team
         </p>
