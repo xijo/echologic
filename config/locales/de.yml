@@ -702,6 +702,7 @@ de:
     feedback: Feedback
     
     interest:
+      subject: Herzlich willkommen auf echologic
       body: |
         <p>
         Liebes zukünftiges echologic Mitglied,
@@ -719,6 +720,7 @@ de:
         </p>
     
     invitation:
+      subject: XY empfehlt Ihnen echologic - Demokratie neu gedacht
       body: |
         <p>
         Liebe(r) WeltbürgerIn und Freund der Demokratie,
