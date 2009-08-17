@@ -1,17 +1,20 @@
-<h1><%= t('.title') %></h1>
+<%= link_to_remote("<h1 class='link'>#{t('interested_persons.new.title')}</h1>", {:url => join_path}, :href => join_path) %>
+<h2><%= t('interested_persons.new.subtitle') %></h2>
+
+<%= t('interested_persons.new.text') %>
 
 <% form_for(@interested_person) do |f| %>
   <%= f.error_messages %>
 
-  <div class="floating_field">
-    <%= f.label :name %><br />
+  <div class="formBlock">
+    <%= f.label :name, t('interested_persons.new.name'), :class => 'formLabel' %><br />
     <%= f.text_field :name %>
   </div>
   
-  <div class="floating_field">
-    <%= f.label :email %><br />
+  <div class="formBlock">
+    <%= f.label :email, t('interested_persons.new.email'), :class => 'formLabel' %><br />
     <%= f.text_field :email %>
   </div>
   
-  <%= f.submit 'Subscribe' %>
+  <%= f.submit t('interested_persons.new.send_button'), :class => 'formButton250'  %>
 <% end %>

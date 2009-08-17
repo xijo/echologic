@@ -5,7 +5,7 @@
 }
 
 .staticMenuButton, .staticMenuButton:visited {
-  background:  url(../images/page/staticMenu/sidemenubutton_off_on.png) no-repeat scroll 0 0;
+  background:  url(../images/page/staticMenu/main_menu_button.png) no-repeat scroll 0 0;
   display:     block;
   height:      67px;
   width:       220px;
@@ -20,12 +20,19 @@
   text-decoration: none;
 }
 
-#staticMenu img {
+#staticMenu .menuImage {
+  background-position:  0 0;
   float:       left;
   position:    relative;
   top:         -30px;
   border:      0;
   left:        -80px;
+  width:       95px;
+  height:      97px;
+}
+
+#staticMenu .activeMenu {
+  background-position: 0 -97px !important;
 }
 
 #staticMenu a .menuTitle {

@@ -14,7 +14,7 @@ input, textarea {
 }
 
 form input {
-  width:        200px;
+  width:        220px;
 }
 
 form textarea {
@@ -25,18 +25,56 @@ form textarea {
 .formButton200 {
   border:       none;
   background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;
-  height:       43px;
   width:        200px;
+  height:       43px;
   display:      inline-block;
   font-size:    14px;
   font-weight:  bold;
   color:        #21587f;
   text-align:   center;
-  margin:       0;
+  margin:       13px 0 0 -6px;
   padding:      0 0 4px 20px;
   overflow:     hidden;
 }
 
 .formButton200:hover {
+  background-position: 0 -43px;
+}
+
+.formButton250 {
+  border:       none;
+  background:   #FFF url(../images/page/button_250.png) no-repeat scroll left top;
+  width:        250px;
+  height:       43px;
+  display:      inline-block;
+  font-size:    14px;
+  font-weight:  bold;
+  color:        #21587f;
+  text-align:   center;
+  margin:       13px 0 0 -6px;
+  padding:      0 0 4px 20px;
+  overflow:     hidden;
+}
+
+.formButton250:hover {
+  background-position: 0 -43px;
+}
+
+.formButton300 {
+  border:       none;
+  background:   #FFF url(../images/page/button_300.png) no-repeat scroll left top;
+  width:        300px;
+  height:       43px;
+  display:      inline-block;
+  font-size:    14px;
+  font-weight:  bold;
+  color:        #21587f;
+  text-align:   center;
+  margin:       13px 0 0 -6px;
+  padding:      0 0 4px 20px;
+  overflow:     hidden;
+}
+
+.formButton300:hover {
   background-position: 0 -43px;
 }

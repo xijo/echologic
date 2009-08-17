@@ -1,22 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :invited_people
 
+  # Join / Invite routes
+  map.join 'join', :controller => 'interested_people', :action => 'new'
   map.resources :interested_people #, :only => [:create]
-
+  map.resources :invited_people
+  
+  # Feedback route
   map.resources :feedback, :only => [:new, :create]
 
-  map.join 'join', :controller => 'interested_people', :action => 'new'
-
-#  map.with_options :controller => 'static_content' do |static|
-#    static.echologic 'echologic', :action => 'echologic'
-#  end
-
+  # Static content routes
   map.with_options :controller => 'static_content' do |static|
     
     # echologic - The Mission
     static.echologic 'echologic', :action => 'echologic'
     
-    # echo - The Project
+    # echo - The Platform
     static.echo 'echo', :action => 'echo'
     static.echo_discuss 'echo/discuss', :action => 'echo_discuss'
     static.echo_connect 'echo/connect', :action => 'echo_connect'
@@ -36,10 +34,7 @@ ActionController::Routing::Routes.draw do |map|
     static.echonomy_foundation 'echonomy/foundation', :action => 'echonomy_foundation'
     static.echonomy_public_property 'echonomy/public_property', :action => 'echonomy_public_property'
    
-    # your echo - Join echologic
-    static.your_echo 'your_echo', :action => 'your_echo'
-    
-    
+
     # Top menu
     static.about 'about', :action => 'about'
     
@@ -97,7 +92,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id.:format'
 end
 
-# load german i18n file
+# Load german i18n file
 #ActionController::Routing::Translator.i18n('es')
 #ActionController::Routing::Translator.i18n('en')
 ActionController::Routing::Translator.i18n

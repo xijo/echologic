@@ -111,7 +111,7 @@ module StaticContentHelper
     item = link.split('/')[2]
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
-    button =  image_tag insert_static_menu_image(item)
+    button =  insert_static_menu_image(item)
     button += "<span class='menuTitle'>#{t(title)}</span><br/>"
     button += "<span class='menuSubtitle'>#{t(subtitle)}</span>"
     link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
@@ -120,11 +120,9 @@ module StaticContentHelper
   # Returns the image filename (on of off state) for a specific item.
   def insert_static_menu_image(item)
     action = request[:action].split('_')[0]
-    if (action.eql?(item))
-      'page/staticMenu/' + item + '_on.png'
-    else
-      'page/staticMenu/' + item + '_off.png'
-    end
+    image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
+    activeMenu = action.eql?(item) ? ' activeMenu' : ''
+    "<div class='menuImage#{activeMenu}' style='background: url(#{image})'></div>"
   end
   
   # Container is only visible in echologic

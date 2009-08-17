@@ -614,38 +614,41 @@ en:
       
     join:
       title: &your_echo 'Your echo'
-      subtitle: &join 'Join echologic'
+      subtitle: &join 'Become echologic'
       
-  prospects:
+  interested_persons:
     new:
       title: *your_echo
       subtitle: *join
       
-      text_top: |
+      text: |
         <p>
-        echo is democracy from the people for the people.<br/>
+        <strong>echo is democracy from the people for the people.</strong>
+        </p><p>
         As a project for supporting common good, echo is driven forward by the 
         <strong>joint effort</strong> of engaged individuals and organizations.
         </p><p>
-        Eager to participate and contribute your ideas, too?<br/>
-        Please enter your E-Mail address below!<br/>
+        Eager to <strong>contribute your ideas, too</strong>!?<br/>
+        Please enter your name and E-Mail address below!<br/>
         We will contact you as soon as we take off.
-        </p><p>
-        101 citizens, experts and politicians are already waiting to form echo together with you.
         </p>
+        
+      waiting: |
+        citizens, experts and politicians are already waiting to form echo together with you.
 
       name: Name
       email: E-Mail  
-      send_button: Subscripe
+      send_button: YES, I become echologic
       
     show:
-      title: Make an echo
-      text: |
+      title: *your_echo
+      subtitle: *join
+      
+      thank_you: |
         <p>
-        Dear future echologic member,
+        Many thanks for your interest on echo, the global agora!
         </p><p>
-        Many thanks for your interest on echo, the global agora. We will contact you as 
-        soon as you can log in to echologic and participate in forming echo for a 
+        We will contact you as soon as you can log in to echologic and participate in forming echo for a 
         peaceful and sustainable future of humanity.
         </p><p>
         Until then, you are kindly invited to follow the news on our twitter channel 
@@ -655,11 +658,38 @@ en:
         </p><p>
         Your echo team
         </p>
-
-    # Intereseted people resources      
-    interested_people:
-      title: Interested people
         
+      recommend: |
+        <p>
+        Would you also like to call your friends' and colleagues' attention to echologic?
+        Please enter your name and the E-Mail addresses of your friends of democracy!
+        </p><p>
+        Spread the word!</br/>
+        Make an echo!
+        </p> 
+        
+      invite: &invite Freunde Bescheid sagen!
+      
+  # Invited People
+  invited_persons:
+    new:
+      title: *your_echo
+      subtitle: Make an echo
+      
+    invite:
+      <p>
+      Here you can call your friends' and colleagues' attention to echologic.
+      Please enter your name and their E-Mail addresses!
+      </p><p>
+      Spread the word!</br/>
+      Make an echo!
+      </p>
+
+      name: Your Name
+      email: E-Mails of your friends
+      email_separate: Please separate multiple E-Mails using comma!
+      invite_button: *invite 
+
   # Feedback resources
   feedback_locale:
     title: *feedback
@@ -671,3 +701,55 @@ en:
       </p>
     message: Your message
     send: Send message
+    
+  maily:
+    signature: |
+      --
+      echologic for echo - the global agora
+      Web: www.echologic.org
+      E-Mail: team@echo-logic.org
+      
+    feedback: Feedback
+    
+    invitation:
+    
+    interest:
+      body: |
+        <p>
+        Dear future echologic member and friend of democracy,
+        </p><p>
+        Many thanks for your interest on echo, the global agora.
+        We will contact you as soon as you can log in to echologic and participate 
+        in forming echo for a peaceful and sustainable future of humanity.
+        </p><p>
+        Until then, you are kindly invited to follow the news on our twitter channel 
+        or contact us at team@echo-logic.org.
+        </p><p>
+        With the best wishes,
+        </p><p>
+        Your echo team
+        </p>
+        
+    invitation:
+      body: |
+        <p>
+        Dear world citizen and friend of democracy,
+        </p><p>
+        <strong>XY</strong> has sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
+        echologic is a network of free minds and organizations united to realize <strong>echo - the global agora</strong>.
+        </p><p>
+        echo seeks nothing less than to establish a <strong>new kind of participatory democracy</strong> on the very 
+        local as well as on the regional and global level.<br/>
+        echo means the end of powerlessness and the beginning of <strong>self-determination</strong>!
+        </p><p>
+        On echologic, you can follow and <strong>participate in the evolution</strong> of this unique project 
+        so that it can effectively smoothen the path towards a peaceful and sustainable 
+        future of humanity.
+        </p><p>
+        Learn more about echo!<br/>
+        Become echologic!
+        </p><p>
+        With the best wishes,
+        </p><p>
+        Your echo Team
+        </p>

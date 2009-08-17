@@ -2,23 +2,7 @@ class InterestedPeopleController < ApplicationController
   # GET /interested_people
   # GET /interested_people.xml
   def index
-    @interested_people = InterestedPerson.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @interested_people }
-    end
-  end
-
-  # GET /interested_people/1
-  # GET /interested_people/1.xml
-  def show
-    @interested_person = InterestedPerson.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @interested_person }
-    end
+    redirect_to(:action => 'new')
   end
 
   # GET /interested_people/new
@@ -32,10 +16,7 @@ class InterestedPeopleController < ApplicationController
     end
   end
 
-  # GET /interested_people/1/edit
-  def edit
-    @interested_person = InterestedPerson.find(params[:id])
-  end
+  private
 
   # POST /interested_people
   # POST /interested_people.xml
