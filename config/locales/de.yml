@@ -94,7 +94,7 @@ de:
         gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten.
         </p><p>
         Durch neuartige transnationale und interkulturelle Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert 
-        und damit der Weg in eine friedlichere, gerechtere und <strong>nachhaltige Zukunft</strong> geebnet werden.
+        und damit der Weg in eine friedliche, gerechte und <strong>nachhaltige Zukunft</strong> geebnet werden.
         </p><p>
         echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und aktiv mit zu gestalten!
         </p>
@@ -598,34 +598,42 @@ de:
       title: &your_echo 'Ihr echo'
       subtitle: &join 'echologic werden'
       
-  prospects:
+  # Interested persons (wannabe memebers)    
+  interested_persons:
     new:
       title: *your_echo
       subtitle: *join
       
-      text_top: |
+      text: |
         <p>
-        Als ein Projekt zur Förderung des Allgemeinwohls, wird echo durch die gemeinsame Anstrengung engagierter Individuen und Organisationen vorangetrieben.
+        <strong>echo ist die Demokratie von den Menschen für die Menschen.</strong> 
         </p><p>
-        Möchten Sie auch sich in die Gestaltung von echo einbringen?<br/>
-        Dann tragen Sie bitte Ihre E-Mail Adresse ein!<br/>
-        Wir melden uns bei Ihnen, sobald es losgeht.
+        Als ein Projekt zur Förderung des Allgemeinwohls, wird echo durch die 
+        <strong>gemeinsame Anstrengung</strong> engagierter Individuen und 
+        Organisationen vorangetrieben.
         </p><p>
-        Engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
-        <p>
+        Möchten Sie auch die Entwicklung von <strong>echo aktiv mitgestalten</strong>!?<br/>
+        Tragen Sie bitte unten Ihren Namen und Ihre E-Mail Adresse ein!<br/>
+        Wir melden uns bei Ihnen sobald es losgeht.
+        </p>
+
+      waiting: |
+        engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
 
       name: Name
       email: E-Mail  
-      send_button: E-Mail eintragen
+      send_button: JA, ich werde echologic
       
     show:
-      title: Make an echo
-      text: |
+      title: *your_echo
+      subtitle: *join
+      
+      thank_you: |
         <p>
-        Liebe(r) zukünftige echologic Mitglied,
-        </p><p>
         Vielen Dank für Ihr Interesse an echo, der globalen Agora für eine gemeinsame Zukunft. 
-        Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der Gestaltung von echo beteiligen können.
+        </p><p>
+        Wir haben Ihnen eine Bestätigungsmail geschickt und werden uns bei Ihnen erneut melden,  
+        sobald Sie sich auf echologic einloggen und in der Gestaltung von echo beteiligen können.
         </p><p>
         Bis dahin sind Sie herzlich eingeladen die Neuigkeiten über unserem Twitter Kanal zu verfolgen und uns 
         über team@echo-logic.org zu kontaktieren.
@@ -634,10 +642,37 @@ de:
         </p><p>
         Ihr echo Team
         </p>
-  
-    # Intereseted people resources      
-    interested_people:
-      title: Interessierte Menschen
+      
+      recommend: |
+        <p>
+        Möchten Sie auch Ihre Freunde und Kollegen auf echologic aufmerksam machen?
+        </p><p>
+        Verbreiten Sie das Wort!</br/>
+        Bewirken Sie ein echo!
+        </p> 
+        
+      invite: &invite Freunde Bescheid sagen!
+
+  # Invited People
+  invited_persons:
+    new:
+      title: *your_echo
+      subtitle: echo bewirken
+      
+    invite:
+      <p>
+      Hier können Sie Ihre Freunde und Kollegen auf echologic aufmerksam machen.
+      Bitte tragen Sie Ihren eigenen Namen und die E-Mail Adressen Ihrer 
+      Freunde der Demokratie ein!
+      </p><p>
+      Verbreiten Sie das Wort!</br/>
+      Bewirken Sie ein echo!
+      </p>
+
+      name: Ihr Name
+      email: E-Mail Adressen Ihrer Freunde
+      email_separate: Trennen Sie bitte mehrere E-Mail Adressen mit Komma.
+      invite_button: *invite 
   
   # Feedback resources
   feedback_locale:
@@ -652,6 +687,56 @@ de:
     message: Nachricht
     send: Nachricht senden
     
+  maily:
+    signature: |
+      --
+      echologic für echo - die globale Agora
+      Web: www.echologic.org
+      E-Mail: team@echo-logic.org
+      
+    feedback: Feedback
+    
+    interest:
+      body: |
+        <p>
+        Liebe(r) zukünftige echologic Mitglied und Freund der Demokratie,
+        </p><p>
+        Vielen Dank für Ihr Interesse an echo, der globalen Agora für eine gemeinsame Zukunft. 
+        Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der Gestaltung von echo beteiligen können.
+        </p><p>
+        Bis dahin sind Sie herzlich eingeladen die Neuigkeiten über unserem Twitter Kanal zu verfolgen und uns 
+        über team@echo-logic.org zu kontaktieren.
+        </p><p>
+        Mit den besten Wünschen,
+        </p><p>
+        Ihr echo Team
+        </p>
+    
+    invitation:
+      body: |
+        <p>
+        Liebe(r) WeltbürgerIn und Freund der Demokratie,
+        </p><p>
+        <strong>XY</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong> 
+        aufmerksam zu machen. echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem 
+        gemeinsamen Ziel, <strong>echo - die globale Agora</strong> zu verwirklichen. 
+        </p><p>
+        Das Ziel von echo ist kein geringeres, als eine <strong>neue Form teilnehmender Demokratie</strong> 
+        auf lokalem, regionalem und globalem Niveau zu etablieren.<br/>
+        echo bedeutet das Ende der Machtlosigkeit und den Anfang der <strong>Selbstbestimmung</strong>!
+        </p><p>
+        echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und 
+        aktiv mit zu gestalten, um damit den Weg in eine friedliche und nachhaltige Zukunft wirksam 
+        ebnen zu können!
+        </p><p>
+        Erfahren Sie mehr über echo!
+        Werden Sie echologic!
+        </p><p>
+        Mit den besten Wünschen,
+        </p><p>
+        Ihr echo Team
+        </p>
+
   date:
     formats:
       default: "%d.%m.%Y"

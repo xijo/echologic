@@ -125,6 +125,7 @@ class StaticContentController < ApplicationController
     end
   end
   
+  
   # Top menu
   
   # About
@@ -134,6 +135,7 @@ class StaticContentController < ApplicationController
       format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'about' }}
     end
   end
+  
   
   # Bottom menu
   
