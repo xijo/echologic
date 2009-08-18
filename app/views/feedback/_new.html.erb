@@ -22,17 +22,17 @@
 
   <div class="formBlock">
     <%= label_tag t('user_data.name'), nil, :class => 'formLabel' %><br />
-    <%= text_field_tag :name %>
+    <%= text_field_tag :name, request.params[:name] %>
   </div>
   
   <div class="formBlock">
     <%= label_tag t('user_data.email'), nil, :class => 'formLabel' %><br />
-    <%= text_field_tag :sender %>
+    <%= text_field_tag :sender, request.params[:sender] %>
   </div>
 
   <div class="formBlock">
     <%= label_tag t('.message'), nil, :class => 'formLabel' %><br/>
-    <%= text_area_tag :text %>
+    <%= text_area_tag :text, request.params[:text] %>
   </div>
 
   <%= submit_tag t('.send'), :class => 'formButton200' %>

@@ -713,6 +713,8 @@ en:
         </p>
       message: Your message
       send: Send message
+    create:
+      thank_you: Thank you for your feedback.
       
   mailer:
     signature: |
@@ -776,6 +778,11 @@ en:
               blank: '- please enter your E-Mail.'
               taken: '- the entered E-Mail address is already registered.'
               invalid: '- please enter a valid E-Mail address.'
+        feedback:
+          attributes:
+            blank: 'Please fill out all fields.'
+            email:
+              invalid: 'Please enter a valid E-Mail address.'
       messages:
         blank: '{{attribute}} must not be empty.'
           

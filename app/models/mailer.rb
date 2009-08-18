@@ -4,10 +4,8 @@ class Mailer < ActionMailer::Base
     @body         = params[:text]
     @name         = params[:name]
     @sender        = params[:sender]
-    if params[:sender].empty?
+    if (@sender.empty? or @name.empty? or @body.empty?)
       raise FeedbackController::NotComplete
-    else
-      @sender = params[:sender]
     end
     @subject      = "echologic feedback"
     @recipients   = FEEDBACK_RECIPIENT

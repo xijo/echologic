@@ -1,8 +1,7 @@
-<%= link_to_remote("<h1 class='link'>#{t('.title')}</h1>", {:url => join_path}, :href => join_path) %>
-<h2><%= t('.subtitle') %></h2>
+<%= link_to_remote("<h1 class='link'>#{t('static_content.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
+<h2><%= t('feedback.new.title') %></h2>
 
 <%= t('.thank_you') %>
 <br/>
-<span class='formButton250'><%= t('.back') %></span>
 
-
+<% insert_back_next_buttons(join_path, echologic_path) %>

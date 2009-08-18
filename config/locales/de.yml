@@ -695,6 +695,8 @@ de:
         </p> 
       message: Nachricht
       send: Nachricht senden
+    create:
+      thank_you: Vielen Dank für Ihre Nachricht.
     
   mailer:
     signature: |
@@ -857,17 +859,22 @@ de:
         interested_person:
           attributes:
             name:
-              blank: 'Bitte einen Namen angeben.'
+              blank: '- bitte geben Sie Ihren Namen ein.'
             email:
-              blank: '{{attribute}}: Bitte eine E-Mail Adresse eingeben.'
-              taken: 'E-Mail Adresse ist bereits in Verwendung.'
-              invalid: 'Bitte eine gültige E-Mail Adresse verwenden.'
+              blank: '- bitte geben Sie Ihre E-Mail Adresse ein.'
+              taken: '- die eingegebene Adresse wurde bereits verwendet.'
+              invalid: '- bitte geben Sie eine korrekte E-Mail Adresse ein.'
+        feedback:
+          attributes:
+            blank: 'Bitte füllen Sie alle Felder aus.'
+            email:
+              invalid: 'Bitte geben Sie eine korrekte E-Mail Adresse ein.'
       messages:
-        blank: 'nicht machen!'
+        blank: '{{attribute}} darf nicht leer sein.'
           
       template:
         header: 
-          one: "1 error prohibited this  from being saved" 
-          other: "{{count}} errors prohibited this {{model}} from being saved" 
-        body: "There were problems with the following fields:" 
+          one: "Ein Feld wurde nicht richtig ausgefüllt." 
+          other: "{{count}} Felder wurden nicht richtig ausgefüllt." 
+        body: "Bitte überprüfen Sie folgendes:"         
      
