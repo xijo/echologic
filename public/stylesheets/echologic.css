@@ -254,7 +254,7 @@
 #echoHeader {
   background:  url(../images/page/echo_gradient.png) no-repeat scroll;
   position:    relative;
-  left:		   -5px;
+  left:		     -5px;
   top:         0px;
   margin:      20px 0 0;
 }
@@ -406,6 +406,11 @@
   float:         right;
   height:        68px;
   margin:        -4px 10px 0;
+}
+
+.mainIllustration {
+  margin:        -10px 20px 0 0;
+  width:         190px;
 }
 
 /* invited people */

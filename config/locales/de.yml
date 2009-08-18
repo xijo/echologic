@@ -627,7 +627,7 @@ de:
 
       name: Name
       email: E-Mail  
-      send_button: JA, ich werde echologic
+      send_button: Ja, ich werde echologic
       
     show:
       title: *your_echo
