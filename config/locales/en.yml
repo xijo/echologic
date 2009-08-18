@@ -651,13 +651,13 @@ en:
         For a common future!<br/>
         I become echologic!
       
-    invite:
+    create_interested:
       title: *your_echo
       subtitle: Thank you
       
       thank_you: |
         <p>
-        Many thanks for your interest on echo, the global agora!
+        Many thanks for your interest on <strong>echo - the global agora</strong>!
         </p><p>
         We will contact you as soon as you can log in to echologic and participate in forming echo for a 
         peaceful and sustainable future of humanity.
@@ -669,6 +669,8 @@ en:
         </p><p>
         Your echo team
         </p>
+        
+      back: Back to echologic home
         
       recommend: |
         <p>
@@ -727,7 +729,7 @@ en:
         <p>
         Dear future echologic member,
         </p><p>
-        Many thanks for your interest on echo, the global agora.
+        Many thanks for your interest on <strong>echo - the global agora</strong>.
         We will contact you as soon as you can log in to echologic and participate 
         in forming echo for a peaceful and sustainable future of humanity.
         </p><p>
@@ -762,3 +764,23 @@ en:
         </p><p>
         Your echo team
         </p>
+
+  activerecord: 
+    errors:
+      models:
+        interested_person:
+          attributes:
+            name:
+              blank: '- please enter your name.'
+            email:
+              blank: '- please enter your E-Mail.'
+              taken: '- the entered E-Mail address is already registered.'
+              invalid: '- please enter a valid E-Mail address.'
+      messages:
+        blank: '{{attribute}} must not be empty.'
+          
+      template:
+        header: 
+          one: "One of the fields is filled incorrectly." 
+          other: "{{count}} fields are filled incorrectly." 
+        body: "Please correct the following:" 

@@ -633,24 +633,26 @@ de:
         Für eine gemeinsame Zukunft!<br/>
         Ich werde echologic!
       
-    invite:
+    create_interested:
       title: *your_echo
       subtitle: Danke
       
       thank_you: |
         <p>
-        Vielen Dank für Ihr Interesse an echo, der globalen Agora für eine gemeinsame Zukunft. 
+        Vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft. 
         </p><p>
         Wir haben Ihnen eine Bestätigungsmail geschickt und werden uns bei Ihnen erneut melden,  
         sobald Sie sich auf echologic einloggen und in der Gestaltung von echo beteiligen können.
         </p><p>
-        Bis dahin sind Sie herzlich eingeladen die Neuigkeiten über unserem Twitter Kanal zu verfolgen und uns 
+        Bis dahin sind Sie herzlich eingeladen unsere Neuigkeiten auf Twitter zu verfolgen und uns 
         über team@echo-logic.org zu kontaktieren.
         </p><p>
         Mit den besten Wünschen,
         </p><p>
         Ihr echo Team
         </p>
+      
+      back: Zur echologic Startseite
       
       recommend: |
         <p>
@@ -709,7 +711,7 @@ de:
         <p>
         Liebes zukünftiges echologic Mitglied,
         </p><p>
-        vielen Dank für Ihr Interesse an echo, der globalen Agora für eine gemeinsame Zukunft. 
+        vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft. 
         Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der 
         Gestaltung von echo beteiligen können.
         </p><p>
@@ -865,7 +867,7 @@ de:
           
       template:
         header: 
-          one: "1 error prohibited this {{model}} from being saved" 
+          one: "1 error prohibited this  from being saved" 
           other: "{{count}} errors prohibited this {{model}} from being saved" 
         body: "There were problems with the following fields:" 
      
