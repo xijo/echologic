@@ -1,9 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
 
   # Join / Invite routes
-  map.join 'join', :controller => 'interested_people', :action => 'new'
-  map.resources :interested_people #, :only => [:create]
-  map.resources :invited_people
+  map.interested_people 'interested_people', :controller => "join", :action => "new"
+  map.invited_people 'invited_people', :controller => "join", :action => "invite"
+
+  map.with_options :controller => "join" do |join|
+    join.join 'join', :action => 'new'
+    join.invite 'invite', :action => 'invite'
+    join.create_interested 'create_interested', :action => 'create_interested', :method => :post
+  end
   
   # Feedback route
   map.resources :feedback, :only => [:new, :create]

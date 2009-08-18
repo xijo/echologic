@@ -622,6 +622,9 @@ en:
       title: &your_echo 'Your echo'
       subtitle: &join 'Become echologic'
       
+    invite:
+      title: &invite 'Invite'      
+
   interested_persons:
     new:
       title: *your_echo
@@ -674,7 +677,7 @@ en:
         Make an echo!
         </p> 
         
-      invite: &invite Freunde Bescheid sagen!
+      invite: &invite Freunden Bescheid sagen!
       
   # Invited People
   invited_persons:

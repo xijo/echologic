@@ -3,6 +3,8 @@
 module StaticContentHelper
   
   # DEPRICATED
+  # will evtl. be needed for unobtrusiveizing
+
   # Creates a css tab object with a specific name and link.
   # If the relating action was requested, the tab will be
   # displayed highlighted.
@@ -23,7 +25,7 @@ module StaticContentHelper
   def insert_remote_tab(link)
     name = link.tr('/', '_')[4..-1]
     tab = "<div>#{t('static_content.' + name + '.title')}</div>"
-    classname = request[:action].eql?(name) ? 'activeTab' : ''
+    classname = request.path.eql?(link) ? 'activeTab' : ''
     link_to_remote(tab, {:url => link}, :href => link, :class => classname)
   end
   
@@ -111,14 +113,14 @@ module StaticContentHelper
     item = link.split('/')[2]
     title = 'static_content.'+item+'.title'
     subtitle = 'static_content.'+item+'.subtitle'
-    button =  insert_static_menu_image(item)
+    button =  insert_static_menu_image(item, link)
     button += "<span class='menuTitle'>#{t(title)}</span><br/>"
     button += "<span class='menuSubtitle'>#{t(subtitle)}</span>"
     link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
   end
   
   # Returns the image filename (on of off state) for a specific item.
-  def insert_static_menu_image(item)
+  def insert_static_menu_image(item, link)
     action = request[:action].split('_')[0]
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
     activeMenu = action.eql?(item) ? ' activeMenu' : ''
@@ -134,40 +136,6 @@ module StaticContentHelper
   def display_tab_container
     request[:action].eql?('echologic') ? "style='display:none'" : ''
   end
-  
-  # display_content
-#  def display_content(content)
-#    content.each do |key, value|
-#      case key.to_s
-#        when /\Atext/
-#          display_text(value)
-#        when /\Apart/
-#          concat("part ")
-#      end
-#    end
-#  end
-#  
-#  # display text
-#  def display_text(value)
-#    concat("<p>")
-#    if value.is_a? String
-#      concat("value")
-#    elsif value.is_a? Array
-#      concat(value.inspect)
-#      value.each do |key, part|
-#        case key.to_s
-#          when /\Apart/
-#            concat(part)
-#          when /\Alink/
-#            concat("<a>#{part[:title]}</a>")
-#        end
-#      end
-#    else
-#      concat(value.inspect)
-#      display_content(value)
-#    end
-#    concat("</p>")
-#  end
 
   # gets the latest twittered content of the specified user account
   # via json.

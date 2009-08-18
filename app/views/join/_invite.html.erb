@@ -1,8 +1,12 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'join/tabs' %>
+<% end %>
+
 <h1>New invited_person</h1>
 <h4>Invite your friends and collegues</h4>
 
 <p>
-  Dear <%= @interested_person.name %>,<br/><br/>
+  Dear <% # @interested_person.name %>,<br/><br/>
   
   we'd like to thank you for the attention you pay on our project. Please feel free to use the following form to show this page to the rest of the world. <br/><br/>
   
@@ -16,7 +20,7 @@
   </ul>
 </div>
 
-<%= render :partial => "new" %>
+<%= render :partial => "new_invitation" %>
 
 <div id="inviteText">
   <p>
