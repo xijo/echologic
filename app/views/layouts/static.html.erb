@@ -26,7 +26,7 @@
       <%= link_to_remote(image_tag('page/echologic_logo.png'), {:url => echologic_path}, :href => echologic_path) %>
     </div>
     <div id="inviteBubble">
-      <span><%= t('.invite') %></span>
+      <%= link_to_remote(t('.invite'), {:url => join_path}, :href => join_path) %>
     </div>
     <%= render :partial => "layouts/top_menu" %>
     <%= render :partial => "layouts/login_container" %>

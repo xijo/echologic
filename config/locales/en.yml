@@ -619,13 +619,13 @@ en:
       open_document: Check out the document anyway!
       
     join:
-      title: &your_echo 'Your echo'
+      title: Your echo
       subtitle: &join 'Become echologic'
       
     invite:
-      title: &invite 'Invite'      
+      title: &invite 'Make an echo'
 
-  interested_persons:
+  join:
     new:
       title: *your_echo
       subtitle: *join
@@ -647,11 +647,13 @@ en:
 
       name: Name
       email: E-Mail  
-      send_button: Yes, I become echologic
+      send_button: |
+        For a common future!<br/>
+        I become echologic!
       
-    show:
+    invite:
       title: *your_echo
-      subtitle: *join
+      subtitle: Thank you
       
       thank_you: |
         <p>
@@ -670,34 +672,32 @@ en:
         
       recommend: |
         <p>
-        Would you also like to call your friends' and colleagues' attention to echologic?
+        Would you also like to call your friends' and colleagues' attention to echologic?<br/>
         Please enter your name and the E-Mail addresses of your friends!
         </p><p>
         Spread the word!</br/>
         Make an echo!
         </p> 
         
-      invite: &invite Freunden Bescheid sagen!
+      invite: Freunden Bescheid sagen!
       
-  # Invited People
-  invited_persons:
-    new:
+    new_invitation:
       title: *your_echo
-      subtitle: Make an echo
+      subtitle: *invite
       
-    invite:
-      <p>
-      Here you can call your friends' and colleagues' attention to echologic.
-      Please enter your name and their E-Mail addresses!
-      </p><p>
-      Spread the word!</br/>
-      Make an echo!
-      </p>
+      text:
+        <p>
+        <strong>Here you can call your friends' and colleagues' attention to echologic.</strong>
+        </p><p>
+        Please enter your name and their E-Mail addresses!
+        </p>
 
       name: Your Name
       email: E-Mails of your friends
       email_separate: Please separate multiple E-Mails using comma!
-      invite_button: *invite 
+      invite_button: |
+        Spread the word!<br/>
+        Make an echo! 
 
   # Feedback resources
   feedback_locale:
@@ -719,8 +719,6 @@ en:
       E-Mail: team@echo-logic.org
       
     feedback: Feedback
-    
-    invitation:
     
     interest:
       subject: A warm welcome on echologic
@@ -756,8 +754,8 @@ en:
         On echologic, you can follow and <strong>participate in the evolution</strong> of this unique project 
         to jointly smoothen the path towards a peaceful and sustainable future of humanity.
         </p><p>
-        Learn more about echo!<br/>
-        Become echologic!
+        <strong>Learn more about echo!<br/>
+        Become echologic!</strong>
         </p><p>
         With the best wishes,
         </p><p>

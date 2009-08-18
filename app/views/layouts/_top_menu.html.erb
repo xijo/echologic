@@ -1,7 +1,12 @@
 <div id="topMenuContainer">
-  <%= link_to_function (t('.language') + image_tag ('page/dropdown/arrow.gif')) do |page| page[:languageSelector].show; page[:overlay].show; end %>
-  <%= link_to_remote t('.about'), {:url => about_path}, :href => about_path %>
-  <%= link_to_remote t('.feedback'), {:url => new_feedback_path, :method => :get}, :href => new_feedback_path %>
+  <% language_chooser = "<span id='languageChooser'>" + t('.language') + '</span>'
+     language_chooser += image_tag('page/icons/arrow.gif')
+  %>
+  <%= link_to_function(language_chooser) do |page|
+     page[:languageSelector].show; page[:overlay].show; 
+  end %>
+  <%= link_to_remote "<span class='topMenuItem'>" + t('.about') + '</span>', {:url => about_path}, :href => about_path %>
+  <%= link_to_remote "<span class='topMenuItem'>" + t('.feedback') + '</span>', {:url => new_feedback_path, :method => :get}, :href => new_feedback_path %>
   <%= link_to_function "<div id='overlay' style='display:none;'></div>" do |page| page[:languageSelector].hide; page[:overlay].hide; end %>
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>

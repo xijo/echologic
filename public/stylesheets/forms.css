@@ -11,10 +11,11 @@
 
 input, textarea {
   color:        #21587f;
+  border:       1px inset #21587f;
 }
 
 form input {
-  width:        220px;
+  width:        225px;
 }
 
 form textarea {
@@ -78,3 +79,11 @@ form textarea {
 .formButton300:hover {
   background-position: 0 -43px;
 }
+
+.hint {
+  font-size:    12px;
+  font-weight:  normal;
+  color:        #999;
+  padding:      0 0 0 1px;
+}
+

@@ -39,7 +39,7 @@
   top: 		   15px;
 }
 
-#inviteBubble span {
+#inviteBubble a {
   background:  transparent url(../images/page/invitebubble_right.png) no-repeat scroll right top;
   color:       #fff;
   display:     block;
@@ -53,17 +53,13 @@
   position:    relative;
 }
 
-#inviteBubble span:hover {
-/*  text-decoration: underline;*/
-  cursor:      default;
+#inviteBubble a:hover {
+  text-decoration: underline;
+  cursor:      pointer;
 }
 
 #loginContainer {
   clear:       right;
-  float:       right;
-}
-
-.rightFloating {
   float:       right;
 }
 
@@ -287,7 +283,9 @@
   cursor:      default;
 }
 
-#echologicActionPic {
+/* Important actions */
+
+.actionPic {
   float:       left;
   margin:      5px -490px 0 0;
   width:       630px;
@@ -295,14 +293,15 @@
   background:  url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;
   position:    relative;
   z-index:     5;
+  border:      none;
 }
 
-#echologicActionPic:hover {
+.actionPic:hover {
   background-position: 0 -128px;
   cursor:      pointer;
 }
 
-#echologicActionCall {
+.actionCall {
   font-size:   23px;
   font-weight: bold;
   color:       #21587f;
@@ -408,9 +407,22 @@
   margin:        -4px 10px 0;
 }
 
-.mainIllustration {
-  margin:        -10px 20px 0 0;
+#feedbackIllustration {
+  float:         right;
   width:         190px;
+  margin:        5px 25px 0 0;
+}
+
+#joinIllustration {
+  float:         right;
+  width:         128px;
+  margin:        -21px 0 0 8px;
+}
+
+#inviteIllustration {
+  float:         right;
+  width:         200px;
+  margin:        30px 15px 0 0px;
 }
 
 /* invited people */

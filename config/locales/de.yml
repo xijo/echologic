@@ -599,14 +599,14 @@ de:
       open_document: Dokument öffnen!
       
     join:
-      title: &your_echo 'Ihr echo'
-      subtitle: &join 'echologic werden'
+      title: &your_echo Ihr echo
+      subtitle: &join 'echologic werden' 
       
     invite:
-      title: &invite 'Einladen'
+      title: &invite 'echo bewirken'
       
   # Interested persons (wannabe memebers)    
-  interested_persons:
+  join:
     new:
       title: *your_echo
       subtitle: *join
@@ -620,7 +620,7 @@ de:
         Organisationen vorangetrieben.
         </p><p>
         Möchten Sie auch die Entwicklung von <strong>echo aktiv mitgestalten</strong>!?<br/>
-        Tragen Sie bitte unten Ihren Namen und Ihre E-Mail Adresse ein!<br/>
+        Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!<br/>
         Wir melden uns bei Ihnen sobald es losgeht.
         </p>
 
@@ -629,11 +629,13 @@ de:
 
       name: Name
       email: E-Mail  
-      send_button: Ja, ich werde echologic
+      send_button: |
+        Für eine gemeinsame Zukunft!<br/>
+        Ich werde echologic!
       
-    show:
+    invite:
       title: *your_echo
-      subtitle: *join
+      subtitle: Danke
       
       thank_you: |
         <p>
@@ -658,28 +660,25 @@ de:
         Bewirken Sie ein echo!
         </p> 
         
-      invite: &invite Freunde Bescheid sagen!
+      invite: Freunde Bescheid sagen!
 
-  # Invited People
-  invited_persons:
-    new:
+    new_invitation:
       title: *your_echo
-      subtitle: echo bewirken
+      subtitle: *invite
       
-    invite:
-      <p>
-      Hier können Sie Ihre Freunde und Kollegen auf echologic aufmerksam machen.
-      Bitte tragen Sie Ihren eigenen Namen und die E-Mail Adressen Ihrer 
-      Freunde ein!
-      </p><p>
-      Verbreiten Sie das Wort!</br/>
-      Bewirken Sie ein echo!
-      </p>
-
+      text:
+        <p>
+        <strong>Hier können Sie Ihre Freunde und Kollegen auf echologic aufmerksam machen.</strong>
+        </p><p>
+        Bitte tragen Sie Ihren eigenen Namen und die E-Mail Adressen Ihrer Freunde ein!
+        </p>
+  
       name: Ihr Name
       email: E-Mail Adressen Ihrer Freunde
       email_separate: Trennen Sie bitte mehrere E-Mail Adressen mit Komma.
-      invite_button: *invite 
+      invite_button: |
+        Verbreiten Sie das Wort!<br/>
+        Bewirken Sie ein echo!
   
   # Feedback resources
   feedback_locale:
@@ -738,8 +737,8 @@ de:
         echologic bietet Ihnen die Möglichkeit, die Entwicklung dieses einmaligen Projektes zu verfolgen und 
         aktiv mit zu gestalten, um gemeinsam den Weg in eine friedliche und nachhaltige Zukunft zu ebnen.
         </p><p>
-        Erfahren Sie mehr über echo!
-        Werden Sie echologic!
+        <strong>Erfahren Sie mehr über echo!<br/>
+        Werden Sie echologic!</strong>
         </p><p>
         Mit den besten Wünschen,
         </p><p>

@@ -60,3 +60,23 @@ a {
 .link {
   cursor:       pointer;
 }
+
+.floatLeft {
+  float:       left;
+}
+
+.floatRight {
+  float:       right;
+}
+
+.clear {
+  clear:        both;
+}
+
+.clearLeft {
+  clear:        left;
+}
+
+.clearRight {
+  clear:        right;
+}

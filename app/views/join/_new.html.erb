@@ -2,28 +2,25 @@
   <%= render :partial => 'join/tabs' %>
 <% end %>
 
-<%= link_to_remote("<h1 class='link'>#{t('interested_persons.new.title')}</h1>", {:url => join_path}, :href => join_path) %>
-<h2><%= t('interested_persons.new.subtitle') %></h2>
+<%= link_to_remote("<h1 class='link'>#{t('.title')}</h1>", {:url => join_path}, :href => join_path) %>
+<h2><%= t('.subtitle') %></h2>
 
-<%= t('interested_persons.new.text') %>
+<%= image_tag ('page/illustrations/join.jpg', :id => 'joinIllustration') %>
 
-<%= image_tag ('page/illustrations/join.jpg', :class => 'rightFloating mainIllustration') %>
+<%= t('.text') %>
 
 <% form_remote_for @interested_person, 
 			:url => { :controller => "join", :action => "create_interested" } do |f| %>
-   
   <%= f.error_messages %>
-
   <div class="formBlock">
-    <%= f.label :name, t('interested_persons.new.name'), :class => 'formLabel' %><br />
+    <%= f.label :name, t('.name'), :class => 'formLabel' %><br />
     <%= f.text_field :name %>
   </div>
-  
   <div class="formBlock">
-    <%= f.label :email, t('interested_persons.new.email'), :class => 'formLabel' %><br />
+    <%= f.label :email, t('.email'), :class => 'formLabel' %><br />
     <%= f.text_field :email %>
   </div>
-  
-  <%= f.submit t('interested_persons.new.send_button'), :class => 'formButton250'  %>
-
+  <%= f.submit '', :class => 'actionPic' %>
 <% end %>
+
+<span class="actionCall"><%= t('.send_button') %></span>
