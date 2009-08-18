@@ -1,0 +1,17 @@
+<% remote_form_for @invited_person,
+			:before => "Element.show('invitedListHolder');",
+			:update => {:success => "invitedList"},
+			:position => :bottom,
+			:url => { :controller => "join", :action => "create_invitation" } do |f| %>
+  
+  <%= f.error_messages %>
+
+  <div class="formBlock">
+    <%= f.label :email, t('invited_persons.new.email'), :class => 'formLabel' %><br />
+    <%= f.text_field :email %>
+  </div>
+  
+  <%= f.hidden_field(:interested_person_id, @interested_person.id) if not @interested_person.nil? %>
+  <%= f.submit t('invited_persons.new.send_button'), :class => 'formButton250' %>
+
+<% end %>

@@ -323,7 +323,7 @@ de:
         und Entscheidungsfindungsprozess. echo bietet dadurch Ihnen und anderen Menschen <strong>einzigartige Möglichkeiten</strong>, 
         bei der gemeinsamen Gestaltung unserer Welt aktiv mitzuwirken.
         </p><p>
-        Auf echo, der globalen Agora, sind alle Beteiligten gleichberechtigte, <strong>freie Weltbürger</strong>!
+        In echo, der globalen Agora, sind alle Beteiligte gleichberechtigte, <strong>freie Weltbürger</strong>!
         </p>
         
     echocracy_citizens:
@@ -345,8 +345,7 @@ de:
         <li>Leicht nachvollziehbare Positionen verschiedener Gesellschaftsgruppen und Regionen</li>
       adv2: Selbstbestimmung 
       adv2_details: |
-        <li>Direkte Beteiligung an Entscheidungsfindung bezüglich Ihres unmittelbaren Lebensraums sowie der 
-        Zukunft unserer gemeinsamen Welt</li>
+        <li>Direkte Beteiligung an Entscheidungsfindung bezüglich Ihres unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt</li>
         <li>Überzeugung Anderer für den eigenen Standpunkt</li>
         <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
         <li>Einfache Organisation und Unterstützung realer Aktionen</li>
@@ -356,7 +355,7 @@ de:
       adv4: Befreiung vom Gefühl der Machtlosigkeit
       adv4_details: |
         <li>Spürbare Erfolge im eigenen Alltag</li>
-        <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft</li>
+        <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft </li>
       
     echocracy_scientists:
       title: ExpertInnen
@@ -602,6 +601,9 @@ de:
     join:
       title: &your_echo 'Ihr echo'
       subtitle: &join 'echologic werden'
+      
+    invite:
+      title: &invite 'Einladen'
       
   # Interested persons (wannabe memebers)    
   interested_persons:

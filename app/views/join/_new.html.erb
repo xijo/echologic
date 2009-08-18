@@ -1,9 +1,15 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'join/tabs' %>
+<% end %>
+
 <%= link_to_remote("<h1 class='link'>#{t('interested_persons.new.title')}</h1>", {:url => join_path}, :href => join_path) %>
 <h2><%= t('interested_persons.new.subtitle') %></h2>
 
 <%= t('interested_persons.new.text') %>
 
-<% form_for(@interested_person) do |f| %>
+<% form_remote_for @interested_person, 
+			:url => { :controller => "join", :action => "create_interested" } do |f| %>
+   
   <%= f.error_messages %>
 
   <div class="formBlock">
@@ -17,4 +23,5 @@
   </div>
   
   <%= f.submit t('interested_persons.new.send_button'), :class => 'formButton250'  %>
+
 <% end %>
