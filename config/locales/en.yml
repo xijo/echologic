@@ -714,7 +714,7 @@ en:
       message: Your message
       send: Send message
       
-  maily:
+  mailer:
     signature: |
       --
       echologic for echo - the global agora

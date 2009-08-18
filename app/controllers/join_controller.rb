@@ -1,23 +1,30 @@
 class JoinController < ApplicationController
 
-  # GET /interested_people/new
-  # GET /interested_people/new.xml
+  # 
   def new_interested
     @interested_person = InterestedPerson.new
 
     respond_to do |format|
       format.html { render :partial => "join/new_interested", :layout => "static" }
-      format.js
+      format.js { render :template => "static_content/outer_menu", :locals => { :menu_item => 'join/new_interested' }}
     end
   end
+  
   
   def create_interested
     @interested_person = InterestedPerson.new(params[:interested_person])
     respond_to do |format|
       if @interested_person.save
         flash[:id] = @interested_person.id
+        mail_params = Hash.new
+        mail_params[:body] = t('mailer.interest.body')
+        mail_params[:subject] = t('mailer.interest.subject')
+        mail_params[:signature] = t('mailer.signature')
+        mail_params[:name] = @interested_person.name
+        mail_params[:email] = @interested_person.email
+        puts params.inspect
         begin
-          Mailer.deliver_thank_you(@interested_person)
+          Mailer.deliver_thank_you(mail_params)
         rescue SocketError
           
         rescue

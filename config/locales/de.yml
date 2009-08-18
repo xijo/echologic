@@ -696,7 +696,7 @@ de:
       message: Nachricht
       send: Nachricht senden
     
-  maily:
+  mailer:
     signature: |
       --
       echologic für echo - die globale Agora

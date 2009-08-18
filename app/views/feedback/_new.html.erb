@@ -5,8 +5,18 @@
 
 <%= image_tag ('page/illustrations/feedback.png', :id => 'feedbackIllustration') %>
 
-errors:
-<%= flash[:error] %>
+<% if not flash[:error].empty? %>
+  <div id="errorExplanation" class="errorExplanation">
+    <h2><%= t('activerecord.errors.template.header.one') %></h2>
+    <p><%= t('activerecord.errors.template.body') %></p>
+    <ul>
+      <li>
+        <%= flash[:error] %>
+        <% flash[:error] = "" %>
+      </li>
+    </ul>
+  </div>
+<% end %>
 
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
