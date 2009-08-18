@@ -4,8 +4,13 @@ class Mailer < ActionMailer::Base
     @body         = params[:text]
     @name         = params[:name]
     @sender        = params[:sender]
+    if params[:sender].empty?
+      raise FeedbackController::NotComplete
+    else
+      @sender = params[:sender]
+    end
     @subject      = "echologic feedback"
-    @recipients   = 'team@echo-logic.org'
+    @recipients   = FEEDBACK_RECIPIENT
     @from         = "#{@name} <#{@sender}>"
     @sent_on      = sent_at
     @content_type = 'text/html'

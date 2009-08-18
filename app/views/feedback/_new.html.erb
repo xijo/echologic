@@ -1,9 +1,12 @@
 <%= link_to_remote("<h1 class='link'>#{t('static_content.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
-<h2><%= t('feedback_locale.title') %></h2>
+<h2><%= t('.title') %></h2>
 
-<%= t('feedback_locale.welcome') %>
+<%= t('.welcome') %>
 
 <%= image_tag ('page/illustrations/feedback.png', :id => 'feedbackIllustration') %>
+
+errors:
+<%= flash[:error] %>
 
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
@@ -18,10 +21,11 @@
   </div>
 
   <div class="formBlock">
-    <%= label_tag t('feedback_locale.message'), nil, :class => 'formLabel' %><br/>
+    <%= label_tag t('.message'), nil, :class => 'formLabel' %><br/>
     <%= text_area_tag :text %>
   </div>
 
-  <%= submit_tag t('feedback_locale.send'), :class => 'formButton200' %>
+  <%= submit_tag t('.send'), :class => 'formButton200' %>
   
 <% end -%>
+

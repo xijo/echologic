@@ -1,3 +1,0 @@
-page.replace_html 'staticContent', :partial => 'new'
-page.replace 'staticMenu', :partial => "layouts/menu"
-page.replace_html 'tabContainer', :partial => "join/tabs"

@@ -2,11 +2,11 @@ class JoinController < ApplicationController
 
   # GET /interested_people/new
   # GET /interested_people/new.xml
-  def new
+  def new_interested
     @interested_person = InterestedPerson.new
 
     respond_to do |format|
-      format.html { render :partial => "new", :layout => "static" }
+      format.html { render :partial => "join/new_interested", :layout => "static" }
       format.js
     end
   end
@@ -20,24 +20,25 @@ class JoinController < ApplicationController
           Mailer.deliver_thank_you(@interested_person)
         rescue SocketError
           
+        rescue
+          
         end
-        format.js { render :template => "join/invite" }        
-        format.html { redirect_to :controller => "join", :action => "invite" }
-#        flash[:notice] = 'InterestedPerson was successfully created.'
-#        @invited_person = InvitedPerson.new
-#        format.html { render :partial => "invited_people/new", :layout => "static" }
-        format.xml  { render :xml => @interested_person, :status => :created, :location => @interested_person }
+        #format.js { render :template => "join/new_invitation" }        
+
+        format.html
+        format.js 
       else    
-        format.html { render :action => "new", :layout => "static" }
-        format.js { render :action => "new" }
+        format.html { render :action => "new_interested", :layout => "static" }
+        format.js { render :action => "new_interested" }
       end
     end
   end
   
-  def invite
+  def new_invitation
+    puts 'hurra'
     @invited_person = InvitedPerson.new
-    #@interested_person = (flash[:id].nil?)? InterestedPerson.find(:first) : InterestedPerson.find(flash[:id])
-    @interested_person = InterestedPerson.find(flash[:id]) if flash[:id]
+    #@interested_person = InterestedPerson.find(flash[:id]) if flash[:id]
+    @interested_person = InterestedPerson.find(:first)
     respond_to do |format|
       format.html { render :partial => "invite", :layout => "static" }
       format.js
@@ -55,11 +56,11 @@ class JoinController < ApplicationController
           Mailer.deliver_invitation(@invited_person)
         rescue
         
-        end
+      end
         format.html { render :partial => 'invited_person', :locals => { :invited_person => @invited_person } }
       else
-        format.js { render :text => "" }
-        format.html { render :action => "invite" }
+        format.js { render :text => "fehler" }
+        format.html { render :action => "new_invitation" }
       end
     end
   end

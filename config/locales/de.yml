@@ -599,7 +599,7 @@ de:
       open_document: Dokument öffnen!
       
     join:
-      title: &your_echo Ihr echo
+      title: &your_echo 'Ihr echo'
       subtitle: &join 'echologic werden' 
       
     invite:
@@ -607,7 +607,7 @@ de:
       
   # Interested persons (wannabe memebers)    
   join:
-    new:
+    new_interested:
       title: *your_echo
       subtitle: *join
       
@@ -681,17 +681,18 @@ de:
         Bewirken Sie ein echo!
   
   # Feedback resources
-  feedback_locale:
-    title: *feedback
-    welcome: |
-      <p>
-      <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
-      </p><p>
-      Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
-      Wenden Sie sich vertrauensvoll an uns!
-      </p> 
-    message: Nachricht
-    send: Nachricht senden
+  feedback:
+    new:
+      title: *feedback
+      welcome: |
+        <p>
+        <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
+        </p><p>
+        Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
+        Wenden Sie sich vertrauensvoll an uns!
+        </p> 
+      message: Nachricht
+      send: Nachricht senden
     
   maily:
     signature: |
@@ -847,4 +848,24 @@ de:
           mb: "MB"
           gb: "GB"
           tb: "TB"
+
+  activerecord: 
+    errors:
+      models:
+        interested_person:
+          attributes:
+            name:
+              blank: 'Bitte einen Namen angeben.'
+            email:
+              blank: '{{attribute}}: Bitte eine E-Mail Adresse eingeben.'
+              taken: 'E-Mail Adresse ist bereits in Verwendung.'
+              invalid: 'Bitte eine gültige E-Mail Adresse verwenden.'
+      messages:
+        blank: 'nicht machen!'
+          
+      template:
+        header: 
+          one: "1 error prohibited this {{model}} from being saved" 
+          other: "{{count}} errors prohibited this {{model}} from being saved" 
+        body: "There were problems with the following fields:" 
      
