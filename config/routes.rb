@@ -1,12 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
 
   # Join / Invite routes
-  map.interested_people 'interested_people', :controller => "join", :action => "new"
-  map.invited_people 'invited_people', :controller => "join", :action => "invite"
+  map.interested_people 'interested_people', :controller => "join", :action => "new_interested"
+#  map.invited_people 'invited_people', :controller => "join", :action => "new_invitation"
 
   map.with_options :controller => "join" do |join|
-    join.join 'join', :action => 'new'
-    join.invite 'invite', :action => 'invite'
+    join.join 'join', :action => 'new_interested'
+#    join.invite 'invite', :action => 'new_invitation'
     join.create_interested 'create_interested', :action => 'create_interested', :method => :post
   end
   
@@ -100,4 +100,5 @@ end
 # Load german i18n file
 #ActionController::Routing::Translator.i18n('es')
 #ActionController::Routing::Translator.i18n('en')
-ActionController::Routing::Translator.i18n
+#ActionController::Routing::Translator.i18n
+ActionController::Routing::Translator.translate_from_file 'config/locales', 'i18n-routes.yml'

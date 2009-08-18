@@ -16,11 +16,14 @@
   </div>
   <div class="hint"><%= t('.email_separate') %></div>
   <br/>
-  
-  <%= f.hidden_field(:interested_person_id, @interested_person.id) if not @interested_person.nil? %>
+
+
   <%= f.submit '', :class => 'actionPic' %>
 
 <% end %>
+
+  
+
 
 <span class="actionCall"><%= t('.invite_button') %></span>
 

@@ -619,14 +619,14 @@ en:
       open_document: Check out the document anyway!
       
     join:
-      title: Your echo
+      title: &your_echo 'Your echo'
       subtitle: &join 'Become echologic'
       
     invite:
       title: &invite 'Make an echo'
 
   join:
-    new:
+    new_interested:
       title: *your_echo
       subtitle: *join
       
@@ -700,17 +700,18 @@ en:
         Make an echo! 
 
   # Feedback resources
-  feedback_locale:
-    title: *feedback
-    welcome: |
-      <p>
-      <strong>We are happy to hear your opinion!</strong><br/>
-      </p><p>
-      Do not hesitate to ask questions, make comments or to leave a criticism or kudos for us.
-      </p>
-    message: Your message
-    send: Send message
-    
+  feedback:
+    new:
+      title: *feedback
+      welcome: |
+        <p>
+        <strong>We are happy to hear your opinion!</strong><br/>
+        </p><p>
+        Do not hesitate to ask questions, make comments or to leave a criticism or kudos for us.
+        </p>
+      message: Your message
+      send: Send message
+      
   maily:
     signature: |
       --
