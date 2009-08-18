@@ -123,7 +123,8 @@ module StaticContentHelper
   def insert_static_menu_image(item, link)
     action = request[:action].split('_')[0]
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
-    activeMenu = action.eql?(item) ? ' activeMenu' : ''
+#    activeMenu = action.eql?(item) ? ' activeMenu' : ''
+    activeMenu = request.path.eql?(link) ? ' activeMenu' : ''
     "<div class='menuImage#{activeMenu}' style='background: url(#{image})'></div>"
   end
   

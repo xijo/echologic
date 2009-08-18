@@ -16,10 +16,12 @@ class Mailer < ActionMailer::Base
     @content_type = 'text/html'
   end
   
-  def thank_you(interested_person)
-    @body         = "Dear #{interested_person.name}"
-    @subject      = "echologic thank you"
-    @recipients   = interested_person.email
+  # Used to send an e-Mail when user joined
+  def thank_you(params)
+    puts params.inspect
+    @body         = params[:body]
+    @subject      = params[:subject]
+    @recipients   = params[:email]
     @from         = "noreply@echo-logic.org echologic"
     @sent_on      = Time.now
     @content_type = 'text/html'
