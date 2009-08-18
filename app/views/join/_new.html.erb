@@ -7,6 +7,8 @@
 
 <%= t('interested_persons.new.text') %>
 
+<%= image_tag ('page/illustrations/join.jpg', :class => 'rightFloating mainIllustration') %>
+
 <% form_remote_for @interested_person, 
 			:url => { :controller => "join", :action => "create_interested" } do |f| %>
    

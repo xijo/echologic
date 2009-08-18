@@ -625,7 +625,7 @@ de:
         </p>
 
       waiting: |
-        engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
+        {{count}} engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
 
       name: Name
       email: E-Mail  
@@ -722,12 +722,12 @@ de:
         </p>
     
     invitation:
-      subject: XY empfehlt Ihnen echologic - Demokratie neu gedacht
+      subject: '{{name}} empfehlt Ihnen echologic - Demokratie neu gedacht'
       body: |
         <p>
         Liebe(r) WeltbürgerIn und Freund der Demokratie,
         </p><p>
-        <strong>XY</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong> 
+        <strong>{{name}}</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong> 
         aufmerksam zu machen. echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem 
         gemeinsamen Ziel, <strong>echo - die globale Agora</strong> zu verwirklichen. 
         </p><p>
