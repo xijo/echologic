@@ -121,21 +121,29 @@ module StaticContentHelper
   
   # Returns the image filename (on of off state) for a specific item.
   def insert_static_menu_image(item, link)
-    action = request[:action].split('_')[0]
+    #action = request[:action].split('_')[0]
+    action = request.path.split('/')[0..2].join('/')
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
-#    activeMenu = action.eql?(item) ? ' activeMenu' : ''
-    activeMenu = request.path.eql?(link) ? ' activeMenu' : ''
+    activeMenu = action.eql?(link) ? ' activeMenu' : ''
     "<div class='menuImage#{activeMenu}' style='background: url(#{image})'></div>"
   end
   
   # Container is only visible in echologic
   def display_echologic_container
-    request[:action].eql?('echologic') ? '' : "style='display:none'"
+    if (request[:action].eql?('echologic') || request[:controller].eql?('feedback') || request[:controller].eql?('join'))
+      return ''
+    else
+      return "style='display:none'"
+    end
   end
   
   # tabContainer is not visible in echlogic
   def display_tab_container
-    request[:action].eql?('echologic') ? "style='display:none'" : ''
+    if (request[:action].eql?('echologic') || request[:controller].eql?('feedback') || request[:controller].eql?('join'))
+      return "style='display:none'"
+    else
+      return ''
+    end    
   end
 
   # gets the latest twittered content of the specified user account
