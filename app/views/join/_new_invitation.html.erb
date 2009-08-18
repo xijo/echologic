@@ -7,11 +7,21 @@
   <%= f.error_messages %>
 
   <div class="formBlock">
-    <%= f.label :email, t('invited_persons.new.email'), :class => 'formLabel' %><br />
-    <%= f.text_field :email %>
+    <%= f.label :name, t('.name'), :class => 'formLabel' %><br/>
+    <%= f.text_field :name %>
   </div>
+  <div class="formBlock">
+    <%= f.label :email, t('.email'), :class => 'formLabel' %><br/>
+    <%= f.text_area :email %>
+  </div>
+  <div class="hint"><%= t('.email_separate') %></div>
+  <br/>
   
   <%= f.hidden_field(:interested_person_id, @interested_person.id) if not @interested_person.nil? %>
-  <%= f.submit t('invited_persons.new.send_button'), :class => 'formButton250' %>
+  <%= f.submit '', :class => 'actionPic' %>
 
 <% end %>
+
+<span class="actionCall"><%= t('.invite_button') %></span>
+
+<br/>

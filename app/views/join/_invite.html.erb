@@ -2,34 +2,25 @@
   <%= render :partial => 'join/tabs' %>
 <% end %>
 
-<h1>New invited_person</h1>
-<h4>Invite your friends and collegues</h4>
+<%= link_to_remote("<h1 class='link'>#{t('.title')}</h1>", {:url => join_path}, :href => join_path) %>
+<h2><%= t('.subtitle') %></h2>
 
-<p>
-  Dear <% # @interested_person.name %>,<br/><br/>
-  
-  we'd like to thank you for the attention you pay on our project. Please feel free to use the following form to show this page to the rest of the world. <br/><br/>
-  
-  Your echologic team
-</p>
+<%= t('join.new_invitation.text') %>
 
-<div id="invitedListHolder" style="display:none;">
+<!--<div id="invitedListHolder" style="display:none;">
   Thank you for sending an inviting e-mail to the following people:
   <ul id="invitedList">
    
   </ul>
-</div>
+</div>-->
+
+<%= image_tag ('page/illustrations/invite.png', :id => 'inviteIllustration') %>
 
 <%= render :partial => "new_invitation" %>
 
-<div id="inviteText">
-  <p>
-    The following text will be mailed to the one you invited:
-  </p>
-  <p>
-    Dear <span id="invited_name">'name'</span>, <br/>
-    bla bla blabla <br/>
-    your echologic team
-  </p>
-  
+<div id="inviteText" class="clearLeft">
+  <br/><br/>
+  <%= t('maily.invitation.subject', :name => 'Laci') %>
+  <br/><br/>
+  <%= t('maily.invitation.body', :name => 'Laci') %>
 </div>

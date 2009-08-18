@@ -30,8 +30,16 @@
   color:       #1A4864;
 }
 
-/* language selector */
-/* BETA */
+#languageChooser {
+  background:  transparent url(../images/page/icons/babelfish.png) no-repeat scroll;
+  padding:      0 0 0 20px;
+}
+
+.topMenuItem {
+  margin:       0 0 0 6px;
+}
+
+/* Language selector */
 
 #overlay {
   background:  transparent;
