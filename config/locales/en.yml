@@ -115,9 +115,9 @@ en:
           challenges never seen before. However, satisfactory solutions are not in sight. The lack of transparency 
           in political decision making provokes a growing sense of <strong>powerlessness</strong> and 
           <strong>political resignation</strong> in the population and weakens people's faith in democracy. 
-          Calls for <strong>transparency</strong> and <strong>participation</strong> are growing louder.
+          Calls for <strong>transparency</strong> and more <strong>participation</strong> are growing louder.
           </p><p> 
-          The actual crises can thus be understood as a general <strong>crisis of democracy</strong>.<br/>
+          The current crises can thus be understood as a general <strong>crisis of democracy</strong>.<br/>
           New ways have to be found, empowering people to develop <strong>constructive solutions</strong> to effectively tackle 
           our <span title="{{tooltip}}" class="ttLink">“glocal” challenges</span>.
           </p> 
@@ -644,7 +644,7 @@ en:
 
       name: Name
       email: E-Mail  
-      send_button: YES, I become echologic
+      send_button: Yes, I become echologic
       
     show:
       title: *your_echo
