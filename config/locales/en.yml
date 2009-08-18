@@ -643,7 +643,7 @@ en:
         </p>
         
       waiting: |
-        citizens, experts and politicians are already waiting to form echo together with you.
+        {{count}} citizens, experts and politicians are already waiting to form echo together with you.
 
       name: Name
       email: E-Mail  
@@ -741,12 +741,12 @@ en:
         </p>
         
     invitation:
-      subject: XY recommends you echologic - democracy rethought
+      subject: '{{name}} recommends you echologic - democracy rethought'
       body: |
         <p>
         Dear world citizen and friend of democracy,
         </p><p>
-        <strong>XY</strong> sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
+        <strong>{{name}}</strong> sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
         echologic is a network of free minds and organizations united to realize <strong>echo - the global agora</strong>.
         </p><p>
         echo seeks nothing less than to establish a <strong>new kind of participatory democracy</strong> on the very 
