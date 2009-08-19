@@ -20,7 +20,7 @@ class Mailer < ActionMailer::Base
     @body         = params[:body]
     @subject      = params[:subject]
     @recipients   = params[:email]
-    @from         = "noreply@echo-logic.org echologic"
+    @from         = "echologic <team@echo-logic.org>"
     @sent_on      = Time.now
     @content_type = 'text/html'
   end
@@ -30,7 +30,7 @@ class Mailer < ActionMailer::Base
     @body         = "Dear #{invited_person.name}, your knowee #{name} invited you to take a look on our project: echo - the global agora!"
     @subject      = "echologic invitation"
     @recipients   = invited_person.email
-    @from         = "noreply@echo-logic.org echologic"
+    @from         = "echologic <team@echo-logic.org>"
     @sent_on      = Time.now
     @content_type = 'text/html'
   end  
