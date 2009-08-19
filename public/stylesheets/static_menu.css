@@ -31,6 +31,21 @@
   height:      97px;
 }
 
+.mainBox {
+  width:       945px;
+  margin:      0 auto;
+  z-index:     5;
+  clear:       both;
+  text-align:  left;
+  padding:     0 23px;
+}
+
+#mainBoxContent {
+  overflow-y:    auto;
+  overflow-x:    hidden;
+}
+
+
 #staticMenu .activeMenu {
   background-position: 0 -97px !important;
 }
