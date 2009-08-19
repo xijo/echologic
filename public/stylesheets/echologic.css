@@ -223,6 +223,20 @@
   font-size:   14px;
 }
 
+.mainBox {
+  width:       945px;
+  margin:      0 auto;
+  z-index:     5;
+  clear:       both;
+  text-align:  left;
+  padding:     0 23px;
+}
+
+#mainBoxContent {
+  overflow-y:    auto;
+  overflow-x:    hidden;
+}
+
 #staticContent {
   width:       620px;
   min-height:  480px;
