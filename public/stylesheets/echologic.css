@@ -204,7 +204,7 @@
 #newsHolder {
   position:    absolute;
   top:	  	   0px;
-  width: 	   285px;
+  width: 	     285px;
 }
 
 #newsHolder .newsTitle {
@@ -223,20 +223,9 @@
   font-size:   14px;
 }
 
-.mainBox {
-  width:       945px;
-  margin:      0 auto;
-  padding:     0 23px;
-}
-
-#mainBoxContent {
-  overflow-y:    auto;
-  overflow-x:    hidden;
-}
-
 #staticContent {
-/*  float:       left;*/
   width:       620px;
+  min-height:  480px;
   padding:     2px 5px;
 }
 
@@ -312,7 +301,6 @@
 /* Navigation */
 
 .backNextHolder {
-  clear:        both;
   margin:       30px auto 12px;
   text-align:   center;
   height:       43px;
