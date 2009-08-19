@@ -670,8 +670,6 @@ en:
         Your echo team
         </p>
         
-      back: Back to echologic home
-        
       recommend: |
         <p>
         Would you also like to call your friends' and colleagues' attention to echologic?<br/>
@@ -731,7 +729,7 @@ en:
         <p>
         Dear future echologic member,
         </p><p>
-        Many thanks for your interest on <strong>echo - the global agora</strong>.
+        Many thanks for your interest on <strong>echo - the global agora</strong>.<br/>
         We will contact you as soon as you can log in to echologic and participate 
         in forming echo for a peaceful and sustainable future of humanity.
         </p><p>
