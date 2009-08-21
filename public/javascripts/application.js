@@ -1,9 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-
-
-
+/* Do init stuff. */
 $(document).ready(function () {
 
     makeQTips();
@@ -14,6 +12,7 @@ $(document).ready(function () {
 
 });
 
+/* Toggle more text on click, use toggleParams. */
 function bindMoreHideButtonEvents() {
     $('.moreButton').click(function() {
         $(this).next().animate(toggleParams, 300);
@@ -28,6 +27,7 @@ function bindMoreHideButtonEvents() {
     });
 }
 
+/* Show and hide language selection on mouse enter and mouse leave. */
 function bindLanguageSelectionEvents() {
     $('#languageChooser').bind("mouseenter", function() {
         $('#languageSelector').show();
@@ -38,12 +38,15 @@ function bindLanguageSelectionEvents() {
     });
 }
 
+/* Remove all activeMenu classes and give it to the static menu item specified
+ * through the given parameter. */
 function changeMenuImage(item) {
     $('#staticMenu .menuImage').removeClass('activeMenu');
     $('#staticMenu #'+item+'MenuImage .menuImage').toggleClass('activeMenu');
 }
 
-
+/* Use this parameters to render toggle effects.
+ * Checks if browser uses opacity. */
 var toggleParams;
 if (jQuery.support.opacity) {
     toggleParams = { 'height' : 'toggle', 'opacity': 'toggle' };
@@ -51,9 +54,8 @@ if (jQuery.support.opacity) {
     toggleParams = { 'height' : 'toggle' };
 }
 
-/*
- * Defines the qTip style for the static content tooltips, named echo_tooltip.
- */
+/* Defines the qTip style for the static content tooltips and attaches it
+ * to all instances of the ttLink class. */
 function makeQTips() {
 
     $.fn.qtip.styles.echo_tooltip = {
@@ -69,33 +71,3 @@ function makeQTips() {
         show: { effect: { type: 'fade', length: 0 } }
     });
 }
-
-//jQuery.fn.fadeThenSlideToggle = function(speed, easing, callback) {
-//  if (this.is(":hidden")) {
-//    return this.slideDown(speed, easing).fadeTo(speed, 1, easing, callback);
-//  } else {
-//    return this.fadeTo(speed, 0, easing).slideUp(speed, easing, callback);
-//  }
-//};
-
-//    $("p").click(function () {
-//      $(this).slideUp();
-//    });
-//    $("p").hover(function () {
-//      $(this).addClass("hilite");
-//    }, function () {
-//      $(this).removeClass("hilite");
-//    });
-
-
-
-jQuery.fn.moreButtonEvents() = function() {
-    
-}
-
-function bindMoreButtonEvents() {
-    
-}
-
-
-//$(this).hide();Effect.Appear($(this).previous(0), {duration:0.3});Effect.Appear($(this).next(0), {duration:0.4});Effect.BlindDown($(this).next(0), {duration:0.3});

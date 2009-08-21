@@ -21,3 +21,9 @@ $('#staticContent').appear(400);
 
 /* Bind click event handlers for more and hide buttons. */
 bindMoreHideButtonEvents();
+
+/* Render tooltips. */
+makeQTips();
+
+/* Bind click event handlers for more and hide buttons. */
+bindMoreHideButtonEvents();
