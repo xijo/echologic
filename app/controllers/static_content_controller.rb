@@ -9,7 +9,7 @@ class StaticContentController < ApplicationController
   def echologic
     respond_to do |format|
       format.html { render :partial => 'static_content/echologic', :layout => 'static', :locals => { :without_tabs => 'true' } }
-      format.js { render :template => 'static_content/echologic' }
+      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'echologic' }}
     end
   end
   

@@ -60,7 +60,7 @@ en:
       ms2: | 
         <font size="+2">is a network of free minds <br/>and organizations united to realize</font> 
       ms3: | 
-        echo - the global <span href="#" title="{{tooltip}}" class="ttLink">agora</span>!
+        echo - the global <span title="{{tooltip}}" class="ttLink">agora</span>!
 
       agora_tooltip: |
         The agora was the central place in ancient Athens – the cradle of democracy. 

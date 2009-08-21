@@ -62,7 +62,7 @@ de:
       ms2: | 
         ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
       ms3: | 
-        echo - die globale <span href="#" title="{{tooltip}}" class="ttLink">Agora</span>!
+        echo - die globale <span title="{{tooltip}}" class="ttLink">Agora</span>!
 
       agora_tooltip: |
         Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
@@ -119,7 +119,7 @@ de:
           </p><p> 
           Die aktuellen Krisen können also als eine allgemeine <strong>Krise der Demokratie</strong> verstanden werden. 
           Es gilt daher den Menschen eine Möglichkeit zu geben, gemeinsam <strong>konstruktive Lösungen</strong> zu entwickeln, 
-          um den <span href="#" title="{{tooltip}}" class="ttLink">“glokalen” Herausforderungen</span> 
+          um den <span title="{{tooltip}}" class="ttLink">“glokalen” Herausforderungen</span> 
           unserer Zeit effektiv begegnen zu können.
           </p>
           
@@ -134,7 +134,7 @@ de:
         text: |
           <p>
           echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt. 
-          Anders als auf <span href="#" title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf 
+          Anders als auf <span title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf 
           echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbasis</span></strong> und können 
           <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten. 
           Dazu vereint echo technische Innovation und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept. 
@@ -195,7 +195,7 @@ de:
       democratic: Demokratische Meinungsbildung
       democratic_more: |
         Jede Position auf echo repräsentiert eine fundierte Stellungnahme, welche von den NutzerInnen in einem 
-        <span href="#" title="{{tooltip}}" class="ttLink">vollkommen demokratischen Prozess</span> ausgearbeitet wird. 
+        <span title="{{tooltip}}" class="ttLink">vollkommen demokratischen Prozess</span> ausgearbeitet wird.
         Mit geringstem Aufwand können sich so alle Menschen gleichberechtigt an der dynamischen Entwicklung solcher Stellungnahmen beteiligen. 
 
       democratic_tooltip:
@@ -484,10 +484,10 @@ de:
         <p>
         Finanzieren Sie Ihre Aktionen ohne finanziellen Aufwand!
         </p><p>
-        echo verbindet <strong><span href="#" title="{{tooltip_nonprofit}}" class="ttLink">Gemeinnützigkeit</span></strong> mit 
+        echo verbindet <strong><span title="{{tooltip_nonprofit}}" class="ttLink">Gemeinnützigkeit</span></strong> mit 
         <strong>tragfähigen Geschäftsmodellen</strong>. „Tragfähig“ bedeutet jedoch nicht bloße Kostendeckung, 
         sondern die Bereitstellung von Mitteln für Aktionen und Projekte von NutzerInnen und Organisationen. 
-        Hierfür bietet Ihnen echo mehrere <span href="#" title="{{tooltip_costneutral}}" class="ttLink">kostenneutrale</span> Möglichkeiten, 
+        Hierfür bietet Ihnen echo mehrere <span title="{{tooltip_costneutral}}" class="ttLink">kostenneutrale</span> Möglichkeiten, 
         Geld auf Ihrem persönlichen virtuellen Konto zu sammeln. Die so gesammelten Gelder können Sie nach Belieben an 
         Aktionen und Projekte von NROs, Interessengemeinschaften oder Privatpersonen verteilen. 
         So kann Ihr virtuelles Engagement <strong>reale Früchte</strong> tragen!

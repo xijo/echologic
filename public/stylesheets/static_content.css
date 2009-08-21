@@ -12,20 +12,11 @@ li {
 }
 
 /* more buttons */
-.moreButton {
+.moreButton, .hideButton {
   cursor:   pointer;
   color:    #7BB031;
 }
 
-.moreButton:hover {
+.moreButton:hover, .hideButton:hover {
   border-bottom: 1px dotted #7BB031;
-}
-
-.hideButton {
-  cursor:   pointer;
-  color:    #21587f;
-}
-
-.hideButton:hover {
-  border-bottom: 1px dotted #21587f;
 }

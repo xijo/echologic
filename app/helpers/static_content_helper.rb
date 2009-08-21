@@ -24,7 +24,7 @@ module StaticContentHelper
   # displayed highlighted.  
   def insert_remote_tab(link)
     name = link.tr('/', '_')[4..-1]
-    tab = "<div>#{t('static_content.' + name + '.title')}</div>"
+    tab = "<span>#{t('static_content.' + name + '.title')}</span>"
     classname = request.path.eql?(link) ? 'activeTab' : ''
     link_to_remote(tab, {:url => link}, :href => link, :class => classname)
   end
@@ -116,7 +116,7 @@ module StaticContentHelper
     button =  insert_static_menu_image(item, link)
     button += "<span class='menuTitle'>#{t(title)}</span><br/>"
     button += "<span class='menuSubtitle'>#{t(subtitle)}</span>"
-    link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton')
+    link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton', :id => item.split('_')[0]+"MenuImage")
   end
   
   # Returns the image filename (on of off state) for a specific item.
@@ -175,6 +175,13 @@ module StaticContentHelper
   
   def insert_more_hide_buttons()
     # hide button
+    concat("<span class='hideButton' style='display:none;'>#{t('general.hide')}</span>")
+    # more button
+    concat("<span class='moreButton'>#{t('general.more')}</span>")
+  end
+  
+  def insert_more_hide_buttons2()
+    # hide button
     concat("<span class='moreButton' style='display:none;' onclick=\"")
       concat("$(this).hide();")
       concat("Effect.Appear($(this).next(0), {duration:0.3});")
@@ -184,23 +191,10 @@ module StaticContentHelper
     # more button
     concat("<span class='moreButton' onclick=\"")
       concat("$(this).hide();")
-      concat("Effect.Appear($(this).previous(0), {duration:0.3});")      
+      concat("Effect.Appear($(this).previous(0), {duration:0.3});")
       concat("Effect.Appear($(this).next(0), {duration:0.4});")
       concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
     concat("\">#{t('general.more')}</span>")
-
-  end
-  
-  # more/hide helper
-  def insert_more(text)
-    concat("<span class='moreButton' onclick=\"")
-      concat("Effect.Fade($(this), {duration:0.3});")
-      concat("Effect.Appear($(this).next(0), {duration:0.4});")
-      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
-      concat("\">#{t('general.more')}</span>")
-    concat("<div style='display: none;'>")
-      concat("#{text}")
-    concat("</div>")
   end
   
 end
