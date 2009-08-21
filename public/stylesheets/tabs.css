@@ -1,39 +1,70 @@
+/*  Container which holds all tabs. With specified height and negative margin
+    it takes care for the correct positioning and overlapping with 'mainBox'
+
+    20.8.2009 - Joe (tested: ie8, ff3, ff2):
+        - margin to margin-left: centering in ff2
+        - display block and min-height for jquery's visible check
+        - margin moved to single tabs
+*/
 .tabContainer {
-  height:       61px;
-  margin:       0 auto -17px auto;
+  margin-left:  auto;
   clear:        both;
   width:        900px;
   text-align:   center;
   z-index:      10;
+  min-height:   1px;
+  display:      block;
 }
 
+/*  tab links. holding left part of background and positioning.
+
+    20.8.2009 - Joe:
+        - background: 'scroll left 6px' seem useless.
+        - display inline-block and -moz-inline-block for compatibility
+        - floating left for correct display of contents
+        - margin-bottom from tabContainer to move over mainBox
+*/
 .tabContainer a, .tabContainer a:visited {
-  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left 6px;  
+  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;
+  display:      -moz-inline-block;
+  height:       48px;
   display:      inline-block;
-  height:       61px;  
+  float:        left;
   color:        #7bb031;
   font-size:    15px;
   text-decoration: none; 
   border:       0px;
+  margin-bottom:-12px;
+
 }
 
 .tabContainer a:hover {
   color:        #1A4864;
 }
 
-.tabContainer a div {
-  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right 6px;  
-  height:       61px;
+/*  Holds the right side of a tab and grows with its content.
+
+    20.8.2009 - Joe:
+        - background: 'scroll left 6px' seem useless.
+        - height ajusted to match parent
+        - line-height to display vertical centered
+        - changed from div to span to match w3c standards
+*/
+
+.tabContainer a span {
+  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
   margin:       0 0 0 21px;
-  padding:      25px 21px 0 0;
+  padding:      0 21px 0 0;
   float:        left;
+  height:       48px;
+  line-height:  54px;
 }
 
 .activeTab, .activeTab:visited {
-  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left 6px !important;
+  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
   color:        #1A4864 !important;
 }
 
-.activeTab div {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right 6px !important;
+.activeTab span {
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
 }

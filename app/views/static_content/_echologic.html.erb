@@ -3,9 +3,9 @@
 <span id="echoTeaser"><%= t('.teaser') %></span>
 
 <div id="echoHeader">
-  <div id=echoLogo><%= image_tag('page/echo_logo.png') %></div>
-  <div id=headerGlue><%= t('.header1') %></div>
-  <div id=headerMessage><%= t('.header2') %></div>
+  <div id="echoLogo"><%= image_tag('page/echo_logo.png') %></div>
+  <div id="headerGlue"><%= t('.header1') %></div>
+  <div id="headerMessage"><%= t('.header2') %></div>
 </div>
 
 <%= t('.teaser_more') %>
@@ -15,8 +15,3 @@
   <span class="actionCall"><%= t('.action') %></span>	
 </div>
 
-<script type="text/javascript" charset="utf-8">
-  $$(".ttLink").each( function(text) {
-    new Tooltip(text);
-  });
-</script>
