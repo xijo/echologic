@@ -59,14 +59,14 @@ if (jQuery.support.opacity) {
 function makeQTips() {
 
     $.fn.qtip.styles.echo_tooltip = {
-       width: { max: 450 }, background: '#7AB030',
+       width: { max: 450 }, background: '#7AB030', 'font-size': 12,
        color: 'white', textAlign: 'left',
        border: { width: 1, radius: 8, color: '#7AB030' },
        tip: 'topLeft', name: 'dark' // Inherit attributes from dark style
     }
     
     $(".ttLink").qtip({
-        position: { target: 'mouse', corner: { target: 'bottomMiddle' } },
+        position: { target: 'mouse', corner: { target: 'bottomMiddle' }, adjust: { x: 12, y:10 } },
         style: 'echo_tooltip',
         show: { effect: { type: 'fade', length: 0 } }
     });

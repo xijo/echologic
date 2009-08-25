@@ -1,7 +1,6 @@
+# Error to indicate the feedback form wasn't filled out completely.
+# Thrown by: mailer
 class NotComplete < StandardError
-end
-
-class NoText < StandardError
 end
 
 class FeedbackController < ApplicationController
@@ -23,13 +22,14 @@ class FeedbackController < ApplicationController
       format.html { redirect_to(echologic_path) }        
     end
   end
-  
+
+  # Rescues eventually occuring errors and handles them by redirecting to
+  # the feedback page with error message in the flash storage.
+  # TODO errors as an array in flash, currently just one error per request.
   def rescue_action(exception)
     case (exception)
       when NotComplete
         then flash[:error] = t('activerecord.errors.models.feedback.attributes.blank')
-      when NoText 
-        then flash[:error] = t('activerecord.errors.models.feedback.attributes.text.blank')
       when Net::SMTPSyntaxError
         then flash[:error] = t('activerecord.errors.models.feedback.attributes.email.invalid')
     end

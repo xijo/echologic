@@ -1,5 +1,8 @@
 class Mailer < ActionMailer::Base
 
+  # Sends a feedback e-Mail to echo with the given parameters. If not
+  # all information is provided an exception will raise.
+  # Recipient specified through environment variable FEEBACK_RECIPIENT.
   def feedback(params, sent_at = Time.now)
     @body         = params[:text]
     @name         = params[:name]
@@ -24,7 +27,8 @@ class Mailer < ActionMailer::Base
     @sent_on      = Time.now
     @content_type = 'text/html'
   end
-  
+
+  # Depricated at the moment while invitations are disabled.
   def invitation(invited_person)
     name          = InterestedPerson.find(invited_person.interested_person_id).name
     @body         = "Dear #{invited_person.name}, your knowee #{name} invited you to take a look on our project: echo - the global agora!"
