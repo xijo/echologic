@@ -8,8 +8,6 @@ module StaticContentHelper
   # Creates a css tab object with a specific name and link.
   # If the relating action was requested, the tab will be
   # displayed highlighted.
-  # ATTENTION: not optimal yet.
-  # ATT2: small workaround.
   def insert_tab(link)
     name = link.tr('/', '_')[1..-1]
     tab = "<a href='#{link}'"
@@ -39,27 +37,6 @@ module StaticContentHelper
     yield
     concat "</div>\n<div class='boxBottom'>\n  <div class='boxLeft'></div>\n"
     concat "  <div class='boxRight'></div>\n</div>"
-  end
-  
-  # Insert the top elements of a rounded box
-  def insert_rounded_box_top
-    top =  "<div class='boxTop'>"
-    top += "  <div class='boxLeft'></div>"
-    top += "  <div class='boxRight'></div>"
-    top += "</div>"
-    top += "<div class='boxMiddle'>"
-    top += "  <div class='boxMiddleLeft'></div>"
-  end
-  
-  # Insert the bottom elements of a rounded box
-  def insert_rounded_box_bottom
-    <<-BOTTOM   
-  </div>
-  <div class="boxBottom">
-    <div class="boxLeft"></div>
-    <div class="boxRight"></div>
-  </div>
-    BOTTOM
   end
 
   # Inserts the breadcrumb for the given main and sub menu point
@@ -124,8 +101,8 @@ module StaticContentHelper
     #action = request[:action].split('_')[0]
     action = request.path.split('/')[0..2].join('/')
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
-    activeMenu = action.eql?(link) ? ' activeMenu' : ''
-    "<div class='menuImage#{activeMenu}' style='background: url(#{image})'></div>"
+    active_menu = action.eql?(link) ? ' activeMenu' : ''
+    "<div class='menuImage#{active_menu}' style='background: url(#{image})'></div>"
   end
   
   # Container is only visible in echologic
@@ -148,8 +125,7 @@ module StaticContentHelper
 
   # gets the latest twittered content of the specified user account
   # via json.
-  # WARNING: raises nil error if there haven't been a tweet.
-  # rescued: SocketError, NilError
+  # RESCUES: SocketError, Exception
   def get_twitter_content
     begin
       require 'open-uri'
@@ -165,36 +141,15 @@ module StaticContentHelper
     end
   end
   
-  # more/hide helper
+  # Inserts text area with the given text and two buttons for opening and
+  # closing the area.
+  # Click-functions are added via jQuery, take a look at application.js
   def insert_toggle_more(text)
-    insert_more_hide_buttons()
+    concat("<span class='hideButton' style='display:none;'>#{t('general.hide')}</span>")
+    concat("<span class='moreButton'>#{t('general.more')}</span>")
     concat("<div style='display: none;'>")
       concat("#{text}")
     concat("</div>")
   end
-  
-  def insert_more_hide_buttons()
-    # hide button
-    concat("<span class='hideButton' style='display:none;'>#{t('general.hide')}</span>")
-    # more button
-    concat("<span class='moreButton'>#{t('general.more')}</span>")
-  end
-  
-  def insert_more_hide_buttons2()
-    # hide button
-    concat("<span class='moreButton' style='display:none;' onclick=\"")
-      concat("$(this).hide();")
-      concat("Effect.Appear($(this).next(0), {duration:0.3});")
-      concat("Effect.Fade($(this).next(1), {duration:0.4});")
-      concat("Effect.BlindUp($(this).next(1), {duration:0.3});")
-    concat("\">#{t('general.hide')}</span>")
-    # more button
-    concat("<span class='moreButton' onclick=\"")
-      concat("$(this).hide();")
-      concat("Effect.Appear($(this).previous(0), {duration:0.3});")
-      concat("Effect.Appear($(this).next(0), {duration:0.4});")
-      concat("Effect.BlindDown($(this).next(0), {duration:0.3});")
-    concat("\">#{t('general.more')}</span>")
-  end
-  
+
 end
