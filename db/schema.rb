@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090812170351) do
+ActiveRecord::Schema.define(:version => 20090829092843) do
 
   create_table "interested_people", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,62 @@ ActiveRecord::Schema.define(:version => 20090812170351) do
     t.integer  "interested_person_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "locales", :force => true do |t|
+    t.string "code"
+    t.string "name"
+  end
+
+  add_index "locales", ["code"], :name => "index_locales_on_code"
+
+  create_table "roles", :force => true do |t|
+    t.string   "name",              :limit => 40
+    t.string   "authorizable_type", :limit => 40
+    t.integer  "authorizable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "translations", :force => true do |t|
+    t.string  "key"
+    t.string  "raw_key"
+    t.text    "value"
+    t.integer "pluralization_index", :default => 1
+    t.integer "locale_id"
+  end
+
+  add_index "translations", ["locale_id", "key", "pluralization_index"], :name => "index_translations_on_locale_id_and_key_and_pluralization_index"
+
+  create_table "users", :force => true do |t|
+    t.string   "login",                                   :null => false
+    t.string   "email",                                   :null => false
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token",                       :null => false
+    t.string   "perishable_token",                        :null => false
+    t.integer  "login_count",          :default => 0,     :null => false
+    t.integer  "failed_login_count",   :default => 0,     :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "active",               :default => false, :null => false
+    t.string   "openid_identifier"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end
