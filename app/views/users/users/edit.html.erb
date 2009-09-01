@@ -1,0 +1,14 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<h1>Edit My Account</h1>
+
+<% form_for @user, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Update" %>
+<% end %>
+
+
+ 

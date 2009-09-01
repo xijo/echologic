@@ -1,0 +1,20 @@
+<% insert_breadcrumb(echologic_path, echologic_path) %>
+
+<%= I18n.t('static_content.echologic.temptitle') %>
+
+<span id="echoTeaser"><%= t('static_content.echologic.teaser') %></span>
+
+<div id="echoHeader">
+  <div id="echoLogo"><%= image_tag('page/echo_logo.png') %></div>
+  <div id="headerGlue"><%= t('static_content.echologic.header1') %></div>
+  <div id="headerMessage"><%= t('static_content.echologic.header2') %></div>
+</div>
+
+<%= t('static_content.echologic.teaser_more') %>
+
+<div>
+  <%= link_to_remote('<div class="actionPic"></div>', {:url => echo_path}, :href => echo_path) %>
+  <span class="actionCall"><%= t('static_content.echologic.action') %></span>
+</div>
+
+

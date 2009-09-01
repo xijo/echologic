@@ -1,0 +1,21 @@
+<div id="loginContainer">
+
+  <% if current_user_session %>
+    <span class="label">Hello <%= current_user.login %></span>
+    
+    <%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %><br/>
+
+  <% else %>
+    <% form_for UserSession.new, :url => user_session_path do |f| %>
+      <span class="label"><%= t('.email') %></span>
+      <span class="label"><%= t('.password') %></span><br/>
+      <%= f.text_field :login, :class => 'NEWloginField' %>
+      <%= f.password_field :password, :class => 'NEWloginField' %>
+      <%= f.submit 'Login', :class => 'NEWloginButton' %><br/>
+      <%= link_to 'Signup', new_user_path %><br/>
+      <%= link_to 'Forgot', new_password_reset_path %><br/>
+      <span class="sublabel"><%= link_to(t('.remember'), '#') %></span>
+      <span class="sublabel"><%= link_to(t('.forgot'), '#') %></span>
+    <% end %>
+  <% end %>
+</div>

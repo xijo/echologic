@@ -1,0 +1,23 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<% insert_breadcrumb(echo_path, echo_path) %>
+
+<h3><%= I18n.t('static.echo.index.why.title') %></h3>
+<%= I18n.t('static.echo.index.why.text', :tooltip => I18n.t('static.echo.index.why.tooltip')) %>
+<!--<%= t('.why.text_more', :tooltip => t('.why.tooltip')) %>
+<% insert_toggle_more(t('.why.text_more', :tooltip => t('.why.tooltip'))) %>-->
+
+<h3><%= I18n.t('static.echo.index.what.title') %></h3>
+<%= I18n.t('static.echo.index.what.text',
+  :tooltip1 => I18n.t('static.echo.index.what.tooltip1'),
+  :tooltip2 => I18n.t('static.echo.index.what.tooltip2')) %>
+
+
+<% insert_illustrations([echo_path(:discuss),
+                         echo_path(:connect),
+                         echo_path(:act),
+                         echo_path(:echo_on_waves)]) %>
+
+<% insert_back_next_buttons(echologic_path, echo_path(:discuss)) %>
