@@ -27,8 +27,14 @@ de:
     
   # User data related resources
   user_data:
-    name: Name
     email: E-Mail
+    name: Name
+
+
+  user_sessions:
+    login:
+      password: Passwort
+      email: E-Mail
 
   # Localizations for the layout components
   layouts:
@@ -45,7 +51,7 @@ de:
     bottom_menu:
       imprint: &imprint Impressum
       data_privacy: &data_privacy Datenschutz
-    static:
+    application:
       invite: |
         Verwirklichen Sie echo!<br/>
         Werden Sie echologic!

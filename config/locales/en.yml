@@ -44,7 +44,7 @@ en:
     bottom_menu:
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
-    static:
+    application:
       invite: |
         Become echologic!<br/>
         Make an echo!
@@ -768,6 +768,19 @@ en:
         Your echo team
         </p>
 
+  users:
+    users:
+      title: 'Connect'
+    profile:
+      title: 'Profile'
+
+  user_sessions:
+    login:
+      email: E-Mail
+      password: Password
+      remember: Remember
+      forgot: Forgot?
+
   activerecord: 
     errors:
       models:
@@ -792,3 +805,33 @@ en:
           one: "One of the fields is filled incorrectly." 
           other: "{{count}} fields are filled incorrectly." 
         body: "Please correct the following:" 
+
+
+
+################ NEW ######################
+
+  static:
+    echo:
+      tabs:
+        echo: echo
+        discuss: "Discuss"
+        connect: "Connect"
+        act: "Act"
+        echo_on_waves: "Echo on Waves"
+
+    echocracy:
+      tabs:
+        echocracy: "echocracy"
+        citizens: "Citizens"
+        scientists: "Scientists"
+        decision_makers: "Decision Makers"
+        organisations: "Ogranisations"
+
+    echonomy:
+      tabs:
+        echonomy: "echonomy"
+        your_profit: "Your Profit"
+        foundation: "Foundation"
+        public_property: "Public Property"
+
+        
