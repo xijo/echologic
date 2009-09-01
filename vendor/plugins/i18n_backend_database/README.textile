@@ -1,0 +1,120 @@
+h1. A Database Backend For Rails I18N
+
+Stores your translations in the database, rather than yaml files.  As you tag items with i18n.t() throughout your code base, all untranslated items are marked and added to the database.  An admin panel is provided so translators can quickly translate untranslated text.  All lookups occur in a cache store of your choice prior to hitting the database.
+
+
+h2. Installation
+
+<pre>
+  <code>
+    script/generate i18n_backend_database       # add migration
+    rake db:migrate                             # migrate
+
+    rake i18n:populate:load_default_locales     # populate default locales
+    rake i18n:populate:from_rails               # populate the locales and translations tables from all Rails Locale YAML files.
+    rake i18n:populate:from_application         # populate the translation tables from translation calls within the application.
+    rake i18n:populate:synchronize_translations # create non-default locale translation records from default locale translations.
+    rake i18n:populate:all                      # run all populate tasks.
+    rake i18n:translate:google                  # translate all untranslated string values using Google Language Translation API.
+  </code>
+</pre>
+
+
+In config/initialisers/i18n.rb
+
+<pre>
+  <code>
+    I18n.backend = I18n::Backend::Database.new # registers the backend
+    I18n.backend.cache_store = :memory_store   # optional: specify an alternate cache store
+    I18n.backend.localize_text_tag = '##'      # optional: specify an alternate localize text tag, the default is ^^
+  </code>
+</pre>
+
+In config/routes.rb to register admin panel routes
+
+<pre>
+  <code>
+    map.from_plugin 'i18n_backend_database'
+  </code>
+</pre>
+
+h2. Use
+
+All non-user generated text provided by the application needs to be wrapped in a call to I18n.t().
+<pre>
+  <code>
+    I18n.t("Hello there!")
+  </code>
+</pre>
+
+Interpolation is handled by passing in key/value pairs as a value to an interpolation tag ( {{ }} ).
+<pre>
+  <code>
+    I18n.t("Hello there {{name}}!", :name => "Dylan")
+  </code>
+</pre><pre>
+  <code>
+    I18n.t("Click {{here}} or {{there}}", :here => "link_to(I18n.t('midnite'), croix_path)", :there => "link_to(I18n.t('staten_island'), wu_path)")
+  </code>
+</pre>
+
+Pluralization is handled by passing in a "count" key value pair, which is a unique interpolation value.
+<pre>
+  <code>
+    I18n.t("You are {{count}} years old", :count => 100)
+  </code>
+</pre>
+
+Links to external documents that need to be translated should be tagged as well.
+<pre>
+  <code>
+    I18n.t('http://www.elctech.com/core')
+    </code>
+  </pre>
+
+All fragment cache view blocks need to have their keys prepended with the current locale.
+<pre>
+  <code>
+    cache("#{I18n.locale}-footer_#{controller.action_name}")
+  </code>
+</pre>
+
+Date/Time localization is handled by using the I18n.l method.  The format used will be :default (see next item for explanation).
+<pre>
+  <code>
+    I18n.l(@user.joined_at)
+  </code>
+</pre>
+
+Date/Time localization can take a format parameter that corresponds to a key in the translations table (the Rails defaults :default, :short, and :long are available).  We could in theory create our own like en.date.formats.espn_default.
+<pre>
+  <code>
+    I18n.l(@user.joined_at, :format => :default)
+    I18n.l(@user.joined_at, :format => :short)
+    I18n.l(@user.joined_at, :format => :espn_default)
+  </code>
+</pre>
+
+Date/Time localization can take a custom format string as well.
+<pre>
+  <code>
+    I18n.l(@user.joined_at, :format => "%B %e, %Y")
+  </code>
+</pre>
+
+Text stored in a database can be localized by tagging the text being stored and then localizing in the view etc.
+<pre>
+  <code>
+    I18n.tlt("is now friends with") => "^^is now friends with^^"
+    I18n.lt("shane ^^is now friends with^^ dylan") => "shane ahora es con amigos dylan"
+  </code>
+</pre>
+
+Images can be translated with the I18n.ta tag
+<pre>
+  <code>
+    <%= image_tag(I18n.ta("logos/elc.gif"), :size => "134x75") %>
+    </code>
+  </pre>
+In this example, for a locale es, there should be an image: public/es/images/logos/elc.gif
+
