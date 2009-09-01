@@ -1,0 +1,9 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<% insert_breadcrumb(echo_path, echo_path(:echo_on_waves)) %>
+
+<%= I18n.t('static.echo.echo_on_waves.text') %>
+
+<% insert_back_next_buttons(echo_path(:act), echocracy_path) %>

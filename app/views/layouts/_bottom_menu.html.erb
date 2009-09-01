@@ -1,5 +1,5 @@
 <div id="bottomMenuContainer">
-  echologic (2009) 
-  <%= link_to_remote t('.imprint'), {:url => imprint_path}, :href => imprint_path %>
-  <%= link_to_remote t('.data_privacy'), {:url => data_privacy_path}, :href => data_privacy_path %>
+  echologic (2009)
+  <%= insert_outer_menu_item('imprint', static_path(:imprint)) %>
+  <%= insert_outer_menu_item('data_privacy', static_path(:data_privacy)) %>
 </div>

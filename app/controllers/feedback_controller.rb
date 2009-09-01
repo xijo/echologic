@@ -1,3 +1,6 @@
+# To handle smtp exceptions include the net/smtp-module.
+require 'net/smtp'
+
 # Error to indicate the feedback form wasn't filled out completely.
 # Thrown by: mailer
 class NotComplete < StandardError
@@ -9,7 +12,7 @@ class FeedbackController < ApplicationController
   def new
     flash[:error] = ""
     respond_to do |format|
-      format.html { render :partial => 'feedback/new', :layout => 'static' }
+      format.html { render :partial => 'feedback/new', :layout => 'application' }
       format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
     end
   end  
@@ -26,6 +29,7 @@ class FeedbackController < ApplicationController
   # Rescues eventually occuring errors and handles them by redirecting to
   # the feedback page with error message in the flash storage.
   # TODO errors as an array in flash, currently just one error per request.
+  # TODO write own smtpsyntaxerror
   def rescue_action(exception)
     case (exception)
       when NotComplete
@@ -34,7 +38,7 @@ class FeedbackController < ApplicationController
         then flash[:error] = t('activerecord.errors.models.feedback.attributes.email.invalid')
     end
     respond_to do |wants|
-      wants.html { render :partial => 'feedback/new', :layout => 'static' }
+      wants.html { render :partial => 'feedback/new', :layout => 'application' }
       wants.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
     end
   end

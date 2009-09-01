@@ -1,0 +1,20 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<h1>Register</h1>
+
+<% form_for @user, :url => users_path do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :login %><br />
+  <%= f.text_field :login %><br />
+
+  <%= observe_field(:login, :frequency => 0.2,
+                    :update => 'login_available') %>
+
+
+  <br />
+  <%= f.label :email %><br />
+  <%= f.text_field :email %><br />
+  <%= f.submit "Register" %>
+<% end %>

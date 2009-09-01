@@ -1,0 +1,9 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<% insert_breadcrumb(echonomy_path, echonomy_path(:public_property)) %>
+
+<%= t('.text', :tooltip => t('.tooltip')) %>
+
+<% insert_back_next_buttons(echonomy_path(:foundation), join_path) %>

@@ -1,0 +1,13 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<% insert_breadcrumb(echo_path, echo_path(:connect)) %>
+
+<%= I18n.t('static.echo.connect.text_top') %>
+
+<ol><%= I18n.t('static.echo.connect.list') %></ol>
+
+<%= I18n.t('static.echo.connect.text_bottom') %>
+
+<% insert_back_next_buttons(echo_path(:discuss), echo_path(:act)) %>

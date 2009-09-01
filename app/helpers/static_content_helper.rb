@@ -2,29 +2,25 @@
 #
 module StaticContentHelper
   
-  # DEPRICATED
-  # will evtl. be needed for unobtrusiveizing
-
   # Creates a css tab object with a specific name and link.
   # If the relating action was requested, the tab will be
   # displayed highlighted.
+
+  # information needed:
+  #  current controller
+  #  current action
+  #  translation path
+  #  tab = active tab?
+
   def insert_tab(link)
-    name = link.tr('/', '_')[1..-1]
-    tab = "<a href='#{link}'"
-    if request[:action].eql?(name)
-      tab << " class='activeTab'"
-    end
-    tab << "><div><br/>#{t('static_content.' + name + '.title')}</div></a>"
-  end
-  
-  # Inserts a tab with a remote link.
-  # If the relating action was requested, the tab will be
-  # displayed highlighted.  
-  def insert_remote_tab(link)
-    name = link.tr('/', '_')[4..-1]
-    tab = "<span>#{t('static_content.' + name + '.title')}</span>"
-    classname = request.path.eql?(link) ? 'activeTab' : ''
-    link_to_remote(tab, {:url => link}, :href => link, :class => classname)
+    tab_name = link.split('/')[-1]
+    #tab_name = 'index' if request[:controller].split('/')[-1].eql?(tab_name)
+    controller_name = request[:controller].tr('/', '.')
+    translation = I18n.t("#{controller_name}.tabs.#{tab_name}")
+    #tab = "<span>#{t(request[:controller] + '.' + name + '.title')}</span>"
+    tab = "<span>#{translation}</span>"
+    classname = request[:action].eql?(tab_name) ? 'activeTab' : ''
+    link_to(tab, {:url => link}, :href => link, :class => classname)
   end
   
   # Inserts div structure for rounded box
@@ -41,19 +37,40 @@ module StaticContentHelper
 
   # Inserts the breadcrumb for the given main and sub menu point
   def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
+    controller = request[:controller].split('/')[1]
+    action = request[:action]
     if main_link != sub_link
-      if show_illustration 
-        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '_small.png'
+      if show_illustration
+        pic_resource = "page/illustrations/#{controller}_#{action}_small.png"
         concat image_tag(pic_resource, {:class => 'cornerIllustration'})
       end
     else
       sub_menu_title = '.subtitle'
     end
-    
-    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
-    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
-    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
-    concat "<h2>#{t(sub_menu_title)}</h2>"
+
+    main_menu = "<h1 class='link'>" + I18n.t("static_content.#{controller}.title") + '</h1>'
+    concat link_to(main_menu, url_for(:controller => controller))
+    # TODO submenutitle remove leading dot
+    concat "<h2>#{I18n.t("static_content.#{controller}#{sub_menu_title}")}</h2>"
+#
+#    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
+#    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
+#    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
+#    concat "<h2>#{t(sub_menu_title)}</h2>"
+
+#    if main_link != sub_link
+#      if show_illustration
+#        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '_small.png'
+#        concat image_tag(pic_resource, {:class => 'cornerIllustration'})
+#      end
+#    else
+#      sub_menu_title = '.subtitle'
+#    end
+#
+#    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
+#    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
+#    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
+#    concat "<h2>#{t(sub_menu_title)}</h2>"
   end
 
   # Inserts illustrations as a link for the given array of paths.
@@ -74,53 +91,56 @@ module StaticContentHelper
   end
   
   # Insert back and next buttons according to the given paths.
+  # TODO w3c forbids block in anthor!
   def insert_back_next_buttons(prev_link, next_link)
     back_button = "<div id='previousPageButton' class='changePageButton'>#{t('general.back')}</div>"
     next_button = "<div id='nextPageButton' class='changePageButton'>#{t('general.next')}</div>"
     concat "<div class='backNextHolder'>"
-    concat link_to_remote(back_button, {:url => prev_link}, :href => prev_link)
+    concat link_to(back_button, prev_link, :class => 'prevNextButton')
     concat "<div class='separator'></div>"
-    concat link_to_remote(next_button, {:url => next_link}, :href => next_link)
+    concat link_to(next_button, next_link, :class => 'prevNextButton')
     concat "</div>"
   end
   
   # Inserts a static remote menu button with the information
-  # provided through the given link.  
+  # provided through the given link.
+  # Set ID for a-Tag to the menu name, to store it in the url fragment when
+  # using javascript. @see application.js
+
+  # TODO refactor: no longer remote. ajax handled by jquery, @see application.js
   def insert_static_remote_button(link)
     item = link.split('/')[2]
-    title = 'static_content.'+item+'.title'
-    subtitle = 'static_content.'+item+'.subtitle'
-    button =  insert_static_menu_image(item, link)
-    button += "<span class='menuTitle'>#{t(title)}</span><br/>"
-    button += "<span class='menuSubtitle'>#{t(subtitle)}</span>"
-    link_to_remote(button, {:url => link}, :href => link, :class => 'staticMenuButton', :id => item.split('_')[0]+"MenuImage")
+    title = "static_content.#{item}.title"
+    subtitle = "static_content.#{item}.subtitle"
+    button = get_static_menu_image(item, link)
+    button += "<span class='menuTitle'>#{I18n.t(title)}</span><br/>"
+    button += "<span class='menuSubtitle'>#{I18n.t(subtitle)}</span>"
+    link_to(button, {:url => link}, :href => link, :class => 'staticMenuButton', :id => item.split('_')[0])
   end
-  
+
   # Returns the image filename (on of off state) for a specific item.
-  def insert_static_menu_image(item, link)
-    #action = request[:action].split('_')[0]
-    action = request.path.split('/')[0..2].join('/')
+  def get_static_menu_image(item, link)
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
-    active_menu = action.eql?(link) ? ' activeMenu' : ''
-    "<div class='menuImage#{active_menu}' style='background: url(#{image})'></div>"
+    active_menu = request.path.split('/')[0..2].join('/').eql?(link) ? 'activeMenu' : ''
+    "<div class='menuImage #{active_menu}' style='background: url(#{image})'></div>"
   end
+
+  # Inserts a link to a outer menu item. Will be ajaxized through jQuery
+  # in application.js. If no special id is set the actual name is used.
+  def insert_outer_menu_item(name, link, id=name)
+    link_to(t('.'+name), {:url => link}, :href => link, :class => 'outerMenuItem', :id => id)
+  end
+
+
   
   # Container is only visible in echologic
   def display_echologic_container
-    if (request[:action].eql?('echologic') || request[:controller].eql?('feedback') || request[:controller].eql?('join'))
-      return ''
-    else
-      return "style='display:none'"
-    end
+    request[:controller].eql?('static/echologic') ? '' : "style='display:none'"
   end
   
-  # tabContainer is not visible in echlogic
+  # tabContainer is not visible in echologic
   def display_tab_container
-    if (request[:action].eql?('echologic') || request[:controller].eql?('feedback') || request[:controller].eql?('join'))
-      return "style='display:none'"
-    else
-      return ''
-    end    
+    request[:controller].eql?('static/echologic') ? "style='display:none'" : ''
   end
 
   # gets the latest twittered content of the specified user account

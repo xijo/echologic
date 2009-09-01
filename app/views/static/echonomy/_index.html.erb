@@ -1,0 +1,17 @@
+<% content_for :tabContainer do %>
+  <%= render :partial => 'tabs' %>
+<% end %>
+
+<% insert_breadcrumb(echonomy_path, echonomy_path) %>
+
+<%= t('.text_top') %>
+
+<ul><%= t('.list') %></ul>
+
+<%= t('.text_bottom') %>
+
+<% insert_illustrations([echonomy_path(:your_profit),
+                         echonomy_path(:foundation),
+                         echonomy_path(:public_property)]) %>
+
+<% insert_back_next_buttons(echocracy_path(:organisations), echonomy_path(:your_profit)) %>
