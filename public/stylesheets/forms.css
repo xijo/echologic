@@ -9,9 +9,53 @@
   color:        #7bb031;
 }
 
+/* Use css3 rounded borders for beautify in FF, Chrome, Safari. IE will ignore
+ * these settings. */
 input, textarea {
   color:        #21587f;
-  border:       1px inset #21587f;
+  /*border:       1px inset #21587f;*/
+  /* Joe's changes! */
+  border:       1px solid grey;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height:       20px;
+  padding:      3px 0 0 6px;
+  font-family:  Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  font-size:    12px;
+}
+
+.NEWloginButton {
+  background:   #24587D;
+  color:        #fff;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-family:  Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  font-size:    12px;
+  height:       25px;
+  width:        50px;
+  overflow:     auto;
+}
+
+.NEWloginButton:hover {
+  background:   #2B6894;
+}
+
+/* NEW login field by joe */
+.NEWloginField {
+  color:        #21587f;
+  /*border:       1px inset #21587f;*/
+  /* Joe's changes! */
+  border:       1px solid grey;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  height:       20px;
+  padding:      3px 0 0 6px;
+  width:        130px;
+  margin-top: 10px;
+}
+
+input:hover, input:active {
+  border:       1px solid #009900;
 }
 
 form input {
@@ -86,4 +130,3 @@ form textarea {
   color:        #999;
   padding:      0 0 0 1px;
 }
-

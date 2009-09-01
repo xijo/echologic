@@ -6,17 +6,19 @@
 
 #topMenuContainer {
   position:    relative;
-  float:       right;
-  width:       300px;
-  overflow:    visible;
-  height:      20px;
-  font-size:   12px;
+/*  float:       right;*/
+/*background: #000;*/
+/*display: inline-block;*/
+  /*width:       300px;*/
+/*  overflow:    visible;*/
+/*  height:      20px;*/
+  /*font-size:   12px;*/
 }
 
 #topMenuContainer a, #topMenuContainer a:visited {
   color:       #7691A2;
   font-family: arial,Helvetica,sans-serif;
-  margin:      5px 2px 0 15px;
+  margin:      5px 2px 0 18px;
   text-decoration:none;
   float:       right;
   font-size:   12px;
@@ -35,13 +37,10 @@
   padding:      0 0 0 20px;
 }
 
-.topMenuItem {
-  margin:       0 0 0 6px;
-}
-
 /* Language selector */
 
-#overlay {
+/* over and out solved by jquery, thanks! */
+/*#overlay {
   background:  transparent;
   position:    fixed;
   left:        0;
@@ -50,13 +49,13 @@
   height:      100%;
   z-index:     500;
   cursor:      default;
-}
+}*/
 
 #languageSelector {
   background:  transparent; 
   position:    absolute;
   top:         25px;
-  right:       -17px;
+  right:       0px;
   text-align:  right;
   width:       200px;
 }
