@@ -4,7 +4,7 @@ class Static::EchoController < ApplicationController
   def index
     respond_to do |format|
       format.html { render :partial => 'index', :layout => 'application' }
-      format.js { render :template => 'layouts/tabContainer' , :locals => { :menu_item => 'echo' } }
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 
