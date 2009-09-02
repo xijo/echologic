@@ -1,0 +1,23 @@
+/* 
+    Document   : translations
+    Created on : 30.08.2009, 08:33:09
+    Author     : xijo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+input {
+  border: 1px;
+  -moz-border-radius: 8px;
+  height: 22px;
+  padding-top: 8px;
+}
