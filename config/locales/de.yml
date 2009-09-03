@@ -81,6 +81,8 @@ de:
         
       teaser: |
         <p>
+        echologic bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mit zu gestalten!
+        </p><p>
         echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine 
         <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
         </p>
@@ -95,12 +97,10 @@ de:
         </p><p>
         Durch neuartige Möglichkeiten transnationaler und interkultureller Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert 
         und damit der Weg in eine friedliche, gerechte und <strong>nachhaltige Zukunft</strong> geebnet werden.
-        </p><p>
-        echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und aktiv mit zu gestalten!
         </p>
 
       action: | 
-        Erfahren Sie mehr über echo!<br/>Werden Sie echologic!
+        Erfahren Sie mehr über echo!
 
     # Static content for the echo main menu point
     echo:

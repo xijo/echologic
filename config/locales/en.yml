@@ -79,6 +79,8 @@ en:
         
       teaser: |
         <p>
+        echologic offers you the opportunity to follow and actively engage in the evolution of echo!
+        </p><p>
         echo is an Internet project of a special kind. We seek nothing less than to establish a 
         <strong>new kind of participatory democracy</strong> on the very local, as well as on the regional and global level.
         </p>
@@ -95,12 +97,10 @@ en:
         By facilitating new means of transnational and intercultural collaboration, echo aims to foster a 
         global consciousness and smoothen the path towards a peaceful, equitable and 
         <strong>sustainable future</strong>.
-        </p><p>
-        echologic offers you the opportunity to follow and actively engage in the evolution of this unique project!
         </p>
 
       action: | 
-        Learn more about echo!<br/>Become echologic!
+        Learn more about echo!
 
     # Static content for the echo main menu point
     echo:
