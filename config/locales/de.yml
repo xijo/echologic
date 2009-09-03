@@ -81,9 +81,9 @@ de:
         
       teaser: |
         <p>
-        echologic bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mit zu gestalten!
+        <strong>echologic</strong> bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mit zu gestalten!
         </p><p>
-        echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine 
+        <strong>echo</strong> ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine 
         <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
         </p>
       
@@ -630,7 +630,6 @@ de:
       name: Name
       email: E-Mail  
       send_button: |
-        Für eine gemeinsame Zukunft!<br/>
         Ich werde echologic!
       
     create_interested:

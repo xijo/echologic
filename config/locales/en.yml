@@ -79,9 +79,9 @@ en:
         
       teaser: |
         <p>
-        echologic offers you the opportunity to follow and actively engage in the evolution of echo!
+        <strong>echologic</strong> offers you the opportunity to follow and actively engage in the evolution of echo!
         </p><p>
-        echo is an Internet project of a special kind. We seek nothing less than to establish a 
+        <strong>echo</strong> is an Internet project of a special kind. We seek nothing less than to establish a 
         <strong>new kind of participatory democracy</strong> on the very local, as well as on the regional and global level.
         </p>
       
@@ -648,7 +648,6 @@ en:
       name: Name
       email: E-Mail  
       send_button: |
-        For a common future!<br/>
         I become echologic!
       
     create_interested:
