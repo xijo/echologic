@@ -34,7 +34,7 @@
   position:    relative;  
   float:       left;
   background:  url(../images/page/invitebubble_left.png) no-repeat;
-  left:        -5px;
+  left:        5px;
   top: 		   15px;
 }
 
@@ -60,6 +60,7 @@
 #loginContainer {
   clear:       right;
   float:       right;
+  display:     none;
 }
 
 #loginContainer .label {
