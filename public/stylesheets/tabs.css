@@ -7,13 +7,15 @@
         - margin moved to single tabs
 */
 .tabContainer {
-  margin-left:  auto;
+  /*margin-left:  auto;*/
+  margin:       0 auto -16px auto;
   clear:        both;
   width:        900px;
   text-align:   center;
   z-index:      10;
   min-height:   1px;
   display:      block;
+  padding-top:  10px;
 }
 
 /*  tab links. holding left part of background and positioning.
@@ -26,16 +28,12 @@
 */
 .tabContainer a, .tabContainer a:visited {
   background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;
-  display:      -moz-inline-block;
   height:       48px;
   display:      inline-block;
-  float:        left;
   color:        #7bb031;
   font-size:    15px;
   text-decoration: none; 
   border:       0px;
-  margin-bottom:-12px;
-
 }
 
 .tabContainer a:hover {
@@ -63,6 +61,7 @@
 .activeTab, .activeTab:visited {
   background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
   color:        #1A4864 !important;
+
 }
 
 .activeTab span {
