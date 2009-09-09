@@ -24,15 +24,25 @@ function startFragmentObservation() {
   $.fragmentChange(true);
 
   /* Do AJAX call on fragment change events for goto. */
-  $(document).bind("fragmentChange.go", function() {
-    $.getScript($.fragment().go);
+  $(document).bind("fragmentChange", function() {
+//    alert(document.location.hash);
+//    alert($.fragment().toString);
+//    $.getScript($.fragment().go);
+    $.getScript(document.location.hash);
+    
+    if ($.fragment().and) {
+      alert($.fragment().and)
+    }
+    if ($.fragment().go) {
+      alert($.fragment().go);
+    }
   });
 
   /* TODO double loading on fragment and changes. */
-  $(document).bind("fragmentChange.and", function() {
-    //$.getScript($.fragment().go+'/'+$.fragment().and);
-    $.getScript($.fragment().and);
-  });
+//  $(document).bind("fragmentChange.and", function() {
+//    //$.getScript($.fragment().go+'/'+$.fragment().and);
+//    $.getScript($.fragment().and);
+//  });
 
   /* If fragment is present on document load trigger fragmentChange event. */
   if ($.fragment()) {
@@ -53,7 +63,8 @@ function bindAjaxClickEvents() {
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */
 function bindStaticMenuClickEvents() {
   $(".staticMenuButton").live("click", function() {
-    $.setFragment({ 'go' : this.id }, 2);
+//    $.setFragment({ 'go' : this.id });
+    document.location.hash = this.href.toString().split('/')[4];
     return false;
   });
   $(".outerMenuItem").live("click", function() {
