@@ -3,7 +3,7 @@
 #
 ActionController::Routing::Routes.draw do |map|
 
-  # routing-filter plugin magic!
+  # routing-filter plugin for wrapping :locale around urls and paths.
   map.filter :locale
 
   # i18n database plugin
@@ -40,7 +40,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.with_options :controller => "join" do |join|
     join.join 'join', :action => 'new_interested'
-#    join.invite 'invite', :action => 'new_invitation'
     join.create_interested 'create_interested', :action => 'create_interested', :method => :post
   end
 #
@@ -61,26 +60,35 @@ ActionController::Routing::Routes.draw do |map|
 
 #  map.resources :translations
 
-  map.resource :user_session, :controller => 'users/user_sessions', :path_prefix => '', :only => [:new, :create, :destroy]
-
+  # user signup and login functionality
+  map.resource  :user_session, :controller => 'users/user_sessions',
+                :path_prefix => '', :only => [:new, :create, :destroy]
   map.resources :users, :controller => 'users/users', :path_prefix => ''
+  map.resources :password_resets, :controller => 'users/password_resets',
+                :path_prefix => '', :except => [:destroy]
+  map.resource  :profile, :controller => 'users/profile',
+                :path_prefix => '', :only => [:show, :edit, :update]
+  map.register  '/register/:activation_code',
+                :controller => 'users/activations', :action => 'new'
+  map.activate  '/activate/:id',
+                :controller => 'users/activations', :action => 'create'
 
-  map.resources :password_resets, :controller => 'users/password_resets', :path_prefix => '', :except => [:destroy]
+  # map static contents per controller
+  map.echo 'echo/:action', :controller => 'static/echo',
+           :conditions => { :method => :get }
+  map.echonomy 'echonomy/:action', :controller => 'static/echonomy',
+           :conditions => { :method => :get }
+  map.echocracy 'echocracy/:action', :controller => 'static/echocracy',
+           :conditions => { :method => :get }
+  map.echologic 'echologic', :controller => 'static/echologic', :action => 'index',
+           :conditions => { :method => :get }
+  map.static 'echologic/:action', :controller => 'static/echologic',
+           :conditions => { :method => :get }
 
-  map.resource :profile, :controller => 'users/profile', :path_prefix => '', :only => [:show, :edit, :update]
-
-  map.register '/register/:activation_code', :controller => 'users/activations', :action => 'new'
-  map.activate '/activate/:id',              :controller => 'users/activations', :action => 'create'
-
- 
-  map.echo 'echo/:action', :controller => 'static/echo', :conditions => { :method => :get }
-  map.echonomy 'echonomy/:action', :controller => 'static/echonomy', :conditions => { :method => :get }
-  map.echocracy 'echocracy/:action', :controller => 'static/echocracy', :conditions => { :method => :get }
-  map.echologic 'echologic', :controller => 'static/echologic', :action => 'index', :conditions => { :method => :get }
-  map.static 'echologic/:action', :controller => 'static/echologic', :conditions => { :method => :get }
-
+  # map root to index action of static echologic controller
   map.root :controller => 'static/echologic', :action => 'index'
 
+  # default routes
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

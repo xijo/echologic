@@ -13,7 +13,8 @@ class FeedbackController < ApplicationController
     flash[:error] = ""
     respond_to do |format|
       format.html { render :partial => 'feedback/new', :layout => 'application' }
-      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
+      format.js { render :template => 'layouts/headContainer' }
+#      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
     end
   end  
 

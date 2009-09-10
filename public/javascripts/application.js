@@ -11,7 +11,8 @@ $(document).ready(function () {
   bindMoreHideButtonEvents();
 
   bindStaticMenuClickEvents();
-  bindAjaxClickEvents();
+
+//  bindAjaxClickEvents();
 
   startFragmentObservation();
 
@@ -25,24 +26,12 @@ function startFragmentObservation() {
 
   /* Do AJAX call on fragment change events for goto. */
   $(document).bind("fragmentChange", function() {
-//    alert(document.location.hash);
-//    alert($.fragment().toString);
-//    $.getScript($.fragment().go);
-    $.getScript(document.location.hash);
-    
-    if ($.fragment().and) {
-      alert($.fragment().and)
-    }
-    if ($.fragment().go) {
-      alert($.fragment().go);
+    if (getActionFromHash()) {
+      $.getScript(getControllerFromHash()+'/'+getActionFromHash());
+    } else {
+      $.getScript(getControllerFromHash());
     }
   });
-
-  /* TODO double loading on fragment and changes. */
-//  $(document).bind("fragmentChange.and", function() {
-//    //$.getScript($.fragment().go+'/'+$.fragment().and);
-//    $.getScript($.fragment().and);
-//  });
 
   /* If fragment is present on document load trigger fragmentChange event. */
   if ($.fragment()) {
@@ -50,40 +39,61 @@ function startFragmentObservation() {
   }
 }
 
+/* splits the hash of a location and returns the name of the controller */
+function getControllerFromHash() {
+  return document.location.hash.split('/')[1];
+}
+
+function getActionFromHash() {
+  return document.location.hash.split('/')[2];
+}
+
+
+  /* TODO optimize splitting of url! */
+  /* TODO action set checking */
+/* Sets the fragment to the controller and action of the anchors href attribute. */
+function setActionControllerFragment(href) {
+  controller = href.toString().split('/')[4];
+  action = href.toString().split('/')[5];
+  if (href.toString().split('/')[5]) {
+    document.location.hash = '/' + controller + '/' + action;
+  } else {
+    document.location.hash = '/' + controller;
+  }
+}
+
 /* TODO: unobtrusive check */
 function bindAjaxClickEvents() {
   $(".ajaxLink").live("click", function() {
-    $.setFragment({ 'go' : this.href });
+    setActionControllerFragment(this.href);
     return false;
   });
 }
 
-
-
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */
 function bindStaticMenuClickEvents() {
   $(".staticMenuButton").live("click", function() {
-//    $.setFragment({ 'go' : this.id });
-    document.location.hash = this.href.toString().split('/')[4];
-    return false;
-  });
-  $(".outerMenuItem").live("click", function() {
-    $.setFragment({ 'go' : 'echologic/'+this.id });
+    setActionControllerFragment(this.href);
     return false;
   });
 
-  /* TODO optimize splitting of url! */
+  $(".outerMenuItem").live("click", function() {
+    setActionControllerFragment(this.href);
+    return false;
+  });
+
   $("#tabContainer a").live("click", function() {
-    var and = 'index'
-    if (this.href.split('/')[5]) {
-      and = this.href.split('/')[5];
-    }
-    $.setFragment({ 'and' : and });
+    setActionControllerFragment(this.href);
     return false;
   });
   
   $(".prevNextButton").live("click", function() {
-    $.setFragment({ 'and' : this.href.split('/')[5] });
+    setActionControllerFragment(this.href);
+    return false;
+  });
+
+  $(".illustrationHolder a").live("click", function() {
+    setActionControllerFragment(this.href);
     return false;
   });
 }

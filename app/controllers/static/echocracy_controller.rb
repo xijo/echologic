@@ -4,7 +4,7 @@ class Static::EchocracyController < ApplicationController
   def index
     respond_to do |format|
       format.html { render :partial => 'index', :layout => 'application' }
-      format.js { render :template => 'layouts/tabContainer' , :locals => { :menu_item => 'echocracy' } }
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 
@@ -12,7 +12,7 @@ class Static::EchocracyController < ApplicationController
   def citizens
     respond_to do |format|
       format.html { render :partial => 'citizens', :layout => 'application' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'citizens' } }            
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 
@@ -20,7 +20,7 @@ class Static::EchocracyController < ApplicationController
   def scientists
     respond_to do |format|
       format.html { render :partial => 'scientists', :layout => 'application' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'scientists' } }            
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 
@@ -28,7 +28,7 @@ class Static::EchocracyController < ApplicationController
   def decision_makers
     respond_to do |format|
       format.html { render :partial => 'decision_makers', :layout => 'application' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'decision_makers' } }            
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 
@@ -36,7 +36,7 @@ class Static::EchocracyController < ApplicationController
   def organisations
     respond_to do |format|
       format.html { render :partial => 'organisations', :layout => 'application' }
-      format.js { render :template => 'static_content/static_content' , :locals => { :menu_item => 'echocracy', :submenu_item => 'organisations' } }            
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 

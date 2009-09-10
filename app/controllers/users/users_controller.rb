@@ -43,6 +43,7 @@ class Users::UsersController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
+      format.js { render :template => 'layouts/tabContainer' }
     end
   end
 

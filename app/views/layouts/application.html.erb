@@ -13,19 +13,12 @@
     <%= javascript_include_tag 'jquery.qtip-1.0.0-min' %>
     <%# javascript_include_tag 'IE8' %>
     <%= javascript_include_tag 'jquery.ba-url.min' %>
-    
-    <% # stylesheet_link_tag 'wmd' %>
-    <% # javascript_include_tag 'showdown' %>
-    <% # javascript_include_tag 'wmd' %>
-    <% # javascript_include_tag 'example' %>
-    <% # javascript_tag "window._token = '#{form_authenticity_token}'" %>
-    <% # javascript_include_tag 'lowpro', 'remote' %>
   </head>
   <body>
 
   <div id="header">
     <div id="echologicLogo">
-      <%= link_to(image_tag('page/echologic_logo.png'), {:url => echologic_path}, :href => echologic_path, :class => :ajaxLink) %>
+      <%= link_to(image_tag('page/echologic_logo.png'), {:url => root_path}, :href => root_path, :class => :ajaxLink) %>
     </div>
     <div id="inviteBubble">
       <%= link_to(t('.invite'), {:url => join_path}, :href => join_path) %>
