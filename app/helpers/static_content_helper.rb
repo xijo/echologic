@@ -14,12 +14,12 @@ module StaticContentHelper
 
   def insert_tab(link)
     tab_name = link.split('/')[-1]
-    #tab_name = 'index' if request[:controller].split('/')[-1].eql?(tab_name)
     controller_name = request[:controller].tr('/', '.')
     translation = I18n.t("#{controller_name}.tabs.#{tab_name}")
-    #tab = "<span>#{t(request[:controller] + '.' + name + '.title')}</span>"
     tab = "<span>#{translation}</span>"
     classname = request[:action].eql?(tab_name) ? 'activeTab' : ''
+    # TODO index link identification in a clean way.
+    classname = 'activeTab' if (request[:action].eql?('index') && link.split('/').size==3)
     link_to(tab, {:url => link}, :href => link, :class => classname)
   end
   
@@ -85,7 +85,7 @@ module StaticContentHelper
       illustration +=   image_tag(pic_resource)
       illustration +=   "<h2>#{t(text_resource)}</h2>"
       illustration += "</div>"
-      concat link_to_remote(illustration, {:url => link}, :href => link)
+      concat link_to(illustration, {:url => link}, :href => link)
     end
     concat "</div>"
   end
