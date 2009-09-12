@@ -6,61 +6,25 @@ ActionController::Routing::Routes.draw do |map|
   # routing-filter plugin for wrapping :locale around urls and paths.
   map.filter :locale
 
-  # i18n database plugin
-  map.from_plugin 'i18n_backend_database'
+  # SECTION i18n
+  map.resources :locales, :controller => 'i18n/locales' do |locale|
+    locale.resources :translations, :controller => 'i18n/translations'
+  end
+  map.translations '/translations', :controller => 'i18n/translations', :action => 'translations'
+  map.asset_translations '/asset_translations', :controller => 'i18n/translations', :action => 'asset_translations'
+  map.filter_translations 'translations/filter', :controller => 'i18n/translations', :action => 'filter'
 
-
-#  map.resources :password_resets
-#
-#  # activation TODO optimize routes
-#  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
-#  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
-#
-#
-#  map.resource :profile, :controller => "users", :member => [ :edit_profile => :get ]
-#  # TODO optimize routes
-##  map.edit_profile 'profile/edit', :controller => 'users', :action => 'edit_profile'
-##  map.resource :profile, :controller => :users, :member => { :create => :post }
-#
-##  map.profile 'profile', :controller => :users, :action => :show
-#
-#  map.resource :account, :controller => "users"
-#
-#  map.resources :users
-#
-#
-#  map.resource :user_session
-#
-#
-#  # Join / Invite routes
-#  map.interested_people 'interested_people', :controller => "join", :action => "new_interested"
-##  map.invited_people 'invited_people', :controller => "join", :action => "new_invitation"
-#
-#
-
+  # SECTION join - depricated
   map.with_options :controller => "join" do |join|
     join.join 'join', :action => 'new_interested'
     join.create_interested 'create_interested', :action => 'create_interested', :method => :post
   end
-#
-  # Feedback route
+
+  # SECTION feedback
   map.resources :feedback, :only => [:new, :create]
 
   
-  # beta
-#  map.locale "//", :controller => "static_content", :action => "echologic"
-#
-#  map.root :controller => 'static_content'
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing the them or commenting them out if you're using named routes and resources.
-
-#  map.resources :translations
-
-  # user signup and login functionality
+  # SECTION user signup and login
   map.resource  :user_session, :controller => 'users/user_sessions',
                 :path_prefix => '', :only => [:new, :create, :destroy]
   map.resources :users, :controller => 'users/users', :path_prefix => ''
@@ -73,7 +37,7 @@ ActionController::Routing::Routes.draw do |map|
   map.activate  '/activate/:id',
                 :controller => 'users/activations', :action => 'create'
 
-  # map static contents per controller
+  # SECTION static - contents per controller
   map.echo 'echo/:action', :controller => 'static/echo',
            :conditions => { :method => :get }
   map.echonomy 'echonomy/:action', :controller => 'static/echonomy',
@@ -85,10 +49,10 @@ ActionController::Routing::Routes.draw do |map|
   map.static 'echologic/:action', :controller => 'static/echologic',
            :conditions => { :method => :get }
 
-  # map root to index action of static echologic controller
+  # SECTION root
   map.root :controller => 'static/echologic', :action => 'index'
 
-  # default routes
+  # SECTION default routes
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

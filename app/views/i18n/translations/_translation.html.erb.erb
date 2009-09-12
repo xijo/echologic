@@ -1,0 +1,6 @@
+<tr>
+  <td><%=h translation.raw_key %></td>
+  <td><%=h truncate(translation.value, :length => 40) %></td>
+  <td><%= link_to 'Edit', edit_locale_translation_path(@locale, translation) %></td>
+  <td><%= link_to 'Destroy', locale_translation_path(@locale, translation), :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

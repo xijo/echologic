@@ -1,5 +1,5 @@
 <%= insert_tab_stub('Discuss') %>
-<%= insert_tab(users_path, false) %>
+<%= insert_tab(users_path, { :ajax => false, :translation => I18n.t('layouts.application.tabs.connect') }) %>
 <%= insert_tab_stub('Act') %>
 <%= insert_tab_stub('Admin') if show_admin_options? %>
-<%= insert_tab(profile_path, false) %>
+<%= insert_tab(profile_path, { :ajax => false, :translation => I18n.t('layouts.application.tabs.my_echo') }) %>

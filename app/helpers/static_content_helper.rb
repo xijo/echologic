@@ -12,12 +12,11 @@ module StaticContentHelper
   #  translation path
   #  tab = active tab?
 
-  # TODO active tab detection in robust way
-
-  def insert_tab(link, ajax=true)
+  def insert_tab(link, options = {})
     classname = active_tab?(link)? 'activeTab' : ''
-    classname += ' ajax' if ajax
-    tab = "<span>#{get_tab_translation(link)}</span>"
+    classname += ' ajax' if options[:ajax]
+    # use translation if given otherwise get it from link
+    tab = "<span>#{options[:translation] || get_tab_translation(link)}</span>"
     link_to(tab, {:url => link}, :href => link, :class => classname)
   end
 

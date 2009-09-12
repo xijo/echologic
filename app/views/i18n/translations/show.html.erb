@@ -1,0 +1,28 @@
+<p>
+  <b>Key:</b>
+  <%=h @translation.key %>
+</p>
+
+<p>
+  <b>Raw key:</b>
+  <%=h @translation.raw_key %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @translation.value %>
+</p>
+
+<p>
+  <b>Pluralization index:</b>
+  <%=h @translation.pluralization_index %>
+</p>
+
+<p>
+  <b>Locale:</b>
+  <%=h @translation.locale_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_locale_translation_path(@locale, @translation) %> |
+<%= link_to 'Back', locale_translations_path(@locale) %>

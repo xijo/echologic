@@ -1,0 +1,25 @@
+<h1>Listing translations for <%= @locale.code %></h1>
+
+<p>
+  <%= link_to 'New translation', new_locale_translation_path %> |
+  <%= link_to 'Back', locales_path %>
+</p>
+
+<p>
+  Filter: <%= text_field_tag :filter %>
+  <%= select_tag :translated, "<option>all</option><option>untranslated</option>" %>
+</p>
+
+<%= observe_field(:filter, :frequency => 0.2, :update => :translations_list,
+      :with => "'filter_text=' + $('#filter').val() + '&selected=' + $('#translated').val()",
+      :url => {:controller => :translations, :action => :filter, :locale_id => @locale}) %>
+<%= observe_field(:translated, :frequency => 0.2, :update => :translations_list,
+      :with => "'filter_text=' + $('#filter').val() + '&selected=' + $('#translated').val()",
+      :url => {:controller => :translations, :action => :filter, :locale_id => @locale}) %>
+
+<div id="translations_list">
+  <%= render :partial => 'list' %>
+</div>
+
+<br />
+

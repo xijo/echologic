@@ -1,0 +1,25 @@
+<h1>Editing translation for <%= @locale.code %></h1>
+
+<p>
+  <b>Raw Key:</b>
+  <%=h @translation.raw_key %>
+</p>
+
+<p>
+  <b>Default Locale Value:</b>
+  <%=h @translation.default_locale_value %>
+</p>
+
+<% form_for([@locale, @translation]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :value %><br />
+    <%= f.text_area :value %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', locale_translation_path(@locale, @translation) %> |
+<%= link_to 'Back', locale_translations_path %>

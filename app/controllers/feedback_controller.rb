@@ -30,7 +30,6 @@ class FeedbackController < ApplicationController
   # Rescues eventually occuring errors and handles them by redirecting to
   # the feedback page with error message in the flash storage.
   # TODO errors as an array in flash, currently just one error per request.
-  # TODO write own smtpsyntaxerror
   def rescue_action(exception)
     case (exception)
       when NotComplete
