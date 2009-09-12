@@ -37,8 +37,9 @@ class User < ActiveRecord::Base
   # Signup process before activation: get login name and email, ensure to not
   # handle with sessions.
   def signup!(params)
-    self.login = params[:user][:login]
-    self.email = params[:user][:email]
+    self.name    = params[:user][:name]
+    self.prename = params[:user][:prename]
+    self.email   = params[:user][:email]
     save_without_session_maintenance
   end
 
@@ -70,6 +71,11 @@ class User < ActiveRecord::Base
   def deliver_password_reset_instructions!
     reset_perishable_token!
     Mailer.deliver_password_reset_instructions(self)
+  end
+
+  # Return the full name of the user consisting of pre- and surname
+  def full_name
+    "#{prename} #{name}"
   end
 
 end

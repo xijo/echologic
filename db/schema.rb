@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090829092843) do
+ActiveRecord::Schema.define(:version => 20090912071928) do
 
   create_table "interested_people", :force => true do |t|
     t.string   "name"
@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(:version => 20090829092843) do
   add_index "translations", ["locale_id", "key", "pluralization_index"], :name => "index_translations_on_locale_id_and_key_and_pluralization_index"
 
   create_table "users", :force => true do |t|
-    t.string   "login",                                   :null => false
     t.string   "email",                                   :null => false
     t.string   "crypted_password"
     t.string   "password_salt"
@@ -80,6 +79,8 @@ ActiveRecord::Schema.define(:version => 20090829092843) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "name"
+    t.string   "prename"
   end
 
 end

@@ -1,12 +1,31 @@
-<% content_for :tabContainer do %>
-  <%= render :partial => 'tabs' %>
-<% end %>
-
 <h1>Edit My Account</h1>
 
-<% form_for @user, :html => { :multipart => true } do |f| %>
+<% form_for @user, :url => profile_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
+  <%# render :partial => "form", :object => f %>
+
+  <p>
+    <%= f.label :prename %><br/>
+    <%= f.text_field :prename %>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :password, f.object.new_record? ? nil : "Change password" %><br />
+    <%= f.password_field :password %><br />
+    <br />
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %><br />
+  </p>
+
+  <p>
+    <%= f.label :picture %><br/>
+    <%= f.file_field :picture %>
+  </p>
+  
   <%= f.submit "Update" %>
 <% end %>
 

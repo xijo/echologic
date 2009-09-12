@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Catch access denied exception in the whole application and handle it.
-  #rescue_from 'Acl9::AccessDenied', :with => :access_denied
+  rescue_from 'Acl9::AccessDenied', :with => :access_denied
 
   # Initializes translate_routes
   #  before_filter :set_locale_from_url
@@ -77,6 +77,13 @@ class ApplicationController < ActionController::Base
     def redirect_back_or_default(default)
       redirect_to(session[:return_to] || default)
       session[:return_to] = nil
+    end
+
+    # If access is denied display warning and redirect to users_path
+    # TODO localize access denied message
+    def access_denied
+      flash[:error] = 'Access denied.'
+      redirect_to users_path
     end
 
 end

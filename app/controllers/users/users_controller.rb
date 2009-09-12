@@ -5,7 +5,7 @@ class Users::UsersController < ApplicationController
 
 
   access_control do
-    allow logged_in, :to => [:show, :index, :edit_profile]
+    allow logged_in, :to => [:show, :index]
     allow :admin
     allow anonymous, :to => [:new, :create]
   end
@@ -49,14 +49,8 @@ class Users::UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = @current_user
+    @user = User.find(params[:id])
   end
-
-  # GET /profile/edit
-  def edit_profile
-    @user = @current_user
-  end
-
 
   # modified users_controller.rb
   # TODO add response_to
@@ -98,16 +92,13 @@ class Users::UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = @current_user
-    puts "\n\nACHTUNG\n\n"
+    @user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        flash[:notice] = "User #{@user.login} was successfully updated."
-        format.html { redirect_to(@user) }
-        format.xml  { head :ok }
+        flash[:notice] = "User was successfully updated."
+        format.html { redirect_to(users_path) }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
   end
