@@ -12,15 +12,43 @@ module StaticContentHelper
   #  translation path
   #  tab = active tab?
 
-  def insert_tab(link)
-    tab_name = link.split('/')[-1]
-    controller_name = request[:controller].tr('/', '.')
-    translation = I18n.t("#{controller_name}.tabs.#{tab_name}")
-    tab = "<span>#{translation}</span>"
-    classname = request[:action].eql?(tab_name) ? 'activeTab' : ''
-    # TODO index link identification in a clean way.
-    classname = 'activeTab' if (request[:action].eql?('index') && link.split('/').size==3)
+  # TODO active tab detection in robust way
+
+  def insert_tab(link, ajax=true)
+    classname = active_tab?(link)? 'activeTab' : ''
+    classname += ' ajax' if ajax
+    tab = "<span>#{get_tab_translation(link)}</span>"
     link_to(tab, {:url => link}, :href => link, :class => classname)
+  end
+
+
+  # Returns true if if it is the selected tab. Checks through
+  # link and request.
+  # TODO detect singular routes like profile - then the anonymous action shouldn't
+  # be 'index' but 'show'
+  def active_tab?(link)
+    link_splitted = link.split('/')
+    link_controller = link_splitted[2]
+    link_action = link_splitted[3] || 'index'
+    request_controller = request[:controller].split('/')[-1]
+    request_action = request[:action] || 'index'
+    (request_action.eql?(link_action) && request_controller.eql?(link_controller))
+  end
+
+  # Returns the db stored translation for a tab with belonging to the given
+  # link.
+  def get_tab_translation(link)
+    tab_name = link.split('/')[-1]
+    translation_path = request[:controller].tr('/', '.')
+    I18n.t("#{translation_path}.tabs.#{tab_name}")
+  end
+
+
+  # Inserts a disabled tab for not yet implemented functionality. Like a
+  # kind of stub
+  def insert_tab_stub(name)
+    tab = "<span>#{name}</span>"
+    link_to(tab, '#')
   end
   
   # Inserts div structure for rounded box

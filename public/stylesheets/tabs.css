@@ -7,15 +7,15 @@
         - margin moved to single tabs
 */
 .tabContainer {
-  /*margin-left:  auto;*/
-  margin:       0 auto -16px auto;
+  margin:       0 auto 8px auto;
+  overflow:     visible;
+  position:     relative;
   clear:        both;
   width:        900px;
   text-align:   center;
   z-index:      10;
   min-height:   1px;
   display:      block;
-  padding-top:  10px;
 }
 
 /*  tab links. holding left part of background and positioning.

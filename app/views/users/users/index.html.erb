@@ -6,13 +6,13 @@
 
 <table>
   <tr>
-    <th>Login</th>
+    <th>Name</th>
     <th>Email</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%=h user.login %></td>
+    <td><%=h user.full_name %></td>
     <td><%=h user.email %></td>
     <td><%= link_to 'Show', user %></td>
     <% if show_admin_options? %>
@@ -24,5 +24,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New user', new_user_path %>

@@ -12,7 +12,7 @@ class Static::EchologicController < ApplicationController
   # Default page redirected to echoLogic - The Mission
   def index
     respond_to do |format|
-      format.html { render :partial => 'index', :layout => 'application' }
+      format.html { render :partial => 'index', :layout => 'static' }
       format.js { render :template => 'layouts/headContainer' }
     end
   end
@@ -20,7 +20,7 @@ class Static::EchologicController < ApplicationController
   # About
   def about
     respond_to do |format|
-      format.html { render :partial => 'about', :layout => 'application' }
+      format.html { render :partial => 'about', :layout => 'static' }
       format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'about' }}
     end
   end
@@ -28,7 +28,7 @@ class Static::EchologicController < ApplicationController
   # Imprint
   def imprint
     respond_to do |format|
-      format.html { render :partial => 'imprint', :layout => 'application' }
+      format.html { render :partial => 'imprint', :layout => 'static' }
       format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'imprint' }}
     end
   end
@@ -36,7 +36,7 @@ class Static::EchologicController < ApplicationController
   # Data privacy
   def data_privacy
     respond_to do |format|
-      format.html { render :partial => 'data_privacy', :layout => 'application' }
+      format.html { render :partial => 'data_privacy', :layout => 'static' }
       format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'data_privacy' }}
     end
   end

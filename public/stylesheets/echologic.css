@@ -6,14 +6,7 @@
 @import "static_content.css";
 @import "tooltips.css";
 @import "outer_menus.css";
-
-#wmd_text_area {
-  width:       450px;
-  height:      150px;
-  border:      1px solid #999999;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  font-size:   90%;
-}
+@import "jquery-ui-1.7.2.custom.css";
 
 #header {
   width:       945px;
@@ -111,9 +104,10 @@
 }
 
 #echologicContainer {
-  width:       945px;
+  width:       970px;
+  height:      165px;
   margin:      0 auto;
-  padding:     10px 23px;
+  padding:     20px;
   z-index:     5;
   position:    relative;
   clear:       both;
@@ -121,23 +115,21 @@
 
 #missionStatementContainer {
   width:       620px;
+  height:      140px;
   clear:       both;
   float:       left;
-  margin:      0 0 0 0;
+  margin-left: 10px;
+  background:  #fff;
 }
 
-#missionStatement {
-  height:      140px;
-  background:  #FFF;
-}
-
-#missionStatement img {
+#missionStatementContainer img {
   position:    relative;
   left:        -6px;
   top:         -6px;
+  z-index:     5;
 }
 
-#missionStatement #yuccaHotspot {
+#missionStatementContainer #yuccaHotspot {
   background:  url(../images/page/yucca.jpg) no-repeat scroll;
   position:    absolute;
   left:        533px;
@@ -146,6 +138,7 @@
   height:      142px;
   cursor:      help;
   border:      none;
+  z-index:     6;
 }
 
 #missionStatementHolder {
@@ -156,6 +149,7 @@
   text-align:  center;
   color:       #FFF;
   cursor:      default;
+  z-index:     6;
 }
 
 #missionStatementHolder .ms_echologic {
@@ -178,16 +172,14 @@
 }
 
 #newsContainer {
+  background:  #fff;
   width:       285px;
-  float:       right;
-  margin:      0;  
-}
-
-#news {
   height:      140px;
+  float:       right;
+  margin-right:10px;
 }
 
-#news #twitterBird {
+#newsContainer #twitterBird {
   border:      none;
   cursor:      pointer;
 }
@@ -223,15 +215,6 @@
   font-size:   14px;
 }
 
-.mainBox {
-  width:       945px;
-  margin:      0 auto;
-  z-index:     5;
-  clear:       both;
-  text-align:  left;
-  padding:     0 23px;
-}
-
 #mainBoxContent {
   overflow-y:    auto;
   overflow-x:    hidden;
@@ -252,7 +235,7 @@
 #echoHeader {
   background:  url(../images/page/echo_gradient.png) no-repeat scroll;
   position:    relative;
-  left:		     -5px;
+  left:	       -5px;
   top:         0px;
   margin:      20px 0 0;
 }

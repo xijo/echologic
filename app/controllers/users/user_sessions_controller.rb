@@ -11,13 +11,14 @@ class Users::UserSessionsController < ApplicationController
 
   # TODO use redirect back or default! see application controller!
   def create
-#    @user_session = UserSession.new(params[:user_session])
-    @user_session = UserSession.new({:password => params[:user_session][:password], :login => 'xijo'})
-    if @user_session.save
-      flash[:notice] = "Login successful!"
-      redirect_to profile_path
-    else
-      render :action => :new
+    @user_session = UserSession.new(params[:user_session])
+    respond_to do |wants|
+      if @user_session.save
+        flash[:notice] = "Login successful!"
+        wants.html { redirect_to profile_path }
+      else
+        wants.html { render :action => :new }
+      end
     end
   end
 

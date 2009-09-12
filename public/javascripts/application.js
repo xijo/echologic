@@ -16,6 +16,8 @@ $(document).ready(function () {
 
   startFragmentObservation();
 
+  roundCorners();
+
 
 });
 
@@ -82,7 +84,7 @@ function bindStaticMenuClickEvents() {
     return false;
   });
 
-  $("#tabContainer a").live("click", function() {
+  $(".ajaxTab").live("click", function() {
     setActionControllerFragment(this.href);
     return false;
   });
@@ -188,3 +190,10 @@ function makeQTips() {
     }
   });
 }
+
+
+/* Add rounded corners to all div elements with class "roundedBox" */
+var roundCorners = function(){
+ var str = '<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b><b class="lr l"></b><b class="lr r"></b><b class="tb b"></b><b class="tb t"></b>';
+  $('.roundedBox').addClass("boxc").append(str);
+};

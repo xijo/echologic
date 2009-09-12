@@ -48,3 +48,68 @@
   padding:      0;
 }
 
+/* testing state for clear boxes */
+
+.mainBox {
+  width:       930px;
+  margin:      0 auto 14px auto;
+  z-index:     5;
+  clear:       both;
+  text-align:  left;
+  padding:     0 10px;
+  background:  #fff;
+}
+
+.boxc {
+  position:relative;
+  z-index: 5;
+}
+
+.boxc b.cn { 
+  height: 14px;
+  width: 16px;
+  background:  url(../images/page/box/edges.png) no-repeat;
+  position:absolute;
+}
+
+.boxc b.lr {
+  width: 16px;
+  height: 100%;
+  background:  url(../images/page/box/borderlr.png) repeat-y;
+  position:absolute;
+}
+
+.boxc b.tb {
+  width: 100%;
+  height: 15px;
+  background:  url(../images/page/box/bordertb.png) repeat-x;
+  position:absolute;
+}
+
+.boxc b.tl {top: -14px; left: -16px; background-position: top left;}
+.boxc b.tr {top: -14px; right: -16px; background-position: top right;}
+.boxc b.bl {bottom: -14px; left: -16px; background-position: bottom left;}
+.boxc b.br {bottom: -14px; right: -16px; background-position: bottom right;}
+
+.boxc b.l { left: -16px; top: 0px; background-position: left; }
+.boxc b.r { right: -16px; top: 0px; background-position: right; }
+
+.boxc b.t { left: 0px; top: -15px; background-position: top; }
+.boxc b.b { left: 0px; bottom: -15px; background-position: bottom; }
+
+/*
+div.bloginfo-summary {background:   url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
+                  float:left;margin-bottom:20px;padding:10px;width:690px}  Large radius image backgrounds
+.boxc {position:relative;}
+.boxc b.cn { height: 10px; width: 10px;
+     background:  url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;  position:absolute;  }
+.boxc b.tl {top: -1px; left: -1px; background-position: top left;}
+.boxc b.tr {top: -1px; right: -1px; background-position: top right;}
+.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}
+.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}
+ IE Filters
+* html .boxc b.bl {bottom:-2px}
+* html .boxc b.br {bottom:-2px}
+* html .boxc b.cn {background-image:        url(http://static.technorati.com/static/css/img/corners/white.gif);
+    line-height: 1px;        font-size: 1px;       }*/
+

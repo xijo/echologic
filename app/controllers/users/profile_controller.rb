@@ -2,11 +2,9 @@ class Users::ProfileController < ApplicationController
 
   before_filter :require_user, :only => [:show, :edit, :update]
   
-#  access_control do
-#    allow logged_in, :to => [:show, :index, :edit_profile]
-#    allow :admin
-#    allow anonymous, :to => [:new, :create]
-#  end
+  access_control do
+    allow logged_in, :to => [:show, :update, :edit]
+  end
 
   # GET /users/1
   # GET /users/1.xml
@@ -30,12 +28,10 @@ class Users::ProfileController < ApplicationController
     puts "\n\nACHTUNG\n\n"
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        flash[:notice] = "User #{@user.login} was successfully updated."
-        format.html { redirect_to(@user) }
-        format.xml  { head :ok }
+        flash[:notice] = "Profile was successfully updated."
+        format.html { redirect_to(profile_path) }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
   end

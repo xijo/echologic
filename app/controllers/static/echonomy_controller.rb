@@ -3,7 +3,7 @@ class Static::EchonomyController < ApplicationController
   # echonomy - The Values
   def index
     respond_to do |format|
-      format.html { render :partial => 'index', :layout => 'application' }
+      format.html { render :partial => 'index', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -11,7 +11,7 @@ class Static::EchonomyController < ApplicationController
   # echonomy - Your-Profit
   def your_profit
     respond_to do |format|
-      format.html { render :partial => 'your_profit', :layout => 'application' }
+      format.html { render :partial => 'your_profit', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -19,7 +19,7 @@ class Static::EchonomyController < ApplicationController
   # echonomy - Foundation
   def foundation
     respond_to do |format|
-      format.html { render :partial => 'foundation', :layout => 'application' }
+      format.html { render :partial => 'foundation', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -27,7 +27,7 @@ class Static::EchonomyController < ApplicationController
   # echonomy - Public Property
   def public_property
     respond_to do |format|
-      format.html { render :partial => 'public_property', :layout => 'application' }
+      format.html { render :partial => 'public_property', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end

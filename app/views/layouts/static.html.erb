@@ -33,25 +33,11 @@
     </div>
 
     <div class="tabContainer" id="tabContainer" <%= display_tab_container %>>
-      <%= render :partial => 'layouts/application_tabs' %>
+      <%= yield :tabContainer %>
     </div>
   
     <div class="mainBox roundedBox">
-
-      <% # TODO error and notive handling and styling %>
-
-      <% if flash[:error] %>
-        <div id="messageDialog" class="ui-state-error">
-          <%= flash[:error] %>
-        </div>
-      <% end %>
-
-      <% if flash[:notice] %>
-        <div id="messageDialog" class="ui-state-highlight">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
-
+      <%= render :partial => "layouts/static_menu" %>
       <div id="staticContent">
         <%= yield %>
       </div>
