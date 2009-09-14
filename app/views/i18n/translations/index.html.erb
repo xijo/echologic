@@ -10,10 +10,10 @@
   <%= select_tag :translated, "<option>all</option><option>untranslated</option>" %>
 </p>
 
-<%= observe_field(:filter, :frequency => 0.2, :update => :translations_list,
+<%= observe_field(:filter, :frequency => 0.1, :update => :translations_list,
       :with => "'filter_text=' + $('#filter').val() + '&selected=' + $('#translated').val()",
       :url => {:controller => :translations, :action => :filter, :locale_id => @locale}) %>
-<%= observe_field(:translated, :frequency => 0.2, :update => :translations_list,
+<%= observe_field(:translated, :frequency => 0.1, :update => :translations_list,
       :with => "'filter_text=' + $('#filter').val() + '&selected=' + $('#translated').val()",
       :url => {:controller => :translations, :action => :filter, :locale_id => @locale}) %>
 

@@ -53,6 +53,7 @@ module StaticContentHelper
   # Inserts div structure for rounded box
   # Pretty cooler rounded box helper with yield function! Usage makes our
   # views simpler than before and only one method will be needed.
+  # TODO cool but depricated through new rounded box design
   def insert_rounded_box
     concat "<div class='boxTop'>\n  <div class='boxLeft'></div>"
     concat "  <div class='boxRight'></div>\n</div>"
@@ -63,41 +64,24 @@ module StaticContentHelper
   end
 
   # Inserts the breadcrumb for the given main and sub menu point
-  def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
+  # TODO sub menu title isn't used atm. nessacary? title vs. long_title discussion
+  def insert_breadcrumb(main_link, sub_link, sub_menu_title='title', show_illustration=true)
     controller = request[:controller].split('/')[1]
     action = request[:action]
+    title_translation = I18n.t("static.#{controller}.title")
     if main_link != sub_link
       if show_illustration
         pic_resource = "page/illustrations/#{controller}_#{action}_small.png"
         concat image_tag(pic_resource, {:class => 'cornerIllustration'})
       end
+      subtitle_translation = I18n.t("static.#{controller}.#{action}.title")
     else
-      sub_menu_title = '.subtitle'
+      subtitle_translation = I18n.t("static.#{controller}.subtitle")
     end
 
-    main_menu = "<h1 class='link'>" + I18n.t("static_content.#{controller}.title") + '</h1>'
+    main_menu = "<h1 class='link'>#{title_translation}</h1>"
     concat link_to(main_menu, url_for(:controller => controller))
-    # TODO submenutitle remove leading dot
-    concat "<h2>#{I18n.t("static_content.#{controller}#{sub_menu_title}")}</h2>"
-#
-#    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
-#    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
-#    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
-#    concat "<h2>#{t(sub_menu_title)}</h2>"
-
-#    if main_link != sub_link
-#      if show_illustration
-#        pic_resource = 'page/illustrations/' + sub_link.split('/')[2..3].join('_') + '_small.png'
-#        concat image_tag(pic_resource, {:class => 'cornerIllustration'})
-#      end
-#    else
-#      sub_menu_title = '.subtitle'
-#    end
-#
-#    main_menu_resource = 'static_content.' + main_link.split('/')[2] + '.title'
-#    main_menu = "<h1 class='link'>" + t(main_menu_resource) + '</h1>'
-#    concat link_to_remote(main_menu, {:url => main_link}, :href => main_link)
-#    concat "<h2>#{t(sub_menu_title)}</h2>"
+    concat "<h2>#{subtitle_translation}</h2>"
   end
 
   # Inserts illustrations as a link for the given array of paths.
@@ -105,12 +89,12 @@ module StaticContentHelper
     concat "<div class='illustrationHolder" + (links.size==3 ? " threeItems" : '') + "'>"
     links.each do |link|
       parts = link.split('/')
-      item = parts[2] + '_' + parts[3] 
+      item = parts[2] + '_' + parts[3]
       pic_resource = 'page/illustrations/' + item + '.png'
-      text_resource = 'static_content.' + item + '.title' 
+      translation = I18n.t("static.#{parts[2]}.#{parts[3]}.title")
       illustration = "<div class='illustration'>"
       illustration +=   image_tag(pic_resource)
-      illustration +=   "<h2>#{t(text_resource)}</h2>"
+      illustration +=   "<h2>#{translation}</h2>"
       illustration += "</div>"
       concat link_to(illustration, {:url => link}, :href => link)
     end
@@ -120,8 +104,8 @@ module StaticContentHelper
   # Insert back and next buttons according to the given paths.
   # TODO w3c forbids block in anthor!
   def insert_back_next_buttons(prev_link, next_link)
-    back_button = "<div id='previousPageButton' class='changePageButton'>#{t('general.back')}</div>"
-    next_button = "<div id='nextPageButton' class='changePageButton'>#{t('general.next')}</div>"
+    back_button = "<div id='previousPageButton' class='changePageButton'>#{I18n.t('application.general.back')}</div>"
+    next_button = "<div id='nextPageButton' class='changePageButton'>#{I18n.t('application.general.next')}</div>"
     concat "<div class='backNextHolder'>"
     concat link_to(back_button, prev_link, :class => 'prevNextButton')
     concat "<div class='separator'></div>"
@@ -129,16 +113,14 @@ module StaticContentHelper
     concat "</div>"
   end
   
-  # Inserts a static remote menu button with the information
+  # Inserts a static menu button with the information
   # provided through the given link.
   # Set ID for a-Tag to the menu name, to store it in the url fragment when
   # using javascript. @see application.js
-
-  # TODO refactor: no longer remote. ajax handled by jquery, @see application.js
-  def insert_static_remote_button(link)
+  def insert_static_menu_button(link)
     item = link.split('/')[2]
-    title = "static_content.#{item}.title"
-    subtitle = "static_content.#{item}.subtitle"
+    title = "static.#{item}.title"
+    subtitle = "static.#{item}.subtitle"
     button = get_static_menu_image(item, link)
     button += "<span class='menuTitle'>#{I18n.t(title)}</span><br/>"
     button += "<span class='menuSubtitle'>#{I18n.t(subtitle)}</span>"
@@ -146,6 +128,7 @@ module StaticContentHelper
   end
 
   # Returns the image filename (on of off state) for a specific item.
+  # TODO all this splitting is performance critical - find solution! - singleton, class variable?
   def get_static_menu_image(item, link)
     image = /src=\"(.*)\"/.match(image_tag('page/staticMenu/' + item + '.png'))[1]
     active_menu = request.path.split('/')[0..2].join('/').eql?(link) ? 'activeMenu' : ''
@@ -154,9 +137,10 @@ module StaticContentHelper
 
   # Inserts a link to a outer menu item. Will be ajaxized through jQuery
   # in application.js. If no special id is set the actual name is used.
-  def insert_outer_menu_item(name, link, id=name)
-    link_to(t('.'+name), {:url => link}, :href => link, :class => 'outerMenuItem', :id => id)
-  end
+  # TODO depricated. directly inserted now, no helper
+#  def insert_outer_menu_item(name, link, id=name)
+#    link_to(t('.'+name), {:url => link}, :href => link, :class => 'outerMenuItem', :id => id)
+#  end
 
 
   

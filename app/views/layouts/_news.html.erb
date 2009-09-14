@@ -1,25 +1,9 @@
-<!--
-<div id="newsContainer">
-  <% insert_rounded_box do %>
-    <div id="news" class="boxContent">
-        <div id="twitterBird" class="ttLink" title="<%= t('static_content.echologic.twitter') %>">
-          <%= link_to(image_tag('page/echologic_twitter.png'), "http://www.twitter.com/echologic", {:target => "_blank" }) %>
-        </div>
-        <div id="newsHolder">
-          <div class="newsTitle"><%= t('static_content.echologic.news_title') %></div>
-        <%= get_twitter_content %>
-      </div>
-    </div>
-  <% end %>
-</div>
--->
-
 <div id="newsContainer" class="roundedBox">
-  <div id="twitterBird" class="ttLink" title="<%= t('static_content.echologic.twitter') %>">
+  <div id="twitterBird" class="ttLink" title="<%= I18n.t('static.echologic.index.twitter') %>">
     <%= link_to(image_tag('page/echologic_twitter.png'), "http://www.twitter.com/echologic", {:target => "_blank" }) %>
   </div>
   <div id="newsHolder">
-    <div class="newsTitle"><%= t('static_content.echologic.news_title') %></div>
+    <div class="newsTitle"><%= I18n.t('static.echologic.index.news_title') %></div>
     <%= get_twitter_content %>
   </div>
 </div>

@@ -1,13 +1,14 @@
 <div id="topMenuContainer">
-  <% language_chooser = "<span id='languageChooser'>" + t('.language') + '</span>'
+  <% language_chooser = "<span id='languageChooser'>" + I18n.t('layouts.outer_menu.language') + '</span>'
      language_chooser += image_tag('page/icons/arrow.gif')
   %>
   <%= link_to_function(language_chooser) do |page|
      page[:languageSelector].show; page[:overlay].show; 
   end %>
 
-  <%= insert_outer_menu_item('about', static_path(:about)) %>
-  <%= insert_outer_menu_item('feedback', new_feedback_path, 'feedback/new') %>
+  <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :class => 'outerMenuItem') %>
+
+  <span class="ui-icon ui-icon-comment"></span><%= link_to(I18n.t('layouts.outer_menu.feedback'), new_feedback_path, :class => 'outerMenuItem') %>
 
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>
