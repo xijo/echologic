@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   acts_as_authorization_object
 
   # Handle attached user picture through paperclip plugin
-  has_attached_file :picture, :styles => { :small => "150x150>" }#,
+  has_attached_file :picture, :styles => { :small => "80x80>" }#,
 #                  :url  => "/assets/products/:id/:style/:basename.:extension",
 #                  :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 

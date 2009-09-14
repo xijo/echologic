@@ -5,7 +5,8 @@ class I18n::TranslationsController < ApplicationController
   # GET /translations
   # GET /translations.xml
   def index
-    @translations = @locale.translations.find(:all, :order => "raw_key, pluralization_index")
+    @translations = @locale.translations.find(
+      :all, :order => "raw_key, pluralization_index", :limit => 30)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -136,7 +137,8 @@ class I18n::TranslationsController < ApplicationController
     @translations = params[:selected].eql?('untranslated') ? @locale.translations.untranslated : @locale.translations
     @translations = @translations.find(:all,
       :conditions => ['raw_key like ?', "#{params[:filter_text]}%"],
-      :order => "raw_key, pluralization_index")
+      :order => "raw_key, pluralization_index",
+      :limit => 30)
  
     render :partial => 'list'
   end

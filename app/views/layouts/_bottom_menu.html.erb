@@ -1,5 +1,5 @@
 <div id="bottomMenuContainer">
   echologic (2009)
-  <%= insert_outer_menu_item('imprint', static_path(:imprint)) %>
-  <%= insert_outer_menu_item('data_privacy', static_path(:data_privacy)) %>
+  <%= link_to(I18n.t('layouts.outer_menu.imprint'), static_path(:imprint), :class => 'outerMenuItem') %>
+  <%= link_to(I18n.t('layouts.outer_menu.data_privacy'), static_path(:data_privacy), :class => 'outerMenuItem') %>
 </div>

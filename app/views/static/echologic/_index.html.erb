@@ -1,16 +1,16 @@
 <% insert_breadcrumb(echologic_path, echologic_path) %>
 
-<span id="echoTeaser"><%= t('static_content.echologic.teaser') %></span>
+<span id="echoTeaser"><%= I18n.t('static.echologic.index.teaser') %></span>
 
 <div id="echoHeader">
   <div id="echoLogo"><%= image_tag('page/echo_logo.png') %></div>
-  <div id="headerGlue"><%= t('static_content.echologic.header1') %></div>
-  <div id="headerMessage"><%= t('static_content.echologic.header2') %></div>
+  <div id="headerGlue"><%= I18n.t('static.echologic.index.header1') %></div>
+  <div id="headerMessage"><%= I18n.t('static.echologic.index.header2') %></div>
 </div>
 
-<%= t('static_content.echologic.teaser_more') %>
+<%= I18n.t('static.echologic.index.teaser_more') %>
 
 <div style="height:128px;">
   <%= link_to('<span class="actionPic"></span>', {:url => echo_path}, :href => echo_path) %>
-  <span class="actionCall"><%= t('static_content.echologic.action') %></span>
+  <span class="actionCall"><%= I18n.t('static.echologic.index.action') %></span>
 </div>
