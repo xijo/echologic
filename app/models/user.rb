@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+  has_many :web_profiles
+  has_many :activities
+  has_many :memberships
+
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
 
@@ -76,6 +80,25 @@ class User < ActiveRecord::Base
   # Return the full name of the user consisting of pre- and surname
   def full_name
     "#{prename} #{name}"
+  end
+
+  # Return the gender in human readable and localized format.
+  # TODO localize gender
+  def get_gender
+    if gender.nil?
+      return ''
+    else
+      gender ? 'Female' : 'Male'
+    end
+  end
+
+  # Return available localized genders.
+  # TODO localize genders
+  def self.genders
+    [
+      ['Male', false],
+      ['Female', true]
+    ]
   end
 
 end

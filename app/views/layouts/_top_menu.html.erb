@@ -8,7 +8,7 @@
 
   <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :class => 'outerMenuItem') %>
 
-  <span class="ui-icon ui-icon-comment"></span><%= link_to(I18n.t('layouts.outer_menu.feedback'), new_feedback_path, :class => 'outerMenuItem') %>
+  <%= link_to(I18n.t('layouts.outer_menu.feedback'), new_feedback_path, :class => 'outerMenuItem') %>
 
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>

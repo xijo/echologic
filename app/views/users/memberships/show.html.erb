@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @membership.user_id %>
+</p>
+
+<p>
+  <b>Organisation:</b>
+  <%=h @membership.organisation %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @membership.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_membership_path(@membership) %> |
+<%= link_to 'Back', memberships_path %>

@@ -13,6 +13,11 @@
     <%= javascript_include_tag 'jquery.qtip-1.0.0-min' %>
     <%# javascript_include_tag 'IE8' %>
     <%= javascript_include_tag 'jquery.ba-url.min' %>
+
+    <%= stylesheet_link_tag 'connect' %>
+    <%= stylesheet_link_tag 'profile' %>
+    <%= stylesheet_link_tag 'application' %>
+
   </head>
   <body>
 
@@ -33,28 +38,34 @@
       <%= render :partial => 'layouts/application_tabs' %>
     </div>
   
-    <div class="mainBox roundedBox">
+    <div id="applicationContainer">
+      <div id="contentContainer">
+        <% # TODO error and notive handling and styling %>
 
-      <% # TODO error and notive handling and styling %>
+        <% if flash[:error] %>
+          <div id="messageDialog" class="ui-state-error">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
 
-      <% if flash[:error] %>
-        <div id="messageDialog" class="ui-state-error">
-          <%= flash[:error] %>
-        </div>
-      <% end %>
+        <% if flash[:notice] %>
+          <div id="messageDialog" class="ui-state-highlight">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
 
-      <% if flash[:notice] %>
-        <div id="messageDialog" class="ui-state-highlight">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
+        <% # Head border %>
+        <b class="border"></b>
 
-      <div id="staticContent">
+        <% # Content %>
         <%= yield %>
       </div>
     </div>
 
     <%= render :partial => "layouts/bottom_menu" %>
+
+    <% # Outer menu content %>
+    <div id="dialogContent" style="display:none;"></div>
  
   </body>
 </html>

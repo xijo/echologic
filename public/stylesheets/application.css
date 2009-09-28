@@ -1,0 +1,32 @@
+/* 
+    Document   : application.css
+    Created on : 15.09.2009, 08:34:36
+    Author     : joe
+    Description:
+      General layouting for the logged in section.
+*/
+
+#applicationContainer {
+  width:       100%;
+  z-index:     5;
+  clear:       both;
+  background:  #fff;
+  position:    relative;
+  overflow:    visible;
+}
+
+#applicationContainer .border {
+  width:       100%;
+  height:      15px;
+  background:  url(../images/page/box/bordertb.png) repeat-x;
+  background-position: top;
+  position:    absolute;
+  left:        0px;
+  top:         -15px;
+}
+
+#contentContainer {
+  margin:      0 auto;
+  width:       850px;
+  overflow:    auto;
+}

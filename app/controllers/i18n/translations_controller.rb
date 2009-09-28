@@ -1,6 +1,10 @@
 class I18n::TranslationsController < ApplicationController
   prepend_view_path(File.join(File.dirname(__FILE__), "..", "views"))
   before_filter :find_locale
+
+  access_control do
+    allow :admin
+  end
   
   # GET /translations
   # GET /translations.xml

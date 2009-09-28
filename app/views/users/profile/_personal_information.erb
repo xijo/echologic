@@ -1,0 +1,19 @@
+<h2>Personal Information</h2> (<%= link_to_remote 'edit', { :url => edit_profile_path, :method => :get } %>)
+
+<ul>
+  <li>
+    <span class="title">Name</span>
+    <%=h @user.full_name %>
+  </li>
+  <li>
+    <span class="title">Gender</span>
+    <%=h @user.get_gender %>
+  </li>
+  <li>
+    <span class="title">Country, City</span>
+  </li>
+  <li>
+    <span class="title">E-Mail</span>
+    <%=h @user.email %>
+  </li>
+</ul>

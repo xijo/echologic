@@ -1,47 +1,65 @@
-<h1>Profile</h1>
+<div class="headContainer">
+  <h1>my echo</h1>  
+</div>
 
-Message: <%= flash[:notice] %>
+<div id="personal" class="detailsContainer">
+  <div class="comment">
+    These are your profile information. Use the edit button to update them,
+    change your password or set a new image.
+  </div>
 
-<p>
-  <b>Image:</b>
+  <%= render :partial => 'personal_information' %>
+  
+</div>
+
+
+<% # Profile picture area %>
+<div id="picture" class="detailsContainer">
+  <h2>Picture upload</h2>
   <%= image_tag @user.picture.url(:small) %>
-</p>
-
-<p>
-  <b>UPDATED:</b>
-  <%=h @user.updated_at %>
-</p>
-
-
-<p>
-  <b>Login count:</b>
-  <%=h @user.login_count %>
-</p>
-
-<p>
-  <b>Last request at:</b>
-  <%=h @user.last_request_at %>
-</p>
-
-<p>
-  <b>Last login at:</b>
-  <%=h @user.last_login_at %>
-</p>
-
-<p>
-  <b>Current login at:</b>
-  <%=h @user.current_login_at %>
-</p>
-
-<p>
-  <b>Last login ip:</b>
-  <%=h @user.last_login_ip %>
-</p>
-
-<p>
-  <b>Current login ip:</b>
-  <%=h @user.current_login_ip %>
-</p>
+  <% form_for @user, :url => profile_path, :html => { :multipart => true } do |f| %>
+    <%= f.file_field :picture %><br/>
+    <%= f.submit "Upload" %>
+  <% end %>
+</div>
 
 
-<%= link_to 'edit', edit_profile_path %>
+
+<div id="activities" class="detailsContainer">
+
+  <div>
+    <h2>Memberships</h2>
+    <div class="comment">
+      Some text to descripe like: Enter your activities and competences here.
+    </div>
+
+    <ul id="membershipList">
+      <li><span>Organisation</span><span>Position</span></li>
+      <%= render @user.memberships %>
+    </ul>
+    <ul>
+      <%= render :partial => 'users/memberships/new' %>
+    </ul>
+
+  </div>
+</div>
+
+<div class="blockTitle">title</div>
+
+
+<!-- Web profiles section. -->
+<div id="webProfiles" class="detailsContainer">
+
+  <h2>web profiles</h2>
+  <div class="comment">
+    TEXT! You are able to set some contact details, so you can be reached through all those fine communication ways.
+  </div>
+
+  <ul id="webProfileList">
+    <%= render @user.web_profiles %>
+  </ul>
+  <ul>
+    <%= render :partial => 'users/web_profiles/new' %>
+  </ul>
+
+</div>

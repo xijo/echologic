@@ -1,0 +1,20 @@
+<li>
+  <% form_remote_tag :url => user_web_profiles_path(@user), :method => :post do -%>
+      <%= select :web_profile, :sort, WebProfile.sorts %>
+
+      <%= text_field :web_profile, :location %>
+
+      <%= hidden_field :user_id, :value => @user.id %>
+      <%= submit_tag 'Create', :class => 'submitButton' %>
+  <% end %>
+</li>
+
+<% # TODO autocomplete pseudo: unobtrusivation! %>
+<script type="text/javascript">
+  $('#web_profile_location').blur(function() {
+    /* Pseudo:
+     * Send data to controller through javascript and bind the answers to
+     * specific operations.
+     */
+  })
+</script>

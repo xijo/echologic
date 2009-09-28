@@ -80,7 +80,8 @@ function bindStaticMenuClickEvents() {
   });
 
   $(".outerMenuItem").live("click", function() {
-    setActionControllerFragment(this.href);
+//    setActionControllerFragment(this.href);
+    $.getScript(this.href);
     return false;
   });
 

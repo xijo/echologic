@@ -1,39 +1,55 @@
 class Users::ProfileController < ApplicationController
 
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:show, :edit, :update, :get_personal]
   
   access_control do
-    allow logged_in, :to => [:show, :update, :edit]
+    allow logged_in, :to => [:show, :update, :edit, :get_personal]
   end
 
-  # GET /users/1
-  # GET /users/1.xml
+  # Shows details for the current user, this action is formaly known as
+  # profile! ;)
+  # TODO respond to js correctly
   def show
     @user = @current_user
-
     respond_to do |format|
       format.html
     end
   end
 
-  # GET /users/1/edit
+  # Edit the profile details through rendering the edit partial to the
+  # corresponding part of the profiles page.
   def edit
     @user = @current_user
+    render :update do |page|
+      page.replace_html 'personal', :partial => 'edit'
+    end
   end
 
-  # PUT /users/1
-  # PUT /users/1.xml
+  # Set the values from the edit form to the users attributes.
   def update
     @user = @current_user
-    puts "\n\nACHTUNG\n\n"
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        flash[:notice] = "Profile was successfully updated."
-        format.html { redirect_to(profile_path) }
-      else
-        format.html { render :action => "edit" }
+    if @user.update_attributes(params[:user])
+      respond_to do |format|
+        format.html { redirect_to profile_path }
       end
     end
   end
+
+  # Responds in JS wether with editing or with view partial.
+  def get_personal(editable=false)
+    @user = @current_user
+    render :update do |page|
+      page.replace_html 'personal', :partial => 'personal_information'
+    end
+
+#    respond_to do |format|
+#      format.js do
+#        render :update do |page|
+#          page.replace_html 'personal', :partial => 'personal_information'
+#        end
+#      end
+#    end
+  end
+
 
 end

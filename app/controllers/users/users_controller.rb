@@ -5,7 +5,7 @@ class Users::UsersController < ApplicationController
 
 
   access_control do
-    allow logged_in, :to => [:show, :index]
+    allow logged_in, :to => [:show, :index, :filter]
     allow :admin
     allow anonymous, :to => [:new, :create]
   end
@@ -65,29 +65,6 @@ class Users::UsersController < ApplicationController
       render :action => :new
     end
   end
-#
-#
-#
-#
-#  # POST /users
-#  # POST /users.xml
-#  # TODO cleanup signup process.
-#  def create
-#    @user = User.new(params[:user])
-#
-#    respond_to do |format|
-#      #if @user.save
-#      if @user.save_without_session_maintenance
-#        @user.deliver_activation_instructions!
-#        flash[:notice] = 'User was successfully created.'
-#        #format.html { redirect_to(@user) }
-#        format.html { redirect_to root_url }
-#      else
-#        format.html { render :action => "new" }
-#        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-#      end
-#    end
-#  end
 
   # PUT /users/1
   # PUT /users/1.xml
@@ -114,4 +91,23 @@ class Users::UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # Filter the users list.
+  def filter
+    @users = User.find(:all)
+    filter = "%#{params[:filter_text]}%"
+
+    @users = User.find(:all,
+      :conditions => ['email like ? or name like ? or prename like ?', filter, filter, filter],
+      :limit => 30)
+    
+    respond_to do |format|
+      format.js { render :partial => 'list' }
+    end
+#    render :update do |page|
+#      page.replace_html 'userList', :partial => 'list'
+#    end
+  end
+
+
 end

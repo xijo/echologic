@@ -1,0 +1,36 @@
+/*
+    Document   : connect.css
+    Created on : 15.09.2009, 08:34:36
+    Author     : joe
+    Description:
+      Design screen elements for connect section.
+*/
+
+#searchContainer {
+  margin:     0 auto;
+  width:      250px;
+}
+
+#filter {
+  width:      250px;
+}
+
+#categoryFilterContainer {
+  -moz-border-radius: 4px;
+  border: 1px solid #CCC;
+  background: #EEE;
+  padding: 6px;
+  margin: 10px auto;
+}
+
+#userList li {
+  clear: both;
+}
+
+#userList li img {
+  float: left;
+}
+
+#userList li div {
+  float: left;
+}
