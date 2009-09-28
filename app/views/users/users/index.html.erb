@@ -1,22 +1,76 @@
-<h1>Listing users</h1>
+<h1>Connect - i18n</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-  </tr>
+<div id="searchContainer">
+  <%= text_field_tag :filter %>
+</div>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%=h user.full_name %></td>
-    <td><%=h user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-    <% if show_admin_options? %>
-      <td><%= link_to 'Edit', edit_user_path(user) %></td>
-      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
-  </tr>
-<% end %>
-</table>
+<%= observe_field(:filter, :frequency => 0.3, :update => :userList,
+      :with => "'filter_text=' + $('#filter').val()",
+      :url => {:controller => :users, :action => :filter}) %>
+
+<div id="categoryFilterContainer">
+  <input type="checkbox" name="zutat" value="all">All
+  <input type="checkbox" name="zutat" value="citizen">Citizen
+  <input type="checkbox" name="zutat" value="scientists">Scientists
+</div>
+
+<div id="text">
+  
+</div>
+
+<script type="text/javascript">
+  $('#categoryFilterContainer').hide();
+
+  $('#filter').focus(function() {
+    $('#categoryFilterContainer').appear();
+  });
+
+  $('#filter').blur(function() {
+    $('#categoryFilterContainer').fade();
+  });
+
+  $('#categoryFilterContainer input').change(function() {
+    $('#filter').focus();
+  });
+
+  $('#filter').bind("change keyup", function() {
+    $('#text').html($(this).val());
+    $.getScript('<%= url_for(:controller => 'users', :action => 'show') %>');
+  }); 
+
+</script>
+
+<div id="userList">
+
+  <%= render :partial => 'list' %>
+
+</div>
+
+<!--
+<div id="users" style="width:500px; margin: 0 auto;">
+  <ul>
+    <li><a href="#citizens">Citizens</a></li>
+    <li><a href="#scientists">Scientists</a></li>
+    <li><a href="#decision-makers">Decision Makers</a></li>
+  </ul>
+  <div id="citizens">
+    some list here as well
+  </div>
+  <div id="scientists">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+  <div id="decision-makers">
+    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+	
+  $("#users").tabs();
+
+</script>
+-->
+
 
 <br />

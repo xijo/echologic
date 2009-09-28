@@ -1,0 +1,11 @@
+<li id="membership_<%= membership.id %>" >
+  <%=h "#{membership.organisation} #{membership.position}" %>
+
+  <%= link_to_remote "Edit",
+        { :url   => edit_user_membership_path(membership.user, membership), :method => :get },
+        { :class => 'optionsButton' } %>
+
+  <%= link_to_remote "Delete",
+        { :url   => user_membership_path(membership.user, membership), :method => 'delete' },
+        { :class => 'optionsButton' } %>
+</li>

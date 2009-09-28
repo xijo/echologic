@@ -1,6 +1,10 @@
 class I18n::LocalesController < ApplicationController
   layout 'application'
 
+  access_control do
+    allow :admin
+  end
+
   prepend_view_path(File.join(File.dirname(__FILE__), "..", "views"))
   # GET /locales
   # GET /locales.xml

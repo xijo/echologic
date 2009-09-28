@@ -44,13 +44,14 @@ class ApplicationController < ActionController::Base
       @current_user = current_user_session && current_user_session.user
     end
 
+    # TODO comment and js?
     def require_user
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
         respond_to do |format|
-          format.html { render :partial => "user_sessions/failed", :layout => "application" }
-          format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'user_sessions/failed'}}
+          format.html { redirect_to echologic_path }
+#          format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'users/user_sessions/failed'}}
         end
         #redirect_to join_path #new_user_session_url
         return false

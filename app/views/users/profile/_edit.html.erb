@@ -1,0 +1,67 @@
+<h2>Edit My Account</h2>
+
+<% form_for @user, :url => profile_path, :html => { :multipart => true } do |f| %>
+
+  <ul>
+    <li>
+      <span>
+        <%= f.label :prename %>
+      </span>
+      <%= f.text_field :prename %>
+    </li>
+
+    <li>
+      <span>
+        <%= f.label :name %>
+      </span>
+      <%= f.text_field :name %>
+    </li>
+    
+    <li>
+      <span><%= f.label :gender %></span>
+      <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
+    </li>
+    
+    <li>
+      <span>
+        <%= f.label :password, f.object.new_record? ? nil : "Change password" %>
+      </span>
+      <%= f.password_field :password %>
+    </li>
+
+    <li>
+      <span>
+        <%= f.label :password_confirmation %>
+      </span>
+      <%= f.password_field :password_confirmation %>
+    </li>
+
+    <li>
+      <span><%= f.label :picture %></span>
+      <%= f.file_field :picture %>
+    </li>
+
+  </ul>
+    
+  <%= f.submit "Update", :class => 'submitButton' %>
+
+  <% # TODO wether unobtrusive or rjs, but working!! %>
+  <%= link_to_remote "Back", { :url => url_for(:action => 'get_personal', :controller => 'profile'), :method => :get } %>
+  
+<% end %>
+
+
+<script type="text/javascript">
+  $(':file').css({'-moz-border-radius':'4px', border:"1px solid #ccc"});
+
+  $(':input').focus(function() {
+    $(this).toggleClass('active');
+  });
+
+  $(':input').blur(function() {
+    $(this).toggleClass('active');
+  });
+
+
+</script>
+ 

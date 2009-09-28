@@ -21,7 +21,7 @@ class Static::EchologicController < ApplicationController
   def about
     respond_to do |format|
       format.html { render :partial => 'about', :layout => 'static' }
-      format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'about' }}
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => { :menu_item => 'about' }}
     end
   end
 
@@ -29,7 +29,7 @@ class Static::EchologicController < ApplicationController
   def imprint
     respond_to do |format|
       format.html { render :partial => 'imprint', :layout => 'static' }
-      format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'imprint' }}
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => { :menu_item => 'imprint' }}
     end
   end
   
@@ -37,7 +37,7 @@ class Static::EchologicController < ApplicationController
   def data_privacy
     respond_to do |format|
       format.html { render :partial => 'data_privacy', :layout => 'static' }
-      format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'data_privacy' }}
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => { :menu_item => 'data_privacy' }}
     end
   end
   

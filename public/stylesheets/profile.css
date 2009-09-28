@@ -1,0 +1,114 @@
+/* 
+    Document   : profile
+    Created on : 17.09.2009, 09:52:01
+    Author     : xijo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+.detailsContainer {
+  /*background: #eee;*/
+  border: 1px solid #ccc;
+  -moz-border-radius: 4px;
+  padding: 6px;
+  margin: 10px auto;
+  width: 600px;
+  position: relative;
+}
+
+.detailsContainer ul {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+.detailsContainer li {
+  list-style-type: none;
+  line-height: 24px;
+}
+
+.detailsContainer li span {
+  min-width: 110px;
+  display: inline-block;
+  font-weight: bold;
+  margin: 3px 0;
+}
+
+.detailsContainer h2 {
+  float: left;
+}
+
+.detailsContainer .comment {
+  color: #aaa;
+  clear: both;
+  font-size: 12px;
+}
+
+.detailsContainer select {
+  width: 110px;
+  padding: 3px;
+  -moz-border-radius: 4px;
+  border: 1px solid #888;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  font-size: 12px;
+  min-height: 17px;
+}
+
+.detailsContainer select:hover, .detailsContainer input:hover { border: 1px solid #090; }
+
+.detailsContainer .active { border: 1px solid #090; background: #eee; }
+
+.detailsContainer input {
+  width: 200px;
+  padding: 3px;
+  margin: 0;
+  -moz-border-radius: 4px;
+  border: 1px solid #888;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  /*font-size: 12px;*/
+  min-height: 17px;
+}
+
+.headContainer {
+  margin: 10px auto;
+  width: 600px;
+}
+
+.headContainer h1 {
+  float: left;
+}
+
+.optionsButton {
+  -moz-border-radius: 4px;
+  width:      16px;
+  height:     16px;
+  border:     1px solid #d3d3d3;
+  color:      #555555;
+  display:    inline-block;
+  position:   relative;
+  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+  text-align: center;
+  font-size:  9px;
+  top: -4px;
+}
+
+.submitButton {
+  width: 80px !important;
+  -moz-border-radius: 4px;
+  padding:    3px;
+  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+}
+
+.blockTitle {
+  -moz-border-radius: 12px;
+  background: #ccc;
+  display: inline-block;
+  width: 400px;
+  text-align: center;
+}

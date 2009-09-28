@@ -1,0 +1,18 @@
+<p>
+  <b>Type:</b>
+  <%=h @web_profile.type %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @web_profile.location %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @web_profile.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_web_profile_path(@web_profile) %> |
+<%= link_to 'Back', web_profiles_path %>

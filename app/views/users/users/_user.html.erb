@@ -1,0 +1,12 @@
+<li>
+  <%= image_tag user.picture.url(:small) %>
+  <div>
+    <%=h user.full_name %> <br/>
+    <%=h user.email %>     <br/>
+    <% if show_admin_options? %>
+      <%= link_to 'Edit', edit_user_path(user) %>
+      <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+  </div>
+  
+</li>

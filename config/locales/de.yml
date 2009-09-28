@@ -2,611 +2,675 @@
 
 de:
 
-  page_title: echologic für echo - die globale Agora (Demokratie neu gedacht)
+  application:
+    page_title: echologic für echo - die globale Agora (Demokratie neu gedacht)
   
-  meta_description: |-
-    echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel 
-    echo, die globale Agora, zu verwirklichen. echo ist ein Internetprojekt der besonderen Art. 
-    Sein Ziel ist kein geringeres, als eine neue Form teilnehmender Demokratie auf lokalem, 
-    regionalem und globalem Niveau zu etablieren. echo bedeutet demnach das Ende der 
-    Machtlosigkeit und den Anfang der Selbstbestimmung!
-    
-  meta_keywords: |-
-    echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
-    kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung, 
-    Entscheidungsfindung, Transparenz, your-profit, echocracy, echonomy, Echokratie, Echonomie, partizipative Demokratie, 
-    glokal, Glokalität 
+    meta:
+      description: |-
+        echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel
+        echo, die globale Agora, zu verwirklichen. echo ist ein Internetprojekt der besonderen Art.
+        Sein Ziel ist kein geringeres, als eine neue Form teilnehmender Demokratie auf lokalem,
+        regionalem und globalem Niveau zu etablieren. echo bedeutet demnach das Ende der
+        Machtlosigkeit und den Anfang der Selbstbestimmung!
 
-  # General purpose resources
-  general:
-    more: mehr » 
-    hide: « okay
+      keywords: |-
+        echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
+        kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
+        Entscheidungsfindung, Transparenz, your-profit, echocracy, echonomy, Echokratie, Echonomie, partizipative Demokratie,
+        glokal, Glokalität
 
-    next: Weiter
-    back: Zurück
-    
-  # User data related resources
-  user_data:
-    email: E-Mail
-    name: Name
-
-
-  user_sessions:
-    login:
-      password: Passwort
+    # General purpose resources
+    general:
+      more: mehr »
+      hide: « okay
+      next: Weiter
+      back: Zurück
       email: E-Mail
+      name: Name
+
+    mailer:
+      signature: |
+        --
+        echologic für echo - die globale Agora
+        Web: www.echologic.org
+        E-Mail: team@echo-logic.org
+
+      feedback: Feedback
+
+      interest:
+        subject: Herzlich willkommen auf echologic
+        body: |
+          <p>
+          Liebes zukünftiges echologic Mitglied,
+          </p><p>
+          vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft.<br/>
+          Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der
+          Gestaltung von echo beteiligen können.
+          </p><p>
+          Bis dahin sind Sie herzlich eingeladen unsere Neuigkeiten auf Twitter zu verfolgen und uns
+          über team@echo-logic.org zu kontaktieren.
+          </p><p>
+          Mit den besten Wünschen,
+          </p><p>
+          Ihr echo Team
+          </p>
+
+      invitation:
+        subject: '{{name}} empfehlt Ihnen echologic - Demokratie neu gedacht'
+        body: |
+          <p>
+          Liebe(r) WeltbürgerIn und Freund der Demokratie,
+          </p><p>
+          <strong>{{name}}</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong>
+          aufmerksam zu machen. echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem
+          gemeinsamen Ziel, <strong>echo - die globale Agora</strong> zu verwirklichen.
+          </p><p>
+          Das Ziel von echo ist kein geringeres, als eine <strong>neue Form teilnehmender Demokratie</strong>
+          auf lokalem, regionalem und globalem Niveau zu etablieren.<br/>
+          echo bedeutet das Ende der Machtlosigkeit und den Anfang der <strong>Selbstbestimmung</strong>!
+          </p><p>
+          echologic bietet Ihnen die Möglichkeit, die Entwicklung dieses einmaligen Projektes zu verfolgen und
+          aktiv mit zu gestalten, um gemeinsam den Weg in eine friedliche und nachhaltige Zukunft zu ebnen.
+          </p><p>
+          <strong>Erfahren Sie mehr über echo!<br/>
+          Werden Sie echologic!</strong>
+          </p><p>
+          Mit den besten Wünschen,
+          </p><p>
+          Ihr echo Team
+          </p>
+
+
+  users:
+    user_sessions:
+      login:
+        password: Passwort
+        email: E-Mail
+        forgot: Passwort vergessen?
+        remember: Merke mich!
 
   # Localizations for the layout components
   layouts:
-    top_menu:
+    tabs:
+      discuss: Diskutieren
+      connect: Vernetzen
+      act: Handeln
+      my_echo: Mein echo
+
+    outer_menu:
       language: Sprache
       feedback: &feedback Feedback
       about: &about Über uns
       logout: Logout
+      imprint: &imprint Impressum
+      data_privacy: &data_privacy Datenschutz
+
     login_container:
       password: 'Passwort:'
       email: 'E-Mail:'
-      forgot: Passwort vergessen?
-      remember: Merke mich!
-    bottom_menu:
-      imprint: &imprint Impressum
-      data_privacy: &data_privacy Datenschutz
+
     application:
       invite: |
         Verwirklichen Sie echo!<br/>
         Werden Sie echologic!
 
   # All content appearing on the static pages   
-  static_content:
+  static:
   
     # Static content for the echologic main menu point
     echologic:
       title: echologic
       subtitle: Die Mission
-      
-      ms1: echologic 
-      ms2: | 
-        ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
-      ms3: | 
-        echo - die globale <span title="{{tooltip}}" class="ttLink">Agora</span>!
 
-      agora_tooltip: |
-        Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie. 
-        Sie war der Mittelpunkt des gesellschaftlichen und politischen Geschehens der Polis, die auf einer freien, 
-        sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo die räumlichen und 
-        kommunikativen Grenzen der antiken Agora zu überwinden und sie allen Menschen auf unserem Planeten zugänglich zu machen.
-        
-      yucca: | 'Yucca elata' als Symbol für einen neuen Anfang
+      index:
+        ms1: echologic
+        ms2: |
+          ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
+        ms3: |
+          echo - die globale <span title="{{tooltip}}" class="ttLink">Agora</span>!
 
-      news_title: echologic auf Twitter      
-      twitter: Folgen Sie echologic auf Twitter!
-      
-      header1: bedeutet
-      header2: |-
-        das Ende der Machtlosigkeit!&nbsp;&nbsp;<br/>den Anfang der Selbstbestimmung!
-        
-      teaser: |
-        <p>
-        echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine 
-        <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
-        </p>
-      
-      teaser_more: |
-        <p>
-        Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können hier ihre Ansichten in 
-        Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen. 
-        Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit 
-        beliebig vielen Teilnehmern. Menschen rund um den Globus können so auf echo konstruktiv zusammen arbeiten und 
-        gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten.
-        </p><p>
-        Durch neuartige Möglichkeiten transnationaler und interkultureller Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert 
-        und damit der Weg in eine friedliche, gerechte und <strong>nachhaltige Zukunft</strong> geebnet werden.
-        </p><p>
-        echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und aktiv mit zu gestalten!
-        </p>
+        agora_tooltip: |
+          Die Agora war der zentrale Versammlungsplatz im antiken Athen – der Wiege der Demokratie.
+          Sie war der Mittelpunkt des gesellschaftlichen und politischen Geschehens der Polis, die auf einer freien,
+          sich selbst regierenden Bürgerschaft basierte. Als globale Agora, ermöglicht echo die räumlichen und
+          kommunikativen Grenzen der antiken Agora zu überwinden und sie allen Menschen auf unserem Planeten zugänglich zu machen.
 
-      action: | 
-        Erfahren Sie mehr über echo!<br/>Werden Sie echologic!
+        yucca: | 'Yucca elata' als Symbol für einen neuen Anfang
+
+        news_title: echologic auf Twitter
+        twitter: Folgen Sie echologic auf Twitter!
+
+        header1: bedeutet
+        header2: |-
+          das Ende der Machtlosigkeit!&nbsp;&nbsp;<br/>den Anfang der Selbstbestimmung!
+
+        teaser: |
+          <p>
+          echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein geringeres, als eine
+          <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
+          </p>
+
+        teaser_more: |
+          <p>
+          Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können hier ihre Ansichten in
+          Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen.
+          Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit
+          beliebig vielen Teilnehmern. Menschen rund um den Globus können so auf echo konstruktiv zusammen arbeiten und
+          gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten.
+          </p><p>
+          Durch neuartige Möglichkeiten transnationaler und interkultureller Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert
+          und damit der Weg in eine friedliche, gerechte und <strong>nachhaltige Zukunft</strong> geebnet werden.
+          </p><p>
+          echologic bietet Ihnen die Möglichkeit die Entwicklung dieses einmaligen Projektes zu verfolgen und aktiv mit zu gestalten!
+          </p>
+
+        action: |
+          Erfahren Sie mehr über echo!<br/>Werden Sie echologic!
+
+      about:
+        title: *about
+        text: |
+          <p>
+          <strong>Die Quelle</strong> von echo ist ein <strong>interdisziplinäres Team</strong> junger und erfahrener
+          Akademiker. Sie haben sein einmaliges Konzept als Antwort auf die globalen Herausforderungen unserer Zeit
+          entwickelt und arbeiten zielstrebig an dessen Umsetzung.
+          </p><p>
+          Mittlerweile hat sich um echo ein stetig <strong>wachsendes Netzwerk</strong> von UnterstützerInnen gebildet,
+          das dem Projekt zusätzlichen Elan verleiht. Darunter sind etliche <strong>ExpertInnen</strong> mit langjähriger
+          Berufserfahrung in verschiedenen Bereichen (wie Geistes- und Naturwissenschaften, Unternehmensberatung und
+          Marketing, Softwarerecht und Public Relations), die dem Team beratend zur Seite stehen.<br/>
+          Aber auch einige <strong>namhafte PolitikerInnen</strong>, wie die ehemalige Landtagsabgeordnete
+          Ruth Paulig (die Grünen), der Bundestagsabgeordnete Axel Berg (SPD) sowie der Generalsekretär des
+          Europäischen Wirtschafts- und Sozialausschusses, Martin Westlake, unterstützen echo mit Rat und Tat.
+          </p><p>
+          Verschiedene Kooperationspartner aus Zivilgesellschaft (OneAim, Netzwerk Gemeinsinn), Wirtschaft (<a href='http://www.the-foo.de/' target='_blank'>The Foo</a>)
+          und Politik (Grüne Jugend München) helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele
+          zu verwirklichen.
+          </p>
+
+      # Static content for imprint
+      imprint:
+        title: *imprint
+        text: |
+          <p>
+          Dienstanbieter dieser Seite ist der <strong>echo source n.e.V</strong> (in Gründung) vertreten durch
+          László Papp. Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
+          </p><p>
+          <strong>Ladungsfähige Anschrift</strong> gemäß TMG<br/>
+          László Papp<br/>
+          Pflugstr. 15<br/>
+          10115 Berlin<br/>
+          E-mail: team [att] echo-logic . org - (statt "att", bitte "@" eingeben)<br/>
+          </p><p>
+          <strong>Haftungshinweis</strong>:<br/>
+          Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.
+          Auf den Inhalt dieser Seiten haben wir keinen Einfluss; für den Inhalt ist ausschließlich der
+          Betreiber der anderen Website verantwortlich. Trotz der Überprüfung der Inhalte im gesetzlich
+          gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw.
+          der verlinkten Seite ablehnen.
+          </p>
+
+      # Static content for data privacy
+      data_privacy:
+        title: *data_privacy
+
+        text: |
+          <p>
+          Wir freuen uns über Ihr Interesse an echologic.<br/>
+          Sie können hier unsere Datenschutzerklärung in PDF Format ansehen.
+          </p>
+
+        open_document: Dokument öffnen!
+
 
     # Static content for the echo main menu point
     echo:
       title: echo
       subtitle: Die Plattform
-      why:
-        title: Warum brauchen wir echo?
-        
-        text:
-          <p>
-          Die Welt ist im Umbruch. Die Menschheit sieht sich mit ökologischen, ökonomischen und humanitären Herausforderungen von bisher 
-          unbekannetem Ausmaß konfrontiert. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. Intransparente Entscheidungen 
-          rufen ein wachsendes Gefühl der <strong>Machtlosigkeit</strong> und <strong>politischen Resignation</strong> in der 
-          Bevölkerung hervor und schwächen den Glauben an die heutigen Demokratien. Rufe nach mehr <strong>Transparenz</strong> und 
-          <strong>Mitspracherecht</strong> werden immer lauter.
-          </p><p> 
-          Die aktuellen Krisen können also als eine allgemeine <strong>Krise der Demokratie</strong> verstanden werden. 
-          Es gilt daher den Menschen eine Möglichkeit zu geben, gemeinsam <strong>konstruktive Lösungen</strong> zu entwickeln, 
-          um den <span title="{{tooltip}}" class="ttLink">“glokalen” Herausforderungen</span> 
-          unserer Zeit effektiv begegnen zu können.
-          </p>
+
+      index:
+        why:
+          title: Warum brauchen wir echo?
+
+          text:
+            <p>
+            Die Welt ist im Umbruch. Die Menschheit sieht sich mit ökologischen, ökonomischen und humanitären Herausforderungen von bisher
+            unbekannetem Ausmaß konfrontiert. Zufriedenstellende Lösungen sind jedoch nicht in Sicht. Intransparente Entscheidungen
+            rufen ein wachsendes Gefühl der <strong>Machtlosigkeit</strong> und <strong>politischen Resignation</strong> in der
+            Bevölkerung hervor und schwächen den Glauben an die heutigen Demokratien. Rufe nach mehr <strong>Transparenz</strong> und
+            <strong>Mitspracherecht</strong> werden immer lauter.
+            </p><p>
+            Die aktuellen Krisen können also als eine allgemeine <strong>Krise der Demokratie</strong> verstanden werden.
+            Es gilt daher den Menschen eine Möglichkeit zu geben, gemeinsam <strong>konstruktive Lösungen</strong> zu entwickeln,
+            um den <span title="{{tooltip}}" class="ttLink">“glokalen” Herausforderungen</span>
+            unserer Zeit effektiv begegnen zu können.
+            </p>
+
+          tooltip:
+            Unsere ökologischen, ökonomischen und humanitären Herausforderungen sind auf lokaler und globaler Ebene
+            miteinander eng verbunden. Sie können daher nicht unabhängig voneinander, sondern nur in Hinblick auf ihre
+            komplexen Zusammenhängen analysiert und gelöst werden.
+
+        what:
+          title: Was ist echo?
+
+          text: |
+            <p>
+            echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt.
+            Anders als auf <span title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf
+            echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbasis</span></strong> und können
+            <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten.
+            Dazu vereint echo technische Innovation und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept.
+            Dieses hilft den Menschen Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu
+            fällen und wirksam umzusetzen. Dementsprechend stellt echo Ihnen drei Funktionsbereiche zur Verfügung:
+            <strong>Diskutieren – Vernetzen – Handeln!</strong>
+            </p><p>
+            Durch die Kombination dieser drei Funktionsbereiche, schafft echo einen völlig neuartigen virtuellen Raum
+            für eine demokratische Zusammenarbeit, die mit geringem Aufwand zu
+            <strong>spürbaren Ergebnissen im Alltag</strong> führt.<br/>
+            Indem echo seine Funktionalität <strong>plattformübergreifend</strong> zur Verfügung stellt,
+            können darüber hinaus sämtliche heute schon im Internet aktive Kräfte für einen <strong>nachhaltigen Wandel</strong> gebündelt werden.
+            </p>
+
+          tooltip1: |
+            Foren ermöglichen zwar eine offene Diskussion, liefern jedoch kein strukturiertes, messbares Ergebnis.
+            Group Blogs können nicht von hunderten oder tausenden Autoren geschrieben werden. Wikipedia kann die
+            Qualität seiner Inhalte nur dadurch garantieren, dass die Kontrolle der Beiträge in die Hände
+            einiger weniger Administratoren gelegt wird – was komplett undemokratisch ist.
+
+          tooltip2: |
+            Analog zur Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten,
+            wird echo die umfangreichste Meinungsbasis für subjektive Meinungen zur Verfügung stellen und
+            konstruktive Diskussionen über die bestehenden Positionen und Themen anregen.
           
-        tooltip:
-          Unsere ökologischen, ökonomischen und humanitären Herausforderungen sind auf lokaler und globaler Ebene 
-          miteinander eng verbunden. Sie können daher nicht unabhängig voneinander, sondern nur in Hinblick auf ihre 
-          komplexen Zusammenhängen analysiert und gelöst werden.
-          
-      what:
-        title: Was ist echo?
-       
+      discuss:
+        title: Diskutieren
+
         text: |
           <p>
-          echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt. 
-          Anders als auf <span title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span>, finden Sie auf 
-          echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbasis</span></strong> und können 
-          <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten. 
-          Dazu vereint echo technische Innovation und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept. 
-          Dieses hilft den Menschen Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu 
-          fällen und wirksam umzusetzen. Dementsprechend stellt echo Ihnen drei Funktionsbereiche zur Verfügung: 
-          <strong>Diskutieren – Vernetzen – Handeln!</strong> 
+          Verschaffen Sie sich einen detaillierten Überblick über die aktuelle öffentliche Meinung!
+          Diskutieren Sie mit! Überzeugen Sie Anderen von Ihrer Position!
           </p><p>
-          Durch die Kombination dieser drei Funktionsbereiche, schafft echo einen völlig neuartigen virtuellen Raum 
-          für eine demokratische Zusammenarbeit, die mit geringem Aufwand zu 
-          <strong>spürbaren Ergebnissen im Alltag</strong> führt.<br/>
-          Indem echo seine Funktionalität <strong>plattformübergreifend</strong> zur Verfügung stellt, 
-          können darüber hinaus sämtliche heute schon im Internet aktive Kräfte für einen <strong>nachhaltigen Wandel</strong> gebündelt werden.
-          </p>
-          
-        tooltip1: |
-          Foren ermöglichen zwar eine offene Diskussion, liefern jedoch kein strukturiertes, messbares Ergebnis. 
-          Group Blogs können nicht von hunderten oder tausenden Autoren geschrieben werden. Wikipedia kann die 
-          Qualität seiner Inhalte nur dadurch garantieren, dass die Kontrolle der Beiträge in die Hände 
-          einiger weniger Administratoren gelegt wird – was komplett undemokratisch ist.
-          
-        tooltip2: |
-          Analog zur Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten, 
-          wird echo die umfangreichste Meinungsbasis für subjektive Meinungen zur Verfügung stellen und 
-          konstruktive Diskussionen über die bestehenden Positionen und Themen anregen. 
-          
-    echo_discuss:
-      title: Diskutieren
-      
-      text: |
-        <p>
-        Verschaffen Sie sich einen detaillierten Überblick über die aktuelle öffentliche Meinung! 
-        Diskutieren Sie mit! Überzeugen Sie Anderen von Ihrer Position!
-        </p><p>
-        Der Diskussionsbereich von echo ermöglicht erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem 
-        demokratischen öffentlichen Diskurs mit beliebig vielen Teilnehmern. Seine <strong>neuartige Diskussionsmethode</strong> 
-        vereint hierfür mehrere entscheidende Innovationen:
-        <p> 
+          Der Diskussionsbereich von echo ermöglicht erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem
+          demokratischen öffentlichen Diskurs mit beliebig vielen Teilnehmern. Seine <strong>neuartige Diskussionsmethode</strong>
+          vereint hierfür mehrere entscheidende Innovationen:
+          <p>
 
-      clarity: Übersichtlichkeit
-      clarity_more:
-        Mit einem Suchbegriff und wenigen Klicks (ohne umständliche Formulare) finden Sie über die sprachübergreifende 
-        Suchfunktion von echo eine klare Übersicht der meist unterstützen Positionen zu einem Thema.
-      
-      transparency: Transparenz
-      transparency_more:
-        Auf echo, werden sämtliche Positionen und Argumente stets mit gegenläufigen Sichtweisen kontrastiert. 
-        Dies ermöglicht den Menschen, sich schnell eine differenzierte Meinung über 
-        bestimmte Themen zu bilden und hilft dadurch Polemik und Populismus zu unterbinden.
-        
-      detailed: Detailliertes Meinungsbild
-      detailed_more: |
-        Alle Positionen sowie deren Argumente können auf echo per Klick „unterstützt“ werden. 
-        So können Sie jederzeit die genaue Unterstützung der einzelnen Standpunkte durch verschiedene gesellschaftliche Gruppen nachvollziehen.
-        <br/><br/>
-        <u>Ein Beispiel:</u> Wie viele Menschen haben weltweit für und wie viele gegen den Atomausstieg gestimmt? Was denken die Europäer? 
-        Was sagen dazu Atomphysiker und was die Einwohner von Gorleben? Welche Position beziehen bestimmte Organisationen?
+        clarity: Übersichtlichkeit
+        clarity_more:
+          Mit einem Suchbegriff und wenigen Klicks (ohne umständliche Formulare) finden Sie über die sprachübergreifende
+          Suchfunktion von echo eine klare Übersicht der meist unterstützen Positionen zu einem Thema.
 
-      democratic: Demokratische Meinungsbildung
-      democratic_more: |
-        Jede Position auf echo repräsentiert eine fundierte Stellungnahme, welche von den NutzerInnen in einem 
-        <span title="{{tooltip}}" class="ttLink">vollkommen demokratischen Prozess</span> ausgearbeitet wird.
-        Mit geringstem Aufwand können sich so alle Menschen gleichberechtigt an der dynamischen Entwicklung solcher Stellungnahmen beteiligen. 
+        transparency: Transparenz
+        transparency_more:
+          Auf echo, werden sämtliche Positionen und Argumente stets mit gegenläufigen Sichtweisen kontrastiert.
+          Dies ermöglicht den Menschen, sich schnell eine differenzierte Meinung über
+          bestimmte Themen zu bilden und hilft dadurch Polemik und Populismus zu unterbinden.
 
-      democratic_tooltip:
-        Die kollektive Texterstellung auf echo bedarf dabei im Normalfall weder externer Moderatoren, noch werden den beteiligten NutzerInnen 
-        privilegierte Rollen zugesprochen. Alle Beteiligten haben so dasselbe Mitspracherecht.
-        
-      glocal: Glokale Übersicht 
-      glocal_more: |
-        echo hilft Ihnen und allen NutzerInnen, thematische Zusammenhänge zwischen lokalen, regionalen und globalen Themen leichter nachzuvollziehen.
-        <br/><br/>
-        <u>Ein Beispiel:</u> Lebensmittelpreise im Supermarkt nebenan → Massentierhaltung in der EU → Regenwaldrodung für Sojaanbau → Klimawandel.
-        <br/><br/>
-        Diese „glokale“ Darstellung ermöglicht den Menschen lokale Themen in ihrem globalen Kontext zu sehen und umgekehrt, 
-        die globalen Probleme vor dem Hintergrund <strong>lokaler Verhältnisse</strong> zu verstehen. Wen das persönliche Interesse an einem 
-        lokalen Thema aus seinem direkten Umfeld (Lebensmittelpreise) auf echo brachte, der wird schnell mit dessen 
-        <strong>globalen Implikationen</strong> (Klimawandel) konfrontiert.
+        detailed: Detailliertes Meinungsbild
+        detailed_more: |
+          Alle Positionen sowie deren Argumente können auf echo per Klick „unterstützt“ werden.
+          So können Sie jederzeit die genaue Unterstützung der einzelnen Standpunkte durch verschiedene gesellschaftliche Gruppen nachvollziehen.
+          <br/><br/>
+          <u>Ein Beispiel:</u> Wie viele Menschen haben weltweit für und wie viele gegen den Atomausstieg gestimmt? Was denken die Europäer?
+          Was sagen dazu Atomphysiker und was die Einwohner von Gorleben? Welche Position beziehen bestimmte Organisationen?
+
+        democratic: Demokratische Meinungsbildung
+        democratic_more: |
+          Jede Position auf echo repräsentiert eine fundierte Stellungnahme, welche von den NutzerInnen in einem
+          <span title="{{tooltip}}" class="ttLink">vollkommen demokratischen Prozess</span> ausgearbeitet wird.
+          Mit geringstem Aufwand können sich so alle Menschen gleichberechtigt an der dynamischen Entwicklung solcher Stellungnahmen beteiligen.
+
+        democratic_tooltip:
+          Die kollektive Texterstellung auf echo bedarf dabei im Normalfall weder externer Moderatoren, noch werden den beteiligten NutzerInnen
+          privilegierte Rollen zugesprochen. Alle Beteiligten haben so dasselbe Mitspracherecht.
+
+        glocal: Glokale Übersicht
+        glocal_more: |
+          echo hilft Ihnen und allen NutzerInnen, thematische Zusammenhänge zwischen lokalen, regionalen und globalen Themen leichter nachzuvollziehen.
+          <br/><br/>
+          <u>Ein Beispiel:</u> Lebensmittelpreise im Supermarkt nebenan → Massentierhaltung in der EU → Regenwaldrodung für Sojaanbau → Klimawandel.
+          <br/><br/>
+          Diese „glokale“ Darstellung ermöglicht den Menschen lokale Themen in ihrem globalen Kontext zu sehen und umgekehrt,
+          die globalen Probleme vor dem Hintergrund <strong>lokaler Verhältnisse</strong> zu verstehen. Wen das persönliche Interesse an einem
+          lokalen Thema aus seinem direkten Umfeld (Lebensmittelpreise) auf echo brachte, der wird schnell mit dessen
+          <strong>globalen Implikationen</strong> (Klimawandel) konfrontiert.
     
-    echo_connect:
-      title: Vernetzen
-      
-      text_top: |
-        <p>
-        Finden Sie die richtigen UnterstützerInnen für Ihre Anliegen!
-        </p><p>
-        Anders als herkömmliche soziale Netzwerke, ermöglicht Ihnen der zielgenaue Suchmechanismus von echo, schnell und einfach 
-        <strong>MitstreiterInnen mit verschiedenen Kompetenzen</strong> bezüglich eines Themas zu finden. Hierfür werden die gefundenen 
-        Akteure in verschiedenen Gruppen zusammengefasst, welche die wichtigsten gesellschaftlichen Kompetenzbereiche widerspiegeln:
-        </p> 
-   
-      list: &competences |
-        <li>BürgerInnen und Betroffene (Bedürfniskompetenz)</li>
-        <li>ExpertInnen und WissenschaftlerInnen (Fachkompetenz)</li>
-        <li>PolitikerInnen und andere RepräsentantInnen (Entscheidungskompetenz)</li>
-        <li>Nichtstaatliche und staatliche  Organisationen (Mobilisierungspotenzial)</li>
-        
-      text_bottom: |
-        <p>
-        echo motiviert aktiv Gleichgesinnte aus den verschiedenen Kompetenzgruppen zur Zusammenarbeit. 
-        Durch die Berücksichtigung ihrer unterschiedlichen Belange, können wichtige Probleme identifiziert und gemeinsam die 
-        <strong>bestmöglichen Lösungen</strong> ausgearbeitet werden.
-        </p> 
-        
-    echo_act:
-      title: Handeln
-      
-      text_top: |
-        <p>
-        Werden Sie aktiv! Setzen Sie Ihre Ziele erfolgreich um!
-        </p><p>
-        Um <strong>spürbare Erfolge im Alltag</strong> der Menschen zu erzielen, motiviert echo alle TeilnehmerInnen einer Debatte, 
-        Aktionen zu starten und ihre Lösungsvorschläge in die Tat umzusetzen. echo bündelt dabei alle lokalen, 
-        regionalen und globalen Aktionen, die ein gemeinsames Ziel verfolgen. Dadurch schafft echo neue Synergien und 
-        vervielfacht das <strong>Einflusspotenzial</strong> des bürgerlichen Engagements. Das Spektrum der ermöglichten Aktionen reicht von:
-        </p>
-        
-      possible_actions: |
-        <li>elektronisch signierten Petitionen,</li>
-        <li>Organisation von Bürger- und Volksbegehren,</li>
-        <li>Organisation von Demonstrationen, Boykotts und Sammelklagen,</li>
-        <li>Gründung nationaler und internationaler NRO (Nicht-Regierungs-Organisationen),</li>
-        <li>bis hin zu beliebigen Projekten und Aktionen mit einem gemeinsam definierten Ziel 
-        (wie z.B. Gründung von Bürgerbewegungen, Organisation einer Kinderkrippe oder eines europaweiten Tags des Radfahrens).</li>
+      connect:
+        title: Vernetzen
 
-      text_middle: |
-        <p>
-        Mit dem Aktionsbereich von echo wird so eine Brücke von virtuellen Diskussionen zu realen Aktionen geschaffen. 
-        Indem die Aktionen mit bestehenden <strong>legislativen Instrumenten</strong> verknüpft werden, überführt echo 
-        erstmals zivilgesellschaftliches Engagement in <strong>echte politische Teilhabe</strong>.
-        </p>
-        
-      act_more: |
-        <p>      
-        <u>Ein Beispiel:</u> 20 000 bayerische NutzerInnen haben auf echo für ein Verbot aller gentechnisch veränderten 
-        Lebens- und Futtermittel gestimmt – genug, um einen Volksentscheid initiieren zu können. Sofort erhalten alle 
-        Stimmgeber eine Nachricht mit der Aufforderung, diesen zu organisieren. Folgen die NutzerInnen dem in der 
-        Nachricht enthaltenen Link, so finden sie sich in einem <strong>bestens ausgestatteten virtuellen Aktionsraum</strong> wieder.
-        </p><p>
-        Für eine effektive Zusammenarbeit im Rahmen der Aktionen, stellt echo den Beteiligten alle 
-        <strong>nötigen Informationen</strong> sowie eine <strong>adäquate „Werkzeugkiste“</strong> zur Verfügung. Standardmäßig sind darin, über die 
-        innovative Entscheidungsfindungsfunktion hinaus, verschiedene Kommunikationsfunktionen und Verfahrenstools, 
-        Kalender, Event- und Aufgabenverwaltung, file sharing sowie eine Fundraising-Funktion enthalten. 
-        Dank des <strong>modularen Aufbaus</strong> können die angebotenen Werkzeuge jederzeit um neue Möglichkeiten erweitert werden.
-        </p>  
+        text_top: |
+          <p>
+          Finden Sie die richtigen UnterstützerInnen für Ihre Anliegen!
+          </p><p>
+          Anders als herkömmliche soziale Netzwerke, ermöglicht Ihnen der zielgenaue Suchmechanismus von echo, schnell und einfach
+          <strong>MitstreiterInnen mit verschiedenen Kompetenzen</strong> bezüglich eines Themas zu finden. Hierfür werden die gefundenen
+          Akteure in verschiedenen Gruppen zusammengefasst, welche die wichtigsten gesellschaftlichen Kompetenzbereiche widerspiegeln:
+          </p>
 
-    echo_echo_on_waves:
-      title: Überall
-      text: |
-        <p>
-        Um die Grenzen einzelner Portale zu überwinden, verfolgt echo ein <strong>plattfromübergreifendes Konzept</strong>. 
-        Relevante Diskussionen und Aktionen von echo können demnach auf anderen Internetseiten und Blogs dargestellt und 
-        dort bearbeitet werden. Auf diese Weise erweitert echo die Funktionalität anderer Plattformen und schafft, 
-        statt lähmender Konkurrenzsituationen, <strong>echte Synergien</strong>. So bündelt echo erstmals sämtliche Kräfte des 
-        bürgerlichen Engagements im Internet und ermöglicht die Entstehung einer breiten gesellschaftlichen <strong>Welle des Wandels</strong>.
-        </p><p>
-        Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit. 
-        Diese open source Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit. 
-        Sie schafft auch die Grundlage für einen sicheren und plattformübergreifenden Datenaustausch zwischen 
-        öffentlichen, organisationsinternen und privaten Servern.
-        </p><p>
-        Auf der Basis des innovativen Konzepts von echo und der bahnbrechenden Technologie von Google Wave, legt 
-        <strong>echo on waves</strong> die Grundlage für die gemeinsame Entwicklung eines der ambitioniertesten 
-        <strong>open source</strong> Projekte, das die Welt je gesehen hat: 
-        </p><p>
-        Die Schaffung einer <strong>globalen Agora</strong>!
-        </p>
+        list: &competences |
+          <li>BürgerInnen und Betroffene (Bedürfniskompetenz)</li>
+          <li>ExpertInnen und WissenschaftlerInnen (Fachkompetenz)</li>
+          <li>PolitikerInnen und andere RepräsentantInnen (Entscheidungskompetenz)</li>
+          <li>Nichtstaatliche und staatliche  Organisationen (Mobilisierungspotenzial)</li>
+
+        text_bottom: |
+          <p>
+          echo motiviert aktiv Gleichgesinnte aus den verschiedenen Kompetenzgruppen zur Zusammenarbeit.
+          Durch die Berücksichtigung ihrer unterschiedlichen Belange, können wichtige Probleme identifiziert und gemeinsam die
+          <strong>bestmöglichen Lösungen</strong> ausgearbeitet werden.
+          </p>
+        
+      act:
+        title: Handeln
+
+        text_top: |
+          <p>
+          Werden Sie aktiv! Setzen Sie Ihre Ziele erfolgreich um!
+          </p><p>
+          Um <strong>spürbare Erfolge im Alltag</strong> der Menschen zu erzielen, motiviert echo alle TeilnehmerInnen einer Debatte,
+          Aktionen zu starten und ihre Lösungsvorschläge in die Tat umzusetzen. echo bündelt dabei alle lokalen,
+          regionalen und globalen Aktionen, die ein gemeinsames Ziel verfolgen. Dadurch schafft echo neue Synergien und
+          vervielfacht das <strong>Einflusspotenzial</strong> des bürgerlichen Engagements. Das Spektrum der ermöglichten Aktionen reicht von:
+          </p>
+
+        possible_actions: |
+          <li>elektronisch signierten Petitionen,</li>
+          <li>Organisation von Bürger- und Volksbegehren,</li>
+          <li>Organisation von Demonstrationen, Boykotts und Sammelklagen,</li>
+          <li>Gründung nationaler und internationaler NRO (Nicht-Regierungs-Organisationen),</li>
+          <li>bis hin zu beliebigen Projekten und Aktionen mit einem gemeinsam definierten Ziel
+          (wie z.B. Gründung von Bürgerbewegungen, Organisation einer Kinderkrippe oder eines europaweiten Tags des Radfahrens).</li>
+
+        text_middle: |
+          <p>
+          Mit dem Aktionsbereich von echo wird so eine Brücke von virtuellen Diskussionen zu realen Aktionen geschaffen.
+          Indem die Aktionen mit bestehenden <strong>legislativen Instrumenten</strong> verknüpft werden, überführt echo
+          erstmals zivilgesellschaftliches Engagement in <strong>echte politische Teilhabe</strong>.
+          </p>
+
+        act_more: |
+          <p>
+          <u>Ein Beispiel:</u> 20 000 bayerische NutzerInnen haben auf echo für ein Verbot aller gentechnisch veränderten
+          Lebens- und Futtermittel gestimmt – genug, um einen Volksentscheid initiieren zu können. Sofort erhalten alle
+          Stimmgeber eine Nachricht mit der Aufforderung, diesen zu organisieren. Folgen die NutzerInnen dem in der
+          Nachricht enthaltenen Link, so finden sie sich in einem <strong>bestens ausgestatteten virtuellen Aktionsraum</strong> wieder.
+          </p><p>
+          Für eine effektive Zusammenarbeit im Rahmen der Aktionen, stellt echo den Beteiligten alle
+          <strong>nötigen Informationen</strong> sowie eine <strong>adäquate „Werkzeugkiste“</strong> zur Verfügung. Standardmäßig sind darin, über die
+          innovative Entscheidungsfindungsfunktion hinaus, verschiedene Kommunikationsfunktionen und Verfahrenstools,
+          Kalender, Event- und Aufgabenverwaltung, file sharing sowie eine Fundraising-Funktion enthalten.
+          Dank des <strong>modularen Aufbaus</strong> können die angebotenen Werkzeuge jederzeit um neue Möglichkeiten erweitert werden.
+          </p>
+
+      echo_on_waves:
+        title: Überall
+        text: |
+          <p>
+          Um die Grenzen einzelner Portale zu überwinden, verfolgt echo ein <strong>plattfromübergreifendes Konzept</strong>.
+          Relevante Diskussionen und Aktionen von echo können demnach auf anderen Internetseiten und Blogs dargestellt und
+          dort bearbeitet werden. Auf diese Weise erweitert echo die Funktionalität anderer Plattformen und schafft,
+          statt lähmender Konkurrenzsituationen, <strong>echte Synergien</strong>. So bündelt echo erstmals sämtliche Kräfte des
+          bürgerlichen Engagements im Internet und ermöglicht die Entstehung einer breiten gesellschaftlichen <strong>Welle des Wandels</strong>.
+          </p><p>
+          Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit.
+          Diese open source Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit.
+          Sie schafft auch die Grundlage für einen sicheren und plattformübergreifenden Datenaustausch zwischen
+          öffentlichen, organisationsinternen und privaten Servern.
+          </p><p>
+          Auf der Basis des innovativen Konzepts von echo und der bahnbrechenden Technologie von Google Wave, legt
+          <strong>echo on waves</strong> die Grundlage für die gemeinsame Entwicklung eines der ambitioniertesten
+          <strong>open source</strong> Projekte, das die Welt je gesehen hat:
+          </p><p>
+          Die Schaffung einer <strong>globalen Agora</strong>!
+          </p>
              
     # Static content for the echocracy main menu point
     echocracy:
       title: echocracy
       subtitle: Die Akteure
-      text_top: |
-        <p>
-        „echocracy“, die <strong>neue Form teilnehmender Demokratie</strong> von echo, bietet Ihnen und Menschen auf der ganzen Welt 
-        die Möglichkeit, gesellschaftsrelevante Fragen zu diskutieren und gemeinsame Entscheidungen herbeizuführen. 
-        Die echocracy basiert dabei auf einem deliberativen interkulturellen Diskurs, der die wichtigsten 
-        gesellschaftlichen Kompetenzbereiche in eine <strong>kollektive Entscheidungsfindung</strong> einbezieht:
-        </p>
 
-      list: *competences
-      
-      text_bottom:
-        <p>
-        Akteure dieser Kompetenzbereiche treten auf echo in einen <strong>gleichberechtigten Dialog</strong>. 
-        Dies schafft nicht nur <strong>vollständige Transparenz</strong> über den gesamten Meinungsbildung- 
-        und Entscheidungsfindungsprozess. echo bietet dadurch Ihnen und anderen Menschen <strong>einzigartige Möglichkeiten</strong>, 
-        bei der gemeinsamen Gestaltung unserer Welt aktiv mitzuwirken.
-        </p><p>
-        In echo, der globalen Agora, sind alle Beteiligte gleichberechtigte, <strong>freie Weltbürger</strong>!
-        </p>
-        
-    echocracy_citizens:
-      title: BürgerInnen
-      title_long: Engagierte BürgerInnen
-      
-      text_top: |
-        <p>
-        Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen Entscheidungsprozessen und zivilgesellschaftlichen 
-        Aktionen sind das Hauptanliegen von echo. Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich 
-        verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher 
-        <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen 
-        neuartigen Möglichkeiten:
-        </p>
-      
-      adv1: Informatives Meinungsbild
-      adv1_details: |
-        <li>Einfach auffindbare öffentliche Diskussionen in der eigenen Nachbarschaft, Region und der Welt</li>
-        <li>Leicht nachvollziehbare Positionen verschiedener Gesellschaftsgruppen und Regionen</li>
-      adv2: Selbstbestimmung 
-      adv2_details: |
-        <li>Direkte Beteiligung an Entscheidungsfindung bezüglich Ihres unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt</li>
-        <li>Überzeugung Anderer für den eigenen Standpunkt</li>
-        <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
-        <li>Einfache Organisation und Unterstützung realer Aktionen</li>
-      adv3: Gestärktes „Wir-Gefühl“
-      adv3_details: |
-        <li>Gemeinsamer, direkter Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li> 
-      adv4: Befreiung vom Gefühl der Machtlosigkeit
-      adv4_details: |
-        <li>Spürbare Erfolge im eigenen Alltag</li>
-        <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft </li>
-      
-    echocracy_scientists:
-      title: ExpertInnen
-      title_long: ExpertInnen und WissenschaftlerInnen
-      
-      text_top: |
-        <p>
-        ExpertInnen und WissenschaftlerInnen liefern mit ihren Forschungsergebnissen und Erkenntnissen die Grundlage 
-        gesellschaftspolitischer Entscheidungen. Mit ihrem Know-how können sie einen wesentlichen Beitrag zur 
-        Qualität der Diskussionen und Lösungsvorschlägen leisten. Sie sind daher <strong>unverzichtbare Akteure</strong> 
-        auf echo und profitieren in vielfacher Weise von seinen <strong>neuartigen Möglichkeiten</strong>:
-        </p> 
-        
-      adv1: Verbesserung des wissenschaftlichen Diskurses
-      adv1_details: |
-        <li>Gemeinsame Ausformulierung neuer Erkenntnisse mit KollegInnen in eigenen Arbeitsgruppen und Netzwerken</li>
-        <li>Transparente Debatten mit klar differenzierten Positionen verschiedener Disziplinen</li>
-        <li>Effizienter Wissens- und Erfahrungsaustausch durch transnationale und interkulturelle Verbindung von ExpertInnen</li>
-         
-      adv2: Vorteile auf dem akademischen Arbeitsmarkt
-      adv2_details: |
-        <li>Präsentation des eigenen wissenschaftlichen Profils</li>
-        <li>Direkter Zugang zu Mitarbeitern und Verantwortlichen von interessanten Forschungsprojekten</li>
-        <li>Neue Stellen durch kostenloses Fundraising für neue Forschungsprojekte</li>
-       
-      adv3: Mehr Einfluss auf gesellschaftspolitische Entscheidungen
-      adv3_details: |
-        <li>Direkte Beteiligung an Entscheidungsfindung</li>
-        <li>Sensibilisierung der Gesellschaft für die Herausforderungen unserer Zeit</li>
-        <li>Effektive Diffusion von wissenschaftlichen Erkenntnissen durch leicht nachvollziehbare Stellungnahmen und Argumente</li>
-        
-    echocracy_decision_makers:
-      title: PolitikerInnen
-      title_long: PolitikerInnen & RepräsentantenInnen
-      text_top: |
-        <p>
-        EntscheidungsträgerInnen aus Politik und Wirtschaft tragen die größte gesellschaftliche Verantwortung. 
-        Sie müssen entscheiden, was zum größtmöglichen Wohle Aller dient und praktikable Lösungen aushandeln. 
-        Ihre Beteiligung an den Diskussionen auf echo ist daher besonders wichtig. 
-        Damit ihre Bemühungen zu nachhaltigen Verbesserungen führen können, brauchen sie eine <strong>breite 
-        bürgergesellschaftliche Unterstützung</strong> für ihre Vorhaben. Eine transparente Darstellung ihrer 
-        Anliegen und eine gute Kenntnis der bürgerlichen Belange sind hierfür die wichtigste Voraussetzung. 
-        echo bietet PolitikerInnen und anderen RepräsentantInnen <strong>einzigartige Möglichkeiten</strong>, 
-        um die Effizienz ihre Arbeit wesentlich zu verbessern:
-        </p>
-        
-      adv1: Detailliertes Meinungsbild
-      adv1_details: |
-        <li>Klare Übersicht über die wichtigsten Bedürfnisse und Meinungen der WählerInnen</li>
-        <li>Genaue Darstellung der Unterstützung bestimmter Positionen seitens unterschiedlicher gesellschaftlicher Gruppen und Regionen</li>
-         
-      adv2: Optimierte interne Zusammenarbeit
-      adv2_details: |
-        <li>Zeit- und Raum-unabhängige intra- und interparlamentarischen Zusammenarbeit (z.B. nationalen ↔ internationalen Fraktionen)</li>
-        <li>Schnelle und transparente Entscheidungsfindung zwischen administrativen Ebenen (Kommune ↔ Bund ↔ EU)</li>
-       
-      adv3: Überzeugende Ansprache der WählerInnen
-      adv3_details: |
-        <li>Direkter Zugang zu Millionen von mündigen BürgerInnen</li>
-        <li>Leicht nachvollziehbare Darstellung eigener Positionen, Argumente und Vorhaben</li>
-        <li>Übersichtliche Gegenüberstellung von Wahlprogrammen und themenspezifischen Positionen zu jeweils anderen Standpunkten</li>
-       
-    echocracy_organisations:
-      title: Organisationen
-      title_long: Nichtstaatliche & staatliche Organisationen 
-      
-      text_top: |
-        <p>
-        Nichtstaatliche und staatliche Organisationen (NRO, Bürgerinitiativen, politische Parteien, Gewerkschaften, 
-        Städte und Kommunen) stehen heute schon im Fokus des gesellschaftlichen und politischen Geschehens und sind 
-        daher <strong>unentbehrliche Akteure</strong> auf echo. Sie sind Meinungsbildner, sie planen Kampagnen und Aktionen und 
-        versuchen die Menschen für ihre Anliegen zu mobilisieren. echo bietet Organisationen zahlreiche 
-        <strong>einzigartige Möglichkeiten</strong>, um ihre Ziele erfolgreich zu erreichen:
-        </p>
+      index:
+        text_top: |
+          <p>
+          „echocracy“, die <strong>neue Form teilnehmender Demokratie</strong> von echo, bietet Ihnen und Menschen auf der ganzen Welt
+          die Möglichkeit, gesellschaftsrelevante Fragen zu diskutieren und gemeinsame Entscheidungen herbeizuführen.
+          Die echocracy basiert dabei auf einem deliberativen interkulturellen Diskurs, der die wichtigsten
+          gesellschaftlichen Kompetenzbereiche in eine <strong>kollektive Entscheidungsfindung</strong> einbezieht:
+          </p>
 
-      adv1: Optimierte organisationsinterne Zusammenarbeit
-      adv1_details: |
-        <li>Gemeinsame Entwicklung von Ideen, überzeugenden Argumenten und Lösungsvorschlägen mit eigenen ExpertInnen und MitstreiterInnen</li>
+        list: *competences
+
+        text_bottom:
+          <p>
+          Akteure dieser Kompetenzbereiche treten auf echo in einen <strong>gleichberechtigten Dialog</strong>.
+          Dies schafft nicht nur <strong>vollständige Transparenz</strong> über den gesamten Meinungsbildung-
+          und Entscheidungsfindungsprozess. echo bietet dadurch Ihnen und anderen Menschen <strong>einzigartige Möglichkeiten</strong>,
+          bei der gemeinsamen Gestaltung unserer Welt aktiv mitzuwirken.
+          </p><p>
+          In echo, der globalen Agora, sind alle Beteiligte gleichberechtigte, <strong>freie Weltbürger</strong>!
+          </p>
+        
+      citizens:
+        title: BürgerInnen
+        title_long: Engagierte BürgerInnen
+
+        text_top: |
+          <p>
+          Eine rege Beteiligung der BürgerInnen aller Länder an demokratischen Entscheidungsprozessen und zivilgesellschaftlichen
+          Aktionen sind das Hauptanliegen von echo. Engagierte BürgerInnen, die heute schon politisch aktiv sind und sich
+          verantwortungsvoll für eine friedliche, gerechte und nachhaltige Zukunft einsetzen, sind daher
+          <strong>die wichtigsten Akteure</strong> auf echo. Sie <strong>profitieren in besonderem Maße</strong> von seinen
+          neuartigen Möglichkeiten:
+          </p>
+
+        adv1: Informatives Meinungsbild
+        adv1_details: |
+          <li>Einfach auffindbare öffentliche Diskussionen in der eigenen Nachbarschaft, Region und der Welt</li>
+          <li>Leicht nachvollziehbare Positionen verschiedener Gesellschaftsgruppen und Regionen</li>
+        adv2: Selbstbestimmung
+        adv2_details: |
+          <li>Direkte Beteiligung an Entscheidungsfindung bezüglich Ihres unmittelbaren Lebensraums sowie der Zukunft unserer gemeinsamen Welt</li>
+          <li>Überzeugung Anderer für den eigenen Standpunkt</li>
+          <li>Schnelles Zusammenfinden von MitstreiterInnen</li>
+          <li>Einfache Organisation und Unterstützung realer Aktionen</li>
+        adv3: Gestärktes „Wir-Gefühl“
+        adv3_details: |
+          <li>Gemeinsamer, direkter Beitrag zu Nachhaltigkeit und globaler Gerechtigkeit</li>
+        adv4: Befreiung vom Gefühl der Machtlosigkeit
+        adv4_details: |
+          <li>Spürbare Erfolge im eigenen Alltag</li>
+          <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft </li>
       
-      adv2: Erhöhtes Einflusspotenzial
-      adv2_details: |
-        <li>Sichtbare Beteiligung an öffentlichen Diskussionen</li>
-        <li>Beeinflussung der öffentlichen Meinung und gesellschaftspolitischer Entscheidungen</li>
+      scientists:
+        title: ExpertInnen
+        title_long: ExpertInnen und WissenschaftlerInnen
+
+        text_top: |
+          <p>
+          ExpertInnen und WissenschaftlerInnen liefern mit ihren Forschungsergebnissen und Erkenntnissen die Grundlage
+          gesellschaftspolitischer Entscheidungen. Mit ihrem Know-how können sie einen wesentlichen Beitrag zur
+          Qualität der Diskussionen und Lösungsvorschlägen leisten. Sie sind daher <strong>unverzichtbare Akteure</strong>
+          auf echo und profitieren in vielfacher Weise von seinen <strong>neuartigen Möglichkeiten</strong>:
+          </p>
+
+        adv1: Verbesserung des wissenschaftlichen Diskurses
+        adv1_details: |
+          <li>Gemeinsame Ausformulierung neuer Erkenntnisse mit KollegInnen in eigenen Arbeitsgruppen und Netzwerken</li>
+          <li>Transparente Debatten mit klar differenzierten Positionen verschiedener Disziplinen</li>
+          <li>Effizienter Wissens- und Erfahrungsaustausch durch transnationale und interkulturelle Verbindung von ExpertInnen</li>
+
+        adv2: Vorteile auf dem akademischen Arbeitsmarkt
+        adv2_details: |
+          <li>Präsentation des eigenen wissenschaftlichen Profils</li>
+          <li>Direkter Zugang zu Mitarbeitern und Verantwortlichen von interessanten Forschungsprojekten</li>
+          <li>Neue Stellen durch kostenloses Fundraising für neue Forschungsprojekte</li>
+
+        adv3: Mehr Einfluss auf gesellschaftspolitische Entscheidungen
+        adv3_details: |
+          <li>Direkte Beteiligung an Entscheidungsfindung</li>
+          <li>Sensibilisierung der Gesellschaft für die Herausforderungen unserer Zeit</li>
+          <li>Effektive Diffusion von wissenschaftlichen Erkenntnissen durch leicht nachvollziehbare Stellungnahmen und Argumente</li>
         
-      adv3: Mobilisierung von MitstreiterInnen
-      adv3_details: |
-        <li>Leichte Ansprache von Millionen engagierter BürgerInnen</li>
-        <li>Nachvollziehbare Darstellung eigener Ansichten und Argumentationen</li>
-        <li>Virale Verbreitung eigener Kampagnen und Aktionen</li>
-        
-      adv4: Steigende finanzielle Unterstützung
-      adv4_details: |
-        <li>Kostenloses Fundraising und eine deutlich wachsende Unterstützerbasis</li>
-        <li>Erhöhte Motivation durch kostenneutrales Spenden</li>
-        <li>Mehr Vertrauen und emotionale Bindung der UnterstützerInnen durch Transparenz und direkte Teilnahme an Aktionen</li>
-        
+      decision_makers:
+        title: PolitikerInnen
+        title_long: PolitikerInnen & RepräsentantenInnen
+        text_top: |
+          <p>
+          EntscheidungsträgerInnen aus Politik und Wirtschaft tragen die größte gesellschaftliche Verantwortung.
+          Sie müssen entscheiden, was zum größtmöglichen Wohle Aller dient und praktikable Lösungen aushandeln.
+          Ihre Beteiligung an den Diskussionen auf echo ist daher besonders wichtig.
+          Damit ihre Bemühungen zu nachhaltigen Verbesserungen führen können, brauchen sie eine <strong>breite
+          bürgergesellschaftliche Unterstützung</strong> für ihre Vorhaben. Eine transparente Darstellung ihrer
+          Anliegen und eine gute Kenntnis der bürgerlichen Belange sind hierfür die wichtigste Voraussetzung.
+          echo bietet PolitikerInnen und anderen RepräsentantInnen <strong>einzigartige Möglichkeiten</strong>,
+          um die Effizienz ihre Arbeit wesentlich zu verbessern:
+          </p>
+
+        adv1: Detailliertes Meinungsbild
+        adv1_details: |
+          <li>Klare Übersicht über die wichtigsten Bedürfnisse und Meinungen der WählerInnen</li>
+          <li>Genaue Darstellung der Unterstützung bestimmter Positionen seitens unterschiedlicher gesellschaftlicher Gruppen und Regionen</li>
+
+        adv2: Optimierte interne Zusammenarbeit
+        adv2_details: |
+          <li>Zeit- und Raum-unabhängige intra- und interparlamentarischen Zusammenarbeit (z.B. nationalen ↔ internationalen Fraktionen)</li>
+          <li>Schnelle und transparente Entscheidungsfindung zwischen administrativen Ebenen (Kommune ↔ Bund ↔ EU)</li>
+
+        adv3: Überzeugende Ansprache der WählerInnen
+        adv3_details: |
+          <li>Direkter Zugang zu Millionen von mündigen BürgerInnen</li>
+          <li>Leicht nachvollziehbare Darstellung eigener Positionen, Argumente und Vorhaben</li>
+          <li>Übersichtliche Gegenüberstellung von Wahlprogrammen und themenspezifischen Positionen zu jeweils anderen Standpunkten</li>
+
+      organisations:
+        title: Organisationen
+        title_long: Nichtstaatliche & staatliche Organisationen
+
+        text_top: |
+          <p>
+          Nichtstaatliche und staatliche Organisationen (NRO, Bürgerinitiativen, politische Parteien, Gewerkschaften,
+          Städte und Kommunen) stehen heute schon im Fokus des gesellschaftlichen und politischen Geschehens und sind
+          daher <strong>unentbehrliche Akteure</strong> auf echo. Sie sind Meinungsbildner, sie planen Kampagnen und Aktionen und
+          versuchen die Menschen für ihre Anliegen zu mobilisieren. echo bietet Organisationen zahlreiche
+          <strong>einzigartige Möglichkeiten</strong>, um ihre Ziele erfolgreich zu erreichen:
+          </p>
+
+        adv1: Optimierte organisationsinterne Zusammenarbeit
+        adv1_details: |
+          <li>Gemeinsame Entwicklung von Ideen, überzeugenden Argumenten und Lösungsvorschlägen mit eigenen ExpertInnen und MitstreiterInnen</li>
+
+        adv2: Erhöhtes Einflusspotenzial
+        adv2_details: |
+          <li>Sichtbare Beteiligung an öffentlichen Diskussionen</li>
+          <li>Beeinflussung der öffentlichen Meinung und gesellschaftspolitischer Entscheidungen</li>
+
+        adv3: Mobilisierung von MitstreiterInnen
+        adv3_details: |
+          <li>Leichte Ansprache von Millionen engagierter BürgerInnen</li>
+          <li>Nachvollziehbare Darstellung eigener Ansichten und Argumentationen</li>
+          <li>Virale Verbreitung eigener Kampagnen und Aktionen</li>
+
+        adv4: Steigende finanzielle Unterstützung
+        adv4_details: |
+          <li>Kostenloses Fundraising und eine deutlich wachsende Unterstützerbasis</li>
+          <li>Erhöhte Motivation durch kostenneutrales Spenden</li>
+          <li>Mehr Vertrauen und emotionale Bindung der UnterstützerInnen durch Transparenz und direkte Teilnahme an Aktionen</li>
+
     # Static content for the echonomy main menu point
     echonomy:
       title: echonomy
       subtitle: Die Werte
+
+      index:
+        text_top: |
+          <p>
+          Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen!
+          </p><p>
+          So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich grundlegenden ethischen Werten verpflichtet sieht:
+          </p>
+
+        list:
+          <li><strong>Nachhaltigkeit</strong> statt bedingungsloses Wachstum (öko)</li>
+          <li><strong>Würde</strong> statt Ausbeutung (sozial)</li>
+          <li><strong>Teilhabe</strong> statt Ausgeliefertsein (demokratisch)</li>
+
+        text_bottom: |
+          <p>
+          Das Geschäftsmodel von echo spiegelt diese Werte auf verschiedene Weise wider.
+          Damit möchte echo nicht nur als Modell für eine neue Unternehmenskultur dienen.
+          Seine innovativen Lösungen sollen auch direkt zur Stärkung sozialer und nachhaltiger Unternehmensführung und zur
+          <strong>Demokratisierung bestehender Unternehmens- und Wirtschaftsstrukturen</strong> beitragen.
+          </p>
+
+      your_profit:
+        title: Your-Profit
+
+        text: |
+          <p>
+          Finanzieren Sie Ihre Aktionen ohne finanziellen Aufwand!
+          </p><p>
+          echo verbindet <strong><span title="{{tooltip_nonprofit}}" class="ttLink">Gemeinnützigkeit</span></strong> mit
+          <strong>tragfähigen Geschäftsmodellen</strong>. „Tragfähig“ bedeutet jedoch nicht bloße Kostendeckung,
+          sondern die Bereitstellung von Mitteln für Aktionen und Projekte von NutzerInnen und Organisationen.
+          Hierfür bietet Ihnen echo mehrere <span title="{{tooltip_costneutral}}" class="ttLink">kostenneutrale</span> Möglichkeiten,
+          Geld auf Ihrem persönlichen virtuellen Konto zu sammeln. Die so gesammelten Gelder können Sie nach Belieben an
+          Aktionen und Projekte von NROs, Interessengemeinschaften oder Privatpersonen verteilen.
+          So kann Ihr virtuelles Engagement <strong>reale Früchte</strong> tragen!
+          </p><p>
+          Indem echo den Menschen zu <strong>mehr Selbstbestimmung</strong> und <strong>spürbaren Erfolgen im eigenen Alltag</strong> verhilft,
+          können sie sich vom Gefühl der Machtlosigkeit befreien und <strong>neues Vertrauen in die Demokratie</strong> schöpfen.
+          </p>
+
+        tooltip_nonprofit: |
+          Bezüglich aller Geldflüsse behält sich echo die Möglichkeit vor, anfangs einen geringen Anteil zur Deckung der
+          anfallenden Kosten einzubehalten. Wichtig ist dabei, dass sich die Fundraising-Provisionen auf Null reduzieren
+          sobald genügend Umsätze durch andere, an kommerzielle Anwender gerichtete, Geschäftsmodelle erwirtschaftet werden.
+
+        tooltip_costneutral: |
+          Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint.
+          Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich strategische und verantwortungsvolle Kaufentscheidungen zu treffen.
       
-      text_top: |
-        <p>
-        Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen! 
-        </p><p>
-        So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich grundlegenden ethischen Werten verpflichtet sieht:
-        </p>
+      foundation:
+        title: Die Stiftung
 
-      list:
-        <li><strong>Nachhaltigkeit</strong> statt bedingungsloses Wachstum (öko)</li>
-        <li><strong>Würde</strong> statt Ausbeutung (sozial)</li>
-        <li><strong>Teilhabe</strong> statt Ausgeliefertsein (demokratisch)</li>
-
-      text_bottom: |
-        <p>
-        Das Geschäftsmodel von echo spiegelt diese Werte auf verschiedene Weise wider.
-        Damit möchte echo nicht nur als Modell für eine neue Unternehmenskultur dienen. 
-        Seine innovativen Lösungen sollen auch direkt zur Stärkung sozialer und nachhaltiger Unternehmensführung und zur 
-        <strong>Demokratisierung bestehender Unternehmens- und Wirtschaftsstrukturen</strong> beitragen.
-        </p>
-
-    echonomy_your_profit:
-      title: Your-Profit
-      
-      text: |
-        <p>
-        Finanzieren Sie Ihre Aktionen ohne finanziellen Aufwand!
-        </p><p>
-        echo verbindet <strong><span title="{{tooltip_nonprofit}}" class="ttLink">Gemeinnützigkeit</span></strong> mit 
-        <strong>tragfähigen Geschäftsmodellen</strong>. „Tragfähig“ bedeutet jedoch nicht bloße Kostendeckung, 
-        sondern die Bereitstellung von Mitteln für Aktionen und Projekte von NutzerInnen und Organisationen. 
-        Hierfür bietet Ihnen echo mehrere <span title="{{tooltip_costneutral}}" class="ttLink">kostenneutrale</span> Möglichkeiten, 
-        Geld auf Ihrem persönlichen virtuellen Konto zu sammeln. Die so gesammelten Gelder können Sie nach Belieben an 
-        Aktionen und Projekte von NROs, Interessengemeinschaften oder Privatpersonen verteilen. 
-        So kann Ihr virtuelles Engagement <strong>reale Früchte</strong> tragen!
-        </p><p>
-        Indem echo den Menschen zu <strong>mehr Selbstbestimmung</strong> und <strong>spürbaren Erfolgen im eigenen Alltag</strong> verhilft, 
-        können sie sich vom Gefühl der Machtlosigkeit befreien und <strong>neues Vertrauen in die Demokratie</strong> schöpfen.
-        </p>
-
-      tooltip_nonprofit: |
-        Bezüglich aller Geldflüsse behält sich echo die Möglichkeit vor, anfangs einen geringen Anteil zur Deckung der 
-        anfallenden Kosten einzubehalten. Wichtig ist dabei, dass sich die Fundraising-Provisionen auf Null reduzieren 
-        sobald genügend Umsätze durch andere, an kommerzielle Anwender gerichtete, Geschäftsmodelle erwirtschaftet werden.
-
-      tooltip_costneutral: |
-        Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint. 
-        Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich strategische und verantwortungsvolle Kaufentscheidungen zu treffen.
-      
-    echonomy_foundation:
-      title: Die Stiftung
-
-      text: |
-        <p>
-        Neben kostenneutralem und direktem Spenden verfolgt echo mehrere Geschäftsmodelle, durch die <strong>signifikante 
-        Einnahmen</strong> über kommerzielle Anwender der Plattform erwirtschaftet werden. Alle hierdurch entstehenden 
-        Überschüsse werden dabei vollständig an die <strong>Echonomy Stiftung</strong> weitergeleitet, welche vollständige 
-        Transparenz über die Finanzen von echo gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet, 
-        innovative Projekte, entsprechend <strong>demokratischer Entscheidungen</strong> der Nutzerschaft von echo, 
-        finanziell zu unterstützen.
-        </p><p>
-        Indem echo den Menschen eine einfache und kostenneutrale Möglichkeit zur <strong>Finanzierung von umfangreichen 
-        Gemeinschaftsprojekten</strong> bietet, kann ihr virtuelles Engagement unsere Welt nachhaltig verändern.
-        </p>
+        text: |
+          <p>
+          Neben kostenneutralem und direktem Spenden verfolgt echo mehrere Geschäftsmodelle, durch die <strong>signifikante
+          Einnahmen</strong> über kommerzielle Anwender der Plattform erwirtschaftet werden. Alle hierdurch entstehenden
+          Überschüsse werden dabei vollständig an die <strong>Echonomy Stiftung</strong> weitergeleitet, welche vollständige
+          Transparenz über die Finanzen von echo gewährleistet. Diese Stiftung wird mit dem alleinigen Ziel gegründet,
+          innovative Projekte, entsprechend <strong>demokratischer Entscheidungen</strong> der Nutzerschaft von echo,
+          finanziell zu unterstützen.
+          </p><p>
+          Indem echo den Menschen eine einfache und kostenneutrale Möglichkeit zur <strong>Finanzierung von umfangreichen
+          Gemeinschaftsprojekten</strong> bietet, kann ihr virtuelles Engagement unsere Welt nachhaltig verändern.
+          </p>
                 
-    echonomy_public_property:
-      title: Kollektives Eigentum
+      public_property:
+        title: Kollektives Eigentum
 
-      text: |
-        <p>
-        echo ist als <strong>selbstorganisierendes System</strong> konzipiert. Seine innovative Entscheidungsfindungsfunktion 
-        ist für Entscheidungen über seine eigenen Regeln und Funktionen optimal geeignet. 
-        So können die NutzerInnen über Diskussionen und Abstimmungen schrittweise immer stärker 
-        in die Entwicklung von echo mit einbezogen werden, bis sich aus diesem Prozess 
-        eine <strong>stabile Selbstverwaltung</strong> entwickelt.
-        </p><p>
-        Als Instrument zur Unterstützung demokratischer Entscheidungsprozesse, ist für echo die 
-        Wahrung <strong>politischer und wirtschaftlicher Unabhängigkeit</strong> oberstes Gebot. 
-        Um langfristig seine Unabhängigkeit zu gewährleisten, wird echo schrittweise in die 
-        Hände seiner NutzerInnen <span title="{{tooltip}}" class="ttLink">übergeben</span>.
-        </p><p>
-        echo wird so zum Quasi-<strong>Eigentum der Weltbevölkerung</strong>: 
-        Sie bestimmen, was auf echo passiert. Sie bestimmen wie echo funktioniert. Sie sind echo!
-        </p>
-      
-      tooltip: |
-        Über eine bewährte und stabile Selbstverwaltung hinaus wird der Akt der Übergabe an bestimmte 
-        Kriterien in Bezug auf eine geographisch und demographisch ausgewogene Beteiligung der 
-        Weltbevölkerung gekoppelt. Die genauen Details dazu werden später in einem transparenten Prozess definiert. 
+        text: |
+          <p>
+          echo ist als <strong>selbstorganisierendes System</strong> konzipiert. Seine innovative Entscheidungsfindungsfunktion
+          ist für Entscheidungen über seine eigenen Regeln und Funktionen optimal geeignet.
+          So können die NutzerInnen über Diskussionen und Abstimmungen schrittweise immer stärker
+          in die Entwicklung von echo mit einbezogen werden, bis sich aus diesem Prozess
+          eine <strong>stabile Selbstverwaltung</strong> entwickelt.
+          </p><p>
+          Als Instrument zur Unterstützung demokratischer Entscheidungsprozesse, ist für echo die
+          Wahrung <strong>politischer und wirtschaftlicher Unabhängigkeit</strong> oberstes Gebot.
+          Um langfristig seine Unabhängigkeit zu gewährleisten, wird echo schrittweise in die
+          Hände seiner NutzerInnen <span title="{{tooltip}}" class="ttLink">übergeben</span>.
+          </p><p>
+          echo wird so zum Quasi-<strong>Eigentum der Weltbevölkerung</strong>:
+          Sie bestimmen, was auf echo passiert. Sie bestimmen wie echo funktioniert. Sie sind echo!
+          </p>
 
-    #About
-    about:
-      title: *about
-      text: |
-        <p>
-        <strong>Die Quelle</strong> von echo ist ein <strong>interdisziplinäres Team</strong> junger und erfahrener 
-        Akademiker. Sie haben sein einmaliges Konzept als Antwort auf die globalen Herausforderungen unserer Zeit 
-        entwickelt und arbeiten zielstrebig an dessen Umsetzung.
-        </p><p>
-        Mittlerweile hat sich um echo ein stetig <strong>wachsendes Netzwerk</strong> von UnterstützerInnen gebildet, 
-        das dem Projekt zusätzlichen Elan verleiht. Darunter sind etliche <strong>ExpertInnen</strong> mit langjähriger 
-        Berufserfahrung in verschiedenen Bereichen (wie Geistes- und Naturwissenschaften, Unternehmensberatung und 
-        Marketing, Softwarerecht und Public Relations), die dem Team beratend zur Seite stehen.<br/>
-        Aber auch einige <strong>namhafte PolitikerInnen</strong>, wie die ehemalige Landtagsabgeordnete 
-        Ruth Paulig (die Grünen), der Bundestagsabgeordnete Axel Berg (SPD) sowie der Generalsekretär des 
-        Europäischen Wirtschafts- und Sozialausschusses, Martin Westlake, unterstützen echo mit Rat und Tat.
-        </p><p>
-        Verschiedene Kooperationspartner aus Zivilgesellschaft (OneAim, Netzwerk Gemeinsinn), Wirtschaft (The Foo)
-        und Politik (Grüne Jugend München) helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele
-        zu verwirklichen.
-        </p>
-
-    # Static content for imprint
-    imprint:
-      title: *imprint
-      text: |
-        <p>
-        Dienstanbieter dieser Seite ist der <strong>echo source n.e.V</strong> (in Gründung) vertreten durch 
-        László Papp. Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
-        </p><p>
-        <strong>Ladungsfähige Anschrift</strong> gemäß TMG<br/>
-        László Papp<br/>
-        Pflugstr. 15<br/>
-        10115 Berlin<br/>
-        E-mail: team [att] echo-logic . org - (statt "att", bitte "@" eingeben)<br/>
-        </p><p>
-        <strong>Haftungshinweis</strong>:<br/>
-        Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt. 
-        Auf den Inhalt dieser Seiten haben wir keinen Einfluss; für den Inhalt ist ausschließlich der 
-        Betreiber der anderen Website verantwortlich. Trotz der Überprüfung der Inhalte im gesetzlich 
-        gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw. 
-        der verlinkten Seite ablehnen.
-        </p>
-      
-    # Static content for data privacy
-    data_privacy:
-      title: *data_privacy
-      
-      text: |
-        <p>
-        Wir freuen uns über Ihr Interesse an echologic.<br/>
-        Sie können hier unsere Datenschutzerklärung in PDF Format ansehen.
-        </p>
-        
-      open_document: Dokument öffnen!
+        tooltip: |
+          Über eine bewährte und stabile Selbstverwaltung hinaus wird der Akt der Übergabe an bestimmte
+          Kriterien in Bezug auf eine geographisch und demographisch ausgewogene Beteiligung der
+          Weltbevölkerung gekoppelt. Die genauen Details dazu werden später in einem transparenten Prozess definiert.
       
     join:
       title: &your_echo 'Ihr echo'
@@ -706,57 +770,6 @@ de:
     create:
       thank_you: Vielen Dank für Ihre Nachricht.
     
-  mailer:
-    signature: |
-      --
-      echologic für echo - die globale Agora
-      Web: www.echologic.org
-      E-Mail: team@echo-logic.org
-      
-    feedback: Feedback
-    
-    interest:
-      subject: Herzlich willkommen auf echologic
-      body: |
-        <p>
-        Liebes zukünftiges echologic Mitglied,
-        </p><p>
-        vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft.<br/> 
-        Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der 
-        Gestaltung von echo beteiligen können.
-        </p><p>
-        Bis dahin sind Sie herzlich eingeladen unsere Neuigkeiten auf Twitter zu verfolgen und uns 
-        über team@echo-logic.org zu kontaktieren.
-        </p><p>
-        Mit den besten Wünschen,
-        </p><p>
-        Ihr echo Team
-        </p>
-    
-    invitation:
-      subject: '{{name}} empfehlt Ihnen echologic - Demokratie neu gedacht'
-      body: |
-        <p>
-        Liebe(r) WeltbürgerIn und Freund der Demokratie,
-        </p><p>
-        <strong>{{name}}</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong> 
-        aufmerksam zu machen. echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem 
-        gemeinsamen Ziel, <strong>echo - die globale Agora</strong> zu verwirklichen. 
-        </p><p>
-        Das Ziel von echo ist kein geringeres, als eine <strong>neue Form teilnehmender Demokratie</strong> 
-        auf lokalem, regionalem und globalem Niveau zu etablieren.<br/>
-        echo bedeutet das Ende der Machtlosigkeit und den Anfang der <strong>Selbstbestimmung</strong>!
-        </p><p>
-        echologic bietet Ihnen die Möglichkeit, die Entwicklung dieses einmaligen Projektes zu verfolgen und 
-        aktiv mit zu gestalten, um gemeinsam den Weg in eine friedliche und nachhaltige Zukunft zu ebnen.
-        </p><p>
-        <strong>Erfahren Sie mehr über echo!<br/>
-        Werden Sie echologic!</strong>
-        </p><p>
-        Mit den besten Wünschen,
-        </p><p>
-        Ihr echo Team
-        </p>
 
   date:
     formats:

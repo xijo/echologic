@@ -1,0 +1,20 @@
+<%  if @web_profile
+      web_profile = @web_profile
+    end
+%>
+
+<li id="web_profile_<%= web_profile.id %>" >
+  <span class="title">
+    <%=h web_profile.sort %>
+  </span>
+  <%=h web_profile.location %>
+  <% #  link_to 'edit', edit_user_web_profile_path(web_profile.user, web_profile), :class => 'edit_web_profile_button' %>
+
+  <%= link_to_remote "Edit",
+        { :url   => edit_user_web_profile_path(web_profile.user, web_profile), :method => :get },
+        { :class => 'optionsButton' } %>
+
+  <%= link_to_remote "Delete",
+        { :url   => user_web_profile_path(web_profile.user, web_profile), :method => 'delete' },
+        { :class => 'optionsButton' } %>
+</li>

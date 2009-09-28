@@ -27,7 +27,12 @@ ActionController::Routing::Routes.draw do |map|
   # SECTION user signup and login
   map.resource  :user_session, :controller => 'users/user_sessions',
                 :path_prefix => '', :only => [:new, :create, :destroy]
-  map.resources :users, :controller => 'users/users', :path_prefix => ''
+
+  map.resources :users, :controller => 'users/users', :path_prefix => '' do |user|
+    user.resources :web_profiles, :controller => 'users/web_profiles', :except => [:index]
+    user.resources :activities,   :controller => 'users/activities',   :except => [:index]
+    user.resources :memberships,  :controller => 'users/memberships',  :except => [:index]
+  end
   map.resources :password_resets, :controller => 'users/password_resets',
                 :path_prefix => '', :except => [:destroy]
   map.resource  :profile, :controller => 'users/profile',
