@@ -14,6 +14,7 @@ class CreateI18nTables < ActiveRecord::Migration
       t.integer  :locale_id
     end
     add_index :translations, [:locale_id, :key, :pluralization_index]
+    add_index :translations, [:locale_id, :raw_key]
 
   end
 
