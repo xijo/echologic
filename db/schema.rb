@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090912071928) do
+ActiveRecord::Schema.define(:version => 20090924125806) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "kind"
+    t.string   "organisation"
+    t.string   "position"
+    t.text     "field"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "activities", ["user_id", "kind"], :name => "index_activities_on_user_id_and_kind"
 
   create_table "interested_people", :force => true do |t|
     t.string   "name"
@@ -32,6 +44,14 @@ ActiveRecord::Schema.define(:version => 20090912071928) do
   end
 
   add_index "locales", ["code"], :name => "index_locales_on_code"
+
+  create_table "memberships", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "organisation"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name",              :limit => 40
@@ -81,6 +101,17 @@ ActiveRecord::Schema.define(:version => 20090912071928) do
     t.datetime "picture_updated_at"
     t.string   "name"
     t.string   "prename"
+    t.boolean  "gender"
   end
+
+  create_table "web_profiles", :force => true do |t|
+    t.string   "sort"
+    t.string   "location"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "web_profiles", ["user_id"], :name => "index_web_profiles_on_user_id"
 
 end
