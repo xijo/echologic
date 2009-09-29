@@ -21,24 +21,10 @@
       <span><%= f.label :gender %></span>
       <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
     </li>
-    
-    <li>
-      <span>
-        <%= f.label :password, f.object.new_record? ? nil : "Change password" %>
-      </span>
-      <%= f.password_field :password %>
-    </li>
 
     <li>
-      <span>
-        <%= f.label :password_confirmation %>
-      </span>
-      <%= f.password_field :password_confirmation %>
-    </li>
-
-    <li>
-      <span><%= f.label :picture %></span>
-      <%= f.file_field :picture %>
+      <span><%= f.label :email %></span>
+      <%= f.text_field :email %>
     </li>
 
   </ul>

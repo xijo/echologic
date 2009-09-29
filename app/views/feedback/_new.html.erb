@@ -12,7 +12,8 @@
     <ul>
       <li>
         <%= flash[:error] %>
-        <% flash[:error] = "" %>
+        <% # TODO niling the error doesn't work properly on site reload %>
+        <% flash[:error] = nil %>
       </li>
     </ul>
   </div>
