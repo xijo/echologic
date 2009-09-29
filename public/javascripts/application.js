@@ -18,7 +18,6 @@ $(document).ready(function () {
 
   roundCorners();
 
-
 });
 
 // TODO robustness: if no script can be found make http request.

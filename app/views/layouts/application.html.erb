@@ -39,6 +39,7 @@
     </div>
   
     <div id="applicationContainer">
+
       <div id="contentContainer">
         <% # TODO error and notive handling and styling %>
 
@@ -53,19 +54,19 @@
             <%= flash[:notice] %>
           </div>
         <% end %>
-
-        <% # Head border %>
-        <b class="border"></b>
-
+        
         <% # Content %>
         <%= yield %>
       </div>
+
+      <span class="border"></span>
+
     </div>
 
     <%= render :partial => "layouts/bottom_menu" %>
 
     <% # Outer menu content %>
     <div id="dialogContent" style="display:none;"></div>
- 
+
   </body>
 </html>
