@@ -1,12 +1,8 @@
 <div class="headContainer">
-  <h1>my echo</h1>  
+  <h1>my echo</h1>
 </div>
 
 <div id="personal" class="detailsContainer">
-  <div class="comment">
-    These are your profile information. Use the edit button to update them,
-    change your password or set a new image.
-  </div>
 
   <%= render :partial => 'personal_information' %>
   
@@ -62,4 +58,9 @@
     <%= render :partial => 'users/web_profiles/new' %>
   </ul>
 
+</div>
+
+<!-- Update password section. -->
+<div id="password" class="detailsContainer">
+  <%= render :partial => 'password' %>
 </div>
