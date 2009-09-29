@@ -6,7 +6,6 @@ development:
   host: localhost
   username: echologic_dev
   password: SfLe5tSHxVEzRbMD
-  some changes and so on!
   
 #development:
 #  adapter: sqlite3
