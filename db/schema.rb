@@ -11,18 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20090924125806) do
 
-  create_table "activities", :force => true do |t|
-    t.integer  "kind"
-    t.string   "organisation"
-    t.string   "position"
-    t.text     "field"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "activities", ["user_id", "kind"], :name => "index_activities_on_user_id_and_kind"
-
   create_table "interested_people", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -77,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20090924125806) do
   end
 
   add_index "translations", ["locale_id", "key", "pluralization_index"], :name => "index_translations_on_locale_id_and_key_and_pluralization_index"
+  add_index "translations", ["locale_id", "raw_key"], :name => "index_translations_on_locale_id_and_raw_key"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                   :null => false
