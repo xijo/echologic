@@ -17,6 +17,7 @@ class Users::UserSessionsController < ApplicationController
         flash[:notice] = "Login successful!"
         wants.html { redirect_to profile_path }
       else
+        flash[:notice] = 'Login failed'
         wants.html { render :action => :new }
       end
     end

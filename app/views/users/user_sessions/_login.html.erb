@@ -12,7 +12,7 @@
     <% form_for UserSession.new, :url => user_session_path do |f| %>
       <span class="label"><%= t('.email') %></span>
       <span class="label"><%= t('.password') %></span><br/>
-      <%= f.text_field :email, :class => 'text ui-widget-content ui-corner-all' %>
+      <%= f.text_field :email, :class => 'NEWloginField' %>
       <%= f.password_field :password, :class => 'NEWloginField' %>
       <%= f.submit 'Login', :class => 'ui-button ui-state-default ui-corner-all' %><br/>
       <%= link_to 'Signup', new_user_path, :class => 'ajaxLink' %><br/>
