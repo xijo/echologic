@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090924125806) do
+ActiveRecord::Schema.define(:version => 20090930184501) do
+
+  create_table "concernments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "tag_id"
+    t.integer  "sort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
+  add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
 
   create_table "interested_people", :force => true do |t|
     t.string   "name"
@@ -52,6 +63,12 @@ ActiveRecord::Schema.define(:version => 20090924125806) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

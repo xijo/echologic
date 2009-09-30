@@ -55,3 +55,11 @@
 <div id="password" class="detailsContainer">
   <%= render :partial => 'password' %>
 </div>
+
+
+<!-- Concernment section. -->
+<div id="concernments" class="detailsContainer">
+  <% for c in @user.concernments do %>
+    <%= c.tag.value %>
+  <% end %>
+</div>

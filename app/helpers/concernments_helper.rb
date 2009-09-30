@@ -1,0 +1,2 @@
+module ConcernmentsHelper
+end

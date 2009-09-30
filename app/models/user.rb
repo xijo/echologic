@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   has_many :activities
   has_many :memberships
 
+  has_many :concernments
+  has_many :tags, :through => :concernments
+
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
 
