@@ -1,4 +1,7 @@
 class Users::ConcernmentsController < ApplicationController
+
+  auto_complete_for :tag, :value, :limit => 5
+
   # GET /concernments
   # GET /concernments.xml
   def index
@@ -24,7 +27,7 @@ class Users::ConcernmentsController < ApplicationController
   # POST /concernments
   # POST /concernments.xml
   def create
-    tag = Tag.find_or_create_by_value(params[:value])
+    tag = Tag.find_or_create_by_value(params[:tag][:value])
     @concernment = Concernment.new(:user_id => params[:user_id], :tag_id => tag.id, :sort => params[:sort])
 
     respond_to do |format|
