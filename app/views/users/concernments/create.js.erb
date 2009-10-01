@@ -1,0 +1,8 @@
+var tag = "<%= escape_javascript(render :partial => 'users/concernments/concernment', :locals => { :concernment => @concernment }) %>";
+
+$('#concernments_<%= params[:sort] %>').append(tag);
+
+$('#concernment_<%= @concernment.id %>').slideDown();
+
+
+$('#new_concernment_<%= params[:sort] %>').reset();
