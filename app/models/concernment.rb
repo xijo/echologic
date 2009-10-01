@@ -6,7 +6,7 @@ class Concernment < ActiveRecord::Base
 
   # Map the different sorts of concernments to their database representation
   # value.
-  def sorts
+  def self.sorts
     [
       [0, 'Affected'],
       [1, 'Engaged'],

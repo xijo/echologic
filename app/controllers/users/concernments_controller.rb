@@ -21,53 +21,31 @@ class Users::ConcernmentsController < ApplicationController
     end
   end
 
-  # GET /concernments/new
-  # GET /concernments/new.xml
-  def new
-    @concernment = Concernment.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @concernment }
-    end
-  end
-
-  # GET /concernments/1/edit
-  def edit
-    @concernment = Concernment.find(params[:id])
-  end
-
   # POST /concernments
   # POST /concernments.xml
   def create
-    @concernment = Concernment.new(params[:concernment])
+    tag = Tag.find_or_create_by_value(params[:value])
+    @concernment = Concernment.new(:user_id => params[:user_id], :tag_id => tag.id, :sort => params[:sort])
 
     respond_to do |format|
+      
       if @concernment.save
-        flash[:notice] = 'Concernment was successfully created.'
-        format.html { redirect_to(@concernment) }
-        format.xml  { render :xml => @concernment, :status => :created, :location => @concernment }
+        format.js do
+          render :update do |page|
+            page.insert_html :bottom, "concernments_#{params[:sort]}", :partial => 'users/concernments/concernment', :locals => { :concernment => @concernment }
+            page["new_concernment_#{params[:sort]}"].reset
+          end
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @concernment.errors, :status => :unprocessable_entity }
+        format.html { render :text => 'failed' }
       end
-    end
-  end
-
-  # PUT /concernments/1
-  # PUT /concernments/1.xml
-  def update
-    @concernment = Concernment.find(params[:id])
-
-    respond_to do |format|
-      if @concernment.update_attributes(params[:concernment])
-        flash[:notice] = 'Concernment was successfully updated.'
-        format.html { redirect_to(@concernment) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @concernment.errors, :status => :unprocessable_entity }
-      end
+#        flash[:notice] = 'Concernment was successfully created.'
+#        format.html { redirect_to(@concernment) }
+#        format.xml  { render :xml => @concernment, :status => :created, :location => @concernment }
+#      else
+#        format.html { render :action => "new" }
+#        format.xml  { render :xml => @concernment.errors, :status => :unprocessable_entity }
+#      end
     end
   end
 
@@ -78,8 +56,11 @@ class Users::ConcernmentsController < ApplicationController
     @concernment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(concernments_url) }
-      format.xml  { head :ok }
+      format.js do
+        render :update do |page|
+          page.remove "concernment_#{params[:id]}"
+        end
+      end
     end
   end
 end

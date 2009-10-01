@@ -59,7 +59,14 @@
 
 <!-- Concernment section. -->
 <div id="concernments" class="detailsContainer">
-  <% for c in @user.concernments do %>
-    <%= c.tag.value %>
+
+  <% concernments = @user.concernments %>
+
+  <% for sort in Concernment.sorts do %>
+  
+    <h2><%= sort[1] %></h2>
+    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort[0]), :sort => sort[0] } %><br/>
+      
   <% end %>
+
 </div>
