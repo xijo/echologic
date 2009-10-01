@@ -4,6 +4,9 @@ class Concernment < ActiveRecord::Base
   belongs_to :user
   belongs_to :tag
 
+  # Validate uniqueness
+  validates_uniqueness_of :tag_id, :scope => [:user_id, :sort]
+
   # Map the different sorts of concernments to their database representation
   # value.
   def self.sorts
