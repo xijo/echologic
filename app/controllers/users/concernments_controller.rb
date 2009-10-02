@@ -1,9 +1,16 @@
 class Users::ConcernmentsController < ApplicationController
 
+  # Generate auto completion based on tag values in the database. Load only 5
+  # suggestions a time.
   auto_complete_for :tag, :value, :limit => 5
 
-  # POST /concernments
-  # POST /concernments.xml
+  # Create a new concernment connection for a user and a given topic with the
+  # sort of concernment specified.
+  # 
+  # Method:   POST
+  # Params:   tag_value: string, user_id: integer, sort: integer
+  # Response: JS
+  #
   def create
     tag = Tag.find_or_create_by_value(params[:tag][:value])
     @concernment = Concernment.new(:user_id => params[:user_id], :tag_id => tag.id, :sort => params[:sort])
@@ -11,31 +18,25 @@ class Users::ConcernmentsController < ApplicationController
     respond_to do |format|
       
       if @concernment.save
-#        format.js do
-#          render :update do |page|
-#            page.insert_html :bottom, "concernments_#{params[:sort]}", :partial => 'users/concernments/concernment', :locals => { :concernment => @concernment }
-#            page["new_concernment_#{params[:sort]}"].reset
-#          end
-#        end
         format.js
       else
-        format.html { render :text => 'failed' }
+        format.js { render :template => 'users/concernments/failed' }
       end
     end
   end
 
-  # DELETE /concernments/1
-  # DELETE /concernments/1.xml
+  # Remove a specified concernment.
+  #
+  # Method:   DELETE
+  # Params:   id:integer
+  # Response: JS
+  #
   def destroy
     @concernment = Concernment.find(params[:id])
     @concernment.destroy
 
     respond_to do |format|
-      format.js do
-        render :update do |page|
-          page.remove "concernment_#{params[:id]}"
-        end
-      end
+      format.js
     end
   end
 end

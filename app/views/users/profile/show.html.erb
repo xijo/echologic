@@ -71,7 +71,11 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $(".tag_value_autocomplete").autocomplete("users/concernments/auto_complete_for_tag_value")
+      $(".tag_value_autocomplete").autocomplete("users/concernments/auto_complete_for_tag_value");
+
+      $(".tag_value_autocomplete").keydown(function() {
+        $(this).parent().next().fadeOut(2000);
+      })
     });
   </script>
 
