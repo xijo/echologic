@@ -179,8 +179,8 @@ module StaticContentHelper
   # closing the area.
   # Click-functions are added via jQuery, take a look at application.js
   def insert_toggle_more(text)
-    concat("<span class='hideButton' style='display:none;'>#{t('general.hide')}</span>")
-    concat("<span class='moreButton'>#{t('general.more')}</span>")
+    concat("<span class='hideButton' style='display:none;'>#{I18n.t('application.general.hide')}</span>")
+    concat("<span class='moreButton'>#{I18n.t('application.general.more')}</span>")
     concat("<div style='display: none;'>")
       concat("#{text}")
     concat("</div>")
