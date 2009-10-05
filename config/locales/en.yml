@@ -81,6 +81,7 @@ en:
       connect: Connect
       act: Act
       my_echo: My Echo
+      admin: Admin
     outer_menu:
       language: Language
       feedback: &feedback Feedback
