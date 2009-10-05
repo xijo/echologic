@@ -18,7 +18,7 @@
 
     <div id="header">
       <div id="echologicLogo">
-        <%= link_to(image_tag('page/echologic_logo.png'), {:url => root_path}, :href => root_path, :class => :ajaxLink) %>
+        <%= link_to(image_tag('page/echologic_logo.png'), root_path) %>
       </div>
       <div id="inviteBubble">
         <%= link_to(I18n.t('layouts.static.invite'), {:url => join_path}, :href => join_path) %>

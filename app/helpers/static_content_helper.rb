@@ -5,17 +5,10 @@ module StaticContentHelper
   # Creates a css tab object with a specific name and link.
   # If the relating action was requested, the tab will be
   # displayed highlighted.
-
-  # information needed:
-  #  current controller
-  #  current action
-  #  translation path
-  #  tab = active tab?
-
   def insert_tab(link, options = {})
     classname = active_tab?(link)? 'activeTab' : ''
     classname += ' ajax' if options[:ajax]
-    # use translation if given otherwise get it from link
+    # Use translation if given otherwise get it from link
     tab = "<span>#{options[:translation] || get_tab_translation(link)}</span>"
     link_to(tab, {:url => link}, :href => link, :class => classname)
   end

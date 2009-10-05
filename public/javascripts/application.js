@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   bindStaticMenuClickEvents();
 
-//  bindAjaxClickEvents();
+  bindAjaxClickEvents();
 
   startFragmentObservation();
 
@@ -84,7 +84,7 @@ function bindStaticMenuClickEvents() {
     return false;
   });
 
-  $(".ajaxTab").live("click", function() {
+  $(".ajax").live("click", function() {
     setActionControllerFragment(this.href);
     return false;
   });
