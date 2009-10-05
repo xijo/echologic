@@ -1,5 +1,5 @@
-<%= insert_tab_stub('Discuss') %>
-<%= insert_tab(users_path, { :ajax => false, :translation => I18n.t('layouts.application.tabs.connect') }) %>
-<%= insert_tab_stub('Act') %>
-<%= insert_tab(locales_path, { :ajax => false, :translation => I18n.t('Admin') }) if show_admin_options? %>
-<%= insert_tab(profile_path, { :ajax => false, :translation => I18n.t('layouts.application.tabs.my_echo') }) %>
+<%= insert_tab(discuss_path, :translation => I18n.t('layouts.tabs.discuss')) %>
+<%= insert_tab(connect_path, :translation => I18n.t('layouts.tabs.connect')) %>
+<%= insert_tab(act_path,     :translation => I18n.t('layouts.tabs.act')) %>
+<%= insert_tab(admin_path,   :translation => I18n.t('Admin')) if show_admin_options? %>
+<%= insert_tab(profile_path, :translation => I18n.t('layouts.tabs.my_echo')) %>

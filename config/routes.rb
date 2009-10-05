@@ -3,17 +3,19 @@
 #
 ActionController::Routing::Routes.draw do |map|
 
-
-
   # routing-filter plugin for wrapping :locale around urls and paths.
   map.filter :locale
+
+  # SECTION main parts of echologic
+  map.resource :act,     :controller => 'act',     :only => [:show]
+  map.resource :connect, :controller => 'connect', :only => [:show]
+  map.resource :discuss, :controller => 'discuss', :only => [:show]
+  map.resource :admin,   :controller => 'admin',   :only => [:show]
 
   # SECTION autocomplete
   map.auto_complete ':controller/:action',
     :requirements => { :action => /auto_complete_for_\S+/ },
     :conditions => { :method => :get }
-#  map.autocomplete 'profile/auto_complete_concernments', :controller => 'users/profile', :action => 'auto_complete_for_tag_value'
-
 
   # SECTION i18n
   map.resources :locales, :controller => 'i18n/locales' do |locale|
