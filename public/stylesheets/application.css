@@ -13,15 +13,27 @@
   background:  #fff;
   position:    relative;
   overflow:    visible;
+  margin-bottom:20px;
 }
+
+/* BORDER SECTION */
 
 #applicationContainer .border {
   width:       100%;
   height:      15px;
   background:  url(../images/page/box/bordertb.png) repeat-x;
-  background-position: top;
   position:    absolute;
   left:        0px;
+  
+}
+
+#applicationContainer .bottom {
+  background-position: bottom;
+  bottom:      -15px;
+}
+
+#applicationContainer .top {
+  background-position: top;
   top:         -15px;
 }
 
