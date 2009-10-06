@@ -1,1 +1,20 @@
-This'll be the connect stub.
+<div id="submenu">
+  <%= link_to 'some', '#' %>
+  <%= link_to 'subitems', '#' %>
+  <%= link_to 'here', '#' %>
+  <div id="progressbar" style="width:200px; height: 12px; display: inline-block; margin-left: 200px;"></div>
+</div>
+
+<p>
+  This'll be the connect stub.
+</p>
+
+
+<%# TODO javascript in corresponding js file! (connect.js?) %>
+<script type="text/javascript">
+  $(function() {
+    $("#progressbar").progressbar({
+      value: 5
+    });
+  });
+</script>

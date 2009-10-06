@@ -26,10 +26,10 @@ ActionController::Routing::Routes.draw do |map|
   map.filter_translations 'translations/filter', :controller => 'i18n/translations', :action => 'filter'
 
   # SECTION join - depricated
-  map.with_options :controller => "join" do |join|
-    join.join 'join', :action => 'new_interested'
-    join.create_interested 'create_interested', :action => 'create_interested', :method => :post
-  end
+#  map.with_options :controller => "join" do |join|
+#    join.join 'join', :action => 'new_interested'
+#    join.create_interested 'create_interested', :action => 'create_interested', :method => :post
+#  end
 
   # SECTION feedback
   map.resources :feedback, :only => [:new, :create]
@@ -50,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
                 :path_prefix => '', :only => [:show, :edit, :update]
   map.register  '/register/:activation_code',
                 :controller => 'users/activations', :action => 'new'
+  map.join      '/join', :controller => 'users/users', :action => 'new'
   map.activate  '/activate/:id',
                 :controller => 'users/activations', :action => 'create'
 
