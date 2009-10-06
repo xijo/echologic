@@ -1,8 +1,8 @@
 <li>
-  <% form_remote_tag :url => user_memberships_path(@membership.user), :method => :post do -%>
+  <% form_remote_tag :url => user_membership_path(@membership.user, @membership), :method => :put do -%>
     <%= text_field :membership, :organisation %>
     <%= text_field :membership, :position %>
-    <%= hidden_field :membership, :user_id, :value => @membership.user %>
+    <%= hidden_field :user_id, :value => @membership.user %>
     <%= submit_tag 'Save', :class => 'submitButton' %>
     <%= link_to_remote 'Back', { :url => user_membership_path(@membership.user, @membership), :method => :get } , :class => 'optionsButton' %>
   <% end %>
