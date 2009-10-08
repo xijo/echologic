@@ -4,7 +4,6 @@
     <%= image_tag current_user.picture.url(:small) %>
     <span>
       Hello <%= current_user.prename %><br/>
-      <%= link_to "Logout", user_session_path, :method => :delete %><br/>
       <%= link_to "Profile", profile_path %>
     </span>
 

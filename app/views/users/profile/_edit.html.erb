@@ -22,10 +22,7 @@
       <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
     </li>
 
-    <li>
-      <span><%= f.label :email %></span>
-      <%= f.text_field :email %>
-    </li>
+
 
   </ul>
     

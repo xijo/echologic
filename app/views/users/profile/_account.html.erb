@@ -3,6 +3,7 @@
 <% form_for @user, :url => profile_path, :html => { :multipart => true } do |f| %>
 
   <ul>
+
     <li>
       <span>
         <%= f.label :password, f.object.new_record? ? nil : "Change password" %>
@@ -16,6 +17,7 @@
       </span>
       <%= f.password_field :password_confirmation %>
     </li>
+
   </ul>
 
   <%= f.submit "Update", :class => 'submitButton' %>

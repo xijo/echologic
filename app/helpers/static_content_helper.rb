@@ -21,11 +21,9 @@ module StaticContentHelper
   def active_tab?(link)
     link_splitted = link.split('/')
     link_controller = link_splitted[2]
-    link_action = link_splitted[3] || 'index'
+    link_action = link_splitted[3] || 'show'
     request_controller = request[:controller].split('/')[-1]
-    request_action = request[:action] || 'index'
-
-    link_action = 'show' if link.eql?(profile_path)
+    request_action = request[:action] || 'show'
 
     (request_action.eql?(link_action) && request_controller.eql?(link_controller))
   end

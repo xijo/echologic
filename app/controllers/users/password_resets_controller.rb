@@ -1,15 +1,21 @@
+# A password reset will be used to give Users the possibility to update
+# their password. Authentification based on authlogic's perishable_token.
+#
 class Users::PasswordResetsController < ApplicationController
 
   before_filter :require_no_user
 
-  # TODO comments and optimization
-
+  # Use perishable_token on edit or update methods
   before_filter :load_user_using_perishable_token, :only => [:edit, :update]
 
+  # Render password reset creation partial
   def new
-    render
+    respond_to do |format|
+      format.html
+    end
   end
 
+  # Creates a new password reset process and sends an email to the user.
   def create
     @user = User.find_by_email(params[:email])
     if @user
@@ -23,8 +29,11 @@ class Users::PasswordResetsController < ApplicationController
     end
   end
 
+  # Render the edit partial
   def edit
-    render
+    respond_to do |format|
+      format.html
+    end
   end
 
   def update

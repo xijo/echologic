@@ -1,10 +1,14 @@
 <div id="topMenuContainer">
-  <% language_chooser = "<span id='languageChooser'>" + I18n.t('layouts.outer_menu.language') + '</span>'
-     language_chooser += image_tag('page/icons/arrow.gif')
-  %>
-  <%= link_to_function(language_chooser) do |page|
-     page[:languageSelector].show; page[:overlay].show; 
-  end %>
+
+  <%= link_to "Logout", user_session_path, :method => :delete if current_user_session %>
+
+  <!-- Language choose section. -->
+  <% link_to('#') do %>
+    <span id='languageChooser'>
+      <%= I18n.t('layouts.outer_menu.language') %>
+    </span>
+    <%= image_tag('page/icons/arrow.gif') %>
+  <% end %>
 
   <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :class => 'outerMenuItem') %>
 

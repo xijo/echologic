@@ -1,1 +1,24 @@
-This'll be the act stub.
+<div id="submenu">
+  [info-picture]
+  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
+</div>
+
+<h1><%= I18n.t('static.echo.title') %></h1>
+<h2><%= I18n.t('static.echo.act.title') %></h2>
+
+<%= I18n.t('static.echo.act.text_top') %>
+
+<ul><%= I18n.t('static.echo.act.possible_actions') %></ul>
+
+<%= I18n.t('static.echo.act.text_middle') %>
+
+<% insert_toggle_more(I18n.t('static.echo.act.act_more')) %>
+
+
+<%# TODO javascript in corresponding js file! (connect.js?) %>
+<script type="text/javascript">
+  $("#progressbar").progressbar({
+    value: 5
+  });
+</script>
+

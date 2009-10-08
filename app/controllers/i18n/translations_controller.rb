@@ -140,7 +140,7 @@ class I18n::TranslationsController < ApplicationController
     @locale = Locale.find_by_code(params[:locale_id])
     @translations = params[:selected].eql?('untranslated') ? @locale.translations.untranslated : @locale.translations
     @translations = @translations.find(:all,
-      :conditions => ['raw_key like ?', "#{params[:filter_text]}%"],
+      :conditions => ['raw_key like ? or value like ?', "%#{params[:filter_text]}%", "%#{params[:filter_text]}%"],
       :order => "raw_key, pluralization_index",
       :limit => 30)
  

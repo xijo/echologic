@@ -1,1 +1,41 @@
-This'll be the discuss stub.
+<div id="submenu">
+  [info-picture]
+  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
+</div>
+
+<h1><%= I18n.t('static.echo.title') %></h1>
+<h2><%= I18n.t('static.echo.discuss.title') %></h2>
+
+<ul class="spreadedList">
+  <li>
+    <strong><%= I18n.t('static.echo.discuss.clarity') %></strong>
+    <% insert_toggle_more(I18n.t('static.echo.discuss.clarity_more')) %>
+  </li>
+
+  <li>
+    <strong><%= I18n.t('static.echo.discuss.transparency') %></strong>
+    <% insert_toggle_more(I18n.t('static.echo.discuss.transparency_more')) %>
+  </li>
+
+  <li>
+    <strong><%= I18n.t('static.echo.discuss.detailed') %></strong>
+    <% insert_toggle_more(I18n.t('static.echo.discuss.detailed_more')) %>
+  </li>
+
+  <li>
+    <strong><%= I18n.t('static.echo.discuss.democratic') %></strong>
+    <% insert_toggle_more(I18n.t('static.echo.discuss.democratic_more', :tooltip => I18n.t('static.echo.discuss.democratic_tooltip'))) %>
+  </li>
+
+  <li>
+    <strong><%= I18n.t('static.echo.discuss.glocal') %></strong>
+    <% insert_toggle_more(I18n.t('static.echo.discuss.glocal_more')) %>
+  </li>
+</ul>
+
+<%# TODO javascript in corresponding js file! (connect.js?) %>
+<script type="text/javascript">
+  $("#progressbar").progressbar({
+    value: 5
+  });
+</script>

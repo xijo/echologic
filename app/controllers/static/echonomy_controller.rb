@@ -1,7 +1,7 @@
 class Static::EchonomyController < ApplicationController
 
   # echonomy - The Values
-  def index
+  def show
     respond_to do |format|
       format.html { render :partial => 'index', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }

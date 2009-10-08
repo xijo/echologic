@@ -1,20 +1,24 @@
 <div id="submenu">
-  <%= link_to 'some', '#' %>
-  <%= link_to 'subitems', '#' %>
-  <%= link_to 'here', '#' %>
-  <div id="progressbar" style="width:200px; height: 12px; display: inline-block; margin-left: 200px;"></div>
+  [info-picture]
+  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
 </div>
 
+<h1><%= I18n.t('static.echo.title') %></h1>
+<h2><%= I18n.t('static.echo.connect.title') %></h2>
+
 <p>
-  This'll be the connect stub.
+  <%= I18n.t('static.echo.connect.text_top') %>
+
+  <ol><%= I18n.t('static.echo.connect.list') %></ol>
+
+  <%= I18n.t('static.echo.connect.text_bottom') %>
 </p>
 
 
 <%# TODO javascript in corresponding js file! (connect.js?) %>
 <script type="text/javascript">
-  $(function() {
-    $("#progressbar").progressbar({
-      value: 5
-    });
+  $("#progressbar").progressbar({
+    value: 5
   });
 </script>
+

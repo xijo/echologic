@@ -55,16 +55,11 @@ ActionController::Routing::Routes.draw do |map|
                 :controller => 'users/activations', :action => 'create'
 
   # SECTION static - contents per controller
-  map.echo 'echo/:action', :controller => 'static/echo',
-           :conditions => { :method => :get }
-  map.echonomy 'echonomy/:action', :controller => 'static/echonomy',
-           :conditions => { :method => :get }
-  map.echocracy 'echocracy/:action', :controller => 'static/echocracy',
-           :conditions => { :method => :get }
-  map.echologic 'echologic', :controller => 'static/echologic', :action => 'index',
-           :conditions => { :method => :get }
-  map.static 'echologic/:action', :controller => 'static/echologic',
-           :conditions => { :method => :get }
+  map.echo      'echo/:action',      :controller => 'static/echo',      :action => 'show'
+  map.echonomy  'echonomy/:action',  :controller => 'static/echonomy',  :action => 'show'
+  map.echocracy 'echocracy/:action', :controller => 'static/echocracy', :action => 'show'
+  map.echologic 'echologic',         :controller => 'static/echologic', :action => 'show'
+  map.static    'echologic/:action', :controller => 'static/echologic'
 
 
 

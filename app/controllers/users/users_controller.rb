@@ -42,7 +42,7 @@ class Users::UsersController < ApplicationController
     @user = User.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'users/users/new', :layout => 'static' } # new.html.erb
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -104,9 +104,7 @@ class Users::UsersController < ApplicationController
     respond_to do |format|
       format.js { render :partial => 'list' }
     end
-#    render :update do |page|
-#      page.replace_html 'userList', :partial => 'list'
-#    end
+
   end
 
 

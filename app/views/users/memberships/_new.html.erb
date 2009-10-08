@@ -1,7 +1,7 @@
 <li>
   <% form_remote_tag :url => user_memberships_path(@user), :method => :post do -%>
-    <span>Organisation</span><%= text_field :membership, :organisation %>
-    <span>Position</span><%= text_field :membership, :position %>
+    <%= text_field :membership, :organisation %>
+    <%= text_field :membership, :position %>
     <%= hidden_field :membership, :user_id, :value => @user.id %>
     <%= submit_tag 'Create', :class => 'submitButton' %>
   <% end %>
