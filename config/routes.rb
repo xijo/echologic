@@ -64,7 +64,7 @@ ActionController::Routing::Routes.draw do |map|
 
 
   # SECTION root
-  map.root :controller => 'static/echologic', :action => 'index'
+  map.root :controller => 'static/echologic', :action => 'show'
 
   # SECTION default routes
   map.connect ':controller/:action/:id'

@@ -32,7 +32,22 @@
       <%= render :partial => "layouts/top_menu" %>
       <%= render :partial => "users/user_sessions/login" %>
     </div>
-    
+
+
+    <!-- Messaging section. -->
+    <div id="messageContainer">
+      <div id="error" class="ui-state-error" style="display:none;"></div>
+      <div id="info" class="ui-state-highlight" style="display:none;"></div>
+    </div>
+
+    <script type="text/javascript">
+      <% if flash[:notice] %>
+        info('<%= flash[:notice] %>');
+      <% elsif flash[:error] %>
+        error('<%= flash[:error] %>');
+      <% end %>
+    </script>
+
     <div id="echologicContainer" <%= display_echologic_container %>>
       <%= render :partial => "layouts/statement" %>
       <%= render :partial => "layouts/news" %>
@@ -45,20 +60,6 @@
     <div id="applicationContainer">
 
       <div id="contentContainer">
-        <% # TODO error and notive handling and styling %>
-
-        <% if flash[:error] %>
-          <div id="messageDialog" class="ui-state-error">
-            <%= flash[:error] %>
-          </div>
-        <% end %>
-
-        <% if flash[:notice] %>
-          <div id="messageDialog" class="ui-state-highlight">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-        
         <% # Content %>
         <%= yield %>
       </div>

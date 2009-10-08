@@ -10,7 +10,10 @@ class Users::UsersController < ApplicationController
     allow anonymous, :to => [:new, :create]
   end
 
-
+  # Generate auto completion based on values in the database. Load only 5
+  # suggestions a time.
+  auto_complete_for :user, :city,    :limit => 5
+  auto_complete_for :user, :country, :limit => 5
 
   # GET /users
   # GET /users.xml
@@ -32,9 +35,10 @@ class Users::UsersController < ApplicationController
     end
   end
 
-  def show_profile
-    @user = @current_user
-  end
+  # TODO depricated: remove?
+#  def show_profile
+#    @user = @current_user
+#  end
 
   # GET /users/new
   # GET /users/new.xml

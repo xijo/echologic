@@ -62,7 +62,6 @@ class Users::WebProfilesController < ApplicationController
 
     respond_to do |format|
       if @web_profile.update_attributes(params[:web_profile])
-        flash[:notice] = 'WebProfile was successfully updated.'
         format.html { redirect_to(profile_path) }
         format.js { 
           render :update do |page|
@@ -72,7 +71,6 @@ class Users::WebProfilesController < ApplicationController
         
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @web_profile.errors, :status => :unprocessable_entity }
       end
     end
   end

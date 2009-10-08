@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090930184501) do
+ActiveRecord::Schema.define(:version => 20091008104532) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -108,6 +108,10 @@ ActiveRecord::Schema.define(:version => 20090930184501) do
     t.string   "name"
     t.string   "prename"
     t.boolean  "gender"
+    t.text     "about_me"
+    t.text     "motivation"
+    t.string   "city"
+    t.string   "country"
   end
 
   create_table "web_profiles", :force => true do |t|

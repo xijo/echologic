@@ -197,3 +197,13 @@ var roundCorners = function(){
  var str = '<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b><b class="lr l"></b><b class="lr r"></b><b class="tb b"></b><b class="tb t"></b>';
   $('.roundedBox').addClass("boxc").append(str);
 };
+
+
+/* Show error or info messages in messagesContainer and hide it with delay. */
+function info(text) {
+  $('#messageContainer #info').html(text).slideDown().animate({opacity: 1.0}, 2000).slideUp();
+}
+
+function error(text) {
+  $('#messageContainer #error').html(text).slideDown().animate({opacity: 1.0}, 2000).slideUp();
+}

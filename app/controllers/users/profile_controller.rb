@@ -8,11 +8,15 @@ class Users::ProfileController < ApplicationController
 
   # Shows details for the current user, this action is formaly known as
   # profile! ;)
-  # TODO respond to js correctly
   def show
     @user = @current_user
     respond_to do |format|
       format.html
+      format.js {
+        render :update do |page|
+          page.replace_html 'personal', :partial => 'personal_information'
+        end
+      }
     end
   end
 
@@ -29,27 +33,27 @@ class Users::ProfileController < ApplicationController
   def update
     @user = @current_user
     if @user.update_attributes(params[:user])
+      flash[:notice] = "Profile information saved."
       respond_to do |format|
         format.html { redirect_to profile_path }
+        format.js {
+          render :update do |page|
+            page.replace_html 'personal', :partial => 'personal_information', :locals => { :user => @user }
+            page << "info('#{flash[:notice]}');"
+          end
+        }
       end
     end
   end
 
   # Responds in JS wether with editing or with view partial.
-  def get_personal(editable=false)
-    @user = @current_user
-    render :update do |page|
-      page.replace_html 'personal', :partial => 'personal_information'
-    end
-
-#    respond_to do |format|
-#      format.js do
-#        render :update do |page|
-#          page.replace_html 'personal', :partial => 'personal_information'
-#        end
-#      end
+  # TODO depricated, remove?
+#  def get_personal(editable=false)
+#    @user = @current_user
+#    render :update do |page|
+#      page.replace_html 'personal', :partial => 'personal_information'
 #    end
-  end
+#  end
 
 
 end

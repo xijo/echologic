@@ -17,7 +17,6 @@ class Users::MembershipsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @membership }
       format.js do
         render :update do |page|
           page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
@@ -33,7 +32,6 @@ class Users::MembershipsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @membership }
     end
   end
 

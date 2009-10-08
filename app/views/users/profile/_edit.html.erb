@@ -1,6 +1,6 @@
 <h2>Edit My Account</h2>
 
-<% form_for @user, :url => profile_path, :html => { :multipart => true } do |f| %>
+<% form_remote_for @user, :url => profile_path do |f| %>
 
   <ul>
     <li>
@@ -22,6 +22,30 @@
       <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
     </li>
 
+    <li>
+      <span>
+        <%= f.label :city %>
+      </span>
+      <%= f.text_field :city %>
+    </li>
+    <li>
+      <span>
+        <%= f.label :country %>
+      </span>
+      <%= f.text_field :country %>
+    </li>
+    <li>
+      <span>
+        <%= f.label :about_me %>
+      </span>
+      <%= f.text_area :about_me %>
+    </li>
+    <li>
+      <span>
+        <%= f.label :motivation %>
+      </span>
+      <%= f.text_area :motivation %>
+    </li>
 
 
   </ul>
@@ -29,7 +53,7 @@
   <%= f.submit "Update", :class => 'submitButton' %>
 
   <% # TODO wether unobtrusive or rjs, but working!! %>
-  <%= link_to_remote "Back", { :url => url_for(:action => 'get_personal', :controller => 'profile'), :method => :get } %>
+  <%= link_to_remote "Back", { :url => profile_path, :method => :get } %>
   
 <% end %>
 
@@ -45,6 +69,8 @@
     $(this).toggleClass('active');
   });
 
+  $("#user_city").autocomplete("users/users/auto_complete_for_user_city");
+  $("#user_country").autocomplete("users/users/auto_complete_for_user_country");
 
 </script>
  
