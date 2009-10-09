@@ -48,6 +48,8 @@ ActionController::Routing::Routes.draw do |map|
                 :path_prefix => '', :except => [:destroy]
   map.resource  :profile, :controller => 'users/profile',
                 :path_prefix => '', :only => [:show, :edit, :update]
+  map.welcome   'welcome', :controller => 'users/profile', :action => 'welcome'
+
   map.register  '/register/:activation_code',
                 :controller => 'users/activations', :action => 'new'
   map.join      '/join', :controller => 'users/users', :action => 'new'

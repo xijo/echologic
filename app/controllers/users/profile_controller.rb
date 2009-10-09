@@ -1,9 +1,13 @@
 class Users::ProfileController < ApplicationController
 
-  before_filter :require_user, :only => [:show, :edit, :update, :get_personal]
+  before_filter :require_user, :only => [:show, :edit, :update, :get_personal, :welcome]
   
   access_control do
-    allow logged_in, :to => [:show, :update, :edit, :get_personal]
+    allow logged_in, :to => [:show, :update, :edit, :get_personal, :welcome]
+  end
+
+  def welcome
+    render
   end
 
   # Shows details for the current user, this action is formaly known as
