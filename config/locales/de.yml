@@ -27,6 +27,10 @@ de:
       back: Zurück
       email: E-Mail
       name: Name
+      or: oder
+      save: Speichern
+      edit: Editieren
+      cancel: Abbrechen
 
     mailer:
       signature: |

@@ -23,6 +23,10 @@ en:
       back: Back
       name: Name
       email: E-Mail
+      or: or
+      save: Save
+      edit: Edit
+      cancel: Cancel
 
     mailer:
       signature: |

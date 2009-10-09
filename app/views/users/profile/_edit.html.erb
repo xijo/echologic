@@ -50,10 +50,12 @@
 
   </ul>
     
-  <%= f.submit "Update", :class => 'submitButton' %>
+  <%= f.submit I18n.t('application.general.save'), :class => 'submitButton' %>
+
+  <%= I18n.t('application.general.or') %>
 
   <% # TODO wether unobtrusive or rjs, but working!! %>
-  <%= link_to_remote "Back", { :url => profile_path, :method => :get } %>
+  <%= link_to_remote I18n.t('application.general.cancel'), { :url => profile_path, :method => :get } %>
   
 <% end %>
 
