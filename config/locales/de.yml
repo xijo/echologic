@@ -88,6 +88,10 @@ de:
         email: E-Mail
         forgot: Passwort vergessen?
         remember: Merke mich!
+      messages:
+        login_success: Login erfolgreich.
+        login_failed: Login fehlgeschlagen.
+        logout_success: Logout erfolgreich.
 
   # Localizations for the layout components
   layouts:

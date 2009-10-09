@@ -91,11 +91,16 @@ en:
 
   users:
     user_sessions:
-      password: 'Password'
-      email: 'E-Mail'
-      forgot: Forgot your password?
-      remember: Remember me!
-      
+      login:
+        password: 'Password'
+        email: 'E-Mail'
+        forgot: Forgot your password?
+        remember: Remember me!
+      messages:
+        login_success: Login successful.
+        login_failed: Login failed.
+        logout_success: Logout successful.
+    
   static:
   
     # Static content for the echoLogic main menu point

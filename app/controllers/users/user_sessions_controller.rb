@@ -14,10 +14,10 @@ class Users::UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     respond_to do |wants|
       if @user_session.save
-        flash[:notice] = "Login successful!"
+        flash[:notice] = I18n.t('users.user_sessions.messages.login_success')
         wants.html { redirect_to profile_path }
       else
-        flash[:notice] = 'Login failed'
+        flash[:notice] = I18n.t('users.user_sessions.messages.login_failed')
         wants.html { render :action => :new }
       end
     end
@@ -25,7 +25,7 @@ class Users::UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    flash[:notice] = "Logout successful!"
+    flash[:notice] = I18n.t('users.user_sessions.messages.logout_success')
     redirect_to echologic_path
   end
 end
