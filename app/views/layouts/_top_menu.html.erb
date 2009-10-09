@@ -17,8 +17,9 @@
   <div id="languageSelector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>
     <ul>
-      <li><%= link_to("English", root_url(:locale => :en)) %></li>
-      <li><%= link_to("Deutsch", root_url(:locale => :de)) %></li>
+      <li><%= link_to("English", url_for(:controller => request[:controller], :action => request[:action], :locale => :en)) %></li>
+      <li><%= link_to("Deutsch", url_for(:controller => request[:controller], :action => request[:action], :locale => :de)) %></li>
+      <%=  %>
     </ul>
     <%= image_tag('page/dropdown/bottom.png') %>    
   </div> 

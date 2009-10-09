@@ -1,10 +1,9 @@
 <div id="loginContainer">
 
   <% if current_user_session %>
-    <%= image_tag current_user.picture.url(:small) %>
+    <%= link_to image_tag(current_user.picture.url(:small)), profile_path %>
     <span>
       Hello <%= current_user.prename %><br/>
-      <%= link_to "Profile", profile_path %>
     </span>
 
   <% else %>

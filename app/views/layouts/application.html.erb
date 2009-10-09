@@ -48,15 +48,7 @@
       <% end %>
     </script>
 
-    <div id="echologicContainer" <%= display_echologic_container %>>
-      <%= render :partial => "layouts/statement" %>
-      <%= render :partial => "layouts/news" %>
-    </div>
-
-    <div class="tabContainer" id="tabContainer" <%= display_tab_container %>>
-      <%# render :partial => 'layouts/application_tabs' %>
-    </div>
-      <%= tabnav :main %>
+    <%= tabnav :main %>
   
     <div id="applicationContainer">
 

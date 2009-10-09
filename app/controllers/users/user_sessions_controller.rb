@@ -15,7 +15,7 @@ class Users::UserSessionsController < ApplicationController
     respond_to do |wants|
       if @user_session.save
         flash[:notice] = I18n.t('users.user_sessions.messages.login_success')
-        wants.html { redirect_to profile_path }
+        wants.html { redirect_to welcome_path }
       else
         flash[:notice] = I18n.t('users.user_sessions.messages.login_failed')
         wants.html { render :action => :new }
