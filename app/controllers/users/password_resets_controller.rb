@@ -11,7 +11,8 @@ class Users::PasswordResetsController < ApplicationController
   # Render password reset creation partial
   def new
     respond_to do |format|
-      format.html
+      format.html { render :template => 'users/password_resets/new', :layout => 'static' }
+      format.js { render :template => 'users/users/new' }
     end
   end
 
@@ -20,12 +21,11 @@ class Users::PasswordResetsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user
       @user.deliver_password_reset_instructions!
-      flash[:notice] = "Instructions to reset your password have been emailed to you. " +
-        "Please check your email."
+      flash[:notice] = I18n.t('users.password_resets.messages.success')
       redirect_to root_url
     else
-      flash[:notice] = "No user was found with that email address"
-      render :action => :new
+      flash[:notice] = I18n.t('users.password_resets.messages.not_found')
+      render :action => :new, :layout => 'static'
     end
   end
 

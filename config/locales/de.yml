@@ -96,6 +96,13 @@ de:
         login_success: Login erfolgreich.
         login_failed: Login fehlgeschlagen.
         logout_success: Logout erfolgreich.
+    activations:
+      messages:
+        success: Ihr Zugang wurde erfolgreich aktiviert.
+    password_resets:
+      messages:
+        success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
+        not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
 
   # Localizations for the layout components
   layouts:
