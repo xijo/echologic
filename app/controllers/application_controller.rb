@@ -84,7 +84,7 @@ class ApplicationController < ActionController::Base
     # TODO localize access denied message
     def access_denied
       flash[:error] = 'Access denied.'
-      redirect_to users_path
+      redirect_to welcome_path
     end
 
 end

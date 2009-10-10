@@ -45,7 +45,7 @@ render_tabnav :main,
     t.links_to hash_for_admin_path
     t.highlights_on :controller => 'i18n/locales'
     t.highlights_on :controller => 'i18n/translations'
-  end
+  end if show_admin_options?
 
 
 

@@ -32,7 +32,7 @@ class Users::PasswordResetsController < ApplicationController
   # Render the edit partial
   def edit
     respond_to do |format|
-      format.html
+      format.html { render :template => 'users/password_resets/edit', :layout => 'static' }
     end
   end
 
@@ -41,9 +41,9 @@ class Users::PasswordResetsController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
       flash[:notice] = "Password successfully updated"
-      redirect_to profile_path
+      redirect_to welcome_path
     else
-      render :action => :edit
+      render :action => :edit, :layout => 'static'
     end
   end
 
