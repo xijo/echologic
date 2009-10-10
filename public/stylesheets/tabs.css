@@ -5,6 +5,8 @@
         - margin to margin-left: centering in ff2
         - display block and min-height for jquery's visible check
         - margin moved to single tabs
+    10.10.2009 - Joe
+        - min-height for empty tab container
 */
 .tabContainer {
   margin:       0 auto 8px auto;
@@ -16,6 +18,7 @@
   z-index:      10;
   min-height:   1px;
   display:      block;
+  min-height:   52px;
 }
 
 /*  tab links. holding left part of background and positioning.

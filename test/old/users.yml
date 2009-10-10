@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe:
+  name:    Only
+  prename: Joe
+  email:   xijo@gmx.de
+
+laci:
+  name:    Pwn
+  prename: Laci
+  email:   bolcso@something.hu

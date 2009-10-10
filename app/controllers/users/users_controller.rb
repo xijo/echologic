@@ -47,7 +47,7 @@ class Users::UsersController < ApplicationController
 
     respond_to do |format|
       format.html { render :template => 'users/users/new', :layout => 'static' } # new.html.erb
-      format.js { render :template => 'layouts/tabContainer' }
+      format.js
     end
   end
 
