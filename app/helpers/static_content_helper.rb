@@ -2,48 +2,6 @@
 #
 module StaticContentHelper
   
-  # Creates a css tab object with a specific name and link.
-  # If the relating action was requested, the tab will be
-  # displayed highlighted.
-  def insert_tab(link, options = {})
-    classname = active_tab?(link)? 'activeTab' : ''
-    classname += ' ajax' if options[:ajax]
-    # Use translation if given otherwise get it from link
-    tab = "<span>#{options[:translation] || get_tab_translation(link)}</span>"
-    link_to(tab, {:url => link}, :href => link, :class => classname)
-  end
-
-
-  # Returns true if if it is the selected tab. Checks through
-  # link and request.
-  # TODO detect singular routes like profile - then the anonymous action shouldn't
-  # be 'index' but 'show'
-  def active_tab?(link)
-    link_splitted = link.split('/')
-    link_controller = link_splitted[2]
-    link_action = link_splitted[3] || 'show'
-    request_controller = request[:controller].split('/')[-1]
-    request_action = request[:action] || 'show'
-
-    (request_action.eql?(link_action) && request_controller.eql?(link_controller))
-  end
-
-  # Returns the db stored translation for a tab with belonging to the given
-  # link.
-  def get_tab_translation(link)
-    tab_name = link.split('/')[-1]
-    translation_path = request[:controller].tr('/', '.')
-    I18n.t("#{translation_path}.tabs.#{tab_name}")
-  end
-
-
-  # Inserts a disabled tab for not yet implemented functionality. Like a
-  # kind of stub
-  def insert_tab_stub(name)
-    tab = "<span>#{name}</span>"
-    link_to(tab, '#')
-  end
-  
   # Inserts div structure for rounded box
   # Pretty cooler rounded box helper with yield function! Usage makes our
   # views simpler than before and only one method will be needed.
