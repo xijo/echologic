@@ -1,0 +1,5 @@
+<h2>Picture upload</h2>
+<% form_for @user, :url => profile_path, :html => { :multipart => true, :id => 'upload_picture_form' } do |f| %>
+  <%= f.file_field :picture %><br/>
+  <%= f.submit "Upload" %>
+<% end %>

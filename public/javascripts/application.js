@@ -69,6 +69,11 @@ function bindAjaxClickEvents() {
     setActionControllerFragment(this.href);
     return false;
   });
+
+  $(".ajax").live("click", function() {
+    $.getScript(this.href);
+    return false
+  });
 }
 
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */
@@ -84,10 +89,10 @@ function bindStaticMenuClickEvents() {
     return false;
   });
 
-  $(".ajax").live("click", function() {
-    setActionControllerFragment(this.href);
-    return false;
-  });
+//  $(".ajax").live("click", function() {
+//    setActionControllerFragment(this.href);
+//    return false;
+//  });
   
   $(".prevNextButton").live("click", function() {
     setActionControllerFragment(this.href);
