@@ -156,7 +156,7 @@ de:
       title: echologic
       subtitle: Die Mission
 
-      index:
+      show:
         ms1: echologic
         ms2: |
           ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
@@ -262,7 +262,7 @@ de:
       title: echo
       subtitle: Die Plattform
 
-      index:
+      show:
         why:
           title: Warum brauchen wir echo?
 
@@ -461,7 +461,7 @@ de:
              
     # Static content for the echocracy main menu point
     echocracy:
-      title: echocracy
+      show: echocracy
       subtitle: Die Akteure
 
       index:
@@ -616,7 +616,7 @@ de:
       title: echonomy
       subtitle: Die Werte
 
-      index:
+      show:
         text_top: |
           <p>
           Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen!

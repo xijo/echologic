@@ -4,22 +4,22 @@
 
 <% insert_breadcrumb(echocracy_path, echocracy_path(:scientists), '.title_long') %>
 
-<%= t('.text_top') %>
+<%= I18n.t('static.echocracy.scientists.text_top') %>
 
 <ul class="benefitList">
   <li>
-  	<strong><%= t('.adv1') %></strong>
-	<% insert_toggle_more('<ul>' + t('.adv1_details') + '</ul>') %>
+  	<strong><%= I18n.t('static.echocracy.scientists.adv1') %></strong>
+	<% insert_toggle_more('<ul>' + I18n.t('static.echocracy.scientists.adv1_details') + '</ul>') %>
   </li>
   
   <li>
-  	<strong><%= t('.adv2') %></strong>
-	<% insert_toggle_more('<ul>' + t('.adv2_details') + '</ul>') %>
+  	<strong><%= I18n.t('static.echocracy.scientists.adv2') %></strong>
+	<% insert_toggle_more('<ul>' + I18n.t('static.echocracy.scientists.adv2_details') + '</ul>') %>
   </li>
   
   <li>
-  	<strong><%= t('.adv3') %></strong>
-	<% insert_toggle_more('<ul>' + t('.adv3_details') + '</ul>') %>
+  	<strong><%= I18n.t('static.echocracy.scientists.adv3') %></strong>
+	<% insert_toggle_more('<ul>' + I18n.t('static.echocracy.scientists.adv3_details') + '</ul>') %>
   </li>	
 </ul>
 

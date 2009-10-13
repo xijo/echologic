@@ -4,13 +4,11 @@
 
 <% insert_breadcrumb(echocracy_path, echocracy_path) %>
 
-<%= t('.text_top') %>
+<%= I18n.t('static.echocracy.show.text_top') %>
 
-<ol><%= t('.list') %></ol>
+<ol><%= I18n.t('static.echocracy.show.list') %></ol>
 
-<%= t('.text_bottom') %>
-
-<!--<% insert_toggle_more(t('.echocracy_more')) %>-->
+<%= I18n.t('static.echocracy.show.text_bottom') %>
 
 <% insert_illustrations([echocracy_path(:citizens),
                          echocracy_path(:scientists),
