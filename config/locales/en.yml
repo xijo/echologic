@@ -124,7 +124,7 @@ en:
     echologic:
       title: echologic
       subtitle: The Mission
-      index:
+      show:
         ms1: echologic
         ms2: |
           <font size="+2">is a network of free minds <br/>and organizations united to realize</font>
@@ -240,7 +240,7 @@ en:
         echo_on_waves: "Echo on Waves"
 
       # content of echo tab
-      index:
+      show:
 
         why:
           title: Why do we need echo?
@@ -455,7 +455,7 @@ en:
         decision_makers: "Decision Makers"
         organisations: "Ogranisations"
 
-      index:
+      show:
         text_top: |
           <p>
           “echocracy” stands for the <strong>new form of participatory democracy</strong> of echo.
@@ -620,7 +620,7 @@ en:
         foundation: "Foundation"
         public_property: "Public Property"
 
-      index:
+      show:
         text_top: |
           <p>
           A little <strong>“h”</strong> can make a huge difference!

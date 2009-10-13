@@ -461,10 +461,10 @@ de:
              
     # Static content for the echocracy main menu point
     echocracy:
-      show: echocracy
+      title: echocracy
       subtitle: Die Akteure
 
-      index:
+      show:
         text_top: |
           <p>
           „echocracy“, die <strong>neue Form teilnehmender Demokratie</strong> von echo, bietet Ihnen und Menschen auf der ganzen Welt

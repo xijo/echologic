@@ -4,6 +4,6 @@
 
 <% insert_breadcrumb(echonomy_path, echonomy_path(:public_property)) %>
 
-<%= t('.text', :tooltip => t('.tooltip')) %>
+<%= I18n.t('static.echonomy.public_property.text', :tooltip => I18n.t('static.echonomy.public_property.tooltip')) %>
 
 <% insert_back_next_buttons(echonomy_path(:foundation), join_path) %>

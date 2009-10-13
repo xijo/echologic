@@ -4,6 +4,8 @@
 
 <% insert_breadcrumb(echonomy_path, echonomy_path(:your_profit)) %>
 
-<%= t('.text', :tooltip_nonprofit => t('.tooltip_nonprofit'), :tooltip_costneutral => t('.tooltip_costneutral')) %>
+<%= I18n.t('static.echonomy.your_profit.text',
+  :tooltip_nonprofit => I18n.t('static.echonomy.your_profit.tooltip_nonprofit'),
+  :tooltip_costneutral => I18n.t('static.echonomy.your_profit.tooltip_costneutral')) %>
 
 <% insert_back_next_buttons(echonomy_path, echonomy_path(:foundation)) %>
