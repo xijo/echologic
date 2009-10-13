@@ -1,3 +1,87 @@
+/* APPLICATION TABS SECTION */
+.applicationTabs {
+/*  color: #000;
+  border-bottom: 2px solid black;
+  margin: 13px 0px 0px 0px;
+  padding: 0px;
+  z-index: 1;
+  padding-left: 10px;
+*/
+  margin:       0 auto 8px auto;
+  overflow:     visible;
+  position:     relative;
+  clear:        both;
+  width:        900px;
+  text-align:   center;
+  z-index:      10;
+  min-height:   1px;
+  display:      block;
+}
+
+.applicationTabs ul {
+  margin: 0 0 -7px 0;
+  padding: 0px;
+}
+
+.applicationTabs li {
+  /*display: inline;
+  overflow: hidden;
+  list-style-type: none;
+*/
+  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;
+  height:       48px;
+  display:      inline-block;
+  color:        #7bb031;
+  font-size:    15px;
+  text-decoration: none;
+  border:       0px;
+}
+
+
+.applicationTabs a, applicationTabs a.active {
+/*  color: #000000;
+  background: #EEEEEE;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 2px 5px 0px 5px;
+  margin: 0;
+  text-decoration: none;
+*/
+  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;
+  margin:       0 0 0 21px;
+  padding:      0 21px 0 0;
+  float:        left;
+  height:       48px;
+  line-height:  54px;
+}
+
+.applicationTabs a.active {
+  background: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+
+.applicationTabs a:hover {
+  color:       #1A4864;
+}
+
+.applicationTabs a:visited {
+  color:       #7bb031;
+}
+
+.applicationTabs a.active:hover {
+  background:  #FFFFFF;
+  color:       #000000;
+}
+
+.applicationTabs li.active {
+  background:  url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
+}
+
+.applicationTabs a.active {
+  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
+  color:       #1A4864 !important;
+}
+
 /*  Container which holds all tabs. With specified height and negative margin
     it takes care for the correct positioning and overlapping with 'mainBox'
 
@@ -7,6 +91,9 @@
         - margin moved to single tabs
     10.10.2009 - Joe
         - min-height for empty tab container
+    13.10.2009 - Joe
+        - now wraps 'applicationTabs' container, which is generated through
+          rails-widgets.
 */
 .tabContainer {
   margin:       0 auto 8px auto;
@@ -21,52 +108,3 @@
   min-height:   52px;
 }
 
-/*  tab links. holding left part of background and positioning.
-
-    20.8.2009 - Joe:
-        - background: 'scroll left 6px' seem useless.
-        - display inline-block and -moz-inline-block for compatibility
-        - floating left for correct display of contents
-        - margin-bottom from tabContainer to move over mainBox
-*/
-.tabContainer a, .tabContainer a:visited {
-  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left;
-  height:       48px;
-  display:      inline-block;
-  color:        #7bb031;
-  font-size:    15px;
-  text-decoration: none; 
-  border:       0px;
-}
-
-.tabContainer a:hover {
-  color:        #1A4864;
-}
-
-/*  Holds the right side of a tab and grows with its content.
-
-    20.8.2009 - Joe:
-        - background: 'scroll left 6px' seem useless.
-        - height ajusted to match parent
-        - line-height to display vertical centered
-        - changed from div to span to match w3c standards
-*/
-
-.tabContainer a span {
-  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right;  
-  margin:       0 0 0 21px;
-  padding:      0 21px 0 0;
-  float:        left;
-  height:       48px;
-  line-height:  54px;
-}
-
-.activeTab, .activeTab:visited {
-  background:   url(../images/page/tabs/left_on.png) no-repeat scroll left !important;
-  color:        #1A4864 !important;
-
-}
-
-.activeTab span {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right !important;
-}

@@ -111,7 +111,10 @@ en:
       messages:
         success: Instructions to reset your password have been emailed to you. Please check your email.
         not_found: No user was found with that email address
-    
+    users:
+      new:
+        title: Ein titel zwei
+
   static:
   
     # Static content for the echoLogic main menu point
@@ -773,7 +776,7 @@ en:
         Make an echo!
         </p> 
         
-      invite: Freunden Bescheid sagen!
+      invite: Notify your friends!
       
     new_invitation:
       title: *your_echo

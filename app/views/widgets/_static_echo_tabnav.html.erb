@@ -1,0 +1,35 @@
+<%
+# This partial renders the static echo tabnav.
+   
+render_tabnav :main, 
+              :generate_css => false,
+              :html => { :class => 'applicationTabs' } do
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echo.tabs.echo')
+    t.links_to hash_for_echo_path
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echo.tabs.discuss')
+    t.links_to :controller => 'static/echo', :action => 'discuss'
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echo.tabs.connect')
+    t.links_to :controller => 'static/echo', :action => 'connect'
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echo.tabs.act')
+    t.links_to :controller => 'static/echo', :action => 'act'
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echo.tabs.echo_on_waves')
+    t.links_to :controller => 'static/echo', :action => 'echo_on_waves'
+  end
+
+end
+
+%>

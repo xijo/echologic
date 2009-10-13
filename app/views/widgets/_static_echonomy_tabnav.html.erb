@@ -1,0 +1,30 @@
+<%
+# This partial renders the static echonomy tabnav.
+   
+render_tabnav :main, 
+              :generate_css => false,
+              :html => { :class => 'applicationTabs' } do
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echonomy.tabs.echonomy')
+    t.links_to hash_for_echonomy_path
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echonomy.tabs.your_profit')
+    t.links_to :controller => 'static/echonomy', :action => 'your_profit'
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echonomy.tabs.foundation')
+    t.links_to :controller => 'static/echonomy', :action => 'foundation'
+  end
+
+  add_tab :html => { :class => 'ajax' } do |t|
+    t.named I18n.t('static.echonomy.tabs.public_property')
+    t.links_to :controller => 'static/echonomy', :action => 'public_property'
+  end
+
+end
+
+%>

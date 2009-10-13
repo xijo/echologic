@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
 
   add_index "locales", ["code"], :name => "index_locales_on_code"
 
+  Locale.create :name => 'en', :code => 'en'
+
   create_table "memberships", :force => true do |t|
     t.integer  "user_id"
     t.string   "organisation"
