@@ -113,11 +113,31 @@ en:
       messages:
         success: Instructions to reset your password have been emailed to you. Please check your email.
         not_found: No user was found with that email address
+    web_profiles:
+      sorts:
+        homepage: Homepage
+        twitter: Twitter
+        blog: Blog
+        xing: Xing
     users:
       new:
         title: Your echo
         subtitle: Become echologic
+        text: |
+          <p>
+          <strong>echo is democracy from the people for the people.</strong>
+          </p><p>
+          As a project for supporting common good, echo is driven forward by the
+          <strong>joint effort</strong> of engaged individuals and organizations.
+          </p><p>
+          Eager to <strong>contribute your ideas, too</strong>!?<br/>
+          Please enter your name and E-Mail address below!<br/>
+          We will contact you as soon as we take off.
+          </p>
 
+      messages:
+        created: "Your account has been created. Please check your e-mail for your account activation instructions!"
+        
   static:
   
     # Static content for the echoLogic main menu point

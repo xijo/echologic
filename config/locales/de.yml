@@ -105,6 +105,12 @@ de:
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
+    web_profiles:
+      sorts:
+        homepage: Homepage
+        twitter: Twitter
+        blog: Blog
+        xing: Xing
     users:
       new:
         title: 'Ihr echo'
@@ -121,6 +127,8 @@ de:
           Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!<br/>
           Wir melden uns bei Ihnen sobald es losgeht.
           </p>
+      messages:
+        created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
 
   # Localizations for the layout components
   layouts:

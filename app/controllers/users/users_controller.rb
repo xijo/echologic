@@ -35,11 +35,6 @@ class Users::UsersController < ApplicationController
     end
   end
 
-  # TODO depricated: remove?
-#  def show_profile
-#    @user = @current_user
-#  end
-
   # GET /users/new
   # GET /users/new.xml
   def new
@@ -57,16 +52,16 @@ class Users::UsersController < ApplicationController
   end
 
   # modified users_controller.rb
-  # TODO add response_to
   def create
     @user = User.new
-
-    if @user.signup!(params)
-      @user.deliver_activation_instructions!
-      flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
-      redirect_to root_url
-    else
-      render :action => :new
+    respond_to do |format|
+      if @user.signup!(params)
+        @user.deliver_activation_instructions!
+        flash[:notice] = I18n.t('users.users.messages.created')
+        format.html { redirect_to root_url }
+      else
+        format.html { render :action => :new }
+      end
     end
   end
 

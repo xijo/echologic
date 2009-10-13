@@ -87,15 +87,6 @@ module StaticContentHelper
     "<div class='menuImage #{active_menu}' style='background: url(#{image})'></div>"
   end
 
-  # Inserts a link to a outer menu item. Will be ajaxized through jQuery
-  # in application.js. If no special id is set the actual name is used.
-  # TODO depricated. directly inserted now, no helper
-#  def insert_outer_menu_item(name, link, id=name)
-#    link_to(t('.'+name), {:url => link}, :href => link, :class => 'outerMenuItem', :id => id)
-#  end
-
-
-  
   # Container is only visible in echologic
   def display_echologic_container
     request[:controller].eql?('static/echologic') ? '' : "style='display:none'"

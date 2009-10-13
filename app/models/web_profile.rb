@@ -11,4 +11,14 @@ class WebProfile < ActiveRecord::Base
     sorts << ['Xing', 'xing']
   end
 
+  def self.sorts2
+    [
+      I18n.t('users.web_profiles.sorts.homepage'),
+      I18n.t('users.web_profiles.sorts.blog'),
+      I18n.t('users.web_profiles.sorts.twitter'),
+      I18n.t('users.web_profiles.sorts.xing')
+    ]
+
+  end
+
 end

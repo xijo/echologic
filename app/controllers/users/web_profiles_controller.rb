@@ -56,7 +56,6 @@ class Users::WebProfilesController < ApplicationController
 
   # PUT /web_profiles/1
   # PUT /web_profiles/1.xml
-  # TODO mass assignment perhaps security issue
   def update
     @web_profile = WebProfile.find(params[:id])
 

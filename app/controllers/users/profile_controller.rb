@@ -57,14 +57,4 @@ class Users::ProfileController < ApplicationController
     end
   end
 
-  # Responds in JS wether with editing or with view partial.
-  # TODO depricated, remove?
-#  def get_personal(editable=false)
-#    @user = @current_user
-#    render :update do |page|
-#      page.replace_html 'personal', :partial => 'personal_information'
-#    end
-#  end
-
-
 end
