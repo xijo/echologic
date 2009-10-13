@@ -1,22 +1,24 @@
 <%= link_to_remote("<h1 class='link'>#{I18n.t('users.users.new.title')}</h1>", {:url => join_path}, :href => join_path) %>
 <h2><%= I18n.t('users.users.new.subtitle') %></h2>
 
-<h1><%= I18n.t('users.users.new.title') %></h1>
+<%= image_tag('page/illustrations/join.jpg', :id => 'joinIllustration') %>
+
+<%= I18n.t('users.users.new.text') %>
 
 <% form_for @user, :url => users_path do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :prename %><br />
+    <%= f.label I18n.t('application.general.prename') %><br />
     <%= f.text_field :prename %>
   </p>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label I18n.t('application.general.name') %><br />
     <%= f.text_field :name %>
   </p>
 
-  <%= f.label :email %><br />
+  <%= f.label I18n.t('application.general.email') %><br />
   <%= f.text_field :email %><br />
-  <%= f.submit "Register" %>
+  <%= f.submit I18n.t('application.general.send') %>
 <% end %>

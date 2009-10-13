@@ -22,11 +22,13 @@ en:
       next: Next
       back: Back
       name: Name
+      prename: Prename
       email: E-Mail
       or: or
       save: Save
       edit: Edit
       cancel: Cancel
+      send: Send
 
     mailer:
       signature: |
@@ -113,7 +115,8 @@ en:
         not_found: No user was found with that email address
     users:
       new:
-        title: Ein titel zwei
+        title: Your echo
+        subtitle: Become echologic
 
   static:
   

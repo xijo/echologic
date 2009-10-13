@@ -7,13 +7,13 @@
 /* Write render output into JS variables for later use. */
 var content = "<%= escape_javascript(render(:partial => request[:action])) %>";
 
-/* Replace content of tab container with render output */
-$('#tabContainer:visible').html("");
-
 /* If tab container isn't visible, toggle it and hide echologic container.
  * For parameter details see toggleParams in application.js */
 $('#tabContainer:hidden').animate(toggleParams, 500,
     function() { $('#echologicContainer').animate(toggleParams, 500); });
+
+/* Replace content of tab container with render output */
+$('#tabContainer:visible').html("");
 
 /* Replace content with new rendered content. */
 $('#staticContent').hide();

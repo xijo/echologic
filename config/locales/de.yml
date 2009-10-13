@@ -27,10 +27,12 @@ de:
       back: Zurück
       email: E-Mail
       name: Name
+      prename: Vorname
       or: oder
       save: Speichern
       edit: Editieren
       cancel: Abbrechen
+      send: Abschicken
 
     mailer:
       signature: |
@@ -103,6 +105,22 @@ de:
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
+    users:
+      new:
+        title: 'Ihr echo'
+        subtitle: 'echologic werden'
+        text: |
+          <p>
+          <strong>echo ist die Demokratie von den Menschen für die Menschen.</strong>
+          </p><p>
+          Als ein Projekt zur Förderung des Allgemeinwohls wird echo durch die
+          <strong>gemeinsame Anstrengung</strong> engagierter Individuen und
+          Organisationen vorangetrieben.
+          </p><p>
+          Möchten Sie auch die Entwicklung von <strong>echo aktiv mitgestalten</strong>!?<br/>
+          Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!<br/>
+          Wir melden uns bei Ihnen sobald es losgeht.
+          </p>
 
   # Localizations for the layout components
   layouts:
