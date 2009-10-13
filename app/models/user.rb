@@ -1,9 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :web_profiles
-  has_many :activities
   has_many :memberships
-
   has_many :concernments
   has_many :tags, :through => :concernments
 

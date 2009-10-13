@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe_energy:
+  user_id: users(:joe).id
+  tag_id: tags(:energy).id
+
+joe_water:
+  user_id: users(:joe).id
+  tag_id: tags(:water).id

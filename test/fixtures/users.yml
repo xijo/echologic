@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe:
+  name: Yeah
+  prename: Joe
+  email: joe@echologic.org
+  active: true
+  persistence_token: 31c4df467032bed4798f00e1866fd4965d30afc4a7b9c5073f61aa92f34ed8ab81e57a40e4bd0acd332dcac16df95bc7983cf0f2545462d048fdcd15062c4d52
+  perishable_token: kSNhE15rM3F2LxvG_e5N
+  crypted_password: e501b2bc5814d5cab991b9c04fa1189bdc65178466f77a161dac046ba7de352255bab28bb872e68f3c4d161b84ace012c1f0146355c73ebd4240631954f1e7cd
+  password_salt: Av-EvhZ9VR4U2QkMCeXZ

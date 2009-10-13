@@ -620,7 +620,7 @@ en:
         foundation: "Foundation"
         public_property: "Public Property"
 
-      show:
+#      show:
         text_top: |
           <p>
           A little <strong>“h”</strong> can make a huge difference!
