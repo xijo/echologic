@@ -1,0 +1,6 @@
+<div id='picture' class="detailsContainer">
+  <h2>Picture upload</h2>
+  <%= image_tag @user.picture.url(:small) if @user.picture? %>
+
+  <%= link_to 'Upload', url_for(:controller => 'users/profile', :action => 'upload_picture'), :class => 'ajax' %>
+</div>

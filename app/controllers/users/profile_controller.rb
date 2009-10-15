@@ -1,9 +1,9 @@
 class Users::ProfileController < ApplicationController
 
-  before_filter :require_user, :only => [:show, :edit, :update, :get_personal, :welcome, :upload_picture]
+  before_filter :require_user, :only => [:show, :edit, :update, :get_personal, :welcome, :upload_picture, :reload_pictures]
   
   access_control do
-    allow logged_in, :to => [:show, :update, :edit, :get_personal, :welcome, :upload_picture]
+    allow logged_in#, :to => [:show, :update, :edit, :get_personal, :welcome, :upload_picture]
   end
 
   def welcome
@@ -54,6 +54,18 @@ class Users::ProfileController < ApplicationController
     @user = current_user
     respond_to do |format|
       format.js { render :template => 'users/profile/upload_picture' }
+    end
+  end
+
+  def reload_pictures
+    @user = current_user
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace 'loginContainer', :partial => 'users/user_sessions/login'
+          page.replace 'picture', :partial => 'picture'
+        end
+      end
     end
   end
 
