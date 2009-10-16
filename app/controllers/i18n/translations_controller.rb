@@ -66,6 +66,11 @@ class I18n::TranslationsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @translation }
+      format.js do
+        render :update do |page|
+          page.replace "translation_#{@translation.id}", :partial => @translation
+        end
+      end
     end
   end
 
@@ -83,6 +88,9 @@ class I18n::TranslationsController < ApplicationController
   # GET /translations/1/edit
   def edit
     @translation = @locale.translations.find(params[:id])
+    render :update do |page|
+      page.replace "translation_#{@translation.id}", :partial => 'edit'
+    end
   end
 
   # POST /translations

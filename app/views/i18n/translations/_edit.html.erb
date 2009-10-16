@@ -1,0 +1,18 @@
+<tr id="translation_<%= @translation.id %>">
+  <td>
+    <%= text_area_tag :default, @translation.default_locale_value, :rows => 4 %>
+  </td>
+
+  <td>
+    <% form_for([@locale, @translation]) do |f| %>
+      <%= f.text_area :value, :rows => 4 %>
+      <%= f.submit "Update" %>
+    <% end %>
+  </td>
+
+  <td>
+
+    <%= link_to 'Back', url_for(:controller => 'i18n/translations', :action => 'show', :id => @translation.id), :class => 'ajax' %>
+  </td>
+
+</tr>
