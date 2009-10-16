@@ -10,14 +10,14 @@ class Users::WebProfilesController < ApplicationController
   # GET /web_profiles/1.xml
   def show
     @web_profile = WebProfile.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
-      format.js {
+      format.js do
         render :update do |page|
           page.replace_html "web_profile_#{@web_profile.id}", :partial => 'web_profile', :locals => { :web_profile => @web_profile }
         end
-      }
+      end
     end
   end
 
@@ -28,7 +28,6 @@ class Users::WebProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @web_profile }
     end
   end
 
@@ -47,9 +46,11 @@ class Users::WebProfilesController < ApplicationController
     @web_profile = WebProfile.new(params[:web_profile])
     @web_profile.user_id = @current_user.id
 
-    if @web_profile.save
-      render :update do |page|
+    render :update do |page|
+      if @web_profile.save
         page.insert_html :bottom, 'webProfileList', :partial => 'web_profile', :locals => { :web_profile => @web_profile }
+      else
+        show_javascript_errors(@web_profile, page)
       end
     end
   end
@@ -59,17 +60,11 @@ class Users::WebProfilesController < ApplicationController
   def update
     @web_profile = WebProfile.find(params[:id])
 
-    respond_to do |format|
+    render :update do |page|
       if @web_profile.update_attributes(params[:web_profile])
-        format.html { redirect_to(profile_path) }
-        format.js { 
-          render :update do |page|
-            page.replace_html "web_profile_#{@web_profile.id}", :partial => "web_profile", :locals => { :web_profile => @web_profile }
-          end
-        }
-        
+        page.replace_html "web_profile_#{@web_profile.id}", :partial => @web_profile
       else
-        format.html { render :action => "edit" }
+        show_javascript_errors(@web_profile, page)
       end
     end
   end

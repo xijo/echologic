@@ -1,5 +1,5 @@
 <li>
-  <% form_remote_tag :url => user_memberships_path(@user), :method => :post do -%>
+  <% form_remote_tag :url => user_memberships_path(@user), :method => :post, :html => {:id => 'new_membership_form'} do -%>
     <%= text_field :membership, :organisation %>
     <%= text_field :membership, :position %>
     <%= hidden_field :membership, :user_id, :value => @user.id %>

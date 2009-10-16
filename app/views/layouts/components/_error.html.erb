@@ -1,0 +1,12 @@
+<%#
+# Show the error messages of a given object and format them into html
+%>
+
+<% if object.errors.count > 0 %>
+  <%= I18n.t('activerecord.errors.template.body') %>
+  <ul>
+    <% object.errors.each do |attr_name, message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>

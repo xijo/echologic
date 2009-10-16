@@ -3,7 +3,7 @@ class Users::ProfileController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update, :get_personal, :welcome, :upload_picture, :reload_pictures]
   
   access_control do
-    allow logged_in#, :to => [:show, :update, :edit, :get_personal, :welcome, :upload_picture]
+    allow logged_in # Logged in persons are allowed to modify their profile
   end
 
   def welcome
@@ -50,6 +50,7 @@ class Users::ProfileController < ApplicationController
     end
   end
 
+  # Calls a js template which opens the upload picture dialog.
   def upload_picture
     @user = current_user
     respond_to do |format|
@@ -57,6 +58,10 @@ class Users::ProfileController < ApplicationController
     end
   end
 
+  # After uploading a the profile picture has to be reloaded.
+  # Reloading:
+  #  1. loginContainer with users picture as profile link
+  #  2. picture area of the profile
   def reload_pictures
     @user = current_user
     respond_to do |format|

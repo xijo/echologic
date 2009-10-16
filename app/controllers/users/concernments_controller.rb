@@ -20,7 +20,7 @@ class Users::ConcernmentsController < ApplicationController
       if @concernment.save
         format.js
       else
-        format.js { render :update do |page| page << "error('already exists');" end }
+        format.js { render :update do |page| show_javascript_errors(@concernment, page) end }
       end
     end
   end

@@ -15,13 +15,8 @@ class Users::MembershipsController < ApplicationController
   def show
     @membership = Membership.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.js do
-        render :update do |page|
-          page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
-        end
-      end
+    render :update do |page|
+      page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
     end
   end
 
@@ -38,12 +33,9 @@ class Users::MembershipsController < ApplicationController
   # GET /memberships/1/edit
   def edit
     @membership = Membership.find(params[:id])
-    respond_to do |format|
-      format.js do
-        render :update do |page|
-          page.replace_html "membership_#{@membership.id}", :partial => 'edit'
-        end
-      end
+    
+    render :update do |page|
+      page.replace_html "membership_#{@membership.id}", :partial => 'edit'
     end
   end
 
@@ -52,17 +44,12 @@ class Users::MembershipsController < ApplicationController
   def create
     @membership = Membership.new(params[:membership])
 
-    respond_to do |format|
+    render :update do |page|
       if @membership.save
-        flash[:notice] = 'Membership was successfully created.'
-        format.html { redirect_to(@membership) }
-        format.js   {
-          render :update do |page|
-            page.insert_html :bottom, 'membershipList', :partial => 'membership', :locals => { :membership => @membership }
-          end
-        }
+        page.insert_html :bottom, 'membershipList', :partial => 'membership', :locals => { :membership => @membership }
+        page['new_membership_form'].reset
       else
-        format.html { render :action => "new" }
+        show_javascript_errors(@membership, page)
       end
     end
   end
@@ -72,17 +59,11 @@ class Users::MembershipsController < ApplicationController
   def update
     @membership = Membership.find(params[:id])
 
-    respond_to do |format|
+    render :update do |page|
       if @membership.update_attributes(params[:membership])
-        flash[:notice] = 'Membership was successfully updated.'
-        format.html { redirect_to(@membership) }
-        format.js do
-          render :update do |page|
-            page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
-          end
-        end
+        page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
       else
-        format.html { render :action => "edit" }
+        show_javascript_errors(@membership, page)
       end
     end
   end
@@ -93,14 +74,9 @@ class Users::MembershipsController < ApplicationController
     @membership = Membership.find(params[:id])
     id = @membership.id
     @membership.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(memberships_url) }
-      format.js do
-        render :update do |page|
-          page.remove "membership_#{@membership.id}"
-        end
-      end
+    
+    render :update do |page|
+      page.remove "membership_#{@membership.id}"
     end
   end
 end
