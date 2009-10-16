@@ -1,3 +1,0 @@
-page.replace_html 'staticContent', :partial => 'create_interested'
-page.replace 'staticMenu', :partial => "layouts/menu"
-page.replace_html 'tabContainer', :text => ""

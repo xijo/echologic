@@ -28,17 +28,6 @@ class Mailer < ActionMailer::Base
     @content_type = 'text/html'
   end
 
-  # Depricated at the moment while invitations are disabled.
-  def invitation(invited_person)
-    name          = InterestedPerson.find(invited_person.interested_person_id).name
-    @body         = "Dear #{invited_person.name}, your knowee #{name} invited you to take a look on our project: echo - the global agora!"
-    @subject      = "echologic invitation"
-    @recipients   = invited_person.email
-    @from         = "echologic <team@echo-logic.org>"
-    @sent_on      = Time.now
-    @content_type = 'text/html'
-  end
-
   # Delivers activation instructions to the given user.
   # TODO i18n see view
   def activation_instructions(user)

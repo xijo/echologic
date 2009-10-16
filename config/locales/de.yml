@@ -43,50 +43,6 @@ de:
 
       feedback: Feedback
 
-      interest:
-        subject: Herzlich willkommen auf echologic
-        body: |
-          <p>
-          Liebes zukünftiges echologic Mitglied,
-          </p><p>
-          vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft.<br/>
-          Wir melden uns bei Ihnen sobald Sie sich auf echologic einloggen und dort in der
-          Gestaltung von echo beteiligen können.
-          </p><p>
-          Bis dahin sind Sie herzlich eingeladen unsere Neuigkeiten auf Twitter zu verfolgen und uns
-          über team@echo-logic.org zu kontaktieren.
-          </p><p>
-          Mit den besten Wünschen,
-          </p><p>
-          Ihr echo Team
-          </p>
-
-      invitation:
-        subject: '{{name}} empfehlt Ihnen echologic - Demokratie neu gedacht'
-        body: |
-          <p>
-          Liebe(r) WeltbürgerIn und Freund der Demokratie,
-          </p><p>
-          <strong>{{name}}</strong> hat Ihnen diese Nachricht geschickt, um Sie auf <strong>www.echologic.org</strong>
-          aufmerksam zu machen. echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem
-          gemeinsamen Ziel, <strong>echo - die globale Agora</strong> zu verwirklichen.
-          </p><p>
-          Das Ziel von echo ist kein geringeres, als eine <strong>neue Form teilnehmender Demokratie</strong>
-          auf lokalem, regionalem und globalem Niveau zu etablieren.<br/>
-          echo bedeutet das Ende der Machtlosigkeit und den Anfang der <strong>Selbstbestimmung</strong>!
-          </p><p>
-          echologic bietet Ihnen die Möglichkeit, die Entwicklung dieses einmaligen Projektes zu verfolgen und
-          aktiv mit zu gestalten, um gemeinsam den Weg in eine friedliche und nachhaltige Zukunft zu ebnen.
-          </p><p>
-          <strong>Erfahren Sie mehr über echo!<br/>
-          Werden Sie echologic!</strong>
-          </p><p>
-          Mit den besten Wünschen,
-          </p><p>
-          Ihr echo Team
-          </p>
-
-
   users:
     user_sessions:
       login:
@@ -721,81 +677,6 @@ de:
     invite:
       title: &invite 'echo bewirken'
       
-  # Interested persons (wannabe memebers)    
-  join:
-    new_interested:
-      title: *your_echo
-      subtitle: *join
-      
-      text: |
-        <p>
-        <strong>echo ist die Demokratie von den Menschen für die Menschen.</strong> 
-        </p><p>
-        Als ein Projekt zur Förderung des Allgemeinwohls wird echo durch die 
-        <strong>gemeinsame Anstrengung</strong> engagierter Individuen und 
-        Organisationen vorangetrieben.
-        </p><p>
-        Möchten Sie auch die Entwicklung von <strong>echo aktiv mitgestalten</strong>!?<br/>
-        Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!<br/>
-        Wir melden uns bei Ihnen sobald es losgeht.
-        </p>
-
-      waiting: |
-        {{count}} engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, mit Ihnen gemeinsam echo zu verwirklichen!
-
-      name: Name
-      email: E-Mail  
-      send_button: |
-        Für eine gemeinsame Zukunft!<br/>
-        Ich werde echologic!
-      
-    create_interested:
-      title: *your_echo
-      subtitle: Danke
-      
-      thank_you: |
-        <p>
-        Vielen Dank für Ihr Interesse an <strong>echo - der globalen Agora</strong> für eine gemeinsame Zukunft. 
-        </p><p>
-        Wir haben Ihnen eine Bestätigungsmail geschickt und werden uns bei Ihnen erneut melden,  
-        sobald Sie sich auf echologic einloggen und in der Gestaltung von echo beteiligen können.
-        </p><p>
-        Bis dahin sind Sie herzlich eingeladen unsere Neuigkeiten auf Twitter zu verfolgen und uns 
-        über team@echo-logic.org zu kontaktieren.
-        </p><p>
-        Mit den besten Wünschen,
-        </p><p>
-        Ihr echo Team
-        </p>
-      
-      recommend: |
-        <p>
-        Möchten Sie auch Ihre Freunde und Kollegen auf echologic aufmerksam machen?
-        </p><p>
-        Verbreiten Sie das Wort!</br/>
-        Bewirken Sie ein echo!
-        </p> 
-        
-      invite: Freunde Bescheid sagen!
-
-    new_invitation:
-      title: *your_echo
-      subtitle: *invite
-      
-      text:
-        <p>
-        <strong>Hier können Sie Ihre Freunde und Kollegen auf echologic aufmerksam machen.</strong>
-        </p><p>
-        Bitte tragen Sie Ihren eigenen Namen und die E-Mail Adressen Ihrer Freunde ein!
-        </p>
-  
-      name: Ihr Name
-      email: E-Mail Adressen Ihrer Freunde
-      email_separate: Trennen Sie bitte mehrere E-Mail Adressen mit Komma.
-      invite_button: |
-        Verbreiten Sie das Wort!<br/>
-        Bewirken Sie ein echo!
-  
   # Feedback resources
   feedback:
     new:

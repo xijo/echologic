@@ -36,48 +36,6 @@ en:
         echologic for echo - the global agora
         Web: www.echologic.org
         E-Mail: team@echologic.org
-          interest:
-      interest:
-        subject: A warm welcome on echologic
-        body: |
-          <p>
-          Dear future echologic member,
-          </p><p>
-          Many thanks for your interest on <strong>echo - the global agora</strong>.<br/>
-          We will contact you as soon as you can log in to echologic and participate
-          in forming echo for a peaceful and sustainable future of humanity.
-          </p><p>
-          Until then, you are kindly invited to follow our news on Twitter
-          or contact us at team@echo-logic.org.
-          </p><p>
-          With the best wishes,
-          </p><p>
-          Your echo team
-          </p>
-
-      invitation:
-        subject: '{{name}} recommends you echologic - democracy rethought'
-        body: |
-          <p>
-          Dear world citizen and friend of democracy,
-          </p><p>
-          <strong>{{name}}</strong> sent you this message to call your attention to <strong>www.echologic.org</strong>.<br/>
-          echologic is a network of free minds and organizations united to realize <strong>echo - the global agora</strong>.
-          </p><p>
-          echo seeks nothing less than to establish a <strong>new kind of participatory democracy</strong> on the very
-          local as well as on the regional and global level.<br/>
-          echo means the end of powerlessness and the beginning of <strong>self-determination</strong>!
-          </p><p>
-          On echologic, you can follow and <strong>participate in the evolution</strong> of this unique project
-          to jointly smoothen the path towards a peaceful and sustainable future of humanity.
-          </p><p>
-          <strong>Learn more about echo!<br/>
-          Become echologic!</strong>
-          </p><p>
-          With the best wishes,
-          </p><p>
-          Your echo team
-          </p>
       
     
   # Localizations for the layout components
@@ -745,80 +703,6 @@ en:
     invite:
       title: &invite 'Make an echo'
 
-  join:
-    new_interested:
-      title: *your_echo
-      subtitle: *join
-      
-      text: |
-        <p>
-        <strong>echo is democracy from the people for the people.</strong>
-        </p><p>
-        As a project for supporting common good, echo is driven forward by the 
-        <strong>joint effort</strong> of engaged individuals and organizations.
-        </p><p>
-        Eager to <strong>contribute your ideas, too</strong>!?<br/>
-        Please enter your name and E-Mail address below!<br/>
-        We will contact you as soon as we take off.
-        </p>
-        
-      waiting: |
-        {{count}} citizens, experts and politicians are already waiting to form echo together with you.
-
-      name: Name
-      email: E-Mail  
-      send_button: |
-        For a common future!<br/>
-        I become echologic!
-      
-    create_interested:
-      title: *your_echo
-      subtitle: Thank you
-      
-      thank_you: |
-        <p>
-        Many thanks for your interest on <strong>echo - the global agora</strong>!
-        </p><p>
-        We will contact you as soon as you can log in to echologic and participate in forming echo for a 
-        peaceful and sustainable future of humanity.
-        </p><p>
-        Until then, you are kindly invited to follow our news on Twitter or contact us at 
-        team@echo-logic.org.
-        </p><p>
-        With the best wishes,
-        </p><p>
-        Your echo team
-        </p>
-        
-      recommend: |
-        <p>
-        Would you also like to call your friends' and colleagues' attention to echologic?<br/>
-        Please enter your name and the E-Mail addresses of your friends!
-        </p><p>
-        Spread the word!</br/>
-        Make an echo!
-        </p> 
-        
-      invite: Notify your friends!
-      
-    new_invitation:
-      title: *your_echo
-      subtitle: *invite
-      
-      text:
-        <p>
-        <strong>Here you can call your friends' and colleagues' attention to echologic.</strong>
-        </p><p>
-        Please enter your name and their E-Mail addresses!
-        </p>
-
-      name: Your Name
-      email: E-Mails of your friends
-      email_separate: Please separate multiple E-Mails using comma!
-      invite_button: |
-        Spread the word!<br/>
-        Make an echo! 
-
   # Feedback resources
   feedback:
     new:
@@ -858,11 +742,3 @@ en:
           one: "One of the fields is filled incorrectly." 
           other: "{{count}} fields are filled incorrectly." 
         body: "Please correct the following:" 
-
-
-        
-#application:
-#      invite: |
-#        Become echologic!<br/>
-#        Make an echo!
-#
