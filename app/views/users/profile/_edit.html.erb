@@ -54,8 +54,7 @@
 
   <%= I18n.t('application.general.or') %>
 
-  <% # TODO wether unobtrusive or rjs, but working!! %>
-  <%= link_to_remote I18n.t('application.general.cancel'), { :url => profile_path, :method => :get } %>
+  <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax' %>
   
 <% end %>
 

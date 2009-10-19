@@ -2,7 +2,7 @@ class WebProfile < ActiveRecord::Base
 
   belongs_to :user
 
-  validates_presence_of :sort, :location
+  validates_presence_of :sort, :location, :user_id
 
   # TODO localize web profile sorts
   def self.sorts

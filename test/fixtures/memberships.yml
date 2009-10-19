@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe_greenpeace:
+  user_id: <%= Fixtures.identify(:joe) %>
+  organisation: Greenpeace
+  position: Member

@@ -16,6 +16,8 @@ class CreateI18nTables < ActiveRecord::Migration
     add_index :translations, [:locale_id, :key, :pluralization_index]
     add_index :translations, [:locale_id, :raw_key]
 
+    Locale.create!(:code => 'en', :name => 'en')
+
   end
 
   def self.down

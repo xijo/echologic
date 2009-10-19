@@ -1,4 +1,5 @@
-<h2>Personal Information</h2> (<%= link_to_remote I18n.t('application.general.edit'), { :url => edit_profile_path, :method => :get } %>)
+<h2>Personal Information</h2> (<%= link_to I18n.t('application.general.edit'), edit_profile_path, :class => 'ajax' %>)
+
 
 <div class="comment">
   These are your profile information. Use the edit button to update them,

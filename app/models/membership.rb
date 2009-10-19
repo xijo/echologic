@@ -1,5 +1,5 @@
 class Membership < ActiveRecord::Base
   belongs_to :user
 
-  validates_presence_of :organisation, :position
+  validates_presence_of :organisation, :position, :user_id
 end

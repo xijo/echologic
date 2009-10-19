@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe_twitter:
+  user_id: <%= Fixtures.identify(:joe) %>
+  location: http://twitter.com/joe
+  sort: homepage
+
+user_twitter:
+  user_id: <%= Fixtures.identify(:user) %>
+  location: http://twitter.com/user
+  sort: twitter
+
+user_blog:
+  user_id: <%= Fixtures.identify(:user) %>
+  location: http://blog.com/user
+  sort: blog
