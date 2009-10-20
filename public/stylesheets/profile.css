@@ -12,7 +12,7 @@
 */
 
 
-.detailsContainer {
+.details_container {
   /*background: #eee;*/
   border: 1px solid #ccc;
   -moz-border-radius: 4px;
@@ -22,35 +22,35 @@
   position: relative;
 }
 
-.detailsContainer ul {
+.details_container ul {
   clear: both;
   margin: 0;
   padding: 0;
 }
 
-.detailsContainer li {
+.details_container li {
   list-style-type: none;
   line-height: 24px;
 }
 
-.detailsContainer li span {
+.details_container li span {
   min-width: 110px;
   display: inline-block;
   font-weight: bold;
   margin: 3px 0;
 }
 
-.detailsContainer h2 {
+.details_container h2 {
   float: left;
 }
 
-.detailsContainer .comment {
+.details_container .comment {
   color: #aaa;
   clear: both;
   font-size: 12px;
 }
 
-.detailsContainer select {
+.details_container select {
   width: 110px;
   padding: 3px;
   -moz-border-radius: 4px;
@@ -60,11 +60,11 @@
   min-height: 17px;
 }
 
-.detailsContainer select:hover, .detailsContainer input:hover { border: 1px solid #090; }
+.details_container select:hover, .detailsContainer input:hover { border: 1px solid #090; }
 
-.detailsContainer .active { border: 1px solid #090; background: #eee; }
+.details_container .active { border: 1px solid #090; background: #eee; }
 
-.detailsContainer input {
+.details_container input {
   width: 200px;
   padding: 3px;
   margin: 0;
@@ -75,16 +75,7 @@
   min-height: 17px;
 }
 
-.headContainer {
-  margin: 10px auto;
-  width: 600px;
-}
-
-.headContainer h1 {
-  float: left;
-}
-
-.optionsButton {
+.options_button {
   -moz-border-radius: 4px;
   width:      16px;
   height:     16px;
@@ -98,17 +89,10 @@
   top: -4px;
 }
 
-.submitButton {
+.submit_button {
   width: 80px !important;
   -moz-border-radius: 4px;
   padding:    3px;
   background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
 }
 
-.blockTitle {
-  -moz-border-radius: 12px;
-  background: #ccc;
-  display: inline-block;
-  width: 400px;
-  text-align: center;
-}

@@ -1,20 +1,13 @@
-<%  if @web_profile
-      web_profile = @web_profile
-    end
-%>
+<% @web_profile = web_profile if web_profile.present? %>
 
-<li id="web_profile_<%= web_profile.id %>" >
+<li id="<%= dom_id(@web_profile) %>" >
   <span class="title">
-    <%=h web_profile.sort %>
+    <%=h @web_profile.sort %>
   </span>
-  <%=h web_profile.location %>
-  <% #  link_to 'edit', edit_user_web_profile_path(web_profile.user, web_profile), :class => 'edit_web_profile_button' %>
+  <%=h @web_profile.location %>
 
-  <%= link_to_remote "Edit",
-        { :url   => edit_user_web_profile_path(web_profile.user, web_profile), :method => :get },
-        { :class => 'optionsButton' } %>
-
-  <%= link_to_remote "Delete",
-        { :url   => user_web_profile_path(web_profile.user, web_profile), :method => 'delete' },
-        { :class => 'optionsButton' } %>
+  <%= link_to "Edit", edit_user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax options_button" %>
+  
+  <%= link_to "Delete", user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax_delete options_button" %>
 </li>
+

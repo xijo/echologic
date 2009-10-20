@@ -1,0 +1,3 @@
+admin_admin:
+  user_id: <%= Fixtures.identify(:admin) %>
+  role_id: <%= Fixtures.identify(:role_admin) %>

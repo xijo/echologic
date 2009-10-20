@@ -14,44 +14,21 @@ $(document).ready(function () {
 
   bindAjaxClickEvents();
 
-  startFragmentObservation();
-
   roundCorners();
-
-});
-
-// TODO robustness: if no script can be found make http request.
-function startFragmentObservation() {
-  /* Turn on fragment observation through jQuery plugin. */
-  $.fragmentChange(true);
-
-  /* Do AJAX call on fragment change events for goto. */
-  $(document).bind("fragmentChange", function() {
-    if (getActionFromHash()) {
-      $.getScript(getControllerFromHash()+'/'+getActionFromHash());
-    } else {
-      $.getScript(getControllerFromHash());
+  
+  /* Always send the authenticity_token with ajax */
+  $(document).ajaxSend(function(event, request, settings) {
+    if ( settings.type == 'post' ) {
+      settings.data = (settings.data ? settings.data + "&" : "")
+      + "authenticity_token=" + encodeURIComponent( AUTH_TOKEN );
     }
   });
 
-  /* If fragment is present on document load trigger fragmentChange event. */
-  if ($.fragment()) {
-    $(document).trigger("fragmentChange");
-  }
-}
+ 
+});
 
-/* splits the hash of a location and returns the name of the controller */
-function getControllerFromHash() {
-  return document.location.hash.split('/')[1];
-}
-
-function getActionFromHash() {
-  return document.location.hash.split('/')[2];
-}
-
-
-  /* TODO optimize splitting of url! */
-  /* TODO action set checking */
+/* TODO optimize splitting of url! */
+/* TODO action set checking */
 /* Sets the fragment to the controller and action of the anchors href attribute. */
 function setActionControllerFragment(href) {
   controller = href.toString().split('/')[4];
@@ -74,6 +51,17 @@ function bindAjaxClickEvents() {
     $.getScript(this.href);
     return false
   });
+
+  $(".ajax_delete").live("click", function() {
+    $.ajax({
+      url:      this.href,
+      type:     'post',
+      dataType: 'script',
+      data:   { '_method': 'delete' }
+    });
+    return false;
+  });  
+  
 }
 
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */

@@ -1,77 +1,79 @@
-<h2>Edit My Account</h2>
+<div id="personal_container" class="details_container">
+  <h2>Edit My Account</h2>
 
-<% form_remote_for @user, :url => profile_path do |f| %>
+  <% form_for @user, :url => profile_path, :html => { :id => 'edit_personal_form' } do |f| %>
+    <ul>
+      <li>
+        <span>
+          <%= f.label :prename %>
+        </span>
+        <%= f.text_field :prename %>
+      </li>
 
-  <ul>
-    <li>
-      <span>
-        <%= f.label :prename %>
-      </span>
-      <%= f.text_field :prename %>
-    </li>
+      <li>
+        <span>
+          <%= f.label :name %>
+        </span>
+        <%= f.text_field :name %>
+      </li>
+      
+      <li>
+        <span><%= f.label :gender %></span>
+        <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
+      </li>
 
-    <li>
-      <span>
-        <%= f.label :name %>
-      </span>
-      <%= f.text_field :name %>
-    </li>
+      <li>
+        <span>
+          <%= f.label :city %>
+        </span>
+        <%= f.text_field :city %>
+      </li>
+      <li>
+        <span>
+          <%= f.label :country %>
+        </span>
+        <%= f.text_field :country %>
+      </li>
+      <li>
+        <span>
+          <%= f.label :about_me %>
+        </span>
+        <%= f.text_area :about_me, :rows => 3 %>
+      </li>
+      <li>
+        <span>
+          <%= f.label :motivation %>
+        </span>
+        <%= f.text_area :motivation, :rows => 3 %>
+      </li>
+
+
+    </ul>
+      
+    <%= f.submit I18n.t('application.general.save'), :class => 'submit_button', :alt => 'save_button' %>
+
+    <%= I18n.t('application.general.or') %>
+
+    <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>
     
-    <li>
-      <span><%= f.label :gender %></span>
-      <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
-    </li>
-
-    <li>
-      <span>
-        <%= f.label :city %>
-      </span>
-      <%= f.text_field :city %>
-    </li>
-    <li>
-      <span>
-        <%= f.label :country %>
-      </span>
-      <%= f.text_field :country %>
-    </li>
-    <li>
-      <span>
-        <%= f.label :about_me %>
-      </span>
-      <%= f.text_area :about_me %>
-    </li>
-    <li>
-      <span>
-        <%= f.label :motivation %>
-      </span>
-      <%= f.text_area :motivation %>
-    </li>
+  <% end %>
 
 
-  </ul>
+  <script type="text/javascript">
+    $(':file').css({'-moz-border-radius':'4px', border:"1px solid #ccc"});
+
+    $(':input').focus(function() {
+      $(this).toggleClass('active');
+    });
+
+    $(':input').blur(function() {
+      $(this).toggleClass('active');
+    });
+
+    $("#user_city").autocomplete("users/users/auto_complete_for_user_city");
+    $("#user_country").autocomplete("users/users/auto_complete_for_user_country");
     
-  <%= f.submit I18n.t('application.general.save'), :class => 'submitButton' %>
+    $("#edit_personal_form").ajaxForm({ dataType: 'script' }); 
 
-  <%= I18n.t('application.general.or') %>
-
-  <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax' %>
-  
-<% end %>
-
-
-<script type="text/javascript">
-  $(':file').css({'-moz-border-radius':'4px', border:"1px solid #ccc"});
-
-  $(':input').focus(function() {
-    $(this).toggleClass('active');
-  });
-
-  $(':input').blur(function() {
-    $(this).toggleClass('active');
-  });
-
-  $("#user_city").autocomplete("users/users/auto_complete_for_user_city");
-  $("#user_country").autocomplete("users/users/auto_complete_for_user_country");
-
-</script>
- 
+  </script>
+</div>

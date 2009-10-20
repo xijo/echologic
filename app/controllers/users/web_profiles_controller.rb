@@ -1,28 +1,26 @@
 class Users::WebProfilesController < ApplicationController
 
-  before_filter :require_user, :only => [:edit, :create, :update, :destroy]
+  before_filter :require_user
 
   access_control do
     allow logged_in
   end
 
-  # GET /web_profiles/1
-  # GET /web_profiles/1.xml
+  # Show the web profile with the given id.
+  # method: GET
   def show
     @web_profile = WebProfile.find(params[:id])
     
     respond_to do |format|
       format.html # show.html.erb
       format.js do
-        render :update do |page|
-          page.replace_html "web_profile_#{@web_profile.id}", :partial => 'web_profile', :locals => { :web_profile => @web_profile }
-        end
+        replace_content(dom_id(@web_profile), :partial => 'web_profile')
       end
     end
   end
 
-  # GET /web_profiles/new
-  # GET /web_profiles/new.xml
+  # Show the new template for web profiles. Currently unused.
+  # method: GET
   def new
     @web_profile = WebProfile.new
 
@@ -31,53 +29,64 @@ class Users::WebProfilesController < ApplicationController
     end
   end
 
-  # GET /web_profiles/1/edit
+  # Show the edit template for the specified web profile.
+  # method: GET
   def edit
     @user = @current_user
     @web_profile = WebProfile.find(params[:id])
-    render :update do |page|
-      page.replace_html "web_profile_#{@web_profile.id}", :partial => 'edit', :locals => { :web_profile => @web_profile }
+    
+    respond_to do |format|
+      format.js do
+        replace_content(dom_id(@web_profile), :partial => 'edit')
+      end
     end
   end
 
-  # POST /web_profiles
-  # POST /web_profiles.xml
+  # Create new web profile for the current user.
+  # method: POST
   def create
     @web_profile = WebProfile.new(params[:web_profile])
     @web_profile.user_id = @current_user.id
 
-    render :update do |page|
-      if @web_profile.save
-        page.insert_html :bottom, 'webProfileList', :partial => 'web_profile', :locals => { :web_profile => @web_profile }
-      else
-        show_javascript_errors(@web_profile, page)
+    respond_to do |format|
+      format.js do
+        if @web_profile.save
+          render :template => 'users/profile/create_object', :locals => { :object => @web_profile }
+        else
+          show_error_messages(@web_profile)
+        end
       end
     end
   end
 
-  # PUT /web_profiles/1
-  # PUT /web_profiles/1.xml
+  # Update the web profiles attributes
+  # method: PUT
   def update
     @web_profile = WebProfile.find(params[:id])
 
-    render :update do |page|
-      if @web_profile.update_attributes(params[:web_profile])
-        page.replace_html "web_profile_#{@web_profile.id}", :partial => @web_profile
-      else
-        show_javascript_errors(@web_profile, page)
+    respond_to do |format|
+      format.js do
+        if @web_profile.update_attributes(params[:web_profile])
+          replace_content(dom_id(@web_profile), :partial => @web_profile)
+        else
+          show_error_messages(@web_profile)
+        end
       end
     end
   end
 
-  # DELETE /web_profiles/1
+  # Remove the web profile specified through id
+  # method: DELETE
   def destroy
     @web_profile = WebProfile.find(params[:id])
     id = @web_profile.id
     @web_profile.destroy
 
-    render :update do |page|
-      page.remove "web_profile_#{id}"
+    respond_to do |format|
+      format.js do
+        remove_container "web_profile_#{id}"
+      end
     end
-
   end
+  
 end

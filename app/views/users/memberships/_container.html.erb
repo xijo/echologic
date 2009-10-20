@@ -1,0 +1,14 @@
+<div id="membership_container" class="details_container">
+  <h2>Memberships</h2>
+  <div class="comment">
+    Some text to descripe like: Enter your activities and competences here.
+  </div>
+
+  <ul id="membership_list">
+    <li><span>Organisation</span><span>Position</span></li>
+    <%= render @user.memberships %>
+  </ul>
+  <ul>
+    <%= render :partial => 'users/memberships/new' %>
+  </ul>
+</div>

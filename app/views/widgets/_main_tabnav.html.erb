@@ -14,33 +14,29 @@
 render_tabnav :main, 
               :generate_css => false,
               :html => { :class => 'applicationTabs' } do
-    
-  # this generates a tab for every controller in your app
-  # you'll probably want to delete this and
-  # add tabs one by one as shown below
 
-  add_tab do |t|
+  add_tab :html => { :id => 'discuss_tab' } do |t|
     t.named I18n.t('layouts.tabs.discuss')
     t.links_to hash_for_discuss_path
   end
 
-  add_tab do |t|
+  add_tab :html => { :id => 'connect_tab' } do |t|
     t.named I18n.t('layouts.tabs.connect')
     t.links_to hash_for_connect_path
   end
 
-  add_tab do |t|
+  add_tab :html => { :id => 'act_tab' } do |t|
     t.named I18n.t('layouts.tabs.act')
     t.links_to hash_for_act_path
   end
 
-  add_tab do |t|
+  add_tab :html => { :id => 'my_echo_tab' } do |t|
     t.named I18n.t('layouts.tabs.my_echo')
     t.links_to :controller => 'users/profile', :action => 'welcome'
     t.highlights_on :controller => 'users/profile'
   end
 
-  add_tab do |t|
+  add_tab :html => { :id => 'admin_tab' } do |t|
     t.named I18n.t('layouts.tabs.admin')
     t.links_to hash_for_admin_path
     t.highlights_on :controller => 'i18n/locales'

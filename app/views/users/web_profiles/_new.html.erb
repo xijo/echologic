@@ -1,20 +1,14 @@
 <li>
-  <% form_remote_tag :url => user_web_profiles_path(@user), :method => :post do -%>
+  <% form_tag user_web_profiles_path(@user), :method => :post, :id => dom_class(WebProfile, :new) do -%>
       <%= select :web_profile, :sort, WebProfile.sorts %>
 
-      <%= text_field :web_profile, :location %>
+      <%= text_field :web_profile, :location, :value => '' %>
 
       <%= hidden_field :user_id, :value => @user.id %>
-      <%= submit_tag 'Create', :class => 'submitButton', :id => 'new_web_profile_submit' %>
+      <%= submit_tag 'Create', :class => 'submit_button', :id => 'new_web_profile_submit' %>
   <% end %>
 </li>
 
-<% # TODO autocomplete pseudo: unobtrusivation! %>
 <script type="text/javascript">
-  $('#web_profile_location').blur(function() {
-    /* Pseudo:
-     * Send data to controller through javascript and bind the answers to
-     * specific operations.
-     */
-  })
+  $("#<%= dom_class(WebProfile, :new) %>").ajaxForm({ dataType: 'script' }); 
 </script>

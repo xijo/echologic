@@ -8,3 +8,4 @@ When /^I am logged in as "([^\"]*)" with password "([^\"]*)"$/ do |user, passwor
   click_button('user_session_submit')
   @user = User.find_by_email(user)
 end
+

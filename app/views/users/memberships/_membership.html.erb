@@ -1,11 +1,9 @@
-<li id="membership_<%= membership.id %>" >
-  <%=h "#{membership.organisation} #{membership.position}" %>
+<% @membership = membership if membership.present? %>
 
-  <%= link_to_remote "Edit",
-        { :url   => edit_user_membership_path(membership.user, membership), :method => :get },
-        { :class => 'optionsButton' } %>
+<li id="<%= dom_id @membership %>" >
+  <%=h "#{@membership.organisation} #{@membership.position}" %>
 
-  <%= link_to_remote "Delete",
-        { :url   => user_membership_path(membership.user, membership), :method => 'delete' },
-        { :class => 'optionsButton' } %>
+  <%= link_to "Edit", edit_user_membership_path(@membership.user, @membership), :class => 'ajax options_button' %>
+  <%= link_to "Delete", user_membership_path(@membership.user, @membership), :class => 'ajax_delete options_button' %>  
+
 </li>

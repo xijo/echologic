@@ -1,0 +1,15 @@
+<div id="web_profile_container" class="details_container">
+
+  <h2>web profiles</h2>
+  <div class="comment">
+    TEXT! You are able to set some contact details, so you can be reached through all those fine communication ways.
+  </div>
+
+  <ul id="web_profile_list">
+    <%= render @user.web_profiles %>
+  </ul>
+  <ul>
+    <%= render :partial => 'users/web_profiles/new' %>
+  </ul>
+
+</div>

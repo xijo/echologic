@@ -1,8 +1,12 @@
 <li>
-  <% form_remote_tag :url => user_memberships_path(@user), :method => :post, :html => {:id => 'new_membership_form'} do -%>
-    <%= text_field :membership, :organisation %>
-    <%= text_field :membership, :position %>
+  <% form_tag user_memberships_path(@user), :method => :post, :id => dom_class(Membership, :new) do -%>
+    <%= text_field :membership, :organisation, :value => '' %>
+    <%= text_field :membership, :position, :value => '' %>
     <%= hidden_field :membership, :user_id, :value => @user.id %>
-    <%= submit_tag 'Create', :class => 'submitButton' %>
+    <%= submit_tag 'Create', :class => 'submit_button' %>
   <% end %>
 </li>
+
+<script type="text/javascript">
+  $("#<%= dom_class(Membership, :new) %>").ajaxForm({ dataType: 'script' }); 
+</script>

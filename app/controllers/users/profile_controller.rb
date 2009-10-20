@@ -16,11 +16,9 @@ class Users::ProfileController < ApplicationController
     @user = @current_user
     respond_to do |format|
       format.html
-      format.js {
-        render :update do |page|
-          page.replace_html 'personal', :partial => 'personal_information'
-        end
-      }
+      format.js do 
+        replace_container('personal_container', :partial => 'personal_information')
+      end
     end
   end
 
@@ -28,8 +26,13 @@ class Users::ProfileController < ApplicationController
   # corresponding part of the profiles page.
   def edit
     @user = @current_user
-    render :update do |page|
-      page.replace_html 'personal', :partial => 'edit'
+    respond_to do |format|
+      format.html do
+        render :partial => "edit", :layout => "application"
+      end
+      format.js do
+        replace_container('personal_container', :partial => 'edit')
+      end
     end
   end
 
@@ -37,15 +40,14 @@ class Users::ProfileController < ApplicationController
   def update
     @user = @current_user
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile information saved."
       respond_to do |format|
-        format.html { redirect_to profile_path }
-        format.js {
-          render :update do |page|
-            page.replace_html 'personal', :partial => 'personal_information', :locals => { :user => @user }
-            page << "info('#{flash[:notice]}');"
-          end
-        }
+        format.html do
+          flash[:notice] = "Profile information saved."
+          redirect_to profile_path
+        end
+        format.js do
+          replace_container('personal_container', :partial => 'personal_information', :locals => { :user => @user })
+        end
       end
     end
   end
@@ -54,21 +56,23 @@ class Users::ProfileController < ApplicationController
   def upload_picture
     @user = current_user
     respond_to do |format|
-      format.js { render :template => 'users/profile/upload_picture' }
+      format.js do 
+        render :template => 'users/profile/upload_picture'
+      end
     end
   end
 
   # After uploading a the profile picture has to be reloaded.
   # Reloading:
   #  1. loginContainer with users picture as profile link
-  #  2. picture area of the profile
+  #  2. picture container of the profile
   def reload_pictures
     @user = current_user
     respond_to do |format|
       format.js do
         render :update do |page|
           page.replace 'loginContainer', :partial => 'users/user_sessions/login'
-          page.replace 'picture', :partial => 'picture'
+          page.replace 'picture_container', :partial => 'picture'
         end
       end
     end

@@ -1,3 +1,3 @@
-<span id="concernment_<%= concernment.id %>" style="background:#ddd; padding: 4px 6px; -moz-border-radius: 12px; margin: 4px; white-space: nowrap; display: inline-block;">
-  <%= concernment.tag.value %> <%= link_to_remote 'x', :url => url_for(:controller => 'concernments', :action => 'destroy', :id => concernment.id) %>
+<span id="<%= dom_id concernment %>" style="background:#ddd; padding: 4px 6px; -moz-border-radius: 12px; margin: 4px; white-space: nowrap; display: inline-block;">
+  <%= concernment.tag.value %> <%= link_to 'x', url_for(:controller => 'concernments', :action => 'destroy', :id => concernment.id), :class => 'ajax' %>
 </span>

@@ -1,67 +1,18 @@
 <%= tabnav :my_echo %>
 
-<div id="personal" class="detailsContainer">
-
-  <%= render :partial => 'personal_information' %>
-  
-</div>
+<%= render :partial => 'personal_information' %>
 
 <%= render :partial => 'picture' %>
 
-<div id="activities" class="detailsContainer">
-  <h2>Memberships</h2>
-  <div class="comment">
-    Some text to descripe like: Enter your activities and competences here.
-  </div>
-
-  <ul id="membershipList">
-    <li><span>Organisation</span><span>Position</span></li>
-    <%= render @user.memberships %>
-  </ul>
-  <ul>
-    <%= render :partial => 'users/memberships/new' %>
-  </ul>
-</div>
+<%= render :partial => 'users/memberships/container' %>
 
 <!-- Web profiles section. -->
-<div id="webProfiles" class="detailsContainer">
-
-  <h2>web profiles</h2>
-  <div class="comment">
-    TEXT! You are able to set some contact details, so you can be reached through all those fine communication ways.
-  </div>
-
-  <ul id="webProfileList">
-    <%= render @user.web_profiles %>
-  </ul>
-  <ul>
-    <%= render :partial => 'users/web_profiles/new' %>
-  </ul>
-
-</div>
+<%= render :partial => 'users/web_profiles/container' %>
 
 <!-- Update password section. -->
-<div id="password" class="detailsContainer">
-  <%= render :partial => 'account' %>
+<div id="password_container" class="details_container">
+  <%= render :partial => 'password' %>
 </div>
-
 
 <!-- Concernment section. -->
-<div id="concernments" class="detailsContainer">
-
-  <% concernments = @user.concernments %>
-
-  <% for sort in Concernment.sorts do %>
-  
-    <h2><%= sort[1] %></h2>
-    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort[0]), :sort => sort[0] } %><br/>
-      
-  <% end %>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".tag_value_autocomplete").autocomplete("users/concernments/auto_complete_for_tag_value");
-    });
-  </script>
-
-</div>
+<%= render :partial => 'users/concernments/container' %>

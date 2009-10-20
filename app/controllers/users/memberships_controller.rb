@@ -1,27 +1,24 @@
 class Users::MembershipsController < ApplicationController
-  # GET /memberships
-  # GET /memberships.xml
-  def index
-    @memberships = Membership.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @memberships }
-    end
+  before_filter :require_user
+  
+  access_control do
+    allow logged_in
   end
 
-  # GET /memberships/1
-  # GET /memberships/1.xml
+  # Shows the membership identified through params[:id]
+  # method: GET
   def show
     @membership = Membership.find(params[:id])
-
-    render :update do |page|
-      page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
+    respond_to do |format|
+      format.js do
+        replace_content(dom_id(@membership), :partial => 'membership')
+      end
     end
   end
 
-  # GET /memberships/new
-  # GET /memberships/new.xml
+  # Render the new membership template. Currently unused.
+  # method: GET
   def new
     @membership = Membership.new
 
@@ -30,53 +27,62 @@ class Users::MembershipsController < ApplicationController
     end
   end
 
-  # GET /memberships/1/edit
+  # Render the edit membership template. Currently only respond to JS.
+  # method: GET
   def edit
     @membership = Membership.find(params[:id])
     
-    render :update do |page|
-      page.replace_html "membership_#{@membership.id}", :partial => 'edit'
+    respond_to do |format|
+      format.js do
+        replace_content(dom_id(@membership), :partial => 'edit')
+      end
     end
   end
 
-  # POST /memberships
-  # POST /memberships.xml
+  # Create a new membership with the given params. Show error messages
+  # through javascript if something fails.
+  # method: POST
   def create
     @membership = Membership.new(params[:membership])
 
-    render :update do |page|
-      if @membership.save
-        page.insert_html :bottom, 'membershipList', :partial => 'membership', :locals => { :membership => @membership }
-        page['new_membership_form'].reset
-      else
-        show_javascript_errors(@membership, page)
+    respond_to do |format|
+      format.js do
+        if @membership.save
+          render :template => 'users/profile/create_object', :locals => { :object => @membership }          
+        else
+          show_error_messages(@membership)
+        end
       end
     end
   end
 
-  # PUT /memberships/1
-  # PUT /memberships/1.xml
+  # Update the membership attributes.
+  # method: PUT
   def update
     @membership = Membership.find(params[:id])
-
-    render :update do |page|
-      if @membership.update_attributes(params[:membership])
-        page.replace_html "membership_#{@membership.id}", :partial => 'membership', :locals => { :membership => @membership }
-      else
-        show_javascript_errors(@membership, page)
+    
+    respond_to do |format|
+      format.js do
+        if @membership.update_attributes(params[:membership])
+          replace_content(dom_id(@membership), :partial => 'membership')
+        else
+          show_error_messages(@membership)
+        end
       end
     end
   end
 
-  # DELETE /memberships/1
-  # DELETE /memberships/1.xml
+  # Destroy the membership specified through params[:id]
+  # method: DELETE
   def destroy
     @membership = Membership.find(params[:id])
     id = @membership.id
     @membership.destroy
     
-    render :update do |page|
-      page.remove "membership_#{@membership.id}"
+    respond_to do |format|
+      format.js do
+        remove_container("membership_#{@membership.id}")
+      end
     end
   end
 end

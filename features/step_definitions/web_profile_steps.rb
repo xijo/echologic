@@ -19,5 +19,5 @@ end
 
 # Remove all web profiles.
 Given /^I have no web profiles$/ do
-  WebProfile.destroy_all
+  @user.web_profiles.destroy_all
 end

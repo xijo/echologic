@@ -11,7 +11,7 @@ Feature: Manage web profiles
       And I should see "blog"
       And I should not see "homepage"
 
-  @beta
+  @wip
   Scenario: Add new web profile
     Given I am logged in as "user" with password "true"
       And I have no web profiles
@@ -19,5 +19,5 @@ Feature: Manage web profiles
       And I select "Homepage" from "web_profile_sort"
       And I fill in "web_profile_location" with "http://www.homepage.com/user"
       And I press "new_web_profile_submit"
-    Then I should see "homepage"
+    Then I should see "http://www.homepage.com/user"
       And I should have 1 web profiles

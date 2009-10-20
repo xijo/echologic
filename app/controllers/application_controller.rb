@@ -9,27 +9,55 @@ class ApplicationController < ActionController::Base
   rescue_from 'Acl9::AccessDenied', :with => :access_denied
 
   # Initializes translate_routes
-  #  before_filter :set_locale_from_url
-  
   before_filter :set_locale
   
+  # Set locale to the best fitting one
   def set_locale
     available = %w{en de}
     I18n.locale = params[:locale] || request.compatible_language_from(available)
   end
 
-#  def default_url_options(options={})
-#    logger.debug "default_url_options is passed options: #{options.inspect}\n"
-#    { :locale => I18n.locale }
-#  end
-
-
-
   # Authlogic authentification filters
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   
-  # PRIVATE
+  
+  # GENERIC AJAX METHODS SECTION
+  
+  # Get formatted error string from error partial for a given object, then show
+  # it on the page object as an error message.
+  def show_error_messages(object)
+    render :update do |page|
+      message = render :partial => 'layouts/components/error', :locals => {:object => object}
+      page << "error('#{escape_javascript(message)}');"
+    end
+  end
+
+  # Helper method to do simple ajax replacements without writing a new template.
+  # This small methods takes much complexness from the controllers.
+  def replace_container(name, content)
+    render :update do |page|
+      page.replace name, content
+    end
+  end
+
+  # Helper method to do simple ajax replacements without writing a new template.
+  # This small methods takes much complexness from the controllers.
+  def replace_content(name, content)
+    render :update do |page|
+      page.replace_html name, content
+    end
+  end
+  
+  # Helper method to remove some identifier from the page.
+  def remove_container(name)
+    render :update do |page|
+      page.remove name
+    end
+  end
+  
+  
+  # PRIVATE SECTION
   private
 
     # Return current session if one exists

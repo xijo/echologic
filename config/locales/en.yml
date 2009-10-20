@@ -29,6 +29,7 @@ en:
       edit: Edit
       cancel: Cancel
       send: Send
+      upload: Upload
 
     mailer:
       signature: |

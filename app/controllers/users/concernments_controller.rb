@@ -1,5 +1,11 @@
 class Users::ConcernmentsController < ApplicationController
 
+  before_filter :require_user
+  
+  access_control do
+    allow logged_in
+  end
+
   # Generate auto completion based on tag values in the database. Load only 5
   # suggestions a time.
   auto_complete_for :tag, :value, :limit => 5
@@ -16,11 +22,12 @@ class Users::ConcernmentsController < ApplicationController
     @concernment = Concernment.new(:user_id => params[:user_id], :tag_id => tag.id, :sort => params[:sort])
 
     respond_to do |format|
-      
-      if @concernment.save
-        format.js
-      else
-        format.js { render :update do |page| show_javascript_errors(@concernment, page) end }
+      format.js do
+        if @concernment.save
+          format.js
+        else
+          show_error_messages(@concernment)
+        end
       end
     end
   end
@@ -36,7 +43,9 @@ class Users::ConcernmentsController < ApplicationController
     @concernment.destroy
 
     respond_to do |format|
-      format.js
+      format.js do
+        remove_container("concernment_#{params[:id]}")
+      end
     end
   end
 end
