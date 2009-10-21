@@ -5,6 +5,12 @@ class Users::ActivationsController < ApplicationController
   def new
     @user = User.find_using_perishable_token(params[:activation_code], 1.week) || (raise Exception)
     raise Exception if @user.active?
+    
+    respond_to do |format|
+      format.html do
+        render :template => 'users/activations/new', :layout => 'static'
+      end
+    end
   end
 
   def create
@@ -17,7 +23,7 @@ class Users::ActivationsController < ApplicationController
       flash[:notice] = I18n.t('users.activations.messages.success')
       redirect_to welcome_path
     else
-      render :action => :new
+      render :template => 'users/activations/new', :layout => 'static'
     end
   end
 
