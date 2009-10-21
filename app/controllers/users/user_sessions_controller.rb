@@ -17,8 +17,8 @@ class Users::UserSessionsController < ApplicationController
         flash[:notice] = I18n.t('users.user_sessions.messages.login_success')
         wants.html { redirect_to welcome_path }
       else
-        flash[:notice] = I18n.t('users.user_sessions.messages.login_failed')
-        wants.html { render :action => :new }
+        flash[:error] = I18n.t('users.user_sessions.messages.login_failed')
+        wants.html { redirect_to root_path }
       end
     end
   end
