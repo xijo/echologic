@@ -68,6 +68,12 @@ de:
         twitter: Twitter
         blog: Blog
         xing: Xing
+    concernments:
+      sorts:
+        affected: Betroffen
+        engaged: Engagiert
+        scientist: Experte/Wissenschaftler
+        representative: Entscheidungsträger
     users:
       new:
         title: 'Ihr echo'
@@ -814,8 +820,10 @@ de:
             blank: 'Bitte füllen Sie alle Felder aus.'
             email:
               invalid: 'Bitte geben Sie eine korrekte E-Mail Adresse ein.'
+
       messages:
         blank: '{{attribute}} darf nicht leer sein.'
+        taken: 'Wird bereits verwendet.'
           
       template:
         header: 

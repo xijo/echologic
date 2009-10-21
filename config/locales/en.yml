@@ -78,6 +78,12 @@ en:
         twitter: Twitter
         blog: Blog
         xing: Xing
+    concernments:
+      sorts:
+        affected: Affected
+        engaged: Engaged
+        scientist: Expert/Scientist
+        representative: Representative
     users:
       new:
         title: Your echo
@@ -737,6 +743,7 @@ en:
               invalid: 'Please enter a valid E-Mail address.'
       messages:
         blank: '{{attribute}} must not be empty.'
+        taken: 'Is already in use.'
           
       template:
         header: 

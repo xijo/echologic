@@ -3,15 +3,27 @@ Feature: Manage web profiles
   As an user
   I want to create and manage web profiles
 
-  Scenario: Web profiles list
-    Given I am logged in as "user" with password "true"
-    When I go to the profile
-    Then I should see "Profile"
-      And I should see "twitter"
-      And I should see "blog"
-      And I should not see "homepage"
+  # A logged in user have to be able to see his web profiles
+  # at the profile.
 
-  @wip
+  Scenario Outline: View web profile list
+    Given I am logged in as "user" with password "true"
+      And I have the following web profiles:
+        | sort   | location   |
+        | <sort> | <location> |
+    When I go to the profile
+    Then I should see "<location>"
+      And I should have 3 web profiles
+    
+    Examples:
+      | sort     | location                    |
+      | homepage | http://www.homepage.com     |
+      | twitter  | http://www.twitter.com/user |
+      | blog     | http://www.blog.com         |
+  
+  # When a new web profile is added it should be shown on
+  # the users profile page.
+  
   Scenario: Add new web profile
     Given I am logged in as "user" with password "true"
       And I have no web profiles

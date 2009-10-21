@@ -1,6 +1,6 @@
 <% form_tag user_web_profile_path(@user, @web_profile), :method => :put, :id => dom_id(@web_profile, :edit) do -%>
 
-  <%= select :web_profile, :sort, WebProfile.sorts, { :selected => @web_profile.sort } %>    
+  <%= select :web_profile, :sort, WebProfile.sorts.collect { |k,v| [v,k] }, { :selected => @web_profile.sort } %>    
   <%= text_field :web_profile, :location %>
   <%= hidden_field :user_id, :value => @user.id %>
   <%= submit_tag 'Save', :class => 'submit_button' %>

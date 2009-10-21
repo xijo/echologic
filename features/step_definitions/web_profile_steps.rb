@@ -5,6 +5,13 @@ Given /^I have web profiles (.+)$/ do |profiles|
   end
 end
 
+Given /^I have the following web profiles:$/ do |table|
+  table.hashes.each do |hash|
+    hash[:user_id] = @user.id
+    WebProfile.create!(hash)
+  end
+end
+
 # TODO unused atm
 When /^I create the web profile: (.*)$/ do |params|
   sort, location = params.split(', ')

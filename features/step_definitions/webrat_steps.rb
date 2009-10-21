@@ -47,9 +47,11 @@ end
 # TODO: Add support for checkbox, select og option
 # based on naming conventions.
 #
+# CHANGED:
+#   21.10.2009, Joe - Convert human readable names to system names.
 When /^I fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
-    When %{I fill in "#{name}" with "#{value}"}
+    When %{I fill in "#{name.downcase.gsub(' ', '_')}" with "#{value}"}
   end
 end
 

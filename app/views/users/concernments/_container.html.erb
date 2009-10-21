@@ -1,10 +1,10 @@
 <div id="concernment_container" class="details_container">
   <% concernments = @user.concernments %>
 
-  <% for sort in Concernment.sorts do %>
+  <% Concernment.sorts.each do |sort, name| %>
   
-    <h2><%= sort[1] %></h2>
-    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort[0]), :sort => sort[0] } %><br/>
+    <h2><%= name %></h2>
+    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort), :sort => sort } %><br/>
       
   <% end %>
 

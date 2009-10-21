@@ -1,6 +1,6 @@
 <li>
   <% form_tag user_web_profiles_path(@user), :method => :post, :id => dom_class(WebProfile, :new) do -%>
-      <%= select :web_profile, :sort, WebProfile.sorts %>
+      <%= select :web_profile, :sort, WebProfile.sorts.collect { |k,v| [v,k] } %>
 
       <%= text_field :web_profile, :location, :value => '' %>
 

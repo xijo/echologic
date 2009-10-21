@@ -22,7 +22,13 @@ begin
       t.fork = true # You may get faster startup if you set this to false
       t.cucumber_opts = "--color --tags @wip:2 --wip --format #{ENV['CUCUMBER_FORMAT'] || 'pretty'}"
     end
-
+    
+    Cucumber::Rake::Task.new({:progress => 'db:test:prepare'}, 'Run features by tag') do |t|
+      t.binary = vendored_cucumber_binary
+      t.fork = true # You may get faster startup if you set this to false
+      t.cucumber_opts = "--color --tags @progress --strict --format #{ENV['CUCUMBER_FORMAT'] || 'pretty'}"
+    end
+    
     desc 'Run all features'
     task :all => [:ok, :wip]
   end

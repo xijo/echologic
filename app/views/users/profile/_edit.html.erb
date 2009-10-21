@@ -19,7 +19,7 @@
       
       <li>
         <span><%= f.label :gender %></span>
-        <%= select :user, :gender, User.genders, { :include_blank => true, :selected => @user.gender } %>
+        <%= select :user, :gender, User::GENDER.collect { |k,v| [v,k] }, { :include_blank => true, :selected => @user.gender } %>
       </li>
 
       <li>

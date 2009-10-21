@@ -3,24 +3,22 @@ class WebProfile < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :sort, :location, :user_id
-
-  # TODO localize web profile sorts
-  def self.sorts
-    sorts = Array.new
-    sorts << ['Homepage', 'homepage']
-    sorts << ['Blog', 'blog']
-    sorts << ['Twitter', 'twitter']
-    sorts << ['Xing', 'xing']
+  
+  # Map the different sorts of web profiles to their database representation
+  # value, translate them ..
+  @@sorts = {
+    0 => I18n.t('users.web_profiles.sorts.homepage'),
+    1 => I18n.t('users.web_profiles.sorts.blog'),
+    2 => I18n.t('users.web_profiles.sorts.twitter'),
+    3 => I18n.t('users.web_profiles.sorts.xing')
+  }
+  
+  # ..and make it available as class method.
+  def self.sorts 
+    @@sorts 
   end
-
-  def self.sorts2
-    [
-      I18n.t('users.web_profiles.sorts.homepage'),
-      I18n.t('users.web_profiles.sorts.blog'),
-      I18n.t('users.web_profiles.sorts.twitter'),
-      I18n.t('users.web_profiles.sorts.xing')
-    ]
-
-  end
-
+  
+  # Validate that sort is correct
+  validates_inclusion_of :sort, :in => WebProfile.sorts
+  
 end

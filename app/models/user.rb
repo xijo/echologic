@@ -7,6 +7,11 @@ class User < ActiveRecord::Base
 
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
+  
+  GENDER = {
+    0 => 'male',
+    1 => 'female'
+  }
 
   # Authlogic plugin to do authentication
   acts_as_authentic do |c|
@@ -16,7 +21,6 @@ class User < ActiveRecord::Base
 
   # acl9 plugin to do authorization
   acts_as_authorization_subject
-
   acts_as_authorization_object
 
   # Handle attached user picture through paperclip plugin
