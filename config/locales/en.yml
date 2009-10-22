@@ -82,13 +82,6 @@ en:
         success: Instructions to reset your password have been emailed to you. Please check your email.
         not_found: No user was found with that email address
         
-    concernments:
-      sorts:
-        affected: Affected
-        engaged: Engaged
-        scientist: Expert/Scientist
-        representative: Representative
-        
     # Profile Section
     profile:
       heading: Personal Information
@@ -131,7 +124,16 @@ en:
         homepage: Homepage
         twitter: Twitter
         blog: Blog
-        xing: Xing              
+        xing: Xing
+  
+    # Concernments section
+    concernments:
+      comment: Descripe your concernments below.
+      sorts:
+        affected: Affected
+        engaged: Engaged
+        scientist: Expert/Scientist
+        representative: Representative                    
         
     users:
       gender:
