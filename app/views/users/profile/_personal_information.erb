@@ -1,31 +1,34 @@
 <div id="personal_container" class="details_container">
-  <h2>Personal Information</h2> 
+  <h2><%= I18n.t('users.profile.heading') %></h2> 
   (<%= link_to I18n.t('application.general.edit'), edit_profile_path, :class => 'ajax edit_link' %>)
 
   <div class="comment">
-    These are your profile information. Use the edit button to update them,
-    change your password or set a new image.
+    <%= I18n.t('users.profile.comment') %>
   </div>
 
   <ul>
     <li>
-      <span class="title">Name</span>
+      <span class="title"><%= I18n.t('users.profile.fullname') %></span>
       <%=h @user.full_name %>
     </li>
     <li>
-      <span class="title">Gender</span>
-      <%=h @user.get_gender %>
+      <span class="title"><%= I18n.t('users.profile.gender') %></span>
+      <%=h @user.human_gender %>
     </li>
     <li>
-      <span class="title">Country, City</span>
-      <%=h @user.city %> <%=h @user.country %>
+      <span class="title"><%= I18n.t('users.profile.city') %></span>
+      <%=h @user.city %>
     </li>
     <li>
-      <span class="title">About me</span>
+      <span class="title"><%= I18n.t('users.profile.country') %></span>
+      <%=h @user.country %>
+    </li>
+    <li>
+      <span class="title"><%= I18n.t('users.profile.about_me') %></span>
       <%=h @user.about_me %>
     </li>
     <li>
-      <span class="title">Motivation</span>
+      <span class="title"><%= I18n.t('users.profile.motivation') %></span>
       <%=h @user.motivation %>
     </li>
   </ul>  

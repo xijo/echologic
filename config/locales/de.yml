@@ -34,6 +34,8 @@ de:
       cancel: Abbrechen
       send: Abschicken
       upload: Hochladen
+      delete: Löschen
+      create: Hinzufügen
 
     mailer:
       signature: |
@@ -45,36 +47,85 @@ de:
       feedback: Feedback
 
   users:
+  
     user_sessions:
       login:
         password: Passwort
         email: E-Mail
         forgot: Passwort vergessen?
         remember: Merke mich!
+        hello: Hallo {{name}}
       messages:
         login_success: Login erfolgreich.
         login_failed: Login fehlgeschlagen.
         logout_success: Logout erfolgreich.
+        
     activations:
       messages:
         success: Ihr Zugang wurde erfolgreich aktiviert.
+        
     password_resets:
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
+    
+    # Profile Section
+    profile:
+      heading: Persönliche Informationen
+      edit_heading: Persönliche Informationen bearbeiten
+      comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
+      name: Name
+      prename: Vorname
+      fullname: Vollständiger Name
+      gender: Geschlecht
+      city: Stadt
+      country: Land
+      about_me: Über mich
+      motivation: Motivation
+      
+      password:
+        heading: Passwort ändern
+        new: Neues Passwort
+        confirm: Bestätigen
+        
+      picture:
+        heading: Profilbild
+        
+      upload_picture:
+        heading: Profilbild hochladen
+        comment: Bitte wählen Sie ein Bild aus und verwenden Sie den 'hochladen' Knopf.
+        progress: Bitte warten..
+        
+    # Memberships section
+    memberships:
+      heading: Mitgliedschaften
+      comment: Sie haben die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
+      organisation: Organisation
+      position: Position
+    
+    # Web profiles section
     web_profiles:
+      heading: Web Profile
+      comment: Damit Sie für andere Benutzer erreichbar sind haben Sie die Möglichkeit Ihre im Internet bestehenden Profile hier einzutragen.
       sorts:
         homepage: Homepage
         twitter: Twitter
         blog: Blog
         xing: Xing
+        
+    # Concernments section
     concernments:
+      comment: Ordnen Sie sich selbst Interessengruppen zu.
       sorts:
         affected: Betroffen
         engaged: Engagiert
         scientist: Experte/Wissenschaftler
-        representative: Entscheidungsträger
+        representative: Entscheidungsträger        
+      
     users:
+      gender:
+        male: Männlich
+        female: Weiblich
       new:
         title: 'Ihr echo'
         subtitle: 'echologic werden'
@@ -109,15 +160,11 @@ de:
       logout: Logout
       imprint: &imprint Impressum
       data_privacy: &data_privacy Datenschutz
-
-    login_container:
-      password: 'Passwort:'
-      email: 'E-Mail:'
-
-    application:
-      invite: |
-        Verwirklichen Sie echo!<br/>
-        Werden Sie echologic!
+      
+    my_echo:
+      tabs:
+        welcome: Willkommen
+        profile: Profil
 
   # All content appearing on the static pages   
   static:

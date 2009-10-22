@@ -3,7 +3,7 @@
     <%= text_field :membership, :organisation, :value => '' %>
     <%= text_field :membership, :position, :value => '' %>
     <%= hidden_field :membership, :user_id, :value => @user.id %>
-    <%= submit_tag 'Create', :class => 'submit_button' %>
+    <%= submit_tag I18n.t('application.general.create'), :class => 'submit_button' %>
   <% end %>
 </li>
 

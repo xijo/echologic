@@ -1,12 +1,14 @@
 <%# Shows the form for uploading a new user picture, ajaxifys it and shows a
-  # progress indicator. %>
+  # progress indicator. 
+%>
 
-<h2>Picture upload</h2>
+<%= I18n.t('users.profile.upload_picture.comment') %>
+
 <% form_for @user, :url => profile_path, :html => { :multipart => true, :id => 'upload_picture_form' } do |f| %>
   <%= f.file_field :picture %><br/>
 <% end %>
 
-<div id="uploading_progress" style="display:none;">uploading.. <%= image_tag 'indicator.gif' %></div>
+<div id="uploading_progress" style="display:none;"><%= I18n.t('users.profile.upload_picture.progress') %> <%= image_tag 'indicator.gif' %></div>
 
 <script type="text/javascript">
   /* Hijack the submit function of the upload picture form. Add some callbacks:

@@ -30,6 +30,8 @@ en:
       cancel: Cancel
       send: Send
       upload: Upload
+      delete: Delete
+      create: Create
 
     mailer:
       signature: |
@@ -47,12 +49,18 @@ en:
       act: Act
       my_echo: My Echo
       admin: Admin
+      
     outer_menu:
       language: Language
       feedback: &feedback Feedback
       about: &about About us
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
+      
+    my_echo:
+      tabs:
+        welcome: Welcome
+        profile: Profile
 
   users:
     user_sessions:
@@ -61,6 +69,7 @@ en:
         email: 'E-Mail'
         forgot: Forgot your password?
         remember: Remember me!
+        hello: Hello {{name}}
       messages:
         login_success: Login successful.
         login_failed: Login failed.
@@ -72,19 +81,62 @@ en:
       messages:
         success: Instructions to reset your password have been emailed to you. Please check your email.
         not_found: No user was found with that email address
-    web_profiles:
-      sorts:
-        homepage: Homepage
-        twitter: Twitter
-        blog: Blog
-        xing: Xing
+        
     concernments:
       sorts:
         affected: Affected
         engaged: Engaged
         scientist: Expert/Scientist
         representative: Representative
+        
+    # Profile Section
+    profile:
+      heading: Personal Information
+      edit_heading: Edit your personal information
+      comment: The informations about your person are displayed here. Use the 'edit' button to update them.
+      name: Name
+      prename: Prename
+      fullname: Full name
+      gender: Gender
+      city: City
+      country: Country
+      about_me: About me
+      motivation: Motivation
+      
+      password:
+        heading: Change my password
+        new: New password
+        confirm: Confirm
+        
+      picture:
+        heading: Picture
+        
+      upload_picture:
+        heading: Upload Picture
+        comment: Please select a picture from your file system and click the upload button.
+        progress: please wait..
+
+    # Memberships section
+    memberships:
+      heading: Memberships
+      comment: You may insert all of your memberships, e.g. in organisations, political parties, companies, and so on.
+      organisation: Organisation
+      position: Position
+      
+    # Web profiles section
+    web_profiles:
+      heading: Web Profiles
+      comment: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
+      sorts:
+        homepage: Homepage
+        twitter: Twitter
+        blog: Blog
+        xing: Xing              
+        
     users:
+      gender:
+        male: Male
+        female: Female
       new:
         title: Your echo
         subtitle: Become echologic

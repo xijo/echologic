@@ -1,4 +1,7 @@
 <div id="concernment_container" class="details_container">
+  <div class="comment">
+    <%= I18n.t('users.concernments.comment') %>
+  </div>
   <% concernments = @user.concernments %>
 
   <% Concernment.sorts.each do |sort, name| %>

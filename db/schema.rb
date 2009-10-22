@@ -22,21 +22,6 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
   add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
   add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
 
-  create_table "interested_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "invited_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "interested_person_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "locales", :force => true do |t|
     t.string "code"
     t.string "name"
@@ -107,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
     t.datetime "picture_updated_at"
     t.string   "name"
     t.string   "prename"
-    t.boolean  "gender"
+    t.integer  "gender"
     t.text     "about_me"
     t.text     "motivation"
     t.string   "city"
@@ -115,9 +100,9 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
   end
 
   create_table "web_profiles", :force => true do |t|
-    t.string   "sort"
-    t.string   "location"
     t.integer  "user_id"
+    t.integer  "location"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

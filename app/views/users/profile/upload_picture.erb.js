@@ -11,11 +11,11 @@ $('#dialogContent').dialog({
   bgiframe: true,
   modal:    true,
   buttons:  { 
-    Close: function() { $(this).dialog('close'); },
-    Send: function() { $('#upload_picture_form').submit(); }
+    "<%= I18n.t('application.general.cancel') %>": function() { $(this).dialog('close'); },
+    "<%= I18n.t('application.general.upload') %>": function() { $('#upload_picture_form').submit(); }
      },
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
-  title:    'Upload picture'
+  title:    "<%= I18n.t('users.profile.upload_picture.heading') %>"
 });
 

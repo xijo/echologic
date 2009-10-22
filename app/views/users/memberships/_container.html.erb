@@ -1,13 +1,17 @@
 <div id="membership_container" class="details_container">
-  <h2>Memberships</h2>
+  <h2><%= I18n.t('users.memberships.heading') %></h2>
   <div class="comment">
-    Some text to descripe like: Enter your activities and competences here.
+    <%= I18n.t('users.memberships.comment') %>
   </div>
 
   <ul id="membership_list">
-    <li><span>Organisation</span><span>Position</span></li>
+    <li>
+      <span><%= I18n.t('users.memberships.organisation') %></span>
+      <span><%= I18n.t('users.memberships.position') %></span>
+    </li>
     <%= render @user.memberships %>
   </ul>
+  
   <ul>
     <%= render :partial => 'users/memberships/new' %>
   </ul>

@@ -1,48 +1,48 @@
 <div id="personal_container" class="details_container">
-  <h2>Edit My Account</h2>
+  <h2><%= I18n.t('users.profile.edit_heading') %></h2>
 
   <% form_for @user, :url => profile_path, :html => { :id => 'edit_personal_form' } do |f| %>
     <ul>
       <li>
         <span>
-          <%= f.label :prename %>
+          <%= f.label I18n.t('users.profile.prename') %>
         </span>
         <%= f.text_field :prename %>
       </li>
 
       <li>
         <span>
-          <%= f.label :name %>
+          <%= f.label I18n.t('users.profile.name') %>
         </span>
         <%= f.text_field :name %>
       </li>
       
       <li>
-        <span><%= f.label :gender %></span>
-        <%= select :user, :gender, User::GENDER.collect { |k,v| [v,k] }, { :include_blank => true, :selected => @user.gender } %>
+        <span><%= f.label I18n.t('users.profile.gender') %></span>
+        <%= select :user, :gender, User.gender.collect { |k,v| [v,k] }, { :include_blank => true, :selected => @user.gender } %>
       </li>
 
       <li>
         <span>
-          <%= f.label :city %>
+          <%= f.label I18n.t('users.profile.city') %>
         </span>
         <%= f.text_field :city %>
       </li>
       <li>
         <span>
-          <%= f.label :country %>
+          <%= f.label I18n.t('users.profile.country') %>
         </span>
         <%= f.text_field :country %>
       </li>
       <li>
         <span>
-          <%= f.label :about_me %>
+          <%= f.label I18n.t('users.profile.about_me') %>
         </span>
         <%= f.text_area :about_me, :rows => 3 %>
       </li>
       <li>
         <span>
-          <%= f.label :motivation %>
+          <%= f.label I18n.t('users.profile.motivation') %>
         </span>
         <%= f.text_area :motivation, :rows => 3 %>
       </li>

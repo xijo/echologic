@@ -8,10 +8,21 @@ class User < ActiveRecord::Base
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
   
-  GENDER = {
-    0 => 'male',
-    1 => 'female'
+  # There are two kind of people in the world..
+  @@gender = {
+    0 => I18n.t('users.users.gender.male'),
+    1 => I18n.t('users.users.gender.female')
   }
+  
+  # Access for the class variable
+  def self.gender
+    @@gender
+  end
+  
+  # Return the localized gender.
+  def human_gender
+    @@gender[gender] || ''
+  end
 
   # Authlogic plugin to do authentication
   acts_as_authentic do |c|
@@ -85,25 +96,6 @@ class User < ActiveRecord::Base
   # Return the full name of the user consisting of pre- and surname
   def full_name
     "#{prename} #{name}"
-  end
-
-  # Return the gender in human readable and localized format.
-  # TODO localize gender
-  def get_gender
-    if gender.nil?
-      return ''
-    else
-      gender ? 'Female' : 'Male'
-    end
-  end
-
-  # Return available localized genders.
-  # TODO localize genders
-  def self.genders
-    [
-      ['Male', false],
-      ['Female', true]
-    ]
   end
 
 end
