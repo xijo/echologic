@@ -2,7 +2,7 @@
 
 <li id="<%= dom_id(@web_profile) %>" >
   <span class="title">
-    <%=h @web_profile.sort %>
+    <%=h WebProfile.sorts[@web_profile.sort] %>
   </span>
   <%=h @web_profile.location %>
 
@@ -10,4 +10,3 @@
   
   <%= link_to I18n.t('application.general.delete'), user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax_delete options_button" %>
 </li>
-

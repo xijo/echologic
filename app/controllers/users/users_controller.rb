@@ -59,7 +59,7 @@ class Users::UsersController < ApplicationController
         flash[:notice] = I18n.t('users.users.messages.created')
         format.html { redirect_to root_url }
       else
-        format.html { render :action => :new }
+        format.html { render :template => 'users/users/new', :layout => 'static' }
       end
     end
   end

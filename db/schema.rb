@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
 
   create_table "web_profiles", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "location"
+    t.string   "location"
     t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"

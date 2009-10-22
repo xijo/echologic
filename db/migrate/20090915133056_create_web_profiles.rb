@@ -2,7 +2,7 @@ class CreateWebProfiles < ActiveRecord::Migration
   def self.up
     create_table :web_profiles do |t|
       t.integer :user_id
-      t.integer :location
+      t.string :location
       t.integer :sort
 
       t.timestamps
