@@ -78,7 +78,13 @@ en:
         login_success: Login successful.
         login_failed: Login failed.
         logout_success: Logout successful.
+        
+    # Activations section    
     activations:
+      heading: Activate your account
+      set: Please choose your password
+      confirm: Confirm your password
+      activate: Activate
       messages:
         success: Your account has been activated.
         

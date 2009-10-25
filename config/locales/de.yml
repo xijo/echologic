@@ -67,6 +67,10 @@ de:
         
     # Activations section
     activations:
+      heading: Aktivieren Sie Ihren Zugang
+      set: Bitte wählen Sie ein Passwort
+      confirm: Bestätigen Sie Ihr Passwort
+      activate: Aktivieren
       messages:
         success: Ihr Zugang wurde erfolgreich aktiviert.
         

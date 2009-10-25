@@ -1,7 +1,13 @@
- <h1>Activate your account</h1>
+ <h1><%= I18n.t('users.activations.heading') %></h1>
 
 <% form_for @user, :url => activate_path(@user.id), :html => { :method => :post } do |form| %>
-      <%= form.error_messages %>
-      <%= render :partial => "form", :locals => { :form => form }%>
-      <%= form.submit "Activate" %>
+  <p>
+    <%= form.label :password, I18n.t('users.activations.set') %>
+    <%= form.password_field :password %>
+  </p><p>
+    <%= form.label I18n.t('users.activations.confirm') %>
+    <%= form.password_field :password_confirmation %>
+  </p><p>
+    <%= form.submit I18n.t('users.activations.activate') %>
+  </p>
 <% end %>
