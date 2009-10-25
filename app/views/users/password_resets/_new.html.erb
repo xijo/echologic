@@ -1,11 +1,14 @@
-<h1>Forgot Password</h1>
+<h1><%= I18n.t('users.password_resets.heading') %></h1>
 
-Fill out the form below and instructions to reset your password will be emailed to you:<br />
+<%= I18n.t('users.password_resets.information') %><br />
 <br />
 
 <% form_tag password_resets_path do %>
-  <label>Email:</label><br />
-  <%= text_field_tag "email" %><br />
-  <br />
-  <%= submit_tag "Reset my password" %>
+  <p>
+    <%= label_tag I18n.t('application.general.email') %>
+    <%= text_field_tag "email" %>
+  </p>
+  <p>
+    <%= submit_tag I18n.t('application.general.send') %>
+  </p>
 <% end %>

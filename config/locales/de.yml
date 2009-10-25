@@ -51,6 +51,7 @@ de:
   # ------------
   users:
   
+    # User sessions section
     user_sessions:
       login:
         password: Passwort
@@ -64,11 +65,15 @@ de:
         login_failed: Login fehlgeschlagen.
         logout_success: Logout erfolgreich.
         
+    # Activations section
     activations:
       messages:
         success: Ihr Zugang wurde erfolgreich aktiviert.
         
+    # Password resets section
     password_resets:
+      heading: Setzen Sie Ihr Passwort zurück
+      information: Bitte tragen Sie Ihre E-Mail Adresse in das Formular ein. Wir werden Ihnen anschließend eine Aktivierungs-E-Mail senden.
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
@@ -126,6 +131,7 @@ de:
         scientist: Experte/Wissenschaftler
         representative: Entscheidungsträger        
       
+    # Users section
     users:
       gender:
         male: Männlich

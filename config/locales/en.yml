@@ -81,7 +81,11 @@ en:
     activations:
       messages:
         success: Your account has been activated.
+        
+    # Password resets section
     password_resets:
+      heading: Reset you password
+      information: Please fill in your E-Mail address in the following form. We will send you an activation link afterwards.        
       messages:
         success: Instructions to reset your password have been emailed to you. Please check your email.
         not_found: No user was found with that email address
