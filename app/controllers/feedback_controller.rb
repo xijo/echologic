@@ -12,10 +12,8 @@ class FeedbackController < ApplicationController
   def new
     flash[:error] = ""
     respond_to do |format|
-      format.html { render :partial => 'feedback/new', :layout => 'application' }
-#      format.js { render :template => 'layouts/headContainer' }
+      format.html { render :partial => 'feedback/new', :layout => 'static' }
       format.js { render :template => 'layouts/outerMenuDialog', :locals => { :menu_item => 'feedback/new' }}
-#      format.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
     end
   end  
 
@@ -39,8 +37,8 @@ class FeedbackController < ApplicationController
         then flash[:error] = t('activerecord.errors.models.feedback.attributes.email.invalid')
     end
     respond_to do |wants|
-      wants.html { render :partial => 'feedback/new', :layout => 'application' }
-      wants.js { render :template => 'static_content/outer_menu', :locals => { :menu_item => 'feedback/new' }}
+      wants.html { render :partial => 'feedback/new', :layout => 'static' }
+      wants.js { render :template => 'layouts/outerMenuDialog', :locals => { :menu_item => 'feedback/new' }}
     end
   end
 

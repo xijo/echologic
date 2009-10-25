@@ -54,6 +54,7 @@ de:
         action: |
           Erfahren Sie mehr über echo!
 
+      # about section
       about:
         title: Über uns
         text: |
@@ -108,7 +109,6 @@ de:
           </p>
 
         open_document: Dokument öffnen!
-
 
     # ECHO SECTION
     echo:

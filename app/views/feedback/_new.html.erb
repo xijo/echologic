@@ -1,7 +1,7 @@
-<%= link_to_remote("<h1 class='link'>#{t('static_content.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
-<h2><%= t('.title') %></h2>
+<%= link_to_remote("<h1 class='link'>#{I18n.t('static.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
+<h2><%= I18n.t('feedback.new.title') %></h2>
 
-<%= t('.welcome') %>
+<%= t('feedback.new.welcome') %>
 
 <%= image_tag('page/illustrations/feedback.png', :id => 'feedbackIllustration') %>
 
@@ -22,21 +22,21 @@
 <% form_tag({:controller => 'feedback', :action => 'create'}) do %>
 
   <div class="formBlock">
-    <%= label_tag t('user_data.name'), nil, :class => 'formLabel' %><br />
+    <%= label_tag I18n.t('application.general.name'), nil, :class => 'formLabel' %><br />
     <%= text_field_tag :name, request.params[:name] %>
   </div>
   
   <div class="formBlock">
-    <%= label_tag t('user_data.email'), nil, :class => 'formLabel' %><br />
+    <%= label_tag I18n.t('application.general.email'), nil, :class => 'formLabel' %><br />
     <%= text_field_tag :sender, request.params[:sender] %>
   </div>
 
   <div class="formBlock">
-    <%= label_tag t('.message'), nil, :class => 'formLabel' %><br/>
+    <%= label_tag I18n.t('feedback.new.message'), nil, :class => 'formLabel' %><br/>
     <%= text_area_tag :text, request.params[:text] %>
   </div>
 
-  <%= submit_tag t('.send'), :class => 'formButton200' %>
+  <%= submit_tag I18n.t('application.general.send'), :class => 'formButton200' %>
   
 <% end -%>
 

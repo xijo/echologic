@@ -185,7 +185,7 @@ de:
   # Feedback resources
   feedback:
     new:
-      title: *feedback
+      title: Feedback
       welcome: |
         <p>
         <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
