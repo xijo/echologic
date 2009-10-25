@@ -1,0 +1,18 @@
+/**
+ * @author Joe
+ *
+ * Template for inserting a recently created object and reset
+ * the corresponding form.
+ */
+ 
+/* Render partial for the object. */
+var object = "<%= escape_javascript(render object) %>";
+
+/* Append the object to the list. */
+$('#<%= dom_class(object) %>_list').append(object);
+
+/* Reset the form. */
+$('#<%= dom_class(object, :new) %>').reset();
+
+
+
