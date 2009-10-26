@@ -1,0 +1,12 @@
+<div id="messageContainer">
+  <div id="error" class="ui-state-error" style="display:none;"></div>
+  <div id="info" class="ui-state-highlight" style="display:none;"></div>
+</div>
+
+<script type="text/javascript">
+  <% if flash[:notice] %>
+    info('<%= flash[:notice] %>');
+  <% elsif flash[:error] %>
+    error('<%= flash[:error] %>');
+  <% end %>
+</script>

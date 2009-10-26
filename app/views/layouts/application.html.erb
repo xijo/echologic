@@ -35,24 +35,14 @@
       <div id="echologicLogo">
         <%= link_to(image_tag('page/echologic_logo.png'), welcome_path) %>
       </div>
-      <%= render :partial => "layouts/top_menu" %>
+      <%= render :partial => "layouts/components/top_menu" %>
       <%= render :partial => "users/user_sessions/login" %>
     </div>
 
 
     <!-- Messaging section. -->
-    <div id="messageContainer">
-      <div id="error" class="ui-state-error" style="display:none;"></div>
-      <div id="info" class="ui-state-highlight" style="display:none;"></div>
-    </div>
+    <%= render :partial => 'layouts/components/messages' %>
 
-    <script type="text/javascript">
-      <% if flash[:notice] %>
-        info('<%= flash[:notice] %>');
-      <% elsif flash[:error] %>
-        error('<%= flash[:error] %>');
-      <% end %>
-    </script>
 
     <%= tabnav :main %>
   
@@ -68,7 +58,7 @@
 
     </div>
 
-    <%= render :partial => "layouts/bottom_menu" %>
+    <%= render :partial => "layouts/components/bottom_menu" %>
 
     <!-- Dialog container for outer menu. -->
     <div id="dialogContent" style="display:none;"></div>

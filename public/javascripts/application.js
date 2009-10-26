@@ -141,7 +141,7 @@ if (jQuery.support.opacity) {
  * Options and documentation: 
  *   http://bassistance.de/jquery-plugins/jquery-plugin-tooltip */
 function makeTooltips() {
-  $(".ttLink").tooltip({
+  $(".ttLink[title]").tooltip({
     track:  true
   });
 }
@@ -156,9 +156,9 @@ var roundCorners = function(){
 
 /* Show error or info messages in messagesContainer and hide it with delay. */
 function info(text) {
-  $('#messageContainer #info').html(text).slideDown().animate({opacity: 1.0}, 2000).slideUp();
+  $('#messageContainer #info').html(text).slideDown().animate({opacity: 1.0}, 5000).slideUp();
 }
 
 function error(text) {
-  $('#messageContainer #error').html(text).slideDown().animate({opacity: 1.0}, 2000).slideUp();
+  $('#messageContainer #error').html(text).slideDown().animate({opacity: 1.0}, 5000).slideUp();
 }
