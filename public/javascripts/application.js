@@ -4,7 +4,7 @@
 /* Do init stuff. */
 $(document).ready(function () {
 
-  makeQTips();
+  makeTooltips();
 
   bindLanguageSelectionEvents();
 
@@ -72,16 +72,10 @@ function bindStaticMenuClickEvents() {
   });
 
   $(".outerMenuItem").live("click", function() {
-//    setActionControllerFragment(this.href);
     $.getScript(this.href);
     return false;
   });
 
-//  $(".ajax").live("click", function() {
-//    setActionControllerFragment(this.href);
-//    return false;
-//  });
-  
   $(".prevNextButton").live("click", function() {
     setActionControllerFragment(this.href);
     return false;
@@ -142,45 +136,13 @@ if (jQuery.support.opacity) {
   };
 }
 
-/* Defines the qTip style for the static content tooltips and attaches it
- * to all instances of the ttLink class. */
-function makeQTips() {
-
-  $.fn.qtip.styles.echo_tooltip = {
-    width: {
-      max: 450
-    },
-    background: '#7AB030',
-    'font-size': 12,
-    color: 'white',
-    textAlign: 'left',
-    border: {
-      width: 1,
-      radius: 8,
-      color: '#7AB030'
-    },
-    tip: 'topLeft',
-    name: 'dark' // Inherit attributes from dark style
-  }
-    
-  $(".ttLink").qtip({
-    position: {
-      target: 'mouse',
-      corner: {
-        target: 'bottomMiddle'
-      },
-      adjust: {
-        x: 12,
-        y:10
-      }
-    },
-    style: 'echo_tooltip',
-    show: {
-      effect: {
-        type: 'fade',
-        length: 0
-      }
-    }
+/* Lightweight tooltip plugin initialization to create fancy tooltips
+ * all over our site. 
+ * Options and documentation: 
+ *   http://bassistance.de/jquery-plugins/jquery-plugin-tooltip */
+function makeTooltips() {
+  $(".ttLink").tooltip({
+    track:  true
   });
 }
 
