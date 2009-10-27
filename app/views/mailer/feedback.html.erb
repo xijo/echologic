@@ -3,10 +3,10 @@
 </p>
 
 <p>
-  Sender: <%= @name %><br/>
-  E-Mail: <%= @sender %>
+  Sender: <%=h @feedback.name %><br/>
+  E-Mail: <%=h @feedback.email %>
 </p>
 
 <p>
-  <%= params[:text] %>
+  <%=h @feedback.message %>
 </p>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091008104532) do
+ActiveRecord::Schema.define(:version => 20091027084559) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(:version => 20091008104532) do
 
   add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
   add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
+
+  create_table "feedbacks", :force => true do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+  end
 
   create_table "locales", :force => true do |t|
     t.string "code"

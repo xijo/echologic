@@ -31,4 +31,4 @@ config.action_view.cache_template_loading            = true
 FEEDBACK_RECIPIENT = 'team@echo-logic.org'
 
 # For using link_to and url_for in ActionMailer, hostname has to be given.
-config.action_mailer.default_url_options = { :host => 'echologic.org' }
+config.action_mailer.default_url_options = { :host => 'www.echologic.org' }

@@ -5,38 +5,26 @@
 
 <%= image_tag('page/illustrations/feedback.png', :id => 'feedbackIllustration') %>
 
-<% if not flash[:error].empty? %>
-  <div id="errorExplanation" class="errorExplanation">
-    <h2><%= t('activerecord.errors.template.header.one') %></h2>
-    <p><%= t('activerecord.errors.template.body') %></p>
-    <ul>
-      <li>
-        <%= flash[:error] %>
-        <% # TODO niling the error doesn't work properly on site reload %>
-        <% flash[:error] = nil %>
-      </li>
-    </ul>
-  </div>
-<% end %>
-
-<% form_tag({:controller => 'feedback', :action => 'create'}) do %>
+<% form_for :feedback, :url => {:controller => 'feedback', :action => 'create'}, 
+            :html => { :id => 'new_feedback_form' } do |f| %>
 
   <div class="formBlock">
     <%= label_tag I18n.t('application.general.name'), nil, :class => 'formLabel' %><br />
-    <%= text_field_tag :name, request.params[:name] %>
+    <%= f.text_field :name %>
   </div>
-  
+
   <div class="formBlock">
     <%= label_tag I18n.t('application.general.email'), nil, :class => 'formLabel' %><br />
-    <%= text_field_tag :sender, request.params[:sender] %>
+    <%= f.text_field :email %>
   </div>
-
+  
   <div class="formBlock">
     <%= label_tag I18n.t('feedback.new.message'), nil, :class => 'formLabel' %><br/>
-    <%= text_area_tag :text, request.params[:text] %>
+    <%= f.text_area :message, :rows => 4, :cols => 30 %>
   </div>
 
-  <%= submit_tag I18n.t('application.general.send'), :class => 'formButton200' %>
-  
-<% end -%>
+<% end %>
 
+<script type="text/javascript">
+  $("#new_feedback_form").ajaxForm({ dataType: 'script' }); 
+</script>
