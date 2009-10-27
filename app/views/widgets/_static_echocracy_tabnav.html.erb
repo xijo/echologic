@@ -5,27 +5,27 @@ render_tabnav :main,
               :generate_css => false,
               :html => { :class => 'applicationTabs' } do
 
-  add_tab :html => { :class => 'ajax' } do |t|
+  add_tab :html => { :class => 'ajaxLink' } do |t|
     t.named I18n.t('static.echocracy.tabs.echocracy')
     t.links_to hash_for_echocracy_path
   end
 
-  add_tab :html => { :class => 'ajax' } do |t|
+  add_tab :html => { :class => 'ajaxLink' } do |t|
     t.named I18n.t('static.echocracy.tabs.citizens')
     t.links_to :controller => 'static/echocracy', :action => 'citizens'
   end
 
-  add_tab :html => { :class => 'ajax' } do |t|
+  add_tab :html => { :class => 'ajaxLink' } do |t|
     t.named I18n.t('static.echocracy.tabs.scientists')
     t.links_to :controller => 'static/echocracy', :action => 'scientists'
   end
 
-  add_tab :html => { :class => 'ajax' } do |t|
+  add_tab :html => { :class => 'ajaxLink' } do |t|
     t.named I18n.t('static.echocracy.tabs.decision_makers')
     t.links_to :controller => 'static/echocracy', :action => 'decision_makers'
   end
 
-  add_tab :html => { :class => 'ajax' } do |t|
+  add_tab :html => { :class => 'ajaxLink' } do |t|
     t.named I18n.t('static.echocracy.tabs.organisations')
     t.links_to :controller => 'static/echocracy', :action => 'organisations'
   end
