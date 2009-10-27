@@ -57,6 +57,23 @@
     <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>
     
   <% end %>
+  
+  <% semantic_form_for @user, :url => profile_path, :html => { :id => 'edit_user_form' } do |form| %>
+    <% form.inputs do %>
+      <%= form.input :first_name %>
+      <%= form.input :last_name %>
+      <%= form.input :gender, :as => :radio, :label => "Gender", :collection => User.gender.collect { |k,v| [v,k] } %>
+      <%= form.input :city %>
+      <%= form.input :country %>
+      <%= form.input :about_me,   :input_html => { :rows => 3, :cols => 30 } %>
+      <%= form.input :motivation, :input_html => { :rows => 3, :cols => 30 } %>
+    <% end %>
+    <% form.buttons do %>
+      <%= form.commit_button I18n.t('application.general.save'), :alt => 'save_button' %>  
+      <%= I18n.t('application.general.or') %>
+      <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>    
+    <% end %>
+  <% end %>
 
 
   <script type="text/javascript">
@@ -73,7 +90,9 @@
     $("#user_city").autocomplete("users/users/auto_complete_for_user_city");
     $("#user_country").autocomplete("users/users/auto_complete_for_user_country");
     
-    $("#edit_personal_form").ajaxForm({ dataType: 'script' }); 
+    $("#edit_personal_form").ajaxForm({ dataType: 'script' });
+    
+    $("#edit_user_form").ajaxForm({ dataType: 'script' });
 
   </script>
 </div>

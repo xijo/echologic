@@ -71,7 +71,7 @@ class Users::UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         flash[:notice] = "User was successfully updated."
-        format.html { redirect_to(users_path) }
+        format.html { redirect_to(profile_path) }
       else
         format.html { render :action => "edit" }
       end

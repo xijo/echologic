@@ -1,19 +1,20 @@
 class ConnectController < ApplicationController
 
-  # GET /connect
+  # Show the connect page
+  # method: GET
   def show
     respond_to do |format|
       format.html
     end
   end
   
-  # POST search
+  # Return connect page with results of the search
+  # method: POST
   def search
-    @users = User.find(:all,
-        :conditions => ['email like ? or name like ? or prename like ?', filter, filter, filter],
-        :limit => 30)
+    filter = params[:value]
+    @users = User.first_name_or_last_name_or_email_like(filter)
     respond_to do |format|
-      format.html { redirect_to users_path }
+      format.html { render :template => 'users/users/index' }
     end
   end
 
