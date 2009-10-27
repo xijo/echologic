@@ -17,7 +17,7 @@ Feature: Profile settings
   
   # In the profile the user should be able to update
   # its user data.
-  @progress
+  
   Scenario: Edit basic information
     Given I am logged in as "user" with password "true"
     When I go to the profile
@@ -43,13 +43,18 @@ Feature: Profile settings
     Given I am logged in as "user" with password "true"
     When I go to the profile
       And I follow the "Upload" link within the "Picture" container
-    Then I should see "Picture upload"
-      And I should see "Send"
-      And I should see "Close"
+    Then I should see "Upload Picture"
+      And I should see "Cancel"
+      And I should see "Upload"
       
   # After all the user has to be able to change his password as well.
   
   Scenario: Change password
     Given I am logged in as "user" with password "true"
-      And I am at the profile
-    Then I should see "Hello"
+      And I am on the profile
+      And I fill in the following:
+        | user_password              | false |
+        | user_password_confirmation | false |
+      And I press the "Submit" button within the "Password" container
+    Then I should see "Profile information saved."
+    

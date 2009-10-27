@@ -28,3 +28,4 @@ end
 Given /^I have no web profiles$/ do
   @user.web_profiles.destroy_all
 end
+
