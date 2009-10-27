@@ -102,9 +102,9 @@ en:
       heading: Personal Information
       edit_heading: Edit your personal information
       comment: The informations about your person are displayed here. Use the 'edit' button to update them.
-      name: Name
-      prename: Prename
-      fullname: Full name
+      first_name: First Name
+      last_name: Last Name
+      fullname: Full Name
       gender: Gender
       city: City
       country: Country

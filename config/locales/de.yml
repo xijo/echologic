@@ -88,8 +88,8 @@ de:
       heading: Persönliche Informationen
       edit_heading: Persönliche Informationen bearbeiten
       comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
-      name: Name
-      prename: Vorname
+      last_name: Nachname
+      first_name: Vorname
       fullname: Name
       gender: Geschlecht
       city: Stadt

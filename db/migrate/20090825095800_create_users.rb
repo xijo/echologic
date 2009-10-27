@@ -11,13 +11,13 @@ class CreateUsers < ActiveRecord::Migration
       t.string :perishable_token,  :null => false # optional, see Authlogic::Session::Perishability
 
       # Authlogic::Session::MagicColumns
-      t.integer :login_count,        :null => false, :default => 0 # optional
-      t.integer :failed_login_count, :null => false, :default => 0 # optional
-      t.datetime  :last_request_at                                 # optional
-      t.datetime :current_login_at                                 # optional
-      t.datetime  :last_login_at                                   # optional
-      t.string    :current_login_ip                                # optional
-      t.string    :last_login_ip                                   # optional
+      t.integer  :login_count,        :null => false, :default => 0 # optional
+      t.integer  :failed_login_count, :null => false, :default => 0 # optional
+      t.datetime :last_request_at                                   # optional
+      t.datetime :current_login_at                                  # optional
+      t.datetime :last_login_at                                     # optional
+      t.string   :current_login_ip                                  # optional
+      t.string   :last_login_ip                                     # optional
 
       t.timestamps
     end
