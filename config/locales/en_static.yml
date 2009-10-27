@@ -605,6 +605,9 @@ en:
     join:
       title: &your_echo 'Your echo'
       subtitle: &join 'Become echologic'
+      tabs:
+        join: Join
+        forgot: Forgot your password?
       
     invite:
       title: &invite 'Make an echo'

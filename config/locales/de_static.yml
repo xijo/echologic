@@ -589,7 +589,10 @@ de:
       
     join:
       title: &your_echo 'Ihr echo'
-      subtitle: &join 'echologic werden' 
+      subtitle: &join 'echologic werden'
+      tabs:
+        join: 'Anmelden'
+        forgot: 'Passwort vergessen?'
       
     invite:
       title: &invite 'echo bewirken'
