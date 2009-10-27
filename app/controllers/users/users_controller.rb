@@ -90,20 +90,4 @@ class Users::UsersController < ApplicationController
     end
   end
 
-  # Filter the users list.
-  def filter
-    @users = User.find(:all)
-    filter = "%#{params[:filter_text]}%"
-
-    @users = User.find(:all,
-      :conditions => ['email like ? or name like ? or prename like ?', filter, filter, filter],
-      :limit => 30)
-    
-    respond_to do |format|
-      format.js { render :partial => 'list' }
-    end
-
-  end
-
-
 end

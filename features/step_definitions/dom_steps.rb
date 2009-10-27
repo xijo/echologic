@@ -15,6 +15,11 @@ When /^I press the "([^\"]*)" button within the "([^\"]*)" (.*)$/ do |button, se
   end
 end
 
+When /^I press the "([^\"]*)" button$/ do |button|
+  button.downcase!.gsub!(" ", "_")
+  click_button "#{button}_button"
+end
+
 # Examples:
 #   I should not see the admin tab
 #   I should see the personal container

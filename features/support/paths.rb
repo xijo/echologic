@@ -16,6 +16,8 @@ module NavigationHelpers
       root_path
     when /the welcome page/
       welcome_path
+    when /the connect page/
+      users_path
 
     # Add more mappings here.
     # Here is a more fancy example:
