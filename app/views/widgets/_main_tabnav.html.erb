@@ -23,6 +23,7 @@ render_tabnav :main,
   add_tab :html => { :id => 'connect_tab' } do |t|
     t.named I18n.t('layouts.tabs.connect')
     t.links_to hash_for_connect_path
+    t.highlights_on :controller => 'connect'
   end
 
   add_tab :html => { :id => 'act_tab' } do |t|

@@ -9,7 +9,7 @@
     <%=h @user.country %>    <br/>
     <%=h @user.about_me %>   <br/>
     <%=h @user.motivation %> <br/>
-    <%= link_to 'Show', @user %>
+    <%= link_to 'Close', '#', :onclick => "$('#user_details_container').hide(); return false;", :class => 'close_link' %>
     <% if show_admin_options? %>
       <%= link_to 'Edit', edit_user_path(@user) %>
       <%= link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete %>

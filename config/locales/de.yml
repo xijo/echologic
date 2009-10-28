@@ -27,7 +27,8 @@ de:
       back: Zurück
       email: E-Mail
       name: Name
-      prename: Vorname
+      first_name: Vorname
+      last_name: Nachname
       or: oder
       save: Speichern
       edit: Editieren

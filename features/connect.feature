@@ -38,11 +38,11 @@ Feature: Use connect functionality
       And I should not see the user "Joe"
       
   # If they are interested in someones user details they
-  # are able to view it.
+  # are able to view it - and to close the details.
   Scenario: View user details
     Given I am logged in as "user" with password "true"
       And I am on the connect page
     When I follow the "Show" link for the user "Joe"
     Then I should see the user details of "Joe"
-      And I should see the "Close" link
+      And I should see a "Close" link
       

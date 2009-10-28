@@ -21,8 +21,9 @@ en:
       hide: « okay
       next: Next
       back: Back
+      last_name: Last Name
+      first_name: First Name
       name: Name
-      prename: Prename
       email: E-Mail
       or: or
       save: Save

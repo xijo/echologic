@@ -35,7 +35,9 @@ class User < ActiveRecord::Base
   acts_as_authorization_object
 
   # Handle attached user picture through paperclip plugin
-  has_attached_file :picture, :styles => { :small => "80x80>" }#,
+  has_attached_file :picture, :styles => { :small => "80x80>" },
+                    :default_url => "/images/default_:style_avatar.png"
+#,
 #                  :url  => "/assets/products/:id/:style/:basename.:extension",
 #                  :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 
@@ -57,9 +59,9 @@ class User < ActiveRecord::Base
   # Signup process before activation: get login name and email, ensure to not
   # handle with sessions.
   def signup!(params)
-    self.name    = params[:user][:name]
-    self.prename = params[:user][:prename]
-    self.email   = params[:user][:email]
+    self.first_name = params[:user][:first_name]
+    self.last_name  = params[:user][:last_name]
+    self.email      = params[:user][:email]
     save_without_session_maintenance
   end
 

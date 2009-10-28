@@ -6,7 +6,7 @@ class Mailer < ActionMailer::Base
     @feedback     = feedback
     @subject      = "echologic feedback from #{@feedback.name}"
     @recipients   = FEEDBACK_RECIPIENT
-    @from         = "#{@feedback.name} <#{@feedback.email}>"
+    @from         = "feedback@echologic.org"
     @sent_on      = Time.now
     @content_type = 'text/html'
   end

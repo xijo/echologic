@@ -1,3 +1,5 @@
 var content = "<%= escape_javascript(render(:partial => 'user_details')) %>";
 
 $('#user_details_container').html(content);
+
+$('#user_details_container:hidden').show();
