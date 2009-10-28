@@ -5,7 +5,7 @@ class Users::UsersController < ApplicationController
 
 
   access_control do
-    allow logged_in, :to => [:show, :index, :filter]
+    allow logged_in, :to => [:show, :index]
     allow :admin
     allow anonymous, :to => [:new, :create]
   end
@@ -27,10 +27,11 @@ class Users::UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = @current_user
+    @user = User.find(params[:id])
 
     respond_to do |format|
       format.html
+      format.js
     end
   end
 

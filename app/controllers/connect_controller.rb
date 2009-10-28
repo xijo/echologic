@@ -15,6 +15,7 @@ class ConnectController < ApplicationController
     @users = User.first_name_or_last_name_or_email_like(filter)
     respond_to do |format|
       format.html { render :template => 'users/users/index' }
+      format.js 
     end
   end
 

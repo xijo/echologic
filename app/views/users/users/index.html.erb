@@ -1,13 +1,19 @@
 <h1>Connect 2nd</h1>
 
 <div id="connect_container">
-  <% form_tag '/connect/search' do %>
+  <% form_tag '/connect/search', :id => 'search_form' do %>
     <%= text_field_tag :value %>
     <%= submit_tag :send, :alt => 'search_button' %>
   <% end %>
 
   <%= render :partial => 'users/users/list' %>
+  
+  <div id="user_details_container" style="padding:5px;background:#ddd;-moz-border-radius:8px;">
+  
+  </div>
 
 </div>
 
-
+<script type="text/javascript">
+  $('#search_form').ajaxForm({ dataType : 'script' });
+</script>

@@ -3,9 +3,13 @@
 <li id="<%= dom_id(@user) %>">
   <%= image_tag @user.picture.url(:small) %>
   <div>
-    <%=h @user.full_name %> <br/>
-    <%=h @user.email %>     <br/>
-    <%= link_to 'Show', @user, :class => 'ajax show_link' %> 
+    <%=h @user.full_name %>  <br/>
+    <%=h @user.email %>      <br/>
+    <%=h @user.city %>       <br/>
+    <%=h @user.country %>    <br/>
+    <%=h @user.about_me %>   <br/>
+    <%=h @user.motivation %> <br/>
+    <%= link_to 'Show', @user %>
     <% if show_admin_options? %>
       <%= link_to 'Edit', edit_user_path(@user) %>
       <%= link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete %>
