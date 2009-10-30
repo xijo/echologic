@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "searchlogic"
   
   # Require formtastic gem to build semantic forms
-  config.gem 'justinfrench-formtastic', :lib => 'formtastic', :source => 'http://gems.github.com'  
+  config.gem "formtastic"   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
