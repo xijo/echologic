@@ -3,6 +3,9 @@
 #
 ActionController::Routing::Routes.draw do |map|
 
+#  map.resources :profiles
+
+
   # routing-filter plugin for wrapping :locale around urls and paths.
   map.filter :locale
 

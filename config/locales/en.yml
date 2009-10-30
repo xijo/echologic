@@ -107,6 +107,10 @@ en:
       edit_heading: Edit your personal information
       comment: The informations about your person are displayed here. Use the 'edit' button to update them.
       
+      gender:
+        male: Male
+        female: Female
+      
       password:
         heading: Change my password
         new: New password
@@ -119,6 +123,9 @@ en:
         heading: Upload Picture
         comment: Please select a picture from your file system and click the upload button.
         progress: please wait..
+        
+      messages:
+        updated: "Profile information updated successful."
 
     # Memberships section
     memberships:
@@ -206,7 +213,7 @@ en:
         body: "Please correct the following:"
         
     attributes:
-      user:
+      profile:
         email:      E-Mail
         first_name: First Name
         last_name:  Last Name

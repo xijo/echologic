@@ -4,25 +4,13 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :concernments
   has_many :tags, :through => :concernments
+  
+  # Every user must have a profile. Profiles are destroyed with the user.
+  has_one :profile, :dependent => :destroy
 
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
   
-  # There are two kind of people in the world..
-  @@gender = {
-    0 => I18n.t('users.users.gender.male'),
-    1 => I18n.t('users.users.gender.female')
-  }
-  
-  # Access for the class variable
-  def self.gender
-    @@gender
-  end
-  
-  # Return the localized gender.
-  def human_gender
-    @@gender[gender] || ''
-  end
 
   # Authlogic plugin to do authentication
   acts_as_authentic do |c|
@@ -59,9 +47,9 @@ class User < ActiveRecord::Base
   # Signup process before activation: get login name and email, ensure to not
   # handle with sessions.
   def signup!(params)
-    self.first_name = params[:user][:first_name]
-    self.last_name  = params[:user][:last_name]
-    self.email      = params[:user][:email]
+    self.profile.first_name = params[:user][:profile][:first_name]
+    self.profile.last_name  = params[:user][:profile][:last_name]
+    self.email              = params[:user][:email]
     save_without_session_maintenance
   end
 
@@ -74,8 +62,6 @@ class User < ActiveRecord::Base
     self.openid_identifier = params[:user][:openid_identifier]
     save
   end
-
-
 
   # Uses mailer to deliver activation instructions
   def deliver_activation_instructions!
@@ -93,11 +79,6 @@ class User < ActiveRecord::Base
   def deliver_password_reset_instructions!
     reset_perishable_token!
     Mailer.deliver_password_reset_instructions(self)
-  end
-
-  # Return the full name of the user consisting of pre- and surname
-  def full_name
-    "#{first_name} #{last_name}"
   end
 
 end

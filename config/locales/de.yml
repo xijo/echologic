@@ -92,6 +92,10 @@ de:
       edit_heading: Persönliche Informationen bearbeiten
       comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
       
+      gender:
+        male: Männlich
+        female: Weiblich
+      
       password:
         heading: Passwort ändern
         new: Neues Passwort
@@ -104,6 +108,9 @@ de:
         heading: Profilbild hochladen
         comment: Bitte wählen Sie ein Bild aus und verwenden Sie den 'hochladen' Knopf.
         progress: Bitte warten..
+        
+      messages:
+        updated: "Sie haben Ihr Profil erfolgreich geändert."
         
     # Memberships section
     memberships:
@@ -322,7 +329,7 @@ de:
         body: "Bitte überprüfen Sie folgendes:"
         
     attributes:
-      user:
+      profile:
         email:      E-Mail
         first_name: Vorname
         last_name:  Nachname
