@@ -91,14 +91,6 @@ de:
       heading: Persönliche Informationen
       edit_heading: Persönliche Informationen bearbeiten
       comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
-      last_name: Nachname
-      first_name: Vorname
-      fullname: Name
-      gender: Geschlecht
-      city: Stadt
-      country: Land
-      about_me: Über mich
-      motivation: Motivation
       
       password:
         heading: Passwort ändern
@@ -331,7 +323,14 @@ de:
         
     attributes:
       user:
-        email: E-Mail
+        email:      E-Mail
+        first_name: Vorname
+        last_name:  Nachname
+        gender:     Geschlecht
+        city:       Stadt
+        country:    Land
+        about_me:   Über mich
+        motivation: Motivation
 
   authlogic:
     error_messages:

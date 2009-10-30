@@ -8,27 +8,31 @@
 
   <ul>
     <li>
-      <span class="title"><%= I18n.t('users.profile.fullname') %></span>
-      <%=h @user.full_name %>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.first_name') %></span>
+      <%=h @user.first_name %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.gender') %></span>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.last_name') %></span>
+      <%=h @user.last_name %>
+    </li>
+    <li>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.gender') %></span>
       <%=h @user.human_gender %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.city') %></span>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.city') %></span>
       <%=h @user.city %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.country') %></span>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.country') %></span>
       <%=h @user.country %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.about_me') %></span>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.about_me') %></span>
       <%=h @user.about_me %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.motivation') %></span>
+      <span class="title"><%= I18n.t('activerecord.attributes.user.motivation') %></span>
       <%=h @user.motivation %>
     </li>
   </ul>  

@@ -106,14 +106,6 @@ en:
       heading: Personal Information
       edit_heading: Edit your personal information
       comment: The informations about your person are displayed here. Use the 'edit' button to update them.
-      first_name: First Name
-      last_name: Last Name
-      fullname: Full Name
-      gender: Gender
-      city: City
-      country: Country
-      about_me: About me
-      motivation: Motivation
       
       password:
         heading: Change my password
@@ -215,7 +207,14 @@ en:
         
     attributes:
       user:
-        email: E-Mail
+        email:      E-Mail
+        first_name: First Name
+        last_name:  Last Name
+        gender:     Sex
+        city:       City
+        country:    Country
+        about_me:   About Me
+        motivation: Motivation
 
 
   authlogic:
