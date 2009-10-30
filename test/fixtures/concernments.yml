@@ -3,6 +3,10 @@
 joe_energy:
   user_id: <%= Fixtures.identify(:joe) %>
   tag_id: <%= Fixtures.identify(:energy) %>
+  
+ben_energy:
+  user_id: <%= Fixtures.identify(:ben) %>
+  tag_id: <%= Fixtures.identify(:energy) %>
 
 joe_water:
   user_id: <%= Fixtures.identify(:joe) %>

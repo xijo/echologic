@@ -5,7 +5,7 @@
 
 <%= I18n.t('users.users.new.text') %>
 
-<% form_for @user, :url => users_path, :html => {:class => 'echoForm'} do |f| %>
+<% form_for @user, :url => users_path, :html => {:class => 'echoForm', :id => 'new_user_form'} do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -20,6 +20,8 @@
 
   <%= f.label I18n.t('application.general.email') %><br />
   <%= f.text_field :email %><br /><br/>
+  
+  <%= f.submit I18n.t('application.general.send'), :class => 'submit_button' %>
 
   <div class="echoButtonBigHolder">
     <%- f.submit '', :class => 'echoButtonBig' %>
@@ -28,3 +30,6 @@
   </div>
 <% end %>
 
+<script type="text/javascript">
+  $("#new_user_form").ajaxForm({ dataType: 'script' });
+</script>

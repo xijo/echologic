@@ -6,6 +6,8 @@ joe:
   email: joe@echologic.org
   motivation: I am idealist.
   about_me: Pantha Rei.
+  city: Berlin
+  country: Germany
   active: true
   persistence_token: 31c4df467032bed4798f00e1866fd4965d30afc4a7b9c5073f61aa92f34ed8ab81e57a40e4bd0acd332dcac16df95bc7983cf0f2545462d048fdcd15062c4d52
   perishable_token: kSNhE15rM3F2LxvG_e5N

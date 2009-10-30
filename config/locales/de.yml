@@ -308,14 +308,6 @@ de:
   activerecord: 
     errors:
       models:
-        interested_person:
-          attributes:
-            name:
-              blank: '- bitte geben Sie Ihren Namen ein.'
-            email:
-              blank: '- bitte geben Sie Ihre E-Mail Adresse ein.'
-              taken: '- die eingegebene Adresse wurde bereits verwendet.'
-              invalid: '- bitte geben Sie eine korrekte E-Mail Adresse ein.'
         feedback:
           attributes:
             blank: 'Bitte füllen Sie alle Felder aus.'
@@ -325,10 +317,26 @@ de:
       messages:
         blank: '{{attribute}} darf nicht leer sein.'
         taken: 'Wird bereits verwendet.'
+        too_short: '{{attribute}} ist zu kurz.'
+        invalid: '{{attribute}} hat ein falsches Format.'
           
       template:
         header: 
           one: "Ein Feld wurde nicht richtig ausgefüllt." 
           other: "{{count}} Felder wurden nicht richtig ausgefüllt." 
-        body: "Bitte überprüfen Sie folgendes:"         
-     
+        body: "Bitte überprüfen Sie folgendes:"
+        
+    attributes:
+      user:
+        email: E-Mail
+
+  authlogic:
+    error_messages:
+      email_invalid: "Bitte eine korrekte E-Mail Adresse angeben."
+      password_blank: "Bitte geben Sie ein Passwort an."
+      not_active: "Ihr Zugang wurde noch nicht aktiviert."
+    attributes:
+      user_session:
+        email: E-Mail
+        password: Passwort
+        
