@@ -152,11 +152,11 @@ de:
           <strong>gemeinsame Anstrengung</strong> engagierter Menschen und
           Organisationen vorangetrieben.
           </p><p>
-          Möchten auch Sie die Entwicklung von <strong>echo aktiv mitgestalten</strong>?
-          </p><p>
-          Dann erstellen Sie hier Ihr Profil für echologic.
+          Möchten auch Sie Ihre <strong>Ideen beisteuern</strong>?<br/>
+          Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!<br/>
+          Andere engagierte BürgerInnen, ExpertInnen und PolitikerInnen warten schon darauf, zusammen mit Ihnen <strong>echo zu gestalten</strong>.
           </p>
-        action: 'Ich trete echologic bei!'
+        action: 'Jetzt beitreten!'
         
       messages:
         created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
