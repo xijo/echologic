@@ -54,8 +54,8 @@
 #languageSelector {
   background:  transparent; 
   position:    absolute;
-  top:         25px;
-  right:       0px;
+  top:         22px;
+  right:       -15px;
   text-align:  right;
   width:       200px;
 }
@@ -93,9 +93,10 @@
 
 #bottomMenuContainer {
   width:       945px;
-  margin:      2px auto 13px;
+  margin:      2px auto 10px;
   text-align:  center;
   font-size:   12px;
+  padding-top: 8px;
 }
 
 #bottomMenuContainer a, #bottomMenuContainer a:visited {

@@ -51,12 +51,12 @@
 /* testing state for clear boxes */
 
 .mainBox {
-  width:       930px;
+  width:       945px;
   margin:      0 auto 14px auto;
   z-index:     5;
   clear:       both;
   text-align:  left;
-  padding:     0 10px;
+  padding:     0 5px;
   background:  #fff;
 }
 

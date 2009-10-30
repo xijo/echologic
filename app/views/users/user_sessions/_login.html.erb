@@ -7,14 +7,16 @@
     </span>
 
   <% else %>
+
     <% form_for UserSession.new, :url => user_session_path do |f| %>
       <span class="label"><%= I18n.t('users.user_sessions.login.email') %></span>
       <span class="label"><%= I18n.t('users.user_sessions.login.password') %></span><br/>
-      <%= f.text_field :email, :class => 'NEWloginField' %>
-      <%= f.password_field :password, :class => 'NEWloginField' %>
-      <%= f.submit 'Login', :class => 'ui-button ui-state-default ui-corner-all' %><br/>
-      <%= link_to I18n.t('users.user_sessions.login.signup'), join_path, :class => 'ajaxLink' %><br/>
-      <%= link_to I18n.t('users.user_sessions.login.forgot'), new_password_reset_path, :class => 'ajaxLink' %><br/>
+      <%= f.text_field :email, :class => 'loginField' %>
+      <%= f.password_field :password, :class => 'loginField' %>
+      <%= f.submit 'Login', :class => 'loginButton' %><br/>
     <% end %>
+
+    <%= link_to I18n.t('users.user_sessions.login.signup'), join_path, :class => 'ajaxLink bottomLabel' %>
+    <%= link_to I18n.t('users.user_sessions.login.set_password'), new_password_reset_path, :class => 'ajaxLink bottomLabel' %><br/>
   <% end %>
 </div>

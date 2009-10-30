@@ -7,7 +7,7 @@
     <span id='languageChooser'>
       <%= I18n.t('layouts.outer_menu.language') %>
     </span>
-    <%= image_tag('page/icons/arrow.gif') %>
+    <%- image_tag('page/icons/arrow.gif') %>
   <% end %>
 
   <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :class => 'outerMenuItem') %>

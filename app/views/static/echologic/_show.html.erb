@@ -10,7 +10,7 @@
 
 <%= I18n.t('static.echologic.show.teaser_more') %>
 
-<div style="height:128px;">
-  <%= link_to('<span class="actionPic"></span>', {:url => echo_path}, :href => echo_path, :class => 'ajaxLink') %>
-  <span class="actionCall"><%= I18n.t('static.echologic.show.action') %></span>
+<div class="echoButtonBigHolder">
+  <%= link_to('<span class="echoButtonBig"></span>', {:url => echo_path}, :href => echo_path, :class => 'ajaxLink') %>
+  <span class="echoActionBig"><%= I18n.t('static.echologic.show.action') %></span>
 </div>

@@ -21,6 +21,7 @@
 
 #echologicLogo img {
   border:      none;
+  margin:      -2px 0 2px;
 }
 
 #inviteBubble {
@@ -50,6 +51,10 @@
   cursor:      pointer;
 }
 
+/* --------------- */
+/* Login Container */
+/* --------------- */
+
 #loginContainer {
   clear:       right;
   float:       right;
@@ -57,58 +62,67 @@
 }
 
 #loginContainer .label {
-  color:       #1A4864;
-  width:       137px;
+  color:       #7BB031;
+  width:       152px;
   display:     inline-block;
   margin:      15px 0 3px 0;
   padding:     0 7px;
-  font-size:   0.7em;
+  font-size:   12px;
   font-weight: bold;
   cursor:      default;
 }
 
-#loginContainer .field {
-  width:       137px;
-  background:  transparent url(../images/page/login_field.png) no-repeat;
-  border:      none;
-  height:      19px;
-  padding:     2px 7px 0px;
-  font-size:   0.85em;
-  color:       #1A4864;
-}
 
-#loginContainer .submit {
-  background:  transparent url(../images/page/button_login_off.png) no-repeat;
-  width:       48px;
-  border:      none;
-  height:      19px;
-  color:       #fff;
-  font-size:   0.70em;
-  font-weight: bold;
-  padding:      0 0 2px;
-  position:    relative;
-  top:         -1px;	 
-}
-
-#loginContainer .submit:hover {
-  background:  transparent url(../images/page/button_login_on.png) no-repeat !important;
-}
-
-#loginContainer .sublabel {
-  width:       137px;
+#loginContainer .bottomLabel {
+  color:       #1A4864;  
+  width:       152px;
   display:     inline-block;
-  margin:      3px 0;
+  margin:      4px 0 3px 0;
   padding:     0 7px;
-  font-size:   0.65em;
-  cursor:      default;
-  display:     none;
+  font-size:   11px;
+  cursor:      pointer;
 }
+
+#loginContainer .bottomLabel:hover {
+  text-decoration: underline;
+}
+
+#loginContainer .loginField {
+  color:        #1A4864;
+  font-size:    12px;
+  width:        150px;
+  height:       17px;
+  border:       1px solid #1A4864;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  padding: 2px 7px 0px;
+}
+
+#loginContainer .loginButton {
+  background:   #24587D;
+  color:        #FFF;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  font-size:    12px;
+  height:       21px;
+  padding:      0px 8px 2px;
+  border:       none;
+  margin-right: -8px;
+}
+
+#loginContainer .loginButton:hover {
+  background:   #2B6894;
+}
+
+/* ------------------- */
+/* echologic Container */
+/* ------------------- */
 
 #echologicContainer {
-  width:       970px;
+  width:       945px;
   height:      165px;
   margin:      0 auto;
-  padding:     20px;
+  padding:     33px 0px 22px;
   z-index:     5;
   position:    relative;
   clear:       both;
@@ -119,7 +133,7 @@
   height:      140px;
   clear:       both;
   float:       left;
-  margin-left: 10px;
+  margin-left: -5px;
   background:  #fff;
 }
 
@@ -174,10 +188,10 @@
 
 #newsContainer {
   background:  #fff;
-  width:       285px;
+  width:       290px;
   height:      140px;
   float:       right;
-  margin-right:10px;
+  margin-right: -5px;
 }
 
 #newsContainer #twitterBird {
@@ -187,7 +201,7 @@
 
 #twitterBird img {
   position:    relative;
-  right:       -217px;
+  right:       -222px;
   top:         -14px;
   cursor:      pointer;
   z-index:     10;
@@ -223,7 +237,7 @@
 
 #staticContent {
   width:       620px;
-  min-height:  480px;
+  min-height:  490px;
   padding:     2px 5px;
 }
 
@@ -271,10 +285,17 @@
 
 /* Important actions */
 
-.actionPic {
+.echoButtonBigHolder {
+  height:      128px;
+  margin:      0px;
+  padding:     0px;
+}
+
+.echoButtonBig {
   float:       left;
-  margin:      5px -490px 0 0;
-  width:       630px;
+  margin:      0px;
+  padding:     0px;
+  width:       100%;
   height:      128px;
   background:  url(../images/page/echo_o_on_off.png) no-repeat scroll 0 0px;
   position:    relative;
@@ -282,18 +303,19 @@
   border:      none;
 }
 
-.actionPic:hover {
+.echoButtonBig:hover {
   background-position: 0 -128px;
   cursor:      pointer;
 }
 
-.actionCall {
+.echoActionBig {
   font-size:   23px;
   font-weight: bold;
   color:       #21587f;
   line-height: 38px;
   position:    relative;
-  top:         28px;
+  top:         -85px;
+  left:        142px;
 }
 
 /* Navigation */

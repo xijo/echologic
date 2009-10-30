@@ -7,7 +7,7 @@ en:
     # Static content for the echoLogic main menu point
     echologic:
       title: echologic
-      subtitle: The Mission
+      subtitle: The Movement
       show:
         ms1: echologic
         ms2: |
@@ -32,9 +32,9 @@ en:
 
         teaser: |
           <p>
-          echologic offers you the opportunity to follow and actively engage in the development of echo.
+          <strong>echologic</strong> offers you the opportunity to follow and actively engage in the development of echo.
           </p><p>
-          echo is an internet project of a special kind. We seek nothing less than to establish a
+          <strong>echo</strong> is an internet project of a special kind. We seek nothing less than to establish a
           <strong>new kind of participatory democracy</strong> on the very local, as well as on the regional and on the global level.
           </p>
 
@@ -500,7 +500,7 @@ en:
 
       tabs:
         echonomy: "echonomy"
-        your_profit: "Your Profit"
+        your_profit: "Your-Profit"
         foundation: "Foundation"
         public_property: "Public Property"
 
@@ -509,12 +509,13 @@ en:
           <p>
           A little <strong>“h”</strong> can make a huge difference!
           </p><p>
-          Accordingly, “echonomy” stands symbolically for an <strong>eco-social democratic economy</strong> committed to basic ethical values:
+          Accordingly, “echonomy” stands symbolically for an <strong>eco-social democratic economy</strong>
+          committed to basic ethical values in our globalized world:
           </p>
 
         list:
           <li><strong>Sustainability</strong> instead of unconditional growth (eco)</li>
-          <li><strong>Dignity</strong> instead of exploitation (social)</li>
+          <li><strong>Dignity</strong> instead of "resource" utilization (social)</li>
           <li><strong>Participation</strong> instead of dependence (democratic)</li>
 
         text_bottom: |
@@ -534,9 +535,10 @@ en:
           </p><p>
           echo combines a <strong><span title="{{tooltip_nonprofit}}" class="ttLink">non-profit</span></strong>
           philosophy with <strong>powerful business models</strong>. "Powerful“ does not merely mean
-          working <span title="{{tooltip_costneutral}}" class="ttLink">cost neutral</span>.
+          working cost-neutral.
           It also means helping people and organizations to provide their actions with the necessary funds.
-          For this puropse, echo offers you various cost-neutral ways to collect money on your personal virtual account.
+          For this puropse, echo offers you various <span title="{{tooltip_costneutral}}" class="ttLink">cost-neutral</span>
+          ways to collect money on your personal virtual account.
           All funds collected in these ways can then be donated to actions and projects of organisations, interest
           groups and individuals according to your preferences.<br/>
           In this way, your virtual engagement can influence our real world in a positive way.
@@ -604,10 +606,10 @@ en:
       
     join:
       title: &your_echo 'Your echo'
-      subtitle: &join 'Become echologic'
+      subtitle: &join 'Join echologic'
       tabs:
-        join: Join
-        forgot: Forgot your password?
+        join: Join echologic
+        forgot: Set Your Password
       
     invite:
       title: &invite 'Make an echo'

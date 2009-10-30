@@ -4,10 +4,10 @@
 #tooltip {
 	position:   absolute;
 	z-index:    3000;
-	border:     1px solid #7AB030;
+	border:     none;
 	-moz-border-radius: 8px;
 	background-color:   #7AB030;
-	padding:    5px;
+	padding:    3px 8px 7px;
 	max-width:  450px;
 }
 

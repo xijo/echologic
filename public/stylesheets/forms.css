@@ -4,69 +4,24 @@
   margin:       10px 10px 8px 0;
 }
 
-.formLabel {
+.echoForm label {
   font-weight:  bold;
   color:        #7bb031;
 }
 
-/* Use css3 rounded borders for beautify in FF, Chrome, Safari. IE will ignore
- * these settings. */
-/*input, textarea {
-  color:        #21587f;
-  border:       1px inset #21587f;
-   Joe's changes! 
-  border:       1px solid grey;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  height:       20px;
-  padding:      3px 0 0 6px;
-  font-family:  Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  font-size:    12px;
-}*/
-
-.NEWloginButton {
-  background:   #24587D;
-  color:        #fff;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  font-family:  Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  font-size:    12px;
-  height:       25px;
-  width:        50px;
-  overflow:     auto;
-}
-
-.NEWloginButton:hover {
-  background:   #2B6894;
-}
-
-/* NEW login field by joe */
-.NEWloginField {
-  color:        #21587f;
-  /*border:       1px inset #21587f;*/
-  /* Joe's changes! */
-  border:       1px solid grey;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  height:       20px;
-  padding:      3px 0 0 6px;
-  width:        130px;
-  margin-top: 10px;
-}
-
-/*input:hover, input:active {
-  border:       1px solid #009900;
-}*/
-
-/*form input {
+.echoForm input[type='text'] {
   width:        225px;
-}*/
+  color:        #21587F;
+  border:       1px inset #21587F;
+}
 
-/*form textarea {
+.echoForm textarea {
   width:        300px;
   height:       150px;
+  color:        #21587F;
+  border:       1px inset #21587F;
 }
-*/
+
 .formButton200 {
   border:       none;
   background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;

@@ -6,8 +6,8 @@ en:
     meta:
       description: |-
         echologic is a network of free minds and organizations united to realize echo, the global agora!
-        echo is an Internet project of a special kind. We seek nothing less than to establish a new
-        kind of participatory democracy on the very local, as well as on the regional and global level.
+        echo is an Internet project of a special kind. Our goal is to establish a new kind of participatory
+        democracy on the very local, as well as on the regional and global level.
         Accordingly, echo means the end of powerlessness and the beginning of self-determination!
       keywords: |-
         echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
@@ -72,8 +72,8 @@ en:
       login:
         password: 'Password'
         email: 'E-Mail'
-        signup: Signup
-        forgot: Forgot your password?
+        signup: Not a member yet?
+        set_password: Forgot your password?
         remember: Remember me!
         hello: Hello {{name}}
       messages:
@@ -157,7 +157,7 @@ en:
         female: Female
       new:
         title: Your echo
-        subtitle: Become echologic
+        subtitle: Join echologic
         text: |
           <p>
           <strong>echo is democracy from the people for the people.</strong>
@@ -169,6 +169,7 @@ en:
           Please enter your name and E-Mail address below!<br/>
           We will contact you as soon as we take off.
           </p>
+        action: 'I join echologic!'
 
       messages:
         created: "Your account has been created. Please check your e-mail for your account activation instructions!"

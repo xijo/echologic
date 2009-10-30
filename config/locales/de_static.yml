@@ -7,7 +7,7 @@ de:
     # ECHOLOGIC SECTION
     echologic:
       title: echologic
-      subtitle: Die Mission
+      subtitle: Die Bewegung
 
       show:
         ms1: echologic
@@ -35,7 +35,7 @@ de:
           <p>
           <strong>echologic</strong> bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mitzugestalten!
           </p><p>
-          echo ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein Geringeres, als eine
+          <strong>echo</strong> ist ein Internetprojekt der besonderen Art. Unser Ziel ist kein Geringeres, als eine
           <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
           </p>
 
@@ -490,7 +490,7 @@ de:
       
       tabs:
         echonomy: echonomy
-        your_profit: Your Profit
+        your_profit: Your-Profit
         foundation: Die Stiftung
         public_property: Kollektives Eigentum
 
@@ -504,7 +504,7 @@ de:
 
         list:
           <li><strong>Nachhaltigkeit</strong> statt bedingungslosem Wachstum (öko)</li>
-          <li><strong>Würde</strong> statt Ausbeutung (sozial)</li>
+          <li><strong>Würde</strong> statt "Ressourcen" Verwertung  (sozial)</li>
           <li><strong>Teilhabe</strong> statt Ausgeliefertsein (demokratisch)</li>
 
         text_bottom: |
@@ -589,10 +589,10 @@ de:
       
     join:
       title: &your_echo 'Ihr echo'
-      subtitle: &join 'echologic werden'
+      subtitle: &join 'echologic beitreten'
       tabs:
-        join: 'Anmelden'
-        forgot: 'Passwort vergessen?'
+        join: 'echologic beitreten'
+        forgot: 'Ihr Passwort setzen'
       
     invite:
       title: &invite 'echo bewirken'

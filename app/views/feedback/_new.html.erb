@@ -8,20 +8,14 @@
 <% form_for :feedback, :url => {:controller => 'feedback', :action => 'create'}, 
             :html => { :id => 'new_feedback_form' } do |f| %>
 
-  <div class="formBlock">
-    <%= label_tag I18n.t('application.general.name'), nil, :class => 'formLabel' %><br />
-    <%= f.text_field :name %>
-  </div>
+  <%= label_tag I18n.t('application.general.name'), nil, :class => 'formLabel' %><br />
+  <%= f.text_field :name %>
 
-  <div class="formBlock">
-    <%= label_tag I18n.t('application.general.email'), nil, :class => 'formLabel' %><br />
-    <%= f.text_field :email %>
-  </div>
-  
-  <div class="formBlock">
-    <%= label_tag I18n.t('feedback.new.message'), nil, :class => 'formLabel' %><br/>
-    <%= f.text_area :message, :rows => 4, :cols => 30 %>
-  </div>
+  <%= label_tag I18n.t('application.general.email'), nil, :class => 'formLabel' %><br />
+  <%= f.text_field :email %>
+
+  <%= label_tag I18n.t('feedback.new.message'), nil, :class => 'formLabel' %><br/>
+  <%= f.text_area :message, :rows => 4, :cols => 30 %>
 
 <% end %>
 
