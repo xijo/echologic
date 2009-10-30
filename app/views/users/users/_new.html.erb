@@ -6,7 +6,6 @@
 <%= I18n.t('users.users.new.text') %>
 
 <% form_for @user, :url => users_path, :html => {:class => 'echoForm', :id => 'new_user_form'} do |f| %>
-  <%= f.error_messages %>
 
   <p>
     <%= f.label I18n.t('application.general.first_name') %><br />

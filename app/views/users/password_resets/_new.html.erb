@@ -1,8 +1,9 @@
 <h1><%= I18n.t('static.join.title') %></h1>
-<h2><%= I18n.t('users.password_resets.heading') %></h2>
+<h2><%= I18n.t('users.password_resets.step1') %></h2>
 
-<%= I18n.t('users.password_resets.information') %><br />
-<br />
+<p>
+  <%= I18n.t('users.password_resets.step1_text') %>
+</p>
 
 <% form_tag password_resets_path do %>
   <p>

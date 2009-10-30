@@ -32,7 +32,7 @@ module StaticContentHelper
     end
 
     main_menu = "<h1 class='link'>#{title_translation}</h1>"
-    concat link_to(main_menu, url_for(:controller => controller))
+    concat link_to(main_menu, url_for(:controller => controller, :action => 'show'))
     concat "<h2>#{subtitle_translation}</h2>"
   end
 

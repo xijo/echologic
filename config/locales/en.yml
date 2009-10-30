@@ -92,11 +92,14 @@ en:
         
     # Password resets section
     password_resets:
-      heading: Reset you password
-      information: Please fill in your E-Mail address in the following form. We will send you an activation link afterwards.        
+      step1: Password Reset - Step 1
+      step2: Password Reset - Step 2
+      step1_text: Please fill in your E-Mail address in the following form. We will send you an activation link.
+      step2_text: Please choose a new password and confirm it.
       messages:
-        success: Instructions to reset your password have been emailed to you. Please check your email.
-        not_found: No user was found with that email address
+        success: "Instructions to reset your password have been emailed to you. Please check your email."
+        not_found: "No user was found with that email address."
+        reset_success: "Password successfully updated."
         
     # Profile Section
     profile:

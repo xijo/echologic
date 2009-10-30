@@ -40,7 +40,7 @@ class Users::PasswordResetsController < ApplicationController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
-      flash[:notice] = "Password successfully updated"
+      flash[:notice] = I18n.t('users.password_resets.messages.reset_success')
       redirect_to welcome_path
     else
       render :action => :edit, :layout => 'static'
