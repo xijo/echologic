@@ -1,9 +1,9 @@
   # --------------
   # STATIC SECTION
   # --------------
-de:  
+de:
   static:
-  
+
     # ECHOLOGIC SECTION
     echologic:
       title: echologic
@@ -12,7 +12,7 @@ de:
       show:
         ms1: echologic
         ms2: |
-          ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Unser Ziel ist die Verwirklichung von
+          ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Gemeinsam verwirklichen wir
         ms3: |
           echo - die globale <span title="{{tooltip}}" class="ttLink">Agora</span>!
 
@@ -114,7 +114,7 @@ de:
     echo:
       title: echo
       subtitle: Die Plattform
-      
+
       tabs:
         echo: echo
         discuss: Diskutieren
@@ -175,8 +175,8 @@ de:
             Analog zu Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten,
             wird echo die umfangreichste Meinungsbasis für subjektive Meinungen zur Verfügung stellen und
             konstruktive Diskussionen über die bestehenden Positionen und Themen anregen.
-       
-      # discuss section    
+
+      # discuss section
       discuss:
         title: Diskutieren
 
@@ -229,7 +229,7 @@ de:
           die globalen Probleme vor dem Hintergrund <strong>lokaler Verhältnisse</strong> zu verstehen. Wen das persönliche Interesse an einem
           lokalen Thema aus seinem direkten Umfeld (Lebensmittelpreise) auf echo aufmerksam machte, dem werden dort schnell dessen
           <strong>globalen Implikationen</strong> (Klimawandel) aufgezeigt.
-    
+
       # connect section
       connect:
         title: Vernetzen
@@ -255,7 +255,7 @@ de:
           Durch die Berücksichtigung ihrer unterschiedlichen Belange, können wichtige Probleme identifiziert und gemeinsam die
           <strong>bestmöglichen Lösungen</strong> ausgearbeitet werden.
           </p>
-        
+
       # act section
       act:
         title: Handeln
@@ -310,7 +310,7 @@ de:
           bürgerlichen Engagements im Internet und ermöglicht die Entstehung einer breiten gesellschaftlichen <strong>Welle des Wandels</strong>.
           </p><p>
           Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit.
-          Diese <i>open source</i> Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit, 
+          Diese <i>open source</i> Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit,
           sie schafft auch die Grundlage für einen sicheren und plattformübergreifenden Datenaustausch zwischen
           öffentlichen, organisationsinternen und privaten Servern.
           </p><p>
@@ -320,18 +320,18 @@ de:
           </p><p>
           Die Schaffung einer <strong>globalen Agora</strong>!
           </p>
-             
+
     # ECHOCRACY SECTION
     echocracy:
       title: echocracy
       subtitle: Die Akteure
-      
+
       tabs:
         echocracy: echocracy
         citizens: BürgerInnen
         scientists: ExpertInnen
         decision_makers: PolitikerInnen
-        organisations: Organisationen     
+        organisations: Organisationen
 
       show:
         text_top: |
@@ -352,7 +352,7 @@ de:
           </p><p>
           In echo, der globalen Agora, sind alle Beteiligten gleichberechtigte, <strong>freie Weltbürger</strong>!
           </p>
-      
+
       # citizens section
       citizens:
         title: BürgerInnen
@@ -384,7 +384,7 @@ de:
         adv4_details: |
           <li>Spürbare Erfolge im eigenen Alltag</li>
           <li>Virale Verbreitung und steigende Beteiligung in der Gesellschaft</li>
-      
+
       # scientists section
       scientists:
         title: ExpertInnen
@@ -415,7 +415,7 @@ de:
           <li>Direkte Beteiligung an Entscheidungsfindungen</li>
           <li>Sensibilisierung der Gesellschaft für die Herausforderungen unserer Zeit</li>
           <li>Effektive Diffusion von wissenschaftlichen Erkenntnissen durch leicht nachvollziehbare Stellungnahmen und Argumente</li>
-        
+
       # decision makers section
       decision_makers:
         title: PolitikerInnen
@@ -487,7 +487,7 @@ de:
     echonomy:
       title: echonomy
       subtitle: Die Werte
-      
+
       tabs:
         echonomy: echonomy
         your_profit: Your-Profit
@@ -499,7 +499,8 @@ de:
           <p>
           Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen!
           </p><p>
-          So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich grundlegenden ethischen Werten verpflichtet sieht:
+          So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich
+          in einer globalisierten Welt grundlegenden ethischen Werten verpflichtet sieht:
           </p>
 
         list:
@@ -543,7 +544,7 @@ de:
         tooltip_costneutral: |
           Spenden kostet Geld? Nicht unbedingt! Z.B. können die NutzerInnen über  echo bei verschiedenen Online-Shops einkaufen gehen, wobei die so erwirtschaftete Provision direkt auf ihrem virtuellen persönlichen Konto erscheint.
           Themenrelevante Produkthinweise in Aktionen und Diskussionen helfen den NutzerInnen zusätzlich strategische und verantwortungsvolle Kaufentscheidungen zu treffen.
-      
+
       # foundation section
       foundation:
         title: Die Stiftung
@@ -560,8 +561,8 @@ de:
           Indem echo den Menschen eine einfache und kostenneutrale Möglichkeit zur <strong>Finanzierung von umfangreichen
           Gemeinschaftsprojekten</strong> bietet, kann ihr virtuelles Engagement unsere Welt nachhaltig verändern.
           </p>
-            
-      # public property section:    
+
+      # public property section:
       public_property:
         title: Kollektives Eigentum
 
@@ -586,13 +587,13 @@ de:
           Über eine bewährte und stabile Selbstverwaltung hinaus wird der Akt der Übergabe an bestimmte
           Kriterien in Bezug auf eine geographisch und demographisch ausgewogene Beteiligung der
           Weltbevölkerung gekoppelt. Die genauen Details dazu werden später in einem transparenten Prozess definiert.
-      
+
     join:
       title: &your_echo 'Ihr echo'
       subtitle: &join 'echologic beitreten'
       tabs:
         join: 'echologic beitreten'
         forgot: 'Ihr Passwort setzen'
-      
+
     invite:
       title: &invite 'echo bewirken'
