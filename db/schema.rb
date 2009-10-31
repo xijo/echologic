@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091031113224) do
+ActiveRecord::Schema.define(:version => 20091031124730) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -94,13 +94,13 @@ ActiveRecord::Schema.define(:version => 20091031113224) do
   add_index "translations", ["locale_id", "raw_key"], :name => "index_translations_on_locale_id_and_raw_key"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                   :null => false
+    t.string   "email",                                 :null => false
     t.string   "crypted_password"
     t.string   "password_salt"
-    t.string   "persistence_token",                       :null => false
-    t.string   "perishable_token",                        :null => false
-    t.integer  "login_count",          :default => 0,     :null => false
-    t.integer  "failed_login_count",   :default => 0,     :null => false
+    t.string   "persistence_token",                     :null => false
+    t.string   "perishable_token",                      :null => false
+    t.integer  "login_count",        :default => 0,     :null => false
+    t.integer  "failed_login_count", :default => 0,     :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
@@ -108,12 +108,8 @@ ActiveRecord::Schema.define(:version => 20091031113224) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "active",               :default => false, :null => false
+    t.boolean  "active",             :default => false, :null => false
     t.string   "openid_identifier"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
   end
 
   create_table "web_profiles", :force => true do |t|

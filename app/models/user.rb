@@ -21,17 +21,6 @@ class User < ActiveRecord::Base
   acts_as_authorization_subject
   acts_as_authorization_object
 
-  # Handle attached user picture through paperclip plugin
-  has_attached_file :picture, :styles => { :small => "80x80>" },
-                    :default_url => "/images/default_:style_avatar.png"
-#,
-#                  :url  => "/assets/products/:id/:style/:basename.:extension",
-#                  :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
-
-  validates_attachment_size :picture, :less_than => 5.megabytes
-  validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/png']
-
-
   # we need to make sure that either a password or openid gets set
   # when the user activates his account
   def has_no_credentials?

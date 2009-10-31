@@ -1,7 +1,7 @@
 <div id="personal_container" class="details_container">
   <h2><%= I18n.t('users.profile.edit_heading') %></h2>
   
-  <% semantic_form_for @profile, :url => profile_path, :html => { :id => 'edit_profile_form' } do |form| %>
+  <% semantic_form_for @profile, :html => { :id => 'edit_profile_form' } do |form| %>
     <% form.inputs do %>
       <%= form.input :first_name %>
       <%= form.input :last_name %>

@@ -4,7 +4,6 @@
 
 <div id='picture_container' class="details_container">
   <h2><%= I18n.t('users.profile.picture.heading') %></h2>
-  <%= image_tag @user.picture.url(:small) if @user.picture? %>
   <%= image_tag @profile.avatar.url(:small) if @profile.avatar? %>  
 
   <%= link_to I18n.t('application.general.upload'), url_for(:controller => 'users/profile', :action => 'upload_picture'), :class => 'ajax upload_link' %>
