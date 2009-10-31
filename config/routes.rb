@@ -16,12 +16,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :admin,   :controller => 'admin',   :only => [:show]
   
   # SECTION my echo routing              
-  map.profile   'profile', :controller => 'my_echo', :action => 'profile'
-                
-  map.resource  :user_profile, :controller => 'users/profile',
+  map.my_profile 'my_profile', :controller => 'my_echo', :action => 'profile'
+               
+  map.resource  :profile, :controller => 'users/profile',
                 :path_prefix => '', :only => [:show, :edit, :update]
                                 
-  map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'  
+  map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'
 
   # SECTION autocomplete
   map.auto_complete ':controller/:action',

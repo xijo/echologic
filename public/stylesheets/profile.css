@@ -40,10 +40,6 @@
   margin: 3px 0;
 }
 
-.details_container h2 {
-  float: left;
-}
-
 .details_container .comment {
   color: #aaa;
   clear: both;
