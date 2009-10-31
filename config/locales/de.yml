@@ -28,6 +28,7 @@ de:
       name: Name
       first_name: Vorname
       last_name: Nachname
+      ok: Ok
       or: oder
       save: Speichern
       edit: Editieren
@@ -63,7 +64,7 @@ de:
         hello: Hallo {{name}}
       messages:
         login_success: Login erfolgreich.
-        login_failed: Login fehlgeschlagen.
+        login_failed: Unbekannter Nutzername oder falsches Passwort. Login fehlgeschlagen.
         logout_success: Logout erfolgreich.
 
     # Activations section
@@ -77,10 +78,16 @@ de:
 
     # Password resets section
     password_resets:
-      step1: Passwort zurücksetzen - Schritt 1
-      step2: Passwort zurücksetzen - Schritt 2
-      step1_text: Bitte tragen Sie Ihre E-Mail Adresse in das Formular ein. Wir werden Ihnen anschließend eine Aktivierungs-E-Mail senden.
-      step2_text: Bitte tragen Sie Ihr neues Password in das Formular ein und bestätigen Sie die Eingabe.
+      step1: Neues Passwort anfordern
+      step2: Neues Passwort setzen
+      step1_text: |
+        <strong>Haben Sie Ihr Passwort vergessen?</strong><br/>
+        Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben.<br/>
+        Wir werden Ihnen anschließend eine E-Mail schicken, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
+      step1_mail: E-Mail verschicken
+      step2_text: |
+        Bitte tragen Sie Ihr neues Password ein, mit dem Sie sich in echologic einloggen möchten.
+      step2_ok: Passwort setzen und einloggen
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
@@ -99,7 +106,7 @@ de:
       password:
         heading: Passwort ändern
         new: Neues Passwort
-        confirm: Bestätigen
+        confirm: Passwort bestätigen
 
       picture:
         heading: Profilbild

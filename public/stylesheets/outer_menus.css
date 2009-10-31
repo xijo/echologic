@@ -52,7 +52,7 @@
 }*/
 
 #languageSelector {
-  background:  transparent; 
+  background:  transparent;
   position:    absolute;
   top:         22px;
   right:       -15px;
@@ -60,7 +60,7 @@
   width:       200px;
 }
 
-#languageSelector, #languageSelector * {
+#languageSelector {
   z-index:     510;
 }
 

@@ -5,9 +5,10 @@
   <%= I18n.t('users.password_resets.step2_text') %>
 </p>
 
-<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
+<% form_for @user, :url => password_reset_path, :method => :put, :html => {:class => 'echoForm'} do |f| %>
+
   <p>
-    <%= f.label I18n.t('users.profile.password.new') %>
+    <%= f.label I18n.t('users.password_resets.steps2.password') %>
     <%= f.password_field :password %>
   </p>
   <p>
@@ -15,6 +16,6 @@
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.submit I18n.t('application.general.save') %>
+    <%= f.submit I18n.t('users.password_resets.step2.ok'), :class => 'formButton300' %>
   </p>
 <% end %>

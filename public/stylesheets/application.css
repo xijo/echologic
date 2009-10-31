@@ -49,13 +49,11 @@
   z-index:     1003;
 }
 
-#messageContainer * {
-  z-index: 1003;
-}
-
 #messageContainer div {
   -moz-border-radius-bottomleft: 10px;
   -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
   border-top:  0px;
   width: 400px;
   position: fixed;

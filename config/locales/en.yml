@@ -14,7 +14,7 @@ en:
         collective intelligence, sustainable future, opinion base, opinion formation, decision making,
         transparency, your-profit, echocracy, echonomy, glocal, glocality
     page_title: echologic for echo - the global agora (democracy rethought)
-  
+
   # General purpose resources
     general:
       more: more »
@@ -25,6 +25,7 @@ en:
       first_name: First Name
       name: Name
       email: E-Mail
+      ok: Ok
       or: or
       save: Save
       edit: Edit
@@ -41,8 +42,9 @@ en:
         echologic for echo - the global agora
         Web: www.echologic.org
         E-Mail: team@echologic.org
-      
-    
+
+      feedback: Feedback
+
   # Localizations for the layout components
   layouts:
     tabs:
@@ -51,14 +53,14 @@ en:
       act: Act
       my_echo: My Echo
       admin: Admin
-      
+
     outer_menu:
       language: Language
       feedback: &feedback Feedback
       about: &about About us
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
-      
+
     my_echo:
       tabs:
         welcome: Welcome
@@ -78,10 +80,10 @@ en:
         hello: Hello {{name}}
       messages:
         login_success: Login successful.
-        login_failed: Login failed.
+        login_failed: Unknown user name or wrong password. Login failed.
         logout_success: Logout successful.
-        
-    # Activations section    
+
+    # Activations section
     activations:
       heading: Activate your account
       set: Please choose your password
@@ -89,41 +91,47 @@ en:
       activate: Activate
       messages:
         success: Your account has been activated.
-        
+
     # Password resets section
     password_resets:
-      step1: Password Reset - Step 1
-      step2: Password Reset - Step 2
-      step1_text: Please fill in your E-Mail address in the following form. We will send you an activation link.
-      step2_text: Please choose a new password and confirm it.
+      step1: Require new password
+      step2: Define new password
+      step1_text: |
+        <strong>Forgot your password?</strong><br/><br/>
+        No problem! Just fill in your <strong>E-Mail</strong> address you used to sign up to echologic.<br/>
+        We will send you an E-mail shortly allowing you <strong>to define a new password</strng>.
+      step1_mail: Send E-Mail
+      step2_text: |
+        Please define your new password to log in to echologic.
+      step2_ok: Set password and log in
       messages:
         success: "Instructions to reset your password have been emailed to you. Please check your email."
         not_found: "No user was found with that email address."
         reset_success: "Password successfully updated."
-        
+
     # Profile Section
     profile:
       heading: Personal Information
       edit_heading: Edit your personal information
       comment: The informations about your person are displayed here. Use the 'edit' button to update them.
-      
+
       gender:
         male: Male
         female: Female
-      
+
       password:
         heading: Change my password
         new: New password
-        confirm: Confirm
-        
+        confirm: Confirm password
+
       picture:
         heading: Picture
-        
+
       upload_picture:
         heading: Upload Picture
         comment: Please select a picture from your file system and click the upload button.
         progress: please wait..
-        
+
       messages:
         updated: "Profile information updated successful."
 
@@ -133,7 +141,7 @@ en:
       comment: You may insert all of your memberships, e.g. in organisations, political parties, companies, and so on.
       organisation: Organisation
       position: Position
-      
+
     # Web profiles section
     web_profiles:
       heading: Web Profiles
@@ -143,7 +151,7 @@ en:
         twitter: Twitter
         blog: Blog
         xing: Xing
-  
+
     # Concernments section
     concernments:
       comment: Descripe your concernments below.
@@ -151,8 +159,8 @@ en:
         affected: Affected
         engaged: Engaged
         scientist: Expert/Scientist
-        representative: Representative                    
-        
+        representative: Representative
+
     users:
       gender:
         male: Male
@@ -191,7 +199,7 @@ en:
     create:
       thank_you: Thank you for your feedback.
 
-  activerecord: 
+  activerecord:
     errors:
       models:
         feedback:
@@ -199,19 +207,19 @@ en:
             blank: 'Please fill out all fields.'
             email:
               invalid: 'Please enter a valid E-Mail address.'
-              
+
       messages:
         blank: '{{attribute}} must not be empty.'
         taken: 'Is already in use.'
         too_short: '{{attribute}} is too short.'
         invalid: '{{attribute}} has to be in a valid format.'
-          
+
       template:
-        header: 
-          one: "One of the fields is filled incorrectly." 
-          other: "{{count}} fields are filled incorrectly." 
+        header:
+          one: "One of the fields is filled incorrectly."
+          other: "{{count}} fields are filled incorrectly."
         body: "Please correct the following:"
-        
+
     attributes:
       profile:
         email:      E-Mail
@@ -233,6 +241,6 @@ en:
       user_session:
         email: E-Mail
         password: Passwort
-        
-        
-        
+
+
+

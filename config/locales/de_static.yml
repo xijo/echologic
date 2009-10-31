@@ -596,7 +596,7 @@ de:
       subtitle: &join 'echologic beitreten'
       tabs:
         join: 'echologic beitreten'
-        forgot: 'Ihr Passwort setzen'
+        forgot: 'Neues Passwort'
 
     invite:
       title: &invite 'echo bewirken'

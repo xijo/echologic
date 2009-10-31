@@ -5,13 +5,13 @@
   <%= I18n.t('users.password_resets.step1_text') %>
 </p>
 
-<% form_tag password_resets_path do %>
+<% form_tag password_resets_path, :class => 'echoForm' do %>
+
   <p>
-    <%= label_tag I18n.t('application.general.email') %>
+    <%= label_tag I18n.t('application.general.email') %><br/>
     <%= text_field_tag "email" %>
   </p>
-  <p>
-    <%= submit_tag I18n.t('application.general.send') %>
-  </p>
+
+  <%= submit_tag I18n.t('users.password_resets.step1_mail'), :class => 'formButton200' %>
 <% end %>
 

@@ -611,7 +611,7 @@ en:
       subtitle: &join 'Join echologic'
       tabs:
         join: Join echologic
-        forgot: Set Your Password
+        forgot: New Password
 
     invite:
       title: &invite 'Make an echo'
