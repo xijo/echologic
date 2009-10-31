@@ -4,11 +4,15 @@
 
 <%= I18n.t('users.profile.upload_picture.comment') %>
 
-<% form_for @user, :url => profile_path, :html => { :multipart => true, :id => 'upload_picture_form' } do |f| %>
-  <%= f.file_field :picture %><br/>
+<% semantic_form_for @profile, :url => profile_path, :html => { :multipart => true, :id => 'upload_picture_form' } do |form| %>
+  <% form.inputs do %>
+    <%= form.input :avatar %>
+  <% end %>
 <% end %>
 
-<div id="uploading_progress" style="display:none;"><%= I18n.t('users.profile.upload_picture.progress') %> <%= image_tag 'indicator.gif' %></div>
+<div id="uploading_progress" style="display:none;">
+  <%= I18n.t('users.profile.upload_picture.progress') %> <%= image_tag 'indicator.gif' %>
+</div>
 
 <script type="text/javascript">
   /* Hijack the submit function of the upload picture form. Add some callbacks:

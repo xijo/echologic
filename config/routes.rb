@@ -18,8 +18,9 @@ ActionController::Routing::Routes.draw do |map|
   # SECTION my echo routing              
   map.my_profile 'my_profile', :controller => 'my_echo', :action => 'profile'
                
-  map.resource  :profile, :controller => 'users/profile',
-                :path_prefix => '', :only => [:show, :edit, :update]
+  #map.resource  :profile, :controller => 'users/profile',
+  #              :path_prefix => '', :only => [:show, :edit, :update]
+  map.resources :profiles, :controller => 'users/profile'
                                 
   map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'
 

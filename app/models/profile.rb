@@ -20,6 +20,10 @@ class Profile < ActiveRecord::Base
     @@gender[female] || ''
   end
   
+  # Handle attached user picture through paperclip plugin
+  has_attached_file :avatar, :styles => { :small => "80x80>" },
+                    :default_url => "/images/default_:style_avatar.png"  
+  
   # Return the full name of the user consisting of pre- and surname
   def full_name
     "#{first_name} #{last_name}"
