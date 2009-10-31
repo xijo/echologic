@@ -64,7 +64,7 @@ de:
         hello: Hallo {{name}}
       messages:
         login_success: Login erfolgreich.
-        login_failed: Unbekannter Nutzername oder falsches Passwort. Login fehlgeschlagen.
+        login_failed: Unbekannter Nutzername oder falsches Passwort.
         logout_success: Logout erfolgreich.
 
     # Activations section
