@@ -6,6 +6,9 @@
   <div id="errorBox" class="ui-state-error" style="display:none;">
     <div class="ui-icon ui-icon-alert infoErrorIcon"></div>
     <div class="message">Message</div>
+    <a class="closeButton" href="close" onclick="$('#errorBox').stop(); return false;">
+      <%= I18n.t('application.general.close') %>
+    </a>
   </div>
 </div>
 

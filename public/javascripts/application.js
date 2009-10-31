@@ -23,7 +23,7 @@ $(document).ready(function () {
       + "authenticity_token=" + encodeURIComponent( AUTH_TOKEN );
     }
   });
-  
+
   $('#user_session_email').focus();
 
 
@@ -159,10 +159,10 @@ var roundCorners = function(){
 /* Show error or info messages in messagesContainer and hide it with delay. */
 function info(text) {
   $('#messageContainer #infoBox .message').html(text);
-  $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 5000).slideUp();
+  $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 7000).slideUp();
 }
 
 function error(text) {
   $('#messageContainer #errorBox .message').html(text);
-  $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 7000).slideUp();
+  $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
 }
