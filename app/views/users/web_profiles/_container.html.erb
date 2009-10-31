@@ -6,7 +6,7 @@
   </div>
 
   <ul id="web_profile_list">
-    <%= render @user.web_profiles %>
+    <%= render :partial => 'users/web_profiles/web_profile', :collection => @user.web_profiles %>
   </ul>
   <ul>
     <%= render :partial => 'users/web_profiles/new' %>

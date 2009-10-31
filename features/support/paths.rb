@@ -11,7 +11,7 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
     when /the profile/
-      profile_path
+      my_profile_path
     when /the start page/
       root_path
     when /the welcome page/
