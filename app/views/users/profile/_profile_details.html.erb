@@ -1,17 +1,24 @@
 <% @profile = profile if defined?(profile) %>
 
 <li id="<%= dom_id(@profile) %>">
+  
+  <h1>Details</h1>
+
   <% link_to @profile, :class => 'ajax show_link' do %>
     <%= image_tag @profile.avatar.url(:small) %>
   <% end %>
   <div>
-    <%=h @profile.full_name %> <br/>
-    <%=h @profile.user.email %>     <br/>
-    <%= link_to 'Show', url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link' %> 
+    <%=h @profile.full_name %>  <br/>
+    <%=h @profile.user.email %>      <br/>
+    <%=h @profile.city %>       <br/>
+    <%=h @profile.country %>    <br/>
+    <%=h @profile.about_me %>   <br/>
+    <%=h @profile.motivation %> <br/>
+    <%= link_to 'Close', '#', :onclick => "$('#profile_details_container').hide(); return false;", :class => 'close_link' %>
     <% if show_admin_options? %>
       <%= link_to 'Edit', edit_profile_path(@profile) %>
       <%= link_to 'Destroy', @profile.user, :confirm => 'Are you sure?', :method => :delete %>
     <% end %>
-  </div>
+  </div>  
   
 </li>

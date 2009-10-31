@@ -30,7 +30,7 @@ class ConnectController < ApplicationController
     @profiles.uniq!
     
     respond_to do |format|
-      format.html { render :template => 'users/users/index' }
+      format.html { render :template => 'connect/profiles' }
       format.js 
     end
   end

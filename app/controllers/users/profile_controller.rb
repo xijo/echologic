@@ -13,8 +13,16 @@ class Users::ProfileController < ApplicationController
     respond_to do |format|
       format.html
       format.js do 
-        replace_container('personal_container', :partial => 'profile_edit')
+        replace_container('personal_container', :partial => 'users/profile/profile_own')
       end
+    end
+  end
+  
+  def details
+    @profile = Profile.find(params[:id])
+    respond_to do |format|
+      format.js
+      format.html { render :partial => 'profile_details', :layout => 'application' }
     end
   end
 
@@ -42,7 +50,7 @@ class Users::ProfileController < ApplicationController
           redirect_to my_profile_path
         end
         format.js do
-          replace_container('personal_container', :partial => 'profile_edit', :locals => { :profile => @profile })
+          replace_container('personal_container', :partial => 'users/profile/profile_own')
         end
       end
     end

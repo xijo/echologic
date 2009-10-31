@@ -17,7 +17,7 @@ module NavigationHelpers
     when /the welcome page/
       welcome_path
     when /the connect page/
-      users_path
+      '/connect/profiles'
 
     # Add more mappings here.
     # Here is a more fancy example:
