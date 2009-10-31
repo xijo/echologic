@@ -44,7 +44,7 @@ class Users::ProfileController < ApplicationController
       respond_to do |format|
         format.html do
           flash[:notice] = I18n.t('users.profile.messages.updated')
-          redirect_to profile_path
+          redirect_to my_profile_path
         end
         format.js do
           replace_container('personal_container', :partial => 'profile_edit', :locals => { :profile => @profile })
@@ -56,6 +56,7 @@ class Users::ProfileController < ApplicationController
   # Calls a js template which opens the upload picture dialog.
   def upload_picture
     @user = current_user
+    @profile = current_user.profile
     respond_to do |format|
       format.js do 
         render :template => 'users/profile/upload_picture'
@@ -69,6 +70,7 @@ class Users::ProfileController < ApplicationController
   #  2. picture container of the profile
   def reload_pictures
     @user = current_user
+    @profile = current_user.profile
     respond_to do |format|
       format.js do
         render :update do |page|

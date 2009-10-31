@@ -3,6 +3,7 @@ config/database.yml
 config/deploy*
 nbproject/
 public/system/pictures/
+public/system/avatars/
 /echologic.iml
 /echologic.ipr
 /echologic.iws

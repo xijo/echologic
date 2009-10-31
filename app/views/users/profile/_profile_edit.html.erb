@@ -1,6 +1,6 @@
 <div id="personal_container" class="details_container">
   <h2><%= I18n.t('users.profile.heading') %></h2> 
-  (<%= link_to I18n.t('application.general.edit'), edit_profile_path, :class => 'ajax edit_link' %>)
+  (<%= link_to I18n.t('application.general.edit'), edit_profile_path(@profile), :class => 'ajax edit_link' %>)
 
   <div class="comment">
     <%= I18n.t('users.profile.comment') %>

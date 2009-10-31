@@ -1,7 +1,7 @@
 <div id="loginContainer">
 
   <% if current_user_session %>
-    <%= link_to(image_tag(current_user.picture.url(:small)), profile_path) if current_user.picture? %>
+    <%= link_to(image_tag(current_user.profile.avatar.url(:small)), current_user.profile) if current_user.profile.avatar? %>
     <span>
       <%= I18n.t('users.user_sessions.login.hello', :name => current_user.profile.first_name) %><br/>
     </span>
