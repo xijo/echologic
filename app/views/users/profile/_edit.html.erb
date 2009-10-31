@@ -1,68 +1,11 @@
 <div id="personal_container" class="details_container">
   <h2><%= I18n.t('users.profile.edit_heading') %></h2>
-
-  <% form_for @user, :url => profile_path, :html => { :id => 'edit_personal_form' } do |f| %>
-    <ul>
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.first_name') %>
-        </span>
-        <%= f.text_field :first_name %>
-      </li>
-
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.last_name') %>
-        </span>
-        <%= f.text_field :last_name %>
-      </li>
-      
-      <li>
-        <span><%= f.label I18n.t('users.profile.gender') %></span>
-        <%= select :user, :gender, User.gender.collect { |k,v| [v,k] }, { :include_blank => true, :selected => @user.gender } %>
-      </li>
-
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.city') %>
-        </span>
-        <%= f.text_field :city %>
-      </li>
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.country') %>
-        </span>
-        <%= f.text_field :country %>
-      </li>
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.about_me') %>
-        </span>
-        <%= f.text_area :about_me, :rows => 3 %>
-      </li>
-      <li>
-        <span>
-          <%= f.label I18n.t('users.profile.motivation') %>
-        </span>
-        <%= f.text_area :motivation, :rows => 3 %>
-      </li>
-
-
-    </ul>
-      
-    <%= f.submit I18n.t('application.general.save'), :class => 'submit_button', :alt => 'save_button' %>
-
-    <%= I18n.t('application.general.or') %>
-
-    <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>
-    
-  <% end %>
   
-  <% semantic_form_for @user, :url => profile_path, :html => { :id => 'edit_user_form' } do |form| %>
+  <% semantic_form_for @profile, :url => profile_path, :html => { :id => 'edit_profile_form' } do |form| %>
     <% form.inputs do %>
       <%= form.input :first_name %>
       <%= form.input :last_name %>
-      <%= form.input :gender, :as => :radio, :label => "Gender", :collection => User.gender.collect { |k,v| [v,k] } %>
+      <%= form.input :female, :as => :radio, :label => "Gender", :collection => Profile.gender.collect { |k,v| [v,k] } %> <%#, :label => "Gender", :collection => Profile.gender.collect { |k,v| [v,k] } %>
       <%= form.input :city %>
       <%= form.input :country %>
       <%= form.input :about_me,   :input_html => { :rows => 3, :cols => 30 } %>
@@ -89,10 +32,8 @@
 
     $("#user_city").autocomplete("users/users/auto_complete_for_user_city");
     $("#user_country").autocomplete("users/users/auto_complete_for_user_country");
-    
-    $("#edit_personal_form").ajaxForm({ dataType: 'script' });
-    
-    $("#edit_user_form").ajaxForm({ dataType: 'script' });
+
+    $("#edit_profile_form").ajaxForm({ dataType: 'script' });
 
   </script>
 </div>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091027160730) do
+ActiveRecord::Schema.define(:version => 20091030183251) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -28,21 +28,6 @@ ActiveRecord::Schema.define(:version => 20091027160730) do
     t.string "message"
   end
 
-  create_table "interested_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "invited_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "interested_person_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "locales", :force => true do |t|
     t.string "code"
     t.string "name"
@@ -54,6 +39,20 @@ ActiveRecord::Schema.define(:version => 20091027160730) do
     t.integer  "user_id"
     t.string   "organisation"
     t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.boolean  "female"
+    t.string   "city"
+    t.string   "country"
+    t.string   "about_me"
+    t.string   "motivation"
+    t.date     "birthday"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -111,19 +110,12 @@ ActiveRecord::Schema.define(:version => 20091027160730) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-    t.string   "last_name"
-    t.string   "first_name"
-    t.boolean  "gender"
-    t.text     "about_me"
-    t.text     "motivation"
-    t.string   "city"
-    t.string   "country"
   end
 
   create_table "web_profiles", :force => true do |t|
-    t.string   "sort"
-    t.string   "location"
     t.integer  "user_id"
+    t.string   "location"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

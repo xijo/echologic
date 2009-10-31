@@ -5,24 +5,25 @@
 
 <%= I18n.t('users.users.new.text') %>
 
-<% form_for @user, :url => users_path, :html => {:class => 'echoForm'} do |f| %>
-  <%= f.error_messages %>
+<% form_for @user, :url => users_path, :html => {:class => 'echoForm', :id => 'new_user_form'} do |user_form| %>
 
-  <p>
-    <%= f.label I18n.t('application.general.first_name') %><br />
-    <%= f.text_field :first_name %>
-  </p>
+  <% user_form.fields_for :profile do |profile_form| %>
+    <p>
+      <%= profile_form.label I18n.t('application.general.first_name') %><br />
+      <%= profile_form.text_field :first_name %>
+    </p>
 
-  <p>
-    <%= f.label I18n.t('application.general.last_name') %><br />
-    <%= f.text_field :last_name %>
-  </p>
+    <p>
+      <%= profile_form.label I18n.t('application.general.last_name') %><br />
+      <%= profile_form.text_field :last_name %>
+    </p>
+  <% end %>
 
-  <%= f.label I18n.t('application.general.email') %><br />
-  <%= f.text_field :email %><br /><br/>
+  <%= user_form.label I18n.t('application.general.email') %><br />
+  <%= user_form.text_field :email %><br /><br/>
 
   <div class="echoButtonBigHolder">
-    <%= f.submit '', :class => 'echoButtonBig' %>
+    <%= user_form.submit '', :class => 'echoButtonBig' %>
     <span class="echoActionBig clear"><%= I18n.t('users.users.new.action') %></span>
   </div>
 <% end %>

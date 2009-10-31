@@ -1,4 +1,9 @@
- <h1><%= I18n.t('users.activations.heading') %></h1>
+<% content_for :tabContainer do %>
+  <%= tabnav :static_join %>
+<% end %>
+
+<h1><%= I18n.t('users.users.new.title') %></h1>
+<h2><%= I18n.t('users.activations.heading') %></h2>
 
 <% form_for @user, :url => activate_path(@user.id), :html => { :method => :post } do |form| %>
   <p>

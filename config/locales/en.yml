@@ -92,25 +92,24 @@ en:
         
     # Password resets section
     password_resets:
-      heading: Reset you password
-      information: Please fill in your E-Mail address in the following form. We will send you an activation link afterwards.        
+      step1: Password Reset - Step 1
+      step2: Password Reset - Step 2
+      step1_text: Please fill in your E-Mail address in the following form. We will send you an activation link.
+      step2_text: Please choose a new password and confirm it.
       messages:
-        success: Instructions to reset your password have been emailed to you. Please check your email.
-        not_found: No user was found with that email address
+        success: "Instructions to reset your password have been emailed to you. Please check your email."
+        not_found: "No user was found with that email address."
+        reset_success: "Password successfully updated."
         
     # Profile Section
     profile:
       heading: Personal Information
       edit_heading: Edit your personal information
       comment: The informations about your person are displayed here. Use the 'edit' button to update them.
-      first_name: First Name
-      last_name: Last Name
-      fullname: Full Name
-      gender: Gender
-      city: City
-      country: Country
-      about_me: About me
-      motivation: Motivation
+      
+      gender:
+        male: Male
+        female: Female
       
       password:
         heading: Change my password
@@ -124,6 +123,9 @@ en:
         heading: Upload Picture
         comment: Please select a picture from your file system and click the upload button.
         progress: please wait..
+        
+      messages:
+        updated: "Profile information updated successful."
 
     # Memberships section
     memberships:
@@ -192,25 +194,45 @@ en:
   activerecord: 
     errors:
       models:
-        interested_person:
-          attributes:
-            name:
-              blank: '- please enter your name.'
-            email:
-              blank: '- please enter your E-Mail.'
-              taken: '- the entered E-Mail address is already registered.'
-              invalid: '- please enter a valid E-Mail address.'
         feedback:
           attributes:
             blank: 'Please fill out all fields.'
             email:
               invalid: 'Please enter a valid E-Mail address.'
+              
       messages:
         blank: '{{attribute}} must not be empty.'
         taken: 'Is already in use.'
+        too_short: '{{attribute}} is too short.'
+        invalid: '{{attribute}} has to be in a valid format.'
           
       template:
         header: 
           one: "One of the fields is filled incorrectly." 
           other: "{{count}} fields are filled incorrectly." 
-        body: "Please correct the following:" 
+        body: "Please correct the following:"
+        
+    attributes:
+      profile:
+        email:      E-Mail
+        first_name: First Name
+        last_name:  Last Name
+        gender:     Sex
+        city:       City
+        country:    Country
+        about_me:   About Me
+        motivation: Motivation
+
+
+  authlogic:
+    error_messages:
+      email_invalid: "Please correct your e-mail adress."
+      password_blank: "Password must not be blank."
+      not_active: "Your account have to be activated."
+    attributes:
+      user_session:
+        email: E-Mail
+        password: Passwort
+        
+        
+        

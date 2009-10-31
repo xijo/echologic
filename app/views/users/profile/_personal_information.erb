@@ -8,28 +8,32 @@
 
   <ul>
     <li>
-      <span class="title"><%= I18n.t('users.profile.fullname') %></span>
-      <%=h @user.full_name %>
+      <span class="title"><%= Profile.human_attribute_name(:first_name) %></span>
+      <%=h @profile.first_name %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.gender') %></span>
-      <%=h @user.human_gender %>
+      <span class="title"><%= Profile.human_attribute_name(:last_name) %></span>
+      <%=h @profile.last_name %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.city') %></span>
-      <%=h @user.city %>
+      <span class="title"><%= Profile.human_attribute_name(:gender) %></span>
+      <%=h @profile.localized_gender %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.country') %></span>
-      <%=h @user.country %>
+      <span class="title"><%= Profile.human_attribute_name(:city) %></span>
+      <%=h @profile.city %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.about_me') %></span>
-      <%=h @user.about_me %>
+      <span class="title"><%= Profile.human_attribute_name(:country) %></span>
+      <%=h @profile.country %>
     </li>
     <li>
-      <span class="title"><%= I18n.t('users.profile.motivation') %></span>
-      <%=h @user.motivation %>
+      <span class="title"><%= Profile.human_attribute_name(:about_me) %></span>
+      <%=h @profile.about_me %>
+    </li>
+    <li>
+      <span class="title"><%= Profile.human_attribute_name(:motivation) %></span>
+      <%=h @profile.motivation %>
     </li>
   </ul>  
 </div>

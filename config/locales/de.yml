@@ -77,25 +77,24 @@ de:
         
     # Password resets section
     password_resets:
-      heading: Setzen Sie Ihr Passwort zurück
-      information: Bitte tragen Sie Ihre E-Mail Adresse in das Formular ein. Wir werden Ihnen anschließend eine Aktivierungs-E-Mail senden.
+      step1: Passwort zurücksetzen - Schritt 1
+      step2: Passwort zurücksetzen - Schritt 2
+      step1_text: Bitte tragen Sie Ihre E-Mail Adresse in das Formular ein. Wir werden Ihnen anschließend eine Aktivierungs-E-Mail senden.
+      step2_text: Bitte tragen Sie Ihr neues Password in das Formular ein und bestätigen Sie die Eingabe.
       messages:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
+        reset_success: Ihr neues Passwort wurde gespeichert.
     
     # Profile Section
     profile:
       heading: Persönliche Informationen
       edit_heading: Persönliche Informationen bearbeiten
       comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
-      last_name: Nachname
-      first_name: Vorname
-      fullname: Name
-      gender: Geschlecht
-      city: Stadt
-      country: Land
-      about_me: Über mich
-      motivation: Motivation
+      
+      gender:
+        male: Männlich
+        female: Weiblich
       
       password:
         heading: Passwort ändern
@@ -109,6 +108,9 @@ de:
         heading: Profilbild hochladen
         comment: Bitte wählen Sie ein Bild aus und verwenden Sie den 'hochladen' Knopf.
         progress: Bitte warten..
+        
+      messages:
+        updated: "Sie haben Ihr Profil erfolgreich geändert."
         
     # Memberships section
     memberships:
@@ -308,14 +310,6 @@ de:
   activerecord: 
     errors:
       models:
-        interested_person:
-          attributes:
-            name:
-              blank: '- bitte geben Sie Ihren Namen ein.'
-            email:
-              blank: '- bitte geben Sie Ihre E-Mail Adresse ein.'
-              taken: '- die eingegebene Adresse wurde bereits verwendet.'
-              invalid: '- bitte geben Sie eine korrekte E-Mail Adresse ein.'
         feedback:
           attributes:
             blank: 'Bitte füllen Sie alle Felder aus.'
@@ -325,10 +319,33 @@ de:
       messages:
         blank: '{{attribute}} darf nicht leer sein.'
         taken: 'Wird bereits verwendet.'
+        too_short: '{{attribute}} ist zu kurz.'
+        invalid: '{{attribute}} hat ein falsches Format.'
           
       template:
         header: 
           one: "Ein Feld wurde nicht richtig ausgefüllt." 
           other: "{{count}} Felder wurden nicht richtig ausgefüllt." 
-        body: "Bitte überprüfen Sie folgendes:"         
-     
+        body: "Bitte überprüfen Sie folgendes:"
+        
+    attributes:
+      profile:
+        email:      E-Mail
+        first_name: Vorname
+        last_name:  Nachname
+        gender:     Geschlecht
+        city:       Stadt
+        country:    Land
+        about_me:   Über mich
+        motivation: Motivation
+
+  authlogic:
+    error_messages:
+      email_invalid: "Bitte eine korrekte E-Mail Adresse angeben."
+      password_blank: "Bitte geben Sie ein Passwort an."
+      not_active: "Ihr Zugang wurde noch nicht aktiviert."
+    attributes:
+      user_session:
+        email: E-Mail
+        password: Passwort
+        

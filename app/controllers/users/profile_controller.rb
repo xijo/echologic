@@ -13,7 +13,8 @@ class Users::ProfileController < ApplicationController
   # Shows details for the current user, this action is formaly known as
   # profile! ;)
   def show
-    @user = @current_user
+    @user    = @current_user
+    @profile = @current_user.profile
     respond_to do |format|
       format.html
       format.js do 
@@ -25,7 +26,7 @@ class Users::ProfileController < ApplicationController
   # Edit the profile details through rendering the edit partial to the
   # corresponding part of the profiles page.
   def edit
-    @user = @current_user
+    @profile = @current_user.profile
     respond_to do |format|
       format.html do
         render :partial => "edit", :layout => "application"
@@ -38,15 +39,15 @@ class Users::ProfileController < ApplicationController
 
   # Set the values from the edit form to the users attributes.
   def update
-    @user = @current_user
-    if @user.update_attributes(params[:user])
+    @profile = @current_user.profile
+    if @profile.update_attributes(params[:profile])
       respond_to do |format|
         format.html do
-          flash[:notice] = "Profile information saved."
+          flash[:notice] = I18n.t('users.profile.messages.updated')
           redirect_to profile_path
         end
         format.js do
-          replace_container('personal_container', :partial => 'personal_information', :locals => { :user => @user })
+          replace_container('personal_container', :partial => 'personal_information', :locals => { :profile => @profile })
         end
       end
     end

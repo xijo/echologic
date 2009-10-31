@@ -54,12 +54,19 @@ class Users::UsersController < ApplicationController
   # modified users_controller.rb
   def create
     @user = User.new
+    @user.create_profile
     respond_to do |format|
       if @user.signup!(params)
         @user.deliver_activation_instructions!
         flash[:notice] = I18n.t('users.users.messages.created')
         format.html { redirect_to root_url }
+        format.js do
+          render :update do |page|
+            page.redirect_to root_url
+          end
+        end
       else
+        format.js   { show_error_messages(@user) }
         format.html { render :template => 'users/users/new', :layout => 'static' }
       end
     end
