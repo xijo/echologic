@@ -15,7 +15,6 @@
     <%= f.label I18n.t('users.profile.password.confirm') %>
     <%= f.password_field :password_confirmation %>
   </p>
-  <p>
-    <%= f.submit I18n.t('users.password_resets.step2.ok'), :class => 'formButton300' %>
-  </p>
+
+  <%= f.submit I18n.t('users.password_resets.step2.ok'), :class => 'formButton300' %>
 <% end %>
