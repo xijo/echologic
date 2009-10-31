@@ -8,13 +8,13 @@
 <% form_for @user, :url => password_reset_path, :method => :put, :html => {:class => 'echoForm'} do |f| %>
 
   <p>
-    <%= f.label I18n.t('users.password_resets.steps2.password') %>
+    <%= f.label I18n.t('users.profile.password.new') %><br/>
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label I18n.t('users.profile.password.confirm') %>
+    <%= f.label I18n.t('users.profile.password.confirm') %><br/>
     <%= f.password_field :password_confirmation %>
   </p>
 
-  <%= f.submit I18n.t('users.password_resets.step2.ok'), :class => 'formButton300' %>
+  <%= f.submit I18n.t('users.password_resets.step2_ok'), :class => 'formButton300' %>
 <% end %>

@@ -102,12 +102,12 @@ en:
         We will send you an E-mail shortly allowing you <strong>to define a new password</strng>.
       step1_mail: Send E-Mail
       step2_text: |
-        Please define your new password to log in to echologic.
+        Please define <strong>your new password</strong> to log in to echologic.
       step2_ok: Set password and log in
       messages:
-        success: "Instructions to reset your password have been emailed to you. Please check your email."
-        not_found: "No user was found with that email address."
-        reset_success: "Password successfully updated."
+        success: "A mail to reset your password has been successfully sent. Please check your inbox."
+        not_found: "No user found with the given E-Mail address."
+        reset_success: "Your new password has been saved successfully."
 
     # Profile Section
     profile:
