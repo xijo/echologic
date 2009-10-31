@@ -25,7 +25,7 @@
 }
 
 #inviteBubble {
-  position:    relative;  
+  position:    relative;
   float:       left;
   background:  url(../images/page/invitebubble_left.png) no-repeat;
   left:        -5px;
@@ -58,7 +58,7 @@
 #loginContainer {
   clear:       right;
   float:       right;
-  
+
 }
 
 #loginContainer .label {
@@ -74,7 +74,7 @@
 
 
 #loginContainer .bottomLabel {
-  color:       #1A4864;  
+  color:       #1A4864;
   width:       152px;
   display:     inline-block;
   margin:      4px 0 3px 0;
@@ -318,6 +318,10 @@
   left:        142px;
 }
 
+.echoButtonBigHolder:hover .echoActionBig {
+  border-bottom: 2px dotted #7BB031;
+}
+
 /* Navigation */
 
 .backNextHolder {
@@ -338,13 +342,13 @@
 #nextPageButton {
   background:   #FFF url(../images/page/next_button.png) no-repeat scroll right top;
   text-align:   left;
-  padding:      0 0 0 13px;  
+  padding:      0 0 0 13px;
 }
 
 #previousPageButton {
   background:   #FFF url(../images/page/back_button.png) no-repeat scroll left top;
   text-align:   right;
-  padding:      0 13px 0 0;  
+  padding:      0 13px 0 0;
 }
 
 .changePageButton {
@@ -360,7 +364,7 @@
 
 #nextPageButton:hover {
   background-position: -84px -43px;
-  color:        #7ab031;  
+  color:        #7ab031;
 }
 
 #previousPageButton:hover {
@@ -391,9 +395,9 @@
   color:        #21587f;
   margin:       0px;
   padding:      0px;
-  border-bottom: 2px solid transparent;  
+  border-bottom: 2px solid transparent;
   position:     relative;
-  top:          -10px;    
+  top:          -10px;
 }
 
 .illustration:hover * {
@@ -454,7 +458,7 @@
 #errorExplanation h2 {
   font-size:      14px;
   font-weight:    bold;
-  
+
 }
 
 .fieldWithErrors {

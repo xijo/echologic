@@ -1,24 +1,28 @@
-<%= link_to_remote("<h1 class='link'>#{I18n.t('static.echologic.title')}</h1>", {:url => echologic_path}, :href => echologic_path) %>
-<h2><%= I18n.t('feedback.new.title') %></h2>
 
 <%= t('feedback.new.welcome') %>
 
 <%= image_tag('page/illustrations/feedback.png', :id => 'feedbackIllustration') %>
 
-<% form_for :feedback, :url => {:controller => 'feedback', :action => 'create'}, 
-            :html => { :id => 'new_feedback_form' } do |f| %>
+<% form_for :feedback, :url => {:controller => 'feedback', :action => 'create'},
+            :html => { :id => 'new_feedback_form', :class => 'echoForm'} do |f| %>
 
-  <%= label_tag I18n.t('application.general.name'), nil, :class => 'formLabel' %><br />
-  <%= f.text_field :name %>
+  <p>
+    <%= label_tag I18n.t('application.general.name'), nil %><br />
+    <%= f.text_field :name %><br/>
+  </p>
 
-  <%= label_tag I18n.t('application.general.email'), nil, :class => 'formLabel' %><br />
-  <%= f.text_field :email %>
+  <p>
+    <%= label_tag I18n.t('application.general.email'), nil %><br />
+    <%= f.text_field :email %><br/>
+  </p>
 
-  <%= label_tag I18n.t('feedback.new.message'), nil, :class => 'formLabel' %><br/>
-  <%= f.text_area :message, :rows => 4, :cols => 30 %>
+  <p>
+    <%= label_tag I18n.t('feedback.new.message'), nil %><br/>
+    <%= f.text_area :message, :rows => 4, :cols => 30 %>
+  </p>
 
 <% end %>
 
 <script type="text/javascript">
-  $("#new_feedback_form").ajaxForm({ dataType: 'script' }); 
+  $("#new_feedback_form").ajaxForm({ dataType: 'script' });
 </script>

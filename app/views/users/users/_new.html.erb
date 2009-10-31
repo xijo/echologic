@@ -22,8 +22,7 @@
   <%= f.text_field :email %><br /><br/>
 
   <div class="echoButtonBigHolder">
-    <%- f.submit '', :class => 'echoButtonBig' %>
-    <span class="echoButtonBig"></span>
+    <%= f.submit '', :class => 'echoButtonBig' %>
     <span class="echoActionBig clear"><%= I18n.t('users.users.new.action') %></span>
   </div>
 <% end %>
