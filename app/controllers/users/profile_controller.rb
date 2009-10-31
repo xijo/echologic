@@ -6,15 +6,10 @@ class Users::ProfileController < ApplicationController
     allow logged_in # Logged in persons are allowed to modify their profile
   end
 
-  def welcome
-    render
-  end
-
   # Shows details for the current user, this action is formaly known as
   # profile! ;)
   def show
-    @user    = @current_user
-    @profile = @current_user.profile
+    @profile = Profile.find(params[:id])
     respond_to do |format|
       format.html
       format.js do 
