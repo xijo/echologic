@@ -15,7 +15,7 @@ $(document).ready(function () {
   bindAjaxClickEvents();
 
   roundCorners();
-  
+
   /* Always send the authenticity_token with ajax */
   $(document).ajaxSend(function(event, request, settings) {
     if ( settings.type == 'post' ) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
     }
   });
 
- 
+
 });
 
 /* TODO optimize splitting of url! */
@@ -60,8 +60,8 @@ function bindAjaxClickEvents() {
       data:   { '_method': 'delete' }
     });
     return false;
-  });  
-  
+  });
+
 }
 
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */
@@ -137,8 +137,8 @@ if (jQuery.support.opacity) {
 }
 
 /* Lightweight tooltip plugin initialization to create fancy tooltips
- * all over our site. 
- * Options and documentation: 
+ * all over our site.
+ * Options and documentation:
  *   http://bassistance.de/jquery-plugins/jquery-plugin-tooltip */
 function makeTooltips() {
   $(".ttLink[title]").tooltip({
@@ -156,9 +156,11 @@ var roundCorners = function(){
 
 /* Show error or info messages in messagesContainer and hide it with delay. */
 function info(text) {
-  $('#messageContainer #info').html(text).slideDown().animate({opacity: 1.0}, 5000).slideUp();
+  $('#messageContainer #infoBox .message').html(text);
+  $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 5000).slideUp();
 }
 
 function error(text) {
-  $('#messageContainer #error').html(text).slideDown().animate({opacity: 1.0}, 5000).slideUp();
+  $('#messageContainer #errorBox .message').html(text);
+  $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 7000).slideUp();
 }

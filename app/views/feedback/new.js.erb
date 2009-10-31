@@ -2,18 +2,15 @@
 var content = "<%= escape_javascript(render(:partial => 'new')) %>";
 $('#dialogContent').html(content);
 
-/* Create a jqueryUI modal dialog with close and send buttons. */
+/* Create a jqueryUI modal dialog with a send button. */
 $('#dialogContent').dialog({
+  title:    "Feedback",
   bgiframe: true,
   modal:    true,
-  buttons:  { 
-      "<%= I18n.t('application.general.close') %>": function() { $(this).dialog('close'); },
-      "<%= I18n.t('application.general.send') %>":  function() { $('#new_feedback_form').submit(); }
-    },
+  buttons:  {
+    "<%= I18n.t('application.general.send') %>":  function() { $('#new_feedback_form').submit(); }
+  },
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
-  title:    "Feedback"
+  resizable: false
 });
-
-
-

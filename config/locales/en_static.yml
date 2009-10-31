@@ -3,7 +3,7 @@
   # --------------
 en:
   static:
-  
+
     # Static content for the echoLogic main menu point
     echologic:
       title: echologic
@@ -57,7 +57,7 @@ en:
 
       #About
       about:
-        title: *about
+        title: About us
         text: |
           <p>
           <strong>The source</strong> of echo is an <strong>interdisciplinary team</strong> of young and experienced professionals.
@@ -69,17 +69,19 @@ en:
           science, marketing, economy, software rights, investor & public relations etc.) support the
           project with their know-how and engagement.<br/>
           Furthermore, echo enjoys the backing of some <strong>renowned politicians</strong> such as
-          Ruth Paulig (Green Party), former member of the Bavarian Parliament, Axel Berg (SPD),
-          member of the German Parliament and Martin Westlake, Secretary-General of EESC,
-          the European Economic and Social Committee.
+          <a href='http://www.ruth-paulig.de' target='_blank'>Ruth Paulig</a> (Green Party), former member of the Bavarian Parliament,
+          <a href='http://www.axel-berg.de' target='_blank'>Axel Berg</a> (SPD), recent member of the German Parliament and
+          <a href='http://www.eesc.europa.eu/organisation/secretarygeneral/index-en.asp' target='_blank'>Martin Westlake</a>,
+          Secretary-General of EESC, the European Economic and Social Committee.
           </p><p>
-          Several cooperation partners from civil society (OneAim, Netzwerk Gemeinsinn), economy (<a href='http://the-foo.de' target='_blank'>The Foo</a>),
-          and politics (Grüne Jugend München) are supporting echo to realize its far reaching sociopolitical aims.
+          Several cooperation partners from civil society (OneAim, Netzwerk Gemeinsinn), economy (<a href='http://the-foo.de'
+          target='_blank'>The Foo</a>), and politics (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>)
+          are supporting echo to achieve its far reaching sociopolitical goals.
           </p>
 
       # Static content for imprint
       imprint:
-        title: *imprint
+        title: Imprint
         text: |
           <p>
           Currently, our imprint is only available in German.
@@ -91,7 +93,7 @@ en:
           László Papp<br/>
           Pflugstr. 15<br/>
           10115 Berlin<br/>
-          E-mail: team [att] echo-logic . org - (statt "att", bitte "@" eingeben)<br/>
+          E-mail: team [att] echologic . org - (statt "att", bitte "@" eingeben)<br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
           Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.
@@ -103,7 +105,7 @@ en:
 
       # Static content for data privacy
       data_privacy:
-        title: *data_privacy
+        title: Data Privacy
         text: |
           <p>
           We are happy to note your interest on echologic.<br/>
@@ -177,7 +179,7 @@ en:
             In analogy to Wikipedia, providing the biggest open accessible knowledge base with a focus
             on objective facts, echo aims to provide the world's most comprehensive opinion base focusing
             on subjective opinions and also to facilitate constructive discussions on them.
-      
+
       discuss:
         title: Discuss
 
@@ -327,7 +329,7 @@ en:
           </p><p>
           The creation of a <strong>global agora</strong>!
           </p>
-             
+
     # Static content for the echocracy main menu point
     echocracy:
       title: echocracy
@@ -362,7 +364,7 @@ en:
           </p><p>
           On echo, the global agora, all participants are equal, <strong>free world citizens</strong>!
           </p>
-        
+
       citizens:
         title: Citizens
         title_long: Enganged Citizens
@@ -425,7 +427,7 @@ en:
           <li>Direct participation in decision making</li>
           <li>Raising awareness in the society for challenges of our times</li>
           <li>Effective diffusion of scientific findings through easily comprehensible presentation of own positions and arguments</li>
-        
+
       decision_makers:
         title: Politicians
         title_long: Politicians & Representatives
@@ -457,7 +459,7 @@ en:
           <li>Reaching millions of politically mature citizens directly</li>
           <li>Easily comprehensible presentation of own proposals and arguments</li>
           <li>Clear comparison of different manifestos and own vs. alternative positions on specific topics</li>
-       
+
       organisations:
         title: Organisations
         title_long: Non-governmental & Governmental Organisations
@@ -492,7 +494,7 @@ en:
           <li>Free fundraising and a growing number of supporters</li>
           <li>Increased motivation through cost-neutral donations</li>
           <li>More trust and emotional commitment on the part of supporters through transparency and direct participation in actions</li>
-        
+
     # Static content for the echonomy main menu point
     echonomy:
       title: echonomy
@@ -560,7 +562,7 @@ en:
           have up to 20% of the price you paid for your favourite product transferred onto your virtual
           echo account. In addition, discreet notifications of thematically relevant products and services
           in discussions and actions on echo will help you make strategic and responsible buying decisions.
-      
+
       foundation:
         title: The Foundation
 
@@ -603,13 +605,13 @@ en:
           open and transparent process.
 
 
-      
+
     join:
       title: &your_echo 'Your echo'
       subtitle: &join 'Join echologic'
       tabs:
         join: Join echologic
         forgot: Set Your Password
-      
+
     invite:
       title: &invite 'Make an echo'

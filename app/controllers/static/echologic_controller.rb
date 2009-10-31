@@ -15,29 +15,29 @@ class Static::EchologicController < ApplicationController
       format.js { render :template => 'layouts/headContainer' }
     end
   end
- 
+
   # About
   def about
     respond_to do |format|
-      format.html { render :partial => 'about', :layout => 'static' }
-      format.js { render :template => 'layouts/outerMenuDialog' }
+      format.html { render :partial => 'about', :layout => 'static', :locals => {:title => I18n.t('static.echologic.about.title')} }
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => {:title => I18n.t('static.echologic.about.title')} }
     end
   end
 
   # Imprint
   def imprint
     respond_to do |format|
-      format.html { render :partial => 'imprint', :layout => 'static' }
-      format.js { render :template => 'layouts/outerMenuDialog' }
+      format.html { render :partial => 'imprint', :layout => 'static', :locals => {:title => I18n.t('static.echologic.imprint.title')} }
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => { :title => I18n.t('static.echologic.imprint.title')} }
     end
   end
-  
+
   # Data privacy
   def data_privacy
     respond_to do |format|
-      format.html { render :partial => 'data_privacy', :layout => 'static' }
-      format.js { render :template => 'layouts/outerMenuDialog' }
+      format.html { render :partial => 'data_privacy', :layout => 'static', :locals => { :title => I18n.t('static.echologic.data_privacy.title')} }
+      format.js { render :template => 'layouts/outerMenuDialog', :locals => { :title => I18n.t('static.echologic.data_privacy.title')} }
     end
   end
-  
+
 end

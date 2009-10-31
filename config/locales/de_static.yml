@@ -68,12 +68,15 @@ de:
           Berufserfahrung in verschiedenen Bereichen (wie Geistes- und Naturwissenschaften, Unternehmensberatung und
           Marketing, Softwarerecht und Public Relations), die dem Team beratend zur Seite stehen.<br/>
           Aber auch einige <strong>namhafte PolitikerInnen</strong>, wie die ehemalige Landtagsabgeordnete
-          Ruth Paulig (die Grünen), der Bundestagsabgeordnete Axel Berg (SPD) sowie der Generalsekretär des
-          Europäischen Wirtschafts- und Sozialausschusses, Martin Westlake, unterstützen echo mit Rat und Tat.
+          <a href='http://www.ruth-paulig.de' target='_blank'>Ruth Paulig</a> (die Grünen), der Ex-Bundestagsabgeordnete
+          <a href='http://www.axel-berg.de' target='_blank'>Axel Berg</a> (SPD) sowie der Generalsekretär des
+          Europäischen Wirtschafts- und Sozialausschusses,
+          <a href='http://www.eesc.europa.eu/organisation/secretarygeneral/index-en.asp' target='_blank'>Martin Westlake</a>,
+          unterstützen echo mit Rat und Tat.
           </p><p>
-          Verschiedene Kooperationspartner aus Zivilgesellschaft (OneAim, Netzwerk Gemeinsinn), Wirtschaft (<a href='http://www.the-foo.de/' target='_blank'>The Foo</a>)
-          und Politik (Grüne Jugend München) helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele
-          zu verwirklichen.
+          Verschiedene Kooperationspartner aus Zivilgesellschaft (OneAim, Netzwerk Gemeinsinn), Wirtschaft (<a href='http://www.the-foo.de/'
+          target='_blank'>The Foo</a>) und Politik (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) helfen echo dabei,
+          seine weit reichenden gesellschaftspolitischen Ziele zu verwirklichen.
           </p>
 
       # imprint section
@@ -88,7 +91,7 @@ de:
           László Papp<br/>
           Pflugstr. 15<br/>
           10115 Berlin<br/>
-          E-mail: team [att] echo-logic . org - (statt "att", bitte "@" eingeben)<br/>
+          E-mail: team [att] echologic . org - (statt "att", bitte "@" eingeben)<br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
           Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.
@@ -100,7 +103,7 @@ de:
 
       # data privacy section
       data_privacy:
-        title: *data_privacy
+        title: Datenschutz
 
         text: |
           <p>

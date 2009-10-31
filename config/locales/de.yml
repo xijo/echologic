@@ -1,10 +1,10 @@
-# Localization in German. 
+# Localization in German.
 
 de:
 
   application:
     page_title: echologic für echo - die globale Agora (Demokratie neu gedacht)
-  
+
     meta:
       description: |-
         echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel
@@ -43,7 +43,7 @@ de:
         --
         echologic für echo - die globale Agora
         Web: www.echologic.org
-        E-Mail: team@echo-logic.org
+        E-Mail: team@echologic.org
 
       feedback: Feedback
 
@@ -51,7 +51,7 @@ de:
   # USERS MODULE
   # ------------
   users:
-  
+
     # User sessions section
     user_sessions:
       login:
@@ -65,7 +65,7 @@ de:
         login_success: Login erfolgreich.
         login_failed: Login fehlgeschlagen.
         logout_success: Logout erfolgreich.
-        
+
     # Activations section
     activations:
       heading: Aktivieren Sie Ihren Zugang
@@ -74,7 +74,7 @@ de:
       activate: Aktivieren
       messages:
         success: Ihr Zugang wurde erfolgreich aktiviert.
-        
+
     # Password resets section
     password_resets:
       step1: Passwort zurücksetzen - Schritt 1
@@ -85,40 +85,40 @@ de:
         success: Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.
         not_found: Die angegebene E-Mail Adresse wurde nicht gefunden.
         reset_success: Ihr neues Passwort wurde gespeichert.
-    
+
     # Profile Section
     profile:
       heading: Persönliche Informationen
       edit_heading: Persönliche Informationen bearbeiten
       comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
-      
+
       gender:
         male: Männlich
         female: Weiblich
-      
+
       password:
         heading: Passwort ändern
         new: Neues Passwort
         confirm: Bestätigen
-        
+
       picture:
         heading: Profilbild
-        
+
       upload_picture:
         heading: Profilbild hochladen
         comment: Bitte wählen Sie ein Bild aus und verwenden Sie den 'hochladen' Knopf.
         progress: Bitte warten..
-        
+
       messages:
         updated: "Sie haben Ihr Profil erfolgreich geändert."
-        
+
     # Memberships section
     memberships:
       heading: Mitgliedschaften
       comment: Sie haben die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
       organisation: Organisation
       position: Position
-    
+
     # Web profiles section
     web_profiles:
       heading: Web Profile
@@ -128,7 +128,7 @@ de:
         twitter: Twitter
         blog: Blog
         xing: Xing
-        
+
     # Concernments section
     concernments:
       comment: Ordnen Sie sich selbst Interessengruppen zu.
@@ -136,8 +136,8 @@ de:
         affected: Betroffen
         engaged: Engagiert
         scientist: Experte/Wissenschaftler
-        representative: Entscheidungsträger        
-      
+        representative: Entscheidungsträger
+
     # Users section
     users:
       gender:
@@ -159,7 +159,7 @@ de:
           ExpertInnen und PolitikerInnen warten schon darauf, zusammen mit Ihnen <strong>echo zu gestalten</strong>.
           </p>
         action: 'Jetzt beitreten!'
-        
+
       messages:
         created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
 
@@ -179,14 +179,14 @@ de:
       logout: Logout
       imprint: &imprint Impressum
       data_privacy: &data_privacy Datenschutz
-      
+
     my_echo:
       tabs:
         welcome: Willkommen
         profile: Profil
 
 
-      
+
   # Feedback resources
   feedback:
     new:
@@ -197,12 +197,12 @@ de:
         </p><p>
         Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
         Wenden Sie sich vertrauensvoll an uns!
-        </p> 
+        </p>
       message: Nachricht
       send: Nachricht senden
     create:
       thank_you: Vielen Dank für Ihre Nachricht.
-    
+
 
   date:
     formats:
@@ -212,23 +212,23 @@ de:
       only_day: "%e"
       month_name: "%B"
       day_name: "%a"
- 
+
     day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
     abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
     month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
     abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
     order: [ :day, :month, :year ]
-  
+
   time:
     formats:
       default: "%a, %d. %B %Y"
       short: "%e. %B, %H:%M Uhr"
       long: "%A, %e. %B %Y, %H:%M Uhr"
       time: "%H:%M"
- 
+
     am: "vormittags"
     pm: "nachmittags"
-      
+
   datetime:
     distance_in_words:
       half_a_minute: 'eine halbe Minute'
@@ -271,7 +271,7 @@ de:
       day: "Tag"
       month: "Monat"
       year: "Jahr"
- 
+
   number:
     format:
       precision: 2
@@ -307,7 +307,7 @@ de:
           gb: "GB"
           tb: "TB"
 
-  activerecord: 
+  activerecord:
     errors:
       models:
         feedback:
@@ -321,13 +321,13 @@ de:
         taken: 'Wird bereits verwendet.'
         too_short: '{{attribute}} ist zu kurz.'
         invalid: '{{attribute}} hat ein falsches Format.'
-          
+
       template:
-        header: 
-          one: "Ein Feld wurde nicht richtig ausgefüllt." 
-          other: "{{count}} Felder wurden nicht richtig ausgefüllt." 
+        header:
+          one: "Ein Feld wurde nicht richtig ausgefüllt."
+          other: "{{count}} Felder wurden nicht richtig ausgefüllt."
         body: "Bitte überprüfen Sie folgendes:"
-        
+
     attributes:
       profile:
         email:      E-Mail
@@ -348,4 +348,4 @@ de:
       user_session:
         email: E-Mail
         password: Passwort
-        
+

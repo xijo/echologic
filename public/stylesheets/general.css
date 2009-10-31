@@ -1,6 +1,6 @@
 /* Styles for body, headings and standard HTML elements. */
 
-body { 
+body {
   background:  #a8c642 url(../images/page/background.png) repeat-x;
   margin:      0px;
   padding:     0px;
@@ -24,7 +24,7 @@ strong {
 h1, h2, h3, h4 {
   font-family:  "Lucida Sans",Arial,Helvetica,sans-serif;
   cursor:       default;
-  font-weight:  normal !important;  
+  font-weight:  normal !important;
 }
 
 h1 {

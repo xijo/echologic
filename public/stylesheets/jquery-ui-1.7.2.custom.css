@@ -82,7 +82,8 @@
 .ui-widget { font-family: "Lucida Sans",Arial,Helvetica,sans-serif; font-size: 1.1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: "Lucida Sans",Arial,Helvetica,sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #bac8d0; background: #fff url() 50% top repeat-x; color: #21587f; }
-.ui-widget-content a { color: #ffffff; }
+.ui-widget-content a { color: #21587f; text-decoration: underline; }
+.ui-widget-content a:hover { text-decoration: underline; }
 .ui-widget-header { border: 1px solid #bac8d0; background: #7ab031 url(../images/jquery-ui/ui-bg_gloss-wave_85_9fda58_500x100.gif) 50% 50% repeat-x; color: #fff; font-weight: bold; }
 .ui-widget-header a { color: #222222; }
 
@@ -97,10 +98,10 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #8cce3b; background: #f1fbe5 url(../images/jquery-ui/ui-bg_glass_55_f1fbe5_1x400.png) 50% 50% repeat-x; color: #030303; }
-.ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #030303; }
-.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #f1ac88; background: #f6ecd5 url(../images/jquery-ui/ui-bg_gloss-wave_95_f6ecd5_500x100.png) 50% top repeat-x; color: #74736d; }
-.ui-state-error a, .ui-widget-content .ui-state-error a { color: #74736d; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #8cce3b; background: #f1fbe5; color: #21587f; padding: 6px 12px 7px; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #21587f; text-decoration: underline; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #f1ac88; background: #f6ecd5; color: #21587f; padding: 6px 12px 7px; }
+.ui-state-error a, .ui-widget-content .ui-state-error a { color: #21587f; text-decoration: underline; }
 .ui-state-error-text, .ui-widget-content .ui-state-error-text { color: #74736d; }
 .ui-state-disabled, .ui-widget-content .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary { font-weight: bold; }
@@ -116,7 +117,7 @@
 .ui-state-default .ui-icon { background-image: url(../images/jquery-ui/ui-icons_21587f_256x240.png); }
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(../images/jquery-ui/ui-icons_7ab031_256x240.png); }
 .ui-state-active .ui-icon {background-image: url(../images/jquery-ui/ui-icons_7ab031_256x240.png); }
-.ui-state-highlight .ui-icon {background-image: url(../images/jquery-ui/ui-icons_000000_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(../images/jquery-ui/ui-icons_7ab031_256x240.png); }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(../images/jquery-ui/ui-icons_cd0a0a_256x240.png); }
 
 /* positioning */

@@ -4,17 +4,18 @@
 
 /* Write render output into JS variables for later use. */
 var content = "<%= escape_javascript(render(:partial => request[:action])) %>";
-var title   = "<%= request[:action] %>".replace('_', ' ');
+var title = "<%= title %>";
 
 $('#dialogContent').html(content);
 
 $('#dialogContent').dialog({
+  title:    title,
   bgiframe: true,
   modal:    true,
   buttons:  { Ok: function() { $(this).dialog('destroy'); }},
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
-  title:    title
+  resizable: false
 });
 
 

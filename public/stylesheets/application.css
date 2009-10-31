@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : application.css
     Created on : 15.09.2009, 08:34:36
     Author     : joe
@@ -24,7 +24,7 @@
   background:  url(../images/page/box/bordertb.png) repeat-x;
   position:    absolute;
   left:        0px;
-  
+
 }
 
 #applicationContainer .bottom {
@@ -44,20 +44,36 @@
 }
 
 #messageContainer {
-  width:       300px;
+  width:       400px;
   margin:      0 auto;
   z-index:     1003;
-  background: #ff0;
+}
+
+#messageContainer * {
+  z-index: 1003;
 }
 
 #messageContainer div {
-  -moz-border-radius-bottomleft: 8px;
-  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
   border-top:  0px;
-  position:    fixed;
-  width:       300px;
-  z-index:     1003;
+  width: 400px;
+  position: fixed;
 }
+
+#messageContainer .infoErrorIcon {
+  float: left;
+  width: 16px;
+  height: 16px
+}
+
+#messageContainer .message {
+  clear: both;
+  position: relative;
+  left: 23px;
+  width: 377px;
+}
+
 
 /* SUBMENU SECTION */
 .submenu {
