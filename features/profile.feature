@@ -20,15 +20,16 @@ Feature: Profile settings
   
   Scenario: Edit basic information
     Given I am logged in as "user" with password "true"
+      And I have a blank profile
     When I go to the profile
       And I follow the "Edit" link within the "Personal" container
       And I fill in the following:
-        | User name       | Last name      |
-        | User prename    | First name     |
-        | User city       | Berlin         |
-        | User country    | Germany        |
-        | User about me   | This is me.    |
-        | User motivation | My motivation. |  
+        | Profile last name  | Last name      |
+        | Profile first name | First name     |
+        | Profile city       | Berlin         |
+        | Profile country    | Germany        |
+        | Profile about me   | This is me.    |
+        | Profile motivation | My motivation. |  
       And I press the "Save" button within the "Personal" container
     Then I should see "Last name"
       And I should see "First name"
@@ -56,5 +57,5 @@ Feature: Profile settings
         | user_password              | false |
         | user_password_confirmation | false |
       And I press the "Submit" button within the "Password" container
-    Then I should see "Profile information saved."
+    Then I should see "Profile information updated successful."
     

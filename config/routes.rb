@@ -36,7 +36,6 @@ ActionController::Routing::Routes.draw do |map|
 
   # SECTION feedback
   map.resources :feedback, :only => [:new, :create]
-
   
   # SECTION user signup and login
   map.resource  :user_session, :controller => 'users/user_sessions',
@@ -49,9 +48,13 @@ ActionController::Routing::Routes.draw do |map|
   end
   map.resources :password_resets, :controller => 'users/password_resets',
                 :path_prefix => '', :except => [:destroy]
+                
+  map.profile   'profile', :controller => 'my_echo', :action => 'profile'
+                
   map.resource  :profile, :controller => 'users/profile',
                 :path_prefix => '', :only => [:show, :edit, :update]
-  map.welcome   'welcome', :controller => 'users/profile', :action => 'welcome'
+                                
+  map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'
 
   map.register  '/register/:activation_code',
                 :controller => 'users/activations', :action => 'new'

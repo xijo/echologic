@@ -12,7 +12,7 @@
       <%= form.input :motivation, :input_html => { :rows => 3, :cols => 30 } %>
     <% end %>
     <% form.buttons do %>
-      <%= form.commit_button I18n.t('application.general.save'), :alt => 'save_button' %>  
+      <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>  
       <%= I18n.t('application.general.or') %>
       <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>    
     <% end %>

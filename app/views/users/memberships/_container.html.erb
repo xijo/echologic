@@ -9,7 +9,7 @@
       <span><%= I18n.t('users.memberships.organisation') %></span>
       <span><%= I18n.t('users.memberships.position') %></span>
     </li>
-    <%= render @user.memberships %>
+    <%= render :partial => 'users/memberships/membership', :collection => @user.memberships %>
   </ul>
   
   <ul>

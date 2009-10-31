@@ -5,7 +5,6 @@ Feature: Authentication
   I want to login with email and password
 
   # A user must be able to login and see a welcome message.
-  
   Scenario: Successful login
     Given I am logged in as "user" with password "true"
     Then I should be on the welcome page

@@ -345,6 +345,10 @@ de:
         country:    Land
         about_me:   Über mich
         motivation: Motivation
+      feedback:
+        name:       Name
+        email:      E-Mail
+        message:    Nachricht
 
   authlogic:
     error_messages:

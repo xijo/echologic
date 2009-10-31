@@ -1,5 +1,5 @@
 <div id="concernments_<%= sort %>" style="clear: both;">
-  <%= render concernments %>
+  <%= render :partial => 'users/concernments/concernment', :collection => concernments %>
 </div>
 
 <% form_tag url_for(:controller => "concernments", :action => "create"), :id => "new_concernment_#{sort}" do -%>
