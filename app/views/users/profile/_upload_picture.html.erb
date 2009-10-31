@@ -4,7 +4,7 @@
 
 <%= I18n.t('users.profile.upload_picture.comment') %>
 
-<% semantic_form_for @profile, :url => profile_path, :html => { :multipart => true, :id => 'upload_picture_form' } do |form| %>
+<% semantic_form_for @profile, :html => { :multipart => true, :id => 'upload_picture_form' } do |form| %>
   <% form.inputs do %>
     <%= form.input :avatar %>
   <% end %>
