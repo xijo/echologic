@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
 
   # TODO add attr_accessible :active if needed.
   #attr_accessible :active
-  
 
   # Authlogic plugin to do authentication
   acts_as_authentic do |c|

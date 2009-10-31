@@ -1,0 +1,18 @@
+<%= tabnav :my_echo %>
+
+<%= render :partial => 'users/profile/profile_edit' %>
+
+<%= render :partial => 'users/profile/picture' %>
+
+<%= render :partial => 'users/memberships/container' %>
+
+<!-- Web profiles section. -->
+<%= render :partial => 'users/web_profiles/container' %>
+
+<!-- Update password section. -->
+<div id="password_container" class="details_container">
+  <%= render :partial => 'users/profile/password' %>
+</div>
+
+<!-- Concernment section. -->
+<%= render :partial => 'users/concernments/container' %>

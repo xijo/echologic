@@ -75,6 +75,7 @@ de:
       activate: Aktivieren
       messages:
         success: Ihr Zugang wurde erfolgreich aktiviert.
+        failed: Die Aktivierung war nicht erfolgreich. Bitte kontrollieren Sie Ihre Eingaben.
 
     # Password resets section
     password_resets:
@@ -86,12 +87,13 @@ de:
         Wir werden Ihnen anschließend eine E-Mail schicken, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
       step1_mail: E-Mail verschicken
       step2_text: |
-        Bitte tragen Sie <strong>Ihr neues Password</strong> ein, mit dem Sie sich in echologic einloggen möchten.
+        Bitte tragen Sie Ihr neues Password ein, mit dem Sie sich in echologic einloggen möchten.
       step2_ok: Passwort setzen und einloggen
       messages:
-        success: Die E-Mail wurde erfolgreich verschickt. Bitte schauen Sie in Ihren Posteingang.
-        not_found: Es konnte keine NutzerIn mit der angegebenen E-Mail Adresse gefunden werden.
-        reset_success: Ihr neues Passwort wurde erfolgreich gespeichert.
+        success:        'Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.'
+        not_found:      'Die angegebene E-Mail Adresse wurde nicht gefunden.'
+        reset_success:  'Ihr neues Passwort wurde gespeichert.'
+        reset_failed:   'Ihr Passwort konnte nicht geändert werden. Bitte überprüfen Sie Ihre Eingaben.'
 
     # Profile Section
     profile:

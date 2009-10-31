@@ -23,6 +23,7 @@ class Users::ActivationsController < ApplicationController
       flash[:notice] = I18n.t('users.activations.messages.success')
       redirect_to welcome_path
     else
+      flash[:error] = I18n.t('users.activations.messages.failed')
       render :template => 'users/activations/new', :layout => 'static'
     end
   end

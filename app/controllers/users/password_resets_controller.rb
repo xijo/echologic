@@ -43,6 +43,7 @@ class Users::PasswordResetsController < ApplicationController
       flash[:notice] = I18n.t('users.password_resets.messages.reset_success')
       redirect_to welcome_path
     else
+      flash[:error] = I18n.t('users.password_resets.messages.reset_failed')
       render :action => :edit, :layout => 'static'
     end
   end

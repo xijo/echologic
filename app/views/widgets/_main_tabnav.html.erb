@@ -33,8 +33,9 @@ render_tabnav :main,
 
   add_tab :html => { :id => 'my_echo_tab' } do |t|
     t.named I18n.t('layouts.tabs.my_echo')
-    t.links_to :controller => 'users/profile', :action => 'welcome'
+    t.links_to hash_for_welcome_path
     t.highlights_on :controller => 'users/profile'
+    t.highlights_on :controller => 'my_echo'
   end
 
   add_tab :html => { :id => 'admin_tab' } do |t|

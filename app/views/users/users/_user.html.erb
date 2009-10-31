@@ -1,11 +1,12 @@
 <% @user = user if defined?(user) %>
+<% @profile = @user.profile %>
 
 <li id="<%= dom_id(@user) %>">
-  <% link_to @user, :class => 'ajax show_link' do %>
-    <%= image_tag @user.picture.url(:small) %>
+  <% link_to @profile, :class => 'ajax show_link' do %>
+    <%= image_tag @profile.picture.url(:small) %>
   <% end %>
   <div>
-    <%=h @user.full_name %> <br/>
+    <%=h @profile.full_name %> <br/>
     <%=h @user.email %>     <br/>
     <%= link_to 'Show', @user, :class => 'ajax show_link' %> 
     <% if show_admin_options? %>

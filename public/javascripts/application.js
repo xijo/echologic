@@ -23,6 +23,8 @@ $(document).ready(function () {
       + "authenticity_token=" + encodeURIComponent( AUTH_TOKEN );
     }
   });
+  
+  $('#user_session_email').focus();
 
 
 });

@@ -18,7 +18,7 @@ class Users::ProfileController < ApplicationController
     respond_to do |format|
       format.html
       format.js do 
-        replace_container('personal_container', :partial => 'personal_information')
+        replace_container('personal_container', :partial => 'profile_edit')
       end
     end
   end
@@ -47,7 +47,7 @@ class Users::ProfileController < ApplicationController
           redirect_to profile_path
         end
         format.js do
-          replace_container('personal_container', :partial => 'personal_information', :locals => { :profile => @profile })
+          replace_container('personal_container', :partial => 'profile_edit', :locals => { :profile => @profile })
         end
       end
     end
