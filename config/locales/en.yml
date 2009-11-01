@@ -99,7 +99,7 @@ en:
       step1_text: |
         <strong>Forgot your password?</strong><br/><br/>
         No problem! Just fill in your <strong>E-Mail</strong> address you used to sign up to echologic.<br/>
-        We will send you an E-mail shortly allowing you <strong>to define a new password</strng>.
+        We will send you an E-mail shortly allowing you <strong>to define a new password</strong>.
       step1_mail: Send E-Mail
       step2_text: |
         Please define your new password to log in to echologic.
@@ -213,7 +213,7 @@ en:
         blank: '{{attribute}} must not be empty.'
         taken: 'Is already in use.'
         too_short: '{{attribute}} is too short.'
-        invalid: '{{attribute}} has to be in a valid format.'
+        invalid: '{{attribute}} must be in a valid format.'
 
       template:
         header:
@@ -226,7 +226,7 @@ en:
         email:      E-Mail
         first_name: First Name
         last_name:  Last Name
-        gender:     Sex
+        gender:     Gender
         city:       City
         country:    Country
         about_me:   About Me
@@ -235,9 +235,9 @@ en:
 
   authlogic:
     error_messages:
-      email_invalid: "Please correct your e-mail adress."
-      password_blank: "Password must not be blank."
-      not_active: "Your account have to be activated."
+      email_invalid: "Please enter a correct e-mail address."
+      password_blank: "Password must be defined."
+      not_active: "Your account has not been activated yet. Please check your inbox."
     attributes:
       user_session:
         email: E-Mail

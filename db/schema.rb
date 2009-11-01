@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(:version => 20091031124730) do
     t.string "message"
   end
 
+  create_table "interested_people", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invited_people", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "interested_person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locales", :force => true do |t|
     t.string "code"
     t.string "name"
@@ -113,9 +128,9 @@ ActiveRecord::Schema.define(:version => 20091031124730) do
   end
 
   create_table "web_profiles", :force => true do |t|
-    t.integer  "user_id"
+    t.string   "sort"
     t.string   "location"
-    t.integer  "sort"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

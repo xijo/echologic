@@ -1,4 +1,4 @@
-/* Tooltips CSS definitions */	
+/* Tooltips CSS definitions */
 
 /* Container to hold the tooltip. */
 #tooltip {
@@ -7,7 +7,7 @@
 	border:     none;
 	-moz-border-radius: 8px;
 	background-color:   #7AB030;
-	padding:    3px 8px 7px;
+	padding:    6px 8px 7px;
 	max-width:  450px;
 }
 
