@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
                
   #map.resource  :profile, :controller => 'users/profile',
   #              :path_prefix => '', :only => [:show, :edit, :update]
-  map.resources :profiles, :controller => 'users/profile'
+  map.resources :profiles, :controller => 'users/profile', :path_prefix => '', :only => [:show, :edit, :update]
                                 
   map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'
 

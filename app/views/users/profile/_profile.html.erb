@@ -1,0 +1,17 @@
+<% @profile = profile if defined?(profile) %>
+
+<li id="<%= dom_id(@profile) %>">
+  <% link_to @profile, :class => 'ajax show_link' do %>
+    <%= image_tag @profile.avatar.url(:small) %>
+  <% end %>
+  <div>
+    <%=h @profile.full_name %> <br/>
+    <%=h @profile.user.email %>     <br/>
+    <%= link_to 'Show', url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link' %> 
+    <% if show_admin_options? %>
+      <%= link_to 'Edit', edit_profile_path(@profile) %>
+      <%= link_to 'Destroy', @profile.user, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+  </div>
+  
+</li>

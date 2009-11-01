@@ -10,9 +10,9 @@ Feature: Use connect functionality
   Scenario: View user list
     Given I am logged in as "user" with password "true"
     When I am on the connect page
-    Then I should see the user "Joe"
-      And I should see the user "User"
-      And I should see the user "Ben"
+    Then I should see the profile of "Joe"
+      And I should see the profile of "User"
+      And I should see the profile of "Ben"
       And I should see the "Search" form
     
   # As an logged in user I am able to search for everything
@@ -24,8 +24,8 @@ Feature: Use connect functionality
     When I go to the connect page
       And I fill in "value" with "<value>"
       And I press the "Search" button
-    Then I should see the user "<true>"
-      And I should not see the user "<false>"
+    Then I should see the profile of "<true>"
+      And I should not see the profile of "<false>"
       
     Examples:
       | value   | true | false |
@@ -43,8 +43,8 @@ Feature: Use connect functionality
   Scenario: View user details
     Given I am logged in as "user" with password "true"
       And I am on the connect page
-    When I follow the "Show" link for the user "Joe"
-    Then I should see the user details of "Joe"
+    When I follow the "Show" link for the profile of "Joe"
+    Then I should see the profile details of "Joe"
       And I should see a "Close" link
       
       
