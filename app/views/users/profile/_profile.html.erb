@@ -8,6 +8,7 @@
     <%=h @profile.full_name %> <br/>
     <%=h @profile.user.email %>     <br/>
     <%= link_to 'Show', url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link' %> 
+    <%= link_to 'Report', url_for(:controller => 'users/reports', :action => 'new', :id => @profile.user), :class => 'ajax report_link' %>
     <% if show_admin_options? %>
       <%= link_to 'Edit', edit_profile_path(@profile) %>
       <%= link_to 'Destroy', @profile.user, :confirm => 'Are you sure?', :method => :delete %>

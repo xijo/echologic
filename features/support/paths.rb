@@ -18,6 +18,8 @@ module NavigationHelpers
       welcome_path
     when /the connect page/
       '/connect/profiles'
+    when /the reports page/
+      reports_path
 
     # Add more mappings here.
     # Here is a more fancy example:

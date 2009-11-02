@@ -28,8 +28,9 @@ When /^I follow "([^\"]*)" within "([^\"]*)"$/ do |link, parent|
   click_link_within(parent, link)
 end
 
+# Changed to match whitespaced form selections.
 When /^I fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+  fill_in(field.downcase.gsub(' ', '_'), :with => value)
 end
 
 When /^I fill in "([^\"]*)" for "([^\"]*)"$/ do |value, field|
@@ -51,7 +52,7 @@ end
 #   21.10.2009, Joe - Convert human readable names to system names.
 When /^I fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
-    When %{I fill in "#{name.downcase.gsub(' ', '_')}" with "#{value}"}
+    When %{I fill in "#{name}" with "#{value}"}
   end
 end
 
@@ -188,4 +189,13 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+# Check if ACL works.
+Then /^I should not be able to access (.+)$/ do |page|
+  begin
+    When "I go to #{page}"
+    "Page could accidently accessed.".should be_nil
+  rescue Acl9::AccessDenied
+  end
 end

@@ -21,6 +21,11 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   
+  # Set notice from the given i18n string.
+  def set_notice(i18n)
+    flash[:notice] = I18n.t(i18n)
+  end
+  
   
   # GENERIC AJAX METHODS SECTION
   

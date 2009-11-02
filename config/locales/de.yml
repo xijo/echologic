@@ -171,6 +171,11 @@ de:
 
       messages:
         created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
+        
+    # Reports section
+    reports:
+      messages:
+        created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
 
   # Localizations for the layout components
   layouts:
@@ -348,6 +353,8 @@ de:
         country:    Land
         about_me:   Über mich
         motivation: Motivation
+      report:
+        reason:     'Grund'
 
   authlogic:
     error_messages:
