@@ -388,7 +388,7 @@
   padding:      0 15px;
 }
 
-.illustration h2 {
+#staticContent .illustration h2 {
   font-size:    18px;
   font-weight:  bold !important;
   color:        #21587f;
@@ -399,22 +399,22 @@
   top:          -10px;
 }
 
-.illustration:hover * {
-  cursor:       pointer;
-}
-
-.illustration img {
+#staticContent .illustration img {
   border:       none;
 }
 
-.illustration:hover h2 {
+#staticContent .illustration:hover * {
+  cursor:       pointer;
+}
+
+#staticContent .illustration:hover h2 {
   border-bottom: 2px dotted #7ab031;
 }
 
-.cornerIllustration {
+#staticContent .cornerIllustration {
   float:         right;
   height:        68px;
-  margin:        -4px 10px 0;
+  margin:        0px 10px 0;
 }
 
 #feedbackIllustration {

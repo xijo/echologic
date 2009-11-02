@@ -160,11 +160,15 @@ var roundCorners = function(){
 
 /* Show error or info messages in messagesContainer and hide it with delay. */
 function info(text) {
+  $('#infoBox').stop().hide();
+  $('#errorBox').stop().hide();
   $('#messageContainer #infoBox .message').html(text);
   $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 7000).slideUp();
 }
 
 function error(text) {
+  $('#infoBox').stop().hide();
+  $('#errorBox').stop().hide();
   $('#messageContainer #errorBox .message').html(text);
   $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
 }

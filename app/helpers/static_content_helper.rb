@@ -1,7 +1,7 @@
 # Helper module for the static_content of echoLogic.
 #
 module StaticContentHelper
-  
+
   # Inserts div structure for rounded box
   # Pretty cooler rounded box helper with yield function! Usage makes our
   # views simpler than before and only one method will be needed.
@@ -17,7 +17,7 @@ module StaticContentHelper
 
   # Inserts the breadcrumb for the given main and sub menu point
   # TODO sub menu title isn't used atm. nessacary? title vs. long_title discussion
-  def insert_breadcrumb(main_link, sub_link, sub_menu_title='title', show_illustration=true)
+  def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
     controller = request[:controller].split('/')[1]
     action = request[:action]
     title_translation = I18n.t("static.#{controller}.title")
@@ -26,7 +26,7 @@ module StaticContentHelper
         pic_resource = "page/illustrations/#{controller}_#{action}_small.png"
         concat image_tag(pic_resource, {:class => 'cornerIllustration'})
       end
-      subtitle_translation = I18n.t("static.#{controller}.#{action}.title")
+      subtitle_translation = I18n.t("static.#{controller}.#{action}" + sub_menu_title)
     else
       subtitle_translation = I18n.t("static.#{controller}.subtitle")
     end
@@ -52,7 +52,7 @@ module StaticContentHelper
     end
     concat "</div>"
   end
-  
+
   # Insert back and next buttons according to the given paths.
   # TODO w3c forbids block in anthor!
   def insert_back_next_buttons(prev_link, next_link)
@@ -64,7 +64,7 @@ module StaticContentHelper
     concat link_to(next_button, next_link, :class => 'prevNextButton')
     concat "</div>"
   end
-  
+
   # Inserts a static menu button with the information
   # provided through the given link.
   # Set ID for a-Tag to the menu name, to store it in the url fragment when
@@ -91,7 +91,7 @@ module StaticContentHelper
   def display_echologic_container
     request[:controller].eql?('static/echologic') ? '' : "style='display:none'"
   end
-  
+
   # tabContainer is not visible in echologic
   def display_tab_container
     request[:controller].eql?('static/echologic') ? "style='display:none'" : ''
@@ -114,7 +114,7 @@ module StaticContentHelper
       "<span class='newsText'>" + '"Tweet! Tweet! :-)"' + '</span>'
     end
   end
-  
+
   # Inserts text area with the given text and two buttons for opening and
   # closing the area.
   # Click-functions are added via jQuery, take a look at application.js

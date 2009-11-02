@@ -333,7 +333,7 @@ de:
         echocracy: echocracy
         citizens: BürgerInnen
         scientists: ExpertInnen
-        decision_makers: PolitikerInnen
+        decision_makers: RepräsentantInnen
         organisations: Organisationen
 
       show:
@@ -421,11 +421,11 @@ de:
 
       # decision makers section
       decision_makers:
-        title: PolitikerInnen
-        title_long: PolitikerInnen & RepräsentantenInnen
+        title: Repräsentanten
+        title_long: RepräsentantInnen & EntscheidungsträgerInnen
         text_top: |
           <p>
-          EntscheidungsträgerInnen aus Politik und Wirtschaft tragen die größte gesellschaftliche Verantwortung.
+          <strong>EntscheidungsträgerInnen aus Politik und Wirtschaft</strong> tragen die größte gesellschaftliche Verantwortung.
           Sie müssen entscheiden, was dem größtmöglichen Wohle Aller dient und praktikable Lösungen aushandeln.
           Ihre Beteiligung an den Diskussionen auf echo ist daher besonders wichtig.
           Damit ihre Bemühungen zu nachhaltigen Verbesserungen führen können, brauchen sie eine <strong>breite

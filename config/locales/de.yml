@@ -82,9 +82,11 @@ de:
       step1: Neues Passwort anfordern
       step2: Neues Passwort setzen
       step1_text: |
-        <strong>Haben Sie Ihr Passwort vergessen?</strong><br/>
-        Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben.<br/>
-        Wir werden Ihnen anschließend eine E-Mail schicken, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
+        <p><strong>Haben Sie Ihr Passwort vergessen?</strong>
+        </p><p>
+        Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben.
+        Wir schicken Ihnen anschließend eine E-Mail, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
+        </p>
       step1_mail: E-Mail verschicken
       step2_text: |
         Bitte tragen Sie Ihr neues Password ein, mit dem Sie sich in echologic einloggen möchten.
@@ -360,7 +362,7 @@ de:
     error_messages:
       email_invalid: "Bitte eine korrekte E-Mail Adresse angeben."
       password_blank: "Bitte geben Sie ein Passwort an."
-      not_active: "Ihr Zugang wurde noch nicht aktiviert."
+      not_active: "Ihr Zugang wurde noch nicht aktiviert. Überprüfen Sie bitte Ihren Posteingang."
     attributes:
       user_session:
         email: E-Mail

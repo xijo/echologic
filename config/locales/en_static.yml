@@ -337,8 +337,8 @@ en:
       tabs:
         echocracy: "echocracy"
         citizens: "Citizens"
-        scientists: "Scientists"
-        decision_makers: "Decision Makers"
+        scientists: "Experts"
+        decision_makers: "Representatives"
         organisations: "Ogranisations"
 
       show:
@@ -429,11 +429,11 @@ en:
           <li>Effective diffusion of scientific findings through easily comprehensible presentation of own positions and arguments</li>
 
       decision_makers:
-        title: Politicians
-        title_long: Politicians & Representatives
+        title: Representatives
+        title_long: Representatives & Decision Makers
         text_top: |
           <p>
-          Political and economic decision makers carry the largest social responsibility.
+          <strong>Political and economic decision makers</strong> carry the largest social responsibility.
           They must decide what best serves the common good and negotiate feasible solutions
           with all stakeholders. Therefore, their participation in discussions on echo is of
           essential importance. If their efforts are to result in sustainable improvements,

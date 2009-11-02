@@ -24,7 +24,7 @@ class Users::PasswordResetsController < ApplicationController
       flash[:notice] = I18n.t('users.password_resets.messages.success')
       redirect_to root_url
     else
-      flash[:notice] = I18n.t('users.password_resets.messages.not_found')
+      flash[:error] = I18n.t('users.password_resets.messages.not_found')
       render :action => :new, :layout => 'static'
     end
   end
@@ -52,7 +52,7 @@ class Users::PasswordResetsController < ApplicationController
   # PRIVATE
   #
   private
-  
+
   def load_user_using_perishable_token
     @user = User.find_using_perishable_token(params[:id])
     unless @user
