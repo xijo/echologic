@@ -330,6 +330,7 @@ de:
         taken: 'Wird bereits verwendet.'
         too_short: '{{attribute}} ist zu kurz.'
         invalid: '{{attribute}} hat ein falsches Format.'
+        confirmation: '{{attribute}} muss übereinstimmen.'
 
       template:
         header:

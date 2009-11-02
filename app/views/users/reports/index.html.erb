@@ -1,0 +1,28 @@
+<h1>Listing reports</h1>
+
+<table>
+  <tr>
+    <th>Reporter</th>
+    <th>Suspect</th>
+    <th>Reason</th>
+    <th>Done</th>
+    <th>Decision</th>
+  </tr>
+
+<% @reports.each do |report| %>
+  <tr>
+    <td><%=h report.reporter_id %></td>
+    <td><%=h report.suspect_id %></td>
+    <td><%=h report.reason %></td>
+    <td><%=h report.done %></td>
+    <td><%=h report.decision %></td>
+    <td><%= link_to 'Show', report %></td>
+    <td><%= link_to 'Edit', edit_report_path(report) %></td>
+    <td><%= link_to 'Destroy', report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New report', new_report_path %>

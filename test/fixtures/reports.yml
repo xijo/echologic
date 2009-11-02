@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reporter_id: 1
+  suspect_id: 1
+  reason: MyText
+  done: false
+  decision: MyText
+
+two:
+  reporter_id: 1
+  suspect_id: 1
+  reason: MyText
+  done: false
+  decision: MyText

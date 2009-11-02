@@ -2,7 +2,7 @@
   <%= render :partial => 'users/concernments/concernment', :collection => concernments %>
 </div>
 
-<% form_tag url_for(:controller => "concernments", :action => "create"), :id => "new_concernment_#{sort}" do -%>
+<% form_tag url_for(:controller => "users/concernments", :action => "create"), :id => "new_concernment_#{sort}" do -%>
   <%= text_field :tag, :value, :class => 'tag_value_autocomplete' %>
   <%= hidden_field_tag :user_id, @user.id %>
   <%= hidden_field_tag :sort, sort %>

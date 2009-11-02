@@ -3,9 +3,6 @@
 #
 ActionController::Routing::Routes.draw do |map|
 
-#  map.resources :profiles
-
-
   # routing-filter plugin for wrapping :locale around urls and paths.
   map.filter :locale
 
@@ -52,11 +49,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :password_resets, :controller => 'users/password_resets',
                 :path_prefix => '', :except => [:destroy]
 
-  map.register  '/register/:activation_code',
-                :controller => 'users/activations', :action => 'new'
-  map.join      '/join', :controller => 'users/users', :action => 'new'
-  map.activate  '/activate/:id',
-                :controller => 'users/activations', :action => 'create'
+  map.register  '/register/:activation_code', :controller => 'users/activations', :action => 'new'
+  map.join      '/join',                      :controller => 'users/users',       :action => 'new'
+  map.activate  '/activate/:id',              :controller => 'users/activations', :action => 'create'
+                
+  map.resources :reports, :controller => 'users/reports'
+
 
   # SECTION static - contents per controller
   map.echo      'echo/:action',      :controller => 'static/echo',      :action => 'show'

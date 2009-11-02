@@ -1,0 +1,31 @@
+<h1>New report</h1>
+
+<% form_for(@report) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :reporter_id %><br />
+    <%= f.text_field :reporter_id %>
+  </p>
+  <p>
+    <%= f.label :suspect_id %><br />
+    <%= f.text_field :suspect_id %>
+  </p>
+  <p>
+    <%= f.label :reason %><br />
+    <%= f.text_area :reason %>
+  </p>
+  <p>
+    <%= f.label :done %><br />
+    <%= f.check_box :done %>
+  </p>
+  <p>
+    <%= f.label :decision %><br />
+    <%= f.text_area :decision %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', reports_path %>

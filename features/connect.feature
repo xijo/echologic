@@ -1,4 +1,4 @@
-@progress
+@connect @0.3
 Feature: Use connect functionality
   In order to find other users
   As an user
@@ -46,5 +46,4 @@ Feature: Use connect functionality
     When I follow the "Show" link for the profile of "Joe"
     Then I should see the profile details of "Joe"
       And I should see a "Close" link
-      
-      
+

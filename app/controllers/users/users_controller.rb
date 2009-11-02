@@ -1,11 +1,11 @@
 class Users::UsersController < ApplicationController
 
   before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:show, :edit, :update, :update_password]
 
 
   access_control do
-    allow logged_in, :to => [:show, :index]
+    allow logged_in, :to => [:show, :index, :update_password]
     allow :admin
     allow anonymous, :to => [:new, :create]
   end
@@ -82,6 +82,21 @@ class Users::UsersController < ApplicationController
         format.html { redirect_to(profile_path) }
       else
         format.html { render :action => "edit" }
+      end
+    end
+  end
+  
+  def update_password
+    @user = current_user
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
+    respond_to do |format|
+      if @user.save
+        format.html { rediret_to my_profile_path }
+        format.js   { show_info_message(I18n.t('users.password_resets.messages.reset_success')) }
+      else
+        format.html { rediret_to my_profile_path }
+        format.js   { show_error_messages(@user) }
       end
     end
   end

@@ -1,0 +1,19 @@
+<h1>New report</h1>
+
+<% semantic_form_for @report, :html => { :id => 'new_report_form' } do |form| %>
+
+  <% form.inputs do %>
+    <%= form.input :reason, :as => :text, :input_html => { :rows => 4 } %>
+  <% end %>
+  
+  <% form.buttons do %>
+    <%= form.commit_button I18n.t('application.general.create'), :button_html => { :alt => 'report_button' } %>
+  <% end %>
+
+  <%= form.input :suspect_id, :as => :hidden %>
+  
+<% end %>
+
+<script type="text/javascript">
+  $('textarea').autogrow();
+</script>

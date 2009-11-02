@@ -19,7 +19,7 @@ class Users::ConcernmentsController < ApplicationController
   #
   def create
     tag = Tag.find_or_create_by_value(params[:tag][:value])
-    @concernment = Concernment.new(:user_id => params[:user_id], :tag_id => tag.id, :sort => params[:sort])
+    @concernment = Concernment.new(:user_id => current_user.id, :tag_id => tag.id, :sort => params[:sort])
 
     respond_to do |format|
       format.js do

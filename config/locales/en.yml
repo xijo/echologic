@@ -214,6 +214,7 @@ en:
         taken: 'Is already in use.'
         too_short: '{{attribute}} is too short.'
         invalid: '{{attribute}} has to be in a valid format.'
+        confirmation: '{{attribute}} confirmation does not match.'
 
       template:
         header:
@@ -231,7 +232,6 @@ en:
         country:    Country
         about_me:   About Me
         motivation: Motivation
-
 
   authlogic:
     error_messages:
