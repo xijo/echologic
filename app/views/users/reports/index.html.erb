@@ -1,28 +1,22 @@
 <h1>Listing reports</h1>
 
-<table>
-  <tr>
-    <th>Reporter</th>
-    <th>Suspect</th>
-    <th>Reason</th>
-    <th>Done</th>
-    <th>Decision</th>
-  </tr>
+<div id="active_reports_container" style="width:200px; float:left;">
+  <h2>Active reports</h2>
+  <%= @active.count %> active reports:
+  <ul>
+    <%= render @active %>
+  </ul>
+</div>
 
-<% @reports.each do |report| %>
-  <tr>
-    <td><%=h report.reporter_id %></td>
-    <td><%=h report.suspect_id %></td>
-    <td><%=h report.reason %></td>
-    <td><%=h report.done %></td>
-    <td><%=h report.decision %></td>
-    <td><%= link_to 'Show', report %></td>
-    <td><%= link_to 'Edit', edit_report_path(report) %></td>
-    <td><%= link_to 'Destroy', report, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="done_reports_container" style="width:200px; float:left;">
+  <h2>Done reports</h2>
+  <%= @done.count %> done reports:
+  <ul>
+    <%= render @done %>
+  </ul>
+</div>
 
-<br />
+<div id="profile_details_container" style="width:300px; float:right; border-left:1px dotted #ccc; padding-left:20px;">
+  
+</div>
 
-<%= link_to 'New report', new_report_path %>

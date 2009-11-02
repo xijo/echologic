@@ -29,4 +29,5 @@ form.formtastic fieldset ol li.text textarea, form.formtastic fieldset ol li.str
 form.formtastic fieldset ol li.text textarea {
   min-height: 68px !important;
   max-height: 200px;
+  height:     68px;
 }

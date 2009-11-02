@@ -4,7 +4,7 @@ class CreateReports < ActiveRecord::Migration
       t.integer :reporter_id
       t.integer :suspect_id
       t.text :reason
-      t.boolean :done
+      t.boolean :done, :default => false
       t.text :decision
 
       t.timestamps

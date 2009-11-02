@@ -30,6 +30,7 @@ class Users::ProfileController < ApplicationController
   # corresponding part of the profiles page.
   def edit
     @profile = @current_user.profile
+    @profile = Profile.find(params[:id]) if current_user.has_role?(:admin)
     respond_to do |format|
       format.html do
         render :partial => "edit", :layout => "application"

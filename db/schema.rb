@@ -28,21 +28,6 @@ ActiveRecord::Schema.define(:version => 20091102155547) do
     t.string "message"
   end
 
-  create_table "interested_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "invited_people", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "interested_person_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "locales", :force => true do |t|
     t.string "code"
     t.string "name"
@@ -80,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20091102155547) do
     t.integer  "reporter_id"
     t.integer  "suspect_id"
     t.text     "reason"
-    t.boolean  "done"
+    t.boolean  "done",        :default => false
     t.text     "decision"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -138,9 +123,9 @@ ActiveRecord::Schema.define(:version => 20091102155547) do
   end
 
   create_table "web_profiles", :force => true do |t|
-    t.string   "sort"
-    t.string   "location"
     t.integer  "user_id"
+    t.string   "location"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,15 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  reporter_id: 1
-  suspect_id: 1
-  reason: MyText
-  done: false
-  decision: MyText
+joe_active_report:
+  reporter_id:  <%= Fixtures.identify(:user) %>
+  suspect_id:   <%= Fixtures.identify(:joe) %>
+  reason:       Joe should really be reported.
+  done:         false
+  decision:     " "
 
-two:
-  reporter_id: 1
-  suspect_id: 1
-  reason: MyText
-  done: false
-  decision: MyText
+joe_done_report:
+  reporter_id:  <%= Fixtures.identify(:user) %>
+  suspect_id:   <%= Fixtures.identify(:joe) %>
+  reason:       "Over and over again!"
+  done:         true
+  decision:     "But we are all friends."

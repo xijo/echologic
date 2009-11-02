@@ -8,3 +8,16 @@ Then /^"([^\"]*)" should be reported with a reason$/ do |name|
   user.reports.first.reason.should_not be_nil
 end
 
+Then /^I should see ([0-9]+) (.+) report for "([^\"]*)"$/ do |count, status, user|
+  user = Profile.find_by_first_name(user).user
+  within "##{status}_reports_container" do |content|
+    content.should have_selector(".report") # working with :count?
+    content.should contain("#{count} #{status} reports")
+    content.should contain(user.profile.full_name)
+  end
+  Report.suspect_id_equals(user.id).done_equals(status.eql?('done')? true : false).count.should == count.to_i
+end
+
+Then /^I should see ([0-9]+) reports$/ do |count|
+  response.should have_selector(".report", :count => count.to_i)
+end

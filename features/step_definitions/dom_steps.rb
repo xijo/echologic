@@ -32,9 +32,7 @@ Then /^I should not see the "([^\"]*)" (.*)$/ do |name, component|
 end
 
 Then /^I should see the "([^\"]*)" (.*)$/ do |name, component|
-  name.downcase!.gsub!(' ', '_')
-  component.downcase!
-  response.should have_selector("##{name.downcase}_#{component}")
+  response.should have_selector("##{name.downcase.gsub(' ','_')}_#{component.downcase}")
 end
 
 Then /^I should see a "([^\"]*)" (.*)$/ do |name, component|

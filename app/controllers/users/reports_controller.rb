@@ -11,14 +11,13 @@ class Users::ReportsController < ApplicationController
   end
 
 
-  # GET /reports
-  # GET /reports.xml
+  # Show all active and done reports.
   def index
-    @reports = Report.all
+    @done   = Report.done_equals(true)
+    @active = Report.done_equals(false)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @reports }
     end
   end
 
@@ -63,19 +62,17 @@ class Users::ReportsController < ApplicationController
     end
   end
 
-  # PUT /reports/1
-  # PUT /reports/1.xml
+  # Update the reports data, normally: set it done and
+  # include one's decision.
   def update
     @report = Report.find(params[:id])
 
     respond_to do |format|
       if @report.update_attributes(params[:report])
         flash[:notice] = 'Report was successfully updated.'
-        format.html { redirect_to(@report) }
-        format.xml  { head :ok }
+        format.html { redirect_to reports_path }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @report.errors, :status => :unprocessable_entity }
       end
     end
   end

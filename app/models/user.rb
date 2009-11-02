@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :concernments
   has_many :tags, :through => :concernments
   
-  has_many :reports, :foreign_key => 'suspect_id'
+  has_many :reports
   
   # Every user must have a profile. Profiles are destroyed with the user.
   has_one :profile, :dependent => :destroy

@@ -25,6 +25,8 @@
 # Formtastic::SemanticFormBuilder.inline_errors = :sentence
 Formtastic::SemanticFormBuilder.inline_errors = :none
 
+Formtastic::SemanticFormBuilder.priority_countries = []
+
 # Set the method to call on label text to transform or format it for human-friendly
 # reading when formtastic is user without object. Defaults to :humanize.
 # Formtastic::SemanticFormBuilder.label_str_method = :humanize
