@@ -22,19 +22,16 @@ class Users::ReportsController < ApplicationController
     end
   end
 
-  # GET /reports/1
-  # GET /reports/1.xml
+  # Show a specified user report.
   def show
     @report = Report.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @report }
     end
   end
 
-  # GET /reports/new
-  # GET /reports/new.xml
+  # Set a suspect for a new report and render the new template.
   def new
     @report = Report.new
     @report.suspect_id  = params[:id]
@@ -50,8 +47,7 @@ class Users::ReportsController < ApplicationController
     @report = Report.find(params[:id])
   end
 
-  # POST /reports
-  # POST /reports.xml
+  # Creates a new report and shows messages.
   def create
     @report = Report.new(params[:report])
     @report.reporter_id = current_user.id
@@ -59,9 +55,10 @@ class Users::ReportsController < ApplicationController
     respond_to do |format|
       if @report.save
         format.html { set_notice('users.reports.messages.created') and redirect_to('/connect/search') }
-        format.js
+        format.js   # create.js.erb
       else
         format.html { render :action => "new" }
+        format.js   { show_error_messages(@report) }
       end
     end
   end
@@ -91,7 +88,6 @@ class Users::ReportsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(reports_url) }
-      format.xml  { head :ok }
     end
   end
 end
