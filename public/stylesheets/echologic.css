@@ -65,7 +65,7 @@
   width:       152px;
   display:     inline-block;
   margin:      15px 0 3px 0;
-  padding:     0 7px;
+  padding:     0 8px;
   font-size:   12px;
   font-weight: bold;
   cursor:      default;
@@ -77,7 +77,7 @@
   width:       152px;
   display:     inline-block;
   margin:      4px 0 3px 0;
-  padding:     0 7px;
+  padding:     0 8px;
   font-size:   11px;
   cursor:      pointer;
 }
@@ -87,30 +87,33 @@
 }
 
 #loginContainer .loginField {
+  background:   #FFF url(../images/page/input/login_input_bg.png) no-repeat top left;
   color:        #1A4864;
   font-size:    12px;
   width:        150px;
   height:       17px;
-  border:       1px solid #1A4864;
+  border:       1px solid transparent;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
-  padding: 2px 7px 0px;
+  padding: 2px 8px;
 }
 
 #loginContainer .loginButton {
-  background:   #24587D;
+  background:   #FFF url(../images/page/login_button.png) no-repeat left top;
   color:        #FFF;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   font-size:    12px;
+  width:        53px;
   height:       21px;
   padding:      0px 8px 2px;
   border:       none;
-  margin-right: -8px;
+  margin-right: 0px;
 }
 
 #loginContainer .loginButton:hover {
-  background:   #2B6894;
+  /*background:   #2B6894;*/
+  background-position: 0px -21px;
 }
 
 /* ------------------- */

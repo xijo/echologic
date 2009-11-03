@@ -94,6 +94,7 @@
 */
 .tabContainer {
   margin:       0 auto 8px auto;
+  padding-top:  5px;
   overflow:     visible;
   position:     relative;
   clear:        both;
