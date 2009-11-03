@@ -9,7 +9,7 @@ $('#dialogContent').dialog({
   modal:    true,
   buttons:  {
     "<%= I18n.t('application.general.send') %>":  function() { $('#new_feedback_form').submit(); },
-    "<%= I18n.t('application.general.cancel') %>": function() { $(this).dialog('close'); },
+    "<%= I18n.t('application.general.cancel') %>": function() { $(this).dialog('close'); }
   },
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
