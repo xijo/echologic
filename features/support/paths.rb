@@ -14,12 +14,9 @@ module NavigationHelpers
       my_profile_path
     when /the start page/
       root_path
-    when /the welcome page/
-      welcome_path
     when /the connect page/
       '/connect/profiles'
-    when /the reports page/
-      reports_path
+
 
     # Add more mappings here.
     # Here is a more fancy example:
@@ -28,8 +25,13 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     else
-      raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
-        "Now, go and add a mapping in #{__FILE__}"
+      begin
+        paths = page_name.split(' ') - ['the', 'page'] + ['path']
+        send(paths.join('_'))
+      rescue    
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
     end
   end
 end

@@ -30,6 +30,6 @@ class Profile < ActiveRecord::Base
   # Return the full name of the user consisting of pre- and surname
   def full_name
     "#{first_name} #{last_name}"
-  end  
+  end
   
 end

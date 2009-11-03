@@ -20,7 +20,7 @@ When /^I press the "([^\"]*)" button$/ do |button|
   click_button "#{button}_button"
 end
 
-# Examples:
+# Examples:     
 #   I should not see the admin tab
 #   I should see the personal container
 #   I should see the edit link

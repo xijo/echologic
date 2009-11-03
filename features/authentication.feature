@@ -1,4 +1,4 @@
-
+@auth @0.2
 Feature: Authentication
   In order to authenticate
   As an user

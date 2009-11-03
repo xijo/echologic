@@ -1,4 +1,4 @@
-
+@profile @0.2
 Feature: Profile settings
   In order to setup my profile
   As an user
@@ -57,5 +57,5 @@ Feature: Profile settings
         | user_password              | false |
         | user_password_confirmation | false |
       And I press the "Submit" button within the "Password" container
-    Then I should see "Profile information updated successful."
+    Then I should see "Your password has been saved successfully."
     

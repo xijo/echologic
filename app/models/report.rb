@@ -4,5 +4,9 @@ class Report < ActiveRecord::Base
   belongs_to :reporter, :class_name => 'User', :foreign_key => 'reporter_id'
   
   validates_presence_of :reason
+  
+  # TODO helpful but not working yet.
+  self.named_scope :active, :conditions => "done like 'f'"
+  self.named_scope :done  , :conditions => "done like 't'"
 
 end

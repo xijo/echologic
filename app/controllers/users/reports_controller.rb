@@ -44,6 +44,10 @@ class Users::ReportsController < ApplicationController
   # GET /reports/1/edit
   def edit
     @report = Report.find(params[:id])
+    respond_to do |format|
+      format.html { render :partial => 'edit' }
+      format.js   { replace_container(dom_id(@report, :edit), :partial => 'edit') }
+    end
   end
 
   # Creates a new report and shows messages.

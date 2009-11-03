@@ -16,7 +16,7 @@ Feature: Report unseemly behaving users
       And I follow the "Report" link for the profile of "Joe"
       And I fill in "Report reason" with "User has red hair."
       And I press the "Report" button
-    Then I should see "Thank you for your message. An administrator was notified."
+    Then I should see "Thank you for your message."
       And "Joe" should be reported with a reason
       
   # With user access you can't view reports.
@@ -30,16 +30,21 @@ Feature: Report unseemly behaving users
     When I go to the reports page
     Then I should see the "Active reports" container
       And I should see the "Done reports" container
-      And I should see 1 active report for "Joe"
-      And I should see 1 done report for "Joe"
+      And I should see 1 active reports
+      And I should see 1 done reports
       And I should see 2 reports
     
   # As an administrator I have the opportunity to change the status
   # of an user report.
-  @wip
   Scenario: Change report status and decision
     Given I am logged in as "Admin" with password "true"
     When I go to the reports page
-      And I follow the "Edit" link
+      And I follow the "Edit" link for the active report of "Joe"
+      And I fill in "Report decision" with "User is invulnerable!"
+      And I check "Report done"
+      And I press the "Save" button
+    Then I should see 2 done reports
+      And I should see 0 active reports
+      
     
   

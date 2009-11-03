@@ -1,10 +1,12 @@
 <% @report = report if defined?(report) %>
 
 <li id="<%= dom_id(@report) %>" class="report">
-  <%=h @report.id %>. | 
+  #<%=h @report.id %>. | 
   <%= link_to @report.suspect.profile.full_name, profile_details_path(@report.suspect.profile), :class => 'ajax' %>
   <p>
     <%=h @report.reason %>
   </p>
-  <%= link_to 'Edit', edit_report_path(@report) %>
+  <div id="<%= dom_id(@report, :edit) %>">
+    <%= link_to 'Edit', edit_report_path(@report), :class => 'ajax edit_link' %>
+  </div>
 </li>

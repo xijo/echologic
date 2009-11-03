@@ -1,7 +1,7 @@
 <h1>Connect 2nd</h1>
 
 <div id="connect_container">
-  <% form_tag '/connect/search', :id => 'search_form' do %>
+  <% form_tag '/connect/search', :method => 'GET', :id => 'search_form' do %>
     <%= text_field_tag :value %>
     <%= submit_tag :send, :alt => 'search_button' %>
   <% end %>

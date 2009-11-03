@@ -1,3 +1,4 @@
+@web_profiles @0.2
 Feature: Manage web profiles
   In order to set web profiles
   As an user

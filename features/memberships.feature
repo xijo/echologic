@@ -1,3 +1,4 @@
+@memberships @0.2
 Feature: Manage memberships
   In order to setup my profile data
   As an user
