@@ -6,7 +6,7 @@ class Report < ActiveRecord::Base
   validates_presence_of :reason
   
   # TODO helpful but not working yet.
-  self.named_scope :active, :conditions => "done like 'f'"
-  self.named_scope :done  , :conditions => "done like 't'"
-
+  self.named_scope :active, :conditions => { :done => false }
+  self.named_scope :done,   :conditions => { :done => true }
+  
 end

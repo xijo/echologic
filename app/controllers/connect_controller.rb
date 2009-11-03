@@ -27,29 +27,26 @@ class ConnectController < ApplicationController
     
     search.first_name_like = @value
     search.last_name_like  = @value
-    #search.motivation_like = params[:value]
-    #search.about_me_like   = params[:value]
-    #search.city_like       = params[:value]
-    #search.country_like    = params[:value]
-    #search.user_email_like = params[:value]
+    search.city_like       = params[:value]
+    search.country_like    = params[:value]
+    search.motivation_like = params[:value]
+    search.about_me_like   = params[:value]
+    search.user_email_like = params[:value]
     
-    #search.user_tags_value_like = params[:value]
-    
-    @profiles = search.all
+    search.user_tags_value_equals = params[:value]
 
-  
-    #filter = params[:value]
-    @profiles = Profile.first_name_or_last_name_like(@value).paginate(:page => params[:page])
+    # Very prototypy solution to get the right data. Problem is, that
+    # searchlogic doesn't provide OR searches yet.
     
-  #  @profiles += Profile.motivation_or_about_me_or_city_or_country_like(filter)
-    
-  #  @profiles += Profile.user_tags_value_like(filter)
-    
-   # @profiles += Profile.user_email_like(filter)
-    
-  #  @profiles.uniq!
-    
-    #@profiles = Profile.paginate :page => params[:page]
+    conditions = search.scope(:find)[:conditions].gsub(' AND ', ' OR ')
+
+    joins = "INNER JOIN `users` ON `users`.id = `profiles`.user_id INNER JOIN `concernments` ON (`users`.`id` = `concernments`.`user_id`)  INNER JOIN `tags` ON (`tags`.`id` = `concernments`.`tag_id`)  INNER JOIN `users` users_profiles ON `users_profiles`.id = `profiles`.user_id".gsub('INNER', 'LEFT')
+
+    @profiles = Profile.find( :all, 
+                              :joins => joins, 
+                              :conditions => conditions, 
+                              :readonly => true, :select => 'DISTINCT profiles.*'
+                              ).paginate(:page => params[:page], :per_page => 2)
     
     respond_to do |format|
       format.html { render :template => 'connect/profiles' }

@@ -13,8 +13,8 @@ class Users::ReportsController < ApplicationController
 
   # Show all active and done reports.
   def index
-    @done   = Report.done_equals(true)
-    @active = Report.done_equals(false)
+    @done   = Report.done
+    @active = Report.active
 
     respond_to do |format|
       format.html # index.html.erb
