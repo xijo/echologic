@@ -3,7 +3,6 @@
 
 /* Do init stuff. */
 $(document).ready(function () {
-    alert('hello world');
 
   startFragmentObservation();
  
