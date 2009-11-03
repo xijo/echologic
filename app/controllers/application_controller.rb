@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   # Initializes translate_routes
   before_filter :set_locale
-  
+
   # Set locale to the best fitting one
   def set_locale
     available = %w{en de}
@@ -20,15 +20,15 @@ class ApplicationController < ActionController::Base
   # Authlogic authentification filters
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
-  
+
   # Set notice from the given i18n string.
   def set_notice(i18n)
     flash[:notice] = I18n.t(i18n)
   end
-  
-  
+
+
   # GENERIC AJAX METHODS SECTION
-  
+
   # Get formatted error string from error partial for a given object, then show
   # it on the page object as an error message.
   def show_error_messages(object)
@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
       page << "error('#{escape_javascript(message)}');"
     end
   end
-  
+
   def show_info_message(string)
     render :update do |page|
       page << "info('#{string}');"
@@ -59,15 +59,15 @@ class ApplicationController < ActionController::Base
       page.replace_html name, content
     end
   end
-  
+
   # Helper method to remove some identifier from the page.
   def remove_container(name)
     render :update do |page|
       page.remove name
     end
   end
-  
-  
+
+
   # PRIVATE SECTION
   private
 
@@ -84,19 +84,19 @@ class ApplicationController < ActionController::Base
     end
 
     # TODO comment and js?
+    # TODO i18n
     def require_user
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
         respond_to do |format|
-          format.html { redirect_to echologic_path }
-#          format.js { render :template => 'layouts/headContainer', :locals => { :menu_item => 'users/user_sessions/failed'}}
+          format.html { redirect_to root_path }
         end
-        #redirect_to join_path #new_user_session_url
         return false
       end
     end
 
+    # TODO i18n
     def require_no_user
       if current_user
         store_location
@@ -123,8 +123,7 @@ class ApplicationController < ActionController::Base
     # TODO localize access denied message
     def access_denied
       flash[:error] = 'Access denied.'
-      redirect_to welcome_path
+      redirect_to root_path
     end
 
 end
-

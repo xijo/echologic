@@ -39,6 +39,7 @@ class Users::PasswordResetsController < ApplicationController
   def update
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
+    @user.active = true
     if @user.save
       flash[:notice] = I18n.t('users.password_resets.messages.reset_success')
       redirect_to welcome_path

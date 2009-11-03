@@ -7,7 +7,7 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-    
+
     when /the home\s?page/
       '/'
     when /the profile/
@@ -16,7 +16,6 @@ module NavigationHelpers
       root_path
     when /the connect page/
       '/connect/profiles'
-
 
     # Add more mappings here.
     # Here is a more fancy example:
@@ -28,7 +27,7 @@ module NavigationHelpers
       begin
         paths = page_name.split(' ') - ['the', 'page'] + ['path']
         send(paths.join('_'))
-      rescue    
+      rescue
         raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
           "Now, go and add a mapping in #{__FILE__}"
       end

@@ -28,7 +28,6 @@ $(document).ready(function () {
   
   $('textarea').autogrow();
 
-
 });
 
 /* TODO optimize splitting of url! */
