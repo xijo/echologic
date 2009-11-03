@@ -26,6 +26,6 @@ class Users::UserSessionsController < ApplicationController
   def destroy
     current_user_session.destroy
     flash[:notice] = I18n.t('users.user_sessions.messages.logout_success')
-    redirect_to echologic_path
+    redirect_to root_path
   end
 end

@@ -1,6 +1,6 @@
 <% @report = report if defined?(report) %>
 
-<li id="<%= dom_id(@report) %>" class="report">
+<li id="<%= dom_id(@report) %>" class="report" style="border:1px dashed #ddd;background:#eee;">
   #<%=h @report.id %>. | 
   <%= link_to @report.suspect.profile.full_name, profile_details_path(@report.suspect.profile), :class => 'ajax' %>
   <p>

@@ -1,16 +1,18 @@
+<%= tabnav :admin %>
+
 <h1>Listing reports</h1>
 
-<div id="active_reports_container" style="width:300px; float:left;">
+<div id="active_reports_container" style="width:300px; float:left; border-right:1px solid #ccc; padding-right:5px;">
   <h2>Active reports</h2>
-  <%= @active.count %> active reports:
+  <i><%= @active.count %> active reports:</i>
   <ul>
     <%= render @active %>
   </ul>
 </div>
 
-<div id="done_reports_container" style="width:300px; float:left; border-left:1px solid #ccc; padding-left:20px;">
+<div id="done_reports_container" style="width:200px; float:left; padding-left:5px;">
   <h2>Done reports</h2>
-  <%= @done.count %> done reports:
+  <i><%= @done.count %> done reports:</i>
   <ul>
     <%= render @done %>
   </ul>
