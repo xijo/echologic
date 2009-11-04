@@ -21,10 +21,10 @@ class Users::PasswordResetsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user
       @user.deliver_password_reset_instructions!
-      flash[:notice] = I18n.t('users.password_resets.messages.success')
+      flash[:notice] = I18n.t('users.password_reset.messages.success')
       redirect_to root_url
     else
-      flash[:error] = I18n.t('users.password_resets.messages.not_found')
+      flash[:error] = I18n.t('users.password_reset.messages.not_found')
       render :action => :new, :layout => 'static'
     end
   end
@@ -41,10 +41,10 @@ class Users::PasswordResetsController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
     @user.active = true
     if @user.save
-      flash[:notice] = I18n.t('users.password_resets.messages.reset_success')
+      flash[:notice] = I18n.t('users.password_reset.messages.reset_success')
       redirect_to welcome_path
     else
-      flash[:error] = I18n.t('users.password_resets.messages.reset_failed')
+      flash[:error] = I18n.t('users.password_reset.messages.reset_failed')
       render :action => :edit, :layout => 'static'
     end
   end

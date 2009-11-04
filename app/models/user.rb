@@ -43,6 +43,11 @@ class User < ActiveRecord::Base
     save_without_session_maintenance
   end
 
+  # Returns the display name of the user
+  def display_name()
+    self.profile.first_name + " " + self.profile.last_name;
+  end
+
   # Activation process. Set user active and add its password and openID and
   # save with session handling afterwards.
   def activate!(params)

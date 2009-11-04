@@ -28,9 +28,6 @@ class FeedbackController < ApplicationController
           show_error_messages(@feedback)
         end
       end
-#      Mailer.deliver_feedback(params)
-#      flash[:notice] = 'feedback.create.thank_you'
-#      format.html { redirect_to(echologic_path) }        
     end
   end
 

@@ -2,17 +2,21 @@
   <%= tabnav :static_join %>
 <% end %>
 
-<h1><%= I18n.t('users.users.new.title') %></h1>
-<h2><%= I18n.t('users.activations.heading') %></h2>
+<h1><%= I18n.t('static.join.title') %></h1>
+<h2><%= I18n.t('users.password_reset.step2') %></h2>
 
-<% form_for @user, :url => activate_path(@user.id), :html => { :method => :post } do |form| %>
+<p>
+  <%= I18n.t('users.password_reset.step2_text') %>
+</p>
+
+<% form_for @user, :url => activate_path(@user.id), :html => { :method => :post, :class => 'echoForm' } do |form| %>
   <p>
-    <%= form.label :password, I18n.t('users.activations.set') %>
+    <%= form.label :password, I18n.t('users.profile.password.new') %><br/>
     <%= form.password_field :password %>
   </p><p>
-    <%= form.label I18n.t('users.activations.confirm') %>
+    <%= form.label I18n.t('users.profile.password.confirm') %><br/>
     <%= form.password_field :password_confirmation %>
   </p><p>
-    <%= form.submit I18n.t('users.activations.activate') %>
+    <%= form.submit I18n.t('users.password_reset.step2_ok'), :class => 'formButton300' %>
   </p>
 <% end %>

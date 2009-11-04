@@ -3,10 +3,10 @@
 <% end %>
 
 <h1><%= I18n.t('static.join.title') %></h1>
-<h2><%= I18n.t('users.password_resets.step2') %></h2>
+<h2><%= I18n.t('users.password_reset.step2') %></h2>
 
 <p>
-  <%= I18n.t('users.password_resets.step2_text') %>
+  <%= I18n.t('users.password_reset.step2_text') %>
 </p>
 
 <% form_for @user, :url => password_reset_path, :method => :put, :html => {:class => 'echoForm'} do |f| %>
@@ -20,5 +20,5 @@
     <%= f.password_field :password_confirmation %>
   </p>
 
-  <%= f.submit I18n.t('users.password_resets.step2_ok'), :class => 'formButton300' %>
+  <%= f.submit I18n.t('users.password_reset.step2_ok'), :class => 'formButton300' %>
 <% end %>

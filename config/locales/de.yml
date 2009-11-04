@@ -63,22 +63,66 @@ de:
         remember: Merke mich!
         hello: Hallo {{name}}
       messages:
-        login_success: Login erfolgreich.
+        login_success: Login erfolgreich. Willkommen zurück auf echologic!
         login_failed: Unbekannter Nutzer oder falsches Passwort.
-        logout_success: Logout erfolgreich.
+        logout_success: |
+          Logout erfolgreich.<br/>
+          Wir freuen uns auf ein baldiges Wiedersehen. Tschüß!
 
     # Activations section
-    activations:
-      heading: Aktivieren Sie Ihren Zugang
-      set: Bitte wählen Sie ein Passwort
-      confirm: Bestätigen Sie Ihr Passwort
-      activate: Aktivieren
+    activation:
+      activation_mail:
+        subject: Freischaltung des Zugangs zu echologic
+        text1: |
+          Liebe(r) {{name}},
+
+          Thank you for registering at echologic. Please click the URL below to activate your account.
+        text2: |
+          If clicking on the URL does not open a new browser window automatically, please try to copy and paste the URL into your browser.
+          If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
+
+          Wir freuen uns sehr auf ein baldiges Wiedersehen auf echologic,
+
+          Ihr echo Team
+      welcome_mail:
+        subject: Willkommen auf echologic
+        text: |
+          Liebe(r) {{name}},
+
+          Herzlich willkommen in der echologic Community.
+          Wir freuen uns sehr Sie auf unserer gemeinsamen Reise in eine neue Äre globaler, 
+          teilnehmender Demokratie am Board von echo begrüßen zu dürfen.
+
+          Auf echologic werden wir kontinuierlich neue Funktionalität hinzufügen, die Ihnen ermöglicht,
+          die Entwicklung von echo zu verfolgen und immer mehr mitzugestalten.
+
+          Wir wünschen Ihnen eine inspirierende und bereichernde Zeit auf unserer herausfordernden Reise
+          und auch viel Spass und Freude in der echologic Community.
+
+          Mit den besten Wünschen,
+
+          Ihr echo Team
+
+          p.s.: echo ist viel mehr als ein Web 3.0 Projekt mit technischen Innovationen. Unser Team arbeitet
+          gleichzeitig an vielen verschiedenen Fronten, die alle entscheidend sind, um echo's weitreichende
+          sozio-politische Ziele mit Erfolg zu verwirklichen. Bis zur Finanzierung des Projektes werden
+          unsere Ressourcen sehr knapp bleiben. Dies resultiert in einem merkbar langsameren Fortschreiten der
+          Plattformentwicklung, als es nach Finanzierung mit Sicherheit zu erwarten ist.
+          Wir möchten es aber nicht dem Zufall überlassen. Um möglichst schnell durchstarten zu können,
+          und die Finanzierung von echo sowie anderen innovativen Projekten zu erleichtern, starten wir gerade
+          'echonomy JAM' - eine parteiübergreifende, gesammtgesellschaftliche Initiative mit Partnern aus
+          Wirtschaft und Politik. Mit echonomy JAM bringen wir Ideenträger und Kapitalgeber sowohl aus dem
+          öffentlichen als auch privaten Sektor zusammen, und etablieren einen einzigartigen Marktplatz
+          für öko-sozial nachhaltiges, demokratisches Wirtschaften.
+          Mehr Informationen sowie eine Einladung zu unserem Kick-off Event am 27.11.2009 finden Sie unter:
+          www.echonomyJAM.org
+
       messages:
-        success: Ihr Zugang wurde erfolgreich aktiviert.
-        failed: Die Aktivierung war nicht erfolgreich. Bitte kontrollieren Sie Ihre Eingaben.
+        success: Ihr Zugang wurde erfolgreich freigeschaltet. Willkommen auf echologic!
+        failed: Ihr Zugang konnte leider nicht freigeschaltet werden. Bitte überprüfen Sie Ihre Eingaben.
 
     # Password resets section
-    password_resets:
+    password_reset:
       step1: Neues Passwort anfordern
       step2: Neues Passwort setzen
       step1_text: |
@@ -88,20 +132,35 @@ de:
         Wir schicken Ihnen anschließend eine E-Mail, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
         </p>
       step1_mail: E-Mail verschicken
+      new_password_mail:
+        subject: Neues Passwort für echologic
+        text1: |
+          Liebe(r) {{name}},
+
+          Ein neues Passwort für Ihren echologic Zugang wurde beantragt.
+          Falls Sie diesen Antrag gestellt haben, klicken Sie bitte auf dem unteren Link.
+        text2: |
+          If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
+          If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
+
+          Wir wuenschen Ihnen weiterhin viel Inspiration und Spass in der echologic Community.
+          Mit den besten Grüßen,
+
+          Ihr echo Team
       step2_text: |
-        Bitte tragen Sie Ihr neues Password ein, mit dem Sie sich in echologic einloggen möchten.
+        Bitte tragen Sie <strong>Ihr neues Passwort</strong> ein, mit dem Sie sich in echologic einloggen möchten.
       step2_ok: Passwort setzen und einloggen
       messages:
-        success:        'Die Anweisungen zum Zurücksetzen Ihres Passworts wurden verschickt. Bitte prüfen Sie Ihre E-Mails.'
+        success:        'Wir haben Ihnen eine E-Mail für die Zurücksetzung Ihres Passworts geschickt. Bitte prüfen Sie Ihren Posteingang.'
         not_found:      'Die angegebene E-Mail Adresse wurde nicht gefunden.'
-        reset_success:  'Ihr neues Passwort wurde gespeichert.'
-        reset_failed:   'Ihr Passwort konnte nicht geändert werden. Bitte überprüfen Sie Ihre Eingaben.'
+        reset_success:  'Ihr neues Passwort wurde erfolgreich gespeichert.'
+        reset_failed:   'Ihr Passwort konnte leider nicht geändert werden. Bitte überprüfen Sie Ihre Eingaben.'
 
     # Profile Section
     profile:
       heading: Persönliche Informationen
       edit_heading: Persönliche Informationen bearbeiten
-      comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'editieren' link folgen.
+      comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
 
       gender:
         male: Männlich
@@ -109,16 +168,16 @@ de:
 
       password:
         heading: Passwort ändern
-        new: Neues Passwort
-        confirm: Passwort bestätigen
+        new: Ihr neues Passwort
+        confirm: Ihr neues Passwort bestätigen
 
       picture:
         heading: Profilbild
 
       upload_picture:
         heading: Profilbild hochladen
-        comment: Bitte wählen Sie ein Bild aus und verwenden Sie den 'hochladen' Knopf.
-        progress: Bitte warten..
+        comment: Bitte wählen Sie ein Bild aus und drücken Sie auf den 'Hochladen' Knopf.
+        progress: Bitte warten...
 
       messages:
         updated: "Sie haben Ihr Profil erfolgreich geändert."
@@ -133,7 +192,7 @@ de:
     # Web profiles section
     web_profiles:
       heading: Web Profile
-      comment: Damit Sie für andere Benutzer erreichbar sind haben Sie die Möglichkeit Ihre im Internet bestehenden Profile hier einzutragen.
+      comment: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
       sorts:
         homepage: Homepage
         twitter: Twitter
@@ -142,7 +201,7 @@ de:
 
     # Concernments section
     concernments:
-      comment: Ordnen Sie sich selbst Interessengruppen zu.
+      comment: Hier können Sie sich zu Interessengruppen zuordnen.
       sorts:
         affected: Betroffen
         engaged: Engagiert
@@ -360,9 +419,9 @@ de:
 
   authlogic:
     error_messages:
-      email_invalid: "Bitte eine korrekte E-Mail Adresse angeben."
+      email_invalid: "Bitte korrigieren Sie die angegebene E-Mail Adresse."
       password_blank: "Bitte geben Sie ein Passwort an."
-      not_active: "Ihr Zugang wurde noch nicht aktiviert. Überprüfen Sie bitte Ihren Posteingang."
+      not_active: "Ihr Zugang wurde noch nicht freigeschaltet. Überprüfen Sie bitte Ihren Posteingang."
     attributes:
       user_session:
         email: E-Mail
