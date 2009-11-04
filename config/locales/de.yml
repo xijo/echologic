@@ -168,7 +168,7 @@ de:
         action: 'Jetzt beitreten!'
 
       messages:
-        created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
+        created: "Bitte überprüfen Sie Ihre E-Mails, um Ihren neu angelegten Zugang freizuschalten."
 
     # Reports section
     reports:
