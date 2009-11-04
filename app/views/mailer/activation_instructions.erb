@@ -1,6 +1,8 @@
-Thank you for creating an account! Click the url below to activate your account!
+<%= I18n.t('users.activation.activation_mail.text1', :name => @name) %>
+<%= @activation_url %>
 
-<%= @account_activation_url %>
+<%= I18n.t('users.activation.activation_mail.text2') %>
 
-If the above URL does not work try copying and pasting it into your browser. If you continue to have problem, please feel free to contact us.
+<%= I18n.t('application.mailer.signature') %>
+
 
