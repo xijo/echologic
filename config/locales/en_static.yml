@@ -618,3 +618,70 @@ en:
 
     invite:
       title: &invite 'Make an echo'
+
+
+  # MAIL SECTION
+  mail:
+    # Activation section
+    activation:
+      subject: Please activate your echologic account
+      text1: |
+        Dear {{name}},
+
+        Thank you for registering at echologic. Please click the URL below to activate your account.
+      text2: |
+        If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
+
+        If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
+
+        Looking forward to seeing you soon at echologic,
+
+        Your echo team
+
+    # Welcome section
+    welcome:
+      subject: Welcome to echologic
+      text: |
+        Dear {{name}},
+
+        A very warm welcome to the echologic community.
+        We are happy seeing you join us on our common journey towards a new era of global participatory democracy.
+
+        At echologic, we will introduce more and more functionality enabling you to follow
+        and increasingly participate in the evolution of echo.
+
+        We wish you an inspiring and enriching time thoughout our challenging journey and also to
+        have much pleasure and fun with the echologic community.
+
+        With the best wishes,
+
+        Your echo team
+
+        p.s.: echo is much more than a Web 3.0 project with technical innovations.
+        Our team is working at many different fronts parallelly - all of which are necessary to
+        achieve echo's far reaching socio-political goals. Until successful financing of the project,
+        our resources remain very limited, resulting in a noticeable slower pace of development,
+        than you can count on afterwards.
+        In order to take off soon and get echo and many other innovative projects financed more easily,
+        we are just about to kick-off 'echonomy JAM' - a joint initiative with partners from economy and politics.
+        With echonomy JAM, we bring together social entrepreneurs with investors from both public and private
+        sector and establish a unique marketplace to foster the transition to an eco-socially sustainable,
+        democratic economy.
+        Please visit www.echonomyJAM.org for more information and an invitation to our Kick-off Event on 27.11.2009.
+
+    new_password:
+      subject: New password for echologic
+      text1: |
+        Dear {{name}},
+
+        a new password was requested for your echologic account. If you want to change it please click on the following link.
+
+      text2: |
+        If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
+
+        If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
+
+        We wish you further much inspiration and fun with the echologic Community.
+        With best regards,
+
+        your echo team

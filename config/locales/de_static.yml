@@ -602,3 +602,73 @@ de:
 
     invite:
       title: &invite 'echo bewirken'
+
+
+  # MAIL SECTION
+  mail:
+    # Activation section
+    activation:
+      subject: "Freischaltung des Zugangs zu echologic"
+      text1: |
+        Liebe(r) {{name}},
+
+        Danke für Ihre Registrierung auf echologic. Bitte besuchen Sie den unten stehenden Link um Ihren Zugang zu aktivieren.
+      text2: |
+        Sollte dieser Link nicht funktionieren, versuchen Sie bitte die Adresse zu kopieren und in die Adressleiste Ihres Browsers einzufügen.
+
+        Wenn Sie weitere Schwierigkeiten mit Ihrem echologic Zugang haben, zögern Sie bitte nicht uns jederzeit unter support@echologic.org zu kontaktieren. Wir helfen Ihnen gerne und schnellstmöglich.
+
+        Wir freuen uns sehr auf ein baldiges Wiedersehen auf echologic,
+
+        Ihr echo Team
+
+    # Welcome section
+    welcome:
+      subject: "Willkommen auf echologic"
+      text: |
+        Liebe(r) {{name}},
+
+        Herzlich willkommen in der echologic Community.
+        Wir freuen uns sehr Sie auf unserer gemeinsamen Reise in eine neue Äre globaler,
+        teilnehmender Demokratie am Board von echo begrüßen zu dürfen.
+
+        Auf echologic werden wir kontinuierlich neue Funktionalität hinzufügen, die Ihnen ermöglicht,
+        die Entwicklung von echo zu verfolgen und immer mehr mitzugestalten.
+
+        Wir wünschen Ihnen eine inspirierende und bereichernde Zeit auf unserer herausfordernden Reise
+        und auch viel Spass und Freude in der echologic Community.
+
+        Mit den besten Wünschen,
+
+        Ihr echo Team
+
+        p.s.: echo ist viel mehr als ein Web 3.0 Projekt mit technischen Innovationen. Unser Team arbeitet
+        gleichzeitig an vielen verschiedenen Fronten, die alle entscheidend sind, um echo`s weitreichende
+        sozio-politische Ziele mit Erfolg zu verwirklichen. Bis zur Finanzierung des Projektes werden
+        unsere Ressourcen sehr knapp bleiben. Dies resultiert in einem merkbar langsameren Fortschreiten der
+        Plattformentwicklung, als es nach Finanzierung mit Sicherheit zu erwarten ist.
+        Wir möchten es aber nicht dem Zufall überlassen. Um möglichst schnell durchstarten zu können,
+        und die Finanzierung von echo sowie anderen innovativen Projekten zu erleichtern, starten wir gerade
+        'echonomy JAM' - eine parteiübergreifende, gesammtgesellschaftliche Initiative mit Partnern aus
+        Wirtschaft und Politik. Mit echonomy JAM bringen wir Ideenträger und Kapitalgeber sowohl aus dem
+        öffentlichen als auch privaten Sektor zusammen, und etablieren einen einzigartigen Marktplatz
+        für öko-sozial nachhaltiges, demokratisches Wirtschaften.
+        Mehr Informationen sowie eine Einladung zu unserem Kick-off Event am 27.11.2009 finden Sie unter:
+        www.echonomyJAM.org
+
+    # New password section
+    new_password:
+      subject: "Neues Passwort für echologic"
+      text1: |
+        Liebe(r) {{name}},
+
+        für Ihren Zugang zu echologic wurde ein neues Passwort beantragt. Falls Sie Ihr Passwort ändern möchten, klicken Sie bitte auf den unten stehenden Link.
+      text2: |
+        Sollte dieser Link nicht funktionieren, versuchen Sie bitte die Adresse zu kopieren und in die Adressleiste Ihres Browsers einzufügen.
+
+        Wenn Sie weitere Schwierigkeiten mit Ihrem echologic Zugang haben, zögern Sie bitte nicht uns jederzeit unter support@echologic.org zu kontaktieren. Wir helfen Ihnen gerne und schnellstmöglich.
+
+        Wir wuenschen Ihnen weiterhin viel Inspiration und Spass in der echologic Community.
+        Mit den besten Grüßen,
+
+        Ihr echo Team

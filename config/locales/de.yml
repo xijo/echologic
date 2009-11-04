@@ -71,52 +71,6 @@ de:
 
     # Activations section
     activation:
-      activation_mail:
-        subject: Freischaltung des Zugangs zu echologic
-        text1: |
-          Liebe(r) {{name}},
-
-          Thank you for registering at echologic. Please click the URL below to activate your account.
-        text2: |
-          If clicking on the URL does not open a new browser window automatically, please try to copy and paste the URL into your browser.
-          If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
-
-          Wir freuen uns sehr auf ein baldiges Wiedersehen auf echologic,
-
-          Ihr echo Team
-      welcome_mail:
-        subject: Willkommen auf echologic
-        text: |
-          Liebe(r) {{name}},
-
-          Herzlich willkommen in der echologic Community.
-          Wir freuen uns sehr Sie auf unserer gemeinsamen Reise in eine neue Äre globaler, 
-          teilnehmender Demokratie am Board von echo begrüßen zu dürfen.
-
-          Auf echologic werden wir kontinuierlich neue Funktionalität hinzufügen, die Ihnen ermöglicht,
-          die Entwicklung von echo zu verfolgen und immer mehr mitzugestalten.
-
-          Wir wünschen Ihnen eine inspirierende und bereichernde Zeit auf unserer herausfordernden Reise
-          und auch viel Spass und Freude in der echologic Community.
-
-          Mit den besten Wünschen,
-
-          Ihr echo Team
-
-          p.s.: echo ist viel mehr als ein Web 3.0 Projekt mit technischen Innovationen. Unser Team arbeitet
-          gleichzeitig an vielen verschiedenen Fronten, die alle entscheidend sind, um echo's weitreichende
-          sozio-politische Ziele mit Erfolg zu verwirklichen. Bis zur Finanzierung des Projektes werden
-          unsere Ressourcen sehr knapp bleiben. Dies resultiert in einem merkbar langsameren Fortschreiten der
-          Plattformentwicklung, als es nach Finanzierung mit Sicherheit zu erwarten ist.
-          Wir möchten es aber nicht dem Zufall überlassen. Um möglichst schnell durchstarten zu können,
-          und die Finanzierung von echo sowie anderen innovativen Projekten zu erleichtern, starten wir gerade
-          'echonomy JAM' - eine parteiübergreifende, gesammtgesellschaftliche Initiative mit Partnern aus
-          Wirtschaft und Politik. Mit echonomy JAM bringen wir Ideenträger und Kapitalgeber sowohl aus dem
-          öffentlichen als auch privaten Sektor zusammen, und etablieren einen einzigartigen Marktplatz
-          für öko-sozial nachhaltiges, demokratisches Wirtschaften.
-          Mehr Informationen sowie eine Einladung zu unserem Kick-off Event am 27.11.2009 finden Sie unter:
-          www.echonomyJAM.org
-
       messages:
         success: Ihr Zugang wurde erfolgreich freigeschaltet. Willkommen auf echologic!
         failed: Ihr Zugang konnte leider nicht freigeschaltet werden. Bitte überprüfen Sie Ihre Eingaben.
@@ -128,25 +82,10 @@ de:
       step1_text: |
         <p><strong>Haben Sie Ihr Passwort vergessen?</strong>
         </p><p>
-        Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben.
-        Wir schicken Ihnen anschließend eine E-Mail, die Ihnen ermöglicht <strong>ein neues Passwort zu definieren</strong>.
+        Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben. Wir schicken Ihnen anschließend eine E-Mail, die es Ihnen ermöglicht <strong>Ihr Passwort neu zu setzen</strong>.
         </p>
       step1_mail: E-Mail verschicken
-      new_password_mail:
-        subject: Neues Passwort für echologic
-        text1: |
-          Liebe(r) {{name}},
 
-          Ein neues Passwort für Ihren echologic Zugang wurde beantragt.
-          Falls Sie diesen Antrag gestellt haben, klicken Sie bitte auf dem unteren Link.
-        text2: |
-          If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
-          If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
-
-          Wir wuenschen Ihnen weiterhin viel Inspiration und Spass in der echologic Community.
-          Mit den besten Grüßen,
-
-          Ihr echo Team
       step2_text: |
         Bitte tragen Sie <strong>Ihr neues Passwort</strong> ein, mit dem Sie sich in echologic einloggen möchten.
       step2_ok: Passwort setzen und einloggen
@@ -232,7 +171,7 @@ de:
 
       messages:
         created: "Ihr Profil wurde erfolgreich angelegt. Bitte überprüfen Sie Ihre E-Mails um Ihr Profil zu aktivieren."
-        
+
     # Reports section
     reports:
       messages:
@@ -426,4 +365,3 @@ de:
       user_session:
         email: E-Mail
         password: Passwort
-

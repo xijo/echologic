@@ -4,9 +4,9 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :concernments
   has_many :tags, :through => :concernments
-  
+
   has_many :reports, :foreign_key => 'suspect_id'
-  
+
   # Every user must have a profile. Profiles are destroyed with the user.
   has_one :profile, :dependent => :destroy
 
@@ -44,6 +44,8 @@ class User < ActiveRecord::Base
   end
 
   # Returns the display name of the user
+  # TODO Depricated. Use user.profile.full_name
+  #  Changed for mailer model - anywhere else used?
   def display_name()
     self.profile.first_name + " " + self.profile.last_name;
   end
