@@ -108,7 +108,7 @@
   height:       21px;
   padding:      0px 8px 2px;
   border:       none;
-  margin-right: 0px;
+  margin-right: -8px;
 }
 
 #loginContainer .loginButton:hover {
