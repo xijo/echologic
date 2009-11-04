@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : profile
     Created on : 17.09.2009, 09:52:01
     Author     : xijo
@@ -6,7 +6,7 @@
         Purpose of the stylesheet follows.
 */
 
-/* 
+/*
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
@@ -92,3 +92,56 @@
   background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
 }
 
+
+/* Styling for profile details at the connect section. */
+#profile_details_container {
+  padding:    5px;
+  background: #ddd;
+  -moz-border-radius:8px;
+  display:    none;
+  height:     200px;
+  width:      450px;
+}
+
+#profile_details_container .title {
+  height:     20px;
+  border:     0 none;
+  color:      #FFFFFF;
+  margin:     0 0 6px;
+  padding:    8px 18px 4px;
+  position:   relative;
+  background: #7AB031 url(../images/jquery-ui/ui-bg_gloss-wave_85_9fda58_500x100.gif) repeat-x scroll 50% 50%;
+  font-weight:bold;
+  display:    block;
+}
+
+#profile_details_container .title a {
+  height:     18px;
+  margin:     -10px 0 0;
+  padding:    1px;
+  position:   absolute;
+  right:      0.3em;
+  top:        50%;
+  width:      19px;
+  color:      #222;
+  -moz-border-radius:12px;
+}
+
+#profile_details_container .title a span {
+  display:    block;
+  margin:     1px;
+  background-image:url(../images/jquery-ui/ui-icons_21587f_256x240.png);
+  background-position:-96px -128px;
+  height:     16px;
+  width:      16px;
+  text-indent:-99999px;
+  overflow:   hidden;
+}
+
+#profile_details_container .title a:hover {
+  background: #fff;
+}
+
+#profile_details_container .title a span:hover {
+  background-image:url(../images/jquery-ui/ui-icons_7ab031_256x240.png);
+}

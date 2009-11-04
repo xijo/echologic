@@ -83,9 +83,7 @@ en:
       messages:
         login_success: Login successful. Welcome back to echologic.
         login_failed: Unknown user or wrong password.
-        logout_success: |
-          Logout successful.<br/>
-          Looking forward to seeing you again. Bye!
+        logout_success: "Logout successful.<br/>Looking forward to seeing you again. Bye!"
 
     # Activations section
     activation:

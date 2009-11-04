@@ -102,10 +102,13 @@ class ApplicationController < ActionController::Base
         store_location
         flash[:notice] = "You must be logged out to access this page"
         respond_to do |format|
-          format.html
-          format.js
+          format.html { redirect_to root_path }
+          format.js do
+            render :update do |page|
+              page.redirect_to root_path
+            end
+          end
         end
-        #redirect_to join_url
         return false
       end
     end
