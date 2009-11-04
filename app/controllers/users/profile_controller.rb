@@ -1,7 +1,7 @@
 class Users::ProfileController < ApplicationController
 
   before_filter :require_user, :only => [:show, :edit, :update, :get_personal, :welcome, :upload_picture, :reload_pictures]
-  
+
   access_control do
     allow logged_in # Logged in persons are allowed to modify their profile
   end
@@ -12,14 +12,14 @@ class Users::ProfileController < ApplicationController
     @profile = Profile.find(params[:id])
     respond_to do |format|
       format.html
-      format.js do 
+      format.js do
         replace_container('personal_container', :partial => 'users/profile/profile_own')
       end
     end
   end
-  
+
   def details
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find(params[:id], :include => [:web_profiles, :memberships, :concernments, :user])
     respond_to do |format|
       format.js
       format.html { render :partial => 'profile_details', :layout => 'application' }
@@ -62,7 +62,7 @@ class Users::ProfileController < ApplicationController
     @user = current_user
     @profile = current_user.profile
     respond_to do |format|
-      format.js do 
+      format.js do
         render :template => 'users/profile/upload_picture'
       end
     end

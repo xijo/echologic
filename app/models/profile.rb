@@ -2,6 +2,9 @@ class Profile < ActiveRecord::Base
 
   # Every profile has to belong to a user.
   belongs_to :user
+  has_many :web_profiles, :through => :user
+  has_many :memberships,  :through => :user
+  has_many :concernments, :through => :user
 
   validates_presence_of :user_id
 
