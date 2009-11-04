@@ -63,8 +63,8 @@ de:
         remember: Merke mich!
         hello: Hallo {{name}}
       messages:
-        login_success: Login erfolgreich. Willkommen zurück auf echologic!
-        login_failed: Unbekannter Nutzer oder falsches Passwort.
+        login_success:  "Login erfolgreich. Willkommen zurück auf echologic!"
+        login_failed:   "Unbekannter Nutzer oder falsches Passwort."
         logout_success: "Logout erfolgreich.<br/>Wir freuen uns auf ein baldiges Wiedersehen. Tschüß!"
 
     # Activations section
@@ -334,6 +334,7 @@ de:
         too_short: '{{attribute}} ist zu kurz.'
         invalid: '{{attribute}} hat ein falsches Format.'
         confirmation: '{{attribute}} muss übereinstimmen.'
+        access_denied: "Ihnen fehlt die nötige Zugangsberechtigung."
 
       template:
         header:
@@ -356,9 +357,12 @@ de:
 
   authlogic:
     error_messages:
-      email_invalid: "Bitte korrigieren Sie die angegebene E-Mail Adresse."
-      password_blank: "Bitte geben Sie ein Passwort an."
-      not_active: "Ihr Zugang wurde noch nicht freigeschaltet. Überprüfen Sie bitte Ihren Posteingang."
+      email_invalid:      "Bitte korrigieren Sie die angegebene E-Mail Adresse."
+      password_blank:     "Bitte geben Sie ein Passwort an."
+      not_active:         "Ihr Zugang wurde noch nicht freigeschaltet. Überprüfen Sie bitte Ihren Posteingang."
+      must_be_logged_in:  "Sie müssen eingeloggt sein, um diese Seite zu sehen."
+      must_be_logged_out: "Sie müssen ausgeloggt sein, um diese Seite zu sehen."
+
     attributes:
       user_session:
         email: E-Mail

@@ -81,8 +81,8 @@ en:
         remember: Remember me!
         hello: Hello {{name}}
       messages:
-        login_success: Login successful. Welcome back to echologic.
-        login_failed: Unknown user or wrong password.
+        login_success: "Login successful. Welcome back to echologic."
+        login_failed: "Unknown user or wrong password."
         logout_success: "Logout successful.<br/>Looking forward to seeing you again. Bye!"
 
     # Activations section
@@ -221,6 +221,7 @@ en:
         too_short: '{{attribute}} is too short.'
         invalid: '{{attribute}} must to be in a valid format.'
         confirmation: '{{attribute}} confirmation does not match.'
+        access_denied: "You are not allowed to perform this action."
 
       template:
         header:
@@ -241,9 +242,12 @@ en:
 
   authlogic:
     error_messages:
-      email_invalid: "Please enter a correct e-mail address."
-      password_blank: "Password must be defined."
-      not_active: "Your account has not been activated yet. Please check your inbox."
+      email_invalid:      "Please enter a correct e-mail address."
+      password_blank:     "Password must be defined."
+      not_active:         "Your account has not been activated yet. Please check your inbox."
+      must_be_logged_in:  "You must be logged in to access this page."
+      must_be_logged_out: "You must be logged out to access this page."
+
     attributes:
       user_session:
         email: E-Mail

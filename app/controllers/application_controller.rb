@@ -88,7 +88,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
+        flash[:notice] = I18n.t('authlogic.error_messages.must_be_logged_in')
         respond_to do |format|
           format.html { redirect_to root_path }
         end
@@ -100,7 +100,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:notice] = "You must be logged out to access this page"
+        flash[:notice] = I18n.t('authlogic.error_messages.must_be_logged_out')
         respond_to do |format|
           format.html { redirect_to root_path }
           format.js do
@@ -125,8 +125,8 @@ class ApplicationController < ActionController::Base
     # If access is denied display warning and redirect to users_path
     # TODO localize access denied message
     def access_denied
-      flash[:error] = 'Access denied.'
-      redirect_to root_path
+      flash[:error] = I18n.t('activerecord.errors.messages.access_denied')
+      redirect_to welcome_path
     end
 
 end

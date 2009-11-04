@@ -1,17 +1,39 @@
-/* APPLICATION TABS SECTION */
-.applicationTabs {
-/*  color: #000;
-  border-bottom: 2px solid black;
-  margin: 13px 0px 0px 0px;
-  padding: 0px;
-  z-index: 1;
-  padding-left: 10px;
+
+/*  Container which holds all tabs. With specified height and negative margin
+    it takes care for the correct positioning and overlapping with 'mainBox'
+
+    20.8.2009 - Joe (tested: ie8, ff3, ff2):
+        - margin to margin-left: centering in ff2
+        - display block and min-height for jquery's visible check
+        - margin moved to single tabs
+    10.10.2009 - Joe
+        - min-height for empty tab container
+    13.10.2009 - Joe
+        - now wraps 'applicationTabs' container, which is generated through
+          rails-widgets.
 */
+
+.tabContainer {
   margin:       0 auto 8px auto;
+  padding-top:  5px;
   overflow:     visible;
   position:     relative;
   clear:        both;
   width:        900px;
+  text-align:   center;
+  z-index:      10;
+  min-height:   1px;
+  display:      block;
+}
+
+
+/* APPLICATION TABS SECTION */
+.applicationTabs {
+  margin:       0 auto 8px auto;
+  overflow:     visible;
+  position:     relative;
+  clear:        both;
+  width:        970px;
   text-align:   center;
   z-index:      10;
   min-height:   1px;
@@ -28,22 +50,14 @@
   height:       51px;
   display:      inline-block;
   color:        #7bb031;
-  font-size:    15px;
-  text-decoration: none;
   border:       0px;
   margin:       0px;
+  text-decoration: none;
+  font-size:    15px;
 }
 
 
 .applicationTabs a, applicationTabs a.active {
-/*  color: #000000;
-  background: #EEEEEE;
-  font-weight: bold;
-  border: 2px solid black;
-  padding: 2px 5px 0px 5px;
-  margin: 0;
-  text-decoration: none;
-*/
   background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right top;
   margin:       0 0 0 21px;
   padding:      0 21px 0 0;
@@ -56,19 +70,9 @@
   color:       #7bb031;
 }
 
-/*.applicationTabs a.active {
-  background: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
-} */
-
 .applicationTabs a:hover {
-  color:       #1A4864;
+  color:       #21587f;
 }
-
-/*.applicationTabs a.active:hover {
-  background:  #FFFFFF;
-  color:       #000000;
-}*/
 
 .applicationTabs li.active {
   background:  url(../images/page/tabs/left_on.png) no-repeat scroll left top !important;
@@ -76,33 +80,13 @@
 
 .applicationTabs a.active {
   background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right top !important;
-  color:       #1A4864 !important;
+  color:       #21587f !important;
 }
 
-/*  Container which holds all tabs. With specified height and negative margin
-    it takes care for the correct positioning and overlapping with 'mainBox'
-
-    20.8.2009 - Joe (tested: ie8, ff3, ff2):
-        - margin to margin-left: centering in ff2
-        - display block and min-height for jquery's visible check
-        - margin moved to single tabs
-    10.10.2009 - Joe
-        - min-height for empty tab container
-    13.10.2009 - Joe
-        - now wraps 'applicationTabs' container, which is generated through
-          rails-widgets.
-*/
-.tabContainer {
-  margin:       0 auto 8px auto;
-  padding-top:  5px;
-  overflow:     visible;
-  position:     relative;
-  clear:        both;
-  width:        900px;
-  text-align:   center;
-  z-index:      10;
-  min-height:   1px;
-  display:      block;
-  min-height:   52px;
+/* My echo tab */
+#my_echo_tab_container {
+  float: right;
+  position: relative;
+  right: 100px;
+  margin-left: -300px;
 }
-
