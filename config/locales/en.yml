@@ -86,6 +86,8 @@ en:
         logout_success: |
           Logout successful.<br/>
           Looking forward to seeing you again. Bye!
+        must_be_logged_in: You must be logged in to access this page.
+        must_be_logged_out: You must be logged out to access this page.
 
     # Activations section
     activation:

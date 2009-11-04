@@ -68,6 +68,8 @@ de:
         logout_success: |
           Logout erfolgreich.<br/>
           Wir freuen uns auf ein baldiges Wiedersehen. Tschüß!
+        must_be_logged_in: Sie müssen eingeloggt sein, um diese Seite zu sehen.
+        must_be_logged_out: Sie müssen ausgeloggt sein, um diese Seite zu sehen.
 
     # Activations section
     activation:

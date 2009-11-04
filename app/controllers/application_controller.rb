@@ -88,7 +88,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        show_info_message ("You must be logged in to access this page")
+        flash[:notice] = I18n.t('users.user_sessions.messages.must_be_logged_in')
         respond_to do |format|
           format.html { redirect_to root_path }
         end
@@ -100,7 +100,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        show_info_message ("You must be logged in to access this page")
+        flash[:notice] = I18n.t('users.user_sessions.messages.must_be_logged_out')
         respond_to do |format|
           format.html
           format.js
