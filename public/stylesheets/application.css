@@ -72,13 +72,17 @@
   -webkit-border-bottom-right-radius: 10px;
   border-top:  0px;
   position: fixed;
-  z-index: 2000;
+}
+
+#messageContainer #infoBox, #messageContainer #errorBox {
+  z-index: 2000;  
 }
 
 #messageContainer .infoErrorIcon {
   float: left;
   width: 16px;
-  height: 16px
+  height: 16px;
+  z-index: 2010;
 }
 
 #messageContainer .message , #messageContainer .closeButton {
