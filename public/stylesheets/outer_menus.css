@@ -49,6 +49,10 @@
   background:  transparent url(../images/page/icons/logout.png) no-repeat scroll;
 }
 
+#feedback_button:hover, #about_echo_button:hover, #logout_button:hover {
+  background-position: 0 -16px;
+}
+
 #language_selector {
   background:  transparent;
   position:    absolute;
