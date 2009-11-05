@@ -48,6 +48,22 @@ de:
 
       feedback: Feedback
 
+  # ----------------
+  # Welcome function
+  # ----------------
+
+  welcome:
+    title: Willkommen zurück auf echologic!
+    text: |
+      <p>
+      Es ist die Startseite von echologic, die Sie immer auf <strong>die neuesten Funktionalität</strong> ausmerksam machen wird.<br/>
+      Mit der Zeit werden wir immer mehr Funktionen zur Verfügung stellen, die Ihnen ermöglichen, die Entwicklung von echo
+      zunehmend mitzugestalten.
+      </p><p>
+      Das einzige, was Sie derzeitig tun können, ist <strong>Ihr Profil zu vervollständigen</strong>.<br/>
+      Eine erste Version von echo's Vernetzen wird bald veröffentlicht und wird Ihnen ermöglichen, andere Mitglieder
+      der Community durchzustöbern.
+
   # ------------
   # USERS MODULE
   # ------------

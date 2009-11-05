@@ -1,5 +1,11 @@
 <%= tabnav :my_echo %>
 
-Very cool welcome template, but this text is missing! ;(
+<div class="separator-no-shadow"></div>
 
-<%= link_to 'Profile', my_profile_path %>
+<h1><%= I18n.t('welcome.title') %></h1>
+
+<%= I18n.t('welcome.text') %>
+
+<div>
+  <%= link_to 'Profile', my_profile_path %>
+</div>

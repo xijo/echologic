@@ -69,6 +69,22 @@ en:
         welcome: Welcome
         profile: Profile
 
+  # ----------------
+  # Welcome function
+  # ----------------
+
+  welcome:
+    title: Welcome back to echologic!
+    text: |
+      <p>
+      This is the start page of echologic showing you some of the <strong>most recently added functionality</strong>.<br/>
+      With the time, more and more features will be introduced which will enable you to follow and increasingly
+      engage into the evolution of echo.
+      </p><p>
+      Currently, the only thing you can do is to <strong>set up your profile</strong>.<br/>
+      A first version of echo Connect will also be released shortly,
+      which will allow you to browse other members of the community.
+
   # ------------
   # USERS MODULE
   # ------------

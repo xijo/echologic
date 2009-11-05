@@ -51,6 +51,12 @@ h1, h2, h3, h4 {
   font-weight:  bold;
 }
 
+#contentContainer h1 {
+  color:        #7bb031;
+  font-size:    22px;
+  margin:       20px 0px;
+}
+
 a {
   color:        #7bb031;
   text-decoration: none;
