@@ -1,20 +1,17 @@
 <div id="topMenuContainer">
 
-  <%= link_to "Logout", user_session_path, :method => :delete if current_user_session %>
+  <%= link_to I18n.t('layouts.outer_menu.logout'), user_session_path, :method => :delete, :id => 'logout_button' if current_user_session %>
+
+  <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :id => 'about_echo_button', :class => 'outerMenuItem') %>
+
+  <%= link_to(I18n.t('layouts.outer_menu.feedback'), new_feedback_path, :id => 'feedback_button', :class => 'outerMenuItem') %>
 
   <!-- Language choose section. -->
-  <% link_to('#') do %>
-    <span id='languageChooser'>
-      <%= I18n.t('layouts.outer_menu.language') %>
-    </span>
-    <%- image_tag('page/icons/arrow.gif') %>
+  <% link_to('#', :id => 'echo_language_button') do %>
+     <%= I18n.t('layouts.outer_menu.language') %>
   <% end %>
 
-  <%= link_to(I18n.t('layouts.outer_menu.about'), static_path(:about), :class => 'outerMenuItem') %>
-
-  <%= link_to(I18n.t('layouts.outer_menu.feedback'), new_feedback_path, :class => 'outerMenuItem') %>
-
-  <div id="languageSelector" style="display:none;">
+  <div id="language_selector" style="display:none;">
     <%= image_tag('page/dropdown/top.png') %>
     <ul>
       <li><%= link_to("English", url_for(:controller => request[:controller], :action => request[:action], :locale => :en)) %></li>

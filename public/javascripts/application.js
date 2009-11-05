@@ -109,12 +109,14 @@ function bindMoreHideButtonEvents() {
 
 /* Show and hide language selection on mouse enter and mouse leave. */
 function bindLanguageSelectionEvents() {
-  $('#languageChooser').bind("mouseenter", function() {
-    $('#languageSelector').show();
+  $('#echo_language_button').bind("mouseenter", function() {
+    var pos = $("#echo_language_button").position();
+    $("#language_selector").css( { "left": (pos.left + 13) + "px", "top": (pos.top + 20) + "px" } );
+    $('#language_selector').show();
   });
 
-  $('#languageSelector').bind("mouseleave", function() {
-    $('#languageSelector').hide();
+  $('#language_selector').bind("mouseleave", function() {
+    $('#language_selector').hide();
   });
 }
 
@@ -162,7 +164,7 @@ function info(text) {
   $('#infoBox').stop().hide();
   $('#errorBox').stop().hide();
   $('#messageContainer #infoBox .message').html(text);
-  $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 7000).slideUp();
+  $('#messageContainer #infoBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
 }
 
 function error(text) {

@@ -53,13 +53,14 @@ en:
       discuss: Discuss
       connect: Connect
       act: Act
-      my_echo: My Echo
+      my_echo: My echo
       admin: Admin
 
     outer_menu:
       language: Language
       feedback: &feedback Feedback
       about: &about About us
+      logout: Logout
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
 
@@ -79,7 +80,7 @@ en:
         signup: Not a member yet?
         set_password: Forgot your password?
         remember: Remember me!
-        hello: Hello {{name}}
+        hello: Logged in<br/><strong>{{name}}</strong>
       messages:
         login_success: "Login successful. Welcome back to echologic."
         login_failed: "Unknown user or wrong password."

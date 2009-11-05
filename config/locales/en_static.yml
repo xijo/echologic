@@ -342,7 +342,7 @@ en:
         citizens: "Citizens"
         scientists: "Experts"
         decision_makers: "Representatives"
-        organisations: "Ogranisations"
+        organisations: "Organisations"
 
       show:
         text_top: |

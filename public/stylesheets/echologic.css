@@ -58,13 +58,14 @@
 #loginContainer {
   clear:       right;
   float:       right;
+  padding-top: 13px;
 }
 
 #loginContainer .label {
   color:       #7BB031;
   width:       152px;
   display:     inline-block;
-  margin:      15px 0 3px 0;
+  margin-bottom: 3px;
   padding:     0 8px;
   font-size:   12px;
   font-weight: bold;

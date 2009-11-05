@@ -6,6 +6,20 @@
       General layouting for the logged in section.
 */
 
+#logged_in_user {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 12px 12px 0 0;
+  text-align: right;
+}
+
+#logged_in_user_pic {
+  height: 56px;
+  float: right;
+  margin-right: 10px;
+}
+
 #applicationContainer {
   width:       100%;
   z-index:     5;
@@ -92,7 +106,7 @@
   display: inline;
   overflow: hidden;
   list-style-type: none;
-  margin: 0 10px;
+  margin: 0 13px;
 }
 
 /*.submenu li span.disabled {
@@ -106,6 +120,7 @@
 .submenu a {
   color: #21587f;
   background: #FFF;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
 }

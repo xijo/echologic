@@ -18,7 +18,8 @@
 #topMenuContainer a, #topMenuContainer a:visited {
   color:       #7691A2;
   font-family: arial,Helvetica,sans-serif;
-  margin:      5px 2px 0 18px;
+  margin:      5px 2px 0 10px;
+  padding-left: 20px;
   text-decoration:none;
   float:       right;
   font-size:   12px;
@@ -32,55 +33,50 @@
   color:       #1A4864;
 }
 
-#languageChooser {
-  background:  transparent url(../images/page/icons/babelfish.png) no-repeat scroll;
-  padding:      0 0 0 20px;
+#feedback_button {
+  background:  transparent url(../images/page/icons/feedback.png) no-repeat scroll;
 }
 
-/* Language selector */
+#about_echo_button {
+  background:  transparent url(../images/page/icons/about.png) no-repeat scroll;
+}
 
-/* over and out solved by jquery, thanks! */
-/*#overlay {
-  background:  transparent;
-  position:    fixed;
-  left:        0;
-  top:         0;
-  width:       100%;
-  height:      100%;
-  z-index:     500;
-  cursor:      default;
-}*/
+#echo_language_button {
+  background:  transparent url(../images/page/icons/babelfish.png) no-repeat scroll;
+}
 
-#languageSelector {
+#logout_button {
+  background:  transparent url(../images/page/icons/logout.png) no-repeat scroll;
+}
+
+#language_selector {
   background:  transparent;
   position:    absolute;
-  top:         22px;
-  right:       -15px;
-  text-align:  right;
   width:       200px;
 }
 
-#languageSelector {
+#language_selector {
   z-index:     510;
 }
 
-#languageSelector li {
+#language_selector li {
   background:  transparent url(../images/page/dropdown/middle.png) repeat-y;
   list-style-position: inside;
   margin:      0px;
+  padding-left: 10px;
 }
 
-#languageSelector li:first-child a {
+#language_selector li:first-child a {
   border-top: none;
 }
 
-#languageSelector ul {
+#language_selector ul {
   list-style-type:none;
   padding: 0;
   margin: 0;
 }
 
-#languageSelector a, #languageSelector a:visited {
+#language_selector a, #language_selector a:visited {
   border-top:1px solid #efefef;
   margin-right: 20px;
   padding: 4px 0;

@@ -61,11 +61,11 @@ de:
         signup: Noch kein Mitglied?
         set_password: Passwort vergessen?
         remember: Merke mich!
-        hello: Hallo {{name}}
+        hello: Eingeloggt<br/><strong>{{name}}</strong>
       messages:
-        login_success:  "Login erfolgreich. Willkommen zurück auf echologic!"
+        login_success:  "Login erfolgreich.<br/>Willkommen zurück auf echologic!"
         login_failed:   "Unbekannter Nutzer oder falsches Passwort."
-        logout_success: "Logout erfolgreich.<br/>Wir freuen uns auf ein baldiges Wiedersehen. Tschüß!"
+        logout_success: "Logout erfolgreich.<br/>Bis zum nächsten mal. Tschüß!"
 
     # Activations section
     activation:
@@ -188,7 +188,7 @@ de:
       language: Sprache
       feedback: &feedback Feedback
       about: &about Über uns
-      logout: Logout
+      logout: Ausloggen
       imprint: &imprint Impressum
       data_privacy: &data_privacy Datenschutz
 
