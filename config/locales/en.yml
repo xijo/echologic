@@ -74,7 +74,7 @@ en:
   # ----------------
 
   welcome:
-    title: Welcome back to echologic!
+    title: Welcome to echologic!
     text: |
       <p>
       This is the start page of echologic showing you some of the <strong>most recently added functionality</strong>.<br/>
