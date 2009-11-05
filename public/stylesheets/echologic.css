@@ -16,7 +16,7 @@
 
 #echologicLogo {
   float:       left;
-  margin:      23px 0 -10px 0;
+  margin:      23px 0 -27px 0;
 }
 
 #echologicLogo img {
@@ -58,7 +58,7 @@
 #loginContainer {
   clear:       right;
   float:       right;
-  padding-top: 13px;
+  padding:     13px 0 8px;
 }
 
 #loginContainer .label {
