@@ -244,6 +244,25 @@
   padding:     2px 5px;
 }
 
+/* Boxes */
+
+.mainBox {
+  width:       945px;
+  margin:      0 auto 14px auto;
+  z-index:     5;
+  clear:       both;
+  text-align:  left;
+  padding:     0 5px;
+  background:  #fff;
+}
+
+.boxContent {
+  background:   #fff;
+  margin:       0 23px 0 0;
+  padding:      0;
+}
+
+
 /* echologic */
 
 #echoTeaser * {

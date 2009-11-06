@@ -23,14 +23,12 @@
     <%# render :partial => "users/user_sessions/login" %>
   </div>
  
-  <div class="mainBox">
-    <% insert_rounded_box do %>
-      <div class="boxContent" id="mainBoxContent">
-        <div id="staticContent">
-          <%= yield %>
-        </div>
+  <div class="mainBox rounded-box rounded-box-green-iwot">
+    <div class="boxContent" id="mainBoxContent">
+      <div id="staticContent">
+        <%= yield %>
       </div>
-    <% end %>
+    </div>
   </div>
 
 </body>

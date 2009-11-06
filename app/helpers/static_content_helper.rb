@@ -2,21 +2,8 @@
 #
 module StaticContentHelper
 
-  # Inserts div structure for rounded box
-  # Pretty cooler rounded box helper with yield function! Usage makes our
-  # views simpler than before and only one method will be needed.
-  # TODO cool but depricated through new rounded box design
-  def insert_rounded_box
-    concat "<div class='boxTop'>\n  <div class='boxLeft'></div>"
-    concat "  <div class='boxRight'></div>\n</div>"
-    concat "<div class='boxMiddle'>\n  <div class='boxMiddleLeft'></div>"
-    yield
-    concat "</div>\n<div class='boxBottom'>\n  <div class='boxLeft'></div>\n"
-    concat "  <div class='boxRight'></div>\n</div>"
-  end
 
-  # Inserts the breadcrumb for the given main and sub menu point
-  # TODO sub menu title isn't used atm. nessacary? title vs. long_title discussion
+  # Inserts the breadcrumb for the given main and sub menu point 
   def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
     controller = request[:controller].split('/')[1]
     action = request[:action]
@@ -54,7 +41,7 @@ module StaticContentHelper
   end
 
   # Insert back and next buttons according to the given paths.
-  # TODO w3c forbids block in anthor!
+  # TODO w3c forbids block in anchor!
   def insert_back_next_buttons(prev_link, next_link)
     back_button = "<div id='previousPageButton' class='changePageButton'>#{I18n.t('application.general.back')}</div>"
     next_button = "<div id='nextPageButton' class='changePageButton'>#{I18n.t('application.general.next')}</div>"

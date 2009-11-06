@@ -152,10 +152,10 @@ function makeTooltips() {
 }
 
 
-/* Add rounded corners to all div elements with class "roundedBox" */
+/* Add rounded corners to all div elements with class "rounded-box" */
 var roundCorners = function(){
- var str = '<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b><b class="lr l"></b><b class="lr r"></b><b class="tb b"></b><b class="tb t"></b>';
-  $('.roundedBox').addClass("boxc").append(str);
+  var str = '<b class="lr l"></b><b class="lr r"></b><b class="tb t"></b><b class="tb b"></b><b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b>';
+  $('.rounded-box').append(str);
 };
 
 
