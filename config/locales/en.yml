@@ -100,7 +100,7 @@ en:
       messages:
         login_success: "Login successful. Welcome back to echologic."
         login_failed: "Unknown user or wrong password."
-        logout_success: "Logout successful.<br/>Looking forward to seeing you again. Bye!"
+        logout_success: "Logout successful.<br/>See you later. Bye!"
 
     # Activations section
     activation:
@@ -114,7 +114,7 @@ en:
       step1: Require new password
       step2: Define new password
       step1_text: |
-        <strong>Forgot your password?</strong><br/><br/>
+        <strong>Forgot your password</strong> or you would like simply define a new one?<br/><br/>
         No problem! Just fill in your <strong>E-Mail</strong> address you used to sign up to echologic.<br/>
         We will send you an E-mail shortly allowing you <strong>to define a new password</strong>.
       step1_mail: Send E-Mail
@@ -196,7 +196,7 @@ en:
           </p><p>
           Eager to <strong>contribute your ideas</strong>, too!?<br/>
           Please enter your name and E-Mail address below!<br/>
-          Other citizens, experts and politicians are already waiting to <strong>form echo</strong> together with you.
+          Other citizens, experts and representatives are already waiting to <strong>form echo</strong> together with you.
           </p>
         action: 'Join now!'
 

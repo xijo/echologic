@@ -94,7 +94,7 @@ de:
       step1: Neues Passwort anfordern
       step2: Neues Passwort setzen
       step1_text: |
-        <p><strong>Haben Sie Ihr Passwort vergessen?</strong>
+        <p><strong>Haben Sie Ihr Passwort vergessen</strong> oder möchten Sie einfach ein neues?
         </p><p>
         Kein Problem! Tragen Sie einfach Ihre <strong>E-Mail</strong> Adresse ein, mit der Sie sich auf echologic angemeldet haben. Wir schicken Ihnen anschließend eine E-Mail, die es Ihnen ermöglicht <strong>Ihr Passwort neu zu setzen</strong>.
         </p>
@@ -179,7 +179,7 @@ de:
           </p><p>
           Möchten auch Sie Ihre <strong>Ideen beisteuern</strong>?<br/>
           Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein! Andere engagierte BürgerInnen,
-          ExpertInnen und PolitikerInnen warten schon darauf, zusammen mit Ihnen <strong>echo zu gestalten</strong>.
+          ExpertInnen und RepräsentantInnen warten schon darauf, zusammen mit Ihnen <strong>echo zu gestalten</strong>.
           </p>
         action: 'Jetzt beitreten!'
 
