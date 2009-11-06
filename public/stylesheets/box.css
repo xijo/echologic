@@ -5,25 +5,27 @@
 
 .rounded-box {
   position:relative;
-  margin:       0 -23px 0 0;
 }
 
 .rounded-box b.cn { 
   height: 14px;
   width: 16px;
   position:absolute;
+  background-repeat: no-repeat;
 }
 
 .rounded-box b.lr {
   width: 16px;
   height: 100%;
   position:absolute;
+  background-repeat: repeat-y;
 }
 
 .rounded-box b.tb {
   width: 100%;
-  height: 15px;
+  height: 16px;
   position:absolute;
+  background-repeat: repeat-x;
 }
 
 .rounded-box b.tl {top: -14px; left: -16px; background-position: top left;}
@@ -34,25 +36,28 @@
 .rounded-box b.l { left: -16px; top: 0px; background-position: left; }
 .rounded-box b.r { right: -16px; top: 0px; background-position: right; }
 
-.rounded-box b.t { left: 0px; top: -15px; background-position: top; }
-.rounded-box b.b { left: 0px; bottom: -15px; background-position: bottom; }
+.rounded-box b.t { left: 0px; top: -16px; background-position: top; }
+.rounded-box b.b { left: 0px; bottom: -16px; background-position: bottom; }
 
 
 /* Different color setups.
    iwot stands for: inner: white & outer: transparent
 */
 
+.rounded-box-green-iwot {
+  background:   #fff;
+  margin:       0;
+  padding:      0;
+}
+
 .rounded-box-green-iwot b.cn {
   background-image:  url(../images/page/box/borders_7bb031_iwot_corners.png);
-  background-repeat: no-repeat;
 }
 
 .rounded-box-green-iwot b.lr {
   background-image:  url(../images/page/box/borders_7bb031_iwot_leftright.png);
-  background-repeat: repeat-y;
 }
 
 .rounded-box-green-iwot b.tb {
   background-image:  url(../images/page/box/borders_7bb031_iwot_topbottom.png);
-  background-repeat: repeat-x;
 }
