@@ -1,0 +1,39 @@
+<%
+# this partial renders a navigation bar, you can call it in your views with:
+#   <% navigation :static_menu % >
+#
+# you can pass render_navigation a few options:
+#   :generate_css => true|false #=> generates a default inline css for the tabnav, defaults to false
+#   :html => aHash #=> sets html options for the tabnav's div (es :html => {:class=> 'myCssClass', :id=>'myCssId'})
+#
+render_navigation :static_menu, :separator => '' , :generate_css => false, :html => { :id => 'static_menu' } do
+
+  add_item :html => { :id => 'echologic_button' } do |i|
+    i.named build_static_menu_button('echologic')
+    i.links_to :controller => 'static/echologic', :action => 'show'
+  end
+
+  add_item :html => { :id => 'echo_button' } do |i|
+    i.named build_static_menu_button('echo')
+    i.links_to :controller => 'static/echo', :action => 'show'
+  end
+
+  add_item :html => { :id => 'echocracy_button' } do |i|
+    i.named build_static_menu_button('echocracy')
+    i.links_to :controller => 'static/echocracy', :action => 'show'
+  end
+
+  add_item :html => { :id => 'echonomy_button' } do |i|
+    i.named build_static_menu_button('echonomy')
+    i.links_to :controller => 'static/echonomy', :action => 'show'
+  end
+
+  add_item :html => { :id => 'join_button' } do |i|
+    i.named build_static_menu_button('join')
+    i.links_to hash_for_join_path
+    i.highlights_on :controller => 'users/password_resets'
+    i.highlights_on :controller => 'users/activations'
+  end
+
+end
+%>

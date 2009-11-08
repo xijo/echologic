@@ -8,23 +8,23 @@
     <meta name="description" content="<%= I18n.t('application.meta.description') %>"/>
     <meta name="keywords" content="<%= I18n.t('application.meta.keywords') %>"/>
     <link rel="shortcut icon" href="/images/favicon.gif" type="image/gif" />
-    
+
     <!-- Stylesheets -->
     <%= stylesheet_link_tag 'echologic' %>
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag "formtastic" %>
     <%= stylesheet_link_tag "formtastic_changes" %>
-    
+
 
     <!-- Javascript -->
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag 'fragment_observer' %>
     <%# javascript_include_tag 'IE8' %>
-    <%= javascript_include_tag 'jquery.forms' %>    
+    <%= javascript_include_tag 'jquery.forms' %>
     <%= javascript_include_tag 'jquery.ba-url.min' %>
     <%= javascript_include_tag 'jquery.autogrow' %>
     <%= javascript_include_tag 'jquery.tooltip.pack' %>
-    <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>    
+    <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
   </head>
   <body>
 
@@ -38,8 +38,8 @@
 
     <!-- Messaging section. -->
     <%= render :partial => 'layouts/components/messages' %>
-    
-    
+
+
     <div id="echologicContainer" <%= display_echologic_container %>>
       <%= render :partial => "layouts/components/statement" %>
       <%= render :partial => "layouts/components/news" %>
@@ -48,9 +48,9 @@
     <div class="tabContainer" id="tabContainer" <%= display_tab_container %>>
       <%= yield :tabContainer %>
     </div>
-  
+
     <div class="mainBox rounded-box rounded-box-green-iwot">
-      <%= render :partial => "layouts/components/static_menu" %>
+      <%= navigation :static_menu %>
       <div id="staticContent">
         <%= yield %>
       </div>
@@ -60,6 +60,6 @@
 
     <!-- Dialog container for outer menu. -->
     <div id="dialogContent" style="display:none;"></div>
- 
+
   </body>
 </html>

@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
 
   $('#user_session_email').focus();
-  
+
   $('textarea').autogrow();
 
 });
@@ -46,6 +46,11 @@ function setActionControllerFragment(href) {
 /* TODO: unobtrusive check */
 function bindAjaxClickEvents() {
   $(".ajaxLink").live("click", function() {
+    setActionControllerFragment(this.href);
+    return false;
+  });
+
+  $("#static_menu a").live("click", function() {
     setActionControllerFragment(this.href);
     return false;
   });
@@ -125,6 +130,8 @@ function bindLanguageSelectionEvents() {
 function changeMenuImage(item) {
   $('#staticMenu .menuImage').removeClass('activeMenu');
   $('#staticMenu #'+item+' .menuImage').toggleClass('activeMenu');
+  $('#static_menu a').removeClass('active');
+  $('#static_menu #'+item+'_button').toggleClass('active');
 }
 
 /* Use this parameters to render toggle effects.

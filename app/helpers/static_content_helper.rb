@@ -3,7 +3,7 @@
 module StaticContentHelper
 
 
-  # Inserts the breadcrumb for the given main and sub menu point 
+  # Inserts the breadcrumb for the given main and sub menu point
   def insert_breadcrumb(main_link, sub_link, sub_menu_title='.title', show_illustration=true)
     controller = request[:controller].split('/')[1]
     action = request[:action]
@@ -64,6 +64,12 @@ module StaticContentHelper
     button += "<span class='menuTitle'>#{I18n.t(title)}</span><br/>"
     button += "<span class='menuSubtitle'>#{I18n.t(subtitle)}</span>"
     link_to(button, {:url => link}, :href => link, :class => 'staticMenuButton', :id => item.split('_')[0])
+  end
+
+  def build_static_menu_button(item)
+    val =  "<span class='img #{item}_image'>&nbsp;</span>"
+    val += "<span class='title'>"    + I18n.t("static.#{item}.title")    + "</span><br/>"
+    val += "<span class='subtitle'>" + I18n.t("static.#{item}.subtitle") + "</span>"
   end
 
   # Returns the image filename (on of off state) for a specific item.
