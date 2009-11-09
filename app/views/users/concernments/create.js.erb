@@ -6,7 +6,7 @@
  */
 
 /* Render partial for the tag. */
-var tag = "<%= escape_javascript(render @concernment) %>";
+var tag = "<%= escape_javascript(render @concernments) %>";
 
 /* Append the tag to the right list of tags (by sort) */
 $('#concernments_<%= params[:sort] %>').append(tag).fadeIn();

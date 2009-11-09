@@ -11,13 +11,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :connect, :controller => 'connect', :only => [:show]
   map.resource :discuss, :controller => 'discuss', :only => [:show]
   map.resource :admin,   :controller => 'admin',   :only => [:show]
-  
-  # SECTION my echo routing              
+
+  # SECTION my echo routing
   map.my_profile 'my_profile', :controller => 'my_echo', :action => 'profile'
-               
+
   map.resources :profiles, :controller => 'users/profile', :path_prefix => '', :only => [:show, :edit, :update]
   map.profile_details '/profiles/:id/details', :controller => 'users/profile', :action => 'details'
-                                
+
   map.welcome   'welcome', :controller => 'my_echo', :action => 'welcome'
 
   # SECTION autocomplete
@@ -35,7 +35,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # SECTION feedback
   map.resources :feedback, :only => [:new, :create]
-  
+
   # SECTION user signup and login
   map.resource  :user_session, :controller => 'users/user_sessions',
                 :path_prefix => '', :only => [:new, :create, :destroy]
@@ -45,13 +45,14 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :activities,   :controller => 'users/activities',   :except => [:index]
     user.resources :memberships,  :controller => 'users/memberships',  :except => [:index]
   end
+
   map.resources :password_resets, :controller => 'users/password_resets',
                 :path_prefix => '', :except => [:destroy]
 
   map.register  '/register/:activation_code', :controller => 'users/activations', :action => 'new'
   map.join      '/join',                      :controller => 'users/users',       :action => 'new'
   map.activate  '/activate/:id',              :controller => 'users/activations', :action => 'create'
-                
+
   map.resources :reports, :controller => 'users/reports'
 
 

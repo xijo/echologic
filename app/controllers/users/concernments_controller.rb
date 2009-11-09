@@ -1,7 +1,7 @@
 class Users::ConcernmentsController < ApplicationController
 
   before_filter :require_user
-  
+
   access_control do
     allow logged_in
   end
@@ -12,23 +12,20 @@ class Users::ConcernmentsController < ApplicationController
 
   # Create a new concernment connection for a user and a given topic with the
   # sort of concernment specified.
-  # 
+  #
   # Method:   POST
   # Params:   tag_value: string, user_id: integer, sort: integer
   # Response: JS
   #
   def create
-    tag = Tag.find_or_create_by_value(params[:tag][:value])
-    @concernment = Concernment.new(:user_id => current_user.id, :tag_id => tag.id, :sort => params[:sort])
-
+    @concernments = []
+    for value in params[:tag][:value].split(',') do
+      tag = Tag.find_or_create_by_value(value.strip)
+      @concernments << Concernment.new(:user_id => current_user.id, :tag_id => tag.id, :sort => params[:sort])
+    end
+    @concernments.delete_if { |c| !c.save }
     respond_to do |format|
-      format.js do
-        if @concernment.save
-          format.js
-        else
-          show_error_messages(@concernment)
-        end
-      end
+      format.js
     end
   end
 
