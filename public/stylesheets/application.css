@@ -54,7 +54,7 @@
   top:         -16px;
 }
 
-#contentContainer {
+#function_container {
   margin:      0 auto;
   width:       990px;
   overflow:    auto;
@@ -75,7 +75,7 @@
 }
 
 #messageContainer #infoBox, #messageContainer #errorBox {
-  z-index: 2000;  
+  z-index: 2000;
 }
 
 #messageContainer .infoErrorIcon {
@@ -96,11 +96,15 @@
 
 /* SUBMENU SECTION */
 .submenu {
-  color: #21587f;
-  margin-bottom: 11px;
-  padding: 0 20px;
-  z-index: 1;
-  text-align: center;
+  margin:       0 auto;
+  width:        990px;
+  overflow:     auto;
+  color:        #21587f;
+  margin-bottom:11px;
+  padding:      0 0 10px 0;
+  z-index:      1;
+  text-align:   center;
+  background:   url(../images/page/separator_no_shadow.png) no-repeat bottom;
 }
 
 .submenu ul {
@@ -147,7 +151,8 @@
  * General layout stuff *
  * -------------------- */
 
-.separator-no-shadow {
-  background-image: url(../images/page/separator_no_shadow.png);
-  height: 2px;
+#progressbar {
+  width:200px;
+  height: 12px;
+  display: inline-block;
 }

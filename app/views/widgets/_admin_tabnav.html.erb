@@ -1,9 +1,9 @@
-<%  
+<%
 # Render submenu tabs for admin section.
-    
-render_tabnav :admin, 
+
+render_tabnav :admin,
               :generate_css => false, :html => {:class => 'submenu'} do
-    
+
   add_tab do |t|
     t.named "Locales"
     t.links_to hash_for_locales_path
@@ -13,16 +13,16 @@ render_tabnav :admin,
     t.named "Users"
     t.links_to hash_for_users_path
   end
-  
+
   add_tab do |t|
     t.named "Connect beta"
     t.links_to '/connect/search'
   end
-  
+
   add_tab do |t|
     t.named "Reports"
     t.links_to hash_for_reports_path
   end
 
-end 
+end
 %>

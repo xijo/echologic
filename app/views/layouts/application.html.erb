@@ -19,7 +19,7 @@
     <%= stylesheet_link_tag "formtastic" %>
     <%= stylesheet_link_tag "formtastic_changes" %>
 
-    
+
     <!-- Javascript -->
     <%= javascript_include_tag :defaults %>
     <%# javascript_include_tag 'IE8' %>
@@ -49,10 +49,12 @@
 
 
     <%= tabnav :main %>
-  
+
     <div id="applicationContainer">
 
-      <div id="contentContainer">
+      <%= yield :submenu %>
+
+      <div id="function_container">
         <% # Content %>
         <%= yield %>
       </div>

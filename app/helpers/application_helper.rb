@@ -7,4 +7,11 @@ module ApplicationHelper
     allow :admin
   end
 
+  # Return a progressbar
+  def insert_progressbar(percent)
+    val =  "<div id='progressbar' class='ttLink' title='#{percent}%'></div>"
+    val += "<script type='text/javascript'>$('#progressbar').progressbar({value: #{percent}});</script>"
+    val
+  end
+
 end

@@ -1,6 +1,8 @@
+<% content_for :submenu, tabnav(:act) %>
+
 <div id="submenu">
   [info-picture]
-  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
+  <div id="progressbar" class="ttLink" title="0%"></div>
 </div>
 
 <h1><%= I18n.t('static.echo.act.title') %></h1>
@@ -17,7 +19,6 @@
 <%# TODO javascript in corresponding js file! (connect.js?) %>
 <script type="text/javascript">
   $("#progressbar").progressbar({
-    value: 5
+    value: 2
   });
 </script>
-
