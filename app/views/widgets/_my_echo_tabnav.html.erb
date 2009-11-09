@@ -1,9 +1,9 @@
-<%  
+<%
 # Render submenu tabs for my echo section.
-    
-render_tabnav :my_echo, 
+
+render_tabnav :my_echo,
               :generate_css => false, :html => {:class => 'submenu'} do
-    
+
   add_tab do |t|
     t.named I18n.t('layouts.my_echo.tabs.welcome')
     t.links_to hash_for_welcome_path
@@ -14,5 +14,7 @@ render_tabnav :my_echo,
     t.links_to hash_for_my_profile_path
   end
 
-end 
+end
 %>
+
+<div class="separator-no-shadow"></div>
