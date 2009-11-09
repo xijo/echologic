@@ -9,7 +9,7 @@ module ApplicationHelper
 
   # Return a progressbar
   def insert_progressbar(percent)
-    val =  "<div id='progressbar' class='ttLink' title='#{percent}%'></div>"
+    val =  "<span id='progressbar' class='ttLink' title='#{percent}%'></span>"
     val += "<script type='text/javascript'>$('#progressbar').progressbar({value: #{percent}});</script>"
     val
   end
