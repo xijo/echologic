@@ -38,6 +38,7 @@ de:
       upload: Hochladen
       delete: Löschen
       create: Hinzufügen
+      welcome: "Willkommen"
 
     mailer:
       signature: |

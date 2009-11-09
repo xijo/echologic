@@ -35,6 +35,7 @@ en:
       upload: Upload
       delete: Delete
       create: Create
+      welcome: "Welcome"
 
     mailer:
       signature: |
