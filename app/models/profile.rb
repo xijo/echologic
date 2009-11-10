@@ -1,7 +1,7 @@
 class Profile < ActiveRecord::Base
 
   # Every profile has to belong to a user.
-  belongs_to :user
+  belongs_to :user,       :dependent => :destroy
   has_many :web_profiles, :through => :user
   has_many :memberships,  :through => :user
   has_many :concernments, :through => :user

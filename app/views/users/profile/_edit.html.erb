@@ -1,6 +1,6 @@
 <div id="personal_container" class="details_container">
   <h2><%= I18n.t('users.profile.edit_heading') %></h2>
-  
+
   <% semantic_form_for @profile, :html => { :id => 'edit_profile_form' } do |form| %>
     <% form.inputs do %>
       <%= form.input :first_name %>
@@ -8,13 +8,13 @@
       <%= form.input :female, :as => :radio, :label => "Gender", :collection => Profile.gender.collect { |k,v| [v,k] } %>
       <%= form.input :city %>
       <%= form.input :country %>
-      <%= form.input :about_me,   :input_html => { :rows => 3, :cols => 30 } %>
-      <%= form.input :motivation, :input_html => { :rows => 3, :cols => 30 } %>
+      <%= form.input :about_me,   :as => :text, :input_html => { :rows => 3, :cols => 30 } %>
+      <%= form.input :motivation, :as => :text, :input_html => { :rows => 3, :cols => 30 } %>
     <% end %>
     <% form.buttons do %>
-      <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>  
+      <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>
       <%= I18n.t('application.general.or') %>
-      <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>    
+      <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>
     <% end %>
   <% end %>
 
