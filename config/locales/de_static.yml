@@ -2,6 +2,45 @@
   # STATIC SECTION
   # --------------
 de:
+
+  seo:
+    title:
+      static:
+        echologic:
+          show: &html_title echologic für echo - die globale Agora (Demokratie neu gedacht)
+          about: *html_title
+          imprint: *html_title
+          data_privacy: *html_title
+        echo:
+          show: *html_title
+          discuss: *html_title
+          connect: *html_title
+          act: *html_title
+        echocracy:
+          show: *html_title
+          citizens: *html_title
+          scientists: *html_title
+          decision_makers: *html_title
+          organisations: *html_title
+        echonomy:
+          show: *html_title
+          your_profit: *html_title
+          foundation: *html_title
+          public_property: *html_title
+
+    meta:
+      description: |-
+        echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel
+        echo, die globale Agora, zu verwirklichen. echo ist ein Internetprojekt der besonderen Art.
+        Sein Ziel ist eine neue Form teilnehmender Demokratie auf lokalem, regionalem und globalem
+        Niveau zu etablieren. echo bedeutet demnach das Ende der Machtlosigkeit und den Anfang der Selbstbestimmung!
+
+      keywords: |-
+        echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
+        kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
+        Entscheidungsfindung, Transparenz, echocracy, echonomy, your-profit, öko-sozial, ökosozial, Echokratie, Echonomie,
+        partizipative Demokratie, glokal, Glokalität
+
   static:
 
     # ECHOLOGIC SECTION
@@ -510,7 +549,7 @@ de:
 
         list:
           <li><strong>Nachhaltigkeit</strong> statt bedingungslosem Wachstum (öko)</li>
-          <li><strong>Würde und Kooperation</strong> statt "Ressourcen" Verwertung und hemmungsloser Gier (sozial)</li>
+          <li><strong>Würde und Kooperation</strong> statt "Ressourcen" Verwertung und Gier (sozial)</li>
           <li><strong>Aktive Teilhabe</strong> statt passiver Abhängigkeit (demokratisch)</li>
 
         text_bottom: |

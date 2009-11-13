@@ -3,20 +3,6 @@
 de:
 
   application:
-    page_title: echologic für echo - die globale Agora (Demokratie neu gedacht)
-
-    meta:
-      description: |-
-        echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel
-        echo, die globale Agora, zu verwirklichen. echo ist ein Internetprojekt der besonderen Art.
-        Sein Ziel ist eine neue Form teilnehmender Demokratie auf lokalem, regionalem und globalem
-        Niveau zu etablieren. echo bedeutet demnach das Ende der Machtlosigkeit und den Anfang der Selbstbestimmung!
-
-      keywords: |-
-        echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
-        kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
-        Entscheidungsfindung, Transparenz, your-profit, echocracy, echonomy, Echokratie, Echonomie,
-        partizipative Demokratie, glokal, Glokalität
 
     # General purpose resources
     general:
@@ -172,7 +158,7 @@ de:
         subtitle: 'echologic beitreten'
         text: |
           <p>
-          <strong>echo ist Demokratie von den Menschen für die Menschen.</strong>
+          <strong>echo ist Demokratie von Menschen für Menschen.</strong>
           </p><p>
           Als Projekt zur Förderung des Allgemeinwohls wird echo durch die
           <strong>gemeinsame Anstrengung</strong> engagierter Menschen und

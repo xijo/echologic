@@ -3,17 +3,6 @@
 
 en:
   application:
-    meta:
-      description: |-
-        echologic is a network of free minds and organizations united to realize echo, the global agora!
-        echo is an Internet project of a special kind. Our goal is to establish a new kind of participatory
-        democracy on the very local, as well as on the regional and global level.
-        Accordingly, echo means the end of powerlessness and the beginning of self-determination!
-      keywords: |-
-        echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
-        collective intelligence, sustainable future, opinion base, opinion formation, decision making,
-        transparency, your-profit, echocracy, echonomy, glocal, glocality
-    page_title: echologic for echo - the global agora (democracy rethought)
 
   # General purpose resources
     general:
@@ -101,7 +90,7 @@ en:
       messages:
         login_success: "Login successful. Welcome back to echologic."
         login_failed: "Unknown user or wrong password."
-        logout_success: "Logout successful.<br/>See you later. Bye!"
+        logout_success: "Logout successful. See you later. Bye!"
 
     # Activations section
     activation:

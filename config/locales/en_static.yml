@@ -2,6 +2,43 @@
   # STATIC SECTION
   # --------------
 en:
+
+  seo:
+    title:
+      static:
+        echologic:
+          show: &html_title echologic for echo - the global agora (democracy rethought)
+          about: *html_title
+          imprint: *html_title
+          data_privacy: *html_title
+        echo:
+          show: *html_title
+          discuss: *html_title
+          connect: *html_title
+          act: *html_title
+        echocracy:
+          show: *html_title
+          citizens: *html_title
+          scientists: *html_title
+          decision_makers: *html_title
+          organisations: *html_title
+        echonomy:
+          show: *html_title
+          your_profit: *html_title
+          foundation: *html_title
+          public_property: *html_title
+
+    meta:
+      description: |-
+        echologic is a network of free minds and organizations united to realize echo, the global agora.
+        echo is an Internet project of a special kind. Our goal is to establish a new kind of participatory
+        democracy on the very local, as well as on the regional and global level.
+        Accordingly, echo means the end of powerlessness and the beginning of self-determination!
+      keywords: |-
+        echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
+        collective intelligence, sustainable future, opinion base, opinion formation, decision making,
+        transparency, echocracy, echonomy, your-profit, eco-social, glocal, glocality
+
   static:
 
     # Static content for the echoLogic main menu point
@@ -520,7 +557,7 @@ en:
 
         list:
           <li><strong>Sustainability</strong> instead of unconditional growth (eco)</li>
-          <li><strong>Dignity and cooperation</strong> instead of "resource" utilization and uncontrolled greed (social)</li>
+          <li><strong>Dignity and cooperation</strong> instead of "resource" utilization and greed (social)</li>
           <li><strong>Active participation</strong> instead of passive dependence (democratic)</li>
 
         text_bottom: |
