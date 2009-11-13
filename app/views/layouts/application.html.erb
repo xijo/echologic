@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= request[:locale] %>" lang="<%= request[:locale] %>">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title><%= I18n.t('application.page_title') %></title>
+    <% title= request[:controller].gsub('/','.') + "." +  request[:action] -%>
+    <title><%= I18n.t('seo.title.' + title) %></title>
     <meta name="description" content="<%= I18n.t('application.meta.description') %>"/>
     <meta name="keywords" content="<%= I18n.t('application.meta.keywords') %>"/>
     <link rel="shortcut icon" href="/images/favicon.gif" type="image/gif" />

@@ -7,26 +7,35 @@ en:
     title:
       static:
         echologic:
-          show: &html_title echologic for echo - the global agora (democracy rethought)
-          about: *html_title
-          imprint: *html_title
-          data_privacy: *html_title
+          show: &html_title echologic for echo - The Global Agora (Democracy Rethought)
+          about: echologic for echo - About us
+          imprint: echologic for echo - Imprint
+          data_privacy: echologic for echo - Data Privacy
         echo:
-          show: *html_title
-          discuss: *html_title
-          connect: *html_title
-          act: *html_title
+          show: echo - The Global Agora (Democracy Rethought)
+          discuss: echo - Discuss
+          connect: echo - Connect
+          act: echo - Act
         echocracy:
-          show: *html_title
-          citizens: *html_title
-          scientists: *html_title
-          decision_makers: *html_title
-          organisations: *html_title
+          show: echocracy on echo - The Global Agora (Democracy Rethought)
+          citizens: echocracy - Engaged Citizens
+          scientists: echocracy - Experts & Scientists
+          decision_makers: echocracy - Political and Economic Decision Makers
+          organisations: echocracy - Organizations
         echonomy:
-          show: *html_title
-          your_profit: *html_title
-          foundation: *html_title
-          public_property: *html_title
+          show: echonomy - For a New Era of Sustainable Economy (Eco-social & Democratic)
+          your_profit: echonomy - Your-Profit Business Philosophy
+          foundation: echonomy - The Foundation
+          public_property: echonomy - echo as Common Property
+      my_echo:
+        welcome: echologic - Welcome
+        profile: echologic - My Profile
+      discuss:
+        show: echologic - Discuss
+      connect:
+        show: echologic - Connect
+      act:
+        show: echologic - Act
 
     meta:
       description: |-
@@ -71,20 +80,20 @@ en:
           <p>
           <strong>echologic</strong> offers you the opportunity to follow and actively engage in the evolution of echo.
           </p><p>
-          <strong>echo</strong> is an internet project of a special kind. Our goal is to establish a
+          <strong>echo</strong> is an internet project for citizen empowerment. Our goal is to establish a
           <strong>new form of participatory democracy</strong> on the very local, as well as on the regional and global level.
           </p>
 
         teaser_more:
           <p>
           echo heralds a <strong>new era of politics</strong> and democratic collaboration.
-          It enables engaged citizens, experts, representatives and their organizations to take part in discussions,
-          contribute and support proposals and mobilize supporters to jointly turn their decisions into reality.
+          It enables engaged citizens, experts, representatives and their organizations to take part in
+          solution-oriented discussions and mobilize supporters to jointly turn their decisions into reality.
           echo's novel discussion method thereby lets, for the first time, <strong>collective intelligence</strong>
           emerge in a democratic public discourse even with a nearly unlimited number of participants.
           In this way, echo empowers people all over the world to collaborate in a constructive manner and
           jointly determine their very local living space, as well as the future of our common world.
-          Additionally, echo's <strong>Your-Profit business philosophy</strong> effectively supports people
+          Additionally, echo's <strong>Your-Profit</strong> business philosophy effectively supports people
           to successfully achieve their goals.
           </p><p>
           By facilitating new means of transnational and intercultural collaboration, echo aims to foster a
