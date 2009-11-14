@@ -8,14 +8,15 @@ en:
       static:
         echologic:
           show: &html_title 'echologic for echo - The Global Agora (Democracy Rethought)'
-          about:           'echologic for echo - About us'
-          imprint:         'echologic for echo - Imprint'
-          data_privacy:    'echologic for echo - Data Privacy'
+          about:            'echologic for echo - About us'
+          imprint:          'echologic for echo - Imprint'
+          data_privacy:     'echologic for echo - Data Privacy'
         echo:
           show:    'echo - The Global Agora (Democracy Rethought)'
           discuss: 'echo - Discuss'
           connect: 'echo - Connect'
           act:     'echo - Act'
+          echo_on_waves: 'echo - Everywhere'
         echocracy:
           show:            'echocracy on echo - The Global Agora (Democracy Rethought)'
           citizens:        'echocracy - Engaged Citizens'

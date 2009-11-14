@@ -16,6 +16,7 @@ de:
           discuss: 'echo - Diskutieren'
           connect: 'echo - Vernetzen'
           act:     'echo - Handeln'
+          echo_on_waves: 'echo - Überall'
         echocracy:
           show:            'echocracy auf echo - der globalen Agora (Demokratie neu gedacht)'
           citizens:        'echocracy - Engagierte BürgerInnen'
