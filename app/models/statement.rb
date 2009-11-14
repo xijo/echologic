@@ -1,6 +1,6 @@
 class Statement < ActiveRecord::Base
   belongs_to :user
-  belongs_to :statement_document, :foreign_key => 'document_id'
+  belongs_to :document, :foreign_key => 'document_id', :class_name => "StatementDocument"
   acts_as_tree
   
   
