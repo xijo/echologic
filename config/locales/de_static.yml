@@ -7,35 +7,38 @@ de:
     title:
       static:
         echologic:
-          show: &html_title echologic für echo - die globale Agora (Demokratie neu gedacht)
-          about: echologic für echo - Über uns
-          imprint: echologic für echo - Impressum
-          data_privacy: echologic für echo - Datenschutz
+          show: &html_title 'echologic für echo - die globale Agora (Demokratie neu gedacht)'
+          about:            'echologic für echo - Über uns'
+          imprint:          'echologic für echo - Impressum'
+          data_privacy:     'echologic für echo - Datenschutz'
         echo:
-          show: echo - die globale Agora (Demokratie neu gedacht)
-          discuss: echo - Diskutieren
-          connect: echo - Vernetzen
-          act: echo - Handeln
+          show:    'echo - die globale Agora (Demokratie neu gedacht)'
+          discuss: 'echo - Diskutieren'
+          connect: 'echo - Vernetzen'
+          act:     'echo - Handeln'
         echocracy:
-          show: echocracy auf echo - der globalen Agora (Demokratie neu gedacht)
-          citizens: echocracy - Engagierte BürgerInnen
-          scientists: echocracy - ExpertInnen & WissenschaftlerInnen
-          decision_makers: echocracy - EntscheidungsträgerInnen aus Politik und Wirtschaft
-          organisations: echocracy - Organisationen
+          show:            'echocracy auf echo - der globalen Agora (Demokratie neu gedacht)'
+          citizens:        'echocracy - Engagierte BürgerInnen'
+          scientists:      'echocracy - ExpertInnen & WissenschaftlerInnen'
+          decision_makers: 'echocracy - EntscheidungsträgerInnen aus Politik und Wirtschaft'
+          organisations:   'echocracy - Organisationen'
         echonomy:
-          show: echonomy - für eine neue Ära nachhaltigen Wirtschaftens (ökosozial & demokratisch)
-          your_profit: echonomy - Your-Profit Geschäftsphilosophie
-          foundation: echonomy - Die Stiftung
-          public_property: echonomy - echo als kollektives Eigentum
+          show:            'echonomy - für eine neue Ära nachhaltigen Wirtschaftens (ökosozial & demokratisch)'
+          your_profit:     'echonomy - Your-Profit Geschäftsphilosophie'
+          foundation:      'echonomy - Die Stiftung'
+          public_property: 'echonomy - echo als kollektives Eigentum'
+      users:
+        users:
+          new: 'Ihr echo - echologic beitreten'
       my_echo:
-        welcome: echologic - Welcome
-        profile: echologic - Mein Profil
+        welcome: 'echologic - Welcome'
+        profile: 'echologic - Mein Profil'
       discuss:
-        show: echologic - Diskutieren
+        show: 'echologic - Diskutieren'
       connect:
-        show: echologic - Vernetzen
+        show: 'echologic - Vernetzen'
       act:
-        show: echologic - Handeln
+        show: 'echologic - Handeln'
 
     meta:
       description: |-

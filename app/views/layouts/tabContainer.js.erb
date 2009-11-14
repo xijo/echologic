@@ -6,7 +6,8 @@
 
 /* Write render output into JS variables for later use. render(:partial => 'tabs')*/
 <% controller_name = request[:controller].split('/')[1] %>
-var tabs = "<%= escape_javascript(tabnav ('static_'+controller_name).to_sym) %>";
+<% title = I18n.t('seo.title.' + (request[:controller].gsub('/','.') + "." +  request[:action])) %>
+var tabs    = "<%= escape_javascript(tabnav ('static_'+controller_name).to_sym) %>";
 var content = "<%= escape_javascript(render(:partial => request[:action])) %>";
 
 /* Replace content of tab container with render output */
@@ -29,3 +30,6 @@ makeTooltips();
 
 /* Bind click event handlers for more and hide buttons. */
 bindMoreHideButtonEvents();
+
+/* Set document title for SEO. */
+document.title = '<%= title %>'

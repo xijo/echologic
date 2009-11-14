@@ -4,8 +4,10 @@
  * Template to change static menu, tabs and static content via JS.
  */
 
+<% title = I18n.t('seo.title.' + (request[:controller].gsub('/','.') + "." +  request[:action])) %>
+
 /* Write render output into JS variables for later usage. */
-var tabs = "<%= escape_javascript(tabnav :static_join) %>";
+var tabs    = "<%= escape_javascript(tabnav :static_join) %>";
 var content = "<%= escape_javascript(render(:partial => request[:action])) %>";
 
 /* Set tab content. */
@@ -23,3 +25,6 @@ $('#staticContent').appear(400);
 
 /* Change css class through javascript for setting state of staticMenu. */
 changeMenuImage(''+'join');
+
+/* Set document title for SEO. */
+document.title = '<%= title %>'

@@ -2,6 +2,8 @@
  * Template to change static menu, tabs and static content via JS.
  */
 
+<% title = I18n.t('seo.title.' + (request[:controller].gsub('/','.') + "." +  request[:action])) %>
+
 /* Write render output into JS variables for later use. */
 var content = "<%= escape_javascript(render(:partial => request[:action])) %>";
 
@@ -25,4 +27,5 @@ makeTooltips();
 /* Bind click event handlers for more and hide buttons. */
 bindMoreHideButtonEvents();
 
-
+/* Set document title for SEO. */
+document.title = '<%= title %>'

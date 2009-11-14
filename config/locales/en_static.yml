@@ -7,35 +7,38 @@ en:
     title:
       static:
         echologic:
-          show: &html_title echologic for echo - The Global Agora (Democracy Rethought)
-          about: echologic for echo - About us
-          imprint: echologic for echo - Imprint
-          data_privacy: echologic for echo - Data Privacy
+          show: &html_title 'echologic for echo - The Global Agora (Democracy Rethought)'
+          about:           'echologic for echo - About us'
+          imprint:         'echologic for echo - Imprint'
+          data_privacy:    'echologic for echo - Data Privacy'
         echo:
-          show: echo - The Global Agora (Democracy Rethought)
-          discuss: echo - Discuss
-          connect: echo - Connect
-          act: echo - Act
+          show:    'echo - The Global Agora (Democracy Rethought)'
+          discuss: 'echo - Discuss'
+          connect: 'echo - Connect'
+          act:     'echo - Act'
         echocracy:
-          show: echocracy on echo - The Global Agora (Democracy Rethought)
-          citizens: echocracy - Engaged Citizens
-          scientists: echocracy - Experts & Scientists
-          decision_makers: echocracy - Political and Economic Decision Makers
-          organisations: echocracy - Organizations
+          show:            'echocracy on echo - The Global Agora (Democracy Rethought)'
+          citizens:        'echocracy - Engaged Citizens'
+          scientists:      'echocracy - Experts & Scientists'
+          decision_makers: 'echocracy - Political and Economic Decision Makers'
+          organisations:   'echocracy - Organizations'
         echonomy:
-          show: echonomy - For a New Era of Sustainable Economy (Eco-social & Democratic)
-          your_profit: echonomy - Your-Profit Business Philosophy
-          foundation: echonomy - The Foundation
-          public_property: echonomy - echo as Common Property
+          show:            'echonomy - For a New Era of Sustainable Economy (Eco-social & Democratic)'
+          your_profit:     'echonomy - Your-Profit Business Philosophy'
+          foundation:      'echonomy - The Foundation'
+          public_property: 'echonomy - echo as Common Property'
+      users:
+        users:
+          new: 'Your echo - join echologic'
       my_echo:
-        welcome: echologic - Welcome
-        profile: echologic - My Profile
+        welcome: 'echologic - Welcome'
+        profile: 'echologic - My Profile'
       discuss:
-        show: echologic - Discuss
+        show: 'echologic - Discuss'
       connect:
-        show: echologic - Connect
+        show: 'echologic - Connect'
       act:
-        show: echologic - Act
+        show: 'echologic - Act'
 
     meta:
       description: |-
