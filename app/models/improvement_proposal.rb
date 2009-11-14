@@ -1,0 +1,2 @@
+class ImprovementProposal < Proposal
+end
