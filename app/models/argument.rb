@@ -1,2 +1,4 @@
-class Argument < Statement # abstract class
+# abstract
+class Argument < Statement
+  validates_parent :Proposal, :ImprovementProposal
 end
