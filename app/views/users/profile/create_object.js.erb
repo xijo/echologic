@@ -4,7 +4,7 @@
  * Template for inserting a recently created object and reset
  * the corresponding form.
  */
- 
+
 /* Render partial for the object. */
 var object = "<%= escape_javascript(render object) %>";
 
@@ -14,5 +14,6 @@ $('#<%= dom_class(object) %>_list').append(object);
 /* Reset the form. */
 $('#<%= dom_class(object, :new) %>').reset();
 
-
-
+<% if object.instance_of?(Membership) %>
+  $('input[id=membership_organisation]').select();
+<% end %>
