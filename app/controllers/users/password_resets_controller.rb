@@ -3,7 +3,8 @@
 #
 class Users::PasswordResetsController < ApplicationController
 
-  before_filter :require_no_user
+  # Logged in user may reset their password too.
+  # before_filter :require_no_user
 
   # Use perishable_token on edit or update methods
   before_filter :load_user_using_perishable_token, :only => [:edit, :update]
@@ -19,13 +20,18 @@ class Users::PasswordResetsController < ApplicationController
   # Creates a new password reset process and sends an email to the user.
   def create
     @user = User.find_by_email(params[:email])
-    if @user
-      @user.deliver_password_reset_instructions!
-      flash[:notice] = I18n.t('users.password_reset.messages.success')
-      redirect_to root_url
-    else
-      flash[:error] = I18n.t('users.password_reset.messages.not_found')
-      render :template => 'users/password_resets/new', :layout => 'static'
+
+    respond_to do |format|
+      if @user
+        @user.deliver_password_reset_instructions!
+        message = I18n.t('users.password_reset.messages.success')
+        format.html { flash[:notice] = message and redirect_to root_url }
+        format.js   { show_info_message(message) }
+      else
+        message = I18n.t('users.password_reset.messages.not_found')
+        format.html { flash[:error] = message and render :action => :new, :layout => 'static' }
+        format.js   { show_error_message(message) }
+      end
     end
   end
 

@@ -1,9 +1,7 @@
-# 
+#
 When /^I follow the "([^\"]*)" link within the "([^\"]*)" (.*)$/ do |link, selector, container|
-  link.downcase!.gsub!(" ", "_")
-  selector.downcase!.gsub!(" ", "_")
-  within "##{selector}_#{container}" do
-    click_link "#{link}_link"
+  within "##{selector.downcase.gsub(' ', '_')}_#{container.downcase}" do
+    click_link "#{link.downcase.gsub(' ', '_')}_link"
   end
 end
 
@@ -20,7 +18,7 @@ When /^I press the "([^\"]*)" button$/ do |button|
   click_button "#{button}_button"
 end
 
-# Examples:     
+# Examples:
 #   I should not see the admin tab
 #   I should see the personal container
 #   I should see the edit link
@@ -40,6 +38,3 @@ Then /^I should see a "([^\"]*)" (.*)$/ do |name, component|
   component.downcase!
   response.should have_selector(".#{name.downcase}_#{component}")
 end
-
-
-
