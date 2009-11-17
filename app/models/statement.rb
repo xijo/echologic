@@ -1,11 +1,14 @@
 class Statement < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :document, :foreign_key => 'document_id', :class_name => "StatementDocument"
-  acts_as_tree
+  belongs_to :creator, :class_name => "User"
+  belongs_to :document, :class_name => "StatementDocument"
+  has_one :author, :through => :document
+
+  belongs_to :root_statement, :foreign_key => "root_id", :class_name => "Statement"
+  acts_as_tree :scope => :root_statement
   
+  belongs_to :work_package
   
-  validates_presence_of :user_id
-  validates_presence_of :document_id
+  validates_associated :creator, :document
   
   private
   # takes an array of class names that are valid for the parent association.
