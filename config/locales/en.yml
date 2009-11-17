@@ -104,7 +104,7 @@ en:
       step1: Require new password
       step2: Define new password
       step1_text: |
-        <strong>Forgot your password</strong> or you would like simply define a new one?<br/><br/>
+        <strong>Forgot your password</strong> or you would simply like to define a new one?<br/><br/>
         No problem! Just fill in your <strong>E-Mail</strong> address you used to sign up to echologic.<br/>
         We will send you an E-mail shortly allowing you <strong>to define a new password</strong>.
       step1_mail: Send E-Mail
