@@ -7,7 +7,7 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-
+    
     when /the home\s?page/
       '/'
     when /the profile/
@@ -16,7 +16,9 @@ module NavigationHelpers
       root_path
     when /the connect page/
       '/connect/profiles'
-
+    when /^question "(.*)"$/i
+      question_path($1)
+      
     # Add more mappings here.
     # Here is a more fancy example:
     #
