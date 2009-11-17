@@ -13,24 +13,27 @@ en:
           data_privacy:     'echologic for echo - Data Privacy'
         echo:
           show:    'echo - The Global Agora (Democracy Rethought)'
-          discuss: 'echo - Discuss'
-          connect: 'echo - Connect'
-          act:     'echo - Act'
-          echo_on_waves: 'echo - Everywhere'
+          discuss: 'echo - Discuss (opinion formation and decision making - solution-oriented, transparent & democratic)'
+          connect: 'echo - Connect (with allies with different forms of competence)'
+          act:     'echo - Act (for noticeable results in everyday life and for a sustainable change)'
+          echo_on_waves: 'echo - Everywhere (synergies through decentral infrastructure - echo on waves)'
         echocracy:
-          show:            'echocracy on echo - The Global Agora (Democracy Rethought)'
-          citizens:        'echocracy - Engaged Citizens'
+          show:            'echocracy - The New Form of Participatory Democracy of echo'
+          citizens:        'echocracy - Affected & Engaged Citizens'
           scientists:      'echocracy - Experts & Scientists'
           decision_makers: 'echocracy - Political and Economic Decision Makers'
-          organisations:   'echocracy - Organizations'
+          organisations:   'echocracy - Non-governmental & Govermental Organizations'
         echonomy:
-          show:            'echonomy - For a New Era of Sustainable Economy (Eco-social & Democratic)'
-          your_profit:     'echonomy - Your-Profit Business Philosophy'
-          foundation:      'echonomy - The Foundation'
+          show:            'echonomy - A New Era of Eco-Socially Sustainable, Democratic Economy'
+          your_profit:     'echonomy - Social Business with Your-Profit Business Philosophy'
+          foundation:      'echonomy - The Echonomy Foundation'
           public_property: 'echonomy - echo as Common Property'
       users:
         users:
-          new: 'Your echo - join echologic'
+          new: 'Your echo - Join echologic'
+        password_resets:
+          new: 'Your echo - Require New Password'
+          edit: 'Ihr echo - Set New Password'
       my_echo:
         welcome: 'echologic - Welcome'
         profile: 'echologic - My Profile'
@@ -44,13 +47,14 @@ en:
     meta:
       description: |-
         echologic is a network of free minds and organizations united to realize echo, the global agora.
-        echo is an Internet project of a special kind. Our goal is to establish a new kind of participatory
+        echo is social media for citizen empowerment. Our goal is to establish a new kind of participatory
         democracy on the very local, as well as on the regional and global level.
         Accordingly, echo means the end of powerlessness and the beginning of self-determination!
       keywords: |-
         echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
         collective intelligence, sustainable future, opinion base, opinion formation, decision making,
-        transparency, echocracy, echonomy, your-profit, eco-social, glocal, glocality
+        transparency, solution-oriented democractic collaboration, echocracy, equality, 
+        echonomy, eco-social democractic economy, your-profit, glocal, glocality
 
   static:
 
@@ -90,7 +94,7 @@ en:
 
         teaser_more:
           <p>
-          echo heralds a <strong>new era of politics</strong> and democratic collaboration.
+          echo heralds a <strong>new era of democratic collaboration</strong>.
           It enables engaged citizens, experts, representatives and their organizations to take part in
           solution-oriented discussions and mobilize supporters to jointly turn their decisions into reality.
           echo's novel discussion method thereby lets, for the first time, <strong>collective intelligence</strong>
@@ -127,9 +131,14 @@ en:
           <a href='http://www.eesc.europa.eu/organisation/secretarygeneral/index-en.asp' target='_blank'>Martin Westlake</a>,
           Secretary-General of EESC, the European Economic and Social Committee.
           </p><p>
-          Several cooperation partners from civil society (OneAim, Netzwerk Gemeinsinn), economy (<a href='http://the-foo.de'
-          target='_blank'>The Foo</a>), and politics (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>)
+          Several <strong>cooperation partners</strong> from civil society
+          (<a href='http://www.netzwerk-gemeinsinn.net/' target='_blank'>Netzwerk Gemeinsinn</a>, OneAim.org), economy (<a href='http://the-foo.de'
+          target='_blank'>The Foo</a>), politics (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) and
+          science (<a href='http://www.ztg.tu-berlin.de' target="_blank">Technical University Berlin / Center for Technology and Society</a>)
           are supporting echo to achieve its far reaching sociopolitical goals.
+          </p><p>
+          In case your organisation would also like to shape echo, please send us an E-mail to
+          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>.
           </p>
 
       # Static content for imprint
@@ -564,7 +573,7 @@ en:
           <p>
           A little <strong>“h”</strong> can make a huge difference!
           </p><p>
-          Accordingly, “echonomy” stands symbolically for an <strong>eco-social democratic economy</strong>
+          Accordingly, “echonomy” stands for an <strong>eco-social democratic economy</strong>
           committed to basic ethical values in our globalized world:
           </p>
 

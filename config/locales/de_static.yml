@@ -13,24 +13,27 @@ de:
           data_privacy:     'echologic für echo - Datenschutz'
         echo:
           show:    'echo - die globale Agora (Demokratie neu gedacht)'
-          discuss: 'echo - Diskutieren'
-          connect: 'echo - Vernetzen'
-          act:     'echo - Handeln'
-          echo_on_waves: 'echo - Überall'
+          discuss: 'echo - Diskutieren (Meinungsbildung & Entscheidungsfindung - lösungsorientiert, transparent & demokratisch)'
+          connect: 'echo - Vernetzen (mit MitstreiterInnen mit verschiedenen Kompetenzen)'
+          act:     'echo - Handeln (für spürbare Erfolge im Alltag und einen nachhaltigen Wandel)'
+          echo_on_waves: 'echo - Überall (Synergien durch dezentrale Infrastruktur - echo on waves)'
         echocracy:
-          show:            'echocracy auf echo - der globalen Agora (Demokratie neu gedacht)'
-          citizens:        'echocracy - Engagierte BürgerInnen'
+          show:            'echocracy - Die neue Form teilnehmender Demokratie von echo'
+          citizens:        'echocracy - Betroffene & engagierte BürgerInnen'
           scientists:      'echocracy - ExpertInnen & WissenschaftlerInnen'
           decision_makers: 'echocracy - EntscheidungsträgerInnen aus Politik und Wirtschaft'
-          organisations:   'echocracy - Organisationen'
+          organisations:   'echocracy - Nichtstaatliche und staatliche Organisationen'
         echonomy:
-          show:            'echonomy - für eine neue Ära nachhaltigen Wirtschaftens (ökosozial & demokratisch)'
-          your_profit:     'echonomy - Your-Profit Geschäftsphilosophie'
-          foundation:      'echonomy - Die Stiftung'
+          show:            'echonomy - Eine neue Ära ökosozial nachhaltigen, demokratischen Wirtschaftens'
+          your_profit:     'echonomy - Social Business mit Your-Profit Geschäftsphilosophie'
+          foundation:      'echonomy - Die Echonomy Stiftung'
           public_property: 'echonomy - echo als kollektives Eigentum'
       users:
         users:
           new: 'Ihr echo - echologic beitreten'
+        password_resets:
+          new: 'Ihr echo - Neues Passwort anfordern'
+          edit: 'Ihr echo - Neues Passwort setzen'
       my_echo:
         welcome: 'echologic - Welcome'
         profile: 'echologic - Mein Profil'
@@ -44,15 +47,16 @@ de:
     meta:
       description: |-
         echologic ist ein Netzwerk von FreidenkerInnen und Organisationen mit dem gemeinsamen Ziel
-        echo, die globale Agora, zu verwirklichen. echo ist ein Internetprojekt der besonderen Art.
-        Sein Ziel ist eine neue Form teilnehmender Demokratie auf lokalem, regionalem und globalem
-        Niveau zu etablieren. echo bedeutet demnach das Ende der Machtlosigkeit und den Anfang der Selbstbestimmung!
+        echo, die globale Agora, zu verwirklichen. echo ist social media für Bürgerermächtigung.
+        Unser Ziel ist eine neue Form teilnehmender Demokratie auf lokalem, regionalem und globalem Niveau zu etablieren.
+        echo bedeutet demnach das Ende der Machtlosigkeit und den Anfang der Selbstbestimmung!
 
       keywords: |-
         echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
         kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
-        Entscheidungsfindung, Transparenz, echocracy, echonomy, your-profit, öko-sozial, ökosozial, Echokratie, Echonomie,
-        partizipative Demokratie, glokal, Glokalität
+        Entscheidungsfindung, Transparenz, lösungsorientierte demokratische Kollaboration, 
+        echocracy, Gleichberechtigung, echonomy, öko-sozial, ökosoziale demokratische Wirtschaftsform,
+        Wirtschaftsdemokratie, Your-Profit, Echokratie, Echonomie, partizipative Demokratie, glokal, Glokalität
 
   static:
 
@@ -87,15 +91,15 @@ de:
           <p>
           <strong>echologic</strong> bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mitzugestalten!
           </p><p>
-          <strong>echo</strong> ist ein Internetprojekt für Bürger-Empowerment. Unser Ziel ist eine
+          <strong>echo</strong> ist ein Internetprojekt zur Ermächtigung der Menschen. Unser Ziel ist eine
           <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
           </p>
 
         teaser_more: |
           <p>
-          echo läutet eine <strong>neue Ära der Politik</strong> und demokratischer Zusammenarbeit ein.
+          echo läutet eine <strong>neue Ära demokratischer Zusammenarbeit</strong> ein.
           Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können hier ihre Ansichten in
-          Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen.
+          lösungsorientierte Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen.
           Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit
           beliebig vielen Teilnehmern. Menschen rund um den Globus können so konstruktiv auf echo zusammen arbeiten und
           gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten. Die <strong>Your-Profit</strong>
@@ -128,9 +132,15 @@ de:
           <a href='http://www.eesc.europa.eu/organisation/secretarygeneral/index-en.asp' target='_blank'>Martin Westlake</a>,
           unterstützen echo mit Rat und Tat.
           </p><p>
-          Verschiedene Kooperationspartner aus Zivilgesellschaft (OneAim, Netzwerk Gemeinsinn), Wirtschaft (<a href='http://www.the-foo.de/'
-          target='_blank'>The Foo</a>) und Politik (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) helfen echo dabei,
-          seine weit reichenden gesellschaftspolitischen Ziele zu verwirklichen.
+          Verschiedene <strong>Kooperationspartner</strong> aus Zivilgesellschaft
+          (<a href='http://www.netzwerk-gemeinsinn.net/' target='_blank'>Netzwerk Gemeinsinn</a>, OneAim.org),
+          Wirtschaft (<a href='http://www.the-foo.de/' target='_blank'>The Foo</a>), Politik
+          (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) und Wissenschaft 
+          (<a href='http://www.ztg.tu-berlin.de' target="_blank">Technische Universität Berlin / Zentrum Technik und Gesellschaft</a>)
+          helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele zu verwirklichen.
+          </p><p>
+          Wenn Ihre Organisation auch echo mitgestalten möchte, schreiben Sie uns bitte eine E-mail an
+          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>. 
           </p>
 
       # imprint section
@@ -208,7 +218,7 @@ de:
             <p>
             echo ist das Instrument einer <strong>neuen Form teilnehmender Demokratie</strong>, das sich diesen Herausforderungen stellt.
             Anders als auf <span title="{{tooltip1}}" class="ttLink">herkömmlichen Web 2.0 Anwendungen</span> finden Sie auf
-            echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbasis</span></strong> und können
+            echo eine <strong>übersichtliche <span title="{{tooltip2}}" class="ttLink">Meinungsbild</span></strong> und können
             <strong>lösungsorientiert</strong> mit Anderen zusammenarbeiten.
             Dazu vereint echo technische Innovationen und humanwissenschaftliche Erkenntnisse in einem einzigartigen Konzept, das
             den Menschen hilft, Hintergründe und Zusammenhänge besser zu verstehen, gemeinsam Entscheidungen zu
@@ -226,11 +236,11 @@ de:
             Foren ermöglichen zwar eine offene Diskussion, liefern jedoch kein strukturiertes, messbares Ergebnis.
             Group Blogs können nicht von hunderten oder tausenden Autoren geschrieben werden. Wikipedia kann die
             Qualität seiner Inhalte nur dadurch garantieren, dass die Kontrolle der Beiträge in die Hände
-            einiger weniger Administratoren gelegt wird – ein vollkommen undemokratisches Verfahren.
+            einiger weniger Administratoren gelegt wird – was kein demokratisches Verfahren ist.
 
           tooltip2: |
             Analog zu Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten,
-            wird echo die umfangreichste Meinungsbasis für subjektive Meinungen zur Verfügung stellen und
+            wird echo die umfangreichste "Meinungsbasis" für subjektive Meinungen zur Verfügung stellen und
             konstruktive Diskussionen über die bestehenden Positionen und Themen anregen.
 
       # discuss section
@@ -556,8 +566,8 @@ de:
           <p>
           Ein kleines <strong>„h“</strong> kann einen großen Unterschied machen!
           </p><p>
-          So steht „echonomy“ symbolisch für eine <strong>öko-soziale demokratische Wirtschaftsform</strong>, die sich
-          in einer globalisierten Welt grundlegenden ethischen Werten verpflichtet sieht:
+          So steht „echonomy“ für eine <strong>ökosoziale demokratische Wirtschaftsform</strong>, die sich
+          in unserer globalisierten Welt grundlegenden ethischen Werten verpflichtet sieht:
           </p>
 
         list:
@@ -704,7 +714,7 @@ de:
         gesammtgesellschaftliche Initiative mit Partnern aus Wirtschaft und Politik.
         Mit echonomy JAM bringen wir Ideenträger und Kapitalgeber sowohl aus dem
         öffentlichen als auch privaten Sektor zusammen, und etablieren einen einzigartigen Marktplatz
-        für öko-sozial nachhaltiges, demokratisches Wirtschaften.
+        für ökosozial nachhaltiges, demokratisches Wirtschaften.
         Mehr Informationen sowie eine Einladung zu unserem Kick-off Event am 27.11.2009 finden Sie unter:
         www.echonomyJAM.org
 
