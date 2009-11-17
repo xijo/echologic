@@ -1,0 +1,2 @@
+class QuestionsController < StatementsController
+end
