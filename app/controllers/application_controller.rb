@@ -44,6 +44,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def show_error_message(string)
+    render :update do |page|
+      page << "error('#{string}');"
+    end
+  end
+
+
   # Helper method to do simple ajax replacements without writing a new template.
   # This small methods takes much complexness from the controllers.
   def replace_container(name, content)

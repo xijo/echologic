@@ -109,7 +109,7 @@ de:
       password:
         heading: Passwort ändern
         new: Ihr neues Passwort
-        confirm: Ihr neues Passwort bestätigen
+        confirm: Passwort bestätigen
 
       picture:
         heading: Profilbild

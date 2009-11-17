@@ -5,7 +5,7 @@
     <% form.inputs do %>
       <%= form.input :first_name %>
       <%= form.input :last_name %>
-      <%= form.input :female, :as => :radio, :label => "Gender", :collection => Profile.gender.collect { |k,v| [v,k] } %>
+      <%= form.input :female, :as => :radio, :label => Profile.human_attribute_name(:gender), :collection => Profile.gender.collect { |k,v| [v,k] } %>
       <%= form.input :city %>
       <%= form.input :country %>
       <%= form.input :about_me,   :as => :text, :input_html => { :rows => 3, :cols => 30 } %>

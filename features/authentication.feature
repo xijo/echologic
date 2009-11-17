@@ -9,7 +9,7 @@ Feature: Authentication
     Given I am logged in as "user" with password "true"
     Then I should be on the welcome page
       And I should see "Login successful."
-      And I should see "Hello User"
+      And I should see "Logged inUser Test"
 
   # A user must be able to logout
   Scenario: Successful Logout
