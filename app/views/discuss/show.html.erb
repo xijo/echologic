@@ -1,7 +1,4 @@
-<div id="submenu">
-  [info-picture]
-  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
-</div>
+<% content_for :submenu, tabnav(:discuss) %>
 
 <h1><%= I18n.t('static.echo.discuss.title') %></h1>
 
@@ -31,10 +28,3 @@
     <% insert_toggle_more(I18n.t('static.echo.discuss.glocal_more')) %>
   </li>
 </ul>
-
-<%# TODO javascript in corresponding js file! (connect.js?) %>
-<script type="text/javascript">
-  $("#progressbar").progressbar({
-    value: 5
-  });
-</script>
