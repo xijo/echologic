@@ -26,9 +26,22 @@ de:
       create: Hinzufügen
       welcome: "Willkommen"
 
+    # Roadmap - Progress
     roadmap:
       title: Fahrplan
       progress_tooltip: 'Dieser Bereich von echo ist {{progress}}% fertig.'
+      status_quo: 'Status Quo'
+      next_steps: 'Nächste Schritte'
+      vision: 'Am Ende des Weges'
+      discuss:
+        status_quo: 'echo Diskutieren ist {{progress}}% fertig.'
+        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
+      connect:
+        status_quo: 'echo Vernetzen ist {{progress}}% fertig.'
+        next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
+      act:
+        status_quo: 'echo Handeln ist {{progress}}% fertig.'
+        next_steps: 'Die Entwicklung von echo Handeln wird nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
 
     mailer:
       signature: |
@@ -38,6 +51,40 @@ de:
         E-Mail: team@echologic.org
 
       feedback: Feedback
+
+
+# Localizations for the layout components
+  layouts:
+    tabs:
+      discuss: Diskutieren
+      connect: Vernetzen
+      act: Handeln
+      my_echo: Mein echo
+      admin: Admin
+
+    outer_menu:
+      language: Sprache
+      feedback: &feedback Feedback
+      about: &about Über uns
+      logout: Ausloggen
+      imprint: &imprint Impressum
+      data_privacy: &data_privacy Datenschutz
+
+    discuss:
+      tabs:
+
+    connect:
+      tabs:
+        search: Community Entdecken
+
+    act:
+      tabs:
+
+    my_echo:
+      tabs:
+        welcome: Willkommen
+        profile: Profil
+
 
   # ----------------
   # Welcome function
@@ -181,29 +228,6 @@ de:
     reports:
       messages:
         created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
-
-  # Localizations for the layout components
-  layouts:
-    tabs:
-      discuss: Diskutieren
-      connect: Vernetzen
-      act: Handeln
-      my_echo: Mein echo
-      admin: Admin
-
-    outer_menu:
-      language: Sprache
-      feedback: &feedback Feedback
-      about: &about Über uns
-      logout: Ausloggen
-      imprint: &imprint Impressum
-      data_privacy: &data_privacy Datenschutz
-
-    my_echo:
-      tabs:
-        welcome: Willkommen
-        profile: Profil
-
 
 
   # Feedback resources

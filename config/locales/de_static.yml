@@ -1,8 +1,7 @@
-  # --------------
-  # STATIC SECTION
-  # --------------
+
 de:
 
+  # SEO data
   seo:
     title:
       static:
@@ -58,6 +57,8 @@ de:
         echocracy, Gleichberechtigung, echonomy, öko-sozial, ökosoziale demokratische Wirtschaftsform,
         Wirtschaftsdemokratie, Your-Profit, Echokratie, Echonomie, partizipative Demokratie, glokal, Glokalität
 
+
+  # Static content
   static:
 
     # ECHOLOGIC SECTION
@@ -314,7 +315,7 @@ de:
           <li>BürgerInnen und Betroffene (Bedürfniskompetenz)</li>
           <li>ExpertInnen und WissenschaftlerInnen (Fachkompetenz)</li>
           <li>PolitikerInnen und andere RepräsentantInnen (Entscheidungskompetenz)</li>
-          <li>Nichtstaatliche und staatliche  Organisationen (Mobilisierungspotenzial)</li>
+          <li>Nichtstaatliche und staatliche  Organisationen (Handlungskompetenz & Mobilisierungspotenzial)</li>
 
         text_bottom: |
           <p>

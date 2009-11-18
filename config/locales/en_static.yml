@@ -1,8 +1,7 @@
-  # --------------
-  # STATIC SECTION
-  # --------------
+
 en:
 
+  # SEO data
   seo:
     title:
       static:
@@ -55,7 +54,9 @@ en:
         collective intelligence, sustainable future, opinion base, opinion formation, decision making,
         transparency, solution-oriented democractic collaboration, echocracy, equality, 
         echonomy, eco-social democractic economy, your-profit, glocal, glocality
+        
 
+  # Static content
   static:
 
     # Static content for the echoLogic main menu point
@@ -313,7 +314,7 @@ en:
           <li>Citizens and affected people (with competence with regard to needs)</li>
           <li>Experts and scientists (with professional competence)</li>
           <li>Politicians and other representatives (with decision making competence)</li>
-          <li>Non-governmental and governmental organizations (with mobilization potential)</li>
+          <li>Non-governmental and governmental organizations (with action competence & mobilization potential)</li>
 
         text_bottom: |
           <p>
