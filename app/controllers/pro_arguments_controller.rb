@@ -1,0 +1,2 @@
+class ProArgumentsController < StatementsController
+end

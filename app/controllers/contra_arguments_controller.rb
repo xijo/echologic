@@ -1,0 +1,2 @@
+class ContraArgumentsController < StatementsController
+end

@@ -8,3 +8,7 @@ public/system/avatars/
 /echologic.ipr
 /echologic.iws
 db/*.sqlite3
+*~
+.\#*
+\#*
+*\#

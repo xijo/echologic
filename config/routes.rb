@@ -64,6 +64,16 @@ ActionController::Routing::Routes.draw do |map|
   map.static    'echologic/:action', :controller => 'static/echologic'
 
 
+  map.resources :questions do |question|
+    question.resources :proposals do |proposal|
+      proposal.resources :pro_argument
+      proposal.resources :contra_argument
+      proposal.resources :improvement_proposals do |improvement_proposal|
+        improvement_proposal.resources :pro_arguments
+        improvement_proposal.resources :contra_argument
+      end
+    end
+  end
 
   # SECTION root
   map.root :controller => 'static/echologic', :action => 'show'
