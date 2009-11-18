@@ -34,14 +34,14 @@ de:
       next_steps: 'Nächste Schritte'
       vision: 'Am Ende des Weges'
       discuss:
-        status_quo: 'echo Diskutieren ist {{progress}}% fertig.'
+        status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
       connect:
-        status_quo: 'echo Vernetzen ist {{progress}}% fertig.'
+        status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
       act:
-        status_quo: 'echo Handeln ist {{progress}}% fertig.'
-        next_steps: 'Die Entwicklung von echo Handeln wird nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
+        status_quo: 'echo Handeln ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Mit der Entwicklung von echo Handeln werden wir nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
 
     mailer:
       signature: |
