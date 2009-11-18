@@ -4,11 +4,17 @@
 render_tabnav :act,
               :generate_css => false, :html => {:class => 'submenu'} do
 
+  add_tab :html => { :id => 'explore_tab' } do |t|
+    t.named I18n.t('layouts.connect.tabs.search')
+    t.links_to '/connect/search'
+    t.highlights_on :controller => 'connect'
+  end
+
   add_tab :html => {:id => 'roadmap_tab'} do |t|
     value = '<span id="roadmap_tab_title">' + I18n.t('application.roadmap.title') + '</span>'
-    value += insert_progressbar(Development::ACT_PROGRESS)
+    value += insert_progressbar(Development::CONNECT_PROGRESS)
     t.named value
-    t.links_to hash_for_act_path
+    t.links_to hash_for_connect_path
   end
 
 end

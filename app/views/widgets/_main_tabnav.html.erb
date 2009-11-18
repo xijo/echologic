@@ -15,9 +15,10 @@ render_tabnav :main,
               :generate_css => false,
               :html => { :class => 'applicationTabs' } do
 
-  add_tab do |t|
+  add_tab :html => { :id => 'discuss_tab' } do |t|
     t.named I18n.t('layouts.tabs.discuss')
     t.links_to hash_for_discuss_path
+    t.highlights_on :controller => 'discuss'
   end
 
   add_tab :html => { :id => 'connect_tab' } do |t|
@@ -29,6 +30,7 @@ render_tabnav :main,
   add_tab :html => { :id => 'act_tab' } do |t|
     t.named I18n.t('layouts.tabs.act')
     t.links_to hash_for_act_path
+    t.highlights_on :controller => 'act'
   end
 
   add_tab :html => { :id => 'my_echo_tab' } do |t|
@@ -46,45 +48,5 @@ render_tabnav :main,
     t.highlights_on :controller => 'users/reports'
   end if show_admin_options?
 
-
-
-
-
-  #add_tab do |t|
-  #  t.named 'Home'
-  #  t.titled 'Home Page'
-  #  t.links_to :controller => 'welcome'
-  #end
-  #
-  # you can use restful routes with:
-  #
-  #add_tab do |t|
-  #  t.named 'Users'
-  #  t.links_to hash_for_users_path
-  #end
-  #
-  #add_tab do |t|
-  #  t.named 'Customers'
-  #  t.links_to :controller => 'customers'
-  #end
-  #
-  # # A tab can be initialized with a Hash like this:
-  #
-  # add_tab :name => 'welcome', :link => {:controller=>'welcome'}
-  #
-  # # You can have a dynamic name or link
-  # # (this partial is evaluated in the page context, so it sees every helper or instance variable)
-  #
-  # add_tab do |t|
-  #   t.named "#{current_user} details"
-  #   t.links_to :controller => 'users', :action => 'show', :id => current_user.id
-  # end
-  #
-  # # You can have an image inside
-  #
-  # add_tab do |t|
-  #   t.named image_tag('test')
-  #   t.links_to :controller => 'users', :action => 'show', :id => current_user.id
-  # end
 end
 %>

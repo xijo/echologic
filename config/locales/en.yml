@@ -4,7 +4,7 @@
 en:
   application:
 
-  # General purpose resources
+    # General purpose resources
     general:
       more: more »
       hide: « okay
@@ -25,6 +25,24 @@ en:
       delete: Delete
       create: Create
       welcome: "Welcome"
+
+    # Roadmap - Progress
+    roadmap:
+      title: Roadmap
+      progress_tooltip: 'This area of echo is {{progress}}% ready.'
+      status_quo: 'Status Quo'
+      next_steps: 'Next Steps'
+      vision: 'At The End of The Road'
+      discuss:
+        status_quo: 'echo Discuss is currently {{progress}}% ready.'
+        next_steps: 'The first features of echo Discuss are under development and will be released soon.'
+      connect:
+        status_quo: 'echo Connect is currently {{progress}}% ready.'
+        next_steps: 'echo Connect will be enhanced after the first features of echo Discuss and echo Act have been released.'
+      act:
+        status_quo: 'echo Act is currently {{progress}}% ready.'
+        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.' 
+
 
     mailer:
       signature: |
@@ -53,6 +71,16 @@ en:
       logout: Logout
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
+
+    discuss:
+      tabs:
+
+    connect:
+      tabs:
+        search: Explore Community
+
+    act:
+      tabs:
 
     my_echo:
       tabs:

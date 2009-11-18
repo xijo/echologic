@@ -6,6 +6,23 @@
       General layouting for the logged in section.
 */
 
+/* General styles */
+
+#function_container h1 {
+  color:        #21587f;
+  font-size:    30px;
+  margin:       7px 0px 20px;
+}
+
+#function_container h2 {
+  color:        #7bb031;
+  font-size:    15px;
+  font-weight:  bold !important;
+  margin:       18px 0px 5px;
+}
+
+/* Application layout stuff */
+
 #logged_in_user {
   display: inline-block;
   font-size: 11px;
@@ -94,7 +111,8 @@
 }
 
 
-/* SUBMENU SECTION */
+/* Submenu styling */
+
 .submenu {
   margin:       0 auto;
   width:        990px;
@@ -119,14 +137,6 @@
   margin: 0 13px;
 }
 
-/*.submenu li span.disabled {
-  color: #888888;
-  background: #FAFAFA;
-  padding: 2px 5px 0px 5px;
-  margin: 0;
-  text-decoration: none;
-}*/
-
 .submenu a {
   color: #21587f;
   background: #FFF;
@@ -137,22 +147,4 @@
 
 .submenu a:hover, .submenu a.active, .submenu a.active:hover {
   color: #7bb031;
-}
-
-
-.my_echo_tabnav_content {
-	background: #FFFFFF;
-	padding: 20px;
-	border-top: none;
-	z-index: 2;
-}
-
-/* -------------------- *
- * General layout stuff *
- * -------------------- */
-
-#progressbar {
-  width:200px;
-  height: 12px;
-  display: inline-block;
 }

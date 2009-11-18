@@ -1,9 +1,14 @@
-<div id="submenu">
-  [info-picture]
-  <div id="progressbar" class="ttLink" title="0%" style="width:200px; height: 12px; display: inline-block;"></div>
-</div>
+<% content_for :submenu, tabnav(:connect) %>
 
 <h1><%= I18n.t('static.echo.connect.title') %></h1>
+
+<h2><%= I18n.t('application.roadmap.status_quo') %></h2>
+<%= I18n.t('application.roadmap.connect.status_quo', :progress => Development::CONNECT_PROGRESS) %>
+
+<h2><%= I18n.t('application.roadmap.next_steps') %></h2>
+<%= I18n.t('application.roadmap.connect.next_steps') %>
+
+<h2><%= I18n.t('application.roadmap.vision') %></h2>
 
 <p>
   <%= I18n.t('static.echo.connect.text_top') %>
@@ -12,12 +17,4 @@
 
   <%= I18n.t('static.echo.connect.text_bottom') %>
 </p>
-
-
-<%# TODO javascript in corresponding js file! (connect.js?) %>
-<script type="text/javascript">
-  $("#progressbar").progressbar({
-    value: 5
-  });
-</script>
 
