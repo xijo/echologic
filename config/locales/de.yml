@@ -26,6 +26,10 @@ de:
       create: Hinzufügen
       welcome: "Willkommen"
 
+    roadmap:
+      title: Fahrplan
+      progress_tooltip: 'Dieser Bereich von echo ist {{progress}}% fertig.'
+
     mailer:
       signature: |
         --

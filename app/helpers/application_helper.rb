@@ -9,8 +9,9 @@ module ApplicationHelper
 
   # Return a progressbar
   def insert_progressbar(percent)
-    val =  "<span id='progressbar' class='ttLink' title='#{percent}%'></span>"
-    val += "<script type='text/javascript'>$('#progressbar').progressbar({value: #{percent}});</script>"
+    tooltip = I18n.t('application.roadmap.progress_tooltip', :progress => percent)
+    val =  "<span id='roadmap_progressbar' class='ttLink' title='#{tooltip}'></span>"
+    val += "<script type='text/javascript'>$('#roadmap_progressbar').progressbar({value: #{percent}});</script>"
     val
   end
 

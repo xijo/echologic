@@ -9,8 +9,10 @@ render_tabnav :act,
     t.links_to hash_for_act_path
   end
 
-  add_tab do |t|
-    t.named "Info " + insert_progressbar(10)
+  add_tab :html => {:id => 'roadmap_tab'} do |t|
+    value = '<span id="roadmap_tab_title">' + I18n.t('application.roadmap.title') + '</span>'
+    value += insert_progressbar(10)
+    t.named value
     t.links_to hash_for_my_profile_path
   end
 

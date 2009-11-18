@@ -4,7 +4,7 @@
 en:
   application:
 
-  # General purpose resources
+    # General purpose resources
     general:
       more: more »
       hide: « okay
@@ -25,6 +25,10 @@ en:
       delete: Delete
       create: Create
       welcome: "Welcome"
+
+    roadmap:
+      title: Roadmap
+      progress_tooltip: 'This area of echo is {{progress}}% ready.'      
 
     mailer:
       signature: |
