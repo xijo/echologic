@@ -1,0 +1,33 @@
+test-question:
+  document_id: <%= Fixtures.identify(:'test-question-doc') %>
+  type: Question
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+first-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'first-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+second-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+first-impro-proposal:
+  parent_id: <%= Fixtures.identify(:'first-proposal') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'first-impro-proposal-doc') %>
+  type: ImprovementProposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:ben) %>
+  published: true 

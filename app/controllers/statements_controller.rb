@@ -3,7 +3,7 @@ class StatementsController < ApplicationController
   verify :method => :get, :only => [:index, :show, :new, :edit]
   verify :method => :post, :only => :create
   verify :method => :put, :only => :update
-  verfiy :method => :delete, :only => :delete
+  verify :method => :delete, :only => :delete
 
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]

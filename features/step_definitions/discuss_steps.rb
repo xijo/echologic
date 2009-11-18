@@ -17,22 +17,26 @@ When /^I post some valid question data$/ do
   When "I press the \"Save\" button"
 end
 
-When /^I post some invalid question data$/ do
+When /^I post some invalid question data$/i do
    When  "I fill in the following:
         | Question text   | Blablabla bla bla bla   |"
    When "I press the \"Save\" button"
 end
 
-Then /^I should see an error message$/ do
+Then /^I should see an error message$/i do
   Then "I should see a \"error box\""
 end
 
-Given /^there is a question "([^\"]*)"$/ do |title|
-  @question = Question.find_by_title(title)
+Given /^there is the first question$/i do 
+  @question = Question.first
+end
+
+Given /^there is a question "([^\"]*)"$/ do |id| # not in use right now
+  @question = Question.find(id)
 end
 
 Given /^the question has no proposals$/ do
-  @question.proposals.destroy_all
+  @question.children.proposals.destroy_all
 end
 
 When /^I follow the create proposal link$/ do
@@ -54,17 +58,17 @@ When /^I post some valid improvement proposal data$/ do
 end
 
 Then /^the question should have one proposal$/ do
-  @question.proposals.count.should >= 1
+  @question.children.proposals.count.should >= 1
 end
 
 # Is it okay to give a condition in a 'Given' step?
 Given /^the question has at least on proposal$/ do
-  @question.proposals.count.should >= 1
+  @question.children.proposals.count.should >= 1
   @proposal = @question.proposal.first
 end
 
 Then /^the proposal should have one improvementproposal$/ do
-  @proposal.improvementproposals.should >= 1
+  @proposal.children.improvement_proposals.should >= 1
 end
 
 Then /^I should not see the create proposal link$/ do

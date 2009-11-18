@@ -27,3 +27,7 @@ admin_profile:
   last_name: Test
   first_name: Admin
 
+editor_profile:
+  user_id: <%= Fixtures.identify(:editor) %>
+  last_name: Tor
+  first_name: Edi

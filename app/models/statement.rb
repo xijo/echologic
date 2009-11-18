@@ -22,7 +22,7 @@ class Statement < ActiveRecord::Base
   named_scope :proposals, lambda {
     { :conditions => { :type => 'Proposal' } } }
   named_scope :improvement_proposals, lambda {
-    { :conditions => { :type => 'ImmprovementProposals' } } }
+    { :conditions => { :type => 'ImprovementProposals' } } }
   named_scope :arguments, lambda { 
     { :conditions => ['type = ? OR type = ?', 'ProArgument', 'ContraArgument'] } }
   named_scope :pro_arguments, lambda { 
@@ -36,7 +36,9 @@ class Statement < ActiveRecord::Base
   ##
   
   validates_associated :creator
+  validates_presence_of :creator
   validates_associated :document
+  validates_presence_of :document
   
   class << self
     attr :valid_parents
@@ -52,6 +54,12 @@ class Statement < ActiveRecord::Base
   end
   
   def validate
-    errors.add("Parent of #{self.class.name} must be of one of #{klasses.inspect}") unless defined?(@@valid_parents) and @@valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
+     # except of questions, all statements need a valid parent
+     # Todo: in future this should be mapped in a better way, e.g. pseudo:
+     # * question.allowed_parents => Question, nil
+     # * proposal.allowed_parents => Question
+     # * improvementproposal.allowed_parents => Proposal
+     # * ...
+     errors.add("Parent of #{self.class.name} must be of one of #{@@valid_parents.inspect}") unless defined?(@@valid_parents) and @@valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
   end
 end

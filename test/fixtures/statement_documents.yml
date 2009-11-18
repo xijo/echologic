@@ -1,0 +1,19 @@
+test-question-doc:
+  title: 'Test Question?'
+  text: 'The Question is: is this a question?'
+  author_id: <%= Fixtures.identify(:editor) %>
+
+first-proposal-doc:
+  title: 'A first proposal!'
+  text: 'I think, a good proposal would be a first one!'
+  author_id: <%= Fixtures.identify(:editor) %>
+
+second-proposal-doc:
+  title: 'Second Proposal'
+  text: 'I think we should have a second proposal as well!'
+  author_id: <%= Fixtures.identify(:editor) %>
+
+first-impro-proposal-doc:
+  title: 'A better first proposal'
+  text: 'I think, a better first proposal would be a better one!'
+  author_id: <%= Fixtures.identify(:ben) %>

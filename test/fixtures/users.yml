@@ -32,3 +32,10 @@ admin:
   persistence_token: 6cde0674657a8a313ce952df979de2830309aa4c11ca65805dd00bfdc65dbcc2f5e36718660a1d2e68c1a08c276d996763985d2f06fd3d076eb7bc4d97b1e317
   perishable_token: <%= Authlogic::Random.friendly_token %>
 
+editor:
+  email: editor@echologic.org
+  active: true
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("true" + salt) %>
+  persistence_token: 6cde0674657a8a313ce952df979de2830309aa4c11ca65805dd00bfdc65dbcc2f5e36718660a1d2e68c1a08c276d996763985d2f06fd3d076eb7bc4d97b1e317
+  perishable_token: <%= Authlogic::Random.friendly_token %>
