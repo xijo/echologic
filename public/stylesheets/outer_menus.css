@@ -6,13 +6,6 @@
 
 #topMenuContainer {
   position:    relative;
-/*  float:       right;*/
-/*background: #000;*/
-/*display: inline-block;*/
-  /*width:       300px;*/
-/*  overflow:    visible;*/
-/*  height:      20px;*/
-  /*font-size:   12px;*/
 }
 
 #topMenuContainer a, #topMenuContainer a:visited {
@@ -49,7 +42,7 @@
   background:  transparent url(../images/page/icons/logout.png) no-repeat scroll;
 }
 
-#feedback_button:hover, #about_echo_button:hover, #logout_button:hover {
+#echo_language_button, #feedback_button:hover, #about_echo_button:hover, #logout_button:hover {
   background-position: 0 -16px;
 }
 
