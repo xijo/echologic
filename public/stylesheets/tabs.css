@@ -101,3 +101,11 @@
   right: 55px;
   margin-left: -300px;
 }
+
+/* Admin tab */
+#admin_tab_container {
+  float: left;
+  position: relative;
+  left: 4px;
+  margin-right: -300px;
+}
