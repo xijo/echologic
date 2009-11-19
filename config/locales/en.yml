@@ -104,17 +104,22 @@ en:
     title: Welcome to echologic!
     text: |
       <p>
-      Here you can see the most recently released functionality on echologic.<br/>
-      With the time, more and more features will be introduced enabling you to follow and increasingly
-      <strong>engage in the evolution of echo</strong>.<br/><br/>
+      <strong>Discuss - Connect - Act!</strong><br/>
+      These are the three main functional areas of echo, which we will develop step by step at
+      echologic with your participation.
+      </p><p>
+      Below you can see the most recently released functionality.<br/>
+      With the time, more and more features will be introduced enabling you to increasingly
+      <strong>engage in the evolution of echo</strong>.
+      </p><p>
       <strong>New features:</strong>
       </p>
     function_1:
       name: 'My Profile'
-      description: 'Complete your profile to present yourself in the echologic community.'
+      description: 'Complete your profile to present yourself in the community.'
     function_2:
       name: 'Connect'
-      description: 'Explore other interesting members of the community.'
+      description: 'Explore other interesting members of the echologic movement.'
 
   # ------------
   # USERS MODULE
