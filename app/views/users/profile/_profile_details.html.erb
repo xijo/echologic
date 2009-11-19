@@ -1,22 +1,17 @@
 <% @profile = profile if defined?(profile) %>
-
-<div id="title" class="title ui-corner-all">
-  <span></span>
-  <% link_to '#', :onclick => "$('#profile_details_container').hide(); return false;", :class => 'close_link' do %>
-    <span>close</span>
-  <% end %>
-</div>
-
-
-
+<% @profile = Profile.new if @profile.nil? %>
 
 <div id="tabs" style="float:left; width:650px;">
   <ul>
-    <li><span style="color:#f99;"><%=h @profile.full_name %></li>
+    <li style="color:#ff0;"><%=h @profile.full_name %></li>
     <li><a href="#tab1">Overview</a></li>
     <li><a href="#tab2">Competence?</a></li>
     <li><a href="#tab3">Network</a></li>
   </ul>
+
+  <% link_to '#', :onclick => "$('#profile_details_container').hide(); return false;", :class => 'close_link' do %>
+    <span>close</span>
+  <% end %>
 
   <div style="float:left; max-width:100px;">
     <%= image_tag @profile.avatar.url(:small) %><br/>
@@ -29,7 +24,7 @@
     <%=h @profile.localized_gender %><br/>
     <%=h @profile.about_me %>        <br/>
     <%=h @profile.motivation %>      <br/>
-    <%= render @profile.memberships %>
+    <%= render :partial => 'users/memberships/membership', :collection => @profile.memberships %>
   </div>
 
   <div id="tab2" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">

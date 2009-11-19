@@ -1,0 +1,25 @@
+<div id="profile_details_container" style="clear:both; overflow:auto; display:none;">
+  <ul>
+    <li id="full_name" style="color:#3f3; width:150px;"></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#concernments">Concernments</a></li>
+    <li><a href="#web_profiles">Web Profiles</a></li>
+  </ul>
+
+  <% link_to '#', :onclick => "$('#profile_details_container').hide(); return false;", :class => 'close_link' do %>
+    <span>close</span>
+  <% end %>
+
+  <div id="avatar" style="float:left; max-width:100px;"></div>
+
+  <div id="overview" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <div id="concernments" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <div id="web_profiles" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <script type="text/javascript">
+    $('#profile_details_container').tabs();
+  </script>
+
+</div>

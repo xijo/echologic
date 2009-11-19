@@ -1,0 +1,6 @@
+<%=h @profile.full_name %>       <br/>
+<%=h @profile.location %>        <br/>
+<%=h @profile.localized_gender %><br/>
+<%=h @profile.about_me %>        <br/>
+<%=h @profile.motivation %>      <br/>
+<%= render :partial => 'users/memberships/membership', :collection => @profile.memberships %>

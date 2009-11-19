@@ -32,11 +32,13 @@ en:
           new: 'Your echo - Join echologic'
         password_resets:
           new: 'Your echo - Require New Password'
-          edit: 'Ihr echo - Set New Password'
+          edit: 'Your echo - Set New Password'
+        profile:
+          details: 'Your echo - Profile Details'
       discuss:
         show: 'echologic - Discuss'
       connect:
-        show:   'echologic - Connect'
+        show:     'echologic - Connect'
         search: 'echologic - Connect'
       act:
         show: 'echologic - Act'
