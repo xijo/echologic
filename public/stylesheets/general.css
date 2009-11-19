@@ -6,6 +6,7 @@ body {
   padding:     0px;
   color:       #21587f;
   text-align:  left;
+  overflow-y:  scroll;
 }
 
 body, p, ol, ul, td {
