@@ -103,17 +103,22 @@ de:
     title: Willkommen auf echologic!
     text: |
       <p>
-      Hier sehen Sie die neuesten Bereiche, die wir auf echologic veröffentlicht haben.<br/>
-      Mit der Zeit werden immer mehr Funktionen hinzukommen, mit denen Sie zunehmend <strong>die Entwicklung von echo
-      mitgestalten</strong> können.<br/><br/>
+      <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
+      Sie sind die drei funktionalen Kernbereiche von echo,
+      die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.
+      </p><p>
+      Unten sehen Sie die neulich veröffentlichten Bereiche.<br>
+      Mit der Zeit werden immer mehr Funktionen hinzukommen, die Ihnen die
+      <strong>Mitgestaltung von echo</strong> zunehmend ermöglichen werden.
+      </p><p>
       <strong>Neue Bereiche:</strong>
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der Community zu präsentieren.'
     function_2:
       name: 'Vernetzen'
-      description: 'Entdecken Sie andere interessante Mitglieder der Community.'
+      description: 'Entdecken Sie andere interessante Menschen der echologic Bewegung.'
 
   # ------------
   # USERS MODULE
