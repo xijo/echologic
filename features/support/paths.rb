@@ -22,6 +22,8 @@ module NavigationHelpers
       question_path(@question)
     when /^the first question$/
       question_path(Question.first)
+    when /^the questions first proposal/
+      question_proposal_path(@question,@proposal)
       
     # Add more mappings here.
     # Here is a more fancy example:

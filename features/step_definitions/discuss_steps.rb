@@ -41,12 +41,12 @@ end
 
 When /^I follow the create proposal link$/ do
   # Todo: Yet we still don't know how the create proposal link will once look
-  When 'I follow the "create proposal" link within the "question" container '
+  When 'I follow the "Create proposal" link within the "question" container '
 end
 
 When /^I follow the create improvement proposal link$/ do
   # Todo: Yet we still don't know how the create improvementproposal link will once look
-  When 'I follow the "create improvement proposal" link within the "proposal" container '
+  When 'I follow the "Create improvement proposal" link within the "proposal" container '
 end
 
 When /^I post some valid proposal data$/ do
@@ -64,7 +64,7 @@ end
 # Is it okay to give a condition in a 'Given' step?
 Given /^the question has at least on proposal$/ do
   @question.children.proposals.count.should >= 1
-  @proposal = @question.proposal.first
+  @proposal = @question.children.proposals.first
 end
 
 Then /^the proposal should have one improvementproposal$/ do
@@ -72,7 +72,7 @@ Then /^the proposal should have one improvementproposal$/ do
 end
 
 Then /^I should not see the create proposal link$/ do
-  Then 'I should not see the "create proposal" link within the "question" container'
+  Then 'I should not see the "Create proposal" link within the "children" container'
 end
 
 # i leave this pending for now, as i'm not sure if we should test the related scenario here

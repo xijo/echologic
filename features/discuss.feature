@@ -73,7 +73,3 @@ Feature: Discuss
     Given I am logged in as "user" with password "true"
     When I post some valid proposal data for "first-question"
     Then I should see a "permission denied" error message
-
-
-   
- 

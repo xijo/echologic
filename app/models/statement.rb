@@ -62,4 +62,25 @@ class Statement < ActiveRecord::Base
      # * ...
      errors.add("Parent of #{self.class.name} must be of one of #{@@valid_parents.inspect}") unless defined?(@@valid_parents) and @@valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
   end
+  
+  def self.display_name
+    self.name.underscore.gsub(/_/,' ').capitalize
+  end
+  
+  def title
+    self.document.title
+  end
+  
+  def text
+    self.document.text
+  end
+  
+  def level
+    # simple hack to gain the level
+    # problem is: as we can't use nested set (too write intensive stuff), we can't easily get the statements level in the tree
+    level = 0
+    level += 1 if self.parent
+    level += 1 if self.root && self.root != self && self.root != self.parent
+    level
+  end
 end

@@ -1,0 +1,12 @@
+<div id="context">
+  <%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
+</div>
+<div id="sidebar">
+</div>
+<div id="summary">
+  <h1><%=@statement.class.display_name%> Summary</h1>
+  <%=@statement.text%>
+</div>
+<div id="children">
+  <%= render :partial => 'statements/children', :locals => {:statements => @statement.children } %>
+</div>

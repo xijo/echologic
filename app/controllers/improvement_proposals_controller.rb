@@ -1,2 +1,2 @@
-class ImprovementPropsalsController < StatementsController
+class ImprovementProposalsController < StatementsController
 end
