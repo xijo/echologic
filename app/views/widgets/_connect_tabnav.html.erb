@@ -6,7 +6,7 @@ render_tabnav :connect,
 
   add_tab :html => { :id => 'explore_tab' } do |t|
     t.named I18n.t('layouts.connect.tabs.search')
-    t.links_to url_for(:controller => 'connect', :action => 'search')
+    t.links_to hash_for_connect_path
     t.highlights_on :action => 'search'
   end
 
@@ -14,7 +14,8 @@ render_tabnav :connect,
     value = '<span id="roadmap_tab_title">' + I18n.t('application.roadmap.title') + '</span>'
     value += insert_progressbar(Development::CONNECT_PROGRESS)
     t.named value
-    t.links_to hash_for_connect_path
+    t.links_to url_for(:controller => 'connect', :action => 'roadmap')
+    t.highlights_on :action => :roadmap
   end
 
 end
