@@ -69,7 +69,7 @@ en:
       show:
         ms1: echologic
         ms2: |
-          <font size="+2">is a network of free minds <br/>and organizations united to realize</font>
+          <font size="+2">is a network of free minds <br/>and their organizations united to realize</font>
         ms3: |
           echo - the global <span title="{{tooltip}}" class="ttLink">agora</span>!
 
@@ -98,7 +98,7 @@ en:
 
         teaser_more:
           <p>
-          echo heralds a <strong>new era of democratic collaboration</strong>.
+          echo opens up <strong>new ways of democratic collaboration</strong>.
           It enables engaged citizens, experts, representatives and their organizations to take part in
           solution-oriented discussions and mobilize supporters to jointly turn their decisions into reality.
           echo's novel discussion method thereby lets, for the first time, <strong>collective intelligence</strong>
