@@ -4,7 +4,7 @@
 en:
   application:
 
-  # General purpose resources
+    # General purpose resources
     general:
       more: more »
       hide: « okay
@@ -25,6 +25,33 @@ en:
       delete: Delete
       create: Create
       welcome: "Welcome"
+
+    # Roadmap - Progress
+    roadmap:
+      title: Roadmap
+      progress_tooltip: 'This area of echo is {{progress}}% ready.'
+      status_quo: 'Status Quo'
+      next_steps: 'Next Steps'
+      vision: 'At The End of The Road'
+      discuss:
+        status_quo: 'echo Discuss is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The first features of echo Discuss are under development and will be released soon.'
+      connect:
+        status_quo: 'echo Connect is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'echo Connect will be enhanced after the first features of echo Discuss and echo Act have been released.'
+      act:
+        status_quo: 'echo Act is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.'
+      my_echo:
+        status_quo: 'The My echo area of echo is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'Further development of this area is planned after the development of some basic Discuss, Connect and Act functionality.'
+        vision: |
+         <p>
+         In the long term, the My echo area will be your <strong>personal information hub</strong> inside of echo. E.g. it will provide
+         you with the most <strong>important news</strong> and call your attention to the most <strong>recent discussions and actions</strong> according
+         to your preferences.
+         </p>
+
 
     mailer:
       signature: |
@@ -54,10 +81,20 @@ en:
       imprint: &imprint Imprint
       data_privacy: &data_privacy Data Privacy
 
+    discuss:
+      tabs:
+
+    connect:
+      tabs:
+        search: Explore Community
+
+    act:
+      tabs:
+
     my_echo:
       tabs:
         welcome: Welcome
-        profile: Profile
+        profile: My Profile
 
   # ----------------
   # Welcome function
@@ -67,13 +104,17 @@ en:
     title: Welcome to echologic!
     text: |
       <p>
-      This is the start page of echologic showing you some of the <strong>most recently added functionality</strong>.<br/>
-      With the time, more and more features will be introduced which will enable you to follow and increasingly
-      engage into the evolution of echo.
-      </p><p>
-      Currently, the only thing you can do is to <strong>set up your profile</strong>.<br/>
-      A first version of echo Connect will also be released shortly,
-      allowing you to browse other members of the community.
+      Here you can see the most recently released functionality on echologic.<br/>
+      With the time, more and more features will be introduced enabling you to follow and increasingly
+      <strong>engage in the evolution of echo</strong>.<br/><br/>
+      <strong>New features:</strong>
+      </p>
+    function_1:
+      name: 'My Profile'
+      description: 'Complete your profile to present yourself in the echologic community.'
+    function_2:
+      name: 'Connect'
+      description: 'Explore other interesting members of the community.'
 
   # ------------
   # USERS MODULE
@@ -104,7 +145,7 @@ en:
       step1: Require new password
       step2: Define new password
       step1_text: |
-        <strong>Forgot your password</strong> or you would like simply define a new one?<br/><br/>
+        <strong>Forgot your password</strong> or you would simply like to define a new one?<br/><br/>
         No problem! Just fill in your <strong>E-Mail</strong> address you used to sign up to echologic.<br/>
         We will send you an E-mail shortly allowing you <strong>to define a new password</strong>.
       step1_mail: Send E-Mail

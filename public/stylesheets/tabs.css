@@ -51,7 +51,7 @@
 }
 
 .applicationTabs li {
-  background:   url(../images/page/tabs/left_off.png) no-repeat scroll left top;
+  background:   url(../images/page/tabs/mainmenu_left_off.png) no-repeat scroll left top;
   height:       51px;
   display:      inline-block;
   color:        #7bb031;
@@ -63,7 +63,7 @@
 
 
 .applicationTabs a, .applicationTabs a.active {
-  background:   transparent url(../images/page/tabs/right_off.png) no-repeat scroll right top;
+  background:   transparent url(../images/page/tabs/mainmenu_right_off.png) no-repeat scroll right top;
   margin:       0 0 0 21px;
   padding:      0 21px 0 0;
   float:        left;
@@ -86,11 +86,11 @@
 }
 
 .applicationTabs li.active {
-  background:  url(../images/page/tabs/left_on.png) no-repeat scroll left top !important;
+  background:  url(../images/page/tabs/mainmenu_left_on.png) no-repeat scroll left top !important;
 }
 
 .applicationTabs a.active {
-  background: transparent url(../images/page/tabs/right_on.png) no-repeat scroll right top !important;
+  background: transparent url(../images/page/tabs/mainmenu_right_on.png) no-repeat scroll right top !important;
   color:       #21587f !important;
 }
 
@@ -100,4 +100,35 @@
   position: relative;
   right: 55px;
   margin-left: -300px;
+}
+
+/* Admin tab */
+#admin_tab_container {
+  float: left;
+  position: relative;
+  left: 4px;
+  margin-right: -300px;
+}
+
+#roadmap_tab_container {
+  float: right;
+  position: relative;
+  right: 10px;
+  margin-left: -300px;
+}
+
+#roadmap_tab {
+  height: 32px;
+}
+
+#roadmap_tab_title {
+  background: transparent url(../images/page/icons/under_construction.png) no-repeat scroll left center;
+  padding-left: 23px;
+}
+
+#roadmap_progressbar {
+  width: 130px;
+  height: 9px;
+  display: inline-block;
+  margin-left: 10px;
 }

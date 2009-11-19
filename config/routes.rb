@@ -7,9 +7,10 @@ ActionController::Routing::Routes.draw do |map|
   map.filter :locale
 
   # SECTION main parts of echologic
+  map.resource :discuss, :controller => 'discuss', :only => [:show]
   map.resource :act,     :controller => 'act',     :only => [:show]
   map.resource :connect, :controller => 'connect', :only => [:show]
-  map.resource :discuss, :controller => 'discuss', :only => [:show]
+  map.resource :my_echo, :controller => 'my_echo', :only => [:show]
   map.resource :admin,   :controller => 'admin',   :only => [:show]
 
   # SECTION my echo routing

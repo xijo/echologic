@@ -6,6 +6,7 @@
 	z-index:    3000;
 	border:     none;
 	-moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
 	background-color:   #7AB030;
 	padding:    6px 8px 7px;
 	max-width:  450px;

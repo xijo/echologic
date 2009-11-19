@@ -26,6 +26,32 @@ de:
       create: Hinzufügen
       welcome: "Willkommen"
 
+    # Roadmap - Progress
+    roadmap:
+      title: Fahrplan
+      progress_tooltip: 'Dieser Bereich von echo ist {{progress}}% fertig.'
+      status_quo: 'Status Quo'
+      next_steps: 'Nächste Schritte'
+      vision: 'Am Ende des Weges'
+      discuss:
+        status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
+      connect:
+        status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
+      act:
+        status_quo: 'echo Handeln ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Mit der Entwicklung von echo Handeln werden wir nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
+      my_echo:
+        status_quo: 'Der Mein echo Bereich von echo ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Weitere Entwicklungen im Mein echo Bereich sind nach der Veröffentlichung von Basisfunktionalitäten unter Diskutieren, Vernetzen und Handeln geplant.'
+        vision: |
+         <p>
+         Auf der langen Sicht wird der Mein echo Bereich Ihre <strong>persönliche Informationszentrale</strong> innerhalb von echo sein.
+         Z.B. wird es Ihnen einen Überblick über die <strong>wichtigsten Nachrichten</strong> geben und Sie auf die <strong>neuesten
+         Diskussionen und Aktionen</strong> entsprechend Ihrer Präferenzen aufmerksam machen.
+         </p>
+
     mailer:
       signature: |
         --
@@ -35,6 +61,40 @@ de:
 
       feedback: Feedback
 
+
+# Localizations for the layout components
+  layouts:
+    tabs:
+      discuss: Diskutieren
+      connect: Vernetzen
+      act: Handeln
+      my_echo: Mein echo
+      admin: Admin
+
+    outer_menu:
+      language: Sprache
+      feedback: &feedback Feedback
+      about: &about Über uns
+      logout: Ausloggen
+      imprint: &imprint Impressum
+      data_privacy: &data_privacy Datenschutz
+
+    discuss:
+      tabs:
+
+    connect:
+      tabs:
+        search: Community entdecken
+
+    act:
+      tabs:
+
+    my_echo:
+      tabs:
+        welcome: Willkommen
+        profile: Mein Profil
+
+
   # ----------------
   # Welcome function
   # ----------------
@@ -43,13 +103,17 @@ de:
     title: Willkommen auf echologic!
     text: |
       <p>
-      Es ist die Startseite von echologic, die Sie immer auf <strong>die neuesten Funktionalität</strong> ausmerksam machen wird.<br/>
-      Mit der Zeit werden wir immer mehr Funktionen zur Verfügung stellen, die Ihnen ermöglichen, die Entwicklung von echo
-      zunehmend mitzugestalten.
-      </p><p>
-      Das einzige, was Sie derzeitig tun können, ist <strong>Ihr Profil zu vervollständigen</strong>.<br/>
-      Eine erste Version von echo's Vernetzen wird bald veröffentlicht und wird Ihnen ermöglichen, andere Mitglieder
-      der Community durchzustöbern.
+      Hier sehen Sie die neuesten Bereiche, die wir auf echologic veröffentlicht haben.<br/>
+      Mit der Zeit werden immer mehr Funktionen hinzukommen, mit denen Sie zunehmend <strong>die Entwicklung von echo
+      mitgestalten</strong> können.<br/><br/>
+      <strong>Neue Bereiche:</strong>
+      </p>
+    function_1:
+      name: 'Mein Profil'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
+    function_2:
+      name: 'Vernetzen'
+      description: 'Entdecken Sie andere interessante Mitglieder der Community.'
 
   # ------------
   # USERS MODULE
@@ -109,7 +173,7 @@ de:
       password:
         heading: Passwort ändern
         new: Ihr neues Passwort
-        confirm: Ihr neues Passwort bestätigen
+        confirm: Passwort bestätigen
 
       picture:
         heading: Profilbild
@@ -177,29 +241,6 @@ de:
     reports:
       messages:
         created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
-
-  # Localizations for the layout components
-  layouts:
-    tabs:
-      discuss: Diskutieren
-      connect: Vernetzen
-      act: Handeln
-      my_echo: Mein echo
-      admin: Admin
-
-    outer_menu:
-      language: Sprache
-      feedback: &feedback Feedback
-      about: &about Über uns
-      logout: Ausloggen
-      imprint: &imprint Impressum
-      data_privacy: &data_privacy Datenschutz
-
-    my_echo:
-      tabs:
-        welcome: Willkommen
-        profile: Profil
-
 
 
   # Feedback resources
