@@ -94,7 +94,7 @@ en:
     my_echo:
       tabs:
         welcome: Welcome
-        profile: Profile
+        profile: My Profile
 
   # ----------------
   # Welcome function
@@ -109,6 +109,12 @@ en:
       <strong>engage in the evolution of echo</strong>.<br/><br/>
       <strong>New features:</strong>
       </p>
+    function_1:
+      name: 'My Profile'
+      description: 'Complete your profile to present yourself in the echologic community.'
+    function_2:
+      name: 'Connect'
+      description: 'Explore other interesting members of the community.'
 
   # ------------
   # USERS MODULE

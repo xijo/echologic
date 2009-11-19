@@ -35,7 +35,7 @@ de:
       vision: 'Am Ende des Weges'
       discuss:
         status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald hier veröffentlicht.'
+        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
       connect:
         status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
@@ -92,7 +92,7 @@ de:
     my_echo:
       tabs:
         welcome: Willkommen
-        profile: Profil
+        profile: Mein Profil
 
 
   # ----------------
@@ -108,6 +108,12 @@ de:
       mitgestalten</strong> können.<br/><br/>
       <strong>Neue Bereiche:</strong>
       </p>
+    function_1:
+      name: 'Mein Profil'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
+    function_2:
+      name: 'Vernetzen'
+      description: 'Entdecken Sie andere interessante Mitglieder der Community.'
 
   # ------------
   # USERS MODULE
