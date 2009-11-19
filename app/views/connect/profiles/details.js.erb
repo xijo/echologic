@@ -13,5 +13,7 @@ $('#web_profiles').html(web_profiles);
 $('#full_name').html("<%=h @profile.full_name %>");
 $('#options').html(options);
 
+$(".profile").removeClass('active')
+$("#<%= dom_id @profile %>").addClass('active')
 
 $('#profile_details_container:hidden').animate(toggleParams, 300);
