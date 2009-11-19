@@ -6,6 +6,7 @@
   <% form_tag '/connect/search', :method => 'GET', :id => 'search_form' do %>
     <%= text_field_tag :value %>
     <%= hidden_field_tag :sort, @sort if not @sort.nil? %>
+    <%= hidden_field_tag :sort if @sort.nil? %>
     <%= submit_tag :send, :alt => 'search_button' %>
   <% end %>
 

@@ -1,18 +1,29 @@
 <ul id="profile_container">
 
-  <%= link_to 'All', url_for(:controller => :connect, :action => :search, :value => @value), :class => 'ajax' %>
+  <div>
+    <%= tabnav :connect_sorts %>
 
-  <%= link_to 'aff', url_for(:controller => :connect, :action => :search, :value => @value, :sort => 0), :class => 'ajax' %>
+    Found: <%= @profiles.total_entries if defined? @profiles.total_entries %>
 
-  value: <%= @value %>, sort: <%= Concernment.sorts %>
-
-  Found: <%= @profiles.total_entries if defined? @profiles.total_entries %>
-
-  <%= will_paginate @profiles if defined? @profiles.total_pages %>
+    <%= will_paginate @profiles if defined? @profiles.total_pages %>
+  </div>
 
   <%= render :partial => 'users/profile/profile', :collection => @profiles %>
 </ul>
 
 <script type="text/javascript">
   $(".pagination a").addClass('ajax');
+
+  $(".ajax_sort").live("click", function() {
+    var sort = $(this).attr('value');
+    $(':input[id=sort]').val(sort);
+    $('#search_form').submit();
+    return false;
+  });
+
+  $(".ajax_no_sort").live("click", function() {
+    $(':input[id=sort]').val('');
+    $('#search_form').submit();
+    return false;
+  });
 </script>

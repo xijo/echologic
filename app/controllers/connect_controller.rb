@@ -24,7 +24,7 @@ class ConnectController < ApplicationController
     @value = params[:value]
     @sort  = params[:sort]
 
-    sort_string = @sort.nil?? "" : "c.sort = #{@sort} AND "
+    sort_string = @sort.blank?? "" : "c.sort = #{@sort} AND "
 
     query = <<-END
       select distinct p.*, u.email

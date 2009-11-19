@@ -1,0 +1,20 @@
+<%
+render_tabnav :connect_sorts,
+              :generate_css => false, :html => {:class => 'submenu'} do
+
+  add_tab :html => {:class => 'ajax_no_sort'} do |t|
+    t.named 'All'
+    t.links_to url_for(:controller => :connect, :action => :search, :value => @value)
+    t.highlights_on :sort => ''
+  end
+
+  for key, value in Concernment.sorts do
+    add_tab :html => {:class => 'ajax_sort', :value => key} do |t|
+      t.named value
+      t.links_to url_for(:controller => :connect, :action => :search, :value => @value, :sort => key)
+      t.highlights_on :sort => key
+    end
+  end
+
+end
+%>
