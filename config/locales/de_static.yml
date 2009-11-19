@@ -4,6 +4,7 @@ de:
   # SEO data
   seo:
     title:
+      # static: de.seo.title.static
       static:
         echologic:
           show: &html_title 'echologic für echo - die globale Agora (Demokratie neu gedacht)'
@@ -27,18 +28,29 @@ de:
           your_profit:     'echonomy - Social Business mit Your-Profit Geschäftsphilosophie'
           foundation:      'echonomy - Die Echonomy Stiftung'
           public_property: 'echonomy - echo als kollektives Eigentum'
+
+      # users: de.seo.title.users
       users:
         users:
           new: 'Ihr echo - echologic beitreten'
         password_resets:
           new: 'Ihr echo - Neues Passwort anfordern'
           edit: 'Ihr echo - Neues Passwort setzen'
+
+      # discuss: de.seo.title.discuss
       discuss:
         show: 'echologic - Diskutieren'
+
+      # connect: de.seo.title.connect
       connect:
-        show: 'echologic - Vernetzen'
+        show:   'echologic - Vernetzen'
+        search: 'echologic - Vernetzen'
+
+      # act: de.seo.title.act
       act:
         show: 'echologic - Handeln'
+
+      # my_echo: de.seo.title.my_echo
       my_echo:
         show: 'echologic - Mein echo'
         welcome: 'echologic - Welcome'
@@ -56,7 +68,7 @@ de:
       keywords: |-
         echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
         kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
-        Entscheidungsfindung, Transparenz, lösungsorientierte demokratische Kollaboration, 
+        Entscheidungsfindung, Transparenz, lösungsorientierte demokratische Kollaboration,
         echocracy, Gleichberechtigung, echonomy, öko-sozial, ökosoziale demokratische Wirtschaftsform,
         Wirtschaftsdemokratie, Your-Profit, Echokratie, Echonomie, partizipative Demokratie, glokal, Glokalität
 
@@ -139,12 +151,12 @@ de:
           Verschiedene <strong>Kooperationspartner</strong> aus Zivilgesellschaft
           (<a href='http://www.netzwerk-gemeinsinn.net/' target='_blank'>Netzwerk Gemeinsinn</a>, OneAim.org),
           Wirtschaft (<a href='http://www.the-foo.de/' target='_blank'>The Foo</a>), Politik
-          (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) und Wissenschaft 
+          (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) und Wissenschaft
           (<a href='http://www.ztg.tu-berlin.de' target="_blank">Technische Universität Berlin / Zentrum Technik und Gesellschaft</a>)
           helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele zu verwirklichen.
           </p><p>
           Wenn Ihre Organisation auch echo mitgestalten möchte, schreiben Sie uns bitte eine E-mail an
-          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>. 
+          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>.
           </p>
 
       # imprint section

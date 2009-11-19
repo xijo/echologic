@@ -36,7 +36,8 @@ en:
       discuss:
         show: 'echologic - Discuss'
       connect:
-        show: 'echologic - Connect'
+        show:   'echologic - Connect'
+        search: 'echologic - Connect'
       act:
         show: 'echologic - Act'
       my_echo:
@@ -55,9 +56,9 @@ en:
       keywords: |-
         echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
         collective intelligence, sustainable future, opinion base, opinion formation, decision making,
-        transparency, solution-oriented democractic collaboration, echocracy, equality, 
+        transparency, solution-oriented democractic collaboration, echocracy, equality,
         echonomy, eco-social democractic economy, your-profit, glocal, glocality
-        
+
 
   # Static content
   static:

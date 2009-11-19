@@ -38,6 +38,7 @@ class Profile < ActiveRecord::Base
   end
 
   # Return the formatted location of the user
+  # TODO conditions in compact form?
   def location
     if not (country.blank? or city.blank?)
       "#{city}, #{country}"

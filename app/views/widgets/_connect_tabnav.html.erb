@@ -6,7 +6,8 @@ render_tabnav :act,
 
   add_tab :html => { :id => 'explore_tab' } do |t|
     t.named I18n.t('layouts.connect.tabs.search')
-    t.links_to '/connect/search'
+    t.links_to url_for(:controller => 'connect', :action => 'search')
+    t.highlights_on :action => 'search'
   end
 
   add_tab :html => {:id => 'roadmap_tab'} do |t|
