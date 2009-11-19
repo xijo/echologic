@@ -3,7 +3,9 @@
 <li id="<%= dom_id @membership %>" >
   <%=h "#{@membership.organisation} #{@membership.position}" %>
 
-  <%= link_to I18n.t('application.general.edit'), edit_user_membership_path(@membership.user, @membership), :class => 'ajax options_button' %>
-  <%= link_to I18n.t('application.general.delete'), user_membership_path(@membership.user, @membership), :class => 'ajax_delete options_button' %>  
+  <% if @membership.user == current_user %>
+    <%= link_to I18n.t('application.general.edit'), edit_user_membership_path(@membership.user, @membership), :class => 'ajax options_button' %>
+    <%= link_to I18n.t('application.general.delete'), user_membership_path(@membership.user, @membership), :class => 'ajax_delete options_button' %>
+  <% end %>
 
 </li>

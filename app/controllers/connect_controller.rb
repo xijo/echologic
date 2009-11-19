@@ -43,11 +43,12 @@ class ConnectController < ApplicationController
           or p.about_me   like '%#{@value}%'
           or p.motivation like '%#{@value}%'
           or u.email      like '%#{@value}%'
+          or t.value      like '%#{@value}%'
         )
       order by p.first_name asc;
     END
 
-    @profiles = Profile.find_by_sql(query).paginate(:page => params[:page], :per_page => 2)
+    @profiles = Profile.find_by_sql(query).paginate(:page => params[:page], :per_page => 6)
 
     respond_to do |format|
       format.html { render :template => 'connect/search' }

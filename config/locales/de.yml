@@ -198,10 +198,12 @@ de:
       heading: Web Profile
       comment: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
       sorts:
-        homepage: Homepage
-        twitter: Twitter
-        blog: Blog
-        xing: Xing
+        homepage: "Homepage"
+        email:    "E-Mail"
+        blog:     "Blog"
+        linkedin: "LinkedIn"
+        twitter:  "Twitter"
+        xing:     "Xing"
 
     # Concernments section
     concernments:

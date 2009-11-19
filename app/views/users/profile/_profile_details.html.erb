@@ -1,36 +1,44 @@
 <% @profile = profile if defined?(profile) %>
 
 <div id="title" class="title ui-corner-all">
-  <span><%=h @profile.full_name %></span>
+  <span></span>
   <% link_to '#', :onclick => "$('#profile_details_container').hide(); return false;", :class => 'close_link' do %>
     <span>close</span>
   <% end %>
 </div>
 
 
-<div style="float:left;">
-  <% link_to @profile, :class => 'ajax show_link' do %>
-    <%= image_tag @profile.avatar.url(:small) %>
-  <% end %>
-</div>
 
-<div id="tabs" style="float:left; width:350px;">
+
+<div id="tabs" style="float:left; width:650px;">
   <ul>
-    <li><a href="#tab1">Nunc</a></li>
-    <li><a href="#tab2">Nunc</a></li>
-    <li><a href="#tab3">Nunc</a></li>
+    <li><span style="color:#f99;"><%=h @profile.full_name %></li>
+    <li><a href="#tab1">Overview</a></li>
+    <li><a href="#tab2">Competence?</a></li>
+    <li><a href="#tab3">Network</a></li>
   </ul>
 
-  <div id="tab1">
-    <%=h @profile.user.email %>      <br/>
-    <%=h @profile.city %>       <br/>
-    <%=h @profile.country %>    <br/>
-    <%=h @profile.about_me %>   <br/>
-    <%=h @profile.motivation %> <br/>
+  <div style="float:left; max-width:100px;">
+    <%= image_tag @profile.avatar.url(:small) %><br/>
+    <%=h @profile.location %>
   </div>
 
-  <div id="tab2">
-    <%= render @profile.concernments %>
+  <div id="tab1" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+    <%=h @profile.full_name %>       <br/>
+    <%=h @profile.location %>        <br/>
+    <%=h @profile.localized_gender %><br/>
+    <%=h @profile.about_me %>        <br/>
+    <%=h @profile.motivation %>      <br/>
+    <%= render @profile.memberships %>
+  </div>
+
+  <div id="tab2" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+    <% Concernment.sorts.each do |sort, name| %>
+      <h2><%= name %></h2>
+      <div id="concernments_<%= sort %>" style="clear: both;">
+        <%= render :partial => 'users/concernments/concernment', :collection => @profile.concernments.find_all_by_sort(sort) %>
+      </div>
+    <% end %>
   </div>
 
   <div id="tab3">
@@ -42,7 +50,6 @@
 </div>
 
 <div style="clear:both;display:block;">
-  <%= link_to 'Show', url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link' %>
   <%= link_to 'Report', url_for(:controller => 'users/reports', :action => 'new', :id => @profile.user), :class => 'ajax report_link' %>
   <% if show_admin_options? %>
     <%= link_to 'Edit', edit_profile_path(@profile) %>

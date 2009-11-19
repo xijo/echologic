@@ -6,7 +6,7 @@
 
   value: <%= @value %>, sort: <%= Concernment.sorts %>
 
-  Found: <%= @profiles.total_entries %>
+  Found: <%= @profiles.total_entries if defined? @profiles.total_entries %>
 
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
 

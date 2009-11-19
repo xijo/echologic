@@ -197,10 +197,12 @@ en:
       heading: Web Profiles
       comment: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
       sorts:
-        homepage: Homepage
-        twitter: Twitter
-        blog: Blog
-        xing: Xing
+        homepage: "Homepage"
+        email:    "E-Mail"
+        blog:     "Blog"
+        linkedin: "LinkedIn"
+        twitter:  "Twitter"
+        xing:     "Xing"
 
     # Concernments section
     concernments:
