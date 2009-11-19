@@ -1,12 +1,15 @@
 <% content_for :submenu, tabnav(:connect) %>
 
-<div id="connect_container">
-  <% form_tag '/connect/search', :method => 'GET', :id => 'search_form' do %>
+<div id="search_container">
+  <% form_tag connect_path, :method => 'GET', :id => 'search_form' do %>
     <%= text_field_tag :value %>
     <%= hidden_field_tag :sort, @sort if not @sort.nil? %>
     <%= hidden_field_tag :sort if @sort.nil? %>
     <%= submit_tag :send, :alt => 'search_button' %>
   <% end %>
+</div>
+
+<div id="connect_container">
 
   <%= render :partial => 'users/profile/list' %>
 

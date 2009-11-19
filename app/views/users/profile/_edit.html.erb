@@ -8,8 +8,8 @@
       <%= form.input :female, :as => :radio, :label => Profile.human_attribute_name(:gender), :collection => Profile.gender.collect { |k,v| [v,k] } %>
       <%= form.input :city %>
       <%= form.input :country %>
-      <%= form.input :about_me,   :as => :text, :input_html => { :rows => 3, :cols => 30 } %>
-      <%= form.input :motivation, :as => :text, :input_html => { :rows => 3, :cols => 30 } %>
+      <%= form.input :about_me,   :as => :text, :input_html => { :rows => 3, :cols => 30, :class => 'autogrow' } %>
+      <%= form.input :motivation, :as => :text, :input_html => { :rows => 3, :cols => 30, :class => 'autogrow' } %>
     <% end %>
     <% form.buttons do %>
       <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>

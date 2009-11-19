@@ -3,4 +3,9 @@
 <%=h @profile.localized_gender %><br/>
 <%=h @profile.about_me %>        <br/>
 <%=h @profile.motivation %>      <br/>
-<%= render :partial => 'users/memberships/membership', :collection => @profile.memberships %>
+
+<div>
+  <% for membership in @profile.memberships do %>
+    <%=h membership.organisation %> <%=h membership.position %>
+  <% end %>
+</div>

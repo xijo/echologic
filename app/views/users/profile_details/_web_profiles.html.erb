@@ -1,3 +1,7 @@
 <% for web_profile in @profile.web_profiles do %>
-  <%= web_profile.location %><br/>
+  <%= auto_link(sanitize(web_profile.location), :all, :target => '_blank' ) %><br/>
+<% end %>
+
+<% if @profile.web_profiles.empty? %>
+  text: Benutzer hat keine webprofile eingetragen.
 <% end %>

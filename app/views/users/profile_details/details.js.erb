@@ -6,6 +6,7 @@ var overview     = "<%= escape_javascript(render(:partial => 'users/profile_deta
 var concernments = "<%= escape_javascript(render(:partial => 'users/profile_details/concernments')) %>";
 var web_profiles = "<%= escape_javascript(render(:partial => 'users/profile_details/web_profiles')) %>";
 var avatar       = "<%= escape_javascript(render(:partial => 'users/profile_details/avatar')) %>";
+var options      = "<%= escape_javascript(render(:partial => 'users/profile_details/options')) %>";
 
 //$('#profile_details_container').replaceWith(content);
 
@@ -13,7 +14,8 @@ $('#avatar').html(avatar);
 $('#overview').html(overview);
 $('#concernments').html(concernments);
 $('#web_profiles').html(web_profiles);
-$('#full_name').html("<%=h @profile.full_name %>")
+$('#full_name').html("<%=h @profile.full_name %>");
+$('#options').html(options);
 
 
-$('#profile_details_container:hidden').show();
+$('#profile_details_container:hidden').animate(toggleParams, 300);

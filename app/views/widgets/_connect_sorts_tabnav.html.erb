@@ -11,7 +11,7 @@ render_tabnav :connect_sorts,
   for key, value in Concernment.sorts do
     add_tab :html => {:class => 'ajax_sort', :value => key} do |t|
       t.named value
-      t.links_to url_for(:controller => :connect, :action => :search, :value => @value, :sort => key)
+      t.links_to url_for(:controller => :connect, :action => :show, :value => @value, :sort => key)
       t.highlights_on :sort => key
     end
   end

@@ -2,3 +2,5 @@
 var content = "<%= escape_javascript(render(:partial => 'users/profile/list')) %>";
 
 $("#profile_container").replaceWith(content);
+
+$("#profile_details_container:visible").animate(toggleParams, 300);
