@@ -35,7 +35,7 @@ de:
       vision: 'Am Ende des Weges'
       discuss:
         status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
+        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald hier veröffentlicht.'
       connect:
         status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
@@ -103,10 +103,10 @@ de:
     title: Willkommen auf echologic!
     text: |
       <p>
-      Hier sehen Sie <strong>die neuesten Funktionen</strong> die wir in der letzten Zeit veröffentlicht haben.<br/>
-      Mit der Zeit werden immer mehr Feature hinzukommen, mit denen Sie die Entwicklung von echo zunehmend
-      mitgestalten können.<br/><br/>
-      Derzeitig können Sie:
+      Hier sehen Sie die neuesten Bereiche die wir neulich auf echologic veröffentlicht haben.<br/>
+      Mit der Zeit werden immer mehr Funktionen hinzukommen, mit denen Sie zunehmend <strong>die Entwicklung von echo
+      mitgestalten</strong> können.<br/><br/>
+      <strong>Neue Bereiche:</strong>
       </p>
 
   # ------------

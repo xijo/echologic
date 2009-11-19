@@ -86,7 +86,7 @@ en:
 
     connect:
       tabs:
-        search: Explore community
+        search: Explore Community
 
     act:
       tabs:
@@ -104,10 +104,10 @@ en:
     title: Welcome to echologic!
     text: |
       <p>
-      Here you can see the <strong>most recently released functionality</strong> of echologic.<br/>
-      With the time, more and more features will be introduced which will enable you to follow and increasingly
-      engage into the evolution of echo.<br/><br/>
-      Currently you can:
+      Here you can see the most recently released functionality on echologic.<br/>
+      With the time, more and more features will be introduced enabling you to follow and increasingly
+      <strong>engage in the evolution of echo</strong>.<br/><br/>
+      <strong>New features:</strong>
       </p>
 
   # ------------
