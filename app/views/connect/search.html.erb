@@ -1,0 +1,22 @@
+<% content_for :submenu, tabnav(:admin) %>
+
+<h1>Connect 2nd</h1>
+
+<div id="connect_container">
+  <% form_tag '/connect/search', :method => 'GET', :id => 'search_form' do %>
+    <%= text_field_tag :value %>
+    <%= hidden_field_tag :sort, @sort if not @sort.nil? %>
+    <%= submit_tag :send, :alt => 'search_button' %>
+  <% end %>
+
+  <%= render :partial => 'users/profile/list' %>
+
+  <div id="profile_details_container">
+
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  $('#search_form').ajaxForm({ dataType : 'script' });
+</script>
