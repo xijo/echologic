@@ -1,0 +1,17 @@
+/* Render details into the corresponding container. */
+
+var overview     = "<%= escape_javascript(render(:partial => 'connect/profiles/overview')) %>";
+var concernments = "<%= escape_javascript(render(:partial => 'connect/profiles/concernments')) %>";
+var web_profiles = "<%= escape_javascript(render(:partial => 'connect/profiles/web_profiles')) %>";
+var avatar       = "<%= escape_javascript(render(:partial => 'connect/profiles/avatar')) %>";
+var options      = "<%= escape_javascript(render(:partial => 'connect/profiles/options')) %>";
+
+$('#avatar').html(avatar);
+$('#overview').html(overview);
+$('#concernments').html(concernments);
+$('#web_profiles').html(web_profiles);
+$('#full_name').html("<%=h @profile.full_name %>");
+$('#options').html(options);
+
+
+$('#profile_details_container:hidden').animate(toggleParams, 300);

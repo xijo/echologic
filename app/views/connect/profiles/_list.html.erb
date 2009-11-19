@@ -7,7 +7,7 @@
 
   </div>
 
-  <%= render :partial => 'users/profile/profile', :collection => @profiles %>
+  <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
 
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
 
