@@ -33,15 +33,18 @@ de:
         password_resets:
           new: 'Ihr echo - Neues Passwort anfordern'
           edit: 'Ihr echo - Neues Passwort setzen'
-      my_echo:
-        welcome: 'echologic - Welcome'
-        profile: 'echologic - Mein Profil'
       discuss:
         show: 'echologic - Diskutieren'
       connect:
         show: 'echologic - Vernetzen'
       act:
         show: 'echologic - Handeln'
+      my_echo:
+        show: 'echologic - Mein echo'
+        welcome: 'echologic - Welcome'
+        profile: 'echologic - Mein Profil'
+      admin:
+        show: 'echologic - Admin Area'
 
     meta:
       description: |-

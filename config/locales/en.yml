@@ -41,7 +41,16 @@ en:
         next_steps: 'echo Connect will be enhanced after the first features of echo Discuss and echo Act have been released.'
       act:
         status_quo: 'echo Act is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.' 
+        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.'
+      my_echo:
+        status_quo: 'The My echo area of echo is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'Further development of this area is planned after the development of some basic Discuss, Connect and Act functionality.'
+        vision: |
+         <p>
+         In the long term, the My echo area will be your <strong>personal information hub</strong> inside of echo. E.g. it will provide
+         you with the most <strong>important news</strong> and call your attention to the most <strong>recent discussions and actions</strong> according
+         to your preferences.
+         </p>
 
 
     mailer:
@@ -77,7 +86,7 @@ en:
 
     connect:
       tabs:
-        search: Explore Community
+        search: Explore community
 
     act:
       tabs:
@@ -95,13 +104,11 @@ en:
     title: Welcome to echologic!
     text: |
       <p>
-      This is the start page of echologic showing you some of the <strong>most recently added functionality</strong>.<br/>
+      Here you can see the <strong>most recently released functionality</strong> of echologic.<br/>
       With the time, more and more features will be introduced which will enable you to follow and increasingly
-      engage into the evolution of echo.
-      </p><p>
-      Currently, the only thing you can do is to <strong>set up your profile</strong>.<br/>
-      A first version of echo Connect will also be released shortly,
-      allowing you to browse other members of the community.
+      engage into the evolution of echo.<br/><br/>
+      Currently you can:
+      </p>
 
   # ------------
   # USERS MODULE

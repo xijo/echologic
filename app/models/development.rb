@@ -4,4 +4,5 @@ class Development
   DISCUSS_PROGRESS = 0
   CONNECT_PROGRESS = 5
   ACT_PROGRESS = 0
+  MY_ECHO_PROGRESS = 10
 end
