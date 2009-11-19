@@ -1,6 +1,14 @@
 <% Concernment.sorts.each do |sort, name| %>
-  <h2><%= name %></h2>
-  <div id="concernments_<%= sort %>" style="clear: both;">
-    <%= render :partial => 'users/concernments/concernment', :collection => @profile.concernments.find_all_by_sort(sort) %>
-  </div>
+
+  <% concernments = @profile.concernments.find_all_by_sort(sort) %>
+  <% unless concernments.empty? %>
+    <h2><%= name %></h2>
+    <div id="concernments_<%= sort %>" style="clear: both;">
+      <%= render :partial => 'users/concernments/concernment', :collection => concernments %>
+    </div>
+  <% end %>
 <% end %>
+
+<% if @profile.concernments.empty? %>
+  text: Der Benutzer hat keine Kompetenz(?) eingetragen.
+<% end%>
