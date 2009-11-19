@@ -16,8 +16,14 @@ module NavigationHelpers
       root_path
     when /the connect page/
       '/connect/profiles'
-    when /^question "(.*)"$/i
-      question_path($1)
+    when /^create a question$/
+      new_question_path
+    when /^the question$/
+      question_path(@question)
+    when /^the first question$/
+      question_path(Question.first)
+    when /^the questions first proposal/
+      question_proposal_path(@question,@proposal)
       
     # Add more mappings here.
     # Here is a more fancy example:

@@ -2,18 +2,17 @@
 
 <h1><%= I18n.t('static.echo.act.title') %></h1>
 
+<h2><%= I18n.t('application.roadmap.status_quo') %></h2>
+<%= I18n.t('application.roadmap.act.status_quo', :progress => Development::ACT_PROGRESS) %>
+
+<h2><%= I18n.t('application.roadmap.next_steps') %></h2>
+<%= I18n.t('application.roadmap.act.next_steps') %>
+
+<h2><%= I18n.t('application.roadmap.vision') %></h2>
+
 <%= I18n.t('static.echo.act.text_top') %>
-
 <ul><%= I18n.t('static.echo.act.possible_actions') %></ul>
-
 <%= I18n.t('static.echo.act.text_middle') %>
-
 <% insert_toggle_more(I18n.t('static.echo.act.act_more')) %>
-<div style="position:relative;left:-9999px">.</div>
 
-<%# TODO javascript in corresponding js file! (connect.js?) %>
-<script type="text/javascript">
-  $("#progressbar").progressbar({
-    value: 2
-  });
-</script>
+<div style="position:relative;left:-9999px">.</div>

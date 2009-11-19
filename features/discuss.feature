@@ -1,6 +1,6 @@
 Feature: Discuss
   In order to have a proper discussion
-  As an user
+  As a user
   I want to create questions and add proposals and add improvementproposals
 
   # fixtures needed:
@@ -10,14 +10,14 @@ Feature: Discuss
     Given there are no questions
       And I am logged in as "editor" with password "true"
     When I go to create a question
-      # should do as above but automitcally through a better step definition
+      # should do as above but automatically through a better step definition
       And I post some valid question data
     Then I should see a "question created" message
      And there should be one question
 
   Scenario: Add a proposal to a question as an editor (from ui)
     Given I am logged in as "editor" with password "true"
-      And there is a question "first-question"
+      And there is the first question
       And the question has no proposals
     # Todo: Maybe we should start navigating from the main question overview
     When I go to the question
@@ -37,7 +37,7 @@ Feature: Discuss
   
   Scenario: Add an Improvement Proposal to a Proposal
     Given I am logged in as "user" with password "true"
-      And there is a question "first-question"
+      And there is the first question
       And the question has at least on proposal
     When I go to the questions first proposal
       And I follow the create improvement proposal link
@@ -65,7 +65,7 @@ Feature: Discuss
   Scenario: Add a proposal to a question as a user (from ui)
     Given I am logged in as "user" with password "true"
     # Todo: Maybe we should start navigating from the main question overview
-    When I go to question "first-question"
+    When I go to the first question
     Then I should not see the create proposal link
   
   # Todo: Maybe this should be better checked somewhere else
@@ -73,7 +73,3 @@ Feature: Discuss
     Given I am logged in as "user" with password "true"
     When I post some valid proposal data for "first-question"
     Then I should see a "permission denied" error message
-
-
-   
- 

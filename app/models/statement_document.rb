@@ -4,4 +4,6 @@ class StatementDocument < ActiveRecord::Base
   
   validates_presence_of :title
   validates_presence_of :text
+  validates_associated :author
+  validates_presence_of :author
 end

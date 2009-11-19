@@ -64,7 +64,7 @@ ActionController::Routing::Routes.draw do |map|
   map.static    'echologic/:action', :controller => 'static/echologic'
 
 
-  map.resources :questions do |question|
+  map.resources :questions, :as => 'discuss' do |question|
     question.resources :proposals do |proposal|
       proposal.resources :pro_argument
       proposal.resources :contra_argument

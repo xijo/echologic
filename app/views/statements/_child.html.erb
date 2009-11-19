@@ -1,0 +1,4 @@
+<% statement ||= @statement %>
+<div id="<%=statement.parent.class.name.downcase%>_<%=statement.id%>" class="<%=statement.parent.class.name.downcase%>">
+  <%=link_to(statement.title,url_for(statement))%>
+</div>
