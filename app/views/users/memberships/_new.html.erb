@@ -8,5 +8,5 @@
 </li>
 
 <script type="text/javascript">
-  $("#<%= dom_class(Membership, :new) %>").ajaxForm({ dataType: 'script' }); 
+  $("#<%= dom_class(Membership, :new) %>").ajaxForm({ dataType: 'script', resetForm: true });
 </script>

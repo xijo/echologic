@@ -1,7 +1,15 @@
 <ul id="profile_container">
 
+  <%= link_to 'All', url_for(:controller => :connect, :action => :search, :value => @value), :class => 'ajax' %>
+
+  <%= link_to 'aff', url_for(:controller => :connect, :action => :search, :value => @value, :sort => 0), :class => 'ajax' %>
+
+  value: <%= @value %>, sort: <%= Concernment.sorts %>
+
+  Found: <%= @profiles.total_entries %>
+
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
-  
+
   <%= render :partial => 'users/profile/profile', :collection => @profiles %>
 </ul>
 

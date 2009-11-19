@@ -7,6 +7,11 @@ class User < ActiveRecord::Base
 
   has_many :reports, :foreign_key => 'suspect_id'
 
+
+  named_scope :no_member, :conditions => { :memberships => nil }, :order => :email
+
+
+
   # Every user must have a profile. Profiles are destroyed with the user.
   has_one :profile, :dependent => :destroy
 

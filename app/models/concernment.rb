@@ -7,7 +7,13 @@ class Concernment < ActiveRecord::Base
   # Validate uniqueness
   validates_uniqueness_of :tag_id, :scope => [:user_id, :sort]
   validates_presence_of :tag_id, :user_id
-  
+
+  # Named scopes
+  named_scope :affected,       :conditions => { :sort => 0 }
+  named_scope :engaged,        :conditions => { :sort => 1 }
+  named_scope :scientist,      :conditions => { :sort => 2 }
+  named_scope :representative, :conditions => { :sort => 3 }
+
   # Map the different sorts of concernments to their database representation
   # value..
   @@sorts = {
@@ -16,15 +22,15 @@ class Concernment < ActiveRecord::Base
     2 => I18n.t('users.concernments.sorts.scientist'),
     3 => I18n.t('users.concernments.sorts.representative')
   }
-  
+
   # ..and make it available as class method.
-  def self.sorts 
-    @@sorts 
-  end 
-  
+  def self.sorts
+    @@sorts
+  end
+
   # Validate correctness of sort
   validates_inclusion_of :sort, :in => Concernment.sorts
-  
 
-  
+
+
 end

@@ -13,7 +13,7 @@ class ConnectController < ApplicationController
   def profiles
     @profiles = Profile.find(:all)
     respond_to do |format|
-      format.html
+      format.html { render :template => 'connect/search' }
     end
   end
 
@@ -22,36 +22,35 @@ class ConnectController < ApplicationController
   def search
 
     @value = params[:value]
+    @sort  = params[:sort]
 
-    search = Profile.search
+    sort_string = @sort.nil?? "" : "c.sort = #{@sort} AND "
 
-    search.first_name_like = @value
-    search.last_name_like  = @value
-    search.city_like       = params[:value]
-    search.country_like    = params[:value]
-    search.motivation_like = params[:value]
-    search.about_me_like   = params[:value]
-    search.user_email_like = params[:value]
+    query = <<-END
+      select distinct p.*, u.email
+      from
+        profiles p
+        LEFT JOIN `users` u ON u.id = p.user_id
+        LEFT JOIN concernments c ON (u.id = c.user_id)
+        LEFT JOIN tags t ON (t.id = c.tag_id)
+      where
+        #{sort_string}
+        (
+          p.first_name    like '%#{@value}%'
+          or p.last_name  like '%#{@value}%'
+          or p.city       like '%#{@value}%'
+          or p.country    like '%#{@value}%'
+          or p.about_me   like '%#{@value}%'
+          or p.motivation like '%#{@value}%'
+          or u.email      like '%#{@value}%'
+        )
+      order by p.first_name asc;
+    END
 
-    search.user_tags_value_equals = params[:value]
-
-    # Very prototypy solution to get the right data. Problem is, that
-    # searchlogic doesn't provide OR searches yet.
-
-    conditions = search.scope(:find)[:conditions].gsub(' AND ', ' OR ')
-
-    joins = "INNER JOIN `users` ON `users`.id = `profiles`.user_id INNER JOIN `concernments` ON (`users`.`id` = `concernments`.`user_id`)  INNER JOIN `tags` ON (`tags`.`id` = `concernments`.`tag_id`)  INNER JOIN `users` users_profiles ON `users_profiles`.id = `profiles`.user_id".gsub('INNER', 'LEFT')
-
-    @profiles = Profile.find( :all,
-                              :joins => joins,
-                              :conditions => conditions,
-                              :readonly => true,
-                              :select => 'DISTINCT profiles.*',
-                              :order => 'first_name'
-                              ).paginate(:page => params[:page], :per_page => 2)
+    @profiles = Profile.find_by_sql(query).paginate(:page => params[:page], :per_page => 2)
 
     respond_to do |format|
-      format.html { render :template => 'connect/profiles' }
+      format.html { render :template => 'connect/search' }
       format.js
     end
   end

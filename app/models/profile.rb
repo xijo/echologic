@@ -37,4 +37,17 @@ class Profile < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  # Return the formatted location of the user
+  def location
+    if not (country.blank? or city.blank?)
+      "#{city}, #{country}"
+    elsif not country.blank?
+      country
+    elsif not city.blank?
+      city
+    else
+      ""
+    end
+  end
+
 end
