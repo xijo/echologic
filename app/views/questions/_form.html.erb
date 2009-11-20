@@ -1,0 +1,9 @@
+<% form.fields_for :document do |doc|  %>
+  <%= doc.label :title %>
+  <%= doc.text_field :title %>
+  <br />
+  <%= doc.label :text %>
+  <%= doc.text_area :text %>
+  <br />
+<% end -%>
+<%= form.submit "Save", :id => 'save_button' %>

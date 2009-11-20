@@ -1,0 +1,4 @@
+<% form_for @statement do |f| -%>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :locals => { :form => f } %>
+<% end -%>

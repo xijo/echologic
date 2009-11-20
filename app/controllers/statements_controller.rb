@@ -5,8 +5,7 @@ class StatementsController < ApplicationController
   verify :method => :put, :only => :update
   verify :method => :delete, :only => :delete
 
-  before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
   
   before_filter :fetch_statement, :only => [:show, :edit, :update]
   
@@ -35,10 +34,13 @@ class StatementsController < ApplicationController
   end
   
   def create
-    @statement = statement_class.new(params[:statement])
+    @statement = statement_class.new(params[statement_class_param])
+    @statement.creator = @statement.document.author = current_user
     @statement.save!
+    flash[:notice] = "#{statement_class.display_name} created."
+    redirect_to url_for(@statement)
   rescue ActiveRecord::RecordNotSaved => exc
-    flash[:errors] = "Failed to save #{@statement.class_name}: #{exc.message}"
+    flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     render :action => 'new'
   end
   
@@ -46,9 +48,10 @@ class StatementsController < ApplicationController
   end
   
   def update
-    @statement.update_attributes!(params[:statement])
+    @statement.update_attributes!(params[statement_class_param])
+    redirect_to url_for(@statement)
   rescue ActiveRecord::RecordNotSaved => exc
-    flash[:errors] = "Failed to save #{@statement.class_name}: #{exc.message}"
+    flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     render :action => 'edit'
   end
   
@@ -64,5 +67,9 @@ class StatementsController < ApplicationController
   
   def statement_class
     params[:controller].singularize.camelize.constantize
+  end
+  
+  def statement_class_param
+    statement_class.name.underscore.to_sym
   end
 end

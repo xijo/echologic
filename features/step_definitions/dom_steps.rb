@@ -6,15 +6,15 @@ When /^I follow the "([^\"]*)" link within the "([^\"]*)" (.*)$/ do |link, selec
 end
 
 When /^I press the "([^\"]*)" button within the "([^\"]*)" (.*)$/ do |button, selector, container|
-  button.downcase!.gsub!(" ", "_")
-  selector.downcase!.gsub!(" ", "_")
+  button = button.downcase.gsub(" ", "_")
+  selector = selector.downcase.gsub(" ", "_")
   within "##{selector}_#{container}" do
     click_button "#{button}_button"
   end
 end
 
 When /^I press the "([^\"]*)" button$/ do |button|
-  button.downcase!.gsub!(" ", "_")
+  button = button.downcase.gsub(" ", "_")
   click_button "#{button}_button"
 end
 
@@ -24,7 +24,7 @@ end
 #   I should see the edit link
 #   I should see the update button
 Then /^I should not see the "([^\"]*)" (.*)$/ do |name, component|
-  name.downcase!.gsub!(' ', '_')
+  name = name.downcase.gsub(' ', '_')
   component.downcase!
   response.should_not have_selector("##{name}_#{component}")
 end
@@ -34,7 +34,7 @@ Then /^I should see the "([^\"]*)" (.*)$/ do |name, component|
 end
 
 Then /^I should see a "([^\"]*)" (.*)$/ do |name, component|
-  name.downcase!.gsub!(' ', '_')
+  name = name.downcase.gsub(' ', '_')
   component.downcase!
   response.should have_selector(".#{name.downcase}_#{component}")
 end

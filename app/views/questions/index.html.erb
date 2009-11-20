@@ -1,0 +1,5 @@
+<ul>
+  <% @statements.each do |statement| -%>
+    <li><%= link_to statement.document.title, question_url(statement) %></li>
+  <% end -%>
+</ul>

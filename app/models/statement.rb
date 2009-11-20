@@ -15,6 +15,12 @@ class Statement < ActiveRecord::Base
   
   #belongs_to :work_packages
   
+  # allow mass-assignment of document data.
+  # FIXME: there has to be some more convenient way of doing this...
+  def document=(obj)
+    obj.kind_of?(Hash) ? create_document(obj) : super
+  end
+  
   ##
   ## NAMED SCOPES
   ##
