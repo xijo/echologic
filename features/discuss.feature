@@ -11,7 +11,11 @@ Feature: Discuss
       And I am logged in as "editor" with password "true"
     When I go to create a question
       # should do as above but automatically through a better step definition
-      And I post some valid question data
+#      And I post some valid question data
+      And I fill in the following:
+        | title | Is this a Question?   |
+        | text  | Blablabla bla bla bla |
+      And I press the "Save" button
     Then I should see a "question created" message
      And there should be one question
 
@@ -58,7 +62,11 @@ Feature: Discuss
     Given there are no questions
      And I am logged in as "user" with password "true"
     When I go to create a question
-      And I post some valid question data
+#      And I post some valid question data
+    And I fill in the following:
+        | title | Is this a Question?   |
+        | text  | Blablabla bla bla bla |
+    And I press the "Save" button
     Then I should see a "permission denied" error message
       And there should be no questions
 
