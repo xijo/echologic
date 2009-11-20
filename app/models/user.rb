@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include UserExtension::Echo
 
   has_many :web_profiles
   has_many :memberships
@@ -83,5 +84,4 @@ class User < ActiveRecord::Base
     reset_perishable_token!
     Mailer.deliver_password_reset_instructions(self)
   end
-
 end
