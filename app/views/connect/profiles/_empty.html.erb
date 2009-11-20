@@ -1,0 +1,24 @@
+<div id="profile_details_container" style="clear:both; overflow:auto; display:none;">
+  <ul>
+    <li id="full_name" style="color:#7AB031; width:150px;"></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#concernments">Concernments</a></li>
+    <li><a href="#web_profiles">Web Profiles</a></li>
+    <%= link_to I18n.t('application.general.close'), connect_path, :onclick => "$('#profile_details_container').animate(toggleParams, 300); $('.profile').removeClass('active'); return false;", :class => 'close_link' %>
+  </ul>
+
+  <div id="avatar" style="float:left; max-width:100px;"></div>
+
+  <div id="overview" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <div id="concernments" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <div id="web_profiles" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;"></div>
+
+  <div id="options" style="float:right; max-width:100px;"></div>
+
+  <script type="text/javascript">
+    $('#profile_details_container').tabs();
+  </script>
+
+</div>

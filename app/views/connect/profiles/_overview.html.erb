@@ -1,0 +1,11 @@
+<%=h @profile.full_name %>       <br/>
+<%=h @profile.location %>        <br/>
+<%=h @profile.localized_gender %><br/>
+<%=h @profile.about_me %>        <br/>
+<%=h @profile.motivation %>      <br/>
+
+<div>
+  <% for membership in @profile.memberships do %>
+    <%=h membership.organisation %> <%=h membership.position %>
+  <% end %>
+</div>

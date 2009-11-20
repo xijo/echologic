@@ -34,14 +34,23 @@ de:
       next_steps: 'Nächste Schritte'
       vision: 'Am Ende des Weges'
       discuss:
-        status_quo: 'echo Diskutieren ist {{progress}}% fertig.'
+        status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
       connect:
-        status_quo: 'echo Vernetzen ist {{progress}}% fertig.'
+        status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
       act:
-        status_quo: 'echo Handeln ist {{progress}}% fertig.'
-        next_steps: 'Die Entwicklung von echo Handeln wird nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
+        status_quo: 'echo Handeln ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Mit der Entwicklung von echo Handeln werden wir nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
+      my_echo:
+        status_quo: 'Der Mein echo Bereich von echo ist <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Weitere Entwicklungen im Mein echo Bereich sind nach der Veröffentlichung von Basisfunktionalitäten unter Diskutieren, Vernetzen und Handeln geplant.'
+        vision: |
+         <p>
+         Auf der langen Sicht wird der Mein echo Bereich Ihre <strong>persönliche Informationszentrale</strong> innerhalb von echo sein.
+         Z.B. wird es Ihnen einen Überblick über die <strong>wichtigsten Nachrichten</strong> geben und Sie auf die <strong>neuesten
+         Diskussionen und Aktionen</strong> entsprechend Ihrer Präferenzen aufmerksam machen.
+         </p>
 
     mailer:
       signature: |
@@ -75,7 +84,7 @@ de:
 
     connect:
       tabs:
-        search: Community Entdecken
+        search: Community entdecken
 
     act:
       tabs:
@@ -83,7 +92,7 @@ de:
     my_echo:
       tabs:
         welcome: Willkommen
-        profile: Profil
+        profile: Mein Profil
 
 
   # ----------------
@@ -94,13 +103,22 @@ de:
     title: Willkommen auf echologic!
     text: |
       <p>
-      Es ist die Startseite von echologic, die Sie immer auf <strong>die neuesten Funktionalität</strong> ausmerksam machen wird.<br/>
-      Mit der Zeit werden wir immer mehr Funktionen zur Verfügung stellen, die Ihnen ermöglichen, die Entwicklung von echo
-      zunehmend mitzugestalten.
+      <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
+      Sie sind die drei funktionalen Kernbereiche von echo,
+      die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.
       </p><p>
-      Das einzige, was Sie derzeitig tun können, ist <strong>Ihr Profil zu vervollständigen</strong>.<br/>
-      Eine erste Version von echo's Vernetzen wird bald veröffentlicht und wird Ihnen ermöglichen, andere Mitglieder
-      der Community durchzustöbern.
+      Unten sehen Sie die neulich veröffentlichten Bereiche.<br>
+      Mit der Zeit werden immer mehr Funktionen hinzukommen, die Ihnen die
+      <strong>Mitgestaltung von echo</strong> zunehmend ermöglichen werden.
+      </p><p>
+      <strong>Neue Bereiche:</strong>
+      </p>
+    function_1:
+      name: 'Mein Profil'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der Community zu präsentieren.'
+    function_2:
+      name: 'Vernetzen'
+      description: 'Entdecken Sie andere interessante Menschen der echologic Bewegung.'
 
   # ------------
   # USERS MODULE
@@ -185,10 +203,12 @@ de:
       heading: Web Profile
       comment: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
       sorts:
-        homepage: Homepage
-        twitter: Twitter
-        blog: Blog
-        xing: Xing
+        homepage: "Homepage"
+        email:    "E-Mail"
+        blog:     "Blog"
+        linkedin: "LinkedIn"
+        twitter:  "Twitter"
+        xing:     "Xing"
 
     # Concernments section
     concernments:

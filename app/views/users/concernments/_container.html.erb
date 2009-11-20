@@ -5,10 +5,10 @@
   <% concernments = @user.concernments %>
 
   <% Concernment.sorts.each do |sort, name| %>
-  
+
     <h2><%= name %></h2>
     <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort), :sort => sort } %><br/>
-      
+
   <% end %>
 
 </div>

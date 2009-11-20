@@ -5,55 +5,66 @@ class ConnectController < ApplicationController
   # Show the connect page
   # method: GET
   def show
+    @value    = params[:value] || ""
+    @sort     = params[:sort]  || ""
+    @page     = params[:page]  || 1
+    @profiles = search(@sort, @value.split(' ').first)
+
+    if @value.split(' ').size > 1
+      for value in @value.split(' ')[1..-1] do
+        @profiles &= search(@sort, value)
+      end
+    end
+
+    @profiles = @profiles.paginate(:page => @page, :per_page => 6)
+
     respond_to do |format|
-      format.html
+      format.html { render :template => 'connect/search' }
+      format.js   { render :template => 'connect/search' }
     end
   end
 
-  def profiles
-    @profiles = Profile.find(:all)
+  # Render the roadmap template.
+  # method: GET
+  def roadmap
     respond_to do |format|
-      format.html
+      format.html # roadmap.html.erb
     end
   end
 
   # Return connect page with results of the search
   # method: POST
-  def search
+  def search(sort, value)
 
-    @value = params[:value]
+    sort_string = sort.blank?? "" : "c.sort = #{sort} AND "
 
-    search = Profile.search
+    query = <<-END
+      select distinct p.*, u.email
+      from
+        profiles p
+        LEFT JOIN `users` u      ON u.id = p.user_id
+        LEFT JOIN memberships m  ON u.id = m.user_id
+        LEFT JOIN concernments c ON (u.id = c.user_id)
+        LEFT JOIN tags t         ON (t.id = c.tag_id)
+      where
+        #{sort_string}
+        (
+          p.first_name    like '%#{value}%'
+          or p.last_name  like '%#{value}%'
+          or p.city       like '%#{value}%'
+          or p.country    like '%#{value}%'
+          or p.about_me   like '%#{value}%'
+          or p.motivation like '%#{value}%'
+          or u.email      like '%#{value}%'
+          or t.value      like '%#{value}%'
+          or m.position   like '%#{value}%'
+          or m.organisation like '%#{value}%'
+        )
+      order by p.first_name asc;
+    END
 
-    search.first_name_like = @value
-    search.last_name_like  = @value
-    search.city_like       = params[:value]
-    search.country_like    = params[:value]
-    search.motivation_like = params[:value]
-    search.about_me_like   = params[:value]
-    search.user_email_like = params[:value]
+    profiles = Profile.find_by_sql(query)#.paginate(:page => params[:page], :per_page => 6)
 
-    search.user_tags_value_equals = params[:value]
-
-    # Very prototypy solution to get the right data. Problem is, that
-    # searchlogic doesn't provide OR searches yet.
-
-    conditions = search.scope(:find)[:conditions].gsub(' AND ', ' OR ')
-
-    joins = "INNER JOIN `users` ON `users`.id = `profiles`.user_id INNER JOIN `concernments` ON (`users`.`id` = `concernments`.`user_id`)  INNER JOIN `tags` ON (`tags`.`id` = `concernments`.`tag_id`)  INNER JOIN `users` users_profiles ON `users_profiles`.id = `profiles`.user_id".gsub('INNER', 'LEFT')
-
-    @profiles = Profile.find( :all,
-                              :joins => joins,
-                              :conditions => conditions,
-                              :readonly => true,
-                              :select => 'DISTINCT profiles.*',
-                              :order => 'first_name'
-                              ).paginate(:page => params[:page], :per_page => 2)
-
-    respond_to do |format|
-      format.html { render :template => 'connect/profiles' }
-      format.js
-    end
   end
 
 end

@@ -6,31 +6,13 @@
       Design screen elements for connect section.
 */
 
-#searchContainer {
-  margin:     0 auto;
-  width:      250px;
+#search_container {
+  margin:   0 auto;
+  width:    250px;
 }
 
-#filter {
-  width:      250px;
-}
-
-#categoryFilterContainer {
-  -moz-border-radius: 4px;
-  border: 1px solid #CCC;
-  background: #EEE;
-  padding: 6px;
-  margin: 10px auto;
-}
-
-#userList li {
-  clear: both;
-}
-
-#userList li img {
-  float: left;
-}
-
-#userList li div {
-  float: left;
+.pagination {
+  clear:    both;
+  margin:   0 auto;
+  max-width:300px;
 }

@@ -1,0 +1,13 @@
+<% @profile = profile if defined?(profile) %>
+
+<li id="<%= dom_id(@profile) %>" class="profile">
+  <% link_to url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link' do %>
+    <%= image_tag @profile.avatar.url(:small) %>
+  <% end %>
+  <div>
+    <%=h @profile.full_name %> <br/>
+    <%=h @profile.location %>  <br/>
+    <%=h @profile.first_membership %>
+  </div>
+
+</li>

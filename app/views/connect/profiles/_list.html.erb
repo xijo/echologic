@@ -1,0 +1,31 @@
+<ul id="profile_container">
+
+  <div>
+    <%= tabnav :connect_sorts %>
+
+    Found: <%= @profiles.total_entries if defined? @profiles.total_entries %>
+
+  </div>
+
+  <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
+
+  <%= will_paginate @profiles if defined? @profiles.total_pages %>
+
+</ul>
+
+<script type="text/javascript">
+  $(".pagination a").addClass('ajax');
+
+  $(".ajax_sort").live("click", function() {
+    var sort = $(this).attr('value');
+    $(':input[id=sort]').val(sort);
+    $('#search_form').submit();
+    return false;
+  });
+
+  $(".ajax_no_sort").live("click", function() {
+    $(':input[id=sort]').val('');
+    $('#search_form').submit();
+    return false;
+  });
+</script>

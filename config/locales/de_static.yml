@@ -4,6 +4,7 @@ de:
   # SEO data
   seo:
     title:
+      # static: de.seo.title.static
       static:
         echologic:
           show: &html_title 'echologic für echo - die globale Agora (Demokratie neu gedacht)'
@@ -27,21 +28,37 @@ de:
           your_profit:     'echonomy - Social Business mit Your-Profit Geschäftsphilosophie'
           foundation:      'echonomy - Die Echonomy Stiftung'
           public_property: 'echonomy - echo als kollektives Eigentum'
+
+      # users: de.seo.title.users
       users:
         users:
           new: 'Ihr echo - echologic beitreten'
         password_resets:
           new: 'Ihr echo - Neues Passwort anfordern'
           edit: 'Ihr echo - Neues Passwort setzen'
-      my_echo:
-        welcome: 'echologic - Welcome'
-        profile: 'echologic - Mein Profil'
+        profile:
+          details: 'Ihr echo - Ausführliches Profil'
+
+      # discuss: de.seo.title.discuss
       discuss:
         show: 'echologic - Diskutieren'
+
+      # connect: de.seo.title.connect
       connect:
-        show: 'echologic - Vernetzen'
+        show:   'echologic - Vernetzen'
+        search: 'echologic - Vernetzen'
+
+      # act: de.seo.title.act
       act:
         show: 'echologic - Handeln'
+
+      # my_echo: de.seo.title.my_echo
+      my_echo:
+        show: 'echologic - Mein echo'
+        welcome: 'echologic - Welcome'
+        profile: 'echologic - Mein Profil'
+      admin:
+        show: 'echologic - Admin Area'
 
     meta:
       description: |-
@@ -53,7 +70,7 @@ de:
       keywords: |-
         echologic, echo, Agora, globale Agora, Demokratie, teilnehmende Demokratie, Selbstbestimmung,
         kollektive Intelligenz, nachhaltige Zukunft, Meinungsbasis, Meinungsbild, Meinungsbildung,
-        Entscheidungsfindung, Transparenz, lösungsorientierte demokratische Kollaboration, 
+        Entscheidungsfindung, Transparenz, lösungsorientierte demokratische Kollaboration,
         echocracy, Gleichberechtigung, echonomy, öko-sozial, ökosoziale demokratische Wirtschaftsform,
         Wirtschaftsdemokratie, Your-Profit, Echokratie, Echonomie, partizipative Demokratie, glokal, Glokalität
 
@@ -69,7 +86,7 @@ de:
       show:
         ms1: echologic
         ms2: |
-          ist ein Netzwerk von FreidenkerInnen<br/>und Organisationen. Gemeinsam verwirklichen wir
+          ist ein Netzwerk von FreidenkerInnen<br/>und ihren Organisationen. Gemeinsam verwirklichen wir
         ms3: |
           echo - die globale <span title="{{tooltip}}" class="ttLink">Agora</span>!
 
@@ -98,7 +115,7 @@ de:
 
         teaser_more: |
           <p>
-          echo läutet eine <strong>neue Ära demokratischer Zusammenarbeit</strong> ein.
+          echo eröffnet <strong>neue Wege demokratischer Zusammenarbeit</strong>.
           Engagierte BürgerInnen, ExpertInnen, RepräsentantInnen und deren Organisationen können hier ihre Ansichten in
           lösungsorientierte Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen.
           Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit
@@ -136,12 +153,12 @@ de:
           Verschiedene <strong>Kooperationspartner</strong> aus Zivilgesellschaft
           (<a href='http://www.netzwerk-gemeinsinn.net/' target='_blank'>Netzwerk Gemeinsinn</a>, OneAim.org),
           Wirtschaft (<a href='http://www.the-foo.de/' target='_blank'>The Foo</a>), Politik
-          (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) und Wissenschaft 
+          (<a href='http://www.gjm.de' target='_blank'>Grüne Jugend München</a>) und Wissenschaft
           (<a href='http://www.ztg.tu-berlin.de' target="_blank">Technische Universität Berlin / Zentrum Technik und Gesellschaft</a>)
           helfen echo dabei, seine weit reichenden gesellschaftspolitischen Ziele zu verwirklichen.
           </p><p>
           Wenn Ihre Organisation auch echo mitgestalten möchte, schreiben Sie uns bitte eine E-mail an
-          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>. 
+          <a href="mailto:team@echologic.org?subject=echo mitgestalten">team@echologic.org</a>.
           </p>
 
       # imprint section
@@ -156,7 +173,7 @@ de:
           László Papp<br/>
           Pflugstr. 15<br/>
           10115 Berlin<br/>
-          E-mail: team [att] echologic . org - (statt "att", bitte "@" eingeben)<br/>
+          E-mail: <a href="mailto:team@echologic.org>team@echologic.org</a><br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
           Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.

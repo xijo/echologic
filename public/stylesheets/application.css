@@ -11,7 +11,7 @@
 #function_container h1 {
   color:        #21587f;
   font-size:    30px;
-  margin:       7px 0px 20px;
+  margin:       12px 0px 20px;
 }
 
 #function_container h2 {
@@ -74,7 +74,7 @@
 #function_container {
   margin:      0 auto;
   width:       990px;
-  overflow:    auto;
+  padding-bottom: 1px;
 }
 
 #messageContainer {
@@ -147,4 +147,59 @@
 
 .submenu a:hover, .submenu a.active, .submenu a.active:hover {
   color: #7bb031;
+}
+
+/* Other navigation */
+
+/* Big function buttons (used in Welcome e.g.) */
+
+.function_button_holder {
+  height:      85px;
+  margin:      0px;
+  padding:     0px;
+}
+
+.function_button {
+  float:       left;
+  margin:      0px;
+  padding:     0px;
+  width:       100%;
+  height:      80px;
+  position:    relative;
+  left:        10px;
+  z-index:     5;
+  border:      none;
+}
+
+.function_button_my_profile {
+  background:  url(../images/page/functions/my_profile.png) no-repeat scroll 0 0;
+}
+
+.function_button_connect {
+  background:  url(../images/page/functions/connect.png) no-repeat scroll 0 0;
+}
+
+.function_button:hover {
+  cursor:      pointer;
+}
+
+.function_name {
+  font-size:   20px;
+  font-weight: bold;
+  color:       #21587f;
+  position:    relative;
+  top:         -70px;
+  left:        140px;
+}
+
+.function_description {
+  font-size:   14px;
+  color:       #21587f;
+  position:    relative;
+  top:         -68px;
+  left:        140px;
+}
+
+.function_button_holder:hover .function_name {
+  color:       #7bb031;
 }

@@ -32,16 +32,22 @@ en:
           new: 'Your echo - Join echologic'
         password_resets:
           new: 'Your echo - Require New Password'
-          edit: 'Ihr echo - Set New Password'
-      my_echo:
-        welcome: 'echologic - Welcome'
-        profile: 'echologic - My Profile'
+          edit: 'Your echo - Set New Password'
+        profile:
+          details: 'Your echo - Profile Details'
       discuss:
         show: 'echologic - Discuss'
       connect:
-        show: 'echologic - Connect'
+        show:     'echologic - Connect'
+        search: 'echologic - Connect'
       act:
         show: 'echologic - Act'
+      my_echo:
+        show: 'echologic - My echo'
+        welcome: 'echologic - Welcome'
+        profile: 'echologic - My Profile'
+      admin:
+        show: 'echologic - Admin Bereich'
 
     meta:
       description: |-
@@ -52,9 +58,9 @@ en:
       keywords: |-
         echologic, echo, agora, global agora, democracy, participatory democracy, self-determination,
         collective intelligence, sustainable future, opinion base, opinion formation, decision making,
-        transparency, solution-oriented democractic collaboration, echocracy, equality, 
+        transparency, solution-oriented democractic collaboration, echocracy, equality,
         echonomy, eco-social democractic economy, your-profit, glocal, glocality
-        
+
 
   # Static content
   static:
@@ -66,7 +72,7 @@ en:
       show:
         ms1: echologic
         ms2: |
-          <font size="+2">is a network of free minds <br/>and organizations united to realize</font>
+          <font size="+2">is a network of free minds <br/>and their organizations united to realize</font>
         ms3: |
           echo - the global <span title="{{tooltip}}" class="ttLink">agora</span>!
 
@@ -95,7 +101,7 @@ en:
 
         teaser_more:
           <p>
-          echo heralds a <strong>new era of democratic collaboration</strong>.
+          echo opens up <strong>new ways of democratic collaboration</strong>.
           It enables engaged citizens, experts, representatives and their organizations to take part in
           solution-oriented discussions and mobilize supporters to jointly turn their decisions into reality.
           echo's novel discussion method thereby lets, for the first time, <strong>collective intelligence</strong>
@@ -156,7 +162,7 @@ en:
           László Papp<br/>
           Pflugstr. 15<br/>
           10115 Berlin<br/>
-          E-mail: team [att] echologic . org - (statt "att", bitte "@" eingeben)<br/>
+          E-mail: <a href="mailto:team@echologic.org>team@echologic.org</a><br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
           Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.

@@ -11,18 +11,16 @@ class Users::ProfileController < ApplicationController
   def show
     @profile = Profile.find(params[:id])
     respond_to do |format|
-      format.html
-      format.js do
-        replace_container('personal_container', :partial => 'users/profile/profile_own')
-      end
+      format.html { render :partial => "users/profile/profile_own" }
+      format.js   { replace_container('personal_container', :partial => 'users/profile/profile_own') }
     end
   end
 
   def details
     @profile = Profile.find(params[:id], :include => [:web_profiles, :memberships, :concernments, :user])
     respond_to do |format|
-      format.js
-      format.html { render :partial => 'profile_details', :layout => 'application' }
+      format.js   { render :template => 'connect/profiles/details'}
+      format.html { render :partial => 'connect/profiles/details', :layout => 'application' }
     end
   end
 
@@ -63,7 +61,7 @@ class Users::ProfileController < ApplicationController
     @profile = current_user.profile
     respond_to do |format|
       format.js do
-        render :template => 'users/profile/upload_picture'
+        render :template => 'users/avatar/upload_picture'
       end
     end
   end
@@ -78,8 +76,8 @@ class Users::ProfileController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace 'loginContainer', :partial => 'users/user_sessions/login'
-          page.replace 'picture_container', :partial => 'picture'
+          page.replace 'loginContainer',    :partial => 'users/user_sessions/login'
+          page.replace 'picture_container', :partial => 'users/avatar/picture'
         end
       end
     end

@@ -1,13 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 joe_energy:
-  user_id: <%= Fixtures.identify(:joe) %>
-  tag_id: <%= Fixtures.identify(:energy) %>
-  
+  user_id:  <%= Fixtures.identify(:joe) %>
+  tag_id:   <%= Fixtures.identify(:energy) %>
+  sort:     1
+
 ben_energy:
-  user_id: <%= Fixtures.identify(:ben) %>
-  tag_id: <%= Fixtures.identify(:energy) %>
+  user_id:  <%= Fixtures.identify(:ben) %>
+  tag_id:   <%= Fixtures.identify(:energy) %>
+  sort:     0
 
 joe_water:
-  user_id: <%= Fixtures.identify(:joe) %>
-  tag_id: <%= Fixtures.identify(:water) %>
+  user_id:  <%= Fixtures.identify(:joe) %>
+  tag_id:   <%= Fixtures.identify(:water) %>
+  sort:     0

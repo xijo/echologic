@@ -508,12 +508,11 @@
 }
 
 .ui-tabs .ui-tabs-nav {
-	height: 38px;
+	height: 37px;
 	list-style: none;
 	position: relative;
 	padding: 0 0 0 10px;
-	margin: 0;
-/*	padding: .2em .2em 0 2.2em; */
+	margin: 0 0 10px 0;
 	border: 0;
 	background: url(../images/jquery-ui/separator_with_shadow.png) bottom center no-repeat;
 	}
@@ -524,7 +523,7 @@
 	float: left;
 	border-bottom-width: 0 !important;
 	padding: 0 0 0 0;
-	background: url(../images/jquery-ui/tab_sub_off_01.png) bottom no-repeat left top;
+	background: url(../images/jquery-ui/tab_sub_off_01.png) no-repeat left bottom;
 	border: 0px solid #929292;
 	margin: 0;
 }
@@ -537,11 +536,11 @@
 	margin-bottom: 0;
 	margin-left: 18px;
 	line-height: 38px;
-	background: url(../images/jquery-ui/tab_sub_off_02.png) bottom no-repeat right top;
+	background: url(../images/jquery-ui/tab_sub_off_02.png) no-repeat right bottom;
 	}
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
-	background: url(../images/jquery-ui/tab_sub_on_01.png) bottom no-repeat left top;
+	background: url(../images/jquery-ui/tab_sub_on_01.png) no-repeat left bottom;
 	padding-bottom: 0;
 	margin-bottom: 0;
 	border-bottom-width: 0;
@@ -549,7 +548,7 @@
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
 	cursor: text;
-		background: url(../images/jquery-ui/tab_sub_on_02.png) bottom no-repeat right top;
+		background: url(../images/jquery-ui/tab_sub_on_02.png) no-repeat right bottom;
 	}
 
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {

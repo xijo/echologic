@@ -1,0 +1,38 @@
+<% @profile = profile if defined?(profile) %>
+
+<div id="profile_details_container" style="clear:both; overflow:auto;">
+  <ul>
+    <li id="full_name" style="color:#7AB031;"><%=h @profile.full_name %></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#concernments">Concernments</a></li>
+    <li><a href="#web_profiles">Web Profiles</a></li>
+    <%= link_to I18n.t('application.general.close'), connect_path, :onclick => "$('#profile_details_container').animate(toggleParams, 300); $('.profile').removeClass('active'); return false;", :class => 'close_link' %>
+  </ul>
+
+  <div id="avatar" style="float:left; max-width:100px;">
+    <%= render :partial => 'connect/profiles/avatar' %>
+  </div>
+
+  <div id="overview" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+    <%= render :partial => 'connect/profiles/overview' %>
+  </div>
+
+  <div id="concernments" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+    <%= render :partial => 'connect/profiles/concernments' %>
+  </div>
+
+  <div id="web_profiles" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+    <%= render :partial => 'connect/profiles/web_profiles' %>
+  </div>
+
+  <div id="options" style="float:right; max-width:100px;">
+    <%= render :partial => 'connect/profiles/options' %>
+  </div>
+
+
+
+  <script type="text/javascript">
+    $('#profile_details_container').tabs();
+  </script>
+
+</div>

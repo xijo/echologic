@@ -37,4 +37,24 @@ class Profile < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  # Return the formatted location of the user
+  # TODO conditions in compact form?
+  def location
+    if not (country.blank? or city.blank?)
+      "#{city}, #{country}"
+    elsif not country.blank?
+      country
+    elsif not city.blank?
+      city
+    else
+      ""
+    end
+  end
+
+  # Return the first membership. If none is set return empty-string.
+  def first_membership
+    return "" if memberships.blank?
+    "#{memberships.first.organisation} (#{memberships.first.position})"
+  end
+
 end

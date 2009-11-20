@@ -1,0 +1,13 @@
+<% content_for :submenu, tabnav(:my_echo) %>
+
+<h1><%= I18n.t('layouts.tabs.my_echo') %></h1>
+
+<h2><%= I18n.t('application.roadmap.status_quo') %></h2>
+<%= I18n.t('application.roadmap.my_echo.status_quo', :progress => Development::MY_ECHO_PROGRESS) %>
+
+<h2><%= I18n.t('application.roadmap.next_steps') %></h2>
+<%= I18n.t('application.roadmap.my_echo.next_steps') %>
+
+<h2><%= I18n.t('application.roadmap.vision') %></h2>
+<%= I18n.t('application.roadmap.my_echo.vision') %>
+
