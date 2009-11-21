@@ -12,7 +12,7 @@ class EchoDetail < ActiveRecord::Base
     # If the EchoDetail doesn't exist yet, it is created instead.
     def create_or_update!(options)
       (ed = find(:first, :conditions => { :echo_id => options[:echo].id })) ? ed.update_attributes!(options) :
-        create!(options)
+        create!(options) ; ed
     end
   end
 end

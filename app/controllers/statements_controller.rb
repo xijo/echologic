@@ -39,10 +39,10 @@ class StatementsController < ApplicationController
       format.html {}
       format.js {
         render :update do |page|
-          page.replace 'children_list', :partial => 'statements/children_list'
-          page.replace 'context', :partial => 'statements/context'
-          page.replace 'summary', :partial => 'statements/summary'
-          # Todo: i manually show (and empty) the notice here, because it does not load automatically via ajax
+          page.replace_html 'children_list', :partial => 'statements/children_list'
+          page.replace_html 'context', :partial => 'statements/context'
+          page.replace_html 'summary', :partial => 'statements/summary'
+          # TODO: i manually show (and empty) the notice here, because it does not load automatically via ajax
           # -> check for a better solution
           page << "info('#{flash[:notice]}');"
           flash[:notice]=nil
