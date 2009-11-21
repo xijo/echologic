@@ -65,6 +65,7 @@ ActionController::Routing::Routes.draw do |map|
   map.static    'echologic/:action', :controller => 'static/echologic'
 
 
+  # SECTION discuss - discussion tree
   map.resources :questions, :as => 'discuss' do |question|
     question.resources :proposals do |proposal|
       proposal.resources :pro_argument
@@ -75,7 +76,7 @@ ActionController::Routing::Routes.draw do |map|
       end
     end
   end
-
+  
   # SECTION root
   map.root :controller => 'static/echologic', :action => 'show'
 

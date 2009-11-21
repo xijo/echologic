@@ -1,13 +1,16 @@
 class StatementsController < ApplicationController
+  helper :echo
+  include EchoHelper
+  
   # remodelling the RESTful constraints, as a default route is currently active
   verify :method => :get, :only => [:index, :show, :new, :edit]
   verify :method => :post, :only => :create
-  verify :method => :put, :only => :update
-  verify :method => :delete, :only => :delete
+  verify :method => :put, :only => [:update, :echo]
+  verify :method => :delete, :only => [:delete, :unecho]
 
   before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
   
-  before_filter :fetch_statement, :only => [:show, :edit, :update]
+  before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
   
   include StatementHelper
   
@@ -29,6 +32,7 @@ class StatementsController < ApplicationController
   end
   
   def show
+    current_user.visited!(@statement)
     @page = params[:page] || 1
     @statements = @statement.children.paginate(:page => @page, :per_page => 3)
     respond_to do |format|
@@ -44,6 +48,20 @@ class StatementsController < ApplicationController
           flash[:notice]=nil
         end
       }
+    end
+  end
+
+  def echo
+    current_user.supported!(@statement)
+    render :update do |page|
+      page.replace('echo_button', echo_button)
+    end
+  end
+  
+  def unecho
+    current_user.echo!(@statement, :supported => false)
+    render :update do |page|
+      page.replace('echo_button', echo_button)
     end
   end
   

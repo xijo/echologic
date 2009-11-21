@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117175250) do
+ActiveRecord::Schema.define(:version => 20091120192909) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20091117175250) do
 
   add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
   add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
+
+  create_table "echo_details", :force => true do |t|
+    t.integer "echo_id"
+    t.integer "user_id"
+    t.boolean "visited",   :default => false
+    t.boolean "supported", :default => false
+  end
+
+  add_index "echo_details", ["echo_id"], :name => "index_echo_details_on_echo_id"
+  add_index "echo_details", ["user_id"], :name => "index_echo_details_on_user_id"
+
+  create_table "echos", :force => true do |t|
+    t.integer "visitor_count",   :default => 0
+    t.integer "supporter_count", :default => 0
+  end
 
   create_table "feedbacks", :force => true do |t|
     t.string "name"
@@ -101,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20091117175250) do
     t.integer "creator_id"
     t.integer "work_package_id"
     t.boolean "published"
+    t.integer "echo_id"
   end
 
   create_table "tags", :force => true do |t|
