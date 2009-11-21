@@ -4,9 +4,8 @@
 <div id="sidebar">
 </div>
 <div id="summary">
-  <h1><%=@statement.class.display_name%> Summary</h1>
-  <%=@statement.text%>
+  <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
 </div>
 <div id="children">
-  <%= render :partial => 'statements/children', :locals => {:statements => @statement.children } %>
+  <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
 </div>

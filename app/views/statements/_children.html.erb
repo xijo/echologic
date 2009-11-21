@@ -1,5 +1,4 @@
-<% statements ||= @statements || [] %>
-<h1><%=statements.first.class.display_name.pluralize if statements.any?%></h1>
-<% statements.each do |statement| %>
-<%= render :partial => 'statements/child', :locals => {:statement => statement } %>
-<% end %>
+<% statements ||= @statements || []
+   statement ||= @statement %>
+<h1><%=children_box_title(@statement.class.name) if statements.any?%></h1>
+<%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>

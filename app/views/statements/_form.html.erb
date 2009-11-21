@@ -3,7 +3,8 @@
   <%= doc.text_field :title %>
   <br />
   <%= doc.label :text %>
-  <%= doc.text_area :text %>
+  <%= doc.text_area :text, :size => '40x5' %>
   <br />
 <% end -%>
+<%= form.hidden_field :parent_id %> 
 <%= form.submit "Save", :id => 'save_button' %>

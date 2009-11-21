@@ -9,6 +9,8 @@ class StatementsController < ApplicationController
   
   before_filter :fetch_statement, :only => [:show, :edit, :update]
   
+  include StatementHelper
+  
   def index
     # nested resource magic happens here.
     # not sure if it will work out, maybe we need to push some specific
@@ -27,10 +29,34 @@ class StatementsController < ApplicationController
   end
   
   def show
+    @page = params[:page] || 1
+    @statements = @statement.children.paginate(:page => @page, :per_page => 3)
+    respond_to do |format|
+      format.html {}
+      format.js {
+        render :update do |page|
+          page.replace 'children_list', :partial => 'statements/children_list'
+          page.replace 'context', :partial => 'statements/context'
+          page.replace 'summary', :partial => 'statements/summary'
+          # Todo: i manually show (and empty) the notice here, because it does not load automatically via ajax
+          # -> check for a better solution
+          page << "info('#{flash[:notice]}');"
+          flash[:notice]=nil
+        end
+      }
+    end
   end
   
   def new
-    @statement ||= statement_class.new
+    @statement ||= statement_class.new :parent => parent
+    respond_to do |format|
+      format.html
+      format.js { 
+        render :update do |page|
+          page.replace_html 'new_statement', :partial => 'statements/new'
+        end
+      }
+    end
   end
   
   def create
@@ -38,7 +64,10 @@ class StatementsController < ApplicationController
     @statement.creator = @statement.document.author = current_user
     @statement.save!
     flash[:notice] = "#{statement_class.display_name} created."
-    redirect_to url_for(@statement)
+    respond_to do |format|
+      format.html { redirect_to url_for(@statement) }
+      format.js { show }
+    end
   rescue ActiveRecord::RecordNotSaved => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     render :action => 'new'
@@ -71,5 +100,12 @@ class StatementsController < ApplicationController
   
   def statement_class_param
     statement_class.name.underscore.to_sym
+  end
+  
+  def parent
+    statement_class.valid_parents.each do |parent|
+      parent_id = params[:"#{parent.to_s.underscore.singularize}_id"]
+      return parent.to_s.constantize.find(parent_id) if parent_id
+    end
   end
 end

@@ -135,5 +135,4 @@ class ApplicationController < ActionController::Base
       flash[:error] = I18n.t('activerecord.errors.messages.access_denied')
       redirect_to welcome_path
     end
-
 end

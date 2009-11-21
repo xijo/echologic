@@ -1,42 +1,33 @@
 <% case @statement.level 
      when 0
 %>
-<% link_to(url_for(@statement)) do%>
-<h1 class="root">
-  <%=image_tag("statements/#{statement.class.name.downcase}.png")%>
-  <%=@statement.title%>
+<h1 class="root"> 
+  <%= statement_icon(@statement)%>
+  <%= link_to(@statement.title, url_for(@statement))%>
 </h1>
-<% end %>
 <%   when 1 %>
-<% link_to(url_for(@statement.parent)) do%>
-<h1 class="root">
-  <%=image_tag("statements/#{@statement.parent.class.name.downcase}.png")%>
-  <%=@statement.parent.title%>
+<h1 class="root"> 
+  <%= statement_icon(@statement.parent)%>
+  <%= link_to(@statement.parent.title, url_for(@statement.parent))%>
 </h1>
-<% end %>
-<% link_to(url_for(@statement)) do%>
-<h1 class="intermediate">
-  <%=image_tag("statements/#{@statement.class.name.downcase}.png")%>
-  <%=@statement.title%>
+<h1 class="intermediate"> 
+  <%= statement_icon(@statement)%>
+  <%= link_to(@statement.title, url_for(@statement))%>
 </h1>
-<% end %>
 <%   when 2 %>
-<% link_to(url_for(@statement.root)) do%>
-<h1 class="root">
-  <%= image_tag("statements/#{@statement.root.class.name.downcase}.png")%>
-  <%=@statement.root.title%>
+<h1 class="root"> 
+  <%= statement_icon(@statement.root)%>
+  <%= link_to(@statement.root.title, url_for(@statement.root))%>
+</h1>
+<h1 class="intermediate"> 
+  <%= statement_icon(@statement.parent)%>
+  <%= link_to(@statement.parent.title, url_for(@statement.parent))%>
+</h1>
+<h1 class="bottom"> 
+  <%= statement_icon(@statement)%>
+  <%= link_to(@statement.title, url_for(@statement))%>
 </h1>
 <% end %>
-<% link_to(url_for(@statement.parent)) do%>
-<h1 class="intermediate">
-  <%=image_tag("statements/#{@statement.parent.class.name.downcase}.png")%>
-  <%=@statement.parent.title%>
-</h1>
-<% end %>
-<% link_to(url_for(@statement)) do%>
-<h1 class="bottom">
-  <%=image_tag("statements/#{@statement.class.name.downcase}.png")%>
-  <%=@statement.title%>
-</h1>
-<% end %>
-<% end %>
+<script type="text/javascript">
+  $("#context a").addClass('ajax');
+</script>

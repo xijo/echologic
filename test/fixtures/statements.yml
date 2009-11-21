@@ -23,6 +23,51 @@ second-proposal:
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
 
+third-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+third-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+fourth-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+fifth-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
+sixth-proposal:
+  parent_id: <%= Fixtures.identify(:'test-question') %>
+  root_id: <%= Fixtures.identify(:'test-question') %>
+  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  type: Proposal
+  activated: true
+  creator_id: <%= Fixtures.identify(:editor) %>
+  published: true
+
 first-impro-proposal:
   parent_id: <%= Fixtures.identify(:'first-proposal') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
@@ -30,4 +75,4 @@ first-impro-proposal:
   type: ImprovementProposal
   activated: true
   creator_id: <%= Fixtures.identify(:ben) %>
-  published: true 
+  published: true
