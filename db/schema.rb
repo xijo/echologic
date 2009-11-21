@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091120151337) do
+ActiveRecord::Schema.define(:version => 20091120192909) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20091120151337) do
   create_table "echo_details", :force => true do |t|
     t.integer "echo_id"
     t.integer "user_id"
-    t.boolean "visited"
-    t.boolean "supported"
+    t.boolean "visited",   :default => false
+    t.boolean "supported", :default => false
   end
 
   add_index "echo_details", ["echo_id"], :name => "index_echo_details_on_echo_id"

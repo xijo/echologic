@@ -6,6 +6,9 @@ class EchoTest < ActiveSupport::TestCase
     # make sure we don't have a echo already
     @echoable.update_attributes!(:echo_id => nil)
     @user = User.first
+    
+    assert( ! @user.visited?(@echoable))
+    assert( ! @user.supported?(@echoable))
   end
   
   def test_should_create_echo

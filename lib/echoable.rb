@@ -17,7 +17,13 @@ module Echoable
     end
     
     def find_or_create_echo
-      echo or create_echo
+      if echo_id
+        echo
+      else
+        echo = create_echo
+        save!
+        echo
+      end
     end
   end
 end

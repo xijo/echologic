@@ -9,5 +9,9 @@ class Echo < ActiveRecord::Base
     write_attribute(:visitor_count, echo_details.count(:visited))
     write_attribute(:supporter_count, echo_details.count(:supported))
   end
+  
+  def update_counter!
+    update_counter ; save!
+  end
 end
 

@@ -4,6 +4,7 @@ module UserExtension::Echo
       has_many :echo_details
       has_many :echos, :through => :echo_details
       has_many :echoed_statements, :through => :echo_details, :source => :statement
+      
       include InstanceMethods
     end
   end
@@ -11,7 +12,9 @@ module UserExtension::Echo
   module InstanceMethods
     # creates a new EchoDetail record with the given options or updates an existing EchoDetail if applicable
     def echo!(echoable, options={})
-      echo_details.create_or_update!(options.merge(:echo => echoable.find_or_create_echo))
+      ed = echo_details.create_or_update!(options.merge(:echo => echoable.find_or_create_echo))
+      # OPTIMIZE: update the counters periodically
+      ed.echo.update_counter! ; ed
     end
     
     # states that the +user+ visited the given +echoable+
