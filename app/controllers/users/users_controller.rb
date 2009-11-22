@@ -85,7 +85,7 @@ class Users::UsersController < ApplicationController
       end
     end
   end
-  
+
   def update_password
     @user = current_user
     @user.password = params[:user][:password]
@@ -108,7 +108,8 @@ class Users::UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      flash[:notice] = "User removed, Sir!"
+      format.html { redirect_to connect_path }
       format.xml  { head :ok }
     end
   end

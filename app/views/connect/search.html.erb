@@ -19,4 +19,11 @@
 
 <script type="text/javascript">
   $('#search_form').ajaxForm({ dataType : 'script' });
+
+  $('.profile.active img').die("click");
+  $('.profile.active img').live("click", function() {
+    $('#profile_details_container').animate(toggleParams, 300);
+    $('.profile').removeClass('active');
+    return false;
+  });
 </script>

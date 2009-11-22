@@ -1,3 +1,16 @@
 <%= link_to I18n.t('application.general.close'), connect_path, :onclick => "$('#profile_details_container').animate(toggleParams, 300); return false;", :class => 'close_link' %>
 
+<br />
+
 <%= link_to 'Report', url_for(:controller => 'users/reports', :action => 'new', :id => @profile.user), :class => 'ajax report_link' %>
+
+<br />
+
+<% if show_admin_options? %>
+
+  Admin options, be careful! <br />
+
+  <%= link_to 'Delete User', @profile.user, :method => :delete, :confirm => 'Sure?' %>
+
+
+<% end %>
