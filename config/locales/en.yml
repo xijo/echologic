@@ -26,6 +26,7 @@ en:
       delete: Delete
       create: Add
       welcome: "Welcome"
+      all: "All"
 
     # Roadmap - Progress
     roadmap:
@@ -205,7 +206,7 @@ en:
       title: Contact data & Web profiles
       guide: |
         Here you can enter some of your contact data and other web profiles.<br/>
-        <strong>PLEASE NOTE</strong>: for now, all information entered here will be visible to all members of the echologic community.  
+        <strong>PLEASE NOTE</strong>: for now, all information entered here will be visible to all members of the echologic community.
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
@@ -263,8 +264,8 @@ en:
       all: All
       affected: Affected
       engaged: Engaged
-      scientists: Experts
-      decision_maker: Decision Makers
+      scientist: Experts
+      representative: Decision Makers
 
   # Feedback resources
   feedback:

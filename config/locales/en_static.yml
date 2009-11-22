@@ -39,7 +39,8 @@ en:
         show: 'echologic - Discuss'
       connect:
         show:     'echologic - Connect'
-        search: 'echologic - Connect'
+        search:   'echologic - Connect'
+        roadmap:  'echologic - Connect'
       act:
         show: 'echologic - Act'
       my_echo:

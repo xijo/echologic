@@ -17,10 +17,14 @@ class Concernment < ActiveRecord::Base
   # Map the different sorts of concernments to their database representation
   # value..
   @@sorts = {
-    0 => I18n.t('users.concernments.sorts.affected'),
-    1 => I18n.t('users.concernments.sorts.engaged'),
-    2 => I18n.t('users.concernments.sorts.scientist'),
-    3 => I18n.t('users.concernments.sorts.representative')
+  #  0 => I18n.t('users.concernments.sorts.affected'),
+  #  1 => I18n.t('users.concernments.sorts.engaged'),
+  #  2 => I18n.t('users.concernments.sorts.scientist'),
+  #  3 => I18n.t('users.concernments.sorts.representative')
+    0 => :affected,
+    1 => :engaged,
+    2 => :scientist,
+    3 => :representative
   }
 
   # ..and make it available as class method.

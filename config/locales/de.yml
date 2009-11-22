@@ -26,6 +26,7 @@ de:
       delete: Löschen
       create: Hinzufügen
       welcome: "Willkommen"
+      all: "Alle"
 
     # Roadmap - Progress
     roadmap:
@@ -270,8 +271,8 @@ de:
       all: Alle
       affected: Betroffene
       engaged: Engagierte
-      scientists: Experten
-      decision_maker: Entscheidungsträger
+      scientist: Experten
+      representative: Entscheidungsträger
 
   # Feedback resources
   feedback:

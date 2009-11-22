@@ -1,6 +1,6 @@
 <div id="concernment_container" class="header_block">
   <h2><%= I18n.t('users.concernments.title') %></h2>
-  
+
   <div class="guide">
     <%= I18n.t('users.concernments.guide') %>
   </div>
@@ -8,7 +8,7 @@
 
   <% Concernment.sorts.each do |sort, name| %>
 
-    <h3><%= name %></h3>
+    <h3><%= I18n.t("users.concernments.sorts.#{name}") %></h3>
     <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort), :sort => sort } %><br/>
 
   <% end %>

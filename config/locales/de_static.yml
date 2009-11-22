@@ -45,8 +45,9 @@ de:
 
       # connect: de.seo.title.connect
       connect:
-        show:   'echologic - Vernetzen'
-        search: 'echologic - Vernetzen'
+        show:    'echologic - Vernetzen'
+        search:  'echologic - Vernetzen'
+        roadmap: 'echologic - Vernetzen'
 
       # act: de.seo.title.act
       act:
