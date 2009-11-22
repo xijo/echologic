@@ -220,6 +220,7 @@ de:
         scientist: <strong>ExpertIn / WissenschaftlerIn</strong> im Bereich
         representative: <strong>EntscheidungsträgerIn</strong> im Bereich
 
+
     # Users section
     users:
       gender:
@@ -250,6 +251,18 @@ de:
       messages:
         created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
 
+
+  # ---------------
+  # Connect section
+  # ---------------
+
+  connect:
+    segments:
+      all: Alle
+      affected: Betroffene
+      engaged: Engagierte
+      scientists: Experten
+      decision_maker: Entscheidungsträger
 
   # Feedback resources
   feedback:

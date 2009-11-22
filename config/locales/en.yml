@@ -247,6 +247,18 @@ en:
       messages:
         created: "Thank you for your message. We have notified an administrator to check the reported issue."
 
+  # ---------------
+  # Connect section
+  # ---------------
+
+  connect:
+    segments:
+      all: All
+      affected: Affected
+      engaged: Engaged
+      scientists: Experts
+      decision_maker: Decision Makers
+
   # Feedback resources
   feedback:
     new:
