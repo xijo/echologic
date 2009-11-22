@@ -3,7 +3,7 @@
 
 <li id="<%= dom_id(@user) %>">
   <% link_to @profile, :class => 'ajax show_link' do %>
-    <%= image_tag @profile.picture.url(:small) %>
+    <%= image_tag @profile.picture.url(:header) %>
   <% end %>
   <div>
     <%=h @profile.full_name %> <br/>
