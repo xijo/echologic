@@ -1,7 +1,7 @@
 class ActController < ApplicationController
 
   # GET /act
-  def show
+  def roadmap
     respond_to do |format|
       format.html
     end

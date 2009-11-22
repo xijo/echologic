@@ -1,7 +1,7 @@
 class DiscussController < ApplicationController
 
   # GET /discuss
-  def show
+  def roadmap
     respond_to do |format|
       format.html
     end
