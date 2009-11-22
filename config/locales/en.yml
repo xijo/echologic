@@ -12,6 +12,7 @@ en:
       back: Back
       last_name: Last Name
       first_name: First Name
+      undefined: Unknown
       name: Name
       email: E-Mail
       ok: Ok
@@ -23,7 +24,7 @@ en:
       send: Send
       upload: Upload
       delete: Delete
-      create: Create
+      create: Add
       welcome: "Welcome"
 
     # Roadmap - Progress
@@ -168,11 +169,13 @@ en:
     profile:
       title: Personal Information
       edit_title: Edit your personal information
-      guide: The informations about your person are displayed here. Use the 'edit' button to update them.
+      guide: Below you find your basic personal information. Please use the 'edit' button to update them.
 
       gender:
         male: Male
         female: Female
+
+      location: Location
 
       password:
         title: Change my password
@@ -184,7 +187,7 @@ en:
 
       upload_picture:
         title: Upload Picture
-        guide: Please <strong>select a picture</strong> (max. 1MB) and click the upload button.
+        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and click the upload button.
         progress: Your avatar is being uploaded. Please wait...
 
       messages:
@@ -192,15 +195,17 @@ en:
 
     # Memberships section
     memberships:
-      title: Activities
-      guide: Here you can enter your voluntary, professional or other kinds of activities.
+      title: Organisations
+      guide: Here you can enter your voluntary, professional and other kinds of activities in different organisations.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
-      title: Web Profiles
-      guide: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
+      title: Contact data & Web profiles
+      guide: |
+        Here you can enter some of your contact data and other web profiles.<br/>
+        <strong>PLEASE NOTE</strong>: for now, all information entered here will be visible to all members of the echologic community.  
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
@@ -211,8 +216,13 @@ en:
 
     # Concernments section
     concernments:
-      title: Concernments & Skills 
-      guide: Describe your concernments below.
+      title: Concernments & Competences
+      guide: |
+        All of us has <strong>different facets</strong>. In some areas we are affected and need help from others,
+        in other areas we engage ourselves and offer help to others. In certain fields we have professional expertise,
+        in others we might be in a position to represent others and make decisions. echo helps like-minded people to
+        find each other with <strong>knowledge complementing each other</strong>.<br/>
+        <strong>How would you define your concernments and competences?</strong>
       sorts:
         affected: <strong>Affected</strong> by
         engaged: <strong>Engaged</strong> in
@@ -220,9 +230,6 @@ en:
         representative: <strong>Decision maker</strong> in the field of
 
     users:
-      gender:
-        male: Male
-        female: Female
       new:
         title: Your echo
         subtitle: Join echologic
@@ -302,9 +309,11 @@ en:
         email:      E-Mail
         first_name: First Name
         last_name:  Last Name
+        full_name:  Name
         gender:     Gender
         city:       City
         country:    Country
+        location:   Location
         about_me:   About Me
         motivation: Motivation
 

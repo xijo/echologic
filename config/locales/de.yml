@@ -14,6 +14,7 @@ de:
       name: Name
       first_name: Vorname
       last_name: Nachname
+      undefined: Unbekannt
       ok: Ok
       or: oder
       save: Speichern
@@ -175,6 +176,8 @@ de:
         male: Männlich
         female: Weiblich
 
+      location: Ort
+
       password:
         title: Passwort ändern
         new: Ihr neues Passwort
@@ -185,7 +188,7 @@ de:
 
       upload_picture:
         title: Profilbild hochladen
-        guide: Bitte <strong>wählen Sie ein Bild</strong> (max. 1MB) aus und drücken Sie auf den 'Hochladen' Knopf.
+        guide: Bitte <strong>wählen Sie ein Bild</strong> (JPG oder PNG, max. 1MB) aus und drücken Sie auf den 'Hochladen' Knopf.
         progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
@@ -193,15 +196,18 @@ de:
 
     # Memberships section
     memberships:
-      title: Tätigkeiten
-      guide: Hier können Sie Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten angeben.
+      title: Organisationen
+      guide: Hier können Sie Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten in bestimmten Organisationen angeben.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
       title: Kontaktdaten & Web Profile
-      guide: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
+      guide: |
+        Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, einige Ihrer Kontaktdaten und im
+        Internet bestehenden Profile hier einzutragen.<br/>
+        <strong>ACHTUNG</strong>: alle hier eingetragen Informationen sind erstmal für alle echologic Mitglieder ersichtlich.
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
@@ -212,8 +218,14 @@ de:
 
     # Concernments section
     concernments:
-      title: Erfahrungen und Kompetenzen
-      guide: Hier können Sie sich zu Interessengruppen zuordnen.
+      title: Betroffentheiten und Kompetenzen
+      guide: |
+        Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen sind wir betroffen und brauchen die Hilfe Anderer,
+        in anderen Bereichen engagieren wir uns selbst und bieten Anderen Hilfe. In bestimmten Bereichen haben wir
+        Expertise, in anderen sind wir vielleicht in der Position, anderen Menschen zu representieren und
+        Entscheidungen zu fällen. echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> zusammenzufinden.<br/>
+        <strong>Wie würden Sie Ihre Betroffentheiten und Kompetenzen beschreiben?</strong><br/>
+
       sorts:
         affected: <strong>Betroffen</strong> von
         engaged: <strong>Engagiert</strong> im Bereich
@@ -221,11 +233,8 @@ de:
         representative: <strong>EntscheidungsträgerIn</strong> im Bereich
 
 
-    # Users section
+    # New Users section
     users:
-      gender:
-        male: Männlich
-        female: Weiblich
       new:
         title: 'Ihr echo'
         subtitle: 'echologic beitreten'
@@ -412,9 +421,11 @@ de:
         email:      E-Mail
         first_name: Vorname
         last_name:  Nachname
+        full_name:  Name
         gender:     Geschlecht
         city:       Stadt
         country:    Land
+        location:   Ort
         about_me:   Über mich
         motivation: Motivation
       report:

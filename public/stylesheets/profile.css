@@ -40,6 +40,12 @@
   color: #21587f !important;
 }
 
+.header_block h3 {
+  color: #7bb031;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .header_block ul {
   margin: 0;
   padding: 0;
@@ -48,19 +54,58 @@
 .header_block li {
   list-style-type: none;
   line-height: 24px;
+  display: block;
+  vertical-align: middle;
 }
 
-.header_block li span {
-  min-width: 110px;
+.two_columns_block li {
+  list-style-type: none;
+  line-height: 24px;
+  width: 400px;
   display: inline-block;
+  vertical-align: top;
+}
+
+.header_block li .label {
+  color: #7bb031;
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.header_block li .value {
+  color: #21587f;
+  display: block;
+  width: 375px;
 }
 
 .header_block .guide {
-  color: #aaa;
-  font-size: 12px;
+  color: #21587f;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 10px 0;
 }
 
+.header_button {
+  position: relative;
+  float: right;
+  margin: -33px 15px 0 0;
+}
+
+.column_200 {
+  width: 195px;
+  padding: 2px;
+  display: inline-block !important;
+}
+
+.header_block input[type="text"] {
+  border: 1px solid #999;
+  color: #21587F;
+  font-size: 14px;
+  min-height: 18px;
+  width: 195px;
+  margin: 1px;
+}
 
 /* Styling for profiles in the profile container at the connect area. */
 #profile_container .profile {

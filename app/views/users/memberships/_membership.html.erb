@@ -1,7 +1,8 @@
 <% @membership = membership if membership.present? %>
 
 <li id="<%= dom_id @membership %>" >
-  <%=h "#{@membership.organisation} #{@membership.position}" %>
+  <span class="column_200"><%=h "#{@membership.organisation}" %></span>
+  <span class="column_200"><%=h "#{@membership.position}" %></span>
 
   <% if @membership.user == current_user %>
     <%= link_to I18n.t('application.general.edit'), edit_user_membership_path(@membership.user, @membership), :class => 'ajax text_button edit_button' %>

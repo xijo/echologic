@@ -28,9 +28,10 @@ form.formtastic fieldset ol li.text textarea, form.formtastic fieldset ol li.str
   width:      300px;
   padding:    2px;
   margin:     0;
-  border:     1px solid #888;
+  border:     1px solid #999;
   font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
   min-height: 17px;
+  color: #21587f;
 }
 
 form.formtastic fieldset ol li.text textarea {
@@ -50,17 +51,18 @@ form.formtastic fieldset ol li.radio fieldset ol li label {
 }
 
 form.formtastic select {
-  border: 1px solid #888888;
+  border: 1px solid #999;
   width: 307px;
   padding: 2px;
+  color: #21587f;
 }
 
 form.formtastic fieldset.buttons {
   padding-left: 0px;
 }
 
-form.formtastic fieldset.buttons li {
-  width: 150px;
+form.formtastic fieldset.buttons .commit {
+  width: 150px !important;
 }
 
 form.formtastic .buttons input {

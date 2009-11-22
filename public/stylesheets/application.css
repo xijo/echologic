@@ -30,7 +30,6 @@
   margin-left: 10px;
   padding-left: 20px;
   text-decoration: none;
-  background:transparent url(../images/page/icons/about.png) no-repeat scroll 0 0;
   border: none;
 }
 
@@ -42,6 +41,7 @@
 .add_button {
   background:transparent url(../images/page/icons/add_button.png) no-repeat scroll 0 0;
   height: 20px;
+  padding-left: 23px;
 }
 
 .edit_button {
@@ -49,6 +49,15 @@
   height: 17px;
   line-height: 17px;
   display: inline-block;
+}
+
+.or_cancel {
+  color: #21587f;
+}
+
+.cancel_button {
+  padding-left: 0px;
+  font-weight: bold;
 }
 
 .delete_button {

@@ -13,8 +13,8 @@
     <% end %>
     <% form.buttons do %>
       <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>
-      <%= I18n.t('application.general.or') %>
-      <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax cancel_button' %>
+      <span class="or_cancel"><%= I18n.t('application.general.or') %></span>
+      <%= link_to I18n.t('application.general.cancel'), profile_path, :class => 'ajax text_button cancel_button' %>
     <% end %>
   <% end %>
 

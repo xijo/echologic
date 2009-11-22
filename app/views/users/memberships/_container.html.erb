@@ -7,8 +7,8 @@
 
   <ul id="membership_list">
     <li>
-      <span><%= I18n.t('users.memberships.organisation') %></span>
-      <span><%= I18n.t('users.memberships.position') %></span>
+      <span class="column_200 label"><%= I18n.t('users.memberships.organisation') %></span>
+      <span class="column_200 label"><%= I18n.t('users.memberships.position') %></span>
     </li>
     <%= render :partial => 'users/memberships/membership', :collection => @user.memberships %>
   </ul>
