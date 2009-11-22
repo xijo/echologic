@@ -185,7 +185,7 @@ de:
 
       upload_picture:
         title: Profilbild hochladen
-        guide: Bitte wählen Sie ein Bild aus und drücken Sie auf den 'Hochladen' Knopf.
+        guide: Bitte <strong>wählen Sie ein Bild</strong> (max. 1MB) aus und drücken Sie auf den 'Hochladen' Knopf.
         progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:

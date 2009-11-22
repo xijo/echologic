@@ -37,7 +37,7 @@
   margin: -6px 0 10px !important;
   line-height: 31px;
   vertical-align: middle;
-  color: #21587f;
+  color: #21587f !important;
 }
 
 .header_block ul {
@@ -54,7 +54,6 @@
   min-width: 110px;
   display: inline-block;
   font-weight: bold;
-  margin: 3px 0;
 }
 
 .header_block .guide {

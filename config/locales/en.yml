@@ -184,7 +184,7 @@ en:
 
       upload_picture:
         title: Upload Picture
-        guide: Please select a picture and click the upload button.
+        guide: Please <strong>select a picture</strong> (max. 1MB) and click the upload button.
         progress: Your avatar is being uploaded. Please wait...
 
       messages:
