@@ -1,12 +1,13 @@
 <% # Show profile details at the my_profile area in my_echo.
 %>
 
-<div id="personal_container" class="details_container">
-  <h2><%= I18n.t('users.profile.heading') %></h2>
+<div id="personal_container" class="header_block">
+  <h2><%= I18n.t('users.profile.title') %></h2>
+  
   (<%= link_to I18n.t('application.general.edit'), edit_profile_path(@profile), :class => 'ajax edit_link' %>)
 
-  <div class="comment">
-    <%= I18n.t('users.profile.comment') %>
+  <div class="guide">
+    <%= I18n.t('users.profile.guide') %>
   </div>
 
   <ul>
@@ -23,12 +24,12 @@
       <%=h @profile.localized_gender %>
     </li>
     <li>
-      <span class="title"><%= Profile.human_attribute_name(:city) %></span>
-      <%=h @profile.city %>
-    </li>
-    <li>
       <span class="title"><%= Profile.human_attribute_name(:country) %></span>
       <%=h @profile.country %>
+    </li>
+    <li>
+      <span class="title"><%= Profile.human_attribute_name(:city) %></span>
+      <%=h @profile.city %>
     </li>
     <li>
       <span class="title"><%= Profile.human_attribute_name(:about_me) %></span>

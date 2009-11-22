@@ -5,7 +5,7 @@
   <%= text_field :membership, :organisation %>
   <%= text_field :membership, :position %>
   <%= hidden_field :user_id, :value => @membership.user %>
-  <%= submit_tag I18n.t('application.general.save'), :class => 'submit_button' %>
+  <%= submit_tag I18n.t('application.general.save'), :class => 'text_button add_button' %>
   <%= I18n.t('application.general.or') %>
   <%= link_to I18n.t('application.general.cancel'), user_membership_path(@membership.user, @membership), :class => 'ajax' %>
 <% end %>

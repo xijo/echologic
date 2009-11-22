@@ -4,8 +4,8 @@
   <%=h "#{@membership.organisation} #{@membership.position}" %>
 
   <% if @membership.user == current_user %>
-    <%= link_to I18n.t('application.general.edit'), edit_user_membership_path(@membership.user, @membership), :class => 'ajax options_button' %>
-    <%= link_to I18n.t('application.general.delete'), user_membership_path(@membership.user, @membership), :class => 'ajax_delete options_button' %>
+    <%= link_to I18n.t('application.general.edit'), edit_user_membership_path(@membership.user, @membership), :class => 'ajax text_button edit_button' %>
+    <%= link_to I18n.t('application.general.delete'), user_membership_path(@membership.user, @membership), :class => 'ajax_delete text_button delete_button' %>
   <% end %>
 
 </li>

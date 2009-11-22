@@ -1,18 +1,15 @@
 <% content_for :submenu, tabnav(:my_echo) %>
 
-<%= render :partial => 'users/profile/profile_own' %>
-
+<!-- Avatar picture -->
 <%= render :partial => 'users/avatar/picture' %>
-
+<!-- Personal profile  -->
+<%= render :partial => 'users/profile/profile_own' %>
+<!-- Organisations and positions -->
 <%= render :partial => 'users/memberships/container' %>
-
-<!-- Web profiles section. -->
-<%= render :partial => 'users/web_profiles/container' %>
-
-<!-- Update password section. -->
-<div id="password_container" class="details_container">
-  <%= render :partial => 'users/profile/password' %>
-</div>
-
-<!-- Concernment section. -->
+<!-- Concernments -->
 <%= render :partial => 'users/concernments/container' %>
+<!-- Contacts & web profiles -->
+<%= render :partial => 'users/web_profiles/container' %>
+<!-- Account data -->
+<%- render :partial => 'users/profile/password' %>
+

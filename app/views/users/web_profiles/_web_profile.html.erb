@@ -6,7 +6,6 @@
   </span>
   <%= auto_link sanitize @web_profile.location %>
 
-  <%= link_to I18n.t('application.general.edit'), edit_user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax options_button" %>
-
-  <%= link_to I18n.t('application.general.delete'), user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax_delete options_button" %>
+  <%= link_to I18n.t('application.general.edit'), edit_user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax text_button edit_button" %>
+  <%= link_to I18n.t('application.general.delete'), user_web_profile_path(@web_profile.user, @web_profile), :class => "ajax_delete text_button delete_button" %>
 </li>

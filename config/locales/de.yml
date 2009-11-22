@@ -167,41 +167,41 @@ de:
 
     # Profile Section
     profile:
-      heading: Persönliche Informationen
-      edit_heading: Persönliche Informationen bearbeiten
-      comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
+      title: Persönliche Informationen
+      edit_title: Persönliche Informationen bearbeiten
+      guide: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
 
       gender:
         male: Männlich
         female: Weiblich
 
       password:
-        heading: Passwort ändern
+        title: Passwort ändern
         new: Ihr neues Passwort
         confirm: Passwort bestätigen
 
       picture:
-        heading: Profilbild
+        upload_button: Austauschen
 
       upload_picture:
-        heading: Profilbild hochladen
-        comment: Bitte wählen Sie ein Bild aus und drücken Sie auf den 'Hochladen' Knopf.
-        progress: Bitte warten...
+        title: Profilbild hochladen
+        guide: Bitte wählen Sie ein Bild aus und drücken Sie auf den 'Hochladen' Knopf.
+        progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
         updated: "Sie haben Ihr Profil erfolgreich geändert."
 
     # Memberships section
     memberships:
-      heading: Mitgliedschaften
-      comment: Sie haben die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
+      title: Tätigkeiten
+      guide: Hier können Sie Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten angeben.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
-      heading: Web Profile
-      comment: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
+      title: Kontaktdaten & Web Profile
+      guide: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
@@ -212,12 +212,13 @@ de:
 
     # Concernments section
     concernments:
-      comment: Hier können Sie sich zu Interessengruppen zuordnen.
+      title: Erfahrungen und Kompetenzen
+      guide: Hier können Sie sich zu Interessengruppen zuordnen.
       sorts:
-        affected: Betroffen
-        engaged: Engagiert
-        scientist: Experte/Wissenschaftler
-        representative: Entscheidungsträger
+        affected: <strong>Betroffen</strong> von
+        engaged: <strong>Engagiert</strong> im Bereich
+        scientist: <strong>ExpertIn / WissenschaftlerIn</strong> im Bereich
+        representative: <strong>EntscheidungsträgerIn</strong> im Bereich
 
     # Users section
     users:

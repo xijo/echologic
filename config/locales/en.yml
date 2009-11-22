@@ -106,7 +106,7 @@ en:
       <p>
       <strong>Discuss - Connect - Act!</strong><br/>
       These are the three main functional areas of echo, which we will develop step by step at
-      echologic with your participation.
+      echologic with your active participation.
       </p><p>
       Below you can see the most recently released functionality.<br/>
       With the time, more and more features will be introduced enabling you to increasingly
@@ -166,41 +166,41 @@ en:
 
     # Profile Section
     profile:
-      heading: Personal Information
-      edit_heading: Edit your personal information
-      comment: The informations about your person are displayed here. Use the 'edit' button to update them.
+      title: Personal Information
+      edit_title: Edit your personal information
+      guide: The informations about your person are displayed here. Use the 'edit' button to update them.
 
       gender:
         male: Male
         female: Female
 
       password:
-        heading: Change my password
+        title: Change my password
         new: New password
         confirm: Confirm password
 
       picture:
-        heading: Picture
+        upload_button: Change
 
       upload_picture:
-        heading: Upload Picture
-        comment: Please select a picture from your file system and click the upload button.
-        progress: please wait..
+        title: Upload Picture
+        guide: Please select a picture and click the upload button.
+        progress: Your avatar is being uploaded. Please wait...
 
       messages:
         updated: "Profile information updated successful."
 
     # Memberships section
     memberships:
-      heading: Memberships
-      comment: You may insert all of your memberships, e.g. in organisations, political parties, companies, and so on.
+      title: Activities
+      guide: Here you can enter your voluntary, professional or other kinds of activities.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
-      heading: Web Profiles
-      comment: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
+      title: Web Profiles
+      guide: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
@@ -211,12 +211,13 @@ en:
 
     # Concernments section
     concernments:
-      comment: Descripe your concernments below.
+      title: Concernments & Skills 
+      guide: Describe your concernments below.
       sorts:
-        affected: Affected
-        engaged: Engaged
-        scientist: Expert/Scientist
-        representative: Representative
+        affected: <strong>Affected</strong> by
+        engaged: <strong>Engaged</strong> in
+        scientist: <strong>Expert / scientist</strong> in the field of
+        representative: <strong>Decision maker</strong> in the field of
 
     users:
       gender:

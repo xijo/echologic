@@ -12,84 +12,54 @@
 */
 
 
-.details_container {
-  /*background: #eee;*/
-  border: 1px solid #ccc;
-  -moz-border-radius: 4px;
-  padding: 6px;
-  margin: 10px auto;
-  width: 600px;
-  position: relative;
+#profile_avatar_container {
+  width: 140px;
+  float: left;
+  text-align: center;
 }
 
-.details_container ul {
-  clear: both;
+#profile_avatar_container img {
+  width: 128px;
+  border: 2px solid #7bb031;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.header_block {
+  background: url(../images/page/header_left.png) no-repeat scroll left top;
+  padding: 6px 0 0 15px;
+  margin: 20px 0px 25px 165px;
+}
+
+.header_block h2 {
+  background: url(../images/page/header_right.png) no-repeat scroll right top;
+  height: 31px;
+  margin: -6px 0 10px !important;
+  line-height: 31px;
+  vertical-align: middle;
+  color: #21587f;
+}
+
+.header_block ul {
   margin: 0;
   padding: 0;
 }
 
-.details_container li {
+.header_block li {
   list-style-type: none;
   line-height: 24px;
 }
 
-.details_container li span {
+.header_block li span {
   min-width: 110px;
   display: inline-block;
   font-weight: bold;
   margin: 3px 0;
 }
 
-.details_container .comment {
+.header_block .guide {
   color: #aaa;
-  clear: both;
   font-size: 12px;
-}
-
-.details_container select {
-  width: 110px;
-  padding: 3px;
-  -moz-border-radius: 4px;
-  border: 1px solid #888;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  font-size: 12px;
-  min-height: 17px;
-}
-
-.details_container select:hover, .detailsContainer input:hover { border: 1px solid #090; }
-
-.details_container .active { border: 1px solid #090; background: #eee; }
-
-.details_container input {
-  width: 200px;
-  padding: 3px;
-  margin: 0;
-  -moz-border-radius: 4px;
-  border: 1px solid #888;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  /*font-size: 12px;*/
-  min-height: 17px;
-}
-
-.options_button {
-  -moz-border-radius: 4px;
-  width:      16px;
-  height:     16px;
-  border:     1px solid #d3d3d3;
-  color:      #555555;
-  display:    inline-block;
-  position:   relative;
-  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
-  text-align: center;
-  font-size:  9px;
-  top: -4px;
-}
-
-.submit_button {
-  width: 80px !important;
-  -moz-border-radius: 4px;
-  padding:    3px;
-  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
 }
 
 
