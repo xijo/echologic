@@ -34,29 +34,13 @@ class Profile < ActiveRecord::Base
 
   # Return the full name of the user composed of first- and lastname
   def full_name
-    if (!first_name.blank? and !last_name.blank?)
-      "#{first_name} #{last_name}"
-    elsif !first_name.blank?
-      first_name
-    elsif !last_name.blank?
-      last_name
-    else
-      I18n.t('application.general.undefined')
-    end
+    [first_name, last_name].select { |s| s.try(:any?) }.join(' ')
   end
-  
+
   # Return the formatted location of the user
   # TODO conditions in compact form?
   def location
-    if not (country.blank? or city.blank?)
-      "#{city}, #{country}"
-    elsif not country.blank?
-      country
-    elsif not city.blank?
-      city
-    else
-      I18n.t('application.general.undefined')
-    end
+    [city, country].select { |s| s.try(:any?) }.join(', ')
   end
 
   # Return the first membership. If none is set return empty-string.

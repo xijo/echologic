@@ -218,14 +218,14 @@ de:
         xing:     "Xing"
         linkedin: "LinkedIn"
         twitter:  "Twitter"
-        
+
     # Concernments section
     concernments:
       title: Betroffentheiten und Kompetenzen
       guide: |
         Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen können wir betroffen sein und die
         Hilfe Anderer brauchen, in anderen Bereichen engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir
-        Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen. 
+        Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen.
         echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> leicht zusammenzufinden.<br/>
         <strong>Wie würden Sie Ihre Betroffentheiten und Kompetenzen beschreiben?</strong><br/>
 
@@ -434,6 +434,8 @@ de:
         motivation: Gedanken über echo
       report:
         reason:     'Grund'
+      web_profile:
+        location:   'Adresse'
 
   authlogic:
     error_messages:
