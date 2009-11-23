@@ -79,6 +79,10 @@
   width: 375px;
 }
 
+.header_block li .value a {
+  color: #21587f;
+}
+
 .header_block .guide {
   color: #21587f;
   font-size: 13px;
@@ -93,8 +97,8 @@
 }
 
 .column_200 {
-  width: 195px;
-  padding: 2px;
+  width: 195px !important;
+  padding: 2px !important;
   display: inline-block !important;
 }
 
@@ -105,6 +109,13 @@
   min-height: 18px;
   width: 195px;
   margin: 1px;
+}
+
+.header_block select {
+  border: 1px solid #999999;
+  color: #21587F;
+  padding: 2px;
+  width: 195px;
 }
 
 /* Styling for profiles in the profile container at the connect area. */

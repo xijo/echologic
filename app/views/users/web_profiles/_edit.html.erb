@@ -3,9 +3,9 @@
   <%= select :web_profile, :sort, WebProfile.sorts.collect { |k,v| [v,k] }, { :selected => @web_profile.sort } %>    
   <%= text_field :web_profile, :location %>
   <%= hidden_field :user_id, :value => @user.id %>
-  <%= submit_tag I18n.t('application.general.save'), :class => 'text_button add_button' %>
-  <%= I18n.t('application.general.or') %>  
-  <%= link_to I18n.t('application.general.cancel'), user_web_profile_path(@user, @web_profile), :class => 'ajax' %>
+  <%= submit_tag I18n.t('application.general.save'), :class => 'text_button save_button' %>
+  <span class="or_button"><%= I18n.t('application.general.or') %></span>  
+  <%= link_to I18n.t('application.general.cancel'), user_web_profile_path(@user, @web_profile), :class => 'ajax text_button cancel_button' %>
 
 <%- end %>
 

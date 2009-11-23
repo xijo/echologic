@@ -1,7 +1,7 @@
 <% @user = user if defined?(user) %>
 
 <li id="<%= dom_id(@user) %>">
-  <%= image_tag @user.picture.url(:header) %>
+  <%= image_tag @user.picture.url(:small) %>
   <div>
     <%=h @user.full_name %>  <br/>
     <%=h @user.email %>      <br/>

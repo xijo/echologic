@@ -6,6 +6,10 @@
   </div>
 
   <ul id="web_profile_list">
+    <li>
+      <span class="column_200 label"><%= I18n.t('users.web_profiles.type') %></span>
+      <span class="column_200 label"><%= I18n.t('users.web_profiles.address') %></span>
+    </li>
     <%= render :partial => 'users/web_profiles/web_profile', :collection => @user.web_profiles %>
   </ul>
   <ul>
