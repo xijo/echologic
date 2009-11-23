@@ -29,14 +29,17 @@ module StatementHelper
     image_tag("statements/#{statement.class.name.downcase}_#{size.to_s}.png")
   end
   
-  def create_statement_link(parent)
-    type = parent.class.expected_children.first.to_s
+  def create_statement_link(parent=nil)
+    type = 'Question' if parent.nil?
+    type ||= parent.class.expected_children.first.to_s
     type_display_name = type.constantize.display_name
     link_to("Create a new #{type_display_name}", new_child_statement_url(parent, type), :id => "create_#{type.underscore}_link")
   end
   
   def new_child_statement_url(parent, type)
     case type.to_s
+    when 'Question'
+      new_question_url(parent)
     when 'Proposal'
       new_proposal_url(parent)
     when 'ImprovementProposal'
@@ -46,6 +49,8 @@ module StatementHelper
   
   def children_box_title(type)
     case type.to_s.constantize.name
+    when 'Nil' 
+      'Questions'
     when 'Question'
       'Proposals'
     when 'Proposal'

@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # SECTION main parts of echologic
   map.act     '/act/roadmap',     :controller => :act,     :action => :roadmap
-  map.discuss '/discuss/roadmap', :controller => :discuss, :action => :roadmap
+  map.discuss '/discuss/index', :controller => :discuss, :action => :index
   map.my_echo '/my_echo/roadmap', :controller => :my_echo, :action => :roadmap
 
   map.resource :connect, :controller => 'connect', :only => [:show]

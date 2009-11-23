@@ -1,0 +1,10 @@
+#context {
+float:left;
+width:100%;
+clear:left;
+}
+#sidebar {
+  float:left; 
+  height:250px;
+  width:100px;
+}

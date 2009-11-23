@@ -14,21 +14,12 @@ class StatementsController < ApplicationController
   
   include StatementHelper
   
+  # nested resource magic happens here.
+  # not sure if it will work out, maybe we need to push some specific
+  # logic towards the subclassed controllers
+  
   def index
-    # nested resource magic happens here.
-    # not sure if it will work out, maybe we need to push some specific
-    # logic towards the subclassed controllers
-    if valid_parents = statement_class.valid_parents
-      valid_parents.each do |valid_parent|
-        parent_id_key = "#{valid_parent.to_s.underscore}_id".to_sym
-        if params[parent_id_key]
-          @statements = valid_parent.to_s.constantize.send(statement_class.underscore.pluralize)
-          break
-        end
-      end
-    else
-      @statements = statement_class.all
-    end
+    @statements = statement_class.all
   end
   
   def show
