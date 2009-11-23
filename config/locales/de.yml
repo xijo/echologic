@@ -209,7 +209,7 @@ de:
         Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, einige Ihrer Kontaktdaten und im
         Internet bestehenden Profile hier einzutragen.<br/>
         <strong>ACHTUNG</strong>: alle hier eingetragen Informationen sind erstmal für alle echologic Mitglieder ersichtlich.
-      type: Typ der Adresse
+      type: Art der Adresse
       address: Web Adresse
       sorts:
         homepage: "Homepage"

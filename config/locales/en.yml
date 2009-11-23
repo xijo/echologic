@@ -203,11 +203,11 @@ en:
 
     # Web profiles section
     web_profiles:
-      title: Web Adressen
+      title: Web Addresses
       guide: |
         Here you can enter some of your contact data and other web profiles.<br/>
         <strong>PLEASE NOTE</strong>: for now, all information entered here will be visible to all members of the echologic community.
-      type: Type of address
+      type: Kind of address
       address: Web Address
       sorts:
         homepage: "Homepage"
