@@ -68,7 +68,7 @@ class StatementsController < ApplicationController
   def new
     @statement ||= statement_class.new :parent => parent
     respond_to do |format|
-      format.html
+      format.html { }
       format.js { 
         render :update do |page|
           page.replace_html 'new_statement', :partial => 'statements/new'
@@ -86,7 +86,7 @@ class StatementsController < ApplicationController
       format.html { redirect_to url_for(@statement) }
       format.js { show }
     end
-  rescue ActiveRecord::RecordNotSaved => exc
+  rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     render :action => 'new'
   end
@@ -97,7 +97,7 @@ class StatementsController < ApplicationController
   def update
     @statement.update_attributes!(params[statement_class_param])
     redirect_to url_for(@statement)
-  rescue ActiveRecord::RecordNotSaved => exc
+  rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     render :action => 'edit'
   end

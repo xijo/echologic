@@ -16,7 +16,7 @@ Feature: Discuss
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |
       And I press the "Save" button
-    Then I should see a "question created" message
+    Then I should see "Is this a Question?"
      And there should be one question
 
   Scenario: Add a proposal to a question as an editor (from ui)
@@ -29,7 +29,8 @@ Feature: Discuss
       And I fill in the following:
         | title | a proposal to propose some proposeworthy proposal data |
         | text  | nothing to propose yet...                              |
-    Then I should see a "proposal created" message
+      And I press the "Save" button
+    Then I should see "a proposal to propose some"
       And the question should have one proposal
 
   # Todo - this only checks validations from a ui-perspective, and not each individual validation
