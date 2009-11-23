@@ -36,7 +36,12 @@ class Statement < ActiveRecord::Base
     { :conditions => { :type => 'ProArgument' } } }
   named_scope :contra_arguments, lambda { 
     { :conditions => { :type => 'ContraArgument' } } }
+ 
+  # orders
   
+  named_scope :by_ratio, :joins => :echo, :order => '(echos.supporter_count/echos.visitor_count) DESC'
+  
+  named_scope :by_supporters, :joins => :echo, :order => 'echos.supporter_count DESC'
   
   ##
   ## VALIDATIONS

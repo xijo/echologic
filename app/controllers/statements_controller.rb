@@ -25,7 +25,7 @@ class StatementsController < ApplicationController
   def show
     current_user.visited!(@statement)
     @page = params[:page] || 1
-    @statements = @statement.children.paginate(:page => @page, :per_page => 3)
+    @statements = @statement.children.by_ratio.paginate(:page => @page, :per_page => 3)
     respond_to do |format|
       format.html {}
       format.js {
@@ -33,6 +33,7 @@ class StatementsController < ApplicationController
           page.replace_html 'children_list', :partial => 'statements/children_list'
           page.replace_html 'context', :partial => 'statements/context'
           page.replace_html 'summary', :partial => 'statements/summary'
+          page.replace_html 'sidebar', :partial => 'statements/sidebar'
           # TODO: i manually show (and empty) the notice here, because it does not load automatically via ajax
           # -> check for a better solution
           page << "info('#{flash[:notice]}');"
@@ -45,14 +46,14 @@ class StatementsController < ApplicationController
   def echo
     current_user.supported!(@statement)
     render :update do |page|
-      page.replace('echo_button', echo_button)
+      page.replace('echo_button', echo_button(@statement))
     end
   end
   
   def unecho
     current_user.echo!(@statement, :supported => false)
     render :update do |page|
-      page.replace('echo_button', echo_button)
+      page.replace('echo_button', echo_button(@statement))
     end
   end
   
