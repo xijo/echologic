@@ -118,10 +118,10 @@ en:
       </p>
     function_1:
       name: 'My Profile'
-      description: 'Complete your profile to present yourself in the community.'
+      description: 'Complete your profile to present yourself in the echologic community.'
     function_2:
       name: 'Connect'
-      description: 'Explore other interesting members of the echologic movement.'
+      description: 'Explore other interesting people of the movement.'
 
   # ------------
   # USERS MODULE
@@ -170,7 +170,7 @@ en:
     profile:
       title: Personal Information
       edit_title: Edit your personal information
-      guide: Below you find your basic personal information. Please press the Edit button to update them.
+      guide: Below you find your basic personal information. Please press the Edit button to change them.
 
       gender:
         male: Male
@@ -221,11 +221,11 @@ en:
     concernments:
       title: Concernments & Competences
       guide: |
-        All of us has <strong>different facets</strong>. In some areas we are affected and need help from others,
+        All of us have <strong>different facets</strong>. In some areas we might be affected and need help from others,
         in other areas we engage ourselves and offer help to others. In certain fields we have professional expertise,
-        in others we might be in a position to represent others and make decisions. echo helps like-minded people to
+        in others we represent other people and make decisions. echo helps like-minded people to
         find each other with <strong>knowledge complementing each other</strong>.<br/>
-        <strong>How would you define your concernments and competences?</strong>
+        <strong>How would you describe your concernments and competences?</strong>
       sorts:
         affected: <strong>Affected</strong> by
         engaged: <strong>Engaged</strong> in

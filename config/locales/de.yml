@@ -117,10 +117,10 @@ de:
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Vervollständigen Sie Ihr Profil, um sich in der Community zu präsentieren.'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
     function_2:
       name: 'Vernetzen'
-      description: 'Entdecken Sie andere interessante Menschen der echologic Bewegung.'
+      description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
 
   # ------------
   # USERS MODULE
@@ -223,10 +223,10 @@ de:
     concernments:
       title: Betroffentheiten und Kompetenzen
       guide: |
-        Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen sind wir betroffen und brauchen die Hilfe Anderer,
-        in anderen Bereichen engagieren wir uns selbst und bieten Anderen Hilfe. In bestimmten Bereichen haben wir
-        Expertise, in anderen sind wir vielleicht in der Position, anderen Menschen zu representieren und
-        Entscheidungen zu fällen. echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> zusammenzufinden.<br/>
+        Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen können wir betroffen sein und die
+        Hilfe Anderer brauchen, in anderen Bereichen engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir
+        Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen. 
+        echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> leicht zusammenzufinden.<br/>
         <strong>Wie würden Sie Ihre Betroffentheiten und Kompetenzen beschreiben?</strong><br/>
 
       sorts:
