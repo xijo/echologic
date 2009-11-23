@@ -229,8 +229,9 @@ en:
       sorts:
         affected: <strong>Affected</strong> by
         engaged: <strong>Engaged</strong> in
-        scientist: <strong>Expert / scientist</strong> in the field of
+        scientist: <strong>Expert</strong> in the field of
         representative: <strong>Decision maker</strong> in the field of
+      tags: Keywords (tags)
 
     users:
       new:

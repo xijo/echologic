@@ -232,8 +232,9 @@ de:
       sorts:
         affected: <strong>Betroffen</strong> von
         engaged: <strong>Engagiert</strong> im Bereich
-        scientist: <strong>ExpertIn / WissenschaftlerIn</strong> im Bereich
+        scientist: <strong>ExpertIn</strong> im Bereich
         representative: <strong>EntscheidungsträgerIn</strong> im Bereich
+      tags: Schlüsselwörter (Tags)
 
 
     # New Users section
