@@ -323,7 +323,7 @@ en:
 
   discuss:
     statement:
-      ratio_bar_tooltip: 'This statement found {{progress}}% agreement.'
+      ratio_bar_tooltip: 'This statement found {{progress}}% agreement ({{supporters}} supporters).'
 
   authlogic:
     error_messages:

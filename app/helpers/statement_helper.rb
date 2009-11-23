@@ -58,10 +58,10 @@ module StatementHelper
     end
   end
   
-  def supporter_ratio_bar(percent)
-    tooltip = I18n.t('discuss.statement.ratio_bar_tooltip', :progress => percent)
-    val =  "<span class='ttLink ratiobar' title='#{tooltip}'></span>"
-    val += "<script type='text/javascript'>$('.ratiobar').progressbar({value: #{percent != 0 ? percent : 1}});</script>"
+  def supporter_ratio_bar(statement,context=nil)
+    tooltip = I18n.t('discuss.statement.ratio_bar_tooltip', :progress => statement.ratio, :supporters => statement.supporter_count)
+    val =  "<span id='ratiobar#{context}_#{statement.id}' class='ttLink ratiobar' title='#{tooltip}'></span>"
+    val += "<script type='text/javascript'>$('#ratiobar#{context}_#{statement.id}').progressbar({value: #{statement.ratio != 0 ? statement.ratio : 1}});</script>"
     val
   end
   

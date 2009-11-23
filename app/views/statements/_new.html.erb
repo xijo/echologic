@@ -1,5 +1,4 @@
 <% statement ||= @statement %>
-<%=h statement.parents.inspect %>
 <% form_for statement.self_with_parents do |f| -%>
   <%= f.error_messages %>
   <%= render :partial => "statements/form", :locals => { :form => f } %>

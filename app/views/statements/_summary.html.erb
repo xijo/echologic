@@ -1,7 +1,6 @@
 <%
 statement ||= @statement
 %>
-<h1><%=@statement.class.display_name%> Summary</h1>
-<b>Support:</B><%=supporter_ratio_bar(statement.ratio)%><br/>
-<%=@statement.text%>
-<%= statement.ratio.inspect %>
+<h1><%=statement.class.display_name%> Summary</h1>
+<%= "<b>Support:</b>#{supporter_ratio_bar(statement,'summary')}<br/>" unless statement.question? %>
+<%=statement.text%>
