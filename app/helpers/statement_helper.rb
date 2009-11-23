@@ -57,4 +57,12 @@ module StatementHelper
       'Improvement Proposals'
     end
   end
+  
+  def supporter_ratio_bar(percent)
+    tooltip = I18n.t('discuss.statement.ratio_bar_tooltip', :progress => percent)
+    val =  "<span class='ttLink ratiobar' title='#{tooltip}'></span>"
+    val += "<script type='text/javascript'>$('.ratiobar').progressbar({value: #{percent != 0 ? percent : 1}});</script>"
+    val
+  end
+  
 end

@@ -9,11 +9,20 @@ module Echoable
   
   module InstanceMethods
     def visitor_count
+      find_or_create_echo if echo.nil?
       echo.visitor_count
     end
     
-    def support_count
-      echo.support_count
+    def supporter_count
+      find_or_create_echo if echo.nil?
+      echo.supporter_count
+    end
+    
+    def ratio
+      if supporter_count == 0
+        return 0
+      end
+      ((supporter_count.to_f / visitor_count.to_f) * 100).to_i
     end
     
     def find_or_create_echo

@@ -321,6 +321,10 @@ en:
         about_me:   About Me
         motivation: Thoughts about echo
 
+  discuss:
+    statement:
+      ratio_bar_tooltip: 'This statement found {{progress}}% agreement.'
+
   authlogic:
     error_messages:
       email_invalid:      "Please enter a correct e-mail address."
