@@ -47,11 +47,13 @@ class Statement < ActiveRecord::Base
   validates_associated :document
   validates_presence_of :document
   
-  cattr_accessor :expected_children
-  
   class << self
     def valid_parents
       @@valid_parents[self.name]
+    end
+    
+    def expected_children
+      @@expected_children[self.name]
     end
     
     private
@@ -70,9 +72,10 @@ class Statement < ActiveRecord::Base
     # but i think it is more convenient to define them extra
     # at the moment we only show one type of children in the questions children container (view)
     # therefor we will look for the first element of the expected_children array
-    def expects_children(*klasses)    
-      @@expected_children ||= []
-      @@expected_children += klasses
+    def expects_children(*klasses)
+      @@expected_children ||= { }
+      @@expected_children[self.name] ||= []
+      @@expected_children[self.name] += klasses
     end
   end
   

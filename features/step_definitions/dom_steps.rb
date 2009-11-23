@@ -1,6 +1,6 @@
 #
 When /^I follow the "([^\"]*)" link within the "([^\"]*)" (.*)$/ do |link, selector, container|
-  within "##{selector.downcase.gsub(' ', '_')}_#{container.downcase}" do
+  within "##{selector.downcase.strip.gsub(' ', '_')}_#{container.strip.downcase}" do
     click_link "#{link.downcase.gsub(' ', '_')}_link"
   end
 end

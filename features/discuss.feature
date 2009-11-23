@@ -26,7 +26,9 @@ Feature: Discuss
     # Todo: Maybe we should start navigating from the main question overview
     When I go to the question
       And I follow the create proposal link
-      And I post some valid proposal data
+      And I fill in the following:
+        | title | a proposal to propose some proposeworthy proposal data |
+        | text  | nothing to propose yet...                              |
     Then I should see a "proposal created" message
       And the question should have one proposal
 
@@ -35,7 +37,8 @@ Feature: Discuss
     Given there are no questions
       And I am logged in as "editor" with password "true"
     When I go to create a question
-      And I post some invalid question data
+      And I fill in the following:
+        | text | Blablabla bla bla bla |
     # Todo: Maybe we should check the content of the error box as well
     Then I should see an error message
   
@@ -46,7 +49,9 @@ Feature: Discuss
     When I go to the questions first proposal
       And I follow the create improvement proposal link
       # Todo: How does the plain data for an improvement proposal differ from valid data for a proposal
-      And I post some valid improvement proposal data
+      And I fill in the following:
+        | title | Improving the unimprovable                                    |
+        | text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
     Then I should see a "improvementproposal created" message
       And the proposal should have one improvementproposal
 

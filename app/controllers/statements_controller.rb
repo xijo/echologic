@@ -124,6 +124,6 @@ class StatementsController < ApplicationController
     statement_class.valid_parents.each do |parent|
       parent_id = params[:"#{parent.to_s.underscore.singularize}_id"]
       return parent.to_s.constantize.find(parent_id) if parent_id
-    end
+    end ; nil
   end
 end
