@@ -1,4 +1,5 @@
 module EchoHelper
+
   def echo_button
     url_options = { :controller => @statement.class.name.underscore.pluralize, :id => @statement.id }
     unless current_user.supported?(@statement)
@@ -7,4 +8,5 @@ module EchoHelper
       link_to_remote "UnEcho", { :url => url_options.merge(:action => 'unecho'), :method => :delete }, :id => 'echo_button'
     end
   end
+
 end
