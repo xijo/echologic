@@ -53,7 +53,8 @@ Feature: Discuss
       And I fill in the following:
         | title | Improving the unimprovable                                    |
         | text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
-    Then I should see a "improvementproposal created" message
+    Then I should see a "Improving eh unimprovable"
+      And I should see "blubb"
       And the proposal should have one improvementproposal
 
   # Todo:
