@@ -1,13 +1,14 @@
-<div id="membership_container" class="details_container">
-  <h2><%= I18n.t('users.memberships.heading') %></h2>
-  <div class="comment">
-    <%= I18n.t('users.memberships.comment') %>
+<div id="membership_container" class="header_block">
+  <h2><%= I18n.t('users.memberships.title') %></h2>
+  
+  <div class="guide">
+    <%= I18n.t('users.memberships.guide') %>
   </div>
 
   <ul id="membership_list">
     <li>
-      <span><%= I18n.t('users.memberships.organisation') %></span>
-      <span><%= I18n.t('users.memberships.position') %></span>
+      <span class="column_200 label"><%= I18n.t('users.memberships.organisation') %></span>
+      <span class="column_200 label"><%= I18n.t('users.memberships.position') %></span>
     </li>
     <%= render :partial => 'users/memberships/membership', :collection => @user.memberships %>
   </ul>

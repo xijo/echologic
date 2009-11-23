@@ -12,86 +12,150 @@
 */
 
 
-.details_container {
-  /*background: #eee;*/
-  border: 1px solid #ccc;
-  -moz-border-radius: 4px;
-  padding: 6px;
-  margin: 10px auto;
-  width: 600px;
-  position: relative;
+#profile_avatar_container {
+  width: 140px;
+  float: left;
+  text-align: center;
 }
 
-.details_container ul {
-  clear: both;
+#profile_avatar_container img {
+  width: 128px;
+  border: 2px solid #7bb031;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+#concernment_container .form_container {
+  width: 410px;
+  margin: 7px 0 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#concernment_container .label {
+  color: #7bb031;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#concernment_container form input[type='text'] {
+  width: 250px !important;
+}
+
+#concernment_container .tag_container {
+  display: inline-block;
+  width: 383px;
+  margin: 23px 0 0;
+  padding: 2px 4px;
+  min-height: 30px;
+  border: 1px solid #999;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+#concernment_container .tag {
+  font-size: 13px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  background-color: #DDD;
+  padding: 3px 7px;
+  margin: 4px 1px;
+  display: inline-block;
+}
+
+.header_block {
+  background: url(../images/page/header_left.png) no-repeat scroll left top;
+  padding: 6px 0 0 15px;
+  margin: 20px 0px 25px 165px;
+}
+
+.header_block h2 {
+  background: url(../images/page/header_right.png) no-repeat scroll right top;
+  height: 31px;
+  margin: -6px 0 10px !important;
+  line-height: 31px;
+  vertical-align: middle;
+  color: #21587f !important;
+}
+
+.header_block h3 {
+  color: #7bb031;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header_block ul {
   margin: 0;
   padding: 0;
 }
 
-.details_container li {
+.header_block li {
   list-style-type: none;
   line-height: 24px;
+  display: block;
+  vertical-align: middle;
 }
 
-.details_container li span {
-  min-width: 110px;
+.two_columns_block li {
+  list-style-type: none;
+  line-height: 24px;
+  width: 400px;
   display: inline-block;
+  vertical-align: top;
+}
+
+.header_block li .label {
+  color: #7bb031;
   font-weight: bold;
-  margin: 3px 0;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.details_container .comment {
-  color: #aaa;
-  clear: both;
-  font-size: 12px;
+.header_block li .value {
+  color: #21587f;
+  display: block;
+  width: 375px;
 }
 
-.details_container select {
-  width: 110px;
-  padding: 3px;
-  -moz-border-radius: 4px;
-  border: 1px solid #888;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  font-size: 12px;
-  min-height: 17px;
+.header_block li .value a {
+  color: #21587f;
 }
 
-.details_container select:hover, .detailsContainer input:hover { border: 1px solid #090; }
-
-.details_container .active { border: 1px solid #090; background: #eee; }
-
-.details_container input {
-  width: 200px;
-  padding: 3px;
-  margin: 0;
-  -moz-border-radius: 4px;
-  border: 1px solid #888;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-  /*font-size: 12px;*/
-  min-height: 17px;
+.header_block .guide {
+  color: #21587f;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 10px 0;
 }
 
-.options_button {
-  -moz-border-radius: 4px;
-  width:      16px;
-  height:     16px;
-  border:     1px solid #d3d3d3;
-  color:      #555555;
-  display:    inline-block;
-  position:   relative;
-  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
-  text-align: center;
-  font-size:  9px;
-  top: -4px;
+.header_button {
+  position: relative;
+  float: right;
+  margin: -33px 15px 0 0;
 }
 
-.submit_button {
-  width: 80px !important;
-  -moz-border-radius: 4px;
-  padding:    3px;
-  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+.column_200 {
+  width: 195px !important;
+  padding: 2px !important;
+  display: inline-block !important;
 }
 
+.header_block input[type="text"] {
+  border: 1px solid #999;
+  color: #21587F;
+  font-size: 14px;
+  min-height: 18px;
+  width: 195px;
+  margin: 1px;
+}
+
+.header_block select {
+  border: 1px solid #999999;
+  color: #21587F;
+  padding: 2px;
+  width: 195px;
+}
 
 /* Styling for profiles in the profile container at the connect area. */
 #profile_container .profile {

@@ -1,14 +1,13 @@
-<div id="concernment_container" class="details_container">
-  <div class="comment">
-    <%= I18n.t('users.concernments.comment') %>
+<div id="concernment_container" class="header_block two_columns_block">
+  <h2><%= I18n.t('users.concernments.title') %></h2>
+
+  <div class="guide">
+    <%= I18n.t('users.concernments.guide') %>
   </div>
   <% concernments = @user.concernments %>
 
   <% Concernment.sorts.each do |sort, name| %>
-
-    <h2><%= name %></h2>
-    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort), :sort => sort } %><br/>
-
+    <%= render :partial => 'users/concernments/list', :locals => { :concernments => concernments.find_all_by_sort(sort), :sort => sort , :name => name} %><br/>
   <% end %>
 
 </div>

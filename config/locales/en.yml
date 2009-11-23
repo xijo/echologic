@@ -12,6 +12,7 @@ en:
       back: Back
       last_name: Last Name
       first_name: First Name
+      undefined: Unknown
       name: Name
       email: E-Mail
       ok: Ok
@@ -23,8 +24,9 @@ en:
       send: Send
       upload: Upload
       delete: Delete
-      create: Create
+      create: Add
       welcome: "Welcome"
+      all: "All"
 
     # Roadmap - Progress
     roadmap:
@@ -106,7 +108,7 @@ en:
       <p>
       <strong>Discuss - Connect - Act!</strong><br/>
       These are the three main functional areas of echo, which we will develop step by step at
-      echologic with your participation.
+      echologic with your active participation.
       </p><p>
       Below you can see the most recently released functionality.<br/>
       With the time, more and more features will be introduced enabling you to increasingly
@@ -116,10 +118,10 @@ en:
       </p>
     function_1:
       name: 'My Profile'
-      description: 'Complete your profile to present yourself in the community.'
+      description: 'Complete your profile to present yourself in the echologic community.'
     function_2:
       name: 'Connect'
-      description: 'Explore other interesting members of the echologic movement.'
+      description: 'Explore other interesting people of the movement.'
 
   # ------------
   # USERS MODULE
@@ -166,62 +168,72 @@ en:
 
     # Profile Section
     profile:
-      heading: Personal Information
-      edit_heading: Edit your personal information
-      comment: The informations about your person are displayed here. Use the 'edit' button to update them.
+      title: Personal Information
+      edit_title: Edit your personal information
+      guide: Below you find your basic personal information. Please press the Edit button to change them.
 
       gender:
         male: Male
         female: Female
 
+      location: Location
+
       password:
-        heading: Change my password
+        title: Change my password
         new: New password
         confirm: Confirm password
 
       picture:
-        heading: Picture
+        upload_button: Change
 
       upload_picture:
-        heading: Upload Picture
-        comment: Please select a picture from your file system and click the upload button.
-        progress: please wait..
+        title: Upload Picture
+        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and click the upload button.
+        progress: Your avatar is being uploaded. Please wait...
 
       messages:
         updated: "Profile information updated successful."
 
     # Memberships section
     memberships:
-      heading: Memberships
-      comment: You may insert all of your memberships, e.g. in organisations, political parties, companies, and so on.
+      title: Organisations
+      guide: Here you can enter your voluntary, professional and other kinds of activities in different organisations.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
-      heading: Web Profiles
-      comment: You may insert all your different kinds of web profiles here, so everyone will be able to contact you.
+      title: Web Addresses
+      guide: |
+        Here you can enter some of your contact data and other web profiles.<br/>
+        <strong>PLEASE NOTE</strong>: for now, all information entered here will be visible to all members of the echologic community.
+      type: Kind of address
+      address: Web Address
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
         blog:     "Blog"
+        xing:     "Xing"
         linkedin: "LinkedIn"
         twitter:  "Twitter"
-        xing:     "Xing"
 
     # Concernments section
     concernments:
-      comment: Descripe your concernments below.
+      title: Concernments & Competences
+      guide: |
+        All of us have <strong>different facets</strong>. In some areas we might be affected and need help from others,
+        in other areas we engage ourselves and offer help to others. In certain fields we have professional expertise,
+        in others we represent other people and make decisions. echo helps like-minded people to
+        find each other with <strong>knowledge complementing each other</strong>.<br/>
+        <strong>How would you describe your concernments and competences?</strong>
       sorts:
-        affected: Affected
-        engaged: Engaged
-        scientist: Expert/Scientist
-        representative: Representative
+        affected: <strong>Affected</strong> by
+        engaged: <strong>Engaged</strong> in
+        scientist: <strong>Expert</strong> in the field of
+        representative: <strong>Decision maker</strong> in the field of
+      tags: Keywords (tags)
 
     users:
-      gender:
-        male: Male
-        female: Female
       new:
         title: Your echo
         subtitle: Join echologic
@@ -245,6 +257,18 @@ en:
     reports:
       messages:
         created: "Thank you for your message. We have notified an administrator to check the reported issue."
+
+  # ---------------
+  # Connect section
+  # ---------------
+
+  connect:
+    segments:
+      all: All
+      affected: Affected
+      engaged: Engaged
+      scientist: Experts
+      representative: Decision Makers
 
   # Feedback resources
   feedback:
@@ -289,11 +313,13 @@ en:
         email:      E-Mail
         first_name: First Name
         last_name:  Last Name
+        full_name:  Name
         gender:     Gender
         city:       City
         country:    Country
+        location:   Location
         about_me:   About Me
-        motivation: Motivation
+        motivation: Thoughts about echo
 
   authlogic:
     error_messages:

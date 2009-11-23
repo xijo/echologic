@@ -7,12 +7,12 @@ class WebProfile < ActiveRecord::Base
   # Map the different sorts of web profiles to their database representation
   # value, translate them ..
   @@sorts = {
-    0 => I18n.t('users.web_profiles.sorts.homepage'),
-    1 => I18n.t('users.web_profiles.sorts.email'),
+    0 => I18n.t('users.web_profiles.sorts.email'),
+    1 => I18n.t('users.web_profiles.sorts.homepage'),
     2 => I18n.t('users.web_profiles.sorts.blog'),
-    3 => I18n.t('users.web_profiles.sorts.linkedin'),
-    4 => I18n.t('users.web_profiles.sorts.twitter'),
-    5 => I18n.t('users.web_profiles.sorts.xing')
+    3 => I18n.t('users.web_profiles.sorts.xing'),
+    4 => I18n.t('users.web_profiles.sorts.linkedin'),
+    5 => I18n.t('users.web_profiles.sorts.twitter')  
   }
 
   # ..and make it available as class method.

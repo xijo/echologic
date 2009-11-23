@@ -1,42 +1,35 @@
 <% # Show profile details at the my_profile area in my_echo.
 %>
 
-<div id="personal_container" class="details_container">
-  <h2><%= I18n.t('users.profile.heading') %></h2>
-  (<%= link_to I18n.t('application.general.edit'), edit_profile_path(@profile), :class => 'ajax edit_link' %>)
+<div id="personal_container" class="header_block two_columns_block">
+  <h2><%= I18n.t('users.profile.title') %></h2>
+  
+  <%= link_to I18n.t('application.general.edit'), edit_profile_path(@profile), :class => 'ajax header_button text_button edit_button' %>
 
-  <div class="comment">
-    <%= I18n.t('users.profile.comment') %>
+  <div class="guide">
+    <%= I18n.t('users.profile.guide') %>
   </div>
 
   <ul>
     <li>
-      <span class="title"><%= Profile.human_attribute_name(:first_name) %></span>
-      <%=h @profile.first_name %>
+      <span class="label"><%= Profile.human_attribute_name(:full_name) %></span>
+      <span class="value"><%=h @profile.full_name %></span>
+    </li><br/>
+    <li>
+      <span class="label"><%= Profile.human_attribute_name(:gender) %></span>
+      <span class="value"><%=h @profile.localized_gender %></span>
     </li>
     <li>
-      <span class="title"><%= Profile.human_attribute_name(:last_name) %></span>
-      <%=h @profile.last_name %>
+      <span class="label"><%= Profile.human_attribute_name(:location) %></span>
+      <span class="value"><%=h @profile.location %></span>
     </li>
     <li>
-      <span class="title"><%= Profile.human_attribute_name(:gender) %></span>
-      <%=h @profile.localized_gender %>
+      <span class="label"><%= Profile.human_attribute_name(:about_me) %></span>
+      <span class="value"><%=h @profile.about_me %></span>
     </li>
     <li>
-      <span class="title"><%= Profile.human_attribute_name(:city) %></span>
-      <%=h @profile.city %>
-    </li>
-    <li>
-      <span class="title"><%= Profile.human_attribute_name(:country) %></span>
-      <%=h @profile.country %>
-    </li>
-    <li>
-      <span class="title"><%= Profile.human_attribute_name(:about_me) %></span>
-      <%=h @profile.about_me %>
-    </li>
-    <li>
-      <span class="title"><%= Profile.human_attribute_name(:motivation) %></span>
-      <%=h @profile.motivation %>
+      <span class="label"><%= Profile.human_attribute_name(:motivation) %></span>
+      <span class="value"><%=h @profile.motivation %></span>
     </li>
   </ul>
 </div>

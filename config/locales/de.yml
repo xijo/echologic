@@ -14,6 +14,7 @@ de:
       name: Name
       first_name: Vorname
       last_name: Nachname
+      undefined: Unbekannt
       ok: Ok
       or: oder
       save: Speichern
@@ -25,6 +26,7 @@ de:
       delete: Löschen
       create: Hinzufügen
       welcome: "Willkommen"
+      all: "Alle"
 
     # Roadmap - Progress
     roadmap:
@@ -115,10 +117,10 @@ de:
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Vervollständigen Sie Ihr Profil, um sich in der Community zu präsentieren.'
+      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
     function_2:
       name: 'Vernetzen'
-      description: 'Entdecken Sie andere interessante Menschen der echologic Bewegung.'
+      description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
 
   # ------------
   # USERS MODULE
@@ -167,63 +169,76 @@ de:
 
     # Profile Section
     profile:
-      heading: Persönliche Informationen
-      edit_heading: Persönliche Informationen bearbeiten
-      comment: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
+      title: Persönliche Informationen
+      edit_title: Persönliche Informationen bearbeiten
+      guide: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
 
       gender:
         male: Männlich
         female: Weiblich
 
+      location: Ort
+
       password:
-        heading: Passwort ändern
+        title: Passwort ändern
         new: Ihr neues Passwort
         confirm: Passwort bestätigen
 
       picture:
-        heading: Profilbild
+        upload_button: Austauschen
 
       upload_picture:
-        heading: Profilbild hochladen
-        comment: Bitte wählen Sie ein Bild aus und drücken Sie auf den 'Hochladen' Knopf.
-        progress: Bitte warten...
+        title: Profilbild hochladen
+        guide: Bitte <strong>wählen Sie ein Bild</strong> (JPG oder PNG, max. 1MB) aus und drücken Sie auf den 'Hochladen' Knopf.
+        progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
         updated: "Sie haben Ihr Profil erfolgreich geändert."
 
     # Memberships section
     memberships:
-      heading: Mitgliedschaften
-      comment: Sie haben die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
+      title: Organisationen
+      guide: Hier können Sie Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten in bestimmten Organisationen angeben.
       organisation: Organisation
       position: Position
 
     # Web profiles section
     web_profiles:
-      heading: Web Profile
-      comment: Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, Ihre im Internet bestehenden Profile hier einzutragen.
+      title: Web Adressen
+      guide: |
+        Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, einige Ihrer Kontaktdaten und im
+        Internet bestehenden Profile hier einzutragen.<br/>
+        <strong>ACHTUNG</strong>: alle hier eingetragen Informationen sind erstmal für alle echologic Mitglieder ersichtlich.
+      type: Art der Adresse
+      address: Web Adresse
       sorts:
         homepage: "Homepage"
         email:    "E-Mail"
         blog:     "Blog"
+        xing:     "Xing"
         linkedin: "LinkedIn"
         twitter:  "Twitter"
-        xing:     "Xing"
-
+        
     # Concernments section
     concernments:
-      comment: Hier können Sie sich zu Interessengruppen zuordnen.
-      sorts:
-        affected: Betroffen
-        engaged: Engagiert
-        scientist: Experte/Wissenschaftler
-        representative: Entscheidungsträger
+      title: Betroffentheiten und Kompetenzen
+      guide: |
+        Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen können wir betroffen sein und die
+        Hilfe Anderer brauchen, in anderen Bereichen engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir
+        Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen. 
+        echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> leicht zusammenzufinden.<br/>
+        <strong>Wie würden Sie Ihre Betroffentheiten und Kompetenzen beschreiben?</strong><br/>
 
-    # Users section
+      sorts:
+        affected: <strong>Betroffen</strong> von
+        engaged: <strong>Engagiert</strong> im Bereich
+        scientist: <strong>ExpertIn</strong> im Bereich
+        representative: <strong>EntscheidungsträgerIn</strong> im Bereich
+      tags: Schlüsselwörter (Tags)
+
+
+    # New Users section
     users:
-      gender:
-        male: Männlich
-        female: Weiblich
       new:
         title: 'Ihr echo'
         subtitle: 'echologic beitreten'
@@ -249,6 +264,18 @@ de:
       messages:
         created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
 
+
+  # ---------------
+  # Connect section
+  # ---------------
+
+  connect:
+    segments:
+      all: Alle
+      affected: Betroffene
+      engaged: Engagierte
+      scientist: Experten
+      representative: Entscheidungsträger
 
   # Feedback resources
   feedback:
@@ -398,11 +425,13 @@ de:
         email:      E-Mail
         first_name: Vorname
         last_name:  Nachname
+        full_name:  Name
         gender:     Geschlecht
         city:       Stadt
         country:    Land
+        location:   Ort
         about_me:   Über mich
-        motivation: Motivation
+        motivation: Gedanken über echo
       report:
         reason:     'Grund'
 

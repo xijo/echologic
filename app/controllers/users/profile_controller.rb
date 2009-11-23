@@ -77,7 +77,7 @@ class Users::ProfileController < ApplicationController
       format.js do
         render :update do |page|
           page.replace 'loginContainer',    :partial => 'users/user_sessions/login'
-          page.replace 'picture_container', :partial => 'users/avatar/picture'
+          page.replace 'profile_avatar_container', :partial => 'users/avatar/picture'
         end
       end
     end

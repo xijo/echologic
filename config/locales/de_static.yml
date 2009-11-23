@@ -45,8 +45,9 @@ de:
 
       # connect: de.seo.title.connect
       connect:
-        show:   'echologic - Vernetzen'
-        search: 'echologic - Vernetzen'
+        show:    'echologic - Vernetzen'
+        search:  'echologic - Vernetzen'
+        roadmap: 'echologic - Vernetzen'
 
       # act: de.seo.title.act
       act:
@@ -173,7 +174,7 @@ de:
           László Papp<br/>
           Pflugstr. 15<br/>
           10115 Berlin<br/>
-          E-mail: <a href="mailto:team@echologic.org>team@echologic.org</a><br/>
+          E-mail: <a href="mailto:team@echologic.org">team@echologic.org</a><br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
           Im Rahmen unseres Dienstes werden auch Links zu Internetinhalten anderer Anbieter bereitgestellt.
@@ -258,7 +259,7 @@ de:
 
           tooltip2: |
             Analog zu Wikipedia, der weltgrößten frei zugänglichen Wissenbasis für möglichst objektive Fakten,
-            wird echo die umfangreichste "Meinungsbasis" für subjektive Meinungen zur Verfügung stellen und
+            wird echo die umfangreichste Meinungsbasis für subjektive Meinungen zur Verfügung stellen und
             konstruktive Diskussionen über die bestehenden Positionen und Themen anregen.
 
       # discuss section
@@ -395,7 +396,7 @@ de:
           bürgerlichen Engagements im Internet und ermöglicht die Entstehung einer breiten gesellschaftlichen <strong>Welle des Wandels</strong>.
           </p><p>
           Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit.
-          Diese <i>open source</i> Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit,
+          Diese open source Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit,
           sie schafft auch die Grundlage für einen sicheren und plattformübergreifenden Datenaustausch zwischen
           öffentlichen, organisationsinternen und privaten Servern.
           </p><p>

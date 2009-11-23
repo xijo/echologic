@@ -2,7 +2,9 @@
   # progress indicator. 
 %>
 
-<%= I18n.t('users.profile.upload_picture.comment') %>
+<p>
+  <%= I18n.t('users.profile.upload_picture.guide') %>
+</p>
 
 <% semantic_form_for @profile, :html => { :multipart => true, :id => 'upload_picture_form' } do |form| %>
   <% form.inputs do %>

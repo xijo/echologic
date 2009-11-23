@@ -21,6 +21,82 @@
   margin:       18px 0px 5px;
 }
 
+/* Function buttons */
+
+.text_button {
+  color: #21587f;
+  font-family: arial,Helvetica,sans-serif;
+  font-size: 12px;
+  margin-left: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  border: none;
+}
+
+.text_button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.add_button {
+  background:transparent url(../images/page/icons/add_button.png) no-repeat scroll 0 0;
+  height: 20px;
+  padding-left: 23px;
+}
+
+.edit_button {
+  background:transparent url(../images/page/icons/edit_button.png) no-repeat scroll 0 0;
+  height: 17px;
+  line-height: 17px;
+  display: inline-block;
+}
+
+.save_button {
+  background:transparent url(../images/page/icons/save_button.png) no-repeat scroll 0 0;
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+}
+
+.or_cancel {
+  color: #21587f;
+}
+
+.cancel_button {
+  padding-left: 0px;
+}
+
+.delete_button {
+  background:transparent url(../images/page/icons/delete_button.png) no-repeat scroll 0 0;
+  height: 16px;
+  line-height: 17px;
+  display: inline-block;
+}
+
+/* Assets */
+
+.button_150 {
+  border:       none;
+  background:   #FFF url(../images/page/button_150.png) no-repeat scroll left top;
+  width:        150px;
+  height:       43px;
+  line-height:  43px;
+  display:      inline-block;
+  font-size:    14px;
+  font-weight:  bold;
+  color:        #21587f;
+  text-align:   center;
+  vertical-align: middle;
+  margin:       10px 0 0 -6px;
+  padding:      0;
+}
+
+.button_150:hover {
+  background-position: 0 -43px;
+  color: #7bb031;
+}
+
+
 /* Application layout stuff */
 
 #logged_in_user {

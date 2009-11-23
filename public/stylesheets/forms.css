@@ -25,7 +25,7 @@
 
 .formButton200 {
   border:       none;
-  background:   #FFF url(../images/page/button_200.png) no-repeat scroll left top;
+  background:   #FFF url(../images/page/form_button_200.png) no-repeat scroll left top;
   width:        200px;
   height:       43px;
   display:      inline-block;
@@ -44,7 +44,7 @@
 
 .formButton250 {
   border:       none;
-  background:   #FFF url(../images/page/button_250.png) no-repeat scroll left top;
+  background:   #FFF url(../images/page/form_button_250.png) no-repeat scroll left top;
   width:        250px;
   height:       43px;
   display:      inline-block;
@@ -63,7 +63,7 @@
 
 .formButton300 {
   border:       none;
-  background:   #FFF url(../images/page/button_300.png) no-repeat scroll left top;
+  background:   #FFF url(../images/page/form_button_300.png) no-repeat scroll left top;
   width:        300px;
   height:       43px;
   display:      inline-block;

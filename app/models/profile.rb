@@ -22,21 +22,29 @@ class Profile < ActiveRecord::Base
 
   # Returns the localized gender
   def localized_gender
-    @@gender[female] || ''
+    @@gender[female] || I18n.t('application.general.undefined')
   end
 
   # Handle attached user picture through paperclip plugin
-  has_attached_file :avatar, :styles => { :small => "80x80>" },
+  has_attached_file :avatar, :styles => { :big => "128x>", :small => "x45>" },
                     :default_url => "/images/default_:style_avatar.png"
-  validates_attachment_size :avatar, :less_than => 5.megabytes
+  validates_attachment_size :avatar, :less_than => 1.megabytes
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png']
 
 
-  # Return the full name of the user consisting of pre- and surname
+  # Return the full name of the user composed of first- and lastname
   def full_name
-    "#{first_name} #{last_name}"
+    if (!first_name.blank? and !last_name.blank?)
+      "#{first_name} #{last_name}"
+    elsif !first_name.blank?
+      first_name
+    elsif !last_name.blank?
+      last_name
+    else
+      I18n.t('application.general.undefined')
+    end
   end
-
+  
   # Return the formatted location of the user
   # TODO conditions in compact form?
   #  - something like this?: [city, country].select{|s|s.try(:any?)}.join(', ')
@@ -48,7 +56,7 @@ class Profile < ActiveRecord::Base
     elsif not city.blank?
       city
     else
-      ""
+      I18n.t('application.general.undefined')
     end
   end
 

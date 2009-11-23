@@ -9,25 +9,81 @@ form.formtastic fieldset ol li p.inline-hints { color:#333; }
 
 --------------------------------------------------------------------------------------------------*/
 
-form.formtastic .buttons input {
-  width:      80px !important;
-  -moz-border-radius: 4px;
-  padding:    3px;
-  background: #e6e6e6 url(../images/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+form.formtastic fieldset ol li {
+display: inline-block;
+width: 400px;
+}
+
+html[xmlns] form.formtastic fieldset ol li {
+display: inline-block;
+}
+
+form.formtastic fieldset ol li label {
+  color: #7bb031;
+  font-weight: bold;
+  display: block;
+  width: 100%;
 }
 
 form.formtastic fieldset ol li.text textarea, form.formtastic fieldset ol li.string input {
-  width:      230px;
-  padding:    3px;
+  width:      300px;
+  padding:    2px;
   margin:     0;
-  -moz-border-radius: 4px;
-  border:     1px solid #888;
+  border:     1px solid #999;
   font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
   min-height: 17px;
+  color: #21587f;
 }
 
 form.formtastic fieldset ol li.text textarea {
   min-height: 68px !important;
   max-height: 200px;
   height:     68px;
+}
+
+form.formtastic fieldset ol li fieldset legend span {
+  color: #7BB031;
+  font-weight: bold;
+  position: absolute;
+}
+
+form.formtastic fieldset ol li.radio fieldset ol li label {
+  color: #21587F;
+}
+
+form.formtastic select {
+  border: 1px solid #999;
+  width: 307px;
+  padding: 2px;
+  color: #21587f;
+}
+
+form.formtastic fieldset.buttons {
+  padding-left: 0px;
+}
+
+form.formtastic fieldset.buttons .commit {
+  width: 150px !important;
+}
+
+form.formtastic .buttons input {
+  width: 150px !important;
+  background: url(../images/page/form_button_150.png) no-repeat scroll left top;
+  border: none;
+  color: #21587F;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 43px;
+  padding: 0 0 4px 20px;
+  text-align: center;
+}
+
+form.formtastic .buttons input:hover {
+  background-position: 0 -43px;
+}
+
+form.formtastic .buttons ol {
+  line-height: 43px;
+  vertical-align: middle;
 }
