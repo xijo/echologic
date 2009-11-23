@@ -3,6 +3,6 @@
 %>
 
 <div id='profile_avatar_container'>
-  <%= image_tag @profile.avatar.url(:profile) %><br/>
+  <%= image_tag @profile.avatar.url(:big) %><br/>
   <%= link_to I18n.t('users.profile.picture.upload_button'), url_for(:controller => 'users/profile', :action => 'upload_picture'), :class => 'ajax upload_link button_150' %>
 </div>

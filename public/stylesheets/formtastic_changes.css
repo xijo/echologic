@@ -22,6 +22,7 @@ form.formtastic fieldset ol li label {
   color: #7bb031;
   font-weight: bold;
   display: block;
+  width: 100%;
 }
 
 form.formtastic fieldset ol li.text textarea, form.formtastic fieldset ol li.string input {

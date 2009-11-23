@@ -51,13 +51,19 @@
   display: inline-block;
 }
 
+.save_button {
+  background:transparent url(../images/page/icons/save_button.png) no-repeat scroll 0 0;
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+}
+
 .or_cancel {
   color: #21587f;
 }
 
 .cancel_button {
   padding-left: 0px;
-  font-weight: bold;
 }
 
 .delete_button {
