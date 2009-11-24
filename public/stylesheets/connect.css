@@ -107,6 +107,7 @@
   margin: 10px 0;
   width: 990px;
   background: #fff url(../images/page/box/blue_white_gradient.png) repeat-x left top;
+  min-height: 195px;
 }
 
 #profiles_container .box_header_icon {
@@ -122,8 +123,8 @@
   font-size: 15px;
   font-weight: bold;
   position: absolute;
-  top: 100px;
-  
+  top: 120px;
+  cursor: default;
 }
 
 #profiles_container ul {
