@@ -269,6 +269,8 @@ en:
       engaged: Engaged
       scientist: Experts
       representative: Decision Makers
+    messages:
+      empty: 'Your search has no result, please change the search criteria.'
 
   # Feedback resources
   feedback:

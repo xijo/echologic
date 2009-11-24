@@ -180,3 +180,9 @@ function error(text) {
   $('#messageContainer #errorBox .message').html(text);
   $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
 }
+
+/* Method to produce a time delayed animation. */
+$.fn.pause = function(duration) {
+  $(this).animate({ dummy: 1 }, duration);
+  return this;
+};

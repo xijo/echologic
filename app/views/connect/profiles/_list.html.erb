@@ -7,7 +7,11 @@
 
   </div>
 
-  <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
+  <% if not @profiles.empty? %>
+    <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
+  <% else %>
+    <%= I18n.t('connect.messages.empty') %>
+  <% end %>
 
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
 

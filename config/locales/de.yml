@@ -276,6 +276,8 @@ de:
       engaged: Engagierte
       scientist: Experten
       representative: Entscheidungsträger
+    messages:
+      empty: 'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie die Kriterien.'
 
   # Feedback resources
   feedback:

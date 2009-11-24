@@ -16,6 +16,6 @@ $('#options').html(options);
 $(".profile").removeClass('active');
 $("#<%= dom_id @profile %>").addClass('active');
 
-$('#profile_details_container:hidden').animate(toggleParams, 300);
+$('#profile_details_container:hidden').animate(toggleParams, 300).pause(300);
 
-$.scrollTo('#profile_details_container');
+$.scrollTo('#profile_details_container', 1000);
