@@ -41,23 +41,24 @@ de:
 
       # discuss: de.seo.title.discuss
       discuss:
-        show: 'echologic - Diskutieren'
+        roadmap: 'echologic - Fahrplan für Diskutieren'
 
       # connect: de.seo.title.connect
       connect:
-        show:    'echologic - Vernetzen'
-        search:  'echologic - Vernetzen'
-        roadmap: 'echologic - Vernetzen'
+        roadmap: 'echologic - Fahrplan für Vernetzen'
+        show:    'echologic - Vernetzen - Community entdecken'
 
       # act: de.seo.title.act
       act:
-        show: 'echologic - Handeln'
+        roadmap: 'echologic - Fahrplan für Handeln'
 
       # my_echo: de.seo.title.my_echo
       my_echo:
-        show: 'echologic - Mein echo'
+        roadmap: 'echologic - Fahrnplan für Mein echo'
         welcome: 'echologic - Welcome'
         profile: 'echologic - Mein Profil'
+        
+      # my_echo: de.seo.title.admin
       admin:
         show: 'echologic - Admin Area'
 

@@ -4,6 +4,8 @@ en:
   # SEO data
   seo:
     title:
+
+      # static: de.seo.title.static
       static:
         echologic:
           show: &html_title 'echologic for echo - The Global Agora (Democracy Rethought)'
@@ -27,6 +29,8 @@ en:
           your_profit:     'echonomy - Social Business with Your-Profit Business Philosophy'
           foundation:      'echonomy - The Echonomy Foundation'
           public_property: 'echonomy - echo as Common Property'
+
+      # users: de.seo.title.users
       users:
         users:
           new: 'Your echo - Join echologic'
@@ -35,18 +39,27 @@ en:
           edit: 'Your echo - Set New Password'
         profile:
           details: 'Your echo - Profile Details'
+
+      # discuss: de.seo.title.discuss
       discuss:
-        show: 'echologic - Discuss'
+        roadmap: 'echologic - Roadmap for Discuss'        
+
+      # connect: de.seo.title.connect
       connect:
-        show:     'echologic - Connect'
-        search:   'echologic - Connect'
-        roadmap:  'echologic - Connect'
+        roadmap:  'echologic - Roadmap for Connect'
+        show:   'echologic - Connect - Explore Community'
+
+      # act: de.seo.title.act
       act:
-        show: 'echologic - Act'
+        roadmap: 'echologic - Roadmap for Act'
+        
+      # my_echo: de.seo.title.my_echo
       my_echo:
-        show: 'echologic - My echo'
+        roadmap: 'echologic - Roadmap for My echo'
         welcome: 'echologic - Welcome'
         profile: 'echologic - My Profile'
+
+      # my_echo: de.seo.title.admin
       admin:
         show: 'echologic - Admin Bereich'
 
