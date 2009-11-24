@@ -1,8 +1,21 @@
-<%=h @profile.full_name %>       <br/>
-<%=h @profile.location %>        <br/>
-<%=h @profile.localized_gender %><br/>
-<%=h @profile.about_me %>        <br/>
-<%=h @profile.motivation %>      <br/>
+<ul>
+
+  <% # Hash with the symbols used for attribute i18n and getting the content of the profile.
+
+  attr_hash = [[:full_name, :full_name],
+                  [:location, :location],
+                  [:gender, :localized_gender],
+                  [:about_me, :about_me],
+                  [:motivation, :motivation] ] %>
+
+  <% attr_hash.each do |label, method| %>
+    <li>
+      <span class="label"><%= Profile.human_attribute_name(label) %></span>
+      <%=h @profile.send(method) %>
+    </li>
+  <% end %>
+
+</ul>
 
 <div>
   <% for membership in @profile.memberships do %>
