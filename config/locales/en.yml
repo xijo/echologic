@@ -216,6 +216,8 @@ en:
         xing:     "Xing"
         linkedin: "LinkedIn"
         twitter:  "Twitter"
+        facebook: "Facebook"
+        other:    "Other"
 
     # Concernments section
     concernments:
