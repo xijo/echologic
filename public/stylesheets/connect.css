@@ -109,38 +109,36 @@
   background: #fff url(../images/page/box/blue_white_gradient.png) repeat-x left top;
 }
 
-#profiles_container .box_icon {
+#profiles_container .box_header_icon {
   background: url(../images/page/box/box_icon_people.png) repeat-x left top;
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  left: 5px;
-  top: 6px;
 }
 
-#profiles_container .box_header {
-  position: absolute;
-  left: 50px;
-  top: 11px;
-  font-size: 16px;
+#profiles_container .no_results {
+  display: block;
+  width: 990px;
+  margin: 0 auto;
+  text-align: center;
+  color: #7bb031;
+  font-size: 15px;
   font-weight: bold;
-  color: #21587f;
+  position: absolute;
+  top: 100px;
+  
 }
 
 #profiles_container ul {
   margin: 0px;
   padding: 0px;
-  min-height: 210px;
+  min-height: 155px;
 }
 
 #profiles_container .profile {
   float:    left;
-  width:    285px;
+  width:    267px;
   height:   55px;
   list-style: none;
   display:  block;
-  margin: 6px 21px;
-  border: 1px solid #f00;
+  margin: 11px 30px;
 }
 
 #profiles_container .profile img {

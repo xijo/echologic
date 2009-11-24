@@ -3,7 +3,7 @@
   <% if not @profiles.empty? %>
     <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
   <% else %>
-    <%= I18n.t('connect.messages.empty') %>
+    <span class="no_results"><%= I18n.t('connect.messages.empty') %></span>
   <% end %>
 </ul>
 

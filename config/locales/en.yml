@@ -280,7 +280,7 @@ en:
         concernments: 'Competences'
         web_profiles: 'Web Addresses'
     messages:
-      empty:           'No users found. Please change your search criteria.'
+      empty:           'No members found. Please change your search criteria.'
       no_concernments: "This member doesn't have any concernments or competences, yet."
 
   # Feedback resources

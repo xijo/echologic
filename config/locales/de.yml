@@ -287,7 +287,7 @@ de:
         concernments: 'Kompetenzen'
         web_profiles: 'Web Adressen'
     messages:
-      empty:           'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie Ihre Angaben.'
+      empty:           'Ihre Suche hatte keine Ergebnisse. Bitte verändern Sie Ihre Angaben.'
       no_concernments: 'Das Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
 
   # Feedback resources

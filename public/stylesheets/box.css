@@ -8,7 +8,7 @@
 }
 
 .rounded-box b.cn { 
-  height: 14px;
+  height: 16px;
   width: 16px;
   position:absolute;
   background-repeat: no-repeat;
@@ -95,3 +95,35 @@
 .rounded-box-gray-itow b.t { left: 0px; top: -4px; background-position: top; }
 .rounded-box-gray-itow b.b { left: 0px; bottom: -4px; background-position: bottom; }
 
+
+/* HEADER */
+
+.with-header {
+  position: relative;
+}
+
+.with-header .box_header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #21587f;
+  position: absolute;
+  left: 50px;
+  top: 9px;
+}
+
+.with-header .box_header_border {
+  background: url(../images/page/box/header_border.png) repeat-x left bottom;
+  height: 2px;
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  right: 0px;
+}
+
+.with-header .box_header_icon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+}
