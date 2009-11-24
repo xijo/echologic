@@ -1,0 +1,28 @@
+<div id="results_container">
+
+  <%= tabnav :connect_segments %>
+
+  <%= I18n.t('connect.found')%> <%= @profiles.total_entries if defined? @profiles.total_entries %>
+
+  <%= render :partial => 'connect/profiles/list' %>
+
+  <%= will_paginate @profiles if defined? @profiles.total_pages %>
+
+</div>
+
+<script type="text/javascript">
+  $(".pagination a").addClass('ajax');
+
+  $(".ajax_sort").live("click", function() {
+    var sort = $(this).attr('value');
+    $(':input[id=sort]').val(sort);
+    $('#search_form').submit();
+    return false;
+  });
+
+  $(".ajax_no_sort").live("click", function() {
+    $(':input[id=sort]').val('');
+    $('#search_form').submit();
+    return false;
+  });
+</script>

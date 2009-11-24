@@ -1,35 +1,46 @@
+<%# Renders the profile details for the given profile. Will only be used in the non-ajax case.
+%>
+
 <% @profile = profile if defined?(profile) %>
 
-<div id="profile_header_block" style="clear:both; overflow:auto;">
+<div id="profile_details_container" style="<%= 'display:none' if (defined?(hidden) and hidden) %>">
   <ul>
-    <li id="full_name" style="color:#7AB031;"><%=h @profile.full_name %></li>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#concernments">Concernments</a></li>
-    <li><a href="#web_profiles">Web Profiles</a></li>
-    <%= link_to I18n.t('application.general.close'), connect_path, :onclick => "$('#profile_details_container').animate(toggleParams, 300); $('.profile').removeClass('active'); return false;", :class => 'close_link' %>
+    <li id="full_name"><%=h @profile.full_name %></li>
+
+    <li><a href="#overview"><%= I18n.t('connect.details.tabs.overview') %></a></li>
+    <li><a href="#concernments"><%= I18n.t('connect.details.tabs.concernments') %></a></li>
+    <li><a href="#web_profiles"><%= I18n.t('connect.details.tabs.web_profiles') %></a></li>
+
+    <%= link_to I18n.t('application.general.close'), connect_path,
+        :id => 'close_profile_details_container',
+        :class => 'close_link',
+        :onclick => "$('.profile').removeClass('active');
+                     $.scrollTo('top', 1000, { onAfter:function(){
+                       $('#profile_details_container').animate(toggleParams, 300);
+                     }});
+                     return false;"
+    %>
   </ul>
 
-  <div id="avatar" style="float:left; max-width:100px;">
+  <div id="avatar">
     <%= render :partial => 'connect/profiles/avatar' %>
   </div>
 
-  <div id="overview" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+  <div id="overview" class="tab_content_container">
     <%= render :partial => 'connect/profiles/overview' %>
   </div>
 
-  <div id="concernments" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
-    <%= render :partial => 'connect/profiles/concernments' %>
+  <div id="concernments" class="tab_content_container">
+    <%= render :partial => 'connect/profiles/concernments' unless @profile.concernments.blank? %>
   </div>
 
-  <div id="web_profiles" style="float:left; max-width:300px; -moz-border-radius:5px; border:1px solid #999;">
+  <div id="web_profiles" class="tab_content_container">
     <%= render :partial => 'connect/profiles/web_profiles' %>
   </div>
 
-  <div id="options" style="float:right; max-width:100px;">
+  <div id="options">
     <%= render :partial => 'connect/profiles/options' %>
   </div>
-
-
 
   <script type="text/javascript">
     $('#profile_details_container').tabs();

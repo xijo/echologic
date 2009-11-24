@@ -1,6 +1,6 @@
 
-var content = "<%= escape_javascript(render(:partial => 'connect/profiles/list')) %>";
+var content = "<%= escape_javascript(render(:partial => 'connect/profiles/results')) %>";
 
-$("#profile_container").replaceWith(content);
+$("#results_container").replaceWith(content);
 
 $("#profile_details_container:visible").animate(toggleParams, 300);
