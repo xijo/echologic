@@ -36,6 +36,10 @@ module StatementHelper
     link_to("Create a new #{type_display_name}", new_child_statement_url(parent, type), :id => "create_#{type.underscore}_link")
   end
   
+  def create_question_link_for(category)
+    link_to("Create a new Question", new_question_url(:category => category.value))
+  end
+  
   def new_child_statement_url(parent, type)
     case type.to_s
     when 'Question'

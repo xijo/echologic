@@ -12,6 +12,8 @@ class StatementsController < ApplicationController
   
   before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
   
+  before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
+  
   include StatementHelper
   
   # nested resource magic happens here.
@@ -19,7 +21,8 @@ class StatementsController < ApplicationController
   # logic towards the subclassed controllers
   
   def index
-    @statements = statement_class.all
+    @statements = @category.statements.find_all_by_type(statement_class.to_s)
+    render :template => 'questions/index'
   end
   
   def show
@@ -42,7 +45,7 @@ class StatementsController < ApplicationController
       }
     end
   end
-
+  
   def echo
     current_user.supported!(@statement)
     render :update do |page|
@@ -58,7 +61,7 @@ class StatementsController < ApplicationController
   end
   
   def new
-    @statement ||= statement_class.new :parent => parent
+    @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
     respond_to do |format|
       format.html { }
       format.js { 
@@ -104,6 +107,14 @@ class StatementsController < ApplicationController
     @statement = statement_class.find(params[:id])
   end
   
+  # TODO: this needs to be cleaned up
+  def fetch_category
+    @category = @statement.category if @statement
+    @category ||= parent.category if parent
+    @category ||= Tag.find_by_value(params[:id]) if params[:id] && params[:id].to_i == 0
+    @category ||= Tag.find_by_value(params[:category]) if params[:category]
+  end
+    
   def statement_class
     params[:controller].singularize.camelize.constantize
   end

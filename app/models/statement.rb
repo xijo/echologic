@@ -11,6 +11,8 @@ class Statement < ActiveRecord::Base
 
   belongs_to :root_statement, :foreign_key => "root_id", :class_name => "Statement"
   acts_as_tree :scope => :root_statement
+  
+  belongs_to :category, :class_name => "Tag"
 
   # not yet implemented
   
@@ -51,6 +53,7 @@ class Statement < ActiveRecord::Base
   validates_presence_of :creator
   validates_associated :document
   validates_presence_of :document
+  validates_presence_of :category
   
   class << self
     def valid_parents

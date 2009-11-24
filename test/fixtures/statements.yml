@@ -4,6 +4,7 @@ test-question:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 first-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -13,6 +14,7 @@ first-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 second-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -22,6 +24,7 @@ second-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 third-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -31,6 +34,7 @@ third-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category: <%= Fixtures.identify(:'echonomy-jam') %>
 
 third-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -40,6 +44,7 @@ third-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 fourth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -49,6 +54,7 @@ fourth-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 fifth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -58,6 +64,7 @@ fifth-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 sixth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
@@ -67,6 +74,7 @@ sixth-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:editor) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 first-impro-proposal:
   parent_id: <%= Fixtures.identify(:'first-proposal') %>
@@ -76,3 +84,4 @@ first-impro-proposal:
   activated: true
   creator_id: <%= Fixtures.identify(:ben) %>
   published: true
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
