@@ -40,9 +40,10 @@ Feature: Discuss
     When I go to create a question
       And I fill in the following:
         | text | Blablabla bla bla bla |
-      And I press the "Save" button-activate
+      And I press the "Save" button
     # Todo: Maybe we should check the content of the error box as well
-    Then I should see an error message
+    Then there should be no questions
+      And I should see an error message
   
   Scenario: Add an Improvement Proposal to a Proposal
     Given I am logged in as "user" with password "true"
@@ -76,8 +77,9 @@ Feature: Discuss
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |
     And I press the "Save" button
-    Then I should see a "permission denied" error message
-      And there should be no questions
+    Then there should be no questions
+      And I should see a "permission denied" error message
+      
 
   Scenario: Add a proposal to a question as a user (from ui)
     Given I am logged in as "user" with password "true"

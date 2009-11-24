@@ -37,17 +37,20 @@ When /^I follow the create improvement proposal link$/ do
 end
 
 Then /^the question should have one proposal$/ do
+  @question.reload
   @question.children.proposals.count.should >= 1
 end
 
 # Is it okay to give a condition in a 'Given' step?
 Given /^the question has at least on proposal$/ do
+  @question.reload
   @question.children.proposals.count.should >= 1
   @proposal = @question.children.proposals.first
 end
 
 Then /^the proposal should have one improvementproposal$/ do
-  @proposal.children.improvement_proposals.should >= 1
+  @proposal.reload
+  @proposal.children.improvement_proposals.count.should >= 1
 end
 
 Then /^I should not see the create proposal link$/ do

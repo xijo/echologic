@@ -16,7 +16,7 @@ class ConnectController < ApplicationController
       end
     end
 
-    @profiles = @profiles.paginate(:page => @page, :per_page => 3)
+    @profiles = @profiles.paginate(:page => @page, :per_page => 6)
 
     respond_to do |format|
       format.html { render :template => 'connect/search' }
