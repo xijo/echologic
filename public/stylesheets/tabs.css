@@ -113,10 +113,9 @@
 }
 
 #roadmap_tab_container {
-  float: right;
-  position: relative;
+  position: absolute;
   right: 10px;
-  margin-left: -300px;
+  top: 0px;
 }
 
 #roadmap_tab {
