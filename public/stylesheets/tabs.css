@@ -14,8 +14,8 @@
 */
 
 .tabContainer {
-  margin:       0 auto 7px auto;
-  padding-top:  5px;
+  margin:       0 auto;
+  padding-top:  1px;
   overflow:     visible;
   position:     relative;
   clear:        both;
@@ -50,7 +50,7 @@
 }
 
 .applicationTabs ul {
-  margin-bottom: 7px;
+  margin: 4px 0 7px;
   padding: 0px;
 }
 
@@ -113,10 +113,9 @@
 }
 
 #roadmap_tab_container {
-  float: right;
-  position: relative;
+  position: absolute;
   right: 10px;
-  margin-left: -300px;
+  top: 0px;
 }
 
 #roadmap_tab {

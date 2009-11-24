@@ -199,6 +199,7 @@
   z-index:      1;
   text-align:   center;
   background:   url(../images/page/separator_no_shadow.png) no-repeat bottom;
+  position: relative;
 }
 
 .submenu ul {
