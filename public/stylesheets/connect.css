@@ -6,13 +6,15 @@
       Design screen elements for connect section.
 */
 
+/* SEARCH */
+
 #search_container {
   margin:   0 auto;
   width:    400px;
 }
 
 #search_form {
-  margin: 20px 0 10px;
+  margin: 20px 0 2px;
   padding: 0;
   text-align: center;
 }
@@ -42,31 +44,91 @@
   background-position: 0 -29px;
 }
 
-#profile_container {
-  padding: 0;
+
+/* SEGMENTS */
+
+.segments {
+  margin: 0 auto;
+  width: 990px;
+  color: #21587f;
+  margin-bottom: 20px;
+  z-index: 1;
+  text-align: center;
+  position: relative;
 }
 
-.pagination {
-  clear:    both;
-  margin:   0 auto;
-  max-width:300px;
+.segments ul {
+  margin: 0px;
+  padding: 0px;
 }
 
-/* Styling for profiles in the profile container at the connect area. */
+.segments li {
+  display: inline;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+.segments a {
+  color: #21587f;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.segments a:hover, .segments a.active, .segments a.active:hover {
+  color: #7bb031;
+}
+
+
+/* RESULTS */
+
+.results_count {
+  color: #7bb031;
+  font-size: 14px;
+  font-weight: bold;
+  width: 990px;
+  background: url(../images/page/separator_with_shadow.png) no-repeat bottom;
+  display: inline-block;
+  padding-bottom: 7px;
+  margin-bottom: 17px;
+}
+
+/* PROFILES */
+
+#profiles_container {
+  padding: 15px 3px 0;
+  margin: 20px 0;
+  width: 990px;
+}
+
+#profiles_container ul {
+  margin: 0px;
+  padding: 0px;
+  min-height: 210px;
+}
+
 #profiles_container .profile {
   float:    left;
-  width:    300px;
-  height:   70px;
+  width:    285px;
+  height:   55px;
   list-style: none;
   display:  block;
+  margin: 6px 21px;
+  border: 1px solid #f00;
+}
+
+#profiles_container .profile img {
+  max-height: 45px;
+  max-width: 45px;
 }
 
 #profiles_container .profile .show_link {
   float:    left;
 }
 
-
-/* Profile details container styling. */
+/* PROFILE DETAILS. */
 
 #profile_details_container {
   clear:both;

@@ -16,7 +16,7 @@ class ConnectController < ApplicationController
       end
     end
 
-    @profiles = @profiles.paginate(:page => @page, :per_page => 6)
+    @profiles = @profiles.paginate(:page => @page, :per_page => 9)
 
     respond_to do |format|
       format.html { render :template => 'connect/search' }
@@ -63,7 +63,7 @@ class ConnectController < ApplicationController
       order by p.first_name asc;
     END
 
-    profiles = Profile.find_by_sql(query)#.paginate(:page => params[:page], :per_page => 6)
+    profiles = Profile.find_by_sql(query)
 
   end
 

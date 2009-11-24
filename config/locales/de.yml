@@ -272,21 +272,23 @@ de:
   # ---------------
 
   connect:
-    found: 'Ergebnisse: '
     segments:
       all: Alle
       affected:  'Betroffene'
       engaged:   'Engagierte'
-      scientist: 'Experten'
-      representative: 'Entscheidungsträger'
+      scientist: 'ExpertInnen'
+      representative: 'EntscheidungsträgerInnen'
+    results_count:
+      one: '{{count}} BewegerIn'
+      more: '{{count}} BewegerInnen'
     details:
       tabs:
         overview:     'Überblick'
-        concernments: 'Betroffenheiten und Kompetenzen'
-        web_profiles: 'Kontakt und Profile'
+        concernments: 'Kompetenzen'
+        web_profiles: 'Web Adressen'
     messages:
-      empty:           'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie die Kriterien.'
-      no_concernments: 'Der Benutzer hat keine Betroffenheiten und Kompetenzen eingetragen.'
+      empty:           'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie Ihre Angaben.'
+      no_concernments: 'Das Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
 
   # Feedback resources
   feedback:

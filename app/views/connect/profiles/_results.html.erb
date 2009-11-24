@@ -2,11 +2,17 @@
 
   <%= tabnav :connect_segments %>
 
-  <%= I18n.t('connect.found')%> <%= @profiles.total_entries if defined? @profiles.total_entries %>
+  <% count = @profiles.total_entries %>
+  <% if count < 2 %>
+    <span class="results_count"><%= I18n.t('connect.results_count.one', :count => count) %></span>
+  <% else %>
+    <span class="results_count"><%= I18n.t('connect.results_count.more', :count => count) %></span>
+  <% end %>
 
-  <%= render :partial => 'connect/profiles/list' %>
-
-  <%= will_paginate @profiles if defined? @profiles.total_pages %>
+  <div id="profiles_container" class="rounded-box rounded-box-green-iwot">
+    <%= render :partial => 'connect/profiles/list' %>
+    <%= will_paginate @profiles , :previous_label => '', :next_label => '' if defined? @profiles.total_pages %>
+  </div>
 
 </div>
 
