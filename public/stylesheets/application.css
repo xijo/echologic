@@ -108,19 +108,27 @@
 }
 
 .pagination .prev_page {
-  background:  url(../images/page/small_prev_button.png) no-repeat scroll 0 0;
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll left top;
 }
 
 .pagination .next_page {
-  background:  url(../images/page/small_next_button.png) no-repeat scroll 0 0;
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll right top;
 }
 
-.pagination .prev_page:hover, .pagination .next_page:hover {
+.pagination .prev_page:hover {
   background-position: 0 -39px;
 }
 
-.pagination .disabled {
+.pagination .next_page:hover {
+  background-position: -37px -39px;
+}
+
+.pagination .prev_page.disabled {
   background-position: 0 -78px !important;
+}
+
+.pagination .next_page.disabled {
+  background-position: -37px -78px !important;
 }
 
 
