@@ -109,6 +109,7 @@
   position: absolute;
   left: 50px;
   top: 9px;
+  cursor: default;
 }
 
 .with-header .box_header_border {
