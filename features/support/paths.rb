@@ -17,7 +17,7 @@ module NavigationHelpers
     when /the connect page/
       '/connect/profiles'
     when /^create a question$/
-      new_question_path
+      new_question_path(:category => 'EchonomyJAM')
     when /^the question$/
       question_path(@question)
     when /^the first question$/

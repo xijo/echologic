@@ -10,30 +10,6 @@ Then /^there should be one question$/ do
   Question.count.should == 1
 end
 
-
-## THESE WON'T WORK. DON'T USE THEM. (and don't panic)
-
-#When /^I post some valid proposal data$/ do
-#  When 'I post some valid question data'
-#end
-
-#When /^I post some valid improvement proposal data$/ do
-#  When 'I post some valid proposal data'
-#end
-
-#When /^I post some valid question data$/ do
-#  When  "I fill in the following:
-#        | Question title  | Is this a Question?     |
-#        | Question text   | Blablabla bla bla bla   |"
-#  When "I press the \"Save\" button"
-#end
-
-#When /^I post some invalid question data$/i do
-#   When  "I fill in the following:
-#        | Question text   | Blablabla bla bla bla   |"
-#   When "I press the \"Save\" button"
-#end
-
 Then /^I should see an error message$/i do
   Then "I should see a \"error box\""
 end

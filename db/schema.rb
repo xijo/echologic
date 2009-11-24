@@ -101,15 +101,6 @@ ActiveRecord::Schema.define(:version => 20091124134642) do
     t.datetime "updated_at"
   end
 
-  create_table "statement_categories", :force => true do |t|
-    t.integer  "statement_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "statement_categories", ["statement_id"], :name => "index_statement_categories_on_statement_id"
-
   create_table "statement_documents", :force => true do |t|
     t.string  "title"
     t.text    "text"
@@ -126,7 +117,6 @@ ActiveRecord::Schema.define(:version => 20091124134642) do
     t.integer "work_package_id"
     t.boolean "published"
     t.integer "echo_id"
-    t.integer "statement_category_id"
     t.integer "category_id"
   end
 

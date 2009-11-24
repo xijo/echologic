@@ -40,6 +40,7 @@ Feature: Discuss
     When I go to create a question
       And I fill in the following:
         | text | Blablabla bla bla bla |
+      And I press the "Save" button-activate
     # Todo: Maybe we should check the content of the error box as well
     Then I should see an error message
   
@@ -53,7 +54,8 @@ Feature: Discuss
       And I fill in the following:
         | title | Improving the unimprovable                                    |
         | text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
-    Then I should see a "Improving eh unimprovable"
+      And I press the "Save" button
+    Then I should see "Improving the unimprovable"
       And I should see "blubb"
       And the proposal should have one improvementproposal
 
