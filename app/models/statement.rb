@@ -36,7 +36,12 @@ class Statement < ActiveRecord::Base
     { :conditions => { :type => 'ProArgument' } } }
   named_scope :contra_arguments, lambda { 
     { :conditions => { :type => 'ContraArgument' } } }
+ 
+  # orders
   
+  named_scope :by_ratio, :joins => :echo, :order => '(echos.supporter_count/echos.visitor_count) DESC'
+  
+  named_scope :by_supporters, :joins => :echo, :order => 'echos.supporter_count DESC'
   
   ##
   ## VALIDATIONS
@@ -126,4 +131,13 @@ class Statement < ActiveRecord::Base
     end
     chain
   end
+  
+  
+  # magically allows Proposal.first.question? et al.
+  #
+  # OPTIMIZE: make this shorter!
+  def method_missing(sym, *args) 
+   sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
+  end
+  
 end

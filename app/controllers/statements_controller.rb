@@ -29,10 +29,26 @@ class StatementsController < ApplicationController
   def show
     #current_user.visited!(@statement)
     @page = params[:page] || 1
-    @statements = @statement.children.paginate(:page => @page, :per_page => 3)
+    @statements = @statement.children.by_ratio.paginate(:page => @page, :per_page => 3)
     respond_to do |format|
+<<<<<<< HEAD:app/controllers/statements_controller.rb
       format.html { render :template => 'statements/show' } # show.html.erb
       format.js   { render :template => 'statements/show' } # show.js.erb
+=======
+      format.html {}
+      format.js {
+        render :update do |page|
+          page.replace_html 'children_list', :partial => 'statements/children_list'
+          page.replace_html 'context', :partial => 'statements/context'
+          page.replace_html 'summary', :partial => 'statements/summary'
+          page.replace_html 'sidebar', :partial => 'statements/sidebar'
+          # TODO: i manually show (and empty) the notice here, because it does not load automatically via ajax
+          # -> check for a better solution
+          page << "info('#{flash[:notice]}');"
+          flash[:notice]=nil
+        end
+      }
+>>>>>>> andibs/2009-11-16_Release_0.4_Discuss:app/controllers/statements_controller.rb
     end
   end
 
@@ -40,9 +56,14 @@ class StatementsController < ApplicationController
   # echo object.
   def echo
     current_user.supported!(@statement)
+<<<<<<< HEAD:app/controllers/statements_controller.rb
     respond_to do |format|
       format.html { redirect_to @statement }
       format.js   { replace_container('echo_button', echo_button) }
+=======
+    render :update do |page|
+      page.replace('echo_button', echo_button(@statement))
+>>>>>>> andibs/2009-11-16_Release_0.4_Discuss:app/controllers/statements_controller.rb
     end
   end
 
@@ -50,9 +71,14 @@ class StatementsController < ApplicationController
   # of the corresponding echo object to false.
   def unecho
     current_user.echo!(@statement, :supported => false)
+<<<<<<< HEAD:app/controllers/statements_controller.rb
     respond_to do |format|
       format.html { redirect_to @statement }
       format.js   { replace_container('echo_button', echo_button) }
+=======
+    render :update do |page|
+      page.replace('echo_button', echo_button(@statement))
+>>>>>>> andibs/2009-11-16_Release_0.4_Discuss:app/controllers/statements_controller.rb
     end
   end
 

@@ -443,6 +443,10 @@ de:
       must_be_logged_in:  "Sie müssen eingeloggt sein, um diese Seite zu sehen."
       must_be_logged_out: "Sie müssen ausgeloggt sein, um diese Seite zu sehen."
 
+  discuss:
+    statement:
+      ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
+
     attributes:
       user_session:
         email: E-Mail
