@@ -9,10 +9,9 @@
   <% end %>
 </div>
 
-<div id="connect_container">
-  <%= render :partial => 'connect/profiles/list' %>
-  <%= render :partial => 'connect/profiles/empty' %>
-</div>
+<%= render :partial => 'connect/profiles/results' %>
+
+<%= render :partial => 'connect/profiles/empty' %>
 
 <script type="text/javascript">
   $('#search_form').ajaxForm({ dataType : 'script' });

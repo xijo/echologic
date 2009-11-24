@@ -270,6 +270,7 @@ de:
   # ---------------
 
   connect:
+    found: 'Ergebnisse: '
     segments:
       all: Alle
       affected: Betroffene

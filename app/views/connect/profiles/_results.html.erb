@@ -1,21 +1,20 @@
-<ul id="profile_container">
+<div id="results_container">
 
-  <div>
-    <%= tabnav :connect_segments %>
+  <%= tabnav :connect_segments %>
 
-    Found: <%= @profiles.total_entries if defined? @profiles.total_entries %>
+  <%= I18n.t('connect.found')%> <%= @profiles.total_entries if defined? @profiles.total_entries %>
 
-  </div>
-
-  <% if not @profiles.empty? %>
-    <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
-  <% else %>
-    <%= I18n.t('connect.messages.empty') %>
-  <% end %>
+  <ul id="profiles_container">
+    <% if not @profiles.empty? %>
+      <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
+    <% else %>
+      <%= I18n.t('connect.messages.empty') %>
+    <% end %>
+  </ul>
 
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
 
-</ul>
+</div>
 
 <script type="text/javascript">
   $(".pagination a").addClass('ajax');

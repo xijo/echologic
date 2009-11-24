@@ -156,16 +156,3 @@
   padding: 2px;
   width: 195px;
 }
-
-/* Styling for profiles in the profile container at the connect area. */
-#profile_container .profile {
-  float:    left;
-  width:    300px;
-  height:   70px;
-  list-style: none;
-  display:  block;
-}
-
-#profile_container .profile .show_link {
-  float:    left;
-}

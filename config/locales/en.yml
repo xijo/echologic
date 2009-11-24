@@ -263,6 +263,7 @@ en:
   # ---------------
 
   connect:
+    found: 'Results: '
     segments:
       all: All
       affected: Affected

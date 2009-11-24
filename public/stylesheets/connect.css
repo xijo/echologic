@@ -51,3 +51,16 @@
   margin:   0 auto;
   max-width:300px;
 }
+
+/* Styling for profiles in the profile container at the connect area. */
+#profiles_container .profile {
+  float:    left;
+  width:    300px;
+  height:   70px;
+  list-style: none;
+  display:  block;
+}
+
+#profiles_container .profile .show_link {
+  float:    left;
+}
