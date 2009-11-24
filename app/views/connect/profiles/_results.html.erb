@@ -2,14 +2,22 @@
 
   <%= tabnav :connect_segments %>
 
-  <% count = @profiles.total_entries %>
-  <% if count < 2 %>
-    <span class="results_count"><%= I18n.t('connect.results_count.one', :count => count) %></span>
-  <% else %>
-    <span class="results_count"><%= I18n.t('connect.results_count.more', :count => count) %></span>
-  <% end %>
+  <%
+    count = @profiles.total_entries
+    if count < 2
+      count_text = I18n.t('connect.results_count.one', :count => count)
+    else
+      count_text = I18n.t('connect.results_count.more', :count => count)
+    end
+  %>
 
-  <div id="profiles_container" class="rounded-box rounded-box-green-iwot">
+  <!--<span class="results_count"><%- count_text %></span>-->
+  <!--<span class="results_sort"/>-->
+
+  <div id="profiles_container" class="rounded-box rounded-box-gray-itow">
+    <span class="box_icon"></span>
+    <span class="box_header"><%= count_text %></span>
+
     <%= render :partial => 'connect/profiles/list' %>
     <%= will_paginate @profiles , :previous_label => '', :next_label => '' if defined? @profiles.total_pages %>
   </div>

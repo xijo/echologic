@@ -9,8 +9,8 @@
 /* SEARCH */
 
 #search_container {
-  margin:   0 auto;
-  width:    400px;
+  margin:   25px auto 0;
+  width:    500px;
 }
 
 #search_form {
@@ -21,7 +21,7 @@
 
 #search_form #value {
   background: #FFF url(../images/page/searchbar_left.png) no-repeat scroll left top;
-  width: 270px;
+  width: 365px;
   height: 29px;
   border: none;
   display: inline-block;
@@ -51,7 +51,7 @@
   margin: 0 auto;
   width: 990px;
   color: #21587f;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   z-index: 1;
   text-align: center;
   position: relative;
@@ -66,7 +66,7 @@
   display: inline;
   overflow: hidden;
   list-style-type: none;
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 .segments a {
@@ -84,23 +84,47 @@
 
 /* RESULTS */
 
+.results_sort {
+  width: 990px;
+  background: url(../images/page/separator_no_shadow.png) no-repeat bottom;
+  display: inline-block;
+  padding-bottom: 7px;
+  margin: 0 0 17px 0px;
+  position: relative;
+}
+
 .results_count {
   color: #7bb031;
   font-size: 14px;
   font-weight: bold;
-  width: 990px;
-  background: url(../images/page/separator_with_shadow.png) no-repeat bottom;
-  display: inline-block;
-  padding-bottom: 7px;
-  margin-bottom: 17px;
+  margin-left: 20px;
 }
 
 /* PROFILES */
 
 #profiles_container {
-  padding: 15px 3px 0;
-  margin: 20px 0;
+  padding: 45px 0 5px;
+  margin: 10px 0;
   width: 990px;
+  background: #fff url(../images/page/box/blue_white_gradient.png) repeat-x left top;
+}
+
+#profiles_container .box_icon {
+  background: url(../images/page/box/box_icon_people.png) repeat-x left top;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+#profiles_container .box_header {
+  position: absolute;
+  left: 50px;
+  top: 11px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #21587f;
 }
 
 #profiles_container ul {
@@ -125,14 +149,13 @@
 }
 
 #profiles_container .profile .show_link {
-  float:    left;
+  float: left;
 }
 
 /* PROFILE DETAILS. */
 
 #profile_details_container {
-  clear:both;
-  overflow:auto;
+  clear: both;
 }
 
 #profile_details_container #full_name {
@@ -142,7 +165,7 @@
 
 #profile_details_container #avatar {
   float:left;
-  max-width:100px;
+  width: 128px;
 }
 
 #profile_details_container .tab_content_container {
