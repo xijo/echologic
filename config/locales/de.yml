@@ -273,12 +273,18 @@ de:
     found: 'Ergebnisse: '
     segments:
       all: Alle
-      affected: Betroffene
-      engaged: Engagierte
-      scientist: Experten
-      representative: Entscheidungsträger
+      affected:  'Betroffene'
+      engaged:   'Engagierte'
+      scientist: 'Experten'
+      representative: 'Entscheidungsträger'
+    details:
+      tabs:
+        overview:     'Überblick'
+        concernments: 'Betroffenheiten und Kompetenzen'
+        web_profiles: 'Kontakt und Profile'
     messages:
-      empty: 'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie die Kriterien.'
+      empty:           'Ihre Suche hatte keine Ergebnisse, bitte verändern Sie die Kriterien.'
+      no_concernments: 'Der Benutzer hat keine Betroffenheiten und Kompetenzen eingetragen.'
 
   # Feedback resources
   feedback:

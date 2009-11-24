@@ -1,16 +1,16 @@
+<%# Show the concernments of this user. %>
+
 <% Concernment.sorts.each do |sort, name| %>
 
   <% concernments = @profile.concernments.find_all_by_sort(sort) %>
   <% unless concernments.empty? %>
     <h2><%= I18n.t("users.concernments.sorts.#{name}") %></h2>
     <div id="concernments_<%= sort %>" style="clear: both;">
-      <% for concernment in concernments do %>
-        <span id="<% dom_id concernment %>"><%=h concernment.tag.value %></span>
-      <% end %>
+      <%= concernments.collect { |c| c.tag.value }.join(', ') %>
     </div>
   <% end %>
 <% end %>
 
 <% if @profile.concernments.empty? %>
-  text: Der Benutzer hat keine Kompetenz(?) eingetragen.
+  <%= I18n.t('connect.messages.no_concernments') %>
 <% end%>

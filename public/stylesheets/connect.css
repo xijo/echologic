@@ -64,3 +64,33 @@
 #profiles_container .profile .show_link {
   float:    left;
 }
+
+
+/* Profile details container styling. */
+
+#profile_details_container {
+  clear:both;
+  overflow:auto;
+}
+
+#profile_details_container #full_name {
+  color:#7AB031;
+  width:150px;
+}
+
+#profile_details_container #avatar {
+  float:left;
+  max-width:100px;
+}
+
+#profile_details_container .tab_content_container {
+  float:left;
+  max-width:300px;
+  -moz-border-radius:5px;
+  border:1px solid #999;
+}
+
+#profile_details_container #options {
+  float:right;
+  max-width:100px;
+}

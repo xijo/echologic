@@ -265,13 +265,19 @@ en:
   connect:
     found: 'Results: '
     segments:
-      all: All
-      affected: Affected
-      engaged: Engaged
-      scientist: Experts
-      representative: Decision Makers
+      all:       'All'
+      affected:  'Affected'
+      engaged:   'Engaged'
+      scientist: 'Experts'
+      representative: 'Decision Makers'
+    details:
+      tabs:
+        overview:     'Overview'
+        concernments: 'Concernments & Competences'
+        web_profiles: 'Web Profiles'
     messages:
-      empty: 'Your search has no result, please change the search criteria.'
+      empty:           'Your search has no result, please change the search criteria.'
+      no_concernments: "This user doesn't have any concernments or competences, yet."
 
   # Feedback resources
   feedback:

@@ -4,13 +4,7 @@
 
   <%= I18n.t('connect.found')%> <%= @profiles.total_entries if defined? @profiles.total_entries %>
 
-  <ul id="profiles_container">
-    <% if not @profiles.empty? %>
-      <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
-    <% else %>
-      <%= I18n.t('connect.messages.empty') %>
-    <% end %>
-  </ul>
+  <%= render :partial => 'connect/profiles/list' %>
 
   <%= will_paginate @profiles if defined? @profiles.total_pages %>
 

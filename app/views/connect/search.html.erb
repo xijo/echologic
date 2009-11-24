@@ -11,7 +11,7 @@
 
 <%= render :partial => 'connect/profiles/results' %>
 
-<%= render :partial => 'connect/profiles/empty' %>
+<%= render :partial => 'connect/profiles/details', :locals => {:profile => Profile.new, :hidden => true} %>
 
 <script type="text/javascript">
   $('#search_form').ajaxForm({ dataType : 'script' });
