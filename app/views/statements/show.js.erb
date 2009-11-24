@@ -3,7 +3,9 @@
 var children = "<%= escape_javascript(render :partial => 'statements/children_list') %>";
 var summary  = "<%= escape_javascript(render :partial => 'statements/summary') %>";
 var context  = "<%= escape_javascript(render :partial => 'statements/context') %>";
+var sidebar  = "<%= escape_javascript(render :partial => 'statements/sidebar') %>";
 
 $('#children_list').replaceWith(children);
 $('#summary').replaceWith(summary);
 $('#context').replaceWith(context);
+$('#sidebar').replaceWith(sidebar);
