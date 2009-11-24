@@ -162,7 +162,7 @@ de:
         Bitte tragen Sie <strong>Ihr neues Passwort</strong> ein, mit dem Sie sich in echologic einloggen möchten.
       step2_ok: Passwort setzen und einloggen
       messages:
-        success:        'Wir haben Ihnen eine E-Mail für die Zurücksetzung Ihres Passworts geschickt. Bitte prüfen Sie Ihren Posteingang.'
+        success:        'Wir haben Ihnen eine E-Mail für die Zurücksetzung Ihres Passworts zugesandt. Bitte prüfen Sie Ihren Posteingang.'
         not_found:      'Die angegebene E-Mail Adresse wurde nicht gefunden.'
         reset_success:  'Ihr neues Passwort wurde erfolgreich gespeichert.'
         reset_failed:   'Ihr Passwort konnte leider nicht geändert werden. Bitte überprüfen Sie Ihre Eingaben.'
@@ -171,7 +171,7 @@ de:
     profile:
       title: Persönliche Informationen
       edit_title: Persönliche Informationen bearbeiten
-      guide: Ihre persönlichen Informationen werden hier angezeigt. Sie können sie verändern indem Sie dem 'Editieren' link folgen.
+      guide: Hier sehen Sie Ihre persönlichen Informationen. Via "Editieren" können Sie Veränderungen vornehmen.
 
       gender:
         male: Männlich
@@ -189,7 +189,7 @@ de:
 
       upload_picture:
         title: Profilbild hochladen
-        guide: Bitte <strong>wählen Sie ein Bild</strong> (JPG oder PNG, max. 1MB) aus und drücken Sie auf den 'Hochladen' Knopf.
+        guide: Bitte <strong>Bild auswählen</strong> (JPG oder PNG, max. 1MB) und 'Hochladen'.
         progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
@@ -198,7 +198,7 @@ de:
     # Memberships section
     memberships:
       title: Organisationen
-      guide: Hier können Sie Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten in bestimmten Organisationen angeben.
+      guide:  Sie haben hier die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
       organisation: Organisation
       position: Position
 
@@ -221,13 +221,13 @@ de:
         
     # Concernments section
     concernments:
-      title: Betroffentheiten und Kompetenzen
+      title: Betroffenheiten und Kompetenzen
       guide: |
         Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen können wir betroffen sein und die
         Hilfe Anderer brauchen, in anderen Bereichen engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir
         Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen. 
         echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> leicht zusammenzufinden.<br/>
-        <strong>Wie würden Sie Ihre Betroffentheiten und Kompetenzen beschreiben?</strong><br/>
+        <strong>Wie würden Sie Ihre Betroffenheiten und Kompetenzen beschreiben?</strong><br/>
 
       sorts:
         affected: <strong>Betroffen</strong> von
@@ -251,8 +251,8 @@ de:
           Organisationen vorangetrieben.
           </p><p>
           Möchten auch Sie Ihre <strong>Ideen beisteuern</strong>?<br/>
-          Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein! Andere engagierte BürgerInnen,
-          ExpertInnen und RepräsentantInnen warten schon darauf, zusammen mit Ihnen <strong>echo zu gestalten</strong>.
+          Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!
+          <strong>Gestalten Sie echo</strong> zusammen mit anderen engagierten BürgerInnen, ExpertInnen und PolitikerInnen.
           </p>
         action: 'Jetzt beitreten!'
 
@@ -262,7 +262,7 @@ de:
     # Reports section
     reports:
       messages:
-        created: "Danke für Ihre Nachricht. Ein Administrator wird benachrichtigt."
+        created: "Danke für Ihre Mitteilung. Ein Administrator wird benachrichtigt."
 
 
   # ---------------
@@ -283,10 +283,10 @@ de:
       title: Feedback
       welcome: |
         <p>
-        <strong>Ihre Meinung ist für uns wichtig!</strong><br/>
+        <strong>Ihre Meinung ist uns wichtig!</strong><br/>
         </p><p>
-        Hier können Sie Fragen stellen und Ihren Anmerkungen, Kritiken oder Lob gehör verschaffen.
-        Wenden Sie sich vertrauensvoll an uns!
+        Haben Sie Fragen an uns oder Anregungen für uns? Möchten Sie etwas kritisieren oder uns auf etwas hinweisen?
+        Wir haben immer ein offenes Ohr für Sie!
         </p>
       message: Nachricht
       send: Nachricht senden
@@ -404,7 +404,7 @@ de:
           attributes:
             blank: 'Bitte füllen Sie alle Felder aus.'
             email:
-              invalid: 'Bitte geben Sie eine korrekte E-Mail Adresse ein.'
+              invalid: 'Die E-Mail Adresse ist nicht korrekt. Bitte korrigieren Sie sie.'
 
       messages:
         blank: '{{attribute}} darf nicht leer sein.'

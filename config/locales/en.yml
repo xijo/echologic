@@ -188,7 +188,7 @@ en:
 
       upload_picture:
         title: Upload Picture
-        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and click the upload button.
+        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and upload it.
         progress: Your avatar is being uploaded. Please wait...
 
       messages:
@@ -246,7 +246,7 @@ en:
           </p><p>
           Eager to <strong>contribute your ideas</strong>, too!?<br/>
           Please enter your name and E-Mail address below!<br/>
-          Other citizens, experts and representatives are already waiting to <strong>form echo</strong> together with you.
+          <strong>Form echo</strong> together with other engaged citizens, experts and representatives.
           </p>
         action: 'Join now!'
 

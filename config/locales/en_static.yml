@@ -52,7 +52,7 @@ en:
 
     meta:
       description: |-
-        echologic is a network of free minds and organizations united to realize echo, the global agora.
+        echologic is a network of free minds and their organizations united to realize echo, the global agora.
         echo is social media for citizen empowerment. Our goal is to establish a new kind of participatory
         democracy on the very local, as well as on the regional and global level.
         Accordingly, echo means the end of powerlessness and the beginning of self-determination!
@@ -102,14 +102,14 @@ en:
 
         teaser_more:
           <p>
-          echo opens up <strong>new ways of democratic collaboration</strong>.
+          echo opens up a <strong>new era of democratic collaboration</strong>.
           It enables engaged citizens, experts, representatives and their organizations to take part in
           solution-oriented discussions and mobilize supporters to jointly turn their decisions into reality.
           echo's novel discussion method thereby lets, for the first time, <strong>collective intelligence</strong>
           emerge in a democratic public discourse even with a nearly unlimited number of participants.
           In this way, echo empowers people all over the world to collaborate in a constructive manner and
           jointly determine their very local living space, as well as the future of our common world.
-          Additionally, echo's <strong>Your-Profit</strong> business philosophy effectively supports people
+          Additionally, echo's <strong>Your-Profit philosophy</strong> effectively supports people
           to successfully achieve their goals.
           </p><p>
           By facilitating new means of transnational and intercultural collaboration, echo aims to foster a
@@ -216,7 +216,7 @@ en:
 
           tooltip: |
             Our ecological, economical and humanitarian challenges at local and global level are tightly
-            related to each other. These problems cannot be tackled independently, but must be analyzed and
+            related to each other. These problems cannot be tackled independently, but must be understood and
             solved as a whole with regard to their complex interrelations.
 
         what:
@@ -337,7 +337,7 @@ en:
           <p>
           Become active! Reach your goals successfully!
           </p><p>
-          To <strong>achieve noticeable results in everyday life</strong> of the people, echo motivates
+          To <strong>achieve noticeable results in everyday life</strong>, echo motivates
           all participants of a discussion to create appropriate actions to turn their proposals into reality.
           By bundling all local, regional and global actions supporting a common goal, echo creates
           new synergies and boosts the <strong>influence potential</strong> of civil engagment.
@@ -391,7 +391,7 @@ en:
           For the realization of this goal, Google and its brand new <strong>Wave Federation Protocol</strong>
           comes just at the right time.  This open source technology not only allows real time social
           collaboration, but also provides the basis for a secure exchange of decentrally stored data on
-          public, organizational and private servers.
+          profiles, discussions and actions between public and your own organizational or private echo servers.
           </p><p>
           On the basis of the innovative concept of echo and the groundbreaking technology of
           Google Wave, <strong>echo on waves</strong> lays out the ground for the joint
@@ -587,7 +587,7 @@ en:
 
         list:
           <li><strong>Sustainability</strong> instead of unconditional growth (eco)</li>
-          <li><strong>Dignity and cooperation</strong> instead of "resource" utilization and greed (social)</li>
+          <li><strong>Cooperation</strong> instead of uncontrolled greed (social)</li>
           <li><strong>Active participation</strong> instead of passive dependence (democratic)</li>
 
         text_bottom: |
@@ -615,9 +615,9 @@ en:
           groups and individuals according to your preferences.<br/>
           In this way, your virtual engagement can influence our real world in a positive way.
           </p><p>
-          By providing people with <strong>more self-determination</strong> and enabling them to
-          <strong>achieve visible changes</strong> in their everyday life, echo helps people to
-          free themselves from their sense of powerlessness and restore their <strong>faith in democracy</strong>.
+          By providing you with <strong>more self-determination</strong> and enabling you to
+          <strong>achieve visible changes</strong> in your everyday life, echo helps you to
+          free yourself from your sense of powerlessness and restore your <strong>faith in democracy</strong>.
           </p>
 
         tooltip_nonprofit: |
@@ -644,8 +644,8 @@ en:
           transparency of echo’s finances. This foundation will be established for the exclusive purpose of
           supporting innovative projects according to <strong>democratic decisions</strong> of the users of echo.
           </p><p>
-          By offering people an easy and cost-neutral way of <strong>financing large joint projects</strong>,
-          their virtual engagement can lead to <strong>sustainable changes</strong> in our world.
+          By offering you an easy and cost-neutral way of <strong>financing large joint projects</strong>,
+          your virtual engagement can lead to <strong>sustainable changes</strong> in our world.
           </p>
 
       public_property:
@@ -697,7 +697,7 @@ en:
 
         Thank you for registering at echologic. Please click the URL below to activate your account.
       text2: |
-        If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
+        If clicking on the URL does not make a new browser window open automatically, please copy and paste the URL into your browser.
 
         If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
 
@@ -711,30 +711,17 @@ en:
       text: |
         Dear {{name}},
 
-        A very warm welcome to the echologic community.
-        We are happy seeing you join us on our common journey towards a new era of global participatory democracy.
+        welcome to echologic!
 
-        At echologic, we will introduce more and more functionality enabling you to follow
-        and increasingly participate in the evolution of echo.
+        We are happy seeing you join us to participate in the evolution of echo.
+        As part of echologic you can contribuite your ideas and take part in discussions to provide helpful impulses for a
+        successfull development of echo.
 
-        We wish you an inspiring and enriching time thoughout our challenging journey and also to
-        have much pleasure and fun with the echologic community.
+        We wish you an inspiring and enriching time at echologic.
 
-        With the best wishes,
+        See you soon,
 
         Your echo team
-
-        p.s.: echo is much more than a Web 3.0 project with technical innovations.
-        Our team is working at many different fronts parallelly - all of which are necessary to
-        achieve echo's far reaching socio-political goals. Until closing the first seed-financing round of echo,
-        our resources remain very limited. This results in a noticeable slower pace of development,
-        than you can surely count on afterwards.
-        In order to take off soon and get echo and many other innovative projects financed more easily,
-        we are just about to kick-off 'echonomy JAM' - a joint initiative with partners from economy and politics.
-        With echonomy JAM, we bring together social entrepreneurs with capital providers from both public and private
-        sector and establish a unique marketplace to foster the transition to an eco-socially sustainable,
-        democratic economy.
-        Please visit www.echonomyJAM.org for more information and an invitation to our Kick-off Event on 27.11.2009.
 
     new_password:
       subject: New password for echologic
@@ -744,7 +731,7 @@ en:
         a new password was requested for your echologic account. If you want to change it please click on the following link.
 
       text2: |
-        If clicking on the URL does not make a new browser window open automatically, please try to copy and paste the URL into your browser.
+        If clicking on the URL does not make a new browser window open automatically, please copy and paste the URL into your browser.
 
         If you keep having problems with activating your account, please feel free to contact us at support@echologic.org.
 
