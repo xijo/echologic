@@ -14,7 +14,7 @@
 */
 
 .tabContainer {
-  margin:       0 auto 8px auto;
+  margin:       0 auto 7px auto;
   padding-top:  5px;
   overflow:     visible;
   position:     relative;
@@ -26,6 +26,10 @@
   display:      block;
 }
 
+.tabContainer .applicationTabs {
+  width: 900px;
+}
+
 .tabContainer .applicationTabs a {
   font-size:    15px !important;
   font-weight:  normal;
@@ -34,7 +38,7 @@
 
 /* APPLICATION TABS SECTION */
 .applicationTabs {
-  margin:       0 auto 8px auto;
+  margin:       0 auto;
   overflow:     visible;
   position:     relative;
   clear:        both;
@@ -46,7 +50,7 @@
 }
 
 .applicationTabs ul {
-  margin: 0 0 -1px;
+  margin-bottom: 7px;
   padding: 0px;
 }
 
@@ -96,18 +100,16 @@
 
 /* My echo tab */
 #my_echo_tab_container {
-  float: right;
-  position: relative;
+  position: absolute;
   right: 55px;
-  margin-left: -300px;
+  top: 0px;
 }
 
 /* Admin tab */
 #admin_tab_container {
-  float: left;
-  position: relative;
+  position: absolute;
   left: 4px;
-  margin-right: -300px;
+  top: 0px;
 }
 
 #roadmap_tab_container {
