@@ -5,16 +5,13 @@
     <%= text_field_tag :value %>
     <%= hidden_field_tag :sort, @sort if not @sort.nil? %>
     <%= hidden_field_tag :sort if @sort.nil? %>
-    <%= submit_tag :send, :alt => 'search_button' %>
+    <%= submit_tag '', :alt => 'search_button' %>
   <% end %>
 </div>
 
 <div id="connect_container">
-
   <%= render :partial => 'connect/profiles/list' %>
-
   <%= render :partial => 'connect/profiles/empty' %>
-
 </div>
 
 <script type="text/javascript">

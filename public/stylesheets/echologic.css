@@ -341,7 +341,7 @@
 }
 
 .echoButtonBigHolder:hover .echoActionBig {
-  border-bottom: 2px dotted #7BB031;
+  color: #7bb031;
 }
 
 /* Navigation */
@@ -386,12 +386,10 @@
 
 #nextPageButton:hover {
   background-position: -84px -43px;
-  color:        #7ab031;
 }
 
 #previousPageButton:hover {
   background-position: 0 -43px;
-  color:        #7ab031;
 }
 
 /* Illustrations */
@@ -419,7 +417,7 @@
   padding:      0px;
   border-bottom: 2px solid transparent;
   position:     relative;
-  top:          -10px;
+  top:          -7px;
 }
 
 #staticContent .illustration img {
@@ -431,7 +429,7 @@
 }
 
 #staticContent .illustration:hover h2 {
-  border-bottom: 2px dotted #7ab031;
+  color: #7bb031;
 }
 
 #staticContent .cornerIllustration {

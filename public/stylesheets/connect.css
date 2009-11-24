@@ -8,11 +8,42 @@
 
 #search_container {
   margin:   0 auto;
-  width:    250px;
+  width:    400px;
 }
 
 #search_form {
+  margin: 20px 0 10px;
+  padding: 0;
   text-align: center;
+}
+
+#search_form #value {
+  background: #FFF url(../images/page/searchbar_left.png) no-repeat scroll left top;
+  width: 270px;
+  height: 29px;
+  border: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  color: #21587f;
+  padding: 4px 0 0 11px;
+}
+
+#search_form input[type='submit'] {
+  background: #FFF url(../images/page/searchbar_button.png) no-repeat scroll left top;
+  width: 51px;
+  height: 29px;
+  border: none;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+#search_form input[type='submit']:hover {
+  background-position: 0 -29px;
+}
+
+#profile_container {
+  padding: 0;
 }
 
 .pagination {
