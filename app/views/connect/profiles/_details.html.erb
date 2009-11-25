@@ -15,8 +15,8 @@
         :id => 'close_profile_details_container',
         :class => 'close_link',
         :onclick => "$('.profile').removeClass('active');
-                     $.scrollTo('top', 1000, { onAfter:function(){
-                       $('#profile_details_container').animate(toggleParams, 300);
+                     $.scrollTo('top', 400, { onAfter:function(){
+                       $('#profile_details_container').animate(toggleParams, 500);
                      }});
                      return false;"
     %>
@@ -42,8 +42,8 @@
     <%= render :partial => 'connect/profiles/options' %>
   </div>
 
-  <script type="text/javascript">
-    $('#profile_details_container').tabs();
-  </script>
-
 </div>
+
+<script type="text/javascript">
+  $('#profile_details_container').tabs();
+</script>
