@@ -182,6 +182,9 @@
 
 #profile_details_container {
   clear: both;
+  overflow: auto;
+  min-height: 280px;
+  margin: 20px 0 10px;
 }
 
 #profile_details_container #full_name {
