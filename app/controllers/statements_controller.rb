@@ -89,7 +89,7 @@ class StatementsController < ApplicationController
   end
   
   def edit
-    render :template => 'statements/edit'
+    render :template => 'statements/edit', :layout => !request.xhr?
   end
   
   def update
@@ -121,9 +121,9 @@ class StatementsController < ApplicationController
     elsif params[:category_id]
       # happens on form-based POSTed requests
       @category = Tag.find(params[:category_id])
-    elsif @statement && ! @statement.new_record?
+    elsif parent || (@statement && ! @statement.new_record?)
       # i.e. /discuss/questions/<id>
-      @category = @statement.category || parent.try(:category)
+      @category = @statement.try(:category) || parent.try(:category)
     elsif params[:id] !~ /\d+/
       # i.e. /dicsuss/questions/<tag>
       @category = Tag.find_by_value(params[:id])

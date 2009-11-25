@@ -21,7 +21,7 @@ class Statement < ActiveRecord::Base
   # allow mass-assignment of document data.
   # FIXME: there has to be some more convenient way of doing this...
   def document=(obj)
-    obj.kind_of?(Hash) ? (document ? create_document(obj) : document.update_attributes!(obj)) : super
+    obj.kind_of?(Hash) ? (document ? document.update_attributes!(obj) : create_document(obj)) : super
   end ; alias :statement_document= :document=
   
   ##

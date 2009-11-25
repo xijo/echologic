@@ -51,7 +51,7 @@ module StatementHelper
     edit_question_proposal_url(proposal.parent, proposal)
   end
   
-  def edit_proposal_path
+  def edit_proposal_path(proposal)
     edit_question_proposal_path(proposal.parent, proposal)
   end
   
