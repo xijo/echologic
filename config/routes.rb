@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.act     '/act/roadmap',     :controller => :act,     :action => :roadmap
   map.discuss '/discuss/index', :controller => :discuss, :action => :index
   map.discuss_roadmap '/discuss/roadmap', :controller => :discuss, :action => :roadmap
-  map.question_tags '/discuss/tags/:id', :controller => :questions, :action => :index, :conditions => {:id => /\w+/ }
+  map.question_tags '/discuss/category/:id', :controller => :questions, :action => :category, :conditions => {:id => /\w+/ }
   map.my_echo '/my_echo/roadmap', :controller => :my_echo, :action => :roadmap
 
   map.resource :connect, :controller => 'connect', :only => [:show]
