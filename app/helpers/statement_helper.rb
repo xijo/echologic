@@ -85,27 +85,33 @@ module StatementHelper
     type_display_name = type.constantize.display_name
     link_to(I18n.t("discuss.statement.create_a_new", :type => type_display_name),
             new_child_statement_url(parent, type),
-            :id => "create_#{type.underscore}_link")
+            :id => "create_#{type.underscore}_link", :class => "ajax header_button text_button create_statement_button #{create_statement_class(type)}")
   end
+  
+  # this classname is needed to display the right icon next to the link
+  def create_statement_class(type)
+    "create_#{type.underscore}_button"
+  end  
   
   def create_question_link_for(category)
     link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value))
   end
   
   def edit_statement_link(statement)
-    link_to(I18n.t('application.general.edit'), edit_statement_path(statement)) if current_user.has_role?(:editor) &&
+    link_to(I18n.t('application.general.edit'), edit_statement_path(statement), :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.has_role?(:editor) &&
       (current_user.has_role?(:censor) || current_user.is_author?(statement))
   end
-  
   
   ## CONVENIENCE and UI
     
   def statement_icon(statement, size = :medium)
-    image_tag("statements/#{statement.class.name.downcase}_#{size.to_s}.png")
+    # remove me to have different sizes again
+    size = :medium
+    image_tag("page/discuss/#{statement.class.name.underscore.downcase}_#{size.to_s}.png")
   end
   
   def children_box_title(type)
-    case type.to_s.constantize.name
+    case type
     when 'NilClass'
       'Questions'
     when 'Question'
@@ -117,9 +123,17 @@ module StatementHelper
   
   def supporter_ratio_bar(statement,context=nil)
     tooltip = I18n.t('discuss.statement.ratio_bar_tooltip', :progress => statement.ratio, :supporters => statement.supporter_count)
-    val =  "<span id='ratiobar#{context}_#{statement.id}' class='ttLink ratiobar' title='#{tooltip}'></span>"
+    val =  "<span id='ratiobar#{context}_#{statement.id}' class='ttLink ratiobar ratiobar_#{context}' title='#{tooltip}'></span>"
     val += "<script type='text/javascript'>$('#ratiobar#{context}_#{statement.id}').progressbar({value: #{statement.ratio != 0 ? statement.ratio : 1}});</script>"
     val
+  end
+  
+  # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
+  # TODO: find out why statement.question? works, but not statement.parent.question? or deprecate statement.question?
+  def statement_context_line(statement)
+    ret = link_to(statement_icon(statement)+statement.title, url_for(statement))
+    ret << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
+    return ret
   end
   
 end

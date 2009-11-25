@@ -42,7 +42,7 @@ class StatementsController < ApplicationController
       format.html {}
       format.js {
         render :update do |page|
-          page.replace_html 'children_list', :partial => 'statements/children_list'
+          page.replace_html 'children', :partial => 'statements/children'
           page.replace_html 'context', :partial => 'statements/context'
           page.replace_html 'summary', :partial => 'statements/summary'
           page.replace_html 'sidebar', :partial => 'statements/sidebar'
