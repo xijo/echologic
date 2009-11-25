@@ -1,15 +1,21 @@
-<% statements ||= @statements 
-   statement ||= @statement 
+<% statements ||= @statements
+   statement ||= @statement
 %>
 <div id="children_list">
+
+  <!-- Show children. -->
   <% statements.each do |sm| %>
     <%= render :partial => 'statements/child', :locals => {:statement => sm } %>
   <% end %>
+
+  <!-- New statement. -->
   <div id="new_statement">
     <%= create_statement_link(statement) if statement.class.expected_children.any? %>
   </div>
+
   <%= will_paginate statements if defined? statements.total_pages %>
 </div>
+
 <script type="text/javascript">
-  $("#children_list a").addClass('ajax');
+  $('.pagination a').addClass('ajax');
 </script>

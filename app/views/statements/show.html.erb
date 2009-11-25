@@ -1,13 +1,19 @@
 <% content_for :submenu, tabnav(:discuss) %>
-<div id="context">
-  <%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
+
+<%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
+
+<div id="new_container">
+  <a href="#" onclick="$(this).next().animate(toggleParams, 300);">toggle</a>
+  <%= render :partial => 'statements/new', :locales => {} %>
 </div>
-<div id="sidebar">
-  <%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
-</div>
-<div id="summary">
-  <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
-</div>
-<div id="children">
-  <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
-</div>
+
+<script type="text/javascript">
+  makeRatiobars();
+  makeTooltips();
+</script>

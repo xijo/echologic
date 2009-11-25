@@ -27,7 +27,7 @@ class StatementsController < ApplicationController
 
   # TODO visited! throws error with current fixtures.
   def show
-    #current_user.visited!(@statement)
+    current_user.visited!(@statement)
     @page = params[:page] || 1
     @statements = @statement.children.by_ratio.paginate(:page => @page, :per_page => 3)
     respond_to do |format|

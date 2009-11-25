@@ -180,3 +180,11 @@ function error(text) {
   $('#messageContainer #errorBox .message').html(text);
   $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
 }
+
+/* Collects all ratiobars by class and invokes the progressbar-init on them by taking
+ * the value from the alt-attribute. */
+function makeRatiobars() {
+  $.each( $('.ratiobar'), function() {
+    $(this).progressbar({ value: $(this).attr('alt') });
+  });
+}

@@ -4,10 +4,29 @@ width:100%;
 clear:left;
 }
 
-#sidebar {
-  float:left; 
-  height:250px;
-  width:100px;
+#discuss_sidebar {
+  float:      left;
+  height:     250px;
+  width:      100px;
+  background: #ff0;
+}
+
+#summary {
+  background: #f0f;
+  float:      left;
+}
+
+#context {
+  background: #F77;
+  min-width:  700px;
+  float:      left;
+}
+
+#children {
+  background: #77F;
+  min-width:  700px;
+  float:      left;
+
 }
 
 .ratiobar {

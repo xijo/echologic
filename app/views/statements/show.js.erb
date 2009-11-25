@@ -8,4 +8,7 @@ var sidebar  = "<%= escape_javascript(render :partial => 'statements/sidebar') %
 $('#children_list').replaceWith(children);
 $('#summary').replaceWith(summary);
 $('#context').replaceWith(context);
-$('#sidebar').replaceWith(sidebar);
+$('#discuss_sidebar').replaceWith(sidebar);
+
+makeRatiobars();
+makeTooltips();

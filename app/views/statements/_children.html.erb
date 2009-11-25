@@ -1,4 +1,7 @@
-<% statements ||= @statements || []
-   statement ||= @statement %>
-<h1><%=children_box_title(@statement.class.name) if statements.any?%></h1>
-<%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
+<% statements ||= @statements || [] %>
+<% statement ||= @statement %>
+
+<div id="children">
+  <h1><%= children_box_title(@statement.class.name) if statements.any? %></h1>
+  <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
+</div>
