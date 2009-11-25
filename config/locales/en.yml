@@ -265,21 +265,23 @@ en:
   # ---------------
 
   connect:
-    found: 'Results: '
     segments:
       all:       'All'
       affected:  'Affected'
       engaged:   'Engaged'
       scientist: 'Experts'
       representative: 'Decision Makers'
+    results_count:
+      one: '{{count}} mover'
+      more: '{{count}} movers'
     details:
       tabs:
         overview:     'Overview'
-        concernments: 'Concernments & Competences'
-        web_profiles: 'Web Profiles'
+        concernments: 'Competences'
+        web_profiles: 'Web Addresses'
     messages:
-      empty:           'Your search has no result, please change the search criteria.'
-      no_concernments: "This user doesn't have any concernments or competences, yet."
+      empty:           'No members found. Please change your search criteria.'
+      no_concernments: "This member doesn't have any concernments or competences, yet."
 
   # Feedback resources
   feedback:
@@ -335,6 +337,7 @@ en:
   discuss:
     statement:
       ratio_bar_tooltip: 'This statement found {{progress}}% agreement ({{supporters}} supporters).'
+      create_a_new: "Create a new {{type}}"
 
   authlogic:
     error_messages:

@@ -8,17 +8,19 @@ class StatementsController < ApplicationController
   verify :method => :put, :only => [:update, :echo]
   verify :method => :delete, :only => [:delete, :unecho]
 
-  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
+  # FIXME: we don't need this line anymore if we have the access_control block, right?
+  #  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
   
+  # the order of these filters matters. change with caution.
   before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
-  
   before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
   
   include StatementHelper
   
-  # nested resource magic happens here.
-  # not sure if it will work out, maybe we need to push some specific
-  # logic towards the subclassed controllers
+  access_control do 
+    allow :editor, :only => [:edit, :update]
+    allow logged_in, :except => [:edit, :update]
+  end
   
   def index
     @statements = @category.statements.find_all_by_type(statement_class.to_s)
@@ -87,34 +89,48 @@ class StatementsController < ApplicationController
   end
   
   def edit
+    render :template => 'statements/edit', :layout => !request.xhr?
   end
   
   def update
-    @statement.update_attributes!(params[statement_class_param])
+    attrs = params[statement_class_param]
+    (attrs[:document] || attrs[:statement_document])[:author] = current_user
+    @statement.update_attributes!(attrs)
     redirect_to url_for(@statement)
   rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
-    render :action => 'edit'
+    edit
   end
   
   def delete
     statement_class.delete(params[:id])
   end
   
-  protected
+  private
   
   def fetch_statement
-    @statement = statement_class.find(params[:id])
+    @statement ||= statement_class.find(params[:id]) if params[:id].try(:any?) && params[:id] =~ /\d+/
   end
   
-  # TODO: this needs to be cleaned up
+  # Fetch current category based on various factors.
+  # If the category is supplied as :id, render action 'index' no matter what params[:action] suggests.
   def fetch_category
-    @category = @statement.category if @statement
-    @category ||= parent.category if parent
-    @category ||= Tag.find_by_value(params[:id]) if params[:id] && params[:id].to_i == 0
-    @category ||= Tag.find_by_value(params[:category]) if params[:category]
+    if params[:category]
+      # i.e. /discuss/questions/...?category=<tag>
+      @category = Tag.find_by_value(params[:category])
+    elsif params[:category_id]
+      # happens on form-based POSTed requests
+      @category = Tag.find(params[:category_id])
+    elsif parent || (@statement && ! @statement.new_record?)
+      # i.e. /discuss/questions/<id>
+      @category = @statement.try(:category) || parent.try(:category)
+    elsif params[:id] !~ /\d+/
+      # i.e. /dicsuss/questions/<tag>
+      index and return if @category = Tag.find_by_value(params[:id])
+    end
+    redirect_to :controller => 'discuss', :action => 'index' unless @category
   end
-    
+  
   def statement_class
     params[:controller].singularize.camelize.constantize
   end

@@ -24,6 +24,8 @@ module NavigationHelpers
       question_path(Question.first)
     when /^the questions first proposal/
       question_proposal_path(@question,@proposal)
+    when /discuss index/i
+      questions_url
       
     # Add more mappings here.
     # Here is a more fancy example:

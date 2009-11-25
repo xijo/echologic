@@ -6,7 +6,7 @@
       General layouting for the logged in section.
 */
 
-/* General styles */
+/* GENERAL STYLES */
 
 #function_container h1 {
   color:        #21587f;
@@ -21,7 +21,8 @@
   margin:       18px 0px 5px;
 }
 
-/* Function buttons */
+
+/* FUNCTION BUTTONS */
 
 .text_button {
   color: #21587f;
@@ -73,7 +74,65 @@
   display: inline-block;
 }
 
-/* Assets */
+/* PAGINATION */
+
+.pagination {
+  clear: both;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  width: 990px;
+}
+
+.pagination a, .pagination span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #21587f;
+  padding: 0 3px;
+  vertical-align: middle;
+}
+
+.pagination a:hover {
+  color: #7bb031;
+}
+
+.pagination .current {
+  color: #7bb031;
+}
+
+.pagination .prev_page, .pagination .next_page {
+  display: inline-block;
+  width: 37px;
+  height: 39px;
+  padding: 0;
+}
+
+.pagination .prev_page {
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll left top;
+}
+
+.pagination .next_page {
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll right top;
+}
+
+.pagination .prev_page:hover {
+  background-position: 0 -39px;
+}
+
+.pagination .next_page:hover {
+  background-position: -37px -39px;
+}
+
+.pagination .prev_page.disabled {
+  background-position: 0 -78px !important;
+}
+
+.pagination .next_page.disabled {
+  background-position: -37px -78px !important;
+}
+
+
+/* ASSETS */
 
 .button_150 {
   border:       none;
@@ -187,7 +246,7 @@
 }
 
 
-/* Submenu styling */
+/* SUBMENUS */
 
 .submenu {
   margin:       0 auto;
@@ -199,7 +258,8 @@
   z-index:      1;
   text-align:   center;
   background:   url(../images/page/separator_no_shadow.png) no-repeat bottom;
-  position: relative;
+  position:     relative;
+  height:       20px;
 }
 
 .submenu ul {
@@ -226,9 +286,7 @@
   color: #7bb031;
 }
 
-/* Other navigation */
-
-/* Big function buttons (used in Welcome e.g.) */
+/* OTHER NAVIGATION*/
 
 .function_button_holder {
   height:      85px;

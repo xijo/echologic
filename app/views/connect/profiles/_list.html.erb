@@ -1,9 +1,9 @@
-<div id="profiles_container">
-  <ul>
-    <% if not @profiles.empty? %>
-      <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
-    <% else %>
-      <%= I18n.t('connect.messages.empty') %>
-    <% end %>
-  </ul>
-</div>
+
+<ul>
+  <% if not @profiles.empty? %>
+    <%= render :partial => 'connect/profiles/profile', :collection => @profiles %>
+  <% else %>
+    <span class="no_results"><%= I18n.t('connect.messages.empty') %></span>
+  <% end %>
+</ul>
+
