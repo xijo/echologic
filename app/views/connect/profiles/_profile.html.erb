@@ -6,11 +6,10 @@
     <%=h @profile.location %><br/>
     <%=h @profile.first_membership %>
   </span>
+  <span class="close_hint" style="display: none;"><%= I18n.t('application.general.close') %></span>
 
   <% link_to url_for(:controller => 'users/profile', :action => 'details', :id => @profile), :class => 'ajax show_link avatar_holder' do %>
     <%= image_tag @profile.avatar.url(:small) %>
   <% end %>
-
-  <span class="close_hint" style="display: none;"><%= I18n.t('application.general.close') %></span>
 
 </li>
