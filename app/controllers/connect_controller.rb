@@ -63,7 +63,7 @@ class ConnectController < ApplicationController
       order by p.first_name asc;
     END
 
-    profiles = Profile.find_by_sql(query)#.paginate(:page => params[:page], :per_page => 6)
+    profiles = Profile.find_by_sql(query)
 
   end
 

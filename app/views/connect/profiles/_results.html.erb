@@ -2,11 +2,28 @@
 
   <%= tabnav :connect_segments %>
 
-  <%= I18n.t('connect.found')%> <%= @profiles.total_entries if defined? @profiles.total_entries %>
+  <%
+    count = @profiles.total_entries
+    if count < 2
+      count_text = I18n.t('connect.results_count.one', :count => count)
+    else
+      count_text = I18n.t('connect.results_count.more', :count => count)
+    end
+  %>
 
-  <%= render :partial => 'connect/profiles/list' %>
+  <!--<span class="results_count"><%- count_text %></span>-->
+  <!--<span class="results_sort"/>-->
 
-  <%= will_paginate @profiles if defined? @profiles.total_pages %>
+  <span id="profiles_beginn"></span>
+
+  <div id="profiles_container" class="rounded-box rounded-box-gray-itow with-header">
+    <span class="box_header"><%= count_text %></span>
+    <span class="box_header_border"></span>
+    <span class="box_header_icon"></span>
+
+    <%= render :partial => 'connect/profiles/list' %>
+    <%= will_paginate @profiles , :previous_label => '', :next_label => '' if defined? @profiles.total_pages %>
+  </div>
 
 </div>
 
@@ -25,4 +42,6 @@
     $('#search_form').submit();
     return false;
   });
+
+  roundCorners();
 </script>

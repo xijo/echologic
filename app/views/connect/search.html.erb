@@ -16,9 +16,9 @@
 <script type="text/javascript">
   $('#search_form').ajaxForm({ dataType : 'script' });
 
-  $('.profile.active img').die("click");
-  $('.profile.active img').live("click", function() {
-    $('#profile_details_container').animate(toggleParams, 300);
+  $('.profile.active .avatar_holder').die("click");
+  $('.profile.active .avatar_holder').live("click", function() {
+    $.scrollTo('top', 400, function() {$('#profile_details_container').animate(toggleParams, 500)});
     $('.profile').removeClass('active');
     return false;
   });
