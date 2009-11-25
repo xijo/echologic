@@ -96,14 +96,25 @@ class StatementsController < ApplicationController
   end
   
   def edit
-    render :template => 'statements/edit', :layout => !request.xhr?
+    respond_to do |format|
+      format.html
+      format.js { 
+        render :update do |page| 
+          page.replace_html 'summary', :partial => 'statements/edit'
+        end
+      }
+    end
   end
   
   def update
     attrs = params[statement_class_param]
     (attrs[:document] || attrs[:statement_document])[:author] = current_user
     @statement.update_attributes!(attrs)
-    redirect_to url_for(@statement)
+    flash[:notice] = "#{statement_class.display_name} updated."
+    respond_to do |format|
+      format.html { redirect_to url_for(@statement) }
+      format.js { show }
+    end
   rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
     edit
