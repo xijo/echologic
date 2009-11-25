@@ -3,4 +3,4 @@ var content = "<%= escape_javascript(render(:partial => 'connect/profiles/result
 
 $("#results_container").replaceWith(content);
 
-$("#profile_details_container:visible").animate(toggleParams, 300);
+$('#profile_details_container:visible').animate(toggleParams, 500, function() {$.scrollTo('top', 400)});
