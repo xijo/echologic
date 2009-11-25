@@ -126,10 +126,9 @@ class StatementsController < ApplicationController
       @category = @statement.try(:category) || parent.try(:category)
     elsif params[:id] !~ /\d+/
       # i.e. /dicsuss/questions/<tag>
-      @category = Tag.find_by_value(params[:id])
-      index
+      index and return if @category = Tag.find_by_value(params[:id])
     end
-    raise ArgumentError.new("No @category supplied.") unless @category
+    redirect_to :controller => 'discuss', :action => 'index' unless @category
   end
   
   def statement_class
