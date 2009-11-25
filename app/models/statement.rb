@@ -45,6 +45,11 @@ class Statement < ActiveRecord::Base
   
   named_scope :by_supporters, :joins => :echo, :order => 'echos.supporter_count DESC'
   
+  # category
+  
+  named_scope :from_category, lambda { |value|
+    { :include => :category, :conditions => ['tags.value = ?', value] } }
+  
   ##
   ## VALIDATIONS
   ##

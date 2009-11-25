@@ -3,7 +3,7 @@ class StatementsController < ApplicationController
   include EchoHelper
   
   # remodelling the RESTful constraints, as a default route is currently active
-  verify :method => :get, :only => [:index, :show, :new, :edit]
+  verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
   verify :method => :put, :only => [:update, :echo]
   verify :method => :delete, :only => [:delete, :unecho]
@@ -23,7 +23,14 @@ class StatementsController < ApplicationController
   end
   
   def index
-    @statements = @category.statements.find_all_by_type(statement_class.to_s)
+    @statements = statement_class.all
+    render :template => 'questions/index'
+  end
+  
+  def category
+    @category = Tag.find_by_value(params[:id]) 
+    redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
+    @statements = statement_class.from_category(params[:id])
     render :template => 'questions/index'
   end
   
@@ -115,20 +122,15 @@ class StatementsController < ApplicationController
   # Fetch current category based on various factors.
   # If the category is supplied as :id, render action 'index' no matter what params[:action] suggests.
   def fetch_category
-    if params[:category]
-      # i.e. /discuss/questions/...?category=<tag>
-      @category = Tag.find_by_value(params[:category])
-    elsif params[:category_id]
-      # happens on form-based POSTed requests
-      @category = Tag.find(params[:category_id])
-    elsif parent || (@statement && ! @statement.new_record?)
-      # i.e. /discuss/questions/<id>
-      @category = @statement.try(:category) || parent.try(:category)
-    elsif params[:id] !~ /\d+/
-      # i.e. /dicsuss/questions/<tag>
-      index and return if @category = Tag.find_by_value(params[:id])
-    end
-    redirect_to :controller => 'discuss', :action => 'index' unless @category
+    @category = if params[:category] # i.e. /discuss/questions/...?category=<tag>
+                  Tag.find_by_value(params[:category])
+                elsif params[:category_id] # happens on form-based POSTed requests
+                  Tag.find(params[:category_id])
+                elsif parent || (@statement && ! @statement.new_record?) # i.e. /discuss/questions/<id>
+                  @statement.try(:category) || parent.try(:category)
+                else
+                  nil
+                end or redirect_to :controller => 'discuss', :action => 'index'
   end
   
   def statement_class
