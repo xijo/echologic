@@ -1,0 +1,12 @@
+
+ROLES AND WHICH ACTIONS THEY ENABLE
+
+| *role* | *controller*      | *actions*    |
+|--------+-------------------+--------------|
+| admin  | users/reports     | %            |
+|        | users/users       | %            |
+|        | i18n/locales      | %            |
+|        | i18n/translations | %            |
+|--------+-------------------+--------------|
+| editor | statements        | edit, update |
+|        |                   |              |

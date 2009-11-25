@@ -5,18 +5,21 @@
     <%= text_field_tag :value %>
     <%= hidden_field_tag :sort, @sort if not @sort.nil? %>
     <%= hidden_field_tag :sort if @sort.nil? %>
-    <%= submit_tag :send, :alt => 'search_button' %>
+    <%= submit_tag '', :alt => 'search_button' %>
   <% end %>
 </div>
 
-<div id="connect_container">
+<%= render :partial => 'connect/profiles/results' %>
 
-  <%= render :partial => 'connect/profiles/list' %>
-
-  <%= render :partial => 'connect/profiles/empty' %>
-
-</div>
+<%= render :partial => 'connect/profiles/details', :locals => {:profile => Profile.new, :hidden => true} %>
 
 <script type="text/javascript">
   $('#search_form').ajaxForm({ dataType : 'script' });
+
+  $('.profile.active .avatar_holder').die("click");
+  $('.profile.active .avatar_holder').live("click", function() {
+    $.scrollTo('top', 400, function() {$('#profile_details_container').animate(toggleParams, 500)});
+    $('.profile').removeClass('active');
+    return false;
+  });
 </script>

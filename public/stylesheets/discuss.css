@@ -1,7 +1,10 @@
 #context {
-float:left;
-width:100%;
-clear:left;
+  margin: 0px 0px 12px 125px;
+}
+
+
+#context h1 {
+  margin:5px 0 5px !important;
 }
 
 #discuss_sidebar {
@@ -9,11 +12,6 @@ clear:left;
   height:     250px;
   width:      100px;
   background: #ff0;
-}
-
-#summary {
-  background: #f0f;
-  float:      left;
 }
 
 #context {
@@ -27,6 +25,62 @@ clear:left;
   min-width:  700px;
   float:      left;
 
+#sidebar {
+  float:left;
+  height:280px;
+  width:110px;
+  border-right:2px solid lightgrey;
+}
+
+#statement_main {
+}
+
+#summary {
+  margin: 0px 0px 25px 125px;
+  background: #f0f;
+  float:      left;
+}
+
+#summary h1 {
+  border-bottom: 1px solid grey;
+}
+
+.create_statement_button {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  display:inline-block;
+  margin-top:-42px;
+  padding-left:34px !important;
+  height:32px;
+  line-height: 31px;:32px;
+}
+
+.create_question_button {
+  background:transparent url(../images/page/discuss/add_question.png) no-repeat scroll 0 0;
+}
+
+.create_proposal_button {
+  background:transparent url(../images/page/discuss/add_proposal.png) no-repeat scroll 0 0;
+}
+
+.create_improvement_proposal_button {
+  background:transparent url(../images/page/discuss/add_improvement_proposal.png) no-repeat scroll 0 0;
+}
+
+.discuss_header_block {
+  background: url(../images/page/header_left.png) no-repeat scroll left top;
+  padding: 6px 0 0 15px;
+  margin: 0px 0px 25px 125px;
+}
+
+.discuss_header_block h2 {
+  background: url(../images/page/header_right.png) no-repeat scroll right top;
+  height: 31px;
+  margin: -6px 0 10px !important;
+  line-height: 31px;
+  vertical-align: middle;
+  color: #21587f !important;
 }
 
 .ratiobar {
@@ -34,4 +88,20 @@ clear:left;
   width:130px;
   display:inline-block;
   margin-left:10px;
+}
+
+.ratiobar_context {
+  height:14px !important;
+  width:200px;
+  float:right;
+  margin-right:25px;
+  margin-top:15px;
+}
+
+.edit_statement_button {
+  margin-top:-42px;
+}
+
+a img {
+  border:0;
 }

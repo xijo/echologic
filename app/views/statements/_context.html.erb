@@ -1,32 +1,29 @@
-<div id="context">
-  <% case @statement.level
-       when 0
-  %>
-  <h1 class="root">
-    <%= statement_icon(@statement)%>
-    <%= link_to(@statement.title, url_for(@statement), :class => 'ajax')%>
-  </h1>
-  <%   when 1 %>
-  <h1 class="root">
-    <%= statement_icon(@statement.parent)%>
-    <%= link_to(@statement.parent.title, url_for(@statement.parent), :class => 'ajax')%>
-  </h1>
-  <h1 class="intermediate">
-    <%= statement_icon(@statement)%>
-    <%= link_to(@statement.title, url_for(@statement), :class => 'ajax')%>
-  </h1>
-  <%   when 2 %>
-  <h1 class="root">
-    <%= statement_icon(@statement.root)%>
-    <%= link_to(@statement.root.title, url_for(@statement.root), :class => 'ajax')%>
-  </h1>
-  <h1 class="intermediate">
-    <%= statement_icon(@statement.parent)%>
-    <%= link_to(@statement.parent.title, url_for(@statement.parent), :class => 'ajax')%>
-  </h1>
-  <h1 class="bottom">
-    <%= statement_icon(@statement)%>
-    <%= link_to(@statement.title, url_for(@statement), :class => 'ajax')%>
-  </h1>
-  <% end %>
-</div>
+<% statement ||= @statement
+%>
+<% case statement.level
+     when 0
+%>
+<h1 class="root">
+  <%= statement_context_line(statement)%>
+</h1>
+<%   when 1 %>
+<h1 class="root">
+  <%= statement_context_line(statement.parent)%>
+</h1>
+<h1 class="intermediate">
+  <%= statement_context_line(statement)%>
+</h1>
+<%   when 2 %>
+<h1 class="root">
+  <%= statement_context_line(statement.root)%>
+</h1>
+<h1 class="intermediate">
+  <%= statement_context_line(statement.parent)%>
+</h1>
+<h1 class="bottom">
+  <%= statement_context_line(statement)%>
+</h1>
+<% end %>
+<script type="text/javascript">
+  $("#context a").addClass('ajax');
+</script>

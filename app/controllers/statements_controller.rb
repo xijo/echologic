@@ -3,26 +3,38 @@ class StatementsController < ApplicationController
   include EchoHelper
 
   # remodelling the RESTful constraints, as a default route is currently active
-  verify :method => :get, :only => [:index, :show, :new, :edit]
+  verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
   verify :method => :put, :only => [:update, :echo]
   verify :method => :delete, :only => [:delete, :unecho]
 
-  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
+  # FIXME: we don't need this line anymore if we have the access_control block, right?
+  #  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
 
+  # the order of these filters matters. change with caution.
   before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
+  before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
 
   include StatementHelper
 
-  # nested resource magic happens here.
-  # not sure if it will work out, maybe we need to push some specific
-  # logic towards the subclassed controllers
+  access_control do
+    allow :editor, :only => [:edit, :update]
+    allow logged_in, :except => [:edit, :update]
+  end
 
   def index
     @statements = statement_class.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :template => 'questions/index' }
     end
+
+  end
+
+  def category
+    @category = Tag.find_by_value(params[:id])
+    redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
+    @statements = statement_class.from_category(params[:id])
+    render :template => 'questions/index'
   end
 
   # TODO visited! throws error with current fixtures.
@@ -58,7 +70,7 @@ class StatementsController < ApplicationController
 
   # Create a new statement
   def new
-    @statement ||= statement_class.new :parent => parent
+    @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
     respond_to do |format|
       format.html # new.html.erb
       format.js   { replace_container('new_statement', :partial => 'statements/new') }
@@ -80,14 +92,28 @@ class StatementsController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.js {
+        render :update do |page|
+          page.replace_html 'summary', :partial => 'statements/edit'
+        end
+      }
+    end
   end
 
   def update
-    @statement.update_attributes!(params[statement_class_param])
-    redirect_to url_for(@statement)
+    attrs = params[statement_class_param]
+    (attrs[:document] || attrs[:statement_document])[:author] = current_user
+    @statement.update_attributes!(attrs)
+    flash[:notice] = "#{statement_class.display_name} updated."
+    respond_to do |format|
+      format.html { redirect_to url_for(@statement) }
+      format.js { show }
+    end
   rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
-    render :action => 'edit'
+    edit
   end
 
   def delete
@@ -95,12 +121,26 @@ class StatementsController < ApplicationController
   end
 
   #
-  # PROTECTED
+  # PRIVATE
   #
-  protected
+  private
 
   def fetch_statement
-    @statement = statement_class.find(params[:id])
+    @statement ||= statement_class.find(params[:id]) if params[:id].try(:any?) && params[:id] =~ /\d+/
+  end
+
+  # Fetch current category based on various factors.
+  # If the category is supplied as :id, render action 'index' no matter what params[:action] suggests.
+  def fetch_category
+    @category = if params[:category] # i.e. /discuss/questions/...?category=<tag>
+                  Tag.find_by_value(params[:category])
+                elsif params[:category_id] # happens on form-based POSTed requests
+                  Tag.find(params[:category_id])
+                elsif parent || (@statement && ! @statement.new_record?) # i.e. /discuss/questions/<id>
+                  @statement.try(:category) || parent.try(:category)
+                else
+                  nil
+                end or redirect_to :controller => 'discuss', :action => 'index'
   end
 
   def statement_class

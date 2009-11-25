@@ -1,2 +1,7 @@
 role_admin:
   name: admin
+role_editor:
+  name: editor
+role_censor:
+  name: censor
+

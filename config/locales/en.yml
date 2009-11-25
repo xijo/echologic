@@ -188,7 +188,7 @@ en:
 
       upload_picture:
         title: Upload Picture
-        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and click the upload button.
+        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and upload it.
         progress: Your avatar is being uploaded. Please wait...
 
       messages:
@@ -216,6 +216,8 @@ en:
         xing:     "Xing"
         linkedin: "LinkedIn"
         twitter:  "Twitter"
+        facebook: "Facebook"
+        other:    "Other"
 
     # Concernments section
     concernments:
@@ -246,7 +248,7 @@ en:
           </p><p>
           Eager to <strong>contribute your ideas</strong>, too!?<br/>
           Please enter your name and E-Mail address below!<br/>
-          Other citizens, experts and representatives are already waiting to <strong>form echo</strong> together with you.
+          <strong>Form echo</strong> together with other engaged citizens, experts and representatives.
           </p>
         action: 'Join now!'
 
@@ -264,11 +266,22 @@ en:
 
   connect:
     segments:
-      all: All
-      affected: Affected
-      engaged: Engaged
-      scientist: Experts
-      representative: Decision Makers
+      all:       'All'
+      affected:  'Affected'
+      engaged:   'Engaged'
+      scientist: 'Experts'
+      representative: 'Decision Makers'
+    results_count:
+      one: '{{count}} mover'
+      more: '{{count}} movers'
+    details:
+      tabs:
+        overview:     'Overview'
+        concernments: 'Competences'
+        web_profiles: 'Web Addresses'
+    messages:
+      empty:           'No members found. Please change your search criteria.'
+      no_concernments: "This member doesn't have any concernments or competences, yet."
 
   # Feedback resources
   feedback:
@@ -324,6 +337,7 @@ en:
   discuss:
     statement:
       ratio_bar_tooltip: 'This statement found {{progress}}% agreement ({{supporters}} supporters).'
+      create_a_new: "Create a new {{type}}"
 
   authlogic:
     error_messages:

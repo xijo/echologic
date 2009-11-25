@@ -1,0 +1,47 @@
+<div id="results_container">
+
+  <%= tabnav :connect_segments %>
+
+  <%
+    count = @profiles.total_entries
+    if count < 2
+      count_text = I18n.t('connect.results_count.one', :count => count)
+    else
+      count_text = I18n.t('connect.results_count.more', :count => count)
+    end
+  %>
+
+  <!--<span class="results_count"><%- count_text %></span>-->
+  <!--<span class="results_sort"/>-->
+
+  <span id="profiles_beginn"></span>
+
+  <div id="profiles_container" class="rounded-box rounded-box-gray-itow with-header">
+    <span class="box_header"><%= count_text %></span>
+    <span class="box_header_border"></span>
+    <span class="box_header_icon"></span>
+
+    <%= render :partial => 'connect/profiles/list' %>
+    <%= will_paginate @profiles , :previous_label => '', :next_label => '' if defined? @profiles.total_pages %>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  $(".pagination a").addClass('ajax');
+
+  $(".ajax_sort").live("click", function() {
+    var sort = $(this).attr('value');
+    $(':input[id=sort]').val(sort);
+    $('#search_form').submit();
+    return false;
+  });
+
+  $(".ajax_no_sort").live("click", function() {
+    $(':input[id=sort]').val('');
+    $('#search_form').submit();
+    return false;
+  });
+
+  roundCorners();
+</script>

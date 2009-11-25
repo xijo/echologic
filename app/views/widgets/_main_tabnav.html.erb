@@ -19,6 +19,11 @@ render_tabnav :main,
     t.named I18n.t('layouts.tabs.discuss')
     t.links_to hash_for_discuss_path
     t.highlights_on :controller => 'discuss'
+    t.highlights_on :controller => 'questions'
+    t.highlights_on :controller => 'proposals'
+    t.highlights_on :controller => 'improvement_proposals'
+    t.highlights_on :controller => 'pro_arguments'
+    t.highlights_on :controller => 'contra_arguments'
   end
 
   add_tab :html => { :id => 'connect_tab' } do |t|

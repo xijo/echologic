@@ -13,7 +13,8 @@ $('#web_profiles').html(web_profiles);
 $('#full_name').html("<%=h @profile.full_name %>");
 $('#options').html(options);
 
-$(".profile").removeClass('active')
-$("#<%= dom_id @profile %>").addClass('active')
+$(".profile").removeClass('active');
+$("#<%= dom_id @profile %>").addClass('active');
 
-$('#profile_details_container:hidden').animate(toggleParams, 300);
+/* Show the profile details and afterwards scroll to the results container. */
+$('#profile_details_container:hidden').animate(toggleParams, 500, function() {$.scrollTo('#profiles_beginn', 400);});

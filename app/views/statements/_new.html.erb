@@ -1,12 +1,14 @@
-<% statement ||= @statement %>
+<% statement ||= @statement -%>
 
 <div id="new_statement">
   <% form_for statement.self_with_parents do |f| -%>
     <%= f.error_messages %>
     <%= render :partial => "statements/form", :locals => { :form => f } %>
   <% end -%>
+  <% unless statement.class.name == 'Question' %>
 </div>
 
 <script type="text/javascript">
-  $('#new_proposal').ajaxForm({ dataType : 'script' });
+  $('#new_<%=statement.class.name.underscore%>').ajaxForm({ dataType : 'script' });
 </script>
+<% end %>

@@ -5,3 +5,14 @@ energy:
 
 water:
   value: Water
+
+
+###
+### Tags for Statement Categories 
+###
+
+echonomy-jam:
+  value: EchonomyJAM
+
+echocracy:
+  value: Echocracy

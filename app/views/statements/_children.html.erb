@@ -1,7 +1,10 @@
-<% statements ||= @statements || [] %>
-<% statement ||= @statement %>
-
-<div id="children">
-  <h1><%= children_box_title(@statement.class.name) if statements.any? %></h1>
+<% statements ||= @statements || []
+   statement ||= @statement
+%>
+<% unless statements.empty? && statement.class.expected_children.empty? %>
+  <h2><%=children_box_title(statement.class.name) if statements.any?%></h2>
+  <div id="new_statement">
+    <%= create_statement_link(statement) if statement.class.expected_children.any? %>
+  </div>
   <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
-</div>
+<% end %>

@@ -9,9 +9,9 @@ Feature: Discuss
   Scenario: Create a valid question as an editor
     Given there are no questions
       And I am logged in as "editor" with password "true"
-    When I go to create a question
-      # should do as above but automatically through a better step definition
-#      And I post some valid question data
+      And I am on the Discuss Index
+    When I follow "EchonomyJAM"
+      And I follow "Create a new Question"
       And I fill in the following:
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |
@@ -23,9 +23,10 @@ Feature: Discuss
     Given I am logged in as "editor" with password "true"
       And there is the first question
       And the question has no proposals
-    # Todo: Maybe we should start navigating from the main question overview
-    When I go to the question
-      And I follow the create proposal link
+      And I am on the Discuss Index
+    When I follow "EchonomyJAM"
+      And I choose the first Question
+      And I follow "Create a new Proposal"
       And I fill in the following:
         | title | a proposal to propose some proposeworthy proposal data |
         | text  | nothing to propose yet...                              |
@@ -40,8 +41,10 @@ Feature: Discuss
     When I go to create a question
       And I fill in the following:
         | text | Blablabla bla bla bla |
+      And I press the "Save" button
     # Todo: Maybe we should check the content of the error box as well
-    Then I should see an error message
+    Then there should be no questions
+      And I should see an error message
   
   Scenario: Add an Improvement Proposal to a Proposal
     Given I am logged in as "user" with password "true"
@@ -51,9 +54,10 @@ Feature: Discuss
       And I follow the create improvement proposal link
       # Todo: How does the plain data for an improvement proposal differ from valid data for a proposal
       And I fill in the following:
-        | title | Improving the unimprovable                                    |
+        | title | Improving the unimprovable                                           |
         | text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
-    Then I should see a "Improving eh unimprovable"
+      And I press the "Save" button
+    Then I should see "Improving the unimprovable"
       And I should see "blubb"
       And the proposal should have one improvementproposal
 
@@ -74,8 +78,9 @@ Feature: Discuss
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |
     And I press the "Save" button
-    Then I should see a "permission denied" error message
-      And there should be no questions
+    Then there should be no questions
+      And I should see a "permission denied" error message
+      
 
   Scenario: Add a proposal to a question as a user (from ui)
     Given I am logged in as "user" with password "true"
@@ -88,3 +93,4 @@ Feature: Discuss
     Given I am logged in as "user" with password "true"
     When I post some valid proposal data for "first-question"
     Then I should see a "permission denied" error message
+

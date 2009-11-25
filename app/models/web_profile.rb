@@ -12,7 +12,9 @@ class WebProfile < ActiveRecord::Base
     2 => I18n.t('users.web_profiles.sorts.blog'),
     3 => I18n.t('users.web_profiles.sorts.xing'),
     4 => I18n.t('users.web_profiles.sorts.linkedin'),
-    5 => I18n.t('users.web_profiles.sorts.twitter')  
+    5 => I18n.t('users.web_profiles.sorts.twitter'),
+    6 => I18n.t('users.web_profiles.sorts.facebook'),
+    99 => I18n.t('users.web_profiles.sorts.other')
   }
 
   # ..and make it available as class method.
@@ -22,5 +24,8 @@ class WebProfile < ActiveRecord::Base
 
   # Validate that sort is correct
   validates_inclusion_of :sort, :in => WebProfile.sorts
+
+  # Validate if location has valid format
+  validates_format_of :location, :with => /^((www\.|http:\/\/)([a-z0-9]*\.)+([a-z]{2,3}){1}(\/[a-z0-9]+)*(\.[a-z0-9]{1,4})?)|(([a-z0-9)+[a-z0-9\.\_-]*)@[a-z0-9]{1,}[a-z0-9-\.]*\.[a-z]{2,4})$/i
 
 end
