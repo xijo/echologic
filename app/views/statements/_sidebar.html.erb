@@ -1,2 +1,6 @@
 <% statement ||= @statement %>
-<%= echo_button(statement) %>
+<%= echo_button(statement) %></br>
+<%= edit_statement_link(@statement) %>
+<script type="text/javascript">
+  $("#sidebar a").addClass('ajax');
+</script>
