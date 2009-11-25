@@ -9,9 +9,8 @@ Feature: Discuss
   Scenario: Create a valid question as an editor
     Given there are no questions
       And I am logged in as "editor" with password "true"
+      And I am on the Discuss Index
     When I go to create a question
-      # should do as above but automatically through a better step definition
-#      And I post some valid question data
       And I fill in the following:
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |

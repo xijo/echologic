@@ -21,8 +21,8 @@ class Statement < ActiveRecord::Base
   # allow mass-assignment of document data.
   # FIXME: there has to be some more convenient way of doing this...
   def document=(obj)
-    obj.kind_of?(Hash) ? create_document(obj) : super
-  end
+    obj.kind_of?(Hash) ? (document ? create_document(obj) : document.update_attributes!(obj)) : super
+  end ; alias :statement_document= :document=
   
   ##
   ## NAMED SCOPES
@@ -88,8 +88,8 @@ class Statement < ActiveRecord::Base
   end
   
   def validate
-     # except of questions, all statements need a valid parent
-     errors.add("Parent of #{self.class.name} must be of one of #{self.class.valid_parents.inspect}") unless self.class.valid_parents and self.class.valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
+    # except of questions, all statements need a valid parent
+    errors.add("Parent of #{self.class.name} must be of one of #{self.class.valid_parents.inspect}") unless self.class.valid_parents and self.class.valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
   end
   
   def self.display_name
@@ -123,7 +123,8 @@ class Statement < ActiveRecord::Base
   end
   
   def self_with_parents()
-    parents([self])
+    list = parents([self])
+    list.size == 1 ? list.pop : list
   end
   
   def self.expected_parent_chain
@@ -139,8 +140,7 @@ class Statement < ActiveRecord::Base
   # magically allows Proposal.first.question? et al.
   #
   # OPTIMIZE: make this shorter!
-  def method_missing(sym, *args) 
-   sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
+  def method_missing(sym, *args)
+    sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
   end
-  
 end
