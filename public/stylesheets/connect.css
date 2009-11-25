@@ -145,7 +145,7 @@
   height:   55px;
   list-style: none;
   display:  block;
-  margin: 11px 0px 11px 40px;
+  margin: 11px 10px 11px 30px;
   position: relative;
 }
 
@@ -201,9 +201,27 @@
   margin: 25px 0 10px;
 }
 
+#profile_details_container div {
+  text-align: left;
+}
+
 #profile_details_container #full_name {
-  color:#7AB031;
-  width:150px;
+  color: #7AB031;
+  font-size: 18px;
+  background: none;
+  position: absolute;
+  left: 10px;
+  top: 9px;
+}
+
+#profile_details_container #close_profile_details_container {
+  color: #7691a2;
+  font-size: 14px;
+  background: none;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  text-decoration: none;
 }
 
 #profile_details_container #avatar {
