@@ -18,7 +18,7 @@
 
   $('.profile.active .avatar_holder').die("click");
   $('.profile.active .avatar_holder').live("click", function() {
-    $('#profile_details_container').animate(toggleParams, 500, function() {$.scrollTo('top', 400)});
+    $.scrollTo('top', 400, function() {$('#profile_details_container').animate(toggleParams, 500)});
     $('.profile').removeClass('active');
     return false;
   });

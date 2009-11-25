@@ -141,11 +141,11 @@
 
 #profiles_container .profile {
   float:    left;
-  width:    267px;
+  width:    287px;
   height:   55px;
   list-style: none;
   display:  block;
-  margin: 11px 30px;
+  margin: 11px 0px 11px 40px;
   position: relative;
 }
 
@@ -183,6 +183,14 @@
   left: 60px;
 }
 
+#profiles_container .profile.active:hover .close_hint {
+  font-size: 12px;
+  color: #7691A2;
+  display: inline-block !important;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+}
 
 /* PROFILE DETAILS. */
 
