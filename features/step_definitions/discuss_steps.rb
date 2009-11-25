@@ -10,6 +10,12 @@ Then /^there should be one question$/ do
   Question.count.should == 1
 end
 
+When /^I choose the first Question$/ do 
+  response.should have_selector("a.question_link") do |selector|
+    visit selector.first['href']
+  end
+end
+
 Then /^I should see an error message$/i do
   Then "I should see a \"error box\""
 end
