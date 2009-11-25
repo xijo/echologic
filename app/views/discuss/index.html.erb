@@ -1,2 +1,2 @@
 <% content_for :submenu, tabnav(:discuss) %>
-<%= link_to 'EchonomyJAM', {:controller => 'questions', :action=> 'index', :id=>'EchonomyJAM'} %>
+<%= link_to 'EchonomyJAM', hash_for_question_tags_path.merge({:id=>'EchonomyJAM'}) %>

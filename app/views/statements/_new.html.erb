@@ -3,6 +3,8 @@
   <%= f.error_messages %>
   <%= render :partial => "statements/form", :locals => { :form => f } %>
 <% end -%>
+<% unless statement.class.name == 'Question' %>
 <script type="text/javascript">
   $('#new_<%=statement.class.name.underscore%>').ajaxForm({ dataType : 'script' });
 </script>
+<% end %>
