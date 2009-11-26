@@ -283,10 +283,6 @@
   
 }
 
-#overview #memberships, #overview #memberships .value {
-  width: 630px;
-}
-
 #overview li .label {
   color: #7bb031;
   font-size: 15px;
@@ -301,7 +297,46 @@
   width: 290px;
 }
 
-/* Concerments & Web Profiles */
+#overview #memberships, #overview #memberships .value {
+  width: 630px;
+}
+
+/* Concernments */
+#concernments .label {
+  color: #7bb031;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#concernments .values {
+  color: #21587f;
+  display: block;
+  width: 630px;
+  margin-bottom: 20px;
+}
+
+/* Web profiles */
+#web_profiles .label {
+  color: #7bb031;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: inline-block;
+  width: 150px;
+  vertical-align: top;
+}
+
+#web_profiles .values {
+  color: #21587f;
+  display: inline-block;
+  width: 480px;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+/* Overview & Concerments & Web Profiles */
 #profile_details_container .tab_content_container .no_results {
   display: block;
   width: 670px;

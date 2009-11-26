@@ -5,7 +5,7 @@
     <% concernments = @profile.concernments.find_all_by_sort(sort) %>
     <% unless concernments.blank? %>
       <span class="label"><%= I18n.t("users.concernments.sorts.#{name}") %></span>
-      <span id="values">
+      <span class="values">
         <%= concernments.collect { |c| c.tag.value }.join(', ') %>
       </span>
     <% end %>
