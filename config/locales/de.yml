@@ -263,8 +263,11 @@ de:
 
     # Reports section
     reports:
+      new:
+        title:  "Benutzer melden"
+        text:   "<p>Bitte melden sie uns Benutzer mit beleidigendem, unethischem oder illegalem Inhalt.</p><p>Wir werden uns schnellstmöglich um Ihren Hinweis kümmern."
       messages:
-        created: "Danke für Ihre Mitteilung. Ein Administrator wird benachrichtigt."
+        created: "Danke für Ihre Mitteilung. Ein Administrator wurde benachrichtigt."
 
 
   # ---------------

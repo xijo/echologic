@@ -12,12 +12,11 @@ $("input[alt='report_button']").hide();
 $('#dialogContent').dialog({
   bgiframe: true,
   modal:    true,
-  buttons:  { 
+  buttons:  {
     "<%= I18n.t('application.general.send') %>"  : function() { $('#new_report_form').submit(); },
     "<%= I18n.t('application.general.cancel') %>": function() { $(this).dialog('close'); }
   },
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
-  title:    "TITLE"
+  title:    "<%= I18n.t('users.reports.new.title') %>"
 });
-

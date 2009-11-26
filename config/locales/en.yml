@@ -257,8 +257,11 @@ en:
 
     # Reports section
     reports:
+      new:
+        title:  "Report user"
+        text:   "<p>Please report users with offensive, unethaical or illegal content to our administrative team.</p><p>We will react as soon as possible.</p>"
       messages:
-        created: "Thank you for your message. We have notified an administrator to check the reported issue."
+        created: "Thank you for your message. An administrator was notified to check the reported user."
 
   # ---------------
   # Connect section
