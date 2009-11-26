@@ -120,6 +120,7 @@
   color: #21587f;
   display: block;
   width: 375px;
+  overflow: hidden;
 }
 
 .header_block li .value a {
@@ -145,6 +146,7 @@
   padding: 2px !important;
   display: inline-block !important;
   vertical-align: top;
+  overflow: hidden;
 }
 
 .header_block input[type="text"] {

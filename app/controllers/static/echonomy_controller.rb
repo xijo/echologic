@@ -3,7 +3,7 @@ class Static::EchonomyController < ApplicationController
   # echonomy - The Values
   def show
     respond_to do |format|
-      format.html { render :partial => 'index', :layout => 'static' }
+      format.html { render :partial => 'show', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -31,5 +31,5 @@ class Static::EchonomyController < ApplicationController
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
-  
+
 end

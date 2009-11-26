@@ -17,7 +17,11 @@
     </li><br/>
     <li>
       <span class="label"><%= Profile.human_attribute_name(:gender) %></span>
-      <span class="value"><%=h @profile.localized_gender %></span>
+      <% unless @profile.localized_gender.empty? %>
+        <span class="value"><%=h @profile.localized_gender %></span>
+      <% else %>
+        <br/>
+      <% end %>
     </li>
     <li>
       <span class="label"><%= Profile.human_attribute_name(:location) %></span>

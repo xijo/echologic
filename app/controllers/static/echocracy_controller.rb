@@ -1,9 +1,9 @@
 class Static::EchocracyController < ApplicationController
-  
+
   # echocracy - The Benefits / The Actors
   def show
     respond_to do |format|
-      format.html { render :partial => 'index', :layout => 'static' }
+      format.html { render :partial => 'show', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end

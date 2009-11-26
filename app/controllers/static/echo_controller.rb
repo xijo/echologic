@@ -3,7 +3,7 @@ class Static::EchoController < ApplicationController
   # echo - The Project
   def show
     respond_to do |format|
-      format.html { render :partial => 'index', :layout => 'static' }
+      format.html { render :partial => 'show', :layout => 'static' }
       format.js { render :template => 'layouts/tabContainer' }
     end
   end
@@ -15,7 +15,7 @@ class Static::EchoController < ApplicationController
       format.js { render :template => 'layouts/tabContainer' , :locals => { :menu_item => 'echo' } }
     end
   end
-  
+
   # echo - Discuss
   def discuss
     respond_to do |format|
@@ -39,7 +39,7 @@ class Static::EchoController < ApplicationController
       format.js { render :template => 'layouts/tabContainer' , :locals => { :menu_item => 'echo', :submenu_item => 'act' } }
     end
   end
-  
+
   # echo - echo on waves
   def echo_on_waves
     respond_to do |format|
