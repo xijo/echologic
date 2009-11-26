@@ -83,7 +83,7 @@ module StatementHelper
     type = 'Question' if parent.nil?
     type ||= parent.class.expected_children.first.to_s
     type_display_name = type.constantize.display_name
-    link_to(I18n.t("discuss.statement.create_a_new", :type => type_display_name),
+    link_to(I18n.t("discuss.statements.create_link", :type => type_display_name),
             new_child_statement_url(parent, type),
             :id => "create_#{type.underscore}_link", :class => "ajax header_button text_button create_statement_button #{create_statement_class(type)}")
   end
@@ -94,7 +94,7 @@ module StatementHelper
   end
 
   def create_question_link_for(category)
-    link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value))
+    link_to(I18n.t("discuss.statements.create_link", :type => Question.display_name), new_question_url(:category => category.value))
   end
 
   def edit_statement_link(statement)
@@ -123,18 +123,20 @@ module StatementHelper
 
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
   def supporter_ratio_bar(statement,context=nil)
-    tooltip = I18n.t('discuss.statement.ratio_bar_tooltip', :progress => statement.ratio, :supporters => statement.supporter_count)
-    val =  "<span id='ratiobar#{context}_#{statement.id}' class='ttLink ratiobar ratiobar_#{context}' title='#{tooltip}'></span>"
-    val += "<script type='text/javascript'>$('#ratiobar#{context}_#{statement.id}').progressbar({value: #{statement.ratio != 0 ? statement.ratio : 1}});</script>"
-    val
+    tooltip = I18n.t('discuss.statements.ratio_bar_tooltip', :progress => statement.ratio, :supporters => statement.supporter_count)
+    val = "<span class='ratiobar ttLink' title='#{tooltip}' alt='#{statement.ratio}'></span>"
   end
 
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
   # TODO: find out why statement.question? works, but not statement.parent.question? or deprecate statement.question?
   def statement_context_line(statement)
-    ret = link_to(statement_icon(statement)+statement.title, url_for(statement))
+    ret = link_to(statement_icon(statement)+statement.title, url_for(statement), :class => 'ajax')
     ret << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
     return ret
+  end
+
+  def statement_dom_id(statement)
+    "#{statement.parent.class.name.downcase}_#{statement.id}"
   end
 
 end

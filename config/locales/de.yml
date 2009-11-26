@@ -290,7 +290,18 @@ de:
       empty:           'Ihre Suche hatte keine Ergebnisse. Bitte verändern Sie Ihre Angaben.'
       no_concernments: 'Das Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
 
+  # ---------------
+  # Discuss section
+  # ---------------
+
+  discuss:
+    statements:
+      create_link: 'Neue Antwort erstellen'
+      ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
+
+  # ------------------
   # Feedback resources
+  # ------------------
   feedback:
     new:
       title: Feedback
@@ -457,10 +468,6 @@ de:
       not_active:         "Ihr Zugang wurde noch nicht freigeschaltet. Überprüfen Sie bitte Ihren Posteingang."
       must_be_logged_in:  "Sie müssen eingeloggt sein, um diese Seite zu sehen."
       must_be_logged_out: "Sie müssen ausgeloggt sein, um diese Seite zu sehen."
-
-  discuss:
-    statement:
-      ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
 
     attributes:
       user_session:

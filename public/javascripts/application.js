@@ -70,6 +70,16 @@ function bindAjaxClickEvents() {
     return false;
   });
 
+  $(".ajax_put").live("click", function() {
+    $.ajax({
+      url:      this.href,
+      type:     'post',
+      dataType: 'script',
+      data:   { '_method': 'put' }
+    });
+    return false;
+  });
+
 }
 
 /* If JS is enabled hijack staticMenuButtons to do AJAX requests. */

@@ -1,5 +1,13 @@
 <% statement ||= @statement %>
 
+<% url_options = { :controller => statement.class.name.underscore.pluralize, :id => statement.id } %>
+
 <div id="discuss_sidebar">
-  <%= echo_button(statement) %>
+
+  <% unless current_user.supported?(statement) %>
+    <%= link_to image_tag("page/discuss/echo.png"), url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button' %>
+  <% else %>
+    <%= link_to image_tag("page/discuss/unecho.png"), url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button' %>
+  <% end %>
+
 </div>

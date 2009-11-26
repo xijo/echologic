@@ -283,6 +283,15 @@ en:
       empty:           'No members found. Please change your search criteria.'
       no_concernments: "This member doesn't have any concernments or competences, yet."
 
+  # ---------------
+  # Discuss section
+  # ---------------
+
+  discuss:
+    statements:
+      create_link: 'Create statement'
+      ratio_bar_tooltip: 'This argument has {{progress}}% agreement ({{supporters}} supporter).'
+
   # Feedback resources
   feedback:
     new:

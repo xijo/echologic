@@ -42,7 +42,7 @@ en:
 
       # discuss: de.seo.title.discuss
       discuss:
-        roadmap: 'echologic - Roadmap for Discuss'        
+        roadmap: 'echologic - Roadmap for Discuss'
 
       # connect: de.seo.title.connect
       connect:
@@ -52,7 +52,7 @@ en:
       # act: de.seo.title.act
       act:
         roadmap: 'echologic - Roadmap for Act'
-        
+
       # my_echo: de.seo.title.my_echo
       my_echo:
         roadmap: 'echologic - Roadmap for My echo'
@@ -62,6 +62,10 @@ en:
       # my_echo: de.seo.title.admin
       admin:
         show: 'echologic - Admin Bereich'
+
+      # questions:
+      questions:
+        category: 'echologic - Discuss'
 
     meta:
       description: |-

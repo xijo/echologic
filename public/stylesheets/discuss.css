@@ -1,5 +1,8 @@
 #context {
-  margin: 0px 0px 12px 125px;
+  margin:     0px 0px 12px 125px;
+  background: #F77;
+  min-width:  700px;
+  float:      left;
 }
 
 
@@ -14,16 +17,11 @@
   background: #ff0;
 }
 
-#context {
-  background: #F77;
-  min-width:  700px;
-  float:      left;
-}
-
 #children {
   background: #77F;
   min-width:  700px;
   float:      left;
+}
 
 #sidebar {
   float:left;
@@ -32,11 +30,7 @@
   border-right:2px solid lightgrey;
 }
 
-#statement_main {
-}
-
 #summary {
-  margin: 0px 0px 25px 125px;
   background: #f0f;
   float:      left;
 }
@@ -46,14 +40,11 @@
 }
 
 .create_statement_button {
-  -moz-background-clip:border;
-  -moz-background-inline-policy:continuous;
-  -moz-background-origin:padding;
   display:inline-block;
   margin-top:-42px;
   padding-left:34px !important;
   height:32px;
-  line-height: 31px;:32px;
+  line-height: 32px;
 }
 
 .create_question_button {
@@ -83,19 +74,21 @@
   color: #21587f !important;
 }
 
+
 .ratiobar {
-  height:9px !important;
-  width:130px;
-  display:inline-block;
-  margin-left:10px;
+  height:       9px !important;
+  width:        130px;
+  min-width:    130px;
+  display:      inline-block;
+  margin-left:  10px;
 }
 
 .ratiobar_context {
-  height:14px !important;
-  width:200px;
-  float:right;
-  margin-right:25px;
-  margin-top:15px;
+  height:       14px !important;
+  width:        200px;
+  float:        right;
+  margin-right: 25px;
+  margin-top:   15px;
 }
 
 .edit_statement_button {

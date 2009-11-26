@@ -2,6 +2,9 @@ class StatementsController < ApplicationController
   helper :echo
   include EchoHelper
 
+#  protect_from_forgery :except => [:echo, :unecho]
+
+
   # remodelling the RESTful constraints, as a default route is currently active
   verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
@@ -31,7 +34,7 @@ class StatementsController < ApplicationController
   end
 
   def category
-    @category = Tag.find_by_value(params[:id])
+    @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
     @statements = statement_class.from_category(params[:id])
     render :template => 'questions/index'
@@ -54,7 +57,7 @@ class StatementsController < ApplicationController
     current_user.supported!(@statement)
     respond_to do |format|
       format.html { redirect_to @statement }
-      format.js   { replace_container('echo_button', echo_button(@statement)) }
+      format.js   { replace_container('discuss_sidebar', :partial => 'statements/sidebar') }
     end
   end
 
@@ -64,7 +67,7 @@ class StatementsController < ApplicationController
     current_user.echo!(@statement, :supported => false)
     respond_to do |format|
       format.html { redirect_to @statement }
-      format.js   { replace_container('echo_button', echo_button(@statements)) }
+      format.js   { replace_container('discuss_sidebar', :partial => 'statements/sidebar') }
     end
   end
 

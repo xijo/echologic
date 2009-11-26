@@ -1,5 +1,6 @@
 module EchoHelper
 
+  # TODO depricated
   def echo_button(statement)
     url_options = { :controller => statement.class.name.underscore.pluralize, :id => statement.id }
     unless current_user.supported?(statement)
