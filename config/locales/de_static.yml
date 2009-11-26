@@ -34,7 +34,8 @@ de:
         users:
           new: 'Ihr echo - echologic beitreten'
         activations:
-          create: 'Freischaltung des Zugangs zu echologic'
+          new: Ihr echo - Freischaltung des Zugangs zu echologic
+          create: 'Ihr echo - Freischaltung des Zugangs zu echologic'
         password_resets:
           new: 'Ihr echo - Neues Passwort anfordern'
           edit: 'Ihr echo - Neues Passwort setzen'

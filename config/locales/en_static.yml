@@ -35,7 +35,8 @@ en:
         users:
           new: 'Your echo - Join echologic'
         activations:
-          create: 'Activate your echologic account'
+          new: Your echo - Activate your echologic account
+          create: 'Your echo - Activate your echologic account'
         password_resets:
           new: 'Your echo - Require New Password'
           edit: 'Your echo - Set New Password'
