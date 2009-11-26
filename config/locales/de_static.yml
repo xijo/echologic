@@ -399,14 +399,15 @@ de:
           <p>
           Um die Grenzen einzelner Portale zu überwinden, verfolgt echo ein <strong>plattformübergreifendes Konzept</strong>.
           Relevante Diskussionen und Aktionen von echo können auf anderen Internetseiten und Blogs dargestellt und
-          dort bearbeitet werden. Auf diese Weise erweitert echo die Funktionalität anderer Plattformen und schafft,
-          <strong>echte Synergien</strong> statt lähmender Konkurrenzsituationen. So bündelt echo erstmals sämtliche Kräfte des
+          dort bearbeitet werden. Auf diese Weise erweitert echo die Funktionalität anderer Plattformen und schafft
+          <strong>echte Synergien</strong>, statt lähmender Konkurrenzsituationen. So bündelt echo erstmals sämtliche Kräfte des
           bürgerlichen Engagements im Internet und ermöglicht die Entstehung einer breiten gesellschaftlichen <strong>Welle des Wandels</strong>.
           </p><p>
           Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit.
           Diese open source Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit,
           sondern schafft auch die Grundlage für einen sicheren und plattformübergreifenden Austausch von Diskussionen,
-          Profilen und Aktionen zwischen öffentlichen und eigenen organisationsinternen oder privaten echo Servern.
+          Profilen und Aktionen. Die dabei entstehenden Daten können sowohl auf die öffentlichen als auch auf organisationsinternen und privaten
+          echo Servern gelagert werden und zwischen einander problemlos ausgetauscht werden.
           </p><p>
           Auf der Basis des innovativen Konzepts von echo und der bahnbrechenden Technologie von Google Wave, legt
           <strong>echo on waves</strong> die Grundlage für die gemeinsame Entwicklung eines der ambitioniertesten
@@ -703,14 +704,14 @@ de:
       text1: |
         Liebe(r) {{name}},
 
-        Danke für Ihre Registrierung auf echologic. Bitte aktivieren Sie Ihren Zugang über den unten stehenden Link.
+        vielen Dank, dass Sie sich auf echologic angemeldet haben. Bitte aktivieren Sie Ihren Zugang über den unten stehenden Link.
       text2: |
-        Sollte dieser Link nicht funktionieren, kopieren Sie bitte den Link in die Adressleiste Ihres Browsers einzufügen.
+        Sollte dieser Link nicht funktionieren, kopieren Sie bitte den Link in die Adressleiste Ihres Browsers.
 
         Sollten Sie weitere Schwierigkeiten mit Ihrem echologic Zugang haben, zögern Sie bitte nicht uns jederzeit unter
         support@echologic.org zu kontaktieren.
 
-        Wir freuen uns sehr auf ein baldiges Wiedersehen auf echologic,
+        Wir freuen uns sehr auf ein baldiges Treffen auf echologic,
 
         Ihr echo Team
 

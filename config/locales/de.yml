@@ -206,9 +206,8 @@ de:
     web_profiles:
       title: Web Adressen
       guide: |
-        Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, einige Ihrer Kontaktdaten und im
-        Internet bestehenden Profile hier einzutragen.<br/>
-        <strong>ACHTUNG</strong>: alle hier eingetragen Informationen sind erstmal für alle echologic Mitglieder ersichtlich.
+        Indem Sie hier Ihre Kontaktdaten eintragen, geben Sie anderen Nutzern die Möglichkeit, sich ein Bild von Ihnen zu machen und Sie zu kontaktieren.<br/>
+        <strong>ACHTUNG</strong>: Alle hier eingetragen Informationen sind vorerst für <strong>alle</strong> Mitglieder von echologic zu sehen.
       type: Art der Adresse
       address: Web Adresse
       sorts:
@@ -227,7 +226,7 @@ de:
       guide: |
         Wir alle stehen mit den <strong>verschiedenen Facetten</strong> unserer Umwelt auf unterschidliche Weise in Verbindung.
         Von einigen Umständen können wir selbst betroffen sein und brauchen die Hilfe Anderer. In anderen Bereichen
-        engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir Fachwissen, in anderen repräsentieren wir
+        engagieren wir uns und bieten selbst Hilfe an. In bestimmten Bereichen haben wir Fachwissen, in anderen repräsentieren wir
         möglicherweise andere Menschen und fällen für sie Entscheidungen. echo hilft Betroffenen und Gleichgesinnten mit
         <strong>sich ergänzenden Kompetenzen</strong> schnell und einfach zusammen zu finden.<br/>
         Wie würden Sie <strong>Ihre Betroffenheit und Ihre Kompetenzen in Schlagworten (sog. Tags)</strong> beschreiben?
@@ -293,7 +292,7 @@ de:
       actions:
         report: "Melden"
     messages:
-      empty:           'Ihre Suche hatte keine Ergebnisse. Bitte verändern Sie Ihre Angaben.'
+      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit einem anderen Suchbegriff.'
       no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
       no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
@@ -427,8 +426,8 @@ de:
               invalid: 'Sie haben sich bei Ihrer E-Mail Adresse vertippt. Bitte versuchen Sie es erneut.'
 
       messages:
-        blank: '{{attribute}} darf nicht leer sein.'
-        taken: 'Wird bereits verwendet.'
+        blank: '{{attribute}} muss ausgefüllt werden.'
+        taken: 'Ihre Wunschangabe wird leider bereits schon verwendet.'
         too_short: '{{attribute}} ist zu kurz.'
         invalid: '{{attribute}} hat ein falsches Format.'
         confirmation: '{{attribute}} muss übereinstimmen.'
@@ -438,7 +437,7 @@ de:
         header:
           one: "Ein Feld wurde nicht richtig ausgefüllt."
           other: "{{count}} Felder wurden nicht richtig ausgefüllt."
-        body: "Bitte überprüfen Sie folgendes:"
+        body: "Bitte überprüfen Sie Ihre Eingaben:"
 
     attributes:
       profile:
