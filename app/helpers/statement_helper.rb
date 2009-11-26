@@ -95,7 +95,7 @@ module StatementHelper
   end  
   
   def create_question_link_for(category)
-    link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value)) if current_user.has_role?(:editor)
+    link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value), :class=>'statement_link question_link') if current_user.has_role?(:editor)
   end
   
   def edit_statement_link(statement)

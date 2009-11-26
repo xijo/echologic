@@ -1,7 +1,7 @@
 <% content_for :submenu, tabnav(:discuss) %>
-<ul>
+<ul class="question_links">
   <% @statements.each do |statement| -%>
-    <li><%= link_to statement.document.title, question_url(statement), :class => 'question_link' %></li>
+    <li><%= link_to statement.document.title, question_url(statement), :class => 'statement_link question_link' %></li>
   <% end -%>
 </ul>
 <div id="new_statement">

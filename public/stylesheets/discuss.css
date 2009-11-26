@@ -25,10 +25,6 @@
   border-bottom: 1px solid grey;
 }
 
-#children_list .ratiobar {
-    margin-left:40px;
-}
-
 .create_statement_button {
   -moz-background-clip:border;
   -moz-background-inline-policy:continuous;
@@ -113,3 +109,6 @@ a img {
   border:0;
 }
 
+.question_links {
+  list-style:none;
+}
