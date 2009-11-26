@@ -110,7 +110,6 @@ class Users::UsersController < ApplicationController
     respond_to do |format|
       flash[:notice] = "User removed, Sir!"
       format.html { redirect_to connect_path }
-      format.xml  { head :ok }
     end
   end
 

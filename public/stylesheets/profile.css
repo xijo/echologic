@@ -37,6 +37,7 @@
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
+  cursor: default;
 }
 
 #concernment_container form input[type='text'] {
@@ -95,6 +96,7 @@
   line-height: 24px;
   display: block;
   vertical-align: middle;
+  cursor: default;
 }
 
 .two_columns_block li {
@@ -103,10 +105,12 @@
   width: 400px;
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 8px;
 }
 
 .header_block li .label {
   color: #7bb031;
+  font-size: 15px;
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
@@ -127,6 +131,7 @@
   font-size: 13px;
   line-height: 18px;
   margin: 10px 0;
+  cursor: default;
 }
 
 .header_button {
@@ -139,6 +144,7 @@
   width: 195px !important;
   padding: 2px !important;
   display: inline-block !important;
+  vertical-align: top;
 }
 
 .header_block input[type="text"] {

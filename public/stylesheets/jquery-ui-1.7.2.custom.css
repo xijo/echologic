@@ -82,7 +82,7 @@
 .ui-widget { font-family: "Lucida Sans",Arial,Helvetica,sans-serif; font-size: 1.1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: "Lucida Sans",Arial,Helvetica,sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #bac8d0; background: #fff url() 50% top repeat-x; color: #21587f; }
-.ui-widget-content a { color: #21587f; text-decoration: underline; }
+.ui-widget-content a { color: #21587f; }
 .ui-widget-content a:hover { text-decoration: underline; }
 .ui-widget-header { border: 1px solid #bac8d0; background: #7ab031 url(../images/jquery-ui/ui-bg_gloss-wave_85_9fda58_500x100.gif) 50% 50% repeat-x; color: #fff; font-weight: bold; }
 .ui-widget-header a { color: #222222; }
@@ -515,7 +515,7 @@
 	list-style: none;
 	position: relative;
 	padding: 0 0 0 10px;
-	margin: 0 0 10px 0;
+	margin: 0 0 12px 0;
 	border: 0;
 	background: url(../images/jquery-ui/separator_with_shadow.png) bottom center no-repeat;
 	}
@@ -540,6 +540,7 @@
 	margin-left: 18px;
 	line-height: 38px;
 	background: url(../images/jquery-ui/tab_sub_off_02.png) no-repeat right bottom;
+  font-size: 15px;
 	}
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
@@ -550,8 +551,8 @@
 	}
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
-	cursor: text;
-		background: url(../images/jquery-ui/tab_sub_on_02.png) no-repeat right bottom;
+	cursor: default;
+	background: url(../images/jquery-ui/tab_sub_on_02.png) no-repeat right bottom;
 	}
 
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
