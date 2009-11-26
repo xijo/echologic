@@ -196,10 +196,10 @@ en:
 
     # Memberships section
     memberships:
-      title: Organisations
+      title: Activities
       guide: Here you can enter your voluntary, professional and other kinds of activities in different organisations.
       organisation: Organisation
-      position: Rolle
+      position: My role
 
     # Web profiles section
     web_profiles:
@@ -336,6 +336,11 @@ en:
         location:   Location
         about_me:   About Me
         motivation: Thoughts about echo
+        memberships: Activities
+      report:
+        reason:     'Reason'
+      web_profile:
+        location:   'Address'
 
   authlogic:
     error_messages:

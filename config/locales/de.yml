@@ -197,10 +197,10 @@ de:
 
     # Memberships section
     memberships:
-      title: Organisationen
-      guide:  Sie haben hier die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
+      title: Tätigkeiten
+      guide:  Sie haben hier die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Tätigkeiten in verschiedenen Organisationen anzugeben.
       organisation: Organisation
-      position: Rolle
+      position: Meine Rolle
 
     # Web profiles section
     web_profiles:
@@ -448,6 +448,7 @@ de:
         location:   Ort
         about_me:   Über mich
         motivation: Gedanken über echo
+        memberships: Tätigkeiten
       report:
         reason:     'Grund'
       web_profile:

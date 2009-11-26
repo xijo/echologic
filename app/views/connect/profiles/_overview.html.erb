@@ -1,24 +1,25 @@
 <ul>
 
-  <% # Hash with the symbols used for attribute i18n and getting the content of the profile.
+  <li id="memberships">
+    <span class="label"><%= Profile.human_attribute_name(:memberships) %></span>
+    <% memberships = "" %>
+    <% for membership in @profile.memberships do %>
+      <% memberships.concat membership.organisation %>
+      <% memberships.concat ' - ' + membership.position + '<br/>' %>
+    <% end %>
+    <span class="value"><%= memberships %></span>
+  </li>
+  <br/>
 
-  attr_hash = [[:full_name, :full_name],
-                  [:location, :location],
-                  [:gender, :localized_gender],
-                  [:about_me, :about_me],
-                  [:motivation, :motivation] ] %>
+  <li>
+    <span class="label"><%= Profile.human_attribute_name(:about_me) %></span>
+    <span class="value"><%=h @profile.about_me %></span>
+  </li>
 
-  <% attr_hash.each do |label, method| %>
-    <li>
-      <span class="label"><%= Profile.human_attribute_name(label) %></span>
-      <%=h @profile.send(method) %>
-    </li>
-  <% end %>
+  <li>
+    <span class="label"><%= Profile.human_attribute_name(:motivation) %></span>
+    <span class="value"><%=h @profile.motivation %></span>
+  </li>
 
 </ul>
 
-<div>
-  <% for membership in @profile.memberships do %>
-    <%=h membership.organisation %> <%=h membership.position %>
-  <% end %>
-</div>

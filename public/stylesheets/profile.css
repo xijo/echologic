@@ -105,10 +105,12 @@
   width: 400px;
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 8px;
 }
 
 .header_block li .label {
   color: #7bb031;
+  font-size: 15px;
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
