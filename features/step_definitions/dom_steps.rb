@@ -1,8 +1,12 @@
 #
 When /^I follow the "([^\"]*)" link within the "([^\"]*)" (.*)$/ do |link, selector, container|
-  within "##{selector.downcase.strip.gsub(' ', '_')}_#{container.strip.downcase}" do
-    click_link "#{link.downcase.gsub(' ', '_')}_link"
+  within "##{selector.strip.underscore}_#{container.strip.downcase}" do
+    click_link "#{link.strip.underscore}_link"
   end
+end
+
+When /^I follow the "([^\"]*)" link$/ do |name|
+  click_link "#{name.underscore}_link"
 end
 
 When /^I press the "([^\"]*)" button within the "([^\"]*)" (.*)$/ do |button, selector, container|

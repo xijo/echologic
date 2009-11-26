@@ -5,9 +5,11 @@
 <div id="sidebar">
   <%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
 </div>
-<div id="summary">
-  <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
-</div>
-<div id="children">
-  <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
+<div id="statement_main">
+  <div id="summary">
+    <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
+  </div>
+  <div id="children" class="discuss_header_block">
+    <%= render :partial => 'statements/children', :locals => {:statements => @statements, :statement => @statement }%>
+  </div>
 </div>

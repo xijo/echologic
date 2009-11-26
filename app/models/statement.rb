@@ -98,7 +98,7 @@ class Statement < ActiveRecord::Base
   end
   
   def self.display_name
-    self.name.underscore.gsub(/_/,' ').capitalize
+    self.name.underscore.gsub(/_/,' ').split(' ').each{|word| word.capitalize!}.join(' ')
   end
   
   def title

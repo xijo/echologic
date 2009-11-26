@@ -15,7 +15,7 @@ module NavigationHelpers
     when /the start page/
       root_path
     when /the connect page/
-      '/connect/profiles'
+      connect_path
     when /^create a question$/
       new_question_path(:category => 'EchonomyJAM')
     when /^the question$/
@@ -26,7 +26,7 @@ module NavigationHelpers
       question_proposal_path(@question,@proposal)
     when /discuss index/i
       questions_url
-      
+
     # Add more mappings here.
     # Here is a more fancy example:
     #

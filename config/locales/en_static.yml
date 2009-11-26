@@ -358,11 +358,12 @@ en:
           </p>
 
         possible_actions: |
-          <li>digitally signed e-petitions,</li>
-          <li>organisation of referenda,</li>
-          <li>organization of demonstrations, boycotts and collective legal actions,</li>
-          <li>formation of national and international organizations,</li>
-          <li>any kind of project with a commonly defined goal (e.g. the formation of civil movements,
+          <li>online signed <strong>e-petitions</strong>,</li>
+          <li>organisation of <strong>referenda</strong>,</li>
+          <li>organization of <strong>citizen conferences, demonstrations</strong>, boycotts and collective legal actions</li>
+          <li>formation of national and international <strong>NGOs</strong> (non-governmental organizations),</li>
+          <li>formation of <strong>social ventures</strong> (social business and social entrepreneurship)</li>
+          <li><strong>any kind of project</strong> with a commonly defined goal (e.g. the formation of civil movements,
           a day nursery in the neighborhood or a European day of bicycling).</li>
 
         text_middle: |
@@ -376,8 +377,8 @@ en:
           <p>
           <u>For example:</u> 20 000 Bavarian citizens voted against nuclear power – a number large enough to initiate a
           referendum. In a moment, all voters receive a message encouraging them to organize the referendum.
-          Following the link included in the message, the users find themselves in a perfectly equipped
-          virtual action space, providing all tools and information to collectively plan and organize the action.
+          Following the link included in the message, the users find themselves in a <strong>fully equipped
+          virtual action space</strong>, providing all tools and information to collectively plan and organize the action.
           </p><p>
           In order to facilitate an effective collaboration, echo provides participants of an action with all
           <strong>necessary information</strong> and an <strong>appropriate toolset</strong>. Besides the
