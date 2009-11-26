@@ -173,13 +173,13 @@ en:
           <p>
           Currently, our imprint is only available in German.
           </p><p>
-          Dienstanbieter dieser Seite ist der <strong>echo source e.V</strong> (in Gründung) vertreten durch
-          László Papp. Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
+          Dienstanbieter dieser Seite ist der <strong>echo source e.V.</strong><br/>
+          Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
           </p><p>
-          <strong>Ladungsfähige Anschrift</strong> gemäß TMG<br/>
-          László Papp<br/>
-          Pflugstr. 15<br/>
-          10115 Berlin<br/>
+          <strong>Ladungsfähige Anschrift</strong> gemäß TMG:<br/>
+          echo Source e.V. - c/o Jan Linhart<br/>
+          Freibadstr. 1<br/>
+          81543 München<br/>
           E-mail: <a href="mailto:team@echologic.org">team@echologic.org</a><br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
@@ -188,7 +188,11 @@ en:
           Betreiber der anderen Website verantwortlich. Trotz der Überprüfung der Inhalte im gesetzlich
           gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw.
           der verlinkten Seite ablehnen.
+          </p><p>
+          Currently, the <strong>statute of echo Source e.V.</strong> is only available as a PDF document in German.
           </p>
+
+        open_statute: Check out the document anyway!
 
       # Static content for data privacy
       data_privacy:
