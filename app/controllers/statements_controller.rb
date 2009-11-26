@@ -18,8 +18,8 @@ class StatementsController < ApplicationController
   include StatementHelper
   
   access_control do 
-    allow :editor, :only => [:edit, :update]
-    allow logged_in, :except => [:edit, :update]
+    allow :editor, :only => [:edit, :update, :new, :create]
+    allow logged_in, :except => [:new, :create, :edit, :update]
   end
   
   def index

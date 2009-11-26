@@ -80,6 +80,7 @@ module StatementHelper
   ##
   
   def create_statement_link(parent=nil)
+    return unless current_user.has_role?(:editor)
     type = 'Question' if parent.nil?
     type ||= parent.class.expected_children.first.to_s
     type_display_name = type.constantize.display_name
@@ -94,7 +95,7 @@ module StatementHelper
   end  
   
   def create_question_link_for(category)
-    link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value))
+    link_to(I18n.t("discuss.statement.create_a_new", :type => Question.display_name), new_question_url(:category => category.value)) if current_user.has_role?(:editor)
   end
   
   def edit_statement_link(statement)

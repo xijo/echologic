@@ -42,7 +42,7 @@ class ConnectController < ApplicationController
       select distinct p.*, u.email
       from
         profiles p
-        LEFT JOIN `users` u      ON u.id = p.user_id
+        LEFT JOIN users u      ON u.id = p.user_id
         LEFT JOIN memberships m  ON u.id = m.user_id
         LEFT JOIN concernments c ON (u.id = c.user_id)
         LEFT JOIN tags t         ON (t.id = c.tag_id)

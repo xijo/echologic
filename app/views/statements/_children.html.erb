@@ -4,7 +4,7 @@
 <% unless statements.empty? && statement.class.expected_children.empty? %>
   <h2><%=children_box_title(statement.class.name) if statements.any?%></h2>
   <div id="new_statement">
-    <%= create_statement_link(statement) if statement.class.expected_children.any? %>
+    <%= create_statement_link(statement) if statement.class.expected_children.any? and current_user.has_role?(:editor) %>
   </div>
   <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
 <% end %>
