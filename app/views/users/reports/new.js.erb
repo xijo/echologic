@@ -10,6 +10,7 @@ $('#dialogContent').html(content);
 $("input[alt='report_button']").hide();
 
 $('#dialogContent').dialog({
+  title:    "<%= I18n.t('users.reports.new.title') %>",
   bgiframe: true,
   modal:    true,
   buttons:  {
@@ -17,6 +18,7 @@ $('#dialogContent').dialog({
     "<%= I18n.t('application.general.cancel') %>": function() { $(this).dialog('close'); }
   },
   close:    function(event, ui) { $(this).dialog('destroy'); },
-  width:    650,
-  title:    "<%= I18n.t('users.reports.new.title') %>"
+  width:    600,
+  height:   340,
+  resizable: false
 });

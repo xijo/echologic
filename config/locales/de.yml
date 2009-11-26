@@ -265,7 +265,7 @@ de:
     reports:
       new:
         title:  "Benutzer melden"
-        text:   "<p>Bitte melden sie uns Benutzer mit beleidigendem, unethischem oder illegalem Inhalt.</p><p>Wir werden uns schnellstmöglich um Ihren Hinweis kümmern."
+        text:   "<p>Hier können Sie uns Benutzer melden, die in ihrem Profil beleidigenden, unethischen oder illegalen Inhalt eingetragen haben.</p><p>Wir werden uns schnellstmöglich um Ihren Hinweis kümmern.<p>"
       messages:
         created: "Danke für Ihre Mitteilung. Ein Administrator wurde benachrichtigt."
 

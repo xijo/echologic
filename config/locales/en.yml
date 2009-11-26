@@ -259,7 +259,7 @@ en:
     reports:
       new:
         title:  "Report user"
-        text:   "<p>Please report users with offensive, unethaical or illegal content to our administrative team.</p><p>We will react as soon as possible.</p>"
+        text:   "<p>Here you are able to report users with offensive, unethaical or illegal content to our administrative team.</p><p>We will react as soon as possible.</p>"
       messages:
         created: "Thank you for your message. An administrator was notified to check the reported user."
 
