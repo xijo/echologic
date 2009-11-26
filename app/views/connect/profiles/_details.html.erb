@@ -4,7 +4,7 @@
 <% @profile = profile if defined?(profile) %>
 
 <div id="profile_details_container" style="<%= 'display:none' if (defined?(hidden) and hidden) %>">
-  <ul>
+  <ul id="profile_details_tabs">
     <li id="full_name"><%=h @profile.full_name %></li>
 
     <li><a href="#overview"><%= I18n.t('connect.details.tabs.overview') %></a></li>
@@ -27,20 +27,18 @@
     <%= render :partial => 'connect/profiles/avatar' %>
   </div>
 
+  <div id="actions">
+    <%= render :partial => 'connect/profiles/actions' %>
+  </div>
+
   <div id="overview" class="tab_content_container">
     <%= render :partial => 'connect/profiles/overview' %>
   </div>
-
   <div id="concernments" class="tab_content_container">
-    <%= render :partial => 'connect/profiles/concernments' unless @profile.concernments.blank? %>
+    <%= render :partial => 'connect/profiles/concernments' %>
   </div>
-
   <div id="web_profiles" class="tab_content_container">
     <%= render :partial => 'connect/profiles/web_profiles' %>
-  </div>
-
-  <div id="options">
-    <%= render :partial => 'connect/profiles/options' %>
   </div>
 
 </div>

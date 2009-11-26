@@ -12,7 +12,7 @@ en:
       back: Back
       last_name: Last Name
       first_name: First Name
-      undefined: Unknown
+      undefined: Not yet entered
       name: Name
       email: E-Mail
       ok: Ok
@@ -196,10 +196,10 @@ en:
 
     # Memberships section
     memberships:
-      title: Organisations
+      title: Activities
       guide: Here you can enter your voluntary, professional and other kinds of activities in different organisations.
       organisation: Organisation
-      position: Position
+      position: My role
 
     # Web profiles section
     web_profiles:
@@ -227,7 +227,7 @@ en:
         in other areas we engage ourselves and offer help to others. In certain fields we have professional expertise,
         in others we represent other people and make decisions. echo helps like-minded people to
         find each other with <strong>knowledge complementing each other</strong>.<br/>
-        <strong>How would you describe your concernments and competences?</strong>
+        Which <strong>keywords (tags)</strong> would you describe <strong>your concernments and competences</strong> with?
       sorts:
         affected: <strong>Affected</strong> by
         engaged: <strong>Engaged</strong> in
@@ -259,9 +259,9 @@ en:
     reports:
       new:
         title:  "Report user"
-        text:   "<p>Here you are able to report users with offensive, unethaical or illegal content to our administrative team.</p><p>We will react as soon as possible.</p>"
+        text:   "<p>Did you see <strong>offensive, unethical or illegal content?</strong><br/>If so, here you can report the user to our administrative team.</p><p>We will check the issue as soon as possible.</p>"
       messages:
-        created: "Thank you for your message. An administrator was notified to check the reported user."
+        created: "Thank you for your message. An administrator was notified."
 
   # ---------------
   # Connect section
@@ -282,9 +282,12 @@ en:
         overview:     'Overview'
         concernments: 'Competences'
         web_profiles: 'Web Addresses'
+      actions:
+        report: "Report"
     messages:
       empty:           'No members found. Please change your search criteria.'
-      no_concernments: "This member doesn't have any concernments or competences, yet."
+      no_concernments: "This member hasn't defined any concernments and competences, yet."
+      no_web_profiles: "This member hasn't defined any web addresses, yet."
 
   # Feedback resources
   feedback:
@@ -336,6 +339,11 @@ en:
         location:   Location
         about_me:   About Me
         motivation: Thoughts about echo
+        memberships: Activities
+      report:
+        reason:     'Reason'
+      web_profile:
+        location:   'Address'
 
   authlogic:
     error_messages:

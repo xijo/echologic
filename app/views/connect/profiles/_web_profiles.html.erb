@@ -1,7 +1,16 @@
-<% for web_profile in @profile.web_profiles do %>
-  <%= auto_link(sanitize(web_profile.location), :all, :target => '_blank' ) %><br/>
-<% end %>
 
-<% if @profile.web_profiles.empty? %>
-  text: Benutzer hat keine webprofile eingetragen.
-<% end %>
+<% unless @profile.web_profiles.blank? %>
+
+  <% WebProfile.sorts.each do |sort, name| %>
+    <% web_profiles = @profile.web_profiles.find_all_by_sort(sort) %>
+    <% unless web_profiles.blank? %>
+      <span class="label"><%= I18n.t("users.web_profiles.sorts.#{name}") %></span>
+      <span class="values">
+        <%= web_profiles.collect { |wp| auto_link(sanitize(wp.location), :all, :target => '_blank' )}.join(', ') %>
+      </span>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <span class="no_results"><%= I18n.t('connect.messages.no_web_profiles') %></span>
+<% end%>

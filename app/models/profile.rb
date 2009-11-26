@@ -46,7 +46,7 @@ class Profile < ActiveRecord::Base
   # Return the first membership. If none is set return empty-string.
   def first_membership
     return "" if memberships.blank?
-    "#{memberships.first.organisation} (#{memberships.first.position})"
+    "#{memberships.first.organisation} - #{memberships.first.position}"
   end
 
 end
