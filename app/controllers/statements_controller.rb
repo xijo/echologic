@@ -2,9 +2,6 @@ class StatementsController < ApplicationController
   helper :echo
   include EchoHelper
 
-#  protect_from_forgery :except => [:echo, :unecho]
-
-
   # remodelling the RESTful constraints, as a default route is currently active
   verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create

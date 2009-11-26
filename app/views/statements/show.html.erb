@@ -8,9 +8,8 @@
 
 <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
 
-<div id="new_container">
-  <a href="#" onclick="$(this).next().animate(toggleParams, 300);">toggle</a>
-  <%= render :partial => 'statements/new', :locales => {} %>
+<div id="new_statement">
+  <%= create_statement_link(@statement) if @statement.class.expected_children.any? %>
 </div>
 
 
