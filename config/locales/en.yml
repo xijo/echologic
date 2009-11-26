@@ -25,8 +25,8 @@ en:
       upload: Upload
       delete: Delete
       create: Add
-      welcome: "Welcome"
-      all: "All"
+      welcome: Welcome
+      all: All
 
     # Roadmap - Progress
     roadmap:
