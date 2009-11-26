@@ -14,7 +14,7 @@ de:
       name: Name
       first_name: Vorname
       last_name: Nachname
-      undefined: Noch nicht angegeben
+      undefined: Noch nicht eingetragen
       ok: Ok
       or: oder
       save: Speichern
