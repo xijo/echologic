@@ -37,6 +37,7 @@
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
+  cursor: default;
 }
 
 #concernment_container form input[type='text'] {
@@ -95,6 +96,7 @@
   line-height: 24px;
   display: block;
   vertical-align: middle;
+  cursor: default;
 }
 
 .two_columns_block li {
@@ -127,6 +129,7 @@
   font-size: 13px;
   line-height: 18px;
   margin: 10px 0;
+  cursor: default;
 }
 
 .header_button {
