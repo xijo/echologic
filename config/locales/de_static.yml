@@ -33,6 +33,9 @@ de:
       users:
         users:
           new: 'Ihr echo - echologic beitreten'
+        activations:
+          new: Ihr echo - Freischaltung des Zugangs zu echologic
+          create: 'Ihr echo - Freischaltung des Zugangs zu echologic'
         password_resets:
           new: 'Ihr echo - Neues Passwort anfordern'
           edit: 'Ihr echo - Neues Passwort setzen'
@@ -109,7 +112,8 @@ de:
 
         teaser: |
           <p>
-          <strong>echologic</strong> bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und aktiv mitzugestalten!
+          <strong>echologic</strong> bietet Ihnen die Möglichkeit die Entwicklung von echo zu verfolgen und
+          <strong>echo aktiv mitzugestalten</strong>!
           </p><p>
           <strong>echo</strong> ist ein Internetprojekt zur Ermächtigung der Menschen. Unser Ziel ist eine
           <strong>neue Form teilnehmender Demokratie</strong> auf lokalem, regionalem und globalem Niveau zu etablieren.
@@ -695,7 +699,7 @@ de:
   mail:
     # Activation section
     activation:
-      subject: "Freischaltung des Zugangs zu echologic"
+      subject: "Freischaltung Ihres Zugangs zu echologic"
       text1: |
         Liebe(r) {{name}},
 

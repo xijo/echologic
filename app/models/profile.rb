@@ -22,7 +22,7 @@ class Profile < ActiveRecord::Base
 
   # Returns the localized gender
   def localized_gender
-    @@gender[female] || I18n.t('application.general.undefined')
+    @@gender[female] || '' # I18n.t('application.general.undefined')
   end
 
   # Handle attached user picture through paperclip plugin
