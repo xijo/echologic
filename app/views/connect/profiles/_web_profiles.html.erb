@@ -4,7 +4,7 @@
   <% WebProfile.sorts.each do |sort, name| %>
     <% web_profiles = @profile.web_profiles.find_all_by_sort(sort) %>
     <% unless web_profiles.blank? %>
-      <span class="label"><%= I18n.t("users.web_profiles.sorts.#{name}") %></span>
+      <span class="label"><%= WebProfile.get_sort_name sort %></span>
       <span class="values">
         <%= web_profiles.collect { |wp| auto_link(sanitize(wp.location), :all, :target => '_blank' )}.join(', ') %>
       </span>

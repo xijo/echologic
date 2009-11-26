@@ -25,6 +25,11 @@ class WebProfile < ActiveRecord::Base
   # Validate that sort is correct
   validates_inclusion_of :sort, :in => WebProfile.sorts
 
+  # Return the localized value for the given sort key
+  def self.get_sort_name(sort)
+    @@sorts[sort]
+  end
+
   # Validate if location has valid format
   validates_format_of :location, :with => /^((www\.|http:\/\/)([a-z0-9]*\.)+([a-z]{2,3}){1}(\/[a-z0-9]+)*(\.[a-z0-9]{1,4})?)|(([a-z0-9)+[a-z0-9\.\_-]*)@[a-z0-9]{1,}[a-z0-9-\.]*\.[a-z]{2,4})$/i
 
