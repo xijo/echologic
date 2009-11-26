@@ -103,6 +103,11 @@ module StatementHelper
       (current_user.has_role?(:censor) || current_user.is_author?(statement))
   end
   
+  def statement_child_line(statement)
+    ret = link_to(statement.title, url_for(statement), :class=>"statement_link #{statement.class.name.underscore}_link")
+    ret << supporter_ratio_bar(statement)
+  end
+  
   ## CONVENIENCE and UI
     
   def statement_icon(statement, size = :medium)

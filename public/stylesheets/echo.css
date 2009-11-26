@@ -1,0 +1,17 @@
+#echo_button a div {
+  background:url("../images/page/discuss/echo_all.png") 0 0 no-repeat;
+  height:80px;
+  width:80px;
+}
+
+#echo_button a div:hover {
+  background-position: 0 -80px;
+}
+
+#echo_button a.active div { 
+  background-position: 0 -160px;
+}
+
+#echo_button a.active div:hover { 
+  background-position: 0 0px;
+}

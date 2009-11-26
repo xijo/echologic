@@ -58,14 +58,14 @@ class StatementsController < ApplicationController
   def echo
     current_user.supported!(@statement)
     render :update do |page|
-      page.replace('echo_button', echo_button(@statement))
+      page.replace_html('echo_button', echo_button(@statement))
     end
   end
   
   def unecho
     current_user.echo!(@statement, :supported => false)
     render :update do |page|
-      page.replace('echo_button', echo_button(@statement))
+      page.replace_html('echo_button', echo_button(@statement))
     end
   end
   
