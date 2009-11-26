@@ -289,8 +289,14 @@ en:
 
   discuss:
     statements:
-      create_link: 'Create statement'
+      create_link: 'Create question'
+      create_proposal_link: 'Create proposal'
+      create_improvement_proposal_link: 'Create improvement proposal'
       ratio_bar_tooltip: 'This argument has {{progress}}% agreement ({{supporters}} supporter).'
+      types:
+        question:  'Question'
+        proposal:  'Proposal'
+        improvement_proposal: 'Improvement Proposal'
 
   # Feedback resources
   feedback:

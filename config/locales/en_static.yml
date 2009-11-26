@@ -66,6 +66,7 @@ en:
       # questions:
       questions:
         category: 'echologic - Discuss'
+        show:     'echologic - Discuss'
 
     meta:
       description: |-

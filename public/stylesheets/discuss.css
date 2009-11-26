@@ -1,8 +1,13 @@
 #context {
-  margin:     0px 0px 12px 125px;
-  background: #F77;
-  min-width:  700px;
-  float:      left;
+  margin-left: 100px;
+  float:       left;
+  background:  #F77;
+}
+
+#new_container {
+  min-width:   700px;
+  float:       left;
+
 }
 
 
@@ -11,6 +16,7 @@
 }
 
 #discuss_sidebar {
+  clear:      left;
   float:      left;
   height:     250px;
   width:      100px;
@@ -24,9 +30,9 @@
 }
 
 #sidebar {
-  float:left;
-  height:280px;
-  width:110px;
+  float:      left;
+  height:     280px;
+  width:      110px;
   border-right:2px solid lightgrey;
 }
 

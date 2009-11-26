@@ -8,12 +8,11 @@
 
 <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
 
-<% if false %>
 <div id="new_container">
   <a href="#" onclick="$(this).next().animate(toggleParams, 300);">toggle</a>
   <%= render :partial => 'statements/new', :locales => {} %>
 </div>
-<% end %>
+
 
 <script type="text/javascript">
   makeRatiobars();

@@ -79,13 +79,14 @@ module StatementHelper
   ## LINKS
   ##
 
+  # edited: i18n without interpolation, because of language diffs.
   def create_statement_link(parent=nil)
     type = 'Question' if parent.nil?
     type ||= parent.class.expected_children.first.to_s
-    type_display_name = type.constantize.display_name
-    link_to(I18n.t("discuss.statements.create_link", :type => type_display_name),
+    link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(parent, type),
-            :id => "create_#{type.underscore}_link", :class => "ajax header_button text_button create_statement_button #{create_statement_class(type)}")
+            :id => "create_#{type.underscore}_link",
+            :class => "ajax header_button text_button create_statement_button #{create_statement_class(type)}")
   end
 
   # this classname is needed to display the right icon next to the link

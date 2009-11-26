@@ -296,8 +296,14 @@ de:
 
   discuss:
     statements:
-      create_link: 'Neue Antwort erstellen'
+      create_link: 'Neue Frage erstellen'
+      create_proposal_link: 'Neuen Vorschlag erstellen'
+      create_improvement_proposal_link: 'Neuen Verbesserungsvorschlag erstellen'
       ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
+      types:
+        question:  'Frage'
+        proposal:  'Vorschlag'
+        improvement_proposal: 'Verbesserungsvorschlag'
 
   # ------------------
   # Feedback resources
