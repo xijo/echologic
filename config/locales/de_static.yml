@@ -172,13 +172,13 @@ de:
         title: Impressum
         text: |
           <p>
-          Dienstanbieter dieser Seite ist der <strong>echo source e.V.</strong> (in Gründung) vertreten durch
-          László Papp. Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
+          Dienstanbieter dieser Seite ist der <strong>echo source e.V.</strong><br/>
+          Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
           </p><p>
-          <strong>Ladungsfähige Anschrift</strong> gemäß TMG<br/>
-          László Papp<br/>
-          Pflugstr. 15<br/>
-          10115 Berlin<br/>
+          <strong>Ladungsfähige Anschrift</strong> gemäß TMG:<br/>
+          echo Source e.V. - c/o Jan Linhart<br/>
+          Freibadstr. 1<br/>
+          81543 München<br/>
           E-mail: <a href="mailto:team@echologic.org">team@echologic.org</a><br/>
           </p><p>
           <strong>Haftungshinweis</strong>:<br/>
@@ -187,7 +187,11 @@ de:
           Betreiber der anderen Website verantwortlich. Trotz der Überprüfung der Inhalte im gesetzlich
           gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw.
           der verlinkten Seite ablehnen.
+          </p><p>
+          Sie können hier die <strong>Satzung von echo Source e.V.</strong> im PDF Format ansehen.
           </p>
+
+        open_statute: Satzung öffnen!
 
       # data privacy section
       data_privacy:
@@ -406,8 +410,8 @@ de:
           Für die Realisierung dieses Ziels kommt Google und sein neues <strong>Wave Federation Protocol</strong> genau zur richtigen Zeit.
           Diese open source Technologie ermöglicht nicht nur soziale Zusammenarbeit in Echtzeit,
           sondern schafft auch die Grundlage für einen sicheren und plattformübergreifenden Austausch von Diskussionen,
-          Profilen und Aktionen. Die dabei entstehenden Daten können sowohl auf die öffentlichen als auch auf organisationsinternen und privaten
-          echo Servern gelagert werden und zwischen einander problemlos ausgetauscht werden.
+          Profilen und Aktionen. Die dabei entstehenden Daten können sowohl auf öffentlichen als auch auf organisationsinternen und
+          privaten echo Servern gepeichert und zwischen einander ausgetauscht werden.
           </p><p>
           Auf der Basis des innovativen Konzepts von echo und der bahnbrechenden Technologie von Google Wave, legt
           <strong>echo on waves</strong> die Grundlage für die gemeinsame Entwicklung eines der ambitioniertesten
