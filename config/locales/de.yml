@@ -462,7 +462,7 @@ de:
       web_profile:
         location: 'Adresse'
       membership:
-        position: 'Tätigkeit'
+        position: 'Rolle'
 
   authlogic:
     error_messages:
