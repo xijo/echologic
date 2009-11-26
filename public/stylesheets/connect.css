@@ -235,10 +235,12 @@
 #avatar {
   float:left;
   width: 140px;
+  text-align: center !important;
 }
 
 #avatar img {
-  width: 128px;
+  max-width: 128px;
+  max-height: 180px;
   border: 2px solid #7bb031;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
