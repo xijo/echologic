@@ -313,6 +313,11 @@ en:
             email:
               invalid: 'Please enter a valid E-Mail address.'
 
+        user:
+          attributes:
+            email:
+              taken: 'Your e-Mail address is already in use.'
+
       messages:
         blank: '{{attribute}} must not be empty.'
         taken: 'Is already in use.'

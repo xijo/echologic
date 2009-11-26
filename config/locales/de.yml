@@ -426,6 +426,11 @@ de:
             email:
               invalid: 'Sie haben sich bei Ihrer E-Mail Adresse vertippt. Bitte versuchen Sie es erneut.'
 
+        user:
+          attributes:
+            email:
+              taken: 'Die von Ihnen angegebene E-Mail Adresse wird bereits verwendet.'
+
       messages:
         blank: '{{attribute}} darf nicht leer sein.'
         taken: 'Wird bereits verwendet.'
@@ -454,9 +459,11 @@ de:
         motivation: Gedanken über echo
         memberships: Tätigkeiten
       report:
-        reason:     'Grund'
+        reason: 'Grund'
       web_profile:
-        location:   'Adresse'
+        location: 'Adresse'
+      membership:
+        position: 'Tätigkeit'
 
   authlogic:
     error_messages:
@@ -468,5 +475,5 @@ de:
 
     attributes:
       user_session:
-        email: E-Mail
-        password: Passwort
+        email:    'E-Mail'
+        password: 'Passwort'
