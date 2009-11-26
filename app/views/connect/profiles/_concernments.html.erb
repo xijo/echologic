@@ -1,16 +1,15 @@
-<%# Show the concernments of this user. %>
 
 <% Concernment.sorts.each do |sort, name| %>
 
   <% concernments = @profile.concernments.find_all_by_sort(sort) %>
   <% unless concernments.empty? %>
-    <h2><%= I18n.t("users.concernments.sorts.#{name}") %></h2>
-    <div id="concernments_<%= sort %>" style="clear: both;">
+    <span class="label"><%= I18n.t("users.concernments.sorts.#{name}") %></span>
+    <span id="values">
       <%= concernments.collect { |c| c.tag.value }.join(', ') %>
-    </div>
+    </span>
   <% end %>
 <% end %>
 
 <% if @profile.concernments.empty? %>
-  <%= I18n.t('connect.messages.no_concernments') %>
+  <span class="no_results"><%= I18n.t('connect.messages.no_concernments') %></span>
 <% end%>

@@ -144,6 +144,7 @@
   width: 195px !important;
   padding: 2px !important;
   display: inline-block !important;
+  vertical-align: top;
 }
 
 .header_block input[type="text"] {

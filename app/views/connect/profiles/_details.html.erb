@@ -27,8 +27,8 @@
     <%= render :partial => 'connect/profiles/avatar' %>
   </div>
 
-    <div id="options">
-    <%= render :partial => 'connect/profiles/options' %>
+  <div id="actions">
+    <%= render :partial => 'connect/profiles/actions' %>
   </div>
 
   <div id="overview" class="tab_content_container">
@@ -38,7 +38,7 @@
     <%= render :partial => 'connect/profiles/concernments' unless @profile.concernments.blank? %>
   </div>
   <div id="web_profiles" class="tab_content_container">
-    <%= render :partial => 'connect/profiles/web_profiles' %>
+    <%= render :partial => 'connect/profiles/web_profiles' unless @profile.web_profiles.blank? %>
   </div>
 
 </div>

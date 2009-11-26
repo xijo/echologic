@@ -147,6 +147,7 @@
   display:  block;
   margin: 11px 10px 11px 30px;
   position: relative;
+  overflow: hidden;
 }
 
 #profiles_container .profile .avatar_holder {
@@ -300,13 +301,48 @@
   width: 290px;
 }
 
+/* Concerments & Web Profiles */
+#profile_details_container .tab_content_container .no_results {
+  display: block;
+  width: 670px;
+  margin: 0 auto;
+  text-align: center;
+  color: #21587f;
+  font-size: 15px;
+  position: absolute;
+  top: 55px;
+  cursor: default;
+}
 
 /* Actions part */
-#profile_details_container #options {
+#profile_details_container #actions {
   float: right;
   width: 128px;
   min-height: 128px;
   border-left: 1px solid #A8A8A8;
-  padding-left: 20px;
   text-align: center;
+}
+
+#actions .action_button {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+#actions .report_action {
+  background: url(../images/page/icons/report.png) no-repeat scroll 0 0;
+}
+
+#actions .admin_action {
+  background-color: #db4c3d;
+  color: #fff;
+  margin: 0 3px;
+  padding: 3px 9px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+/* Report */
+
+#new_report_form .hidden, #new_report_form .buttons {
+  display: none;
 }
