@@ -34,6 +34,8 @@ en:
       users:
         users:
           new: 'Your echo - Join echologic'
+        activations:
+          create: 'Activate your echologic account'
         password_resets:
           new: 'Your echo - Require New Password'
           edit: 'Your echo - Set New Password'
@@ -107,7 +109,8 @@ en:
 
         teaser: |
           <p>
-          <strong>echologic</strong> offers you the opportunity to follow and actively engage in the evolution of echo.
+          <strong>echologic</strong> offers you the opportunity to follow and actively
+          <strong>engage in the evolution of echo</strong>.
           </p><p>
           <strong>echo</strong> is an internet project for citizen empowerment. Our goal is to establish a
           <strong>new form of participatory democracy</strong> on the very local, as well as on the regional and global level.
