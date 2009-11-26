@@ -15,7 +15,7 @@ module NavigationHelpers
     when /the start page/
       root_path
     when /the connect page/
-      '/connect/profiles'
+      connect_path
 
     # Add more mappings here.
     # Here is a more fancy example:

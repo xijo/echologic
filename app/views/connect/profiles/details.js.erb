@@ -4,14 +4,14 @@ var overview     = "<%= escape_javascript(render(:partial => 'connect/profiles/o
 var concernments = "<%= escape_javascript(render(:partial => 'connect/profiles/concernments')) %>";
 var web_profiles = "<%= escape_javascript(render(:partial => 'connect/profiles/web_profiles')) %>";
 var avatar       = "<%= escape_javascript(render(:partial => 'connect/profiles/avatar')) %>";
-var options      = "<%= escape_javascript(render(:partial => 'connect/profiles/actions')) %>";
+var actions      = "<%= escape_javascript(render(:partial => 'connect/profiles/actions')) %>";
 
 $('#avatar').html(avatar);
 $('#overview').html(overview);
 $('#concernments').html(concernments);
 $('#web_profiles').html(web_profiles);
 $('#full_name').html("<%=h @profile.full_name %>");
-$('#options').html(options);
+$('#actions').html(actions);
 
 $(".profile").removeClass('active');
 $("#<%= dom_id @profile %>").addClass('active');
