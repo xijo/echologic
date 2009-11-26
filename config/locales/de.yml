@@ -293,8 +293,8 @@ de:
         report: "Melden"
     messages:
       empty:           'Ihre Suche hatte keine Ergebnisse. Bitte verändern Sie Ihre Angaben.'
-      no_concernments: 'Das Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
-      no_web_profiles: 'Das Mitglied hat noch keine Web Adressen eingetragen.'
+      no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
+      no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
   # Feedback resources
   feedback:

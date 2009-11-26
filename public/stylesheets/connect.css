@@ -297,11 +297,20 @@
   width: 290px;
 }
 
+#overview li .value .membership_organisation {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 #overview #memberships, #overview #memberships .value {
   width: 630px;
 }
 
 /* Concernments */
+#concernments {
+  margin-left: 8px;
+}
+
 #concernments .label {
   color: #7bb031;
   font-size: 14px;
@@ -318,6 +327,10 @@
 }
 
 /* Web profiles */
+#web_profiles {
+  margin-left: 8px;
+}
+
 #web_profiles .label {
   color: #7bb031;
   font-size: 15px;
@@ -332,7 +345,7 @@
   color: #21587f;
   display: inline-block;
   width: 480px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   vertical-align: top;
 }
 
@@ -347,6 +360,15 @@
   position: absolute;
   top: 55px;
   cursor: default;
+}
+
+#profile_details_container .label {
+  cursor: default;
+}
+
+#profile_details_container .value, #profile_details_container .values {
+  font-size: 14px;
+  cursor: text;
 }
 
 /* Actions part */

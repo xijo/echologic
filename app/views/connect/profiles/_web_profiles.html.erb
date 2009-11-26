@@ -1,7 +1,7 @@
 
 <% unless @profile.web_profiles.blank? %>
 
-  <% WebProfile.sorts.each do |sort, name| %>
+  <% WebProfile.sorts.sort {|x,y| x[0] <=> y[0] }.each do |sort, name| %>
     <% web_profiles = @profile.web_profiles.find_all_by_sort(sort) %>
     <% unless web_profiles.blank? %>
       <span class="label"><%= name %></span>

@@ -3,12 +3,11 @@
   <li id="memberships">
     <span class="label"><%= Profile.human_attribute_name(:memberships) %></span>
     <% unless @profile.memberships.blank? %>
-      <% memberships = "" %>
+      <% memberships = [] %>
       <% for membership in @profile.memberships do %>
-        <% memberships.concat h(membership.organisation) %>
-        <% memberships.concat ' - ' + h(membership.position) + '<br/>' %>
+        <% memberships << '<span class="membership_organisation">' + h(membership.organisation) + '</span> - ' + h(membership.position) %>
       <% end %>
-      <span class="value"><%= memberships %></span>
+      <span class="value"><%= memberships.join(', ') %></span>
     <% else %>
       <span class="value"><%= I18n.t('application.general.undefined') %></span>
     <% end %>
