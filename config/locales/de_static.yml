@@ -360,11 +360,12 @@ de:
           </p>
 
         possible_actions: |
-          <li>elektronisch signierten Petitionen,</li>
-          <li>der Organisation von Bürger- und Volksbegehren,</li>
-          <li>der Organisation von Demonstrationen, Boykotts und Sammelklagen,</li>
-          <li>der Gründung nationaler und internationaler NRO (Nicht-Regierungs-Organisationen)</li>
-          <li>bis hin zu beliebigen Projekten und Aktionen mit einem gemeinsam definierten Ziel
+          <li>online signierten <strong>e-Petitionen</strong>,</li>
+          <li>der Organisation von Bürger- und <strong>Volksbegehren</strong>,</li>
+          <li>der Organisation von <strong>Bürgerkonferenzen, Demonstrationen</strong>, Boykotts und Sammelklagen,</li>
+          <li>der Gründung nationaler und internationaler <strong>NRO</strong> (Nicht-Regierungs-Organisationen)</li>
+          <li>der Gründung von <strong>sozialen Unternehmungen</strong> (social business & social entrepreneurship)</li>
+          <li>bis hin zu <strong>beliebigen Projekten</strong> und Aktionen mit einem gemeinsam definierten Ziel
           (wie z.B. Gründung von Bürgerbewegungen, Organisation einer Kinderkrippe oder eines europaweiten Tags des Radfahrens).</li>
 
         text_middle: |
