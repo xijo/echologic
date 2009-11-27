@@ -4,11 +4,13 @@ var children = "<%= escape_javascript(render :partial => 'statements/children_li
 var summary  = "<%= escape_javascript(render :partial => 'statements/summary') %>";
 var context  = "<%= escape_javascript(render :partial => 'statements/context') %>";
 var sidebar  = "<%= escape_javascript(render :partial => 'statements/sidebar') %>";
+var new_stmt = "<%= escape_javascript(create_statement_link(@statement)) %>";
 
 $('#children_list').replaceWith(children);
 $('#summary').replaceWith(summary);
 $('#context').replaceWith(context);
 $('#discuss_sidebar').replaceWith(sidebar);
+$('#new_statement').html(new_stmt);
 
 makeRatiobars();
 makeTooltips();

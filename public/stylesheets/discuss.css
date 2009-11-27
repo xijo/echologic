@@ -4,10 +4,11 @@
   background:  #F77;
 }
 
-#new_container {
-  min-width:   700px;
+#new_statement {
+  width:   700px;
   float:       left;
-
+  background:  #4F7;
+  display: inline-block;
 }
 
 
@@ -38,6 +39,7 @@
 
 #summary {
   background: #f0f;
+  min-width: 700px;
   float:      left;
 }
 
@@ -45,12 +47,17 @@
   border-bottom: 1px solid grey;
 }
 
-.create_statement_button {
+/* Intended? */
+.create_statement_button2 {
   display:inline-block;
   margin-top:-42px;
   padding-left:34px !important;
   height:32px;
   line-height: 32px;
+}
+
+.create_statement_button {
+
 }
 
 .create_question_button {
@@ -100,6 +107,7 @@
 .edit_statement_button {
   margin-top:-42px;
 }
+
 
 .statement_link {
   -moz-background-clip:border;

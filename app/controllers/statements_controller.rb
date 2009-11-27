@@ -94,22 +94,21 @@ class StatementsController < ApplicationController
   def edit
     respond_to do |format|
       format.html
-      format.js {
-        render :update do |page|
-          page.replace_html 'summary', :partial => 'statements/edit'
-        end
-      }
+      format.js { replace_container('summary', :partial => 'statements/edit') }
     end
   end
 
   def update
     attrs = params[statement_class_param]
     (attrs[:document] || attrs[:statement_document])[:author] = current_user
-    @statement.update_attributes!(attrs)
-    flash[:notice] = "#{statement_class.display_name} updated."
     respond_to do |format|
-      format.html { redirect_to url_for(@statement) }
-      format.js { show }
+      if @statement.update_attributes!(attrs)
+        format.html { redirect_to url_for(@statement) }
+        format.js   { show }
+      else
+        format.html { redirect_to url_for(@statement) }
+        format.js   { show_error_messages(@statement) }
+      end
     end
   rescue ActiveRecord::RecordInvalid => exc
     flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"

@@ -80,6 +80,7 @@ module StatementHelper
   ##
 
   # edited: i18n without interpolation, because of language diffs.
+  # TODO users should have permission to post proposals
   def create_statement_link(parent=nil)
     return unless current_user.has_role?(:editor)
     type = 'Question' if parent.nil?
@@ -87,7 +88,7 @@ module StatementHelper
     link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(parent, type),
             :id => "create_#{type.underscore}_link",
-            :class => "ajax header_button text_button create_statement_button #{create_statement_class(type)}")
+            :class => "ajax")#"ajax header_button text_button create_statement_button #{create_statement_class(type)}")
   end
 
   # this classname is needed to display the right icon next to the link
@@ -96,7 +97,8 @@ module StatementHelper
   end
 
   def create_question_link_for(category)
-    link_to(I18n.t("discuss.statement.create_link", :type => Question.display_name), new_question_url(:category => category.value), :class=>'create_statement_button create_question_button') if current_user.has_role?(:editor)
+    return unless current_user.has_role?(:editor)
+    link_to(I18n.t("discuss.statements.create_link", :type => Question.display_name), new_question_url(:category => category.value), :class=>'ajax create_statement_button create_question_button')
   end
 
   def edit_statement_link(statement)
@@ -104,8 +106,11 @@ module StatementHelper
       (current_user.has_role?(:censor) || current_user.is_author?(statement))
   end
 
-  def statement_child_line(statement)
-    ret = link_to(statement.title, url_for(statement), :class=>"statement_link #{statement.class.name.underscore}_link")
+  # DEPRICATED
+  #
+  #
+  def statement_child_line2(statement)
+    ret = link_to(statement.title, url_for(statement), :class=> "statement_link #{statement.class.name.underscore}_link")
     ret << supporter_ratio_bar(statement)
   end
 

@@ -1,5 +1,4 @@
 <% statement ||= @statement %>
-<<<<<<< HEAD:app/views/statements/_sidebar.html.erb
 
 <% url_options = { :controller => statement.class.name.underscore.pluralize, :id => statement.id } %>
 
@@ -11,8 +10,4 @@
     <%= link_to image_tag("page/discuss/unecho.png"), url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button' %>
   <% end %>
 
-=======
-<div id="echo_button">
-  <%= echo_button(statement) %>
->>>>>>> andibs/2009-11-16_Release_0.4_Discuss:app/views/statements/_sidebar.html.erb
 </div>

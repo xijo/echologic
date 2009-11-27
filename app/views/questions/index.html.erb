@@ -1,13 +1,11 @@
 <% content_for :submenu, tabnav(:discuss) %>
-<div id="new_statement">
-<%= create_question_link_for(@category)%>
-</div>
-<br/>
-<script type="text/javascript">
-  $("#new_statement a").addClass('ajax');
-</script>
+
 <ul class="question_links">
   <% @statements.each do |statement| -%>
     <li><%= link_to statement.document.title, question_url(statement), :class => 'statement_link question_link' %></li>
   <% end -%>
 </ul>
+
+<div id="new_statement">
+  <%= create_question_link_for(@category)%>
+</div>
