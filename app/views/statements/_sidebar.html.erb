@@ -5,9 +5,17 @@
 <div id="discuss_sidebar">
 
   <% unless current_user.supported?(statement) %>
-    <%= link_to image_tag("page/discuss/echo.png"), url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button' %>
+
+    <% link_to(url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button') do %>
+      <span class="not_supported"></span>
+    <% end %>
+
   <% else %>
-    <%= link_to image_tag("page/discuss/unecho.png"), url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button' %>
+
+    <% link_to(url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button') do %>
+      <span class="supported"></span>
+    <% end %>
+
   <% end %>
 
 </div>

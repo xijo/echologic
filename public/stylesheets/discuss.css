@@ -139,3 +139,16 @@ a img {
 .question_links {
   list-style:none;
 }
+
+/* ECHO BUTTON */
+
+#echo_button span {
+  height:   80px;
+  width:    80px;
+  display:  inline-block;
+  background-image: url(../images/page/discuss/echo_all.png);
+}
+
+#echo_button .supported           { background-position: 0 -80px; }
+#echo_button .supported:hover     { background-position: 0 80px; }
+#echo_button .not_supported:hover { background-position: 0 -80px; }
