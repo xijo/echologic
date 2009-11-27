@@ -11,8 +11,12 @@ class Static::EchologicController < ApplicationController
   # Default page redirected to echoLogic - The Mission
   def show
     respond_to do |format|
-      format.html { render :partial => 'show', :layout => 'static' }
-      format.js { render :template => 'layouts/headContainer' }
+      if current_user
+        format.html { redirect_to welcome_path }
+      else
+        format.html { render :partial => 'show', :layout => 'static' }
+        format.js { render :template => 'layouts/headContainer' }
+      end
     end
   end
 

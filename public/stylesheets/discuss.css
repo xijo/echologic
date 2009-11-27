@@ -101,6 +101,33 @@
   margin-top:-42px;
 }
 
+.statement_link {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  display:inline-block;
+  margin-top:-42px;
+  padding-left:18px !important;
+  height:16px;
+  line-height: 16px;
+}
+
+.question_link {
+   background:transparent url(../images/page/discuss/question_small.png) no-repeat scroll 0 0;
+}
+
+.proposal_link {
+  background:transparent url(../images/page/discuss/proposal_small.png) no-repeat scroll 0 0;
+}
+
+.improvement_proposal_link {
+  background:transparent url(../images/page/discuss/improvement_proposal_small.png) no-repeat scroll 0 0;
+}
+
 a img {
   border:0;
+}
+
+.question_links {
+  list-style:none;
 }

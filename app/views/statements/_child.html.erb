@@ -4,4 +4,5 @@
   <%= statement_icon(statement,:small) %>
   <%= link_to(statement.title, url_for(statement), :class => 'ajax') %>
   <%= supporter_ratio_bar(statement) %>
+  <%=statement_child_line(statement)%>
 </div>

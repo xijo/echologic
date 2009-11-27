@@ -10,7 +10,7 @@ class Users::WebProfilesController < ApplicationController
   # method: GET
   def show
     @web_profile = WebProfile.find(params[:id])
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.js do
@@ -34,7 +34,7 @@ class Users::WebProfilesController < ApplicationController
   def edit
     @user = @current_user
     @web_profile = WebProfile.find(params[:id])
-    
+
     respond_to do |format|
       format.js do
         replace_content(dom_id(@web_profile), :partial => 'edit')
@@ -88,5 +88,5 @@ class Users::WebProfilesController < ApplicationController
       end
     end
   end
-  
+
 end

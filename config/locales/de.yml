@@ -14,7 +14,7 @@ de:
       name: Name
       first_name: Vorname
       last_name: Nachname
-      undefined: Unbekannt
+      undefined: Noch nicht eingetragen
       ok: Ok
       or: oder
       save: Speichern
@@ -25,33 +25,33 @@ de:
       upload: Hochladen
       delete: Löschen
       create: Hinzufügen
-      welcome: "Willkommen"
-      all: "Alle"
+      welcome: Willkommen
+      all: Alle
 
     # Roadmap - Progress
     roadmap:
       title: Fahrplan
-      progress_tooltip: 'Dieser Bereich von echo ist {{progress}}% fertig.'
+      progress_tooltip: 'Dieser Bereich ist zu {{progress}}% fertig.'
       status_quo: 'Status Quo'
       next_steps: 'Nächste Schritte'
       vision: 'Am Ende des Weges'
       discuss:
-        status_quo: 'echo Diskutieren ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Die ersten Diskussionsfunktionen von echo sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
+        status_quo: 'Der Bereich "Diskutieren" ist zu <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Die ersten Diskussionsfunktionen sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
       connect:
-        status_quo: 'echo Vernetzen ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Der Vernetzen Bereich wird weiterentwickelt nachdem die ersten Diskussion und Handeln Funktionen zur Verfügung stehen.'
+        status_quo: 'Der Bereich "Vernetzen" ist zu <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Der Bereich "Vernetzen" wird weiterentwickelt, sobald die ersten Funktionen in Diskutieren und Handeln zur Verfügung stehen.'
       act:
-        status_quo: 'echo Handeln ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Mit der Entwicklung von echo Handeln werden wir nach der Veröffentlichung der ersten Diskussionsfunktionen beginnen.'
+        status_quo: 'Der Bereich "Handeln" ist zu <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Mit der Entwicklung von "Handeln" werden wir nach der Veröffentlichung der ersten Funktionen im Bereich "Diskutieren" beginnen.'
       my_echo:
-        status_quo: 'Der Mein echo Bereich von echo ist <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Weitere Entwicklungen im Mein echo Bereich sind nach der Veröffentlichung von Basisfunktionalitäten unter Diskutieren, Vernetzen und Handeln geplant.'
+        status_quo: 'Der Bereich "Mein echo" ist zu <strong>{{progress}}% fertig</strong>.'
+        next_steps: 'Weitere Entwicklungen in "Mein echo" sind nach den Veröffentlichungen von Basisfunktionalitäten unter Diskutieren, Vernetzen und Handeln geplant.'
         vision: |
          <p>
-         Auf der langen Sicht wird der Mein echo Bereich Ihre <strong>persönliche Informationszentrale</strong> innerhalb von echo sein.
-         Z.B. wird es Ihnen einen Überblick über die <strong>wichtigsten Nachrichten</strong> geben und Sie auf die <strong>neuesten
-         Diskussionen und Aktionen</strong> entsprechend Ihrer Präferenzen aufmerksam machen.
+         "Mein echo" wird Ihre <strong>persönliche Informationszentrale</strong> auf echo.
+         Hier erhalten Sie einen Überblick über die <strong>wichtigsten Nachrichten</strong> und werden über die <strong>neuesten
+         Diskussionen und Aktionen</strong> auf dem Laufenden gehalten.
          </p>
 
     mailer:
@@ -106,10 +106,10 @@ de:
     text: |
       <p>
       <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
-      Sie sind die drei funktionalen Kernbereiche von echo,
+      Das sind die drei funktionalen Kernbereiche von echo,
       die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.
       </p><p>
-      Unten sehen Sie die neulich veröffentlichten Bereiche.<br>
+      Unten sehen Sie die bisher veröffentlichten Bereiche.<br>
       Mit der Zeit werden immer mehr Funktionen hinzukommen, die Ihnen die
       <strong>Mitgestaltung von echo</strong> zunehmend ermöglichen werden.
       </p><p>
@@ -117,7 +117,7 @@ de:
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Vervollständigen Sie Ihr Profil, um sich in der echologic Community zu präsentieren.'
+      description: 'Vervollständigen Sie Ihr Profil, um sich erstmal in der Community von echologic zu präsentieren.'
     function_2:
       name: 'Vernetzen'
       description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
@@ -139,7 +139,7 @@ de:
       messages:
         login_success:  "Login erfolgreich.<br/>Willkommen zurück auf echologic!"
         login_failed:   "Unbekannter Nutzer oder falsches Passwort."
-        logout_success: "Logout erfolgreich.<br/>Bis zum nächsten mal. Tschüß!"
+        logout_success: "Logout erfolgreich.<br/>Tschüß - Bis zum nächsten Mal!"
 
     # Activations section
     activation:
@@ -162,7 +162,7 @@ de:
         Bitte tragen Sie <strong>Ihr neues Passwort</strong> ein, mit dem Sie sich in echologic einloggen möchten.
       step2_ok: Passwort setzen und einloggen
       messages:
-        success:        'Wir haben Ihnen eine E-Mail für die Zurücksetzung Ihres Passworts zugesandt. Bitte prüfen Sie Ihren Posteingang.'
+        success:        'Wir haben Ihnen eine E-Mail zugesandt, die es Ihnen ermöglicht Ihr Passwort neu zu setzen.<br/>Bitte sehen Sie Ihrem Posteingang nach.'
         not_found:      'Die angegebene E-Mail Adresse wurde nicht gefunden.'
         reset_success:  'Ihr neues Passwort wurde erfolgreich gespeichert.'
         reset_failed:   'Ihr Passwort konnte leider nicht geändert werden. Bitte überprüfen Sie Ihre Eingaben.'
@@ -197,18 +197,17 @@ de:
 
     # Memberships section
     memberships:
-      title: Organisationen
-      guide:  Sie haben hier die Möglichkeit Ihre ehrenamtlichen, beruflichen oder andere Mitgliedschaften anzugeben.
+      title: Tätigkeiten
+      guide:  Bitte geben Sie hier Ihre ehrenamtlichen, beruflichen oder sonstigen Aktivitäten in bestimmten Organisationen an.
       organisation: Organisation
-      position: Position
+      position: Meine Rolle
 
     # Web profiles section
     web_profiles:
       title: Web Adressen
       guide: |
-        Damit Sie für andere Benutzer auffindbar sind, haben Sie die Möglichkeit, einige Ihrer Kontaktdaten und im
-        Internet bestehenden Profile hier einzutragen.<br/>
-        <strong>ACHTUNG</strong>: alle hier eingetragen Informationen sind erstmal für alle echologic Mitglieder ersichtlich.
+        Indem Sie hier Ihre Kontaktdaten eintragen, geben Sie anderen Nutzern die Möglichkeit, sich ein Bild von Ihnen zu machen und Sie zu kontaktieren.<br/>
+        <strong>ACHTUNG</strong>: Alle hier eingetragen Informationen sind vorerst für <strong>alle</strong> Mitglieder von echologic zu sehen.
       type: Art der Adresse
       address: Web Adresse
       sorts:
@@ -219,24 +218,25 @@ de:
         linkedin: "LinkedIn"
         twitter:  "Twitter"
         facebook: "Facebook"
-        other:    "Anderes"
+        other:    "Andere"
 
     # Concernments section
     concernments:
-      title: Betroffenheiten und Kompetenzen
+      title: Betroffenheit und Kompetenzen
       guide: |
-        Wir alle haben <strong>verschiedenen Facetten</strong>. Von einen Umständen können wir betroffen sein und die
-        Hilfe Anderer brauchen, in anderen Bereichen engagieren wir uns und bieten selbst Hilfe. In bestimmten Bereichen haben wir
-        Expertise, in anderen representieren wir möglicherweise andere Menschen und fällen Entscheidungen.
-        echo hilft Gleichgesinnten mit <strong>sich ergänzenden Wissen</strong> leicht zusammenzufinden.<br/>
-        <strong>Wie würden Sie Ihre Betroffenheiten und Kompetenzen beschreiben?</strong><br/>
+        Wir alle stehen mit den <strong>verschiedenen Facetten</strong> unserer Umwelt auf unterschidliche Weise in Verbindung.
+        Von einigen Umständen können wir selbst betroffen sein und brauchen die Hilfe Anderer. In anderen Bereichen
+        engagieren wir uns und bieten selbst Hilfe an. In bestimmten Bereichen haben wir Fachwissen, in anderen repräsentieren wir
+        möglicherweise andere Menschen und fällen für sie Entscheidungen. echo hilft Betroffenen und Gleichgesinnten mit
+        <strong>sich ergänzenden Kompetenzen</strong> schnell und einfach zusammen zu finden.<br/>
+        Wie würden Sie <strong>Ihre Betroffenheit und Ihre Kompetenzen in Schlagworten (sog. Tags)</strong> beschreiben?
 
       sorts:
         affected: <strong>Betroffen</strong> von
         engaged: <strong>Engagiert</strong> im Bereich
         scientist: <strong>ExpertIn</strong> im Bereich
         representative: <strong>EntscheidungsträgerIn</strong> im Bereich
-      tags: Schlüsselwörter (Tags)
+      tags: Schlagworte (Tags)
 
 
     # New Users section
@@ -249,11 +249,11 @@ de:
           <strong>echo ist Demokratie von Menschen für Menschen.</strong>
           </p><p>
           Als Projekt zur Förderung des Allgemeinwohls wird echo durch die
-          <strong>gemeinsame Anstrengung</strong> engagierter Menschen und
+          <strong>gemeinsamen Anstrengungen</strong> engagierter Menschen und
           Organisationen vorangetrieben.
           </p><p>
           Möchten auch Sie Ihre <strong>Ideen beisteuern</strong>?<br/>
-          Dann tragen Sie bitte Ihren Namen und Ihre E-Mail Adresse ein!
+          Dann tragen Sie einfach Ihren Namen und Ihre E-Mail Adresse ein!
           <strong>Gestalten Sie echo</strong> zusammen mit anderen engagierten BürgerInnen, ExpertInnen und PolitikerInnen.
           </p>
         action: 'Jetzt beitreten!'
@@ -263,8 +263,11 @@ de:
 
     # Reports section
     reports:
+      new:
+        title:  "Benutzer melden"
+        text:   "<p>Haben Sie <strong>beleidigenden, unethischen oder illegalen Inhalt gesehen?</strong><br/> Wenn ja, hier können Sie uns den Benutzer melden.</p><p>Wir werden uns schnellstmöglich um Ihren Hinweis kümmern.<p>"
       messages:
-        created: "Danke für Ihre Mitteilung. Ein Administrator wird benachrichtigt."
+        created: "Danke für Ihre Mitteilung. Wir werden uns um die Angelegenheit kümmern."
 
 
   # ---------------
@@ -286,9 +289,12 @@ de:
         overview:     'Überblick'
         concernments: 'Kompetenzen'
         web_profiles: 'Web Adressen'
+      actions:
+        report: "Melden"
     messages:
-      empty:           'Ihre Suche hatte keine Ergebnisse. Bitte verändern Sie Ihre Angaben.'
-      no_concernments: 'Das Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
+      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit einem anderen Suchbegriff.'
+      no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
+      no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
   # ---------------
   # Discuss section
@@ -315,7 +321,7 @@ de:
         <p>
         <strong>Ihre Meinung ist uns wichtig!</strong><br/>
         </p><p>
-        Haben Sie Fragen an uns oder Anregungen für uns? Möchten Sie etwas kritisieren oder uns auf etwas hinweisen?
+        Haben Sie Fragen oder Anregungen? Möchten Sie etwas kritisieren, uns auf etwas hinweisen oder mit Lob übergießen?
         Wir haben immer ein offenes Ohr für Sie!
         </p>
       message: Nachricht
@@ -434,21 +440,26 @@ de:
           attributes:
             blank: 'Bitte füllen Sie alle Felder aus.'
             email:
-              invalid: 'Die E-Mail Adresse ist nicht korrekt. Bitte korrigieren Sie sie.'
+              invalid: 'Sie haben sich bei Ihrer E-Mail Adresse vertippt. Bitte versuchen Sie es erneut.'
+
+        user:
+          attributes:
+            email:
+              taken: 'Die von Ihnen angegebene E-Mail Adresse wird bereits verwendet.'
 
       messages:
-        blank: '{{attribute}} darf nicht leer sein.'
-        taken: 'Wird bereits verwendet.'
+        blank: '{{attribute}} muss ausgefüllt werden.'
+        taken: 'Ihre Wunschangabe wird leider bereits schon verwendet.'
         too_short: '{{attribute}} ist zu kurz.'
         invalid: '{{attribute}} hat ein falsches Format.'
         confirmation: '{{attribute}} muss übereinstimmen.'
-        access_denied: "Ihnen fehlt die nötige Zugangsberechtigung."
+        access_denied: "Leider fehlt Ihnen die nötige Zugangsberechtigung."
 
       template:
         header:
           one: "Ein Feld wurde nicht richtig ausgefüllt."
           other: "{{count}} Felder wurden nicht richtig ausgefüllt."
-        body: "Bitte überprüfen Sie folgendes:"
+        body: "Bitte überprüfen Sie Ihre Eingaben:"
 
     attributes:
       profile:
@@ -462,20 +473,23 @@ de:
         location:   Ort
         about_me:   Über mich
         motivation: Gedanken über echo
+        memberships: Tätigkeiten
       report:
-        reason:     'Grund'
+        reason: 'Grund'
       web_profile:
-        location:   'Adresse'
+        location: 'Adresse'
+      membership:
+        position: 'Tätigkeit'
 
   authlogic:
     error_messages:
       email_invalid:      "Bitte korrigieren Sie die angegebene E-Mail Adresse."
       password_blank:     "Bitte geben Sie ein Passwort an."
-      not_active:         "Ihr Zugang wurde noch nicht freigeschaltet. Überprüfen Sie bitte Ihren Posteingang."
+      not_active:         "Ihr Zugang wurde noch nicht freigeschaltet. Sehen Sie bitte Ihrem Posteingang nach einer Aktivierungs E-Mail."
       must_be_logged_in:  "Sie müssen eingeloggt sein, um diese Seite zu sehen."
       must_be_logged_out: "Sie müssen ausgeloggt sein, um diese Seite zu sehen."
 
     attributes:
       user_session:
-        email: E-Mail
-        password: Passwort
+        email:    'E-Mail'
+        password: 'Passwort'

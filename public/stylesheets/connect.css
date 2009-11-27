@@ -147,6 +147,7 @@
   display:  block;
   margin: 11px 10px 11px 30px;
   position: relative;
+  overflow: hidden;
 }
 
 #profiles_container .profile .avatar_holder {
@@ -199,22 +200,28 @@
   overflow: auto;
   height: 295px;
   margin: 25px 0 10px;
+  position: relative;
 }
 
 #profile_details_container div {
   text-align: left;
 }
 
-#profile_details_container #full_name {
+#profile_details_tabs {
+  margin-bottom: 15px;
+}
+
+#full_name {
   color: #7AB031;
   font-size: 18px;
   background: none;
   position: absolute;
   left: 10px;
   top: 9px;
+  cursor: default;
 }
 
-#profile_details_container #close_profile_details_container {
+#close_profile_details_container {
   color: #7691a2;
   font-size: 14px;
   background: none;
@@ -224,19 +231,177 @@
   text-decoration: none;
 }
 
-#profile_details_container #avatar {
+/* Avatar part */
+#avatar {
   float:left;
+  width: 140px;
+  text-align: center !important;
+}
+
+#avatar img {
+  max-width: 128px;
+  max-height: 180px;
+  border: 2px solid #7bb031;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+#avatar_location {
+  display: block;
   width: 128px;
+  text-align: center;
+  margin-top: 7px;
+  font-size: 14px;
+  cursor: default;
 }
 
+#avatar_location span {
+  font-weight: bold;
+}
+
+/* All tab content containers */
 #profile_details_container .tab_content_container {
-  float:left;
-  max-width:300px;
-  -moz-border-radius:5px;
-  border:1px solid #999;
+  position: absolute;
+  left: 140px;
+  width: 670px;
+  min-height: 240px;
+  padding: 0 15px;
 }
 
-#profile_details_container #options {
-  float:right;
-  max-width:100px;
+/* Overview part */
+#overview ul {
+  margin: 0;
+  padding: 0;
+}
+
+#overview li {
+  list-style-type: none;
+  line-height: 24px;
+  width: 310px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+  margin: 0 8px 20px;
+  
+}
+
+#overview li .label {
+  color: #7bb031;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#overview li .value {
+  color: #21587f;
+  display: block;
+  width: 290px;
+}
+
+#overview li .value .membership_organisation {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#overview #memberships, #overview #memberships .value {
+  width: 630px;
+}
+
+/* Concernments */
+#concernments {
+  margin-left: 8px;
+}
+
+#concernments .label {
+  color: #7bb031;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#concernments .values {
+  color: #21587f;
+  display: block;
+  width: 630px;
+  margin-bottom: 20px;
+}
+
+/* Web profiles */
+#web_profiles {
+  margin-left: 8px;
+}
+
+#web_profiles .label {
+  color: #7bb031;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: inline-block;
+  width: 150px;
+  vertical-align: top;
+}
+
+#web_profiles .values {
+  color: #21587f;
+  display: inline-block;
+  width: 480px;
+  margin-bottom: 12px;
+  vertical-align: top;
+}
+
+/* Overview & Concerments & Web Profiles */
+#profile_details_container .tab_content_container .no_results {
+  display: block;
+  width: 670px;
+  margin: 0 auto;
+  text-align: center;
+  color: #21587f;
+  font-size: 15px;
+  position: absolute;
+  top: 55px;
+  cursor: default;
+}
+
+#profile_details_container .label {
+  cursor: default;
+}
+
+#profile_details_container .value, #profile_details_container .values {
+  font-size: 14px;
+  cursor: text;
+}
+
+/* Actions part */
+#profile_details_container #actions {
+  float: right;
+  width: 128px;
+  min-height: 128px;
+  border-left: 1px solid #A8A8A8;
+  text-align: center;
+}
+
+#actions .action_button {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+#actions .report_action {
+  background: url(../images/page/icons/report.png) no-repeat scroll 0 0;
+}
+
+#actions .admin_action {
+  background-color: #db4c3d;
+  color: #fff;
+  margin: 0 3px;
+  padding: 3px 9px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+/* Report */
+
+#new_report_form .hidden, #new_report_form .buttons {
+  display: none;
 }

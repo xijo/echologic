@@ -12,8 +12,8 @@ class WebProfile < ActiveRecord::Base
     2 => I18n.t('users.web_profiles.sorts.blog'),
     3 => I18n.t('users.web_profiles.sorts.xing'),
     4 => I18n.t('users.web_profiles.sorts.linkedin'),
-    5 => I18n.t('users.web_profiles.sorts.twitter'),
-    6 => I18n.t('users.web_profiles.sorts.facebook'),
+    5 => I18n.t('users.web_profiles.sorts.facebook'),
+    6 => I18n.t('users.web_profiles.sorts.twitter'),
     99 => I18n.t('users.web_profiles.sorts.other')
   }
 

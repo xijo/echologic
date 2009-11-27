@@ -1,4 +1,9 @@
 <%# Render profile avatar image and location. %>
 
-<%= image_tag @profile.avatar.url(:small) %><br/>
-<%=h @profile.location %>
+<%= image_tag @profile.avatar.url(:big) %><br/>
+<span id="avatar_location">
+  <% if @profile.city != "" %>
+    <span><%=h @profile.city %></span><br/>
+  <% end %>
+  <%=h @profile.country %>
+</span>

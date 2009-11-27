@@ -22,7 +22,7 @@ class Profile < ActiveRecord::Base
 
   # Returns the localized gender
   def localized_gender
-    @@gender[female] || I18n.t('application.general.undefined')
+    @@gender[female] || '' # I18n.t('application.general.undefined')
   end
 
   # Handle attached user picture through paperclip plugin
@@ -47,7 +47,7 @@ class Profile < ActiveRecord::Base
   # Return the first membership. If none is set return empty-string.
   def first_membership
     return "" if memberships.blank?
-    "#{memberships.first.organisation} (#{memberships.first.position})"
+    "#{memberships.first.organisation} - #{memberships.first.position}"
   end
 
 end

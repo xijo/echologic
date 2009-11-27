@@ -42,15 +42,12 @@ class Users::ProfileController < ApplicationController
   # Set the values from the edit form to the users attributes.
   def update
     @profile = @current_user.profile
-    if @profile.update_attributes(params[:profile])
-      respond_to do |format|
-        format.html do
-          flash[:notice] = I18n.t('users.profile.messages.updated')
-          redirect_to my_profile_path
-        end
-        format.js do
-          replace_container('personal_container', :partial => 'users/profile/profile_own')
-        end
+    respond_to do |format|
+      if @profile.update_attributes(params[:profile])
+        format.html { flash[:notice] = I18n.t('users.profile.messages.updated') and redirect_to my_profile_path }
+        format.js   { replace_container('personal_container', :partial => 'users/profile/profile_own') }
+      else
+        format.js   { show_error_messages(@profile) }
       end
     end
   end
