@@ -1,10 +1,21 @@
 <% content_for :submenu, tabnav(:discuss) %>
 
-<ul class="question_links">
-  <% @statements.each do |statement| -%>
-    <li><%= link_to statement.document.title, question_url(statement), :class => 'statement_link question_link' %></li>
-  <% end -%>
-</ul>
+<h1><%= I18n.t("discuss.#{@category.value.underscore}.title") %></h1>
+
+<%= I18n.t("discuss.#{@category.value.underscore}.welcome_text") %><br/>
+
+<% @statements.each do |statement| -%>
+
+  <div class="function_button_holder">
+    <% link_to question_url(statement) do %>
+      <span class="function_button function_button_my_profile"></span>
+    <% end %>
+    <span class="function_name"><%= statement.document.title %></span><br/>
+    <span class="function_description"><%= statement.document.text %></span>
+  </div>
+
+<% end -%>
+
 
 <div id="new_statement">
   <%= create_question_link_for(@category)%>

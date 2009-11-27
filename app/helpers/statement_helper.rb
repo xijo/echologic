@@ -21,6 +21,8 @@ module StatementHelper
       new_proposal_url(parent)
     when 'ImprovementProposal'
       new_improvement_proposal_url(parent)
+    when 'ProArgument'
+      new_pro_argument_proposal_url(parent)
     end
   end
 
@@ -73,6 +75,14 @@ module StatementHelper
 
   def edit_improvement_proposal_path(proposal)
     edit_question_proposal_improvement_proposal_path(proposal.root, proposal.parent, proposal)
+  end
+
+  ## ProArgument
+
+  def new_pro_argument_proposal_url(parent)
+    raise ArgumentError.new("Expected `parent' to be a Proposal (is: #{parent})") unless parent.kind_of?(Proposal)
+    raise ArgumentError.new("Expected `parent.parent' to be a Question (is: #{parent.parent})") unless parent.parent.kind_of?(Question)
+    new_question_proposal_pro_argument_url(parent.parent, parent)
   end
 
   ##

@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # SECTION main parts of echologic
   map.act     '/act/roadmap',     :controller => :act,     :action => :roadmap
-  map.discuss '/discuss/index', :controller => :discuss, :action => :index
+  map.discuss '/discuss', :controller => :discuss, :action => :index
   map.discuss_roadmap '/discuss/roadmap', :controller => :discuss, :action => :roadmap
   map.question_tags '/discuss/category/:id', :controller => :questions, :action => :category, :conditions => {:id => /\w+/ }
   map.my_echo '/my_echo/roadmap', :controller => :my_echo, :action => :roadmap
@@ -71,16 +71,16 @@ ActionController::Routing::Routes.draw do |map|
   # SECTION discuss - discussion tree
   map.resources :questions, :as => 'discuss/questions' do |question|
     question.resources :proposals do |proposal|
-      proposal.resources :pro_argument
-      proposal.resources :contra_argument
+      proposal.resources :pro_arguments
+      proposal.resources :contra_arguments
       proposal.resources :improvement_proposals do |improvement_proposal|
         improvement_proposal.resources :pro_arguments
-        improvement_proposal.resources :contra_argument
+        improvement_proposal.resources :contra_arguments
       end
     end
   end
-  
-  
+
+
   # SECTION root
   map.root :controller => 'static/echologic', :action => 'show'
 
