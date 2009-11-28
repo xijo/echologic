@@ -128,19 +128,24 @@ module StatementHelper
 
   def statement_icon(statement, size = :medium)
     # remove me to have different sizes again
-    size = :medium
-    image_tag("page/discuss/#{statement.class.name.underscore.downcase}_#{size.to_s}.png")
+    image_tag("page/discuss/#{statement.class.name.underscore}_#{size.to_s}.png")
   end
 
-  def children_box_title(type)
-    case type
+  # Alternative implementation
+  # TODO decide which one to use
+  def children_box_title(statement)
+    case statement.type
     when 'NilClass'
-      'Questions'
+      I18n.t('discuss.statements.headings.questions')
     when 'Question'
-      'Proposals'
+      I18n.t('discuss.statements.headings.proposals')
     when 'Proposal'
-      'Improvement Proposals'
+      I18n.t('discuss.statements.headings.improvement_proposals')
     end
+
+    type = statement.class.expected_children.first.to_s.underscore
+    I18n.t("discuss.statements.headings.#{type}")
+
   end
 
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
@@ -152,7 +157,7 @@ module StatementHelper
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
   # TODO: find out why statement.question? works, but not statement.parent.question? or deprecate statement.question?
   def statement_context_line(statement)
-    ret = link_to(statement_icon(statement)+statement.title, url_for(statement), :class => 'ajax')
+    ret = link_to(statement_icon(statement, :small)+statement.title, url_for(statement), :class => 'ajax')
     ret << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
     return ret
   end

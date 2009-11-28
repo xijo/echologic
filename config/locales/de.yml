@@ -310,6 +310,11 @@ de:
         question:  'Frage'
         proposal:  'Vorschlag'
         improvement_proposal: 'Verbesserungsvorschlag'
+      headings:
+        question: 'Fragen'
+        proposal: 'Vorschläge'
+        improvement_proposal: 'Verbesserungsvorschläge'
+    summary: 'Zusammenfassung'
 
   # ------------------
   # Feedback resources

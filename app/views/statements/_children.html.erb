@@ -1,9 +1,10 @@
 <% statements ||= @statements || [] %>
 <%  statement ||= @statement %>
 
-<div id="children">
+<div id="children" class="header_block two_columns_block discuss_right_block">
   <% unless statements.empty? && statement.class.expected_children.empty? %>
-    <h2><%= children_box_title(statement.class.name) if statements.any? %></h2>
+    <h2><%= children_box_title(statement) if statements.any? %></h2>
+
     <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
 
     <% if false%>

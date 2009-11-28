@@ -1,14 +1,32 @@
 #context {
-  margin-left: 100px;
+  margin-left: 120px;
   float:       left;
-  background:  #F77;
+
+  color:#21587F;
+  font-size:14px;
+  font-weight:bold;
+  text-decoration:none;
 }
 
-#new_statement {
-  width:   700px;
-  float:       left;
-  background:  #4F7;
-  display: inline-block;
+.discuss_right_block {
+  float:        left;
+  margin:       0 0 0 0;
+  width:        800px;
+  display:      inline-block;
+}
+
+#summary ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+#summary ol li {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+#summary li {
+  display: list-item;
 }
 
 
@@ -19,15 +37,8 @@
 #discuss_sidebar {
   clear:      left;
   float:      left;
-  height:     250px;
-  width:      100px;
-  background: #ff0;
-}
-
-#children {
-  background: #77F;
-  min-width:  700px;
-  float:      left;
+  height:     400px;
+  width:      120px;
 }
 
 #sidebar {
@@ -35,16 +46,6 @@
   height:     280px;
   width:      110px;
   border-right:2px solid lightgrey;
-}
-
-#summary {
-  background: #f0f;
-  min-width: 700px;
-  float:      left;
-}
-
-#summary h1 {
-  border-bottom: 1px solid grey;
 }
 
 /* Intended? */

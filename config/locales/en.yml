@@ -303,6 +303,11 @@ en:
         question:  'Question'
         proposal:  'Proposal'
         improvement_proposal: 'Improvement Proposal'
+      headings:
+        question: 'Questions'
+        proposal: 'Proposals'
+        improvement_proposal: 'Improvement Proposals'
+    summary: 'Summary'
 
   # Feedback resources
   feedback:

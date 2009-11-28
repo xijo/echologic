@@ -1,7 +1,7 @@
 <% statement ||= @statement %>
 
-<div id="<%= statement_dom_id(statement) %>" class="<%=statement.parent.class.name.downcase%>">
+<li id="<%= statement_dom_id(statement) %>" class="<%=statement.parent.class.name.downcase%>">
   <%= statement_icon(statement,:small) %>
   <%= link_to(statement.title, url_for(statement), :class => 'ajax statement_link #{statement.class.name.underscore}_link') %>
   <%= supporter_ratio_bar(statement) %>
-</div>
+</li>

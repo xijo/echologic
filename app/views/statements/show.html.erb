@@ -8,7 +8,7 @@
 
 <%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
 
-<div id="new_statement">
+<div id="new_statement" class="discuss_right_block">
   <%= create_statement_link(@statement) if @statement.class.expected_children.any? %>
 </div>
 

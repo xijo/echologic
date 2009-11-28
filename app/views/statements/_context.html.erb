@@ -1,7 +1,7 @@
 <% statement ||= @statement
 %>
 
-<div id="context">
+<div id="context" class="discuss_right_block">
   <% case statement.level
        when 0
   %>
@@ -13,5 +13,9 @@
     <h1 class="root"><%= statement_context_line(statement.root)%></h1>
     <h1 class="intermediate"><%= statement_context_line(statement.parent)%></h1>
     <h1 class="bottom"><%= statement_context_line(statement)%></h1>
+    <%= statement.root.category.value %> &gt;
+    <%= statement_context_line(statement.root) %> &gt;
+    <%= statement_context_line(statement.parent) %> &gt;
+    <%= statement_context_line(statement)%>
   <% end %>
 </div>

@@ -210,7 +210,7 @@
   margin:      0 auto;
   width:       990px;
   padding-bottom: 1px;
-  overflow:    auto;
+  overflow:    visible;
 }
 
 #messageContainer {

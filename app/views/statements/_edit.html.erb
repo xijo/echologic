@@ -1,6 +1,6 @@
 <% statement ||= @statement -%>
 
-<div id="summary">
+<div id="summary" class="summary header_block">
   <h2><%= statement.class.display_name %> Summary</h2>
   <% form_for statement.self_with_parents do |f| -%>
     <%= f.error_messages %>

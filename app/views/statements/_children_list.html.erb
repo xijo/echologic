@@ -4,9 +4,11 @@
 <div id="children_list">
 
   <!-- Show children. -->
-  <% statements.each do |sm| %>
-    <%= render :partial => 'statements/child', :locals => {:statement => sm } %>
-  <% end %>
+  <ul>
+    <% statements.each do |sm| %>
+      <%= render :partial => 'statements/child', :locals => {:statement => sm } %>
+    <% end %>
+  </ul>
 
   <% if false%>
   <!-- New statement. -->
