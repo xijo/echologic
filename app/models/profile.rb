@@ -7,6 +7,8 @@ class Profile < ActiveRecord::Base
   has_many :concernments, :through => :user
 
   validates_presence_of :user_id
+  validates_length_of :about_me, :maximum => 1024
+  validates_length_of :motivation, :maximum => 1024
 
 
   # There are two kind of people in the world..

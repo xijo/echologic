@@ -431,10 +431,11 @@ de:
               taken: 'Die von Ihnen angegebene E-Mail Adresse wird bereits verwendet.'
 
       messages:
-        blank: '{{attribute}} muss ausgefüllt werden.'
+        blank: "Das Feld '{{attribute}}' muss ausgefüllt werden."
         taken: 'Ihre Wunschangabe wird leider bereits schon verwendet.'
-        too_short: '{{attribute}} ist zu kurz.'
-        invalid: '{{attribute}} hat ein falsches Format.'
+        too_short: "Ihre Eingabe im Feld '{{attribute}}' ist zu kurz."
+        too_long: "Ihre Eingabe im Feld '{{attribute}}' ist zu lang."
+        invalid: "Ihre Eingabe im Feld '{{attribute}}' hat ein falsches Format."
         confirmation: '{{attribute}} muss übereinstimmen.'
         access_denied: "Leider fehlt Ihnen die nötige Zugangsberechtigung."
 

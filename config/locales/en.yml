@@ -319,10 +319,11 @@ en:
               taken: 'Your e-Mail address is already in use.'
 
       messages:
-        blank: '{{attribute}} must not be empty.'
+        blank: "The field '{{attribute}}' must not be empty."
         taken: 'Is already in use.'
-        too_short: '{{attribute}} is too short.'
-        invalid: '{{attribute}} must to be in a valid format.'
+        too_short: "Your input for '{{attribute}}' is too short."
+        too_long: "Your input for '{{attribute}}' is too long."
+        invalid: "Your input for '{{attribute}}' must be in a valid format."
         confirmation: '{{attribute}} confirmation does not match.'
         access_denied: "You are not allowed to perform this action."
 
