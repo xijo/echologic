@@ -8,17 +8,17 @@
 
   <p>
     <%= label_tag I18n.t('application.general.name'), nil %><br />
-    <%= f.text_field :name %><br/>
+    <%= f.text_field :name, :value => (current_user.profile.full_name rescue "") %><br/>
   </p>
 
   <p>
     <%= label_tag I18n.t('application.general.email'), nil %><br />
-    <%= f.text_field :email %><br/>
+    <%= f.text_field :email, :value => (current_user.email rescue "") %><br/>
   </p>
 
   <p>
     <%= label_tag I18n.t('feedback.new.message'), nil %><br/>
-    <%= f.text_area :message, :rows => 4, :cols => 30 %>
+    <%= f.text_area :message, :rows => 4, :cols => 30, :html => {:id => 'feedback_message'} %>
   </p>
 
 <% end %>
