@@ -189,7 +189,7 @@ de:
 
       upload_picture:
         title: Profilbild hochladen
-        guide: Bitte <strong>Bild auswählen</strong> (JPG oder PNG, max. 1MB) und 'Hochladen'.
+        guide: Bitte <strong>Bild auswählen</strong> (JPG oder PNG, max. 5MB) und 'Hochladen'.
         progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
