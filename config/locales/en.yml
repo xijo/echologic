@@ -36,17 +36,17 @@ en:
       next_steps: 'Next Steps'
       vision: 'At The End of The Road'
       discuss:
-        status_quo: 'echo Discuss is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The first features of echo Discuss are under development and will be released soon.'
+        status_quo: 'echo "Discuss" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The first features of echo "Discuss" are under development and will be released soon.'
       connect:
-        status_quo: 'echo Connect is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'echo Connect will be enhanced after the first features of echo Discuss and echo Act have been released.'
+        status_quo: 'echo "Connect" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'echo "Connect" will be enhanced after the first features of echo "Discuss" and echo "Act" have been released.'
       act:
-        status_quo: 'echo Act is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.'
+        status_quo: 'echo "Act" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The development of echo "Act" will begin after the first functions of echo "Discuss" have been released.'
       my_echo:
-        status_quo: 'The My echo area of echo is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'Further development of this area is planned after the development of some basic Discuss, Connect and Act functionality.'
+        status_quo: 'The "My echo" area is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'Further development of this area is planned after some basic functionality of "Discuss, Connect and Act" has been released.'
         vision: |
          <p>
          In the long term, the My echo area will be your <strong>personal information hub</strong> inside of echo. E.g. it will provide
@@ -299,7 +299,7 @@ en:
         </p><p>
         Do not hesitate to ask questions, make comments or to leave a criticism or kudos for us.
         </p>
-      message: Your message
+      message: Message
       send: Send message
     create:
       thank_you: Thank you for your feedback.
@@ -349,7 +349,9 @@ en:
       report:
         reason:     'Reason'
       web_profile:
-        location:   'Address'
+        location:   'Web Address'
+      membership:
+        position: My role
 
   authlogic:
     error_messages:
