@@ -315,6 +315,8 @@ de:
         proposal: 'Vorschläge'
         improvement_proposal: 'Verbesserungsvorschläge'
     summary: 'Zusammenfassung'
+    messages:
+      created: "{{type}} erstellt."
 
   # ------------------
   # Feedback resources
@@ -485,6 +487,14 @@ de:
         location: 'Adresse'
       membership:
         position: 'Rolle'
+      statement_document:
+        text:     'Zusammenfassung'
+        title:    'Titel'
+
+    models:
+      improvement_proposal: "Verbesserungsvorschlag"
+      proposal: "Vorschlag"
+      question: "Frage"
 
   authlogic:
     error_messages:

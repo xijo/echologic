@@ -22,3 +22,17 @@
     error('<%= flash[:error] %>');
   <% end %>
 </script>
+
+<!-- noscript! -->
+<noscript>
+  <div id="messageContainer">
+    <div id="infoBox" class="ui-state-highlight" <%= "style='display:none'" unless flash[:notice] %> >
+      <div class="ui-icon ui-icon-info infoErrorIcon"></div>
+      <div class="message"><%= flash[:notice] %></div>
+    </div>
+    <div id="errorBox" class="ui-state-error" <%= "style='display:none'" unless flash[:error] %> >
+      <div class="ui-icon ui-icon-alert infoErrorIcon"></div>
+      <div class="message"><%= flash[:error] %></div>
+    </div>
+  </div>
+</noscript>

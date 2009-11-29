@@ -4,18 +4,21 @@
 
 <div id="discuss_sidebar">
 
-  <% unless current_user.supported?(statement) %>
+  <% unless statement.question? %>
 
-    <% link_to(url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button') do %>
-      <span class="not_supported"></span>
-    <% end %>
+    <% unless current_user.supported?(statement) %>
 
-  <% else %>
+      <% link_to(url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button') do %>
+        <span class="not_supported"></span>
+      <% end %>
 
-    <% link_to(url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button') do %>
-      <span class="supported"></span>
+    <% else %>
+
+      <% link_to(url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button') do %>
+        <span class="supported"></span>
+      <% end %>
+
     <% end %>
 
   <% end %>
-
 </div>

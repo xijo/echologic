@@ -57,7 +57,7 @@ function bindAjaxClickEvents() {
 
   $(".ajax").live("click", function() {
     $.getScript(this.href);
-    return false
+    return false;
   });
 
   $(".ajax_delete").live("click", function() {

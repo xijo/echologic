@@ -91,12 +91,14 @@ module StatementHelper
 
   # edited: i18n without interpolation, because of language diffs.
   # TODO users should have permission to post proposals
-  def create_statement_link(parent=nil)
+  # TODO parent is missleading name!
+  def create_children_statement_link(statement=nil)
     return unless current_user.has_role?(:editor)
-    type = 'Question' if parent.nil?
-    type ||= parent.class.expected_children.first.to_s
+    return unless statement.class.expected_children.any?
+    type = 'Question' if statement.nil?
+    type ||= statement.class.expected_children.first.to_s
     link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
-            new_child_statement_url(parent, type),
+            new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
             :class => "ajax")#"ajax header_button text_button create_statement_button #{create_statement_class(type)}")
   end
@@ -156,14 +158,45 @@ module StatementHelper
 
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
   # TODO: find out why statement.question? works, but not statement.parent.question? or deprecate statement.question?
+  # possible answer: method is private - invoking .send :question? on parent does the trick!
+
+  # DEPRICATED, user statement_context_link instead
   def statement_context_line(statement)
-    ret = link_to(statement_icon(statement, :small)+statement.title, url_for(statement), :class => 'ajax')
-    ret << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
-    return ret
+    link = link_to(statement_icon(statement, :small)+statement.title, url_for(statement), :class => 'ajax')
+    link << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
+    return link
+  end
+
+  # Returns the context menu link for this statement.
+  def statement_context_link(statement)
+    link = link_to(statement_icon(statement, :small)+statement.title, url_for(statement), :class => 'ajax')
+    link << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
+    return link
   end
 
   def statement_dom_id(statement)
     "#{statement.parent.class.name.downcase}_#{statement.id}"
+  end
+
+  # Insert prev/next buttons for the current statement.
+  def prev_next_buttons(statement)
+    key   = ("current_" + statement.class.to_s.underscore).to_sym
+    if session[key].present? and session[key].include?(statement.id)
+      index = session[key].index(statement.id)
+
+      p = statement_button(session[key][index-1], 'Prev') unless index==0
+      n = statement_button(session[key][index+1], 'Next') unless index==session[key].length-1
+
+      "&lt; #{p}<br/>&gt; #{n}"
+    end
+  end
+
+  # Insert a button that links to the previous statement
+  # TODO AR from the helper stinks, but who knows a better way to get the right url?
+  # maybe one could code some statement.url method..?
+  def statement_button(id, title)
+    stmt = Statement.find(id)
+    return link_to title, url_for(stmt), :class => 'ajax'
   end
 
 end

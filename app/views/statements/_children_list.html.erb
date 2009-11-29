@@ -1,4 +1,4 @@
-<% statements ||= @statements
+<% statements ||= @statements || []
    statement ||= @statement
 %>
 <div id="children_list">
@@ -17,7 +17,7 @@
   </div>
   <% end %>
 
-  <%= will_paginate statements if defined? statements.total_pages %>
+  <%= will_paginate statements, :previous_label => '', :next_label => '' if defined? statements.total_pages %>
 </div>
 
 <script type="text/javascript">

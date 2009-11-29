@@ -31,10 +31,14 @@ class ApplicationController < ActionController::Base
 
   # Get formatted error string from error partial for a given object, then show
   # it on the page object as an error message.
-  def show_error_messages(object)
+  def show_error_messages(object=nil)
     render :update do |page|
-      message = render :partial => 'layouts/components/error', :locals => {:object => object}
-      page << "error('#{escape_javascript(message)}');"
+      if object.blank?
+        message = @error
+      else
+        message = escape_javascript(render :partial => 'layouts/components/error', :locals => {:object => object})
+      end
+      page << "error('#{message}');"
     end
   end
 
@@ -48,6 +52,40 @@ class ApplicationController < ActionController::Base
     render :update do |page|
       page << "error('#{string}');"
     end
+  end
+
+  # Sets the @info variable to the localisation given through the string
+  def set_info(string, options = {})
+    @info = I18n.t(string, options)
+  end
+
+  # Sets error to the given objects error message.
+  # If it's a string then use it as localisation key, else
+  # check if it's ActiveRecord object and use the error
+  # method on it.
+  def set_error(object, options = {})
+    if object.kind_of?(String)
+      @error = I18n.t(object, options)
+    elsif object.class.kind_of?(ActiveRecord::Base.class) && object.errors.count > 0
+      value = I18n.t('activerecord.errors.template.body')
+      value += "<ul>"
+      object.errors.each do |attr_name, message|
+        value += "<li>#{message}</li>"
+      end
+      value += "</ul>"
+      @error = value
+    end
+  end
+
+
+  # Sets the @info variable to the flash object
+  def flash_info
+    flash[:notice] = @info
+  end
+
+  # Sets the @error variable to the flash object
+  def flash_error
+    flash[:error] = @error
   end
 
 

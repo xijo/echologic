@@ -30,6 +30,7 @@ class StatementsController < ApplicationController
 
   end
 
+  # TODO use find or create category tag?
   def category
     @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
@@ -40,6 +41,12 @@ class StatementsController < ApplicationController
   # TODO visited! throws error with current fixtures.
   def show
     current_user.visited!(@statement)
+
+    unless @statement.children.empty?
+      child_type = ("current_" + @statement.class.expected_children.first.to_s.underscore).to_sym
+      session[child_type] = @statement.children.by_ratio.collect { |c| c.id }
+    end
+
     @page = params[:page] || 1
     @statements = @statement.children.by_ratio.paginate(:page => @page, :per_page => 3)
     respond_to do |format|
@@ -51,6 +58,7 @@ class StatementsController < ApplicationController
   # Called if user supports this statement. Updates the support field in the corresponding
   # echo object.
   def echo
+    return if @statement.question?
     current_user.supported!(@statement)
     respond_to do |format|
       format.html { redirect_to @statement }
@@ -61,6 +69,7 @@ class StatementsController < ApplicationController
   # Called if user doesn't support this statement any longer. Sets the supported field
   # of the corresponding echo object to false.
   def unecho
+    return if @statement.question?
     current_user.echo!(@statement, :supported => false)
     respond_to do |format|
       format.html { redirect_to @statement }
@@ -80,15 +89,19 @@ class StatementsController < ApplicationController
   def create
     @statement = statement_class.new(params[statement_class_param])
     @statement.creator = @statement.document.author = current_user
-    @statement.save!
-    flash[:notice] = "#{statement_class.display_name} created."
+
     respond_to do |format|
-      format.html { redirect_to url_for(@statement) }
-      format.js { show }
+      if @statement.save
+        set_info("discuss.messages.created", :type => @statement.class.human_name)
+        current_user.supported!(@statement)
+        format.html { flash_info and redirect_to url_for(@statement) }
+        format.js   { show }
+      else
+        set_error(@statement.document)
+        format.html { flash_error and render :action => :new }
+        format.js   { show_error_messages }
+      end
     end
-  rescue ActiveRecord::RecordInvalid => exc
-    flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
-    render :action => 'new'
   end
 
   def edit

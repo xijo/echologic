@@ -308,6 +308,8 @@ en:
         proposal: 'Proposals'
         improvement_proposal: 'Improvement Proposals'
     summary: 'Summary'
+    messages:
+      created: "{{type}} created."
 
   # Feedback resources
   feedback:
@@ -369,6 +371,14 @@ en:
         reason:     'Reason'
       web_profile:
         location:   'Address'
+      statement_document:
+        text:       'Summary'
+        title:      'Title'
+
+    models:
+      improvement_proposal: "Improvement Proposal"
+      proposal: "Proposal"
+      question: "Question"
 
   discuss:
     statement:
