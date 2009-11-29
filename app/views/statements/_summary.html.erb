@@ -2,7 +2,6 @@
 
 <div id="summary" class="summary header_block discuss_right_block">
   <h2><%= I18n.t('discuss.summary') %></h2>
-  <%= "<b>Support:</b>#{supporter_ratio_bar(statement,'summary')}<br/>" unless statement.question? %>
   <%= edit_statement_link(@statement) %>
   <%= statement.text %>
 </div>

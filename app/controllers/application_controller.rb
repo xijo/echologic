@@ -93,7 +93,7 @@ class ApplicationController < ActionController::Base
   # This small methods takes much complexness from the controllers.
   def replace_container(name, content)
     render :update do |page|
-      page.replace name, content
+      page << "$('##{name}').replaceWith('#{escape_javascript(render content)}');"
     end
   end
 

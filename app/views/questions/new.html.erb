@@ -1,5 +1,1 @@
-<% form_for @statement do |f| -%>
-  <%= f.error_messages %>
-  <%# FIXME: we might need a special `questions' form here  %>
-  <%= render :partial => "/statements/form", :locals => { :form => f } %>
-<% end -%>
+<%= render :partial => 'questions/new' %>

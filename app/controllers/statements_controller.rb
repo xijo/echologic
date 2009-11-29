@@ -18,8 +18,9 @@ class StatementsController < ApplicationController
   include StatementHelper
 
   access_control do
-    allow :editor, :only => [:edit, :update, :new, :create]
-    allow logged_in, :except => [:new, :create, :edit, :update]
+    allow :editor
+    allow logged_in, :except => [:edit, :update, :delete], :unless => :is_question?
+    allow logged_in, :except => [:new, :create, :edit, :update, :delete], :if => :is_question?
   end
 
   def index
@@ -62,7 +63,7 @@ class StatementsController < ApplicationController
     current_user.supported!(@statement)
     respond_to do |format|
       format.html { redirect_to @statement }
-      format.js   { replace_container('discuss_sidebar', :partial => 'statements/sidebar') }
+      format.js { render :template => 'statements/echo' }
     end
   end
 
@@ -73,7 +74,7 @@ class StatementsController < ApplicationController
     current_user.echo!(@statement, :supported => false)
     respond_to do |format|
       format.html { redirect_to @statement }
-      format.js   { replace_container('discuss_sidebar', :partial => 'statements/sidebar') }
+      format.js { render :template => 'statements/echo' }
     end
   end
 
@@ -82,7 +83,11 @@ class StatementsController < ApplicationController
     @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
     respond_to do |format|
       format.html # new.html.erb
-      format.js   { replace_container('new_statement', :partial => 'statements/new') }
+      if is_question?
+        format.js { replace_container('new_statement', :partial => 'questions/new') }
+      else
+        format.js { replace_container('new_statement', :partial => 'statements/new') }
+      end
     end
   end
 
@@ -115,17 +120,16 @@ class StatementsController < ApplicationController
     attrs = params[statement_class_param]
     (attrs[:document] || attrs[:statement_document])[:author] = current_user
     respond_to do |format|
-      if @statement.update_attributes!(attrs)
-        format.html { redirect_to url_for(@statement) }
+      if @statement.update_attributes(attrs)
+        set_info("discuss.messages.updated", :type => @statement.class.human_name)
+        format.html { flash_info and redirect_to url_for(@statement) }
         format.js   { show }
       else
-        format.html { redirect_to url_for(@statement) }
-        format.js   { show_error_messages(@statement) }
+        set_error(@statement.document)
+        format.html { flash_error and redirect_to url_for(@statement) }
+        format.js   { show_error_messages }
       end
     end
-  rescue ActiveRecord::RecordInvalid => exc
-    flash[:errors] = "Failed to save #{statement_class}: #{exc.message}"
-    edit
   end
 
   def delete
@@ -157,6 +161,11 @@ class StatementsController < ApplicationController
 
   def statement_class
     params[:controller].singularize.camelize.constantize
+  end
+
+  # Checks if the current controller belongs to a question
+  def is_question?
+    params[:controller].singularize.camelize.eql?('Question')
   end
 
   def statement_class_param

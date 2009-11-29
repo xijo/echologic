@@ -90,10 +90,7 @@ module StatementHelper
   ##
 
   # edited: i18n without interpolation, because of language diffs.
-  # TODO users should have permission to post proposals
-  # TODO parent is missleading name!
   def create_children_statement_link(statement=nil)
-    return unless current_user.has_role?(:editor)
     return unless statement.class.expected_children.any?
     type = 'Question' if statement.nil?
     type ||= statement.class.expected_children.first.to_s

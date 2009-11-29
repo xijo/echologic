@@ -310,6 +310,7 @@ en:
     summary: 'Summary'
     messages:
       created: "{{type}} created."
+      updated: "{{type}} updated."
 
   # Feedback resources
   feedback:

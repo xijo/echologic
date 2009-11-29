@@ -317,6 +317,7 @@ de:
     summary: 'Zusammenfassung'
     messages:
       created: "{{type}} erstellt."
+      updated: "{{type}} bearbeitet."
 
   # ------------------
   # Feedback resources
