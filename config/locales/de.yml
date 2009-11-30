@@ -40,13 +40,13 @@ de:
         next_steps: 'Die ersten Diskussionsfunktionen sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
       connect:
         status_quo: 'Der Bereich "Vernetzen" ist zu <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Der Bereich "Vernetzen" wird weiterentwickelt, sobald die ersten Funktionen in Diskutieren und Handeln zur Verfügung stehen.'
+        next_steps: 'Der Bereich "Vernetzen" wird weiterentwickelt, sobald die ersten Funktionen in "Diskutieren" und "Handeln" zur Verfügung stehen.'
       act:
         status_quo: 'Der Bereich "Handeln" ist zu <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Mit der Entwicklung von "Handeln" werden wir nach der Veröffentlichung der ersten Funktionen im Bereich "Diskutieren" beginnen.'
       my_echo:
         status_quo: 'Der Bereich "Mein echo" ist zu <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Weitere Entwicklungen in "Mein echo" sind nach den Veröffentlichungen von Basisfunktionalitäten unter Diskutieren, Vernetzen und Handeln geplant.'
+        next_steps: 'Weitere Entwicklungen in "Mein echo" sind nach den Veröffentlichungen von Basisfunktionalitäten unter "Diskutieren, Vernetzen und Handeln" geplant.'
         vision: |
          <p>
          "Mein echo" wird Ihre <strong>persönliche Informationszentrale</strong> auf echo.
@@ -117,7 +117,7 @@ de:
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Vervollständigen Sie Ihr Profil, um sich erstmal in der Community von echologic zu präsentieren.'
+      description: 'Verwalten Sie Ihr Profil, um sich in der Community von echologic zu präsentieren.'
     function_2:
       name: 'Vernetzen'
       description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
@@ -189,7 +189,7 @@ de:
 
       upload_picture:
         title: Profilbild hochladen
-        guide: Bitte <strong>Bild auswählen</strong> (JPG oder PNG, max. 1MB) und 'Hochladen'.
+        guide: Bitte <strong>Bild auswählen</strong> (JPG oder PNG, max. 5MB) und 'Hochladen'.
         progress: Ihr Profilbild wird hochgeladen. Bitte warten...
 
       messages:
@@ -227,8 +227,8 @@ de:
         Wir alle stehen mit den <strong>verschiedenen Facetten</strong> unserer Umwelt auf unterschidliche Weise in Verbindung.
         Von einigen Umständen können wir selbst betroffen sein und brauchen die Hilfe Anderer. In anderen Bereichen
         engagieren wir uns und bieten selbst Hilfe an. In bestimmten Bereichen haben wir Fachwissen, in anderen repräsentieren wir
-        möglicherweise andere Menschen und fällen für sie Entscheidungen. echo hilft Betroffenen und Gleichgesinnten mit
-        <strong>sich ergänzenden Kompetenzen</strong> schnell und einfach zusammen zu finden.<br/>
+        möglicherweise andere Menschen und fällen für sie Entscheidungen.<br/>
+        echo hilft Betroffenen und Gleichgesinnten mit <strong>sich ergänzenden Kompetenzen</strong> schnell und einfach zusammen zu finden.<br/>
         Wie würden Sie <strong>Ihre Betroffenheit und Ihre Kompetenzen in Schlagworten (sog. Tags)</strong> beschreiben?
 
       sorts:
@@ -431,10 +431,11 @@ de:
               taken: 'Die von Ihnen angegebene E-Mail Adresse wird bereits verwendet.'
 
       messages:
-        blank: '{{attribute}} muss ausgefüllt werden.'
+        blank: "Das Feld '{{attribute}}' muss ausgefüllt werden."
         taken: 'Ihre Wunschangabe wird leider bereits schon verwendet.'
-        too_short: '{{attribute}} ist zu kurz.'
-        invalid: '{{attribute}} hat ein falsches Format.'
+        too_short: "Ihre Eingabe im Feld '{{attribute}}' ist zu kurz."
+        too_long: "Ihre Eingabe im Feld '{{attribute}}' ist zu lang."
+        invalid: "Ihre Eingabe im Feld '{{attribute}}' hat ein falsches Format."
         confirmation: '{{attribute}} muss übereinstimmen.'
         access_denied: "Leider fehlt Ihnen die nötige Zugangsberechtigung."
 
@@ -460,9 +461,11 @@ de:
       report:
         reason: 'Grund'
       web_profile:
-        location: 'Adresse'
+        location: 'Web Adresse'
       membership:
-        position: 'Tätigkeit'
+        position: 'Meine Rolle'
+      feedback:
+        message: Nachricht
 
   authlogic:
     error_messages:

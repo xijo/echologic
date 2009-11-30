@@ -36,17 +36,17 @@ en:
       next_steps: 'Next Steps'
       vision: 'At The End of The Road'
       discuss:
-        status_quo: 'echo Discuss is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The first features of echo Discuss are under development and will be released soon.'
+        status_quo: 'echo "Discuss" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The first features of echo "Discuss" are under development and will be released soon.'
       connect:
-        status_quo: 'echo Connect is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'echo Connect will be enhanced after the first features of echo Discuss and echo Act have been released.'
+        status_quo: 'echo "Connect" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'echo "Connect" will be enhanced after the first features of echo "Discuss" and echo "Act" have been released.'
       act:
-        status_quo: 'echo Act is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The development of echo Act will begin after the first functions of echo Discuss have been released.'
+        status_quo: 'echo "Act" is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'The development of echo "Act" will begin after the first functions of echo "Discuss" have been released.'
       my_echo:
-        status_quo: 'The My echo area of echo is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'Further development of this area is planned after the development of some basic Discuss, Connect and Act functionality.'
+        status_quo: 'The "My echo" area is currently <strong>{{progress}}% ready</strong>.'
+        next_steps: 'Further development of this area is planned after some basic functionality of "Discuss, Connect and Act" has been released.'
         vision: |
          <p>
          In the long term, the My echo area will be your <strong>personal information hub</strong> inside of echo. E.g. it will provide
@@ -188,7 +188,7 @@ en:
 
       upload_picture:
         title: Upload Picture
-        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 1MB) and upload it.
+        guide: Please <strong>select a picture</strong> (JPG or PNG, max. 5MB) and upload it.
         progress: Your avatar is being uploaded. Please wait...
 
       messages:
@@ -225,8 +225,8 @@ en:
       guide: |
         All of us have <strong>different facets</strong>. In some areas we might be affected and need help from others,
         in other areas we engage ourselves and offer help to others. In certain fields we have professional expertise,
-        in others we represent other people and make decisions. echo helps like-minded people to
-        find each other with <strong>knowledge complementing each other</strong>.<br/>
+        in others we represent other people and make decisions.<br/>
+        echo helps like-minded people to find each other with <strong>knowledge complementing each other</strong>.<br/>
         Which <strong>keywords (tags)</strong> would you describe <strong>your concernments and competences</strong> with?
       sorts:
         affected: <strong>Affected</strong> by
@@ -299,7 +299,7 @@ en:
         </p><p>
         Do not hesitate to ask questions, make comments or to leave a criticism or kudos for us.
         </p>
-      message: Your message
+      message: Message
       send: Send message
     create:
       thank_you: Thank you for your feedback.
@@ -319,10 +319,11 @@ en:
               taken: 'Your e-Mail address is already in use.'
 
       messages:
-        blank: '{{attribute}} must not be empty.'
+        blank: "The field '{{attribute}}' must not be empty."
         taken: 'Is already in use.'
-        too_short: '{{attribute}} is too short.'
-        invalid: '{{attribute}} must to be in a valid format.'
+        too_short: "Your input for '{{attribute}}' is too short."
+        too_long: "Your input for '{{attribute}}' is too long."
+        invalid: "Your input for '{{attribute}}' must be in a valid format."
         confirmation: '{{attribute}} confirmation does not match.'
         access_denied: "You are not allowed to perform this action."
 
@@ -348,7 +349,9 @@ en:
       report:
         reason:     'Reason'
       web_profile:
-        location:   'Address'
+        location:   'Web Address'
+      membership:
+        position: My role
 
   discuss:
     statement:

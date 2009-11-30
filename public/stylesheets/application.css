@@ -164,6 +164,7 @@
   line-height: 16px;
   margin: 8px 12px 0 0;
   text-align: right;
+  cursor: default;
 }
 
 #logged_in_user_pic {

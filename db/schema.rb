@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091124134642) do
+ActiveRecord::Schema.define(:version => 20091128180020) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -21,21 +21,6 @@ ActiveRecord::Schema.define(:version => 20091124134642) do
 
   add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
   add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
-
-  create_table "echo_details", :force => true do |t|
-    t.integer "echo_id"
-    t.integer "user_id"
-    t.boolean "visited",   :default => false
-    t.boolean "supported", :default => false
-  end
-
-  add_index "echo_details", ["echo_id"], :name => "index_echo_details_on_echo_id"
-  add_index "echo_details", ["user_id"], :name => "index_echo_details_on_user_id"
-
-  create_table "echos", :force => true do |t|
-    t.integer "visitor_count",   :default => 0
-    t.integer "supporter_count", :default => 0
-  end
 
   create_table "feedbacks", :force => true do |t|
     t.string "name"
@@ -64,8 +49,8 @@ ActiveRecord::Schema.define(:version => 20091124134642) do
     t.boolean  "female"
     t.string   "city"
     t.string   "country"
-    t.string   "about_me"
-    t.string   "motivation"
+    t.text     "about_me"
+    t.text     "motivation"
     t.date     "birthday"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -99,35 +84,6 @@ ActiveRecord::Schema.define(:version => 20091124134642) do
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "statement_categories", :force => true do |t|
-    t.integer  "statement_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "statement_categories", ["statement_id"], :name => "index_statement_categories_on_statement_id"
-
-  create_table "statement_documents", :force => true do |t|
-    t.string  "title"
-    t.text    "text"
-    t.integer "author_id"
-  end
-
-  create_table "statements", :force => true do |t|
-    t.string  "type"
-    t.boolean "activated"
-    t.integer "parent_id"
-    t.integer "root_id"
-    t.integer "document_id"
-    t.integer "creator_id"
-    t.integer "work_package_id"
-    t.boolean "published"
-    t.integer "echo_id"
-    t.integer "statement_category_id"
-    t.integer "category_id"
   end
 
   create_table "tags", :force => true do |t|
