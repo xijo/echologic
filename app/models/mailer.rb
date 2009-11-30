@@ -2,13 +2,13 @@ class Mailer < ActionMailer::Base
 
   # Send a feedback object as email to the FEEDBACK_RECIPIENT specified
   # in the environment.
-  def feedback(feedback)
-    @feedback     = feedback
-    @subject      = "echologic feedback from #{@feedback.name}"
-    @recipients   = FEEDBACK_RECIPIENT
-    @from         = "feedback@echologic.org"
-    @sent_on      = Time.now
-    @content_type = 'text/html'
+  def feedback(feedback)  
+    subject       "echologic - Feedback from #{feedback.name}"
+    recipients    FEEDBACK_RECIPIENT
+    from          "feedback@echologic.org"
+    reply_to      [feedback.email, FEEDBACK_RECIPIENT]
+    sent_on       Time.now
+    body          :name => feedback.name, :message => feedback.message
   end
 
   # Delivers activation instructions to the given user.
