@@ -1,3 +1,3 @@
 class QuestionsController < StatementsController
-  
+
 end

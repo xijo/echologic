@@ -1,10 +1,16 @@
 <% statement ||= @statement -%>
-<% form_for statement.self_with_parents do |f| -%>
-  <%= f.error_messages %>
-  <%= render :partial => "statements/form", :locals => { :form => f } %>
-<% end -%>
+
+<div id="new_statement" class="discuss_right_block">
+  <% form_for statement.self_with_parents do |f| -%>
+    <%= f.error_messages %>
+    <%= render :partial => "statements/form", :locals => { :form => f } %>
+    <%= I18n.t('application.general.or') %>
+    <%= link_to I18n.t('application.general.cancel'), statement.parent, :class => "ajax" %>
+  <% end -%>
+</div>
+
 <% unless statement.class.name == 'Question' %>
-<script type="text/javascript">
-  $('#new_<%=statement.class.name.underscore%>').ajaxForm({ dataType : 'script' });
-</script>
+  <script type="text/javascript">
+    $('#new_<%=statement.class.name.underscore%>').ajaxForm({ dataType : 'script' });
+  </script>
 <% end %>

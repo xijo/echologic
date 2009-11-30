@@ -1,5 +1,23 @@
-#context {
-  margin: 0px 0px 12px 125px;
+
+.discuss_right_block {
+  float:        left;
+  margin:       0 0 0 0;
+  width:        800px;
+  display:      inline-block;
+}
+
+#summary ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+#summary ol li {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+#summary li {
+  display: list-item;
 }
 
 
@@ -7,33 +25,32 @@
   margin:5px 0 5px !important;
 }
 
+#discuss_sidebar {
+  clear:      left;
+  float:      left;
+  height:     400px;
+  width:      120px;
+}
+
 #sidebar {
-  float:left;
-  height:280px;
-  width:110px;
+  float:      left;
+  height:     280px;
+  width:      110px;
   border-right:2px solid lightgrey;
 }
 
-#statement_main {
-}
-
-#summary {
-  margin: 0px 0px 25px 125px;
-}
-
-#summary h1 {
-  border-bottom: 1px solid grey;
-}
-
-.create_statement_button {
-  -moz-background-clip:border;
-  -moz-background-inline-policy:continuous;
-  -moz-background-origin:padding;
+/* Intended? */
+.create_statement_button2 {
   display:inline-block;
   margin-top:-42px;
   padding-left:34px !important;
   height:32px;
-  line-height: 32px; 
+  line-height: 32px;
+}
+
+
+.create_statement_button {
+
 }
 
 .create_question_button {
@@ -47,6 +64,39 @@
 .create_improvement_proposal_button {
   background:transparent url(../images/page/discuss/add_improvement_proposal.png) no-repeat scroll 0 0;
 }
+
+/* CONTEXT */
+#context {
+  float:          left;
+  color:          #21587F;
+  font-size:      14px;
+  font-weight:    bold;
+  text-decoration:none;
+}
+
+#context a img { border: 0; }
+
+.context_line { height: 40px; }
+
+.context_line .context_link {
+  float:          left;
+  display:        inline-block;
+}
+
+.context_line .context_buttons {
+  float:          left;
+  width:          120px;
+  min-height:     1px;
+}
+
+
+/* END CONTEXT */
+
+
+#children .pagination {
+  width: 855px !important;
+}
+
 
 .discuss_header_block {
   background: url(../images/page/header_left.png) no-repeat scroll left top;
@@ -63,24 +113,27 @@
   color: #21587f !important;
 }
 
+
 .ratiobar {
-  height:9px !important;
-  width:130px;
-  display:inline-block;
-  margin-left:10px;
+  height:       9px !important;
+  width:        130px;
+  min-width:    130px;
+  display:      inline-block;
+  margin-left:  10px;
 }
 
 .ratiobar_context {
-  height:14px !important;
-  width:200px;
-  float:right;
-  margin-right:25px;
-  margin-top:15px;
+  height:       14px !important;
+  width:        200px;
+  float:        right;
+  margin-right: 25px;
+  margin-top:   15px;
 }
 
 .edit_statement_button {
   margin-top:-42px;
 }
+
 
 .statement_link {
   -moz-background-clip:border;
@@ -90,11 +143,11 @@
   margin-top:-42px;
   padding-left:18px !important;
   height:16px;
-  line-height: 16px; 
+  line-height: 16px;
 }
 
 .question_link {
-   background:transparent url(../images/page/discuss/question_small.png) no-repeat scroll 0 0; 
+   background:transparent url(../images/page/discuss/question_small.png) no-repeat scroll 0 0;
 }
 
 .proposal_link {
@@ -105,10 +158,19 @@
   background:transparent url(../images/page/discuss/improvement_proposal_small.png) no-repeat scroll 0 0;
 }
 
-a img {
-  border:0;
-}
-
 .question_links {
   list-style:none;
 }
+
+/* ECHO BUTTON */
+
+#echo_button span {
+  height:   80px;
+  width:    80px;
+  display:  inline-block;
+  background-image: url(../images/page/discuss/echo_all.png);
+}
+
+#echo_button .supported           { background-position: 0 -80px; }
+#echo_button .supported:hover     { background-position: 0 80px; }
+#echo_button .not_supported:hover { background-position: 0 -80px; }

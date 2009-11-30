@@ -1,3 +1,4 @@
+@discuss
 Feature: Discuss
   In order to have a proper discussion
   As a user
@@ -5,7 +6,7 @@ Feature: Discuss
 
   # fixtures needed:
   # user 'editor' pw 'true' -> is_editor
-  
+
   Scenario: Create a valid question as an editor
     Given there are no questions
       And I am logged in as "editor" with password "true"
@@ -45,7 +46,7 @@ Feature: Discuss
     # Todo: Maybe we should check the content of the error box as well
     Then there should be no questions
       And I should see an error message
-  
+
   Scenario: Add an Improvement Proposal to a Proposal
     Given I am logged in as "user" with password "true"
       And there is the first question
@@ -64,7 +65,7 @@ Feature: Discuss
   # Todo:
   # * view a question / proposal
   # ** this is basically covered through the above tests, but we could need to check more detailed what the user will see
-   
+
   ###
   ### The following tests need to be changed as soon as we are more clear about how to deal with permissions for questions
   ###
@@ -80,17 +81,16 @@ Feature: Discuss
     And I press the "Save" button
     Then there should be no questions
       And I should see a "permission denied" error message
-      
+
 
   Scenario: Add a proposal to a question as a user (from ui)
     Given I am logged in as "user" with password "true"
     # Todo: Maybe we should start navigating from the main question overview
     When I go to the first question
     Then I should not see the create proposal link
-  
+
   # Todo: Maybe this should be better checked somewhere else
   Scenario: Add a proposal to a question as a user (directly)
     Given I am logged in as "user" with password "true"
     When I post some valid proposal data for "first-question"
     Then I should see a "permission denied" error message
-

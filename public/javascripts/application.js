@@ -57,7 +57,7 @@ function bindAjaxClickEvents() {
 
   $(".ajax").live("click", function() {
     $.getScript(this.href);
-    return false
+    return false;
   });
 
   $(".ajax_delete").live("click", function() {
@@ -66,6 +66,16 @@ function bindAjaxClickEvents() {
       type:     'post',
       dataType: 'script',
       data:   { '_method': 'delete' }
+    });
+    return false;
+  });
+
+  $(".ajax_put").live("click", function() {
+    $.ajax({
+      url:      this.href,
+      type:     'post',
+      dataType: 'script',
+      data:   { '_method': 'put' }
     });
     return false;
   });
@@ -179,4 +189,12 @@ function error(text) {
   $('#errorBox').stop().hide();
   $('#messageContainer #errorBox .message').html(text);
   $('#messageContainer #errorBox').slideDown().animate({opacity: 1.0}, 5000 + text.length*50).slideUp();
+}
+
+/* Collects all ratiobars by class and invokes the progressbar-init on them by taking
+ * the value from the alt-attribute. */
+function makeRatiobars() {
+  $.each( $('.ratiobar'), function() {
+    $(this).progressbar({ value: $(this).attr('alt') });
+  });
 }

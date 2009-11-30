@@ -3,9 +3,21 @@
   <%= doc.text_field :title %>
   <br />
   <%= doc.label :text %>
-  <%= doc.text_area :text, :size => '40x5' %>
+  <%= doc.text_area :text, :size => '100x5' %>
+
   <br />
 <% end -%>
-<%= form.hidden_field :parent_id %> 
+<%= form.hidden_field :parent_id %>
 <%= form.hidden_field :category_id %>
-<%= form.submit "Save", :id => 'save_button' %>
+<%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
+
+<script type="text/javascript">
+  var edit_editor = new nicEditor({
+    buttonList: ['bold','italic','underline','ol','ul','xhtml']
+  }).panelInstance('question_statement_document_text');
+
+  $('.nicEdit-main').blur(function() {
+    $('#question_statement_document_text').val($('.nicEdit-main').html());
+
+  });
+</script>

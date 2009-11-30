@@ -1,6 +1,7 @@
-<%
-statement ||= @statement
-%>
-<h1><%=statement.class.display_name%> Summary</h1>
-<%= edit_statement_link(@statement) %>
-<%=statement.text%>
+<% statement ||= @statement %>
+
+<div id="summary" class="summary header_block discuss_right_block">
+  <h2><%= I18n.t('discuss.summary') %></h2>
+  <%= edit_statement_link(@statement) %>
+  <%= statement.text %>
+</div>

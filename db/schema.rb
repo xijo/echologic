@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20091128180020) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-  end
+
 
   create_table "reports", :force => true do |t|
     t.integer  "reporter_id"
@@ -84,6 +84,25 @@ ActiveRecord::Schema.define(:version => 20091128180020) do
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "statement_documents", :force => true do |t|
+    t.string  "title"
+    t.text    "text"
+    t.integer "author_id"
+  end
+
+  create_table "statements", :force => true do |t|
+    t.string  "type"
+    t.boolean "activated"
+    t.integer "parent_id"
+    t.integer "root_id"
+    t.integer "document_id"
+    t.integer "creator_id"
+    t.integer "work_package_id"
+    t.boolean "published"
+    t.integer "echo_id"
+    t.integer "category_id"
   end
 
   create_table "tags", :force => true do |t|

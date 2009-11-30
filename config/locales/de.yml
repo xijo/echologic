@@ -296,7 +296,32 @@ de:
       no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
       no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
+  # ---------------
+  # Discuss section
+  # ---------------
+
+  discuss:
+    statements:
+      create_link: 'Neue Frage erstellen'
+      create_proposal_link: 'Neuen Vorschlag erstellen'
+      create_improvement_proposal_link: 'Neuen Verbesserungsvorschlag erstellen'
+      ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
+      types:
+        question:  'Frage'
+        proposal:  'Vorschlag'
+        improvement_proposal: 'Verbesserungsvorschlag'
+      headings:
+        question: 'Fragen'
+        proposal: 'Vorschläge'
+        improvement_proposal: 'Verbesserungsvorschläge'
+    summary: 'Zusammenfassung'
+    messages:
+      created: "{{type}} erstellt."
+      updated: "{{type}} bearbeitet."
+
+  # ------------------
   # Feedback resources
+  # ------------------
   feedback:
     new:
       title: Feedback
@@ -463,9 +488,17 @@ de:
       web_profile:
         location: 'Web Adresse'
       membership:
-        position: 'Meine Rolle'
+        position: 'Rolle'
       feedback:
         message: Nachricht
+      statement_document:
+        text:     'Zusammenfassung'
+        title:    'Titel'
+
+    models:
+      improvement_proposal: "Verbesserungsvorschlag"
+      proposal: "Vorschlag"
+      question: "Frage"
 
   authlogic:
     error_messages:
@@ -474,10 +507,6 @@ de:
       not_active:         "Ihr Zugang wurde noch nicht freigeschaltet. Sehen Sie bitte Ihrem Posteingang nach einer Aktivierungs E-Mail."
       must_be_logged_in:  "Sie müssen eingeloggt sein, um diese Seite zu sehen."
       must_be_logged_out: "Sie müssen ausgeloggt sein, um diese Seite zu sehen."
-
-  discuss:
-    statement:
-      ratio_bar_tooltip: 'Diese Aussage hat {{progress}}% Zustimmung ({{supporters}} Unterstützer).'
 
     attributes:
       user_session:

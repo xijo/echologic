@@ -1,15 +1,18 @@
 <% content_for :submenu, tabnav(:discuss) %>
-<div id="context">
-  <%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
+
+<%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
+
+<%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
+
+<div id="new_statement" class="discuss_right_block">
+  <%= create_children_statement_link(@statement) %>
 </div>
-<div id="sidebar">
-  <%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
-</div>
-<div id="statement_main">
-  <div id="summary">
-    <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
-  </div>
-  <div id="children" class="discuss_header_block">
-    <%= render :partial => 'statements/children', :locals => {:statements => @statements, :statement => @statement }%>
-  </div>
-</div>
+
+<script type="text/javascript">
+  makeRatiobars();
+  makeTooltips();
+</script>

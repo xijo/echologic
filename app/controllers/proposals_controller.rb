@@ -1,2 +1,3 @@
 class ProposalsController < StatementsController
+
 end

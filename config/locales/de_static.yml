@@ -60,10 +60,15 @@ de:
         roadmap: 'echologic - Fahrplan für Mein echo'
         welcome: 'echologic - Welcome'
         profile: 'echologic - Mein Profil'
-        
+
       # my_echo: de.seo.title.admin
       admin:
         show: 'echologic - Admin Area'
+
+      # questions
+      questions:
+        category: 'echologic - Diskutieren'
+        show:     'echologic - Diskutieren'
 
     meta:
       description: |-
@@ -126,7 +131,7 @@ de:
           lösungsorientierte Diskussionen einbringen, MitstreiterInnen mobilisieren und ihre Entscheidungen gemeinsam in die Tat umsetzen.
           Dabei erlaubt echo erstmals die Herausbildung <strong>kollektiver Intelligenz</strong> in einem demokratischen Diskurs mit
           beliebig vielen Teilnehmern. Menschen rund um den Globus können so konstruktiv auf echo zusammen arbeiten und
-          gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten. Dabei hilft die 
+          gemeinsam ihren unmittelbaren Lebensraum sowie die Zukunft unserer Welt gestalten. Dabei hilft die
           <strong>Your-Profit Philosophie</strong> von echo den Menschen, ihre Ziele erfolgreich zu verwirklichen.
           </p><p>
           Durch neuartige Möglichkeiten transnationaler und interkultureller Zusammenarbeit soll mit echo ein globales Bewusstsein gefördert
@@ -736,7 +741,7 @@ de:
         Bis bald,
 
         Ihr echo Team
-        
+
     # New password section
     new_password:
       subject: "Neues Passwort für echologic"

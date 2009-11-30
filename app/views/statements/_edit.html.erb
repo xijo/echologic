@@ -1,9 +1,17 @@
 <% statement ||= @statement -%>
-<h2><%=statement.class.display_name%> Summary</h2>
-<% form_for statement.self_with_parents do |f| -%>
-  <%= f.error_messages %>
-  <%= render :partial => "statements/form", :locals => { :form => f } %>
-<% end -%>
+
+<div id="summary" class="summary header_block">
+  <h2><%= statement.class.display_name %> Summary</h2>
+  <% form_for statement.self_with_parents do |f| -%>
+    <%= f.error_messages %>
+    <%= render :partial => "statements/form", :locals => { :form => f } %>
+
+    <%= I18n.t('application.general.or') %>
+    <%= link_to I18n.t('application.general.cancel'), url_for(statement), :class => 'ajax' %>
+
+  <% end -%>
+</div>
+
 <script type="text/javascript">
-  $('#edit_<%=statement.class.name.underscore%>_<%=statement.id%>').ajaxForm({ dataType : 'script' });
+  $('#edit_<%= dom_id(statement) %>').ajaxForm({ dataType : 'script' });
 </script>

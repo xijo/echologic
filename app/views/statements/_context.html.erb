@@ -1,29 +1,13 @@
-<% statement ||= @statement 
-%>
-<% case statement.level 
-     when 0
-%>
-<h1 class="root"> 
-  <%= statement_context_line(statement)%>
-</h1>
-<%   when 1 %>
-<h1 class="root"> 
-  <%= statement_context_line(statement.parent)%>
-</h1>
-<h1 class="intermediate"> 
-  <%= statement_context_line(statement)%>
-</h1>
-<%   when 2 %>
-<h1 class="root"> 
-  <%= statement_context_line(statement.root)%>
-</h1>
-<h1 class="intermediate"> 
-  <%= statement_context_line(statement.parent)%>
-</h1>
-<h1 class="bottom"> 
-  <%= statement_context_line(statement)%>
-</h1>
-<% end %>
-<script type="text/javascript">
-  $("#context a").addClass('ajax');
-</script>
+<% statement ||= @statement %>
+
+<div id="context" class="discuss_right_block">
+
+  <% arr = [statement.root, statement.parent, statement].compact.uniq || [] %>
+  <% arr.each do |s| %>
+  <div class="context_line">
+    <div class="context_buttons"><%= prev_next_buttons(s) %></div>
+    <div class="context_link"><%= statement_context_link(s)%></div>
+  </div>
+  <% end %>
+
+</div>

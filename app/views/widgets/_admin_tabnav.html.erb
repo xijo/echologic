@@ -10,12 +10,6 @@ render_tabnav :admin,
   end
 
   add_tab do |t|
-    t.named "Connect beta"
-    t.links_to '/connect/search'
-    t.highlights_on :controller => 'connect'
-  end
-
-  add_tab do |t|
     t.named "Reports"
     t.links_to hash_for_reports_path
   end

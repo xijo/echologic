@@ -3,25 +3,24 @@
 
 render_tabnav :discuss,
               :generate_css => false, :html => {:class => 'submenu'} do
-  
+
+  add_tab do |t|
+    t.named I18n.t('application.general.welcome')
+    t.links_to hash_for_discuss_path
+  end
+
   add_tab :html => {:id => 'echonomyjam_tab'} do |t|
     t.named 'EchonomyJAM'
     t.links_to hash_for_question_tags_path.merge({:id => 'EchonomyJAM'})
     t.highlight! if @category && @category.value == 'EchonomyJAM'
   end
-  
+
   add_tab :html => {:id => 'echocracy_tab'} do |t|
     t.named 'Echocracy'
     t.links_to hash_for_question_tags_path.merge({:id => 'Echocracy'})
     t.highlight! if @category && @category.value == 'Echocracy'
   end
 
-  add_tab :html => {:id => 'thirdcategory_tab'} do |t|
-    t.named 'Third Category'
-    t.links_to hash_for_question_tags_path.merge({:id => 'ThirdCategory'})
-    t.highlight! if @category && @category.value == 'ThirdCategory'
-  end
-  
   add_tab :html => {:id => 'roadmap_tab'} do |t|
     value = '<span id="roadmap_tab_title">' + I18n.t('application.roadmap.title') + '</span>'
     value += insert_progressbar(Development::DISCUSS_PROGRESS)
