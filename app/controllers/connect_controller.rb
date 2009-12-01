@@ -60,7 +60,7 @@ class ConnectController < ApplicationController
           or m.position   like '%#{value}%'
           or m.organisation like '%#{value}%'
         )
-      order by p.first_name asc;
+      order by CASE WHEN p.last_name IS NULL OR p.last_name="" THEN 1 ELSE 0 END, p.last_name, p.first_name, u.id asc;
     END
 
     profiles = Profile.find_by_sql(query)
