@@ -38,6 +38,7 @@
   border: none;
   display: inline-block;
   margin-left: -5px;
+  cursor: pointer;
 }
 
 #search_form input[type='submit']:hover {
@@ -125,9 +126,8 @@
   width: 990px;
   margin: 0 auto;
   text-align: center;
-  color: #7bb031;
+  color: #21587f;
   font-size: 15px;
-  font-weight: bold;
   position: absolute;
   top: 120px;
   cursor: default;
