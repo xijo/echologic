@@ -289,29 +289,6 @@ en:
       no_concernments: "This member hasn't defined any concernments and competences, yet."
       no_web_profiles: "This member hasn't defined any web addresses, yet."
 
-  # ---------------
-  # Discuss section
-  # ---------------
-
-  discuss:
-    statements:
-      create_link: 'Create question'
-      create_proposal_link: 'Create proposal'
-      create_improvement_proposal_link: 'Create improvement proposal'
-      ratio_bar_tooltip: 'This argument has {{progress}}% agreement ({{supporters}} supporter).'
-      types:
-        question:  'Question'
-        proposal:  'Proposal'
-        improvement_proposal: 'Improvement Proposal'
-      headings:
-        question: 'Questions'
-        proposal: 'Proposals'
-        improvement_proposal: 'Improvement Proposals'
-    summary: 'Summary'
-    messages:
-      created: "{{type}} created."
-      updated: "{{type}} updated."
-
   # Feedback resources
   feedback:
     new:
@@ -372,26 +349,9 @@ en:
       report:
         reason:     'Reason'
       web_profile:
-<<<<<<< HEAD
         location:   'Web Address'
       membership:
         position: My role
-=======
-        location:   'Address'
-      statement_document:
-        text:       'Summary'
-        title:      'Title'
-
-    models:
-      improvement_proposal: "Improvement Proposal"
-      proposal: "Proposal"
-      question: "Question"
->>>>>>> origin/2009-11-27_echologic_0.4_Discuss
-
-  discuss:
-    statement:
-      ratio_bar_tooltip: 'This statement found {{progress}}% agreement ({{supporters}} supporters).'
-      create_a_new: "Create a new {{type}}"
 
   authlogic:
     error_messages:

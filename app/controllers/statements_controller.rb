@@ -45,7 +45,7 @@ class StatementsController < ApplicationController
 
     unless @statement.children.empty?
       child_type = ("current_" + @statement.class.expected_children.first.to_s.underscore).to_sym
-      session[child_type] = @statement.children.by_ratio.collect { |c| c.id }
+      session[child_type] = @statement.children.by_supporters.collect { |c| c.id }
     end
 
     @page = params[:page] || 1

@@ -18,11 +18,34 @@ module Echoable
       echo.supporter_count
     end
     
+
     def ratio
+      #supporters_visitors_ratio
+      supporters_supporters_ratio
+    end
+    
+    
+    #ratio of entity.supporters vs. the most supported sibblings supporters)
+    def supporters_supporters_ratio
+      # if we have a parent we go the easy way
+      if parent
+        ((supporter_count.to_f / parent.most_supported_child.supporter_count.to_f) * 100).to_i
+      else
+        end
+    end
+    
+    # ratio of supporters vs. visitors
+    # currently unused (see ratio)
+    def supporters_visitors_ratio
       if supporter_count == 0
         return 0
       end
-      ((supporter_count.to_f / visitor_count.to_f) * 100).to_i
+      ((supporter_count.to_f / visitor_count.to_f) * 100).to_i    
+    end
+   
+    # finds the most supported child (used by ratio of entity vs. the most supported sibbling)
+    def most_supported_child
+      children.by_supporters.first
     end
     
     def find_or_create_echo
