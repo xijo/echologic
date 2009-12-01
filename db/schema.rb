@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(:version => 20091128180020) do
   add_index "concernments", ["sort"], :name => "index_concernments_on_sort"
   add_index "concernments", ["user_id", "sort"], :name => "index_concernments_on_user_id_and_sort"
 
+  create_table "echo_details", :force => true do |t|
+    t.integer "echo_id"
+    t.integer "user_id"
+    t.boolean "visited",   :default => false
+    t.boolean "supported", :default => false
+  end
+
+  add_index "echo_details", ["echo_id"], :name => "index_echo_details_on_echo_id"
+  add_index "echo_details", ["user_id"], :name => "index_echo_details_on_user_id"
+
+  create_table "echos", :force => true do |t|
+    t.integer "visitor_count",   :default => 0
+    t.integer "supporter_count", :default => 0
+  end
+
   create_table "feedbacks", :force => true do |t|
     t.string "name"
     t.string "email"
@@ -59,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20091128180020) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-
+  end
 
   create_table "reports", :force => true do |t|
     t.integer  "reporter_id"
@@ -94,7 +109,6 @@ ActiveRecord::Schema.define(:version => 20091128180020) do
 
   create_table "statements", :force => true do |t|
     t.string  "type"
-    t.boolean "activated"
     t.integer "parent_id"
     t.integer "root_id"
     t.integer "document_id"
