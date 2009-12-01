@@ -6,17 +6,17 @@
   display:      inline-block;
 }
 
-#summary ul li {
+.nicEdit-main ul li {
   list-style: disc;
   list-style-position: inside;
 }
 
-#summary ol li {
+.nicEdit-main ol li {
   list-style: decimal;
   list-style-position: inside;
 }
 
-#summary li {
+.nicEdit-main li {
   display: list-item;
 }
 
