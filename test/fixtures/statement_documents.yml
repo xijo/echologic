@@ -17,3 +17,8 @@ first-impro-proposal-doc:
   title: 'A better first proposal'
   text: 'I think, a better first proposal would be a better one!'
   author_id: <%= Fixtures.identify(:ben) %>
+
+not-published-proposal-doc:
+  title: 'This proposal should not be seen...'
+  text: 'unless you are an editor'
+  author_id: <%= Fixtures.identify(:editor) %>

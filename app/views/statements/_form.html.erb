@@ -1,15 +1,9 @@
-<% form.fields_for(form.object.document || :document) do |doc|  %>
-  <%= doc.label :title %>
-  <%= doc.text_field :title %>
-  <br />
-  <%= doc.label :text %>
-  <%= doc.text_area :text, :size => '100x5' %>
-
+<% form.semantic_fields_for(form.object.document || :document) do |doc|  %>
+  <%= doc.inputs :title, :text %>
   <br />
 <% end -%>
 <%= form.hidden_field :parent_id %>
 <%= form.hidden_field :category_id %>
-<%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
 
 <script type="text/javascript">
   var edit_editor = new nicEditor({
@@ -18,6 +12,5 @@
 
   $('.nicEdit-main').blur(function() {
     $('#question_statement_document_text').val($('.nicEdit-main').html());
-
   });
 </script>

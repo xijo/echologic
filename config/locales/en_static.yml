@@ -45,7 +45,7 @@ en:
 
       # discuss: de.seo.title.discuss
       discuss:
-        roadmap: 'echologic - Roadmap for Discuss'
+        roadmap: 'echologic - Roadmap for Discuss'        
 
       # connect: de.seo.title.connect
       connect:
@@ -55,7 +55,7 @@ en:
       # act: de.seo.title.act
       act:
         roadmap: 'echologic - Roadmap for Act'
-
+        
       # my_echo: de.seo.title.my_echo
       my_echo:
         roadmap: 'echologic - Roadmap for My echo'
@@ -65,11 +65,6 @@ en:
       # my_echo: de.seo.title.admin
       admin:
         show: 'echologic - Admin Bereich'
-
-      # questions:
-      questions:
-        category: 'echologic - Discuss'
-        show:     'echologic - Discuss'
 
     meta:
       description: |-
@@ -182,7 +177,7 @@ en:
           Inhaltlich Verantwortliche gemäß § 6 MDStV sind Jan Linhart und László Papp.
           </p><p>
           <strong>Ladungsfähige Anschrift</strong> gemäß TMG:<br/>
-          echo Source e.V. - c/o Jan Linhart<br/>
+          echo source e.V. - c/o Jan Linhart<br/>
           Freibadstr. 1<br/>
           81543 München<br/>
           E-mail: <a href="mailto:team@echologic.org">team@echologic.org</a><br/>
@@ -194,7 +189,7 @@ en:
           gebotenen Rahmen müssen wir daher jede Verantwortung für den Inhalt dieser Links bzw.
           der verlinkten Seite ablehnen.
           </p><p>
-          Currently, the <strong>statute of echo Source e.V.</strong> is only available as a PDF document in German.
+          Currently, the <strong>statute of echo source e.V.</strong> is only available as a PDF document in German.
           </p>
 
         open_statute: Check out the document anyway!

@@ -1,9 +1,11 @@
 <% statement ||= @statement -%>
 
 <div id="new_statement" class="discuss_right_block">
-  <% form_for statement.self_with_parents do |f| -%>
+  <% semantic_form_for statement.self_with_parents do |f| -%>
     <%= f.error_messages %>
     <%= render :partial => "statements/form", :locals => { :form => f } %>
+    <%= f.inputs :published %>
+    <%= f.submit I18n.t('application.general.save'), :id => 'save_button' %>
     <%= I18n.t('application.general.or') %>
     <%= link_to I18n.t('application.general.cancel'), statement.parent, :class => "ajax" %>
   <% end -%>

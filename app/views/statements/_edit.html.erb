@@ -22,8 +22,17 @@
 
   <% end %>
 
+
+  <% semantic_form_for statement.self_with_parents do |f| -%>
+    <%= f.error_messages %>
+    <%= render :partial => "statements/form", :locals => { :form => f } %>
+    <%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
+    <%= I18n.t('application.general.or') %>
+    <%= link_to I18n.t('application.general.cancel'), url_for(statement), :class => 'ajax' %>
+  <% end %>
+
 </div>
 
 <script type="text/javascript">
-  $('#edit_<%= dom_id(statement) %>').ajaxForm({ dataType : 'script' });
+  $('#edit_<%= dom_id(staement) %>').ajaxForm({ dataType : 'script' });
 </script>

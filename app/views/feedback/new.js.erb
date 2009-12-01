@@ -15,3 +15,7 @@ $('#dialogContent').dialog({
   width:    650,
   resizable: false
 });
+
+<% if current_user %>
+  $('#feedback_message').focus();
+<% end %>

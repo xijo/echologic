@@ -19,4 +19,4 @@ config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default_url_options = { :host => 'staging.echo-test.org' }
 
 # Feedback recipient
-FEEDBACK_RECIPIENT = 'johannes.opper@echo-logic.org'
+FEEDBACK_RECIPIENT = 'laszlo.papp@echologic.org'
