@@ -29,12 +29,12 @@ module UserExtension::Echo
     
     # returns true if the +user+ has visted the given +echoable+
     def visited?(echoable)
-      echoable.echo_details.visited.any?
+      echoable.echo_details.visited.for_user(self.id).any?
     end
     
     # returns true if the +user+ has supported the given +echoable+
     def supported?(echoable)
-      echoable.echo_details.supported.any?
+      echoable.echo_details.supported.for_user(self.id).any?
     end
   end
 end

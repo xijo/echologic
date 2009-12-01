@@ -30,8 +30,7 @@ module Echoable
       # if we have a parent we go the easy way
       if parent
         ((supporter_count.to_f / parent.most_supported_child.supporter_count.to_f) * 100).to_i
-      else
-        end
+      end
     end
     
     # ratio of supporters vs. visitors

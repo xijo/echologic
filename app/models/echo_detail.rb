@@ -6,6 +6,8 @@ class EchoDetail < ActiveRecord::Base
   named_scope :visited, lambda { { :conditions => { :visited => true } } }
   named_scope :supported, lambda { { :conditions => { :supported => true } } }
   
+  named_scope :for_user, lambda { |user_id| { :conditions => { :user_id => user_id } } }
+  
   class << self
     # Finds the EchoDetail based on the given :echo in the options hash and
     # updates it's attributes with the remaining options.
