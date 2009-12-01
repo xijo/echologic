@@ -96,31 +96,31 @@ class User < ActiveRecord::Base
     Mailer.deliver_password_reset_instructions(self)
   end
 
-  # Return user voice access link
-  def user_voice_link
-    options = {
-      :url    => "http://localhost:3000/users",
-      :admin  => "deny",
-      :allow_forums => [31794],
-      :display_name => profile.full_name,
-      :guid   => id,
-      :email  => email,
-      :expires => (Time.now + 60*5).to_s
-    }
-
-    account_key = "echonomyjamtemporary"
-    api_key     = "8fa3e2a47017cff3dc8c28d8c461d699"
-
-    key = EzCrypto::Key.with_password account_key, api_key
-    encrypted = key.encrypt(options.to_json)
-    @data = Base64.encode64(encrypted).gsub(/\n/,'')
-    @data = CGI.escape(@data)
-
-    "http://www.temporary-discuss.echonomyJAM.org?sso=#{@data}"
-
-    # logout script:
-    # http://www.temporary-discuss.echonomyJAM.org/logout.json
-
-  end
+#  # Return user voice access link
+#  def user_voice_link
+#    options = {
+#      :url    => "http://www.echologic.org/users",
+#      :admin  => "deny",
+#      :allow_forums => [31794],
+#      :display_name => profile.full_name,
+#      :guid   => id,
+#      :email  => email,
+#      :expires => (Time.now + 60*5).to_s
+#    }
+#
+#    account_key = "echonomyjamtemporary"
+#    api_key     = "8fa3e2a47017cff3dc8c28d8c461d699"
+#
+#    key = EzCrypto::Key.with_password account_key, api_key
+#    encrypted = key.encrypt(options.to_json)
+#    @data = Base64.encode64(encrypted).gsub(/\n/,'')
+#    @data = CGI.escape(@data)
+#
+#    "http://www.temporary-discuss.echonomyJAM.org?sso=#{@data}"
+#
+#    # logout script:
+#    # http://www.temporary-discuss.echonomyJAM.org/logout.json
+#
+#  end
 
 end
