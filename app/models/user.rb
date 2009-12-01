@@ -90,7 +90,7 @@ class User < ActiveRecord::Base
     Mailer.deliver_password_reset_instructions(self)
   end
 
-  # Return user voice access link
+#  # Return user voice access link
 #  def user_voice_link
 #    options = {
 #      :url    => "http://www.echologic.org/users",
@@ -114,7 +114,7 @@ class User < ActiveRecord::Base
 #
 #    # logout script:
 #    # http://www.temporary-discuss.echonomyJAM.org/logout.json
-
-  end
+#
+#  end
 
 end
