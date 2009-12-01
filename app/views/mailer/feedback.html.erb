@@ -1,12 +1,4 @@
-<p>
-  <h3>This mail was sent from the echologic feedback form:</h3>
-</p>
+Feedback from <%= @name %>:
 
-<p>
-  Sender: <%=h @feedback.name %><br/>
-  E-Mail: <%=h @feedback.email %>
-</p>
+<%=h @message %>
 
-<p>
-  <%=h @feedback.message %>
-</p>
