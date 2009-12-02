@@ -7,7 +7,7 @@
 <% @statements.each do |statement| -%>
 
   <div class="function_button_holder">
-    <% link_to question_url(statement) do %>
+    <% link_to question_url(statement), :class => 'question_link' do %>
       <span class="function_button function_button_my_profile"></span>
     <% end %>
     <span class="function_name"><%= statement.document.title %></span><br/>

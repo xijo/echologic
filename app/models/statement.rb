@@ -38,6 +38,9 @@ class Statement < ActiveRecord::Base
     { :conditions => { :type => 'ProArgument' } } }
   named_scope :contra_arguments, lambda {
     { :conditions => { :type => 'ContraArgument' } } }
+  
+  
+  named_scope :published, :conditions => { :published => true }
 
   # orders
 
@@ -49,7 +52,7 @@ class Statement < ActiveRecord::Base
 
   named_scope :from_category, lambda { |value|
     { :include => :category, :conditions => ['tags.value = ?', value] } }
-
+    
   ##
   ## VALIDATIONS
   ##

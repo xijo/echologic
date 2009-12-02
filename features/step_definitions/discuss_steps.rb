@@ -17,6 +17,7 @@ When /^I choose the first Question$/ do
 end
 
 Then /^I should see an error message$/i do
+  pending
   Then "I should see a \"error box\""
 end
 
@@ -37,11 +38,6 @@ When /^I follow the create proposal link$/ do
   When 'I follow the "Create proposal" link within the "children" list'
 end
 
-When /^I follow the create improvement proposal link$/ do
-  # Todo: Yet we still don't know how the create improvementproposal link will once look
-  When 'I follow the "Create improvement proposal" link within the "children" list'
-end
-
 Then /^the question should have one proposal$/ do
   @question.reload
   @question.children.proposals.count.should >= 1
@@ -54,7 +50,7 @@ Given /^the question has at least on proposal$/ do
   @proposal = @question.children.proposals.first
 end
 
-Then /^the proposal should have one improvementproposal$/ do
+Then /^the proposal should have one improvement proposal$/ do
   @proposal.reload
   @proposal.children.improvement_proposals.count.should >= 1
 end
@@ -69,3 +65,4 @@ end
 When /^I post some valid proposal data for "([^\"]*)"$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
+
