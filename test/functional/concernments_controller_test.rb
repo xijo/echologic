@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ConcernmentsControllerTest < ActionController::TestCase
+  def setup
+    @controller = ConcernmentsController.new
+  end
+  
   test "should get index" do
     get :index
     assert_response :success

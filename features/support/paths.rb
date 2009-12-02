@@ -23,7 +23,7 @@ module NavigationHelpers
     when /^the first question$/
       question_path(Question.first)
     when /^the questions first proposal/
-      question_proposal_path(@question,@proposal)
+      question_proposal_path(@question, @proposal)
     when /discuss index/i
       questions_url
 

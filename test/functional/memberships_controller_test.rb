@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class MembershipsControllerTest < ActionController::TestCase
+  def setup
+    @controller = MembershipsController.new
+  end
+  
   test "should get index" do
     get :index
     assert_response :success

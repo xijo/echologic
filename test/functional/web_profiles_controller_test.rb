@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class WebProfilesControllerTest < ActionController::TestCase
+  def setup
+    @controller = WebProfilesController.new
+  end
+  
   test "should get index" do
     get :index
     assert_response :success

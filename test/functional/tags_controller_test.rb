@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class TagsControllerTest < ActionController::TestCase
+  def setup
+    @controller = TagsController.new
+  end
+  
   test "should get index" do
     get :index
     assert_response :success
