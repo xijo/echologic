@@ -15,6 +15,7 @@ class StatementsController < ApplicationController
   before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
   before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
 
+  # make custom URL helper available to controller
   include StatementHelper
 
   access_control do
