@@ -92,9 +92,10 @@ module StatementHelper
   # edited: i18n without interpolation, because of language diffs.
   def create_children_statement_link(statement=nil)
     return unless statement.class.expected_children.any?
+    return unless current_user.has_role?(:editor)
     type = 'Question' if statement.nil?
     type ||= statement.class.expected_children.first.to_s
-    link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
+    link_to(I18n.t("discuss.statements.create_link", :type => type.constantize.display_name),
             new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
             :class => "ajax")#"ajax header_button text_button create_statement_button #{create_statement_class(type)}")

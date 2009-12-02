@@ -15,6 +15,7 @@ class StatementsController < ApplicationController
   before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
   before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
 
+  # make custom URL helper available to controller
   include StatementHelper
 
   access_control do
@@ -45,6 +46,7 @@ class StatementsController < ApplicationController
 
     unless @statement.children.empty?
       child_type = ("current_" + @statement.class.expected_children.first.to_s.underscore).to_sym
+      # FIXME: why is this necessary?
       session[child_type] = @statement.children.by_supporters.collect { |c| c.id }
     end
 

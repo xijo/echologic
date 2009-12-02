@@ -28,7 +28,7 @@ module Echoable
     #ratio of entity.supporters vs. the most supported sibblings supporters)
     def supporters_supporters_ratio
       # if we have a parent we go the easy way
-      if parent
+      if parent && parent.most_supported_child.try(:supporter_count).to_i > 0
         ((supporter_count.to_f / parent.most_supported_child.supporter_count.to_f) * 100).to_i
       end
     end

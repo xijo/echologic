@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   # acl9 plugin to do authorization
   acts_as_authorization_subject
   acts_as_authorization_object
-
+  
   # we need to make sure that either a password or openid gets set
   # when the user activates his account
   def has_no_credentials?

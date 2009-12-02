@@ -365,3 +365,7 @@ en:
       user_session:
         email: E-Mail
         password: Passwort
+
+  discuss:
+    statements:
+      create_link: "Create a new {{type}}"
