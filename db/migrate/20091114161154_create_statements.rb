@@ -5,6 +5,7 @@ class CreateStatements < ActiveRecord::Migration
       t.text :text
       t.string :type
       t.integer :user_id
+      t.boolean :activated
       t.integer :parent_id
       t.integer :root_id
     end
