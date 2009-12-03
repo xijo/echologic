@@ -7,5 +7,5 @@
   <%= form.hidden_field :category_id %>
   <%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
   <%= I18n.t('application.general.or') %>
-  <%= link_to I18n.t('application.general.cancel'), statement.parent, :class => "ajax" %>
+  <%= link_to I18n.t('application.general.cancel'), statement.parent or discuss_url %>
 <% end -%>
