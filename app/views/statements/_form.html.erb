@@ -5,6 +5,7 @@
   <%= form.select :state, Statement.states.collect { |k,v| [v,k] }, { :selected => form.object.state } %>
   <%= form.hidden_field :parent_id %>
   <%= form.hidden_field :category_id %>
+  <br />
   <%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
   <%= I18n.t('application.general.or') %>
   <%= link_to I18n.t('application.general.cancel'), statement.parent or discuss_url %>
