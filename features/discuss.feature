@@ -35,6 +35,22 @@ Feature: Discuss
     Then I should see "a proposal to propose some"
       And the question should have one proposal
 
+  # TODO:  This does the same as above, only as a user instead of an editor
+  Scenario: Add a proposal to a question as a user (from ui)
+   Given I am logged in as "user" with password "true"
+      And there is the first question
+      And the question has no proposals
+      And I am on the Discuss Index
+    When I follow "EchonomyJAM"
+      And I choose the first Question
+      And I follow "Create a new Proposal"
+      And I fill in the following:
+        | title | a proposal to propose some proposeworthy proposal data |
+        | text  | nothing to propose yet...                              |
+      And I press the "Save" button
+    Then I should see "a proposal to propose some"
+      And the question should have one proposal
+
   # Todo - this only checks validations from a ui-perspective, and not each individual validation
   Scenario: Create an invalid question as an editor
     Given there are no questions
@@ -84,11 +100,6 @@ Feature: Discuss
 #    Then there should be no questions
 #      And I should see a "permission denied" error message
 
-
-  Scenario: Add a proposal to a question as a user (from ui)
-    Given I am logged in as "user" with password "true"
-    When I go to the first question
-    Then I should not see the create proposal link
 
   Scenario: Add a proposal to a question as a user (directly)
     Given I am logged in as "user" with password "true"
