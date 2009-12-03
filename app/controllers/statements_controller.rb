@@ -23,9 +23,10 @@ class StatementsController < ApplicationController
     allow logged_in, :except => [:edit, :update, :delete], :unless => :is_question?
     allow logged_in, :except => [:new, :create, :edit, :update, :delete], :if => :is_question?
   end
-
+  
+  # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
   def index
-    @statements = statement_class.all
+    @statements = statement_class.all.published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 6)
     respond_to do |format|
       format.html { render :template => 'questions/index' }
     end
@@ -36,8 +37,14 @@ class StatementsController < ApplicationController
   def category
     @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
-    @statements = statement_class.from_category(params[:id])
-    render :template => 'questions/index'
+    @page = params[:page] || 1
+    @statements = statement_class.from_category(params[:id]).published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 3)
+    respond_to do |format|
+      format.html {render :template => 'questions/index'}
+      format.js {
+        replace_container('question_container', :partial => 'questions/questions')
+      }
+    end
   end
 
   # TODO visited! throws error with current fixtures.
@@ -107,7 +114,7 @@ class StatementsController < ApplicationController
         format.js   { show }
       else
         set_error(@statement.document)
-        format.html { flash_error and render :action => :new }
+        format.html { flash_error and new }
         format.js   { show_error_messages }
       end
     end

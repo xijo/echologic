@@ -369,3 +369,6 @@ en:
   discuss:
     statements:
       create_link: "Create a new {{type}}"
+      states:
+        new: new
+        published: published

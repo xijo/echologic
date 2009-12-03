@@ -61,8 +61,8 @@ class Statement < ActiveRecord::Base
   # Map the different states of statements to their database representation
   # value, translate them ..
   @@states = {
-    0 => I18n.t('dicuss.statements.states.new'),
-    1 => I18n.t('dicuss.statements.states.published'),
+    0 => I18n.t('discuss.statements.states.new'),
+    1 => I18n.t('discuss.statements.states.published'),
   }
 
   # ..and make it available as class method.
