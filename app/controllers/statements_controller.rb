@@ -105,7 +105,7 @@ class StatementsController < ApplicationController
   def create
     @statement = statement_class.new(params[statement_class_param])
     @statement.creator = @statement.document.author = current_user
-
+    
     respond_to do |format|
       if @statement.save
         set_info("discuss.messages.created", :type => @statement.class.human_name)
@@ -114,7 +114,7 @@ class StatementsController < ApplicationController
         format.js   { show }
       else
         set_error(@statement.document)
-        format.html { flash_error and new }
+        format.html { flash_error and render :template => 'statements/new' }
         format.js   { show_error_messages }
       end
     end
