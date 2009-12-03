@@ -14,4 +14,3 @@ class Echo < ActiveRecord::Base
     update_counter ; save!
   end
 end
-

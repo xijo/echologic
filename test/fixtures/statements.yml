@@ -2,7 +2,7 @@ test-question:
   document_id: <%= Fixtures.identify(:'test-question-doc') %>
   type: Question
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 first-proposal:
@@ -11,7 +11,7 @@ first-proposal:
   document_id: <%= Fixtures.identify(:'first-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 second-proposal:
@@ -20,7 +20,7 @@ second-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 third-proposal:
@@ -29,7 +29,7 @@ third-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category: <%= Fixtures.identify(:'echonomy-jam') %>
 
 third-proposal:
@@ -38,7 +38,7 @@ third-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 fourth-proposal:
@@ -47,7 +47,7 @@ fourth-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 fifth-proposal:
@@ -56,7 +56,7 @@ fifth-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 sixth-proposal:
@@ -65,7 +65,7 @@ sixth-proposal:
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 not-published-proposal:
@@ -74,8 +74,8 @@ not-published-proposal:
   document_id: <%= Fixtures.identify(:'not-published-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
-  published: true
-  category: <%= Fixtures.identify(:'echonomy-jam') %>
+  state: 0
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 first-impro-proposal:
   parent_id: <%= Fixtures.identify(:'first-proposal') %>
@@ -83,5 +83,5 @@ first-impro-proposal:
   document_id: <%= Fixtures.identify(:'first-impro-proposal-doc') %>
   type: ImprovementProposal
   creator_id: <%= Fixtures.identify(:ben) %>
-  published: true
+  state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>

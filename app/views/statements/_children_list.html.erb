@@ -5,7 +5,6 @@
 
   <!-- Show children. -->
   <ul>
-    <% raise statements.inspect -%>
     <% statements.each do |sm| %>
       <%= render :partial => 'statements/child', :locals => {:statement => sm } %>
     <% end %>

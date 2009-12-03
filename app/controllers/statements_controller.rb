@@ -43,7 +43,6 @@ class StatementsController < ApplicationController
   # TODO visited! throws error with current fixtures.
   def show
     current_user.visited!(@statement)
-
     unless @statement.children.empty?
       child_type = ("current_" + @statement.class.expected_children.first.to_s.underscore).to_sym
       # FIXME: why is this necessary?
@@ -51,7 +50,8 @@ class StatementsController < ApplicationController
     end
 
     @page = params[:page] || 1
-    @statements = @statement.children.by_ratio.paginate(:page => @page, :per_page => 3)
+    # find alle child statements, which are published (except user is an editor) sorted by supporters count, and paginate them
+    @statements = @statement.children.published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 3)
     respond_to do |format|
       format.html { render :template => 'statements/show' } # show.html.erb
       format.js   { render :template => 'statements/show' } # show.js.erb
@@ -83,10 +83,12 @@ class StatementsController < ApplicationController
   # Create a new statement
   def new
     @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
+    @statement.create_document
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'statements/new' }
       if is_question?
-        format.js { replace_container('new_statement', :partial => 'questions/new') }
+        #FIXME: i changed this from questions/new to statements/new again, beaucse statements/new was messed up, and i didn't see a point in a sperate partial for questions
+        format.js { replace_container('new_statement', :partial => 'statements/new') }
       else
         format.js { replace_container('new_statement', :partial => 'statements/new') }
       end
@@ -166,6 +168,7 @@ class StatementsController < ApplicationController
   end
 
   # Checks if the current controller belongs to a question
+  # FIXME: isn't this possible to solve over statement.quesion? already?
   def is_question?
     params[:controller].singularize.camelize.eql?('Question')
   end

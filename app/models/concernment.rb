@@ -35,6 +35,4 @@ class Concernment < ActiveRecord::Base
   # Validate correctness of sort
   validates_inclusion_of :sort, :in => Concernment.sorts
 
-
-
 end

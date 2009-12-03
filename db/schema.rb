@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091202050840) do
+ActiveRecord::Schema.define(:version => 20091202191941) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -114,9 +114,9 @@ ActiveRecord::Schema.define(:version => 20091202050840) do
     t.integer "document_id"
     t.integer "creator_id"
     t.integer "work_package_id"
-    t.boolean "published"
     t.integer "echo_id"
     t.integer "category_id"
+    t.integer "state"
   end
 
   create_table "tags", :force => true do |t|

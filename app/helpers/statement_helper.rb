@@ -92,7 +92,8 @@ module StatementHelper
   # edited: i18n without interpolation, because of language diffs.
   def create_children_statement_link(statement=nil)
     return unless statement.class.expected_children.any?
-    return unless current_user.has_role?(:editor)
+    # FIXME: do we need this here? i think normal users can create everything except questions
+    #return unless current_user.has_role?(:editor)
     type = 'Question' if statement.nil?
     type ||= statement.class.expected_children.first.to_s
     link_to(I18n.t("discuss.statements.create_link", :type => type.constantize.display_name),

@@ -6,7 +6,7 @@
 
 <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
 
-<%= render :partial => 'statements/children', :locals => {:statements => @children, :statement => @statement } %>
+<%= render :partial => 'statements/children', :locals => {:statements => @statements, :statement => @statement } %>
 
 <div id="new_statement" class="discuss_right_block">
   <%= create_children_statement_link(@statement) %>

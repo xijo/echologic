@@ -40,18 +40,38 @@ class Statement < ActiveRecord::Base
     { :conditions => { :type => 'ContraArgument' } } }
   
   
-  named_scope :published, :conditions => { :published => true }
+  named_scope :published, lambda {|auth| 
+    { :conditions => { :state => 1 } } unless auth }
 
   # orders
 
-  named_scope :by_ratio, :joins => :echo, :order => '(echos.supporter_count/echos.visitor_count) DESC'
+  named_scope :by_ratio, :include => :echo, :order => '(echos.supporter_count/echos.visitor_count) DESC'
 
-  named_scope :by_supporters, :joins => :echo, :order => 'echos.supporter_count DESC'
+  named_scope :by_supporters, :include => :echo, :order => 'echos.supporter_count DESC'
 
   # category
 
   named_scope :from_category, lambda { |value|
     { :include => :category, :conditions => ['tags.value = ?', value] } }
+ 
+  ##
+  ## STATES
+  ##
+  
+  # Map the different states of statements to their database representation
+  # value, translate them ..
+  @@states = {
+    0 => I18n.t('dicuss.statements.states.new'),
+    1 => I18n.t('dicuss.statements.states.published'),
+  }
+
+  # ..and make it available as class method.
+  def self.states
+    @@states
+  end
+
+  # Validate that state is correct
+  validates_inclusion_of :state, :in => Statement.states
     
   ##
   ## VALIDATIONS
@@ -62,7 +82,7 @@ class Statement < ActiveRecord::Base
   validates_presence_of :document
   validates_associated :document
   validates_presence_of :category
-
+  
   class << self
     def valid_parents
       @@valid_parents[self.name]

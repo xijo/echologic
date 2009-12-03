@@ -1,16 +1,11 @@
-<% form.semantic_fields_for(form.object.document || :document) do |doc|  %>
-  <%= doc.inputs :title, :text %>
-  <br />
+<% semantic_form_for statement.self_with_parents do |form| -%>
+  <%= form.error_messages %>
+  <%= render :partial => "statements/document_form", :locals => { :form => form, :statement => statement } %>
+  <% #FIXME: i don't know how to do this manually with formtastics. enums are not really supported by rails, and everywhere else where we use enum like statefulness in models, views do it like this %>
+  <%= form.select :state, Statement.states.collect { |k,v| [v,k] }, { :selected => form.object.state } %>
+  <%= form.hidden_field :parent_id %>
+  <%= form.hidden_field :category_id %>
+  <%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
+  <%= I18n.t('application.general.or') %>
+  <%= link_to I18n.t('application.general.cancel'), statement.parent, :class => "ajax" %>
 <% end -%>
-<%= form.hidden_field :parent_id %>
-<%= form.hidden_field :category_id %>
-
-<script type="text/javascript">
-  var edit_editor = new nicEditor({
-    buttonList: ['bold','italic','underline','ol','ul','xhtml']
-  }).panelInstance('question_statement_document_text');
-
-  $('.nicEdit-main').blur(function() {
-    $('#question_statement_document_text').val($('.nicEdit-main').html());
-  });
-</script>

@@ -16,6 +16,10 @@
   list-style-position: inside;
 }
 
+#summary form ol li {
+	 list-style:none;
+}
+
 #summary li {
   display: list-item;
 }
