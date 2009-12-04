@@ -2,7 +2,12 @@
   <%= form.error_messages %>
   <%= render :partial => "statements/document_form", :locals => { :form => form, :statement => statement } %>
   <% #FIXME: i don't know how to do this manually with formtastics. enums are not really supported by rails, and everywhere else where we use enum like statefulness in models, views do it like this %>
-  <%= form.select :state, Statement.states.collect { |k,v| [v,k] }, { :selected => form.object.state } %>
+  <% form.inputs do %>
+    <li id="question_state_input" class="select optional error">
+      <%= form.label :state %>
+      <%= form.select :state, Statement.states.collect { |k,v| [v,k] }, { :selected => form.object.state } %>
+    </li>
+  <% end %>
   <%= form.hidden_field :parent_id %>
   <%= form.hidden_field :category_id %>
   <br />

@@ -19,7 +19,7 @@ end
 
 When /^I press the "([^\"]*)" button$/ do |button|
   button = button.downcase.gsub(" ", "_")
-  click_link "#{button}_button"
+  click_button "#{button}_button"
 end
 
 # Examples:
