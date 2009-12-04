@@ -124,7 +124,7 @@ class StatementsController < ApplicationController
 
   def edit
     respond_to do |format|
-      format.html
+      format.html { render :template => 'statements/edit' }
       format.js { replace_container('summary', :partial => 'statements/edit') }
     end
   end

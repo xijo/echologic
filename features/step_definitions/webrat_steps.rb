@@ -17,7 +17,6 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^\"]*)"$/ do |button|
-  debugger
   click_button(button)
 end
 

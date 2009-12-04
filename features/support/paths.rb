@@ -1,3 +1,4 @@
+
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -20,6 +21,8 @@ module NavigationHelpers
       new_question_path(:category => 'EchonomyJAM')
     when /^the question$/
       question_path(@question)
+    when /^the proposal$/
+      question_proposal_path(@proposal.parent,@proposal)
     when /^the first question$/
       question_path(Question.first)
     when /^the questions first proposal/

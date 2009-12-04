@@ -31,7 +31,7 @@ class Statement < ActiveRecord::Base
   named_scope :proposals, lambda {
     { :conditions => { :type => 'Proposal' } } }
   named_scope :improvement_proposals, lambda {
-    { :conditions => { :type => 'ImprovementProposals' } } }
+    { :conditions => { :type => 'ImprovementProposal' } } }
   named_scope :arguments, lambda {
     { :conditions => ['type = ? OR type = ?', 'ProArgument', 'ContraArgument'] } }
   named_scope :pro_arguments, lambda {
