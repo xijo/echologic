@@ -19,23 +19,23 @@ second-proposal:
   root_id: <%= Fixtures.identify(:'test-question') %>
   document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
-  creator_id: <%= Fixtures.identify(:editor) %>
+  creator_id: <%= Fixtures.identify(:user) %>
   state: 1
   category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 third-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  document_id: <%= Fixtures.identify(:'third-proposal-doc') %>
   type: Proposal
-  creator_id: <%= Fixtures.identify(:editor) %>
+  creator_id: <%= Fixtures.identify(:user) %>
   state: 1
   category: <%= Fixtures.identify(:'echonomy-jam') %>
 
-third-proposal:
+inbetween-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  document_id: <%= Fixtures.identify(:'inbetween-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -44,7 +44,7 @@ third-proposal:
 fourth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  document_id: <%= Fixtures.identify(:'fourth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -53,7 +53,7 @@ fourth-proposal:
 fifth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  document_id: <%= Fixtures.identify(:'fifth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -62,7 +62,7 @@ fifth-proposal:
 sixth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
+  document_id: <%= Fixtures.identify(:'sixth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1

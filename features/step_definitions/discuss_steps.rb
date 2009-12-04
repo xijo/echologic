@@ -12,6 +12,7 @@ end
 
 When /^I choose the first Question$/ do 
   response.should have_selector("a.question_link") do |selector|
+    @question = Question.find(URI.parse(selector.first['href']).path.match(/\d+/)[0].to_i)
     visit selector.first['href']
   end
 end
@@ -60,9 +61,32 @@ Then /^I should not see the create proposal link$/ do
   Then 'I should not see the "Create proposal" link'
 end
 
-# i leave this pending for now, as i'm not sure if we should test the related scenario here
-# see Scenario: Add a proposal to a question as a user (directly)
-When /^I post some valid proposal data for "([^\"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given /^a "([^\"]*)" question in "([^\"]*)"$/ do |state, category|
+  case state
+    when "new"
+      state = 0
+    when "published"
+      state = 1
+  end
+  @category = Tag.find_by_value(category)
+  @question = Question.new(:state => state, :category => @category, :creator => @user)
+  @question.create_document(:title => "Am I a new statement?", :text => "I wonder what i really am! Maybe a statement? Or even a question?", :author => @user)
+  @question.save!
 end
 
+Then /^the question should be published$/ do
+  @question.reload
+  @question.state.should == 1
+end
+
+Then /^I should see the questions title$/ do
+  Then 'I should see "'+@question.title+'"'
+end
+
+Given /^there is a proposal I have created$/ do
+  @proposal = Proposal.find_by_creator_id(@user.id)
+end
+
+Then /^the questions title should be "([^\"]*)"$/ do |title|
+  @question.document.title.should == title
+end

@@ -11,7 +11,33 @@ first-proposal-doc:
 second-proposal-doc:
   title: 'Second Proposal'
   text: 'I think we should have a second proposal as well!'
+  author_id: <%= Fixtures.identify(:user) %>
+
+third-proposal-doc:
+  title: 'Third Proposal'
+  text: 'I think we should have a third proposal as well!'
+  author_id: <%= Fixtures.identify(:user) %>
+
+inbetween-proposal-doc:
+  title: 'Inbetween Proposal'
+  text: 'I think we should have a proposal inbetween as well!'
   author_id: <%= Fixtures.identify(:editor) %>
+
+fourth-proposal-doc:
+  title: 'Fourth Proposal'
+  text: 'I think we should have a fourth proposal as well!'
+  author_id: <%= Fixtures.identify(:editor) %>
+
+fifth-proposal-doc:
+  title: 'Fifth Proposal'
+  text: 'I think we should have a fifth proposal as well!'
+  author_id: <%= Fixtures.identify(:editor) %>
+
+sixth-proposal-doc:
+  title: 'Sixth Proposal'
+  text: 'I think we should have a sixth proposal as well!'
+  author_id: <%= Fixtures.identify(:editor) %>
+
 
 first-impro-proposal-doc:
   title: 'A better first proposal'

@@ -1,3 +1,4 @@
+<% statement ||= @statement %>
 <% semantic_form_for statement.self_with_parents do |form| -%>
   <%= form.error_messages %>
   <%= render :partial => "statements/document_form", :locals => { :form => form, :statement => statement } %>

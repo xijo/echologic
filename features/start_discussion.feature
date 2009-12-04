@@ -4,8 +4,8 @@ Feature: Start a discussion
   As an editor
   I want to create questions and add proposals to it
 
-  @wip
   # Firstly do it unpublished...
+  @ok
   Scenario: Create a valid question as an editor
     Given there are no questions
       And I am logged in as "editor" with password "true"
@@ -15,22 +15,23 @@ Feature: Start a discussion
       And I fill in the following:
         | title | Is this a Question?   |
         | text  | Blablabla bla bla bla |
-      # And I select "new" from "state"
+      And I select "new" from "state"
       And I press "Save"
     Then I should see "Is this a Question?"
      And there should be one question
 
+  @ok
   Scenario: Publish a question i created as an editor
-    Given there is a "new" question in "EchonomyJAM"
-      And I am logged in as "editor" with password "true"
+    Given I am logged in as "editor" with password "true"
+      And a "new" question in "EchonomyJAM"
       And I am on the Discuss Index
-    When I go to view the question
-      And I follow the "edit" link within "summary"
-      And I fill in the following:
-        | state | 1 |
+    When I go to the question
+      And I follow "edit" within "#summary"
+      And I select "published" from "state"
       And I press "Save"
     Then the question should be published
 
+  @ok
   Scenario: Create an invalid question as an editor
     Given there are no questions
       And I am logged in as "editor" with password "true"
@@ -42,6 +43,7 @@ Feature: Start a discussion
     Then there should be no questions
       And I should see an error message
 
+  @ok
   Scenario: Add a proposal to a question as an editor (from ui)
     Given I am logged in as "editor" with password "true"
       And there is the first question
