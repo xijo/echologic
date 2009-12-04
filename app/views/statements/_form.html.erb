@@ -2,12 +2,17 @@
   <%= form.error_messages %>
   <%= render :partial => "statements/document_form", :locals => { :form => form, :statement => statement } %>
   <% #FIXME: i don't know how to do this manually with formtastics. enums are not really supported by rails, and everywhere else where we use enum like statefulness in models, views do it like this %>
-  <% form.inputs do %>
-    <li id="question_state_input" class="select optional error">
-      <%= form.label :state %>
-      <%= form.select :state, Statement.states.collect { |k,v| [v,k] }, { :selected => form.object.state } %>
-    </li>
-  <% end %>
+  <% if statement.kind_of?(Question) -%>
+    <% form.inputs do %>
+      <li id="question_state_input" class="select optional error">
+        <%= form.label :state %>
+        <%# would be nice to have map_with_index... -%>
+        <% i = -1 -%>
+        <%= form.select(:state, Statement.states.map { |state| [I18n.t("discuss.statements.states.#{state}"), i+=1] },
+                        :selected => form.object.state) %>
+      </li>
+    <% end %>
+  <% end -%>
   <%= form.hidden_field :parent_id %>
   <%= form.hidden_field :category_id %>
   <br />
