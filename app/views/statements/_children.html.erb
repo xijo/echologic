@@ -7,11 +7,5 @@
 
     <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
 
-    <% if false%>
-      <div id="new_statement2">
-        <%= create_statement_link(statement) if statement.class.expected_children.any? %>
-      </div>
-    <% end %>
-
   <% end %>
 </div>
