@@ -48,10 +48,11 @@ Feature: Take Part on a discussion
     Given I am logged in as "user" with password "true"
       And there is a proposal I have created
      When I go to the proposal
-      And I follow "edit" within "#summary"
-      And I fill in the following:
-        | title | my updated proposal               |
-        | text  | somewhat more to propose at lease |
-      And I press "Save"
-    Then I should see "my updated proposal"
-      And the questions title should be "my updated proposal"
+     Then I should not see "Edit"
+   #   And I follow "edit"
+   #   And I fill in the following:
+   #    | title | my updated proposal               |
+   #    | text  | somewhat more to propose at lease |
+   #   And I press "Save"
+   # Then I should see "my updated proposal"
+   #   And the questions title should be "my updated proposal"
