@@ -1,6 +1,6 @@
 class Statement < ActiveRecord::Base
   include Echoable
-
+  
   ##
   ## ASSOCIATIONS
   ##

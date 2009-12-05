@@ -20,8 +20,10 @@ class StatementsController < ApplicationController
 
   access_control do
     allow :editor
-    allow logged_in, :except => [:edit, :update, :delete], :unless => :is_question?
-    allow logged_in, :except => [:new, :create, :edit, :update, :delete], :if => :is_question?
+    allow logged_in, :only => [:index, :show, :echo, :unecho]
+    allow logged_in, :only => [:new, :create], :unless => :is_question?
+    allow logged_in, :only => [:edit, :update], :if => :may_edit?
+    allow logged_in, :only => [:delete], :if => :may_delete?
   end
   
   # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
@@ -180,6 +182,14 @@ class StatementsController < ApplicationController
   # FIXME: isn't this possible to solve over statement.quesion? already?
   def is_question?
     params[:controller].singularize.camelize.eql?('Question')
+  end
+  
+  def may_edit?
+    current_user.may_edit?(@statement)
+  end
+  
+  def may_delete?
+    current_user.may_delete?(@statement)
   end
 
   def statement_class_param

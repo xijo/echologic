@@ -113,8 +113,7 @@ module StatementHelper
   end
 
   def edit_statement_link(statement)
-    link_to(I18n.t('application.general.edit'), edit_statement_path(statement), :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.has_role?(:editor) &&
-      (current_user.has_role?(:censor) || current_user.is_author?(statement))
+    link_to(I18n.t('application.general.edit'), edit_statement_path(statement), :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.may_edit?(statement)
   end
 
   # DEPRICATED
