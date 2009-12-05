@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
       if object.blank?
         message = @error
       else
-        message = escape_javascript(render :partial => 'layouts/components/error', :locals => {:object => object})
+        message = escape_javascript(render(:partial => 'layouts/components/error', :locals => {:object => object}))
       end
       page << "error('#{escape_javascript(message)}');"
     end
@@ -93,7 +93,7 @@ class ApplicationController < ActionController::Base
   # This small methods takes much complexness from the controllers.
   def replace_container(name, content)
     render :update do |page|
-      page << "$('##{name}').replaceWith('#{escape_javascript(render content)}');"
+      page << "$('##{name}').replaceWith('#{escape_javascript(render(content))}');"
     end
   end
 

@@ -18,7 +18,7 @@ module NavigationHelpers
     when /the connect page/
       connect_path
     when /^create a question$/
-      new_question_path(:category => 'EchonomyJAM')
+      new_question_path(:category => 'echonomyJAM')
     when /^the question$/
       question_path(@question)
     when /^the proposal$/

@@ -270,6 +270,47 @@ de:
 
 
   # ---------------
+  # Discuss section
+  # ---------------
+
+  discuss:
+    title: Willkommen im Diskussionsbereich!
+    welcome_text: |
+      <p>
+      Während der Entwicklung des Diskussionsbereiches können Sie sich hier im Rahmen verschiedener Pilotprojeketen
+      mit anderen NeudenkerInnen austauschen und über die jeweiligen Themenbereiche gemeinsam neue Ideen entwickeln.
+       </p><p>
+      Die aktuelle Diskussionsthemen sind:
+      </p>
+    pilot:
+      echonomy_jam:
+        name: echonomy JAM
+        teaser: Enwickeln Sie Ideen zum Thema ökosozial nachhaltiges, demokratisches Wirtschaften
+        description: |
+          <p>
+          echonomy ist eine neue Form ökologisch und sozial nachhaltiges, demokratisches Witschaften,
+          welche unter Profit auch das Wohl von Mensch und Natur versteht.
+          echonomyJAM bringt kreative Ideenträger, Kapitalgebern, erfahreren Experten sowie Entscheidungsträger
+          aus Politik und Wirtschaft zusammen und ermöglicht Ihnen die gemeinsame Entwicklung, Finanzierung und
+          Realisierung von Ideen und konkrete Projekte - alles in Sinne der echonomischen Nachhaltigkeit.
+          </p>
+      echocracy:
+        name: echocracy
+        teaser: Diskutieren Sie über eine neue Form teilnehmender Demokratie von echo
+        description: |
+          echocracy ist...
+      echo:
+        name: echo
+        teaser: Beteiligen Sie sich in der 
+        description: |
+          Here you can contribute your ideas to the further development of echo...
+    statements:
+      create_link: "Add new {{type}}"
+      states:
+        new: New
+        published: Published
+
+  # ---------------
   # Connect section
   # ---------------
 

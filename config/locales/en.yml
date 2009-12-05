@@ -264,6 +264,37 @@ en:
         created: "Thank you for your message. An administrator was notified."
 
   # ---------------
+  # Discuss section
+  # ---------------
+
+  discuss:
+    title: Welcome to Discuss!
+    welcome_text: |
+      Here you can see some pilot projects with discussions.
+    pilot:
+      echonomy_jam:
+        name: echonomy JAM
+        teaser: Discuss topics about eco-socially sustainable, democratic economy
+        description: |
+          echonomy JAM is ...
+      echocracy:
+        name: echocracy
+        teaser: Discuss topics about the participatory democracy of echo
+        description: |
+          echocracy is...
+      echo:
+        name: echo
+        teaser: Participate in the further development of echo
+        description: |
+          Here you can contribute your ideas to the further development of echo...
+    statements:
+      create_link: "Add new {{type}}"
+      states:
+        new: New
+        published: Published
+
+
+  # ---------------
   # Connect section
   # ---------------
 
@@ -365,10 +396,3 @@ en:
       user_session:
         email: E-Mail
         password: Passwort
-
-  discuss:
-    statements:
-      create_link: "Create a new {{type}}"
-      states:
-        new: new
-        published: published

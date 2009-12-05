@@ -10,7 +10,7 @@ Feature: Start a discussion
     Given there are no questions
       And I am logged in as "editor" with password "true"
       And I am on the Discuss Index
-    When I follow "EchonomyJAM"
+    When I follow "echonomyJAM"
       And I follow "Create a new Question"
       And I fill in the following:
         | title | Is this a Question?   |
@@ -23,7 +23,7 @@ Feature: Start a discussion
   @ok
   Scenario: Publish a question i created as an editor
     Given I am logged in as "editor" with password "true"
-      And a "new" question in "EchonomyJAM"
+      And a "new" question in "echonomyJAM"
       And I am on the Discuss Index
     When I go to the question
       And I follow "edit" within "#summary"
@@ -49,7 +49,7 @@ Feature: Start a discussion
       And there is the first question
       And the question has no proposals
       And I am on the Discuss Index
-    When I follow "EchonomyJAM"
+    When I follow "echonomyJAM"
       And I choose the first Question
       And I follow "Create a new Proposal"
       And I fill in the following:

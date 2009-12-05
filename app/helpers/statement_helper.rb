@@ -194,7 +194,7 @@ module StatementHelper
   # maybe one could code some statement.url method..?
   def statement_button(id, title)
     stmt = Statement.find(id)
-    return link_to title, url_for(stmt), :class => 'ajax'
+    return link_to(title, url_for(stmt), :class => 'ajax')
   end
 
 end

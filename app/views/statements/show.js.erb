@@ -4,11 +4,11 @@
   info('<%= @info %>');
 <% end %>
 
-var children = "<%= escape_javascript(render :partial => 'statements/children_list') %>";
-var summary  = "<%= escape_javascript(render :partial => 'statements/summary') %>";
-var context  = "<%= escape_javascript(render :partial => 'statements/context') %>";
-var sidebar  = "<%= escape_javascript(render :partial => 'statements/sidebar') %>";
-var new_stmt = "<%= escape_javascript(create_children_statement_link(@statement)) %>";
+var children = "<%= escape_javascript render :partial => 'statements/children_list' %>";
+var summary  = "<%= escape_javascript render :partial => 'statements/summary' %>";
+var context  = "<%= escape_javascript render :partial => 'statements/context' %>";
+var sidebar  = "<%= escape_javascript render :partial => 'statements/sidebar' %>";
+var new_stmt = "<%= escape_javascript create_children_statement_link(@statement) %>";
 
 $('#children_list').replaceWith(children);
 $('#summary').replaceWith(summary);

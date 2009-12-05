@@ -8,7 +8,7 @@ Feature: Take Part on a discussion
   Scenario: Open a question
     Given I am logged in as "user" with password "true"
       And I am on the Discuss Index
-    When I follow "EchonomyJAM"
+    When I follow "echonomyJAM"
       And I choose the first Question
     Then I should see the questions title
   
@@ -18,7 +18,7 @@ Feature: Take Part on a discussion
       And there is the first question
       And the question has no proposals
       And I am on the Discuss Index
-    When I follow "EchonomyJAM"
+    When I follow "echonomyJAM"
       And I choose the first Question
       And I follow "Create a new Proposal"
       And I fill in the following:
