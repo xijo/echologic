@@ -1,11 +1,8 @@
 <% content_for :submenu, tabnav(:discuss) %>
 
 <%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
-
 <%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
-
 <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
-
 <%= render :partial => 'statements/children', :locals => {:statements => @statements, :statement => @statement } %>
 
 <div id="new_statement" class="discuss_right_block">
@@ -14,5 +11,4 @@
 
 <script type="text/javascript">
   makeRatiobars();
-  makeTooltips();
 </script>
