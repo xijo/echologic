@@ -120,7 +120,7 @@ module StatementHelper
   #
   #
   def statement_child_line2(statement)
-    ret = link_to(statement.title, url_for(statement), :class=> "statement_link #{statement.class.name.underscore}_link")
+    ret = link_to(statement.title, url_for(statement), :class => "statement_link #{statement.class.name.underscore}_link")
     ret << supporter_ratio_bar(statement)
   end
 
