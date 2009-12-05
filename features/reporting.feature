@@ -15,7 +15,7 @@ Feature: Report unseemly behaving users
     When I am on the connect page
       And I follow the "Show" link for the profile of "Joe"
       And I follow "Report"
-      And I fill in "Report reason" with "User has red hair."
+      And I fill in "reason" with "User has red hair."
       # Problem with jquery-ui modal dialog.
       And I press the "Report" button
     Then I should see "Thank you for your message."
