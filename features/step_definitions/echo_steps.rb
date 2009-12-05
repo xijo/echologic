@@ -4,7 +4,8 @@ Given /^a proposal wihout echos$/ do
 end
 
 Then /^the proposal should have one echo$/ do
-  @proposal.echo.supported_count.should >= 1
+  @proposal.reload
+  @proposal.echo.supporter_count.should >= 1
 end
 
 Given /^I gave an echo already to a proposal$/ do
@@ -14,5 +15,6 @@ Given /^I gave an echo already to a proposal$/ do
 end
 
 Then /^the proposal should have no more echo$/ do
+  @proposal.reload
   @proposal.echo.supporter_count.should == 0
 end
