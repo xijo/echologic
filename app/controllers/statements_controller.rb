@@ -3,10 +3,14 @@ class StatementsController < ApplicationController
   include EchoHelper
 
   # remodelling the RESTful constraints, as a default route is currently active
+  # FIXME: the echo and unecho actions should be accessible via PUT/DELETE only,
+  #        but that is currently undoable without breaking non-js requests. A
+  #        solution would be to make the "echo" button a real submit button and
+  #        wrap a form around it.
   verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
-  verify :method => :put, :only => [:update, :echo]
-  verify :method => :delete, :only => [:delete, :unecho]
+  verify :method => :put, :only => [:update]
+  verify :method => :delete, :only => [:delete]
 
   # FIXME: we don't need this line anymore if we have the access_control block, right?
   #  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
@@ -83,9 +87,10 @@ class StatementsController < ApplicationController
   def unecho
     return if @statement.question?
     current_user.echo!(@statement, :supported => false)
-    respond_to do |format|
-      format.html { redirect_to @statement }
-      format.js { render :template => 'statements/echo' }
+    if request.xhr?
+      render :template => 'statements/echo'
+    else
+      redirect_to @statement
     end
   end
 
