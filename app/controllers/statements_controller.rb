@@ -103,7 +103,9 @@ class StatementsController < ApplicationController
   end
 
   def create
-    @statement = statement_class.new(params[statement_class_param])
+    attrs = params[statement_class_param]
+    attrs[:state] = Statement.state_lookup[:published] unless statement_class == Question
+    @statement = statement_class.new(attrs)
     @statement.creator = @statement.document.author = current_user
     
     respond_to do |format|
