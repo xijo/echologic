@@ -29,6 +29,9 @@ module NavigationHelpers
       question_proposal_path(@question, @proposal)
     when /discuss index/i
       questions_url
+    when /the proposal/
+      raise [@proposal.inspect,@proposal.parent.inspect].join('\n')
+      question_proposal_path(@proposal.parent, @proposal)
 
     # Add more mappings here.
     # Here is a more fancy example:

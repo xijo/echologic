@@ -10,10 +10,10 @@ end
 
 When /^I follow the "([^\"]*)" link for the profile of "([^\"]*)"$/ do |link, user|
   profile = Profile.find_by_first_name(user)
-  within("#profile_#{profile.id}") do
-    click_link "#{link.downcase!}_link"
-  end  
-end
+  response.should have_selector("#profile_#{profile.id} a.#{link.downcase!}_link") do |selector|
+      visit selector.first['href']
+  end
+end  
 
 Then /^I should see the profile details of "([^\"]*)"$/ do |user|
   profile = Profile.find_by_first_name(user)

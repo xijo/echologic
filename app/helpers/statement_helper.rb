@@ -113,15 +113,14 @@ module StatementHelper
   end
 
   def edit_statement_link(statement)
-    link_to(I18n.t('application.general.edit'), edit_statement_path(statement), :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.has_role?(:editor) &&
-      (current_user.has_role?(:censor) || current_user.is_author?(statement))
+    link_to(I18n.t('application.general.edit'), edit_statement_path(statement), :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.may_edit?(statement)
   end
 
   # DEPRICATED
   #
   #
   def statement_child_line2(statement)
-    ret = link_to(statement.title, url_for(statement), :class=> "statement_link #{statement.class.name.underscore}_link")
+    ret = link_to(statement.title, url_for(statement), :class => "statement_link #{statement.class.name.underscore}_link")
     ret << supporter_ratio_bar(statement)
   end
 

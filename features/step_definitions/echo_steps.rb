@@ -1,19 +1,20 @@
 Given /^a proposal wihout echos$/ do
   @proposal = Proposal.first
-  @proposal.user_echos.destroy_all
+  @proposal.echo_details.destroy_all
 end
 
 Then /^the proposal should have one echo$/ do
-  @proposal.echo.supported_count.should >= 1
+  @proposal.reload
+  @proposal.echo.supporter_count.should >= 1
 end
 
 Given /^I gave an echo already to a proposal$/ do
   @proposal = Proposal.first
-  @proposal.user_echos.destroy_all
-  @echo = UserEcho.new(:user => @user, :visited=>true, :supported=>true)
-  @echo.save!
+  @proposal.echo_details.destroy_all
+  @user.supported!(@proposal)
 end
 
 Then /^the proposal should have no more echo$/ do
-  @proposal.echo.supported_count.should == 0
+  @proposal.reload
+  @proposal.echo.supporter_count.should == 0
 end

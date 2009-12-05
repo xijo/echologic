@@ -1,6 +1,6 @@
 class Statement < ActiveRecord::Base
   include Echoable
-
+  
   ##
   ## ASSOCIATIONS
   ##
@@ -41,7 +41,7 @@ class Statement < ActiveRecord::Base
   
   
   named_scope :published, lambda {|auth| 
-    { :conditions => { :state => 1 } } unless auth }
+    { :conditions => { :state => @@state_lookup[:published] } } unless auth }
 
   # orders
 
@@ -58,21 +58,16 @@ class Statement < ActiveRecord::Base
   ## STATES
   ##
   
+  cattr_reader :states, :state_lookup
+  
   # Map the different states of statements to their database representation
   # value, translate them ..
-  @@states = {
-    0 => I18n.t('discuss.statements.states.new'),
-    1 => I18n.t('discuss.statements.states.published'),
-  }
-
-  # ..and make it available as class method.
-  def self.states
-    @@states
-  end
-
+  @@states = [:new, :published]
+  @@state_lookup = { :new => 0, :published => 1 }
+  
   # Validate that state is correct
-  validates_inclusion_of :state, :in => Statement.states
-    
+  validates_inclusion_of :state, :in => Statement.state_lookup.values
+  
   ##
   ## VALIDATIONS
   ##

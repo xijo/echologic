@@ -3,10 +3,14 @@ class StatementsController < ApplicationController
   include EchoHelper
 
   # remodelling the RESTful constraints, as a default route is currently active
+  # FIXME: the echo and unecho actions should be accessible via PUT/DELETE only,
+  #        but that is currently undoable without breaking non-js requests. A
+  #        solution would be to make the "echo" button a real submit button and
+  #        wrap a form around it.
   verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
-  verify :method => :put, :only => [:update, :echo]
-  verify :method => :delete, :only => [:delete, :unecho]
+  verify :method => :put, :only => [:update]
+  verify :method => :delete, :only => [:delete]
 
   # FIXME: we don't need this line anymore if we have the access_control block, right?
   #  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
@@ -20,8 +24,10 @@ class StatementsController < ApplicationController
 
   access_control do
     allow :editor
-    allow logged_in, :except => [:edit, :update, :delete], :unless => :is_question?
-    allow logged_in, :except => [:new, :create, :edit, :update, :delete], :if => :is_question?
+    allow logged_in, :only => [:index, :show, :echo, :unecho]
+    allow logged_in, :only => [:new, :create], :unless => :is_question?
+    allow logged_in, :only => [:edit, :update], :if => :may_edit?
+    allow logged_in, :only => [:delete], :if => :may_delete?
   end
   
   # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
@@ -81,9 +87,10 @@ class StatementsController < ApplicationController
   def unecho
     return if @statement.question?
     current_user.echo!(@statement, :supported => false)
-    respond_to do |format|
-      format.html { redirect_to @statement }
-      format.js { render :template => 'statements/echo' }
+    if request.xhr?
+      render :template => 'statements/echo'
+    else
+      redirect_to @statement
     end
   end
 
@@ -103,7 +110,9 @@ class StatementsController < ApplicationController
   end
 
   def create
-    @statement = statement_class.new(params[statement_class_param])
+    attrs = params[statement_class_param]
+    attrs[:state] = Statement.state_lookup[:published] unless statement_class == Question
+    @statement = statement_class.new(attrs)
     @statement.creator = @statement.document.author = current_user
     
     respond_to do |format|
@@ -178,6 +187,14 @@ class StatementsController < ApplicationController
   # FIXME: isn't this possible to solve over statement.quesion? already?
   def is_question?
     params[:controller].singularize.camelize.eql?('Question')
+  end
+  
+  def may_edit?
+    current_user.may_edit?(@statement)
+  end
+  
+  def may_delete?
+    current_user.may_delete?(@statement)
   end
 
   def statement_class_param

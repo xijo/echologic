@@ -122,5 +122,18 @@ class User < ActiveRecord::Base
 #    # http://www.temporary-discuss.echonomyJAM.org/logout.json
 #
 #  end
-
+  
+  ##
+  ## PERMISSIONS
+  ##
+  
+  # the given `statement' is ignored for now, but we need it later
+  # when we enable editing for users.
+  def may_edit?(statement)
+    has_role?(:editor) or has_role?(:admin)
+  end
+  
+  def may_delete?(statement)
+    has_role?(:admin)
+  end
 end
