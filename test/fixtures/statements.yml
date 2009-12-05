@@ -30,7 +30,7 @@ third-proposal:
   type: Proposal
   creator_id: <%= Fixtures.identify(:user) %>
   state: 1
-  category: <%= Fixtures.identify(:'echonomy-jam') %>
+  category_id: <%= Fixtures.identify(:'echonomy-jam') %>
 
 inbetween-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
