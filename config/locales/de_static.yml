@@ -44,7 +44,10 @@ de:
 
       # discuss: de.seo.title.discuss
       discuss:
+        index: 'echologic - Diskussion'
         roadmap: 'echologic - Fahrplan für Diskutieren'
+      questions:
+        category: 'echologic - Diskussionsthema'
 
       # connect: de.seo.title.connect
       connect:

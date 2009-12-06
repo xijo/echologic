@@ -286,7 +286,7 @@ de:
     topics:
       echonomy_jam:
         name: echonomy JAM
-        teaser: Enwickeln Sie Ideen zum Thema ökosozial nachhaltiges, demokratisches Wirtschaften
+        teaser: Enwickeln Sie Ideen zum Thema ökosozial nachhaltiges, demokratisches Wirtschaften.
         description: |
           <p>
           echonomy ist eine neue Form ökologisch und sozial nachhaltiges, demokratisches Witschaften,
@@ -297,12 +297,12 @@ de:
           </p>
       echocracy:
         name: echocracy
-        teaser: Diskutieren Sie über eine neue Form teilnehmender Demokratie von echo
+        teaser: Diskutieren Sie über eine neue Form teilnehmender Demokratie von echo.
         description: |
           echocracy ist...
       echo:
         name: echo
-        teaser: Beteiligen Sie sich in der
+        teaser: Beteiligen Sie sich in der Entwicklung von echo.
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:

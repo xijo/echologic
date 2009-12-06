@@ -275,17 +275,17 @@ en:
     topics:
       echonomy_jam:
         name: echonomy JAM
-        teaser: Discuss topics about eco-socially sustainable, democratic economy
+        teaser: Discuss topics about eco-socially sustainable, democratic economy.
         description: |
           echonomy JAM is ...
       echocracy:
         name: echocracy
-        teaser: Discuss topics about the participatory democracy of echo
+        teaser: Discuss topics about the participatory democracy of echo.
         description: |
           echocracy is...
       echo:
         name: echo
-        teaser: Participate in the further development of echo
+        teaser: Participate in the further development of echo.
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
