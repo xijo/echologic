@@ -48,6 +48,7 @@ de:
         roadmap: 'echologic - Fahrplan für Diskutieren'
       questions:
         category: 'echologic - Diskussionsthema'
+        show: 'echologic - Diskussion'
 
       # connect: de.seo.title.connect
       connect:
