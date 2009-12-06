@@ -140,7 +140,11 @@ module StatementHelper
 
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
   def supporter_ratio_bar(statement,context=nil)
-    tooltip = I18n.t('discuss.statements.ratio_bar_tooltip', :supporter_count => statement.supporter_count)
+    if statement.supporter_count < 2
+      tooltip = I18n.t('discuss.statements.echo_bar_tooltip.one', :supporter_count => statement.supporter_count)
+    else
+      tooltip = I18n.t('discuss.statements.echo_bar_tooltip.many', :supporter_count => statement.supporter_count)
+    end  
     val = "<span class='ratiobar ttLink' title='#{tooltip}' alt='#{statement.ratio}'></span>"
   end
 
