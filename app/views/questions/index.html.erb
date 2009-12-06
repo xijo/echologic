@@ -1,8 +1,8 @@
 <% content_for :submenu, tabnav(:discuss) %>
 
-<h1><%= I18n.t("discuss.#{@category.value.underscore}.title") %></h1>
+<h1><%= I18n.t("discuss.topics.#{@category.value.underscore}.name") %></h1>
 
-<%= I18n.t("discuss.#{@category.value.underscore}.welcome_text") %><br/>
+<%= I18n.t("discuss.topics.#{@category.value.underscore}.description") %><br/>
 
 <%= render :partial => 'questions', :locals => {:statements => @statements} %>
 

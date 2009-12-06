@@ -3,7 +3,7 @@
 <%= render :partial => 'statements/context', :locals => {:statement => @statement} %>
 <%= render :partial => 'statements/sidebar', :locals => {:statement => @statement}%>
 <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
-<%= render :partial => 'statements/children', :locals => {:statements => @statements, :statement => @statement } %>
+<%= render :partial => 'statements/children', :locals => {:statement => @statement, :children => @children } %>
 
 <div id="new_statement" class="discuss_right_block">
   <%= create_children_statement_link(@statement) %>

@@ -96,7 +96,7 @@ module StatementHelper
     #return unless current_user.has_role?(:editor)
     type = 'Question' if statement.nil?
     type ||= statement.class.expected_children.first.to_s
-    link_to(I18n.t("discuss.statements.create_link", :type => type.constantize.display_name),
+    link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
             :class => "ajax")#"ajax header_button text_button create_statement_button #{create_statement_class(type)}")
@@ -134,23 +134,13 @@ module StatementHelper
   # Alternative implementation
   # TODO decide which one to use
   def children_box_title(statement)
-    case statement.type
-    when 'NilClass'
-      I18n.t('discuss.statements.headings.questions')
-    when 'Question'
-      I18n.t('discuss.statements.headings.proposals')
-    when 'Proposal'
-      I18n.t('discuss.statements.headings.improvement_proposals')
-    end
-
     type = statement.class.expected_children.first.to_s.underscore
     I18n.t("discuss.statements.headings.#{type}")
-
   end
 
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
   def supporter_ratio_bar(statement,context=nil)
-    tooltip = I18n.t('discuss.statements.ratio_bar_tooltip', :progress => statement.ratio, :supporters => statement.supporter_count)
+    tooltip = I18n.t('discuss.statements.ratio_bar_tooltip', :supporter_count => statement.supporter_count)
     val = "<span class='ratiobar ttLink' title='#{tooltip}' alt='#{statement.ratio}'></span>"
   end
 

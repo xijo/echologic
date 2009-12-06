@@ -1,16 +1,13 @@
-<% statements ||= @statements || []
-   statement ||= @statement
+<%
+   children ||= @children
 %>
 <div id="children_list">
-
-  <!-- Show children. -->
   <ul>
-    <% statements.each do |sm| %>
-      <%= render :partial => 'statements/child', :locals => {:statement => sm } %>
+    <% children.each do |statement| %>
+      <%= render :partial => 'statements/child', :locals => {:statement => statement } %>
     <% end %>
   </ul>
-
-  <%= will_paginate statements, :previous_label => '', :next_label => '' if defined? statements.total_pages %>
+  <%= will_paginate children, :previous_label => '', :next_label => '' if defined? children.total_pages %>
 </div>
 
 <script type="text/javascript">

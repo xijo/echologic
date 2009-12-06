@@ -274,15 +274,16 @@ de:
   # ---------------
 
   discuss:
-    title: Willkommen im Diskussionsbereich!
-    welcome_text: |
-      <p>
-      Während der Entwicklung des Diskussionsbereiches können Sie sich hier im Rahmen verschiedener Pilotprojeketen
-      mit anderen NeudenkerInnen austauschen und über die jeweiligen Themenbereiche gemeinsam neue Ideen entwickeln.
-       </p><p>
-      Die aktuelle Diskussionsthemen sind:
-      </p>
-    pilot:
+    topics_overview:
+      title: Themen
+      text: |
+        <p>
+        Während der Entwicklung des Diskussionsbereiches können Sie sich hier im Rahmen verschiedener Pilotprojeketen
+        mit anderen NeudenkerInnen austauschen und über die jeweiligen Themenbereiche gemeinsam neue Ideen entwickeln.
+         </p><p>
+        Die aktuelle Diskussionsthemen sind:
+        </p>
+    topics:
       echonomy_jam:
         name: echonomy JAM
         teaser: Enwickeln Sie Ideen zum Thema ökosozial nachhaltiges, demokratisches Wirtschaften
@@ -301,14 +302,30 @@ de:
           echocracy ist...
       echo:
         name: echo
-        teaser: Beteiligen Sie sich in der 
+        teaser: Beteiligen Sie sich in der
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: "Add new {{type}}"
+      create_link: 'Neue Frage erstellen'
+      create_proposal_link: 'Neuen Vorschlag erstellen'
+      create_improvement_proposal_link: 'Neuen Verbesserungsvorschlag erstellen'
+      ratio_bar_tooltip: 'Diese Aussage hat {{supporter_count}} UnterstützerInnen.'
+      types:
+        question:  'Frage'
+        proposal:  'Vorschlag'
+        improvement_proposal: 'Verbesserungsvorschlag'
+      headings:
+        question: 'Fragen'
+        proposal: 'Vorschläge'
+        improvement_proposal: 'Verbesserungsvorschläge'
       states:
         new: New
         published: Published
+    summary: 'Zusammenfassung'
+    messages:
+      created: "{{type}} erstellt."
+      updated: "{{type}} bearbeitet."
+
 
   # ---------------
   # Connect section
@@ -506,6 +523,14 @@ de:
         position: 'Meine Rolle'
       feedback:
         message: Nachricht
+      statement_document:
+        text:     'Zusammenfassung'
+        title:    'Titel'
+
+    models:
+      question: "Frage"
+      proposal: "Vorschlag"
+      improvement_proposal: "Verbesserungsvorschlag"
 
   authlogic:
     error_messages:

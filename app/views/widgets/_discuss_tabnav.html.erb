@@ -5,7 +5,7 @@ render_tabnav :discuss,
               :generate_css => false, :html => {:class => 'submenu'} do
 
   add_tab do |t|
-    t.named I18n.t('application.general.welcome')
+    t.named I18n.t('discuss.topics_overview.title')
     t.links_to hash_for_discuss_path
   end
 
@@ -19,6 +19,12 @@ render_tabnav :discuss,
     t.named 'echocracy'
     t.links_to hash_for_question_tags_path.merge({:id => 'echocracy'})
     t.highlight! if @category && @category.value == 'echocracy'
+  end
+
+  add_tab :html => {:id => 'echo_tab'} do |t|
+    t.named 'echo'
+    t.links_to hash_for_question_tags_path.merge({:id => 'echo'})
+    t.highlight! if @category && @category.value == 'echo'
   end
 
   add_tab :html => {:id => 'roadmap_tab'} do |t|

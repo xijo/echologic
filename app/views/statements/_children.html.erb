@@ -1,11 +1,12 @@
-<% statements ||= @statements || [] %>
-<%  statement ||= @statement %>
+<% children ||= @children %>
+<% statement ||= @statement %>
 
-<div id="children" class="header_block two_columns_block discuss_right_block">
-  <% unless statements.empty? && statement.class.expected_children.empty? %>
-    <h2><%= children_box_title(statement) if statements.any? %></h2>
+<% if !statement.class.expected_children.empty? %>
+  <div id="children" class="header_block two_columns_block discuss_right_block">
+    <h2><%= children_box_title(statement) %></h2>
+    <%= render :partial => 'statements/children_list', :locals => {:statement => statement, :statements => children}%>
+  </div>
+<% else %>
+  <div id="children"></div>
+<% end %>
 
-    <%= render :partial => 'statements/children_list', :locals => {:statements => statements, :statement => statement}%>
-
-  <% end %>
-</div>

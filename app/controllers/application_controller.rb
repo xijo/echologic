@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
       else
         message = escape_javascript(render(:partial => 'layouts/components/error', :locals => {:object => object}))
       end
-      page << "error('#{escape_javascript(message)}');"
+      page << "error('#{message}');"
     end
   end
 

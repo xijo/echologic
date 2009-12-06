@@ -268,10 +268,11 @@ en:
   # ---------------
 
   discuss:
-    title: Welcome to Discuss!
-    welcome_text: |
-      Here you can see some pilot projects with discussions.
-    pilot:
+    topics_overview:
+      title: Topics
+      text: |
+        Here you can see the current discussion topics.
+    topics:
       echonomy_jam:
         name: echonomy JAM
         teaser: Discuss topics about eco-socially sustainable, democratic economy
@@ -288,10 +289,26 @@ en:
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: "Add new {{type}}"
+      create_link: 'Add new question'
+      create_proposal_link: 'Add new proposal'
+      create_improvement_proposal_link: 'Add new idea for improvement'
+      ratio_bar_tooltip: 'This statement has {{supporter_count}} supporters.'
+      types:
+        question:  'Question'
+        proposal:  'Proposal'
+        improvement_proposal: 'Ideas for Improvement'
+      headings:
+        question: 'Questions'
+        proposal: 'Proposals'
+        improvement_proposal: 'Ideas for Improvement'
       states:
         new: New
         published: Published
+    summary: 'Summary'
+    messages:
+      created: "{{type}} created."
+      updated: "{{type}} updated."
+
 
 
   # ---------------
@@ -383,6 +400,15 @@ en:
         location:   'Web Address'
       membership:
         position: My role
+      statement_document:
+        text:       'Summary'
+        title:      'Title'
+
+    models:
+      question: "Question"
+      proposal: "Proposal"
+      improvement_proposal: "Idea for Improvement"
+
 
   authlogic:
     error_messages:
