@@ -106,7 +106,9 @@ de:
     text: |
       <p>
       <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
-      Das sind die drei Funktionsbereiche von echo, die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.
+      Das sind die drei Funktionsbereiche von echo, die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.<br/>
+      Den aktuellen <strong>Fertigkeitsgrad</strong> der jeweiligen Funktionsbereiche können Sie immer an der
+      </strong>Fortschrittsanzeige bei "Fahrplan"</strong> oben rechts ablesen.
       </p><p>
       Unten sehen Sie die bisher veröffentlichten Bereiche.<br>
       Mit der Zeit werden immer mehr Funktionen hinzukommen, die Ihnen die
@@ -120,6 +122,9 @@ de:
     function_2:
       name: 'Vernetzen'
       description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
+    function_3:
+      name: 'Diskutieren'
+      description: 'Tauschen Sie Ihre Ideen mit anderen NeudenkerInnen über Themen der Nachhaltigkeit und Demokratie aus.'
 
   # ------------
   # USERS MODULE
@@ -275,7 +280,7 @@ de:
 
   discuss:
     topics_overview:
-      title: Themen
+      title: Überblick
       text: |
         <p>
         Während der Entwicklung des Diskussionsbereiches können Sie sich hier im Rahmen verschiedener Pilotprojeketen
@@ -306,25 +311,27 @@ de:
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: 'Neue Frage erstellen'
-      create_proposal_link: 'Neuen Vorschlag erstellen'
-      create_improvement_proposal_link: 'Neuen Verbesserungsvorschlag erstellen'
+      create_link: 'Neue Debatte erstellen'
+      create_proposal_link: 'Neue Stellungnahme erstellen'
+      create_improvement_proposal_link: 'Neue ergänzende Gedanke eintragen'
+      echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo.!'
+      unecho_tooltip: 'Ziehen Sie Ihre Stimme zurück, wenn Sie die Aussage nicht mehr unterstützen möchten.'
       ratio_bar_tooltip: 'Diese Aussage hat {{supporter_count}} UnterstützerInnen.'
       types:
-        question:  'Frage'
-        proposal:  'Vorschlag'
-        improvement_proposal: 'Verbesserungsvorschlag'
+        question:  'Debatte'
+        proposal:  'Stellungnahme'
+        improvement_proposal: 'Ergänzende Gedanke'
       headings:
-        question: 'Fragen'
-        proposal: 'Vorschläge'
-        improvement_proposal: 'Verbesserungsvorschläge'
+        question: 'Debatten'
+        proposal: 'Stellungnahmen'
+        improvement_proposal: 'Ergänzende Gedanken'
       states:
         new: New
         published: Published
     summary: 'Zusammenfassung'
     messages:
-      created: "{{type}} erstellt."
-      updated: "{{type}} bearbeitet."
+      created: "Die neue {{type}} wurde erfolgreich eingestellt."
+      updated: "Die {{type}} wurde erfolgreich bearbeitet."
 
 
   # ---------------
@@ -528,9 +535,9 @@ de:
         title:    'Titel'
 
     models:
-      question: "Frage"
-      proposal: "Vorschlag"
-      improvement_proposal: "Verbesserungsvorschlag"
+      question: "Debatte"
+      proposal: "Stellungnahme"
+      improvement_proposal: "ergänzende Gedanke"
 
   authlogic:
     error_messages:

@@ -315,6 +315,10 @@
   background:  url(../images/page/functions/connect.png) no-repeat scroll 0 0;
 }
 
+.function_button_discuss {
+  background:  url(../images/page/functions/discuss.png) no-repeat scroll 0 0;
+}
+
 .function_button:hover {
   cursor:      pointer;
 }

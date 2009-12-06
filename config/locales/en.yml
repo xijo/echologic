@@ -108,7 +108,9 @@ en:
       <p>
       <strong>Discuss - Connect - Act!</strong><br/>
       These are the three main functional areas of echo, which we will develop step by step at
-      echologic with your active participation.
+      echologic with your active participation.<br/>
+      The <strong>progress indicator next to "Roadmap"</strong> in the upper right corner always shows you the
+      <strong>current state of development</strong> for the functional area you are looking at.
       </p><p>
       Below you can see the most recently released functionality.<br/>
       With the time, more and more features will be introduced enabling you to increasingly
@@ -122,6 +124,9 @@ en:
     function_2:
       name: 'Connect'
       description: 'Explore other interesting people of the movement.'
+    function_3:
+      name: 'Discuss'
+      description: 'Exchange your ideas with other newthinkers on topics about sustainablity and democracy.'
 
   # ------------
   # USERS MODULE
@@ -289,25 +294,27 @@ en:
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: 'Add new question'
-      create_proposal_link: 'Add new proposal'
-      create_improvement_proposal_link: 'Add new idea for improvement'
+      create_link: 'Open a new debate'
+      create_proposal_link: 'Enter a new position'
+      create_improvement_proposal_link: 'Add new thought for improvement'
+      echo_tooltip: 'echo this statement to support it!'
+      unecho_tooltip: 'Withdraw your vote to stop supporting this statement!'
       ratio_bar_tooltip: 'This statement has {{supporter_count}} supporters.'
       types:
-        question:  'Question'
-        proposal:  'Proposal'
-        improvement_proposal: 'Ideas for Improvement'
+        question:  'Debate'
+        proposal:  'Position'
+        improvement_proposal: 'Thought for Improvement'
       headings:
-        question: 'Questions'
-        proposal: 'Proposals'
-        improvement_proposal: 'Ideas for Improvement'
+        question: 'Debates'
+        proposal: 'Positions'
+        improvement_proposal: 'Thoughts for Improvement'
       states:
         new: New
         published: Published
     summary: 'Summary'
     messages:
-      created: "{{type}} created."
-      updated: "{{type}} updated."
+      created: "The new {{type}} has been entered successfully."
+      updated: "The {{type}} has been updated successfully."
 
 
 
@@ -405,9 +412,9 @@ en:
         title:      'Title'
 
     models:
-      question: "Question"
-      proposal: "Proposal"
-      improvement_proposal: "Idea for Improvement"
+      question: "debate"
+      proposal: "position"
+      improvement_proposal: "thought for improvement"
 
 
   authlogic:
