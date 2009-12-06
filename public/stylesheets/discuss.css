@@ -1,9 +1,7 @@
 
 .discuss_right_block {
-  float:        left;
-  margin:       0 0 0 0;
-  width:        800px;
-  display:      inline-block;
+  margin-left:  160px;
+  width:        810px;
 }
 
 #summary ul li {
@@ -30,18 +28,11 @@
 }
 
 #discuss_sidebar {
-  clear:      left;
   float:      left;
-  height:     400px;
-  width:      120px;
+  width:      160px;
+  text-align: center;
 }
 
-#sidebar {
-  float:      left;
-  height:     280px;
-  width:      110px;
-  border-right:2px solid lightgrey;
-}
 
 /* Intended? */
 .create_statement_button2 {
@@ -71,34 +62,33 @@
 
 /* CONTEXT */
 #context {
-  float:          left;
   color:          #21587F;
   font-size:      14px;
   font-weight:    bold;
   text-decoration:none;
+  width:          100%;
 }
 
 #context a img { border: 0; }
 
-.context_line { height: 40px; }
+.context_line { height: 30px; }
 
-.context_line .context_link {
-  float:          left;
+.context_line .context_buttons {
+  width:          160px;
+  min-height:     1px;
   display:        inline-block;
 }
 
-.context_line .context_buttons {
-  float:          left;
-  width:          120px;
-  min-height:     1px;
+.context_line .context_link {
+  width:          830px;
+  display:        inline-block;
 }
-
 
 /* END CONTEXT */
 
 
 #children .pagination {
-  width: 855px !important;
+  width: 830px !important;
 }
 
 
@@ -119,23 +109,11 @@
 
 
 .ratiobar {
-  height:       9px !important;
-  width:        130px;
-  min-width:    130px;
+  height:       12px !important;
+  width:        170px;
   display:      inline-block;
-  margin-left:  10px;
-}
-
-.ratiobar_context {
-  height:       14px !important;
-  width:        200px;
+  margin:       2px 20px 0;
   float:        right;
-  margin-right: 25px;
-  margin-top:   15px;
-}
-
-.edit_statement_button {
-  margin-top:-42px;
 }
 
 

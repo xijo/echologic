@@ -2,7 +2,7 @@
 <% statement ||= @statement %>
 
 <% if !statement.class.expected_children.empty? %>
-  <div id="children" class="header_block two_columns_block discuss_right_block">
+  <div id="children" class="header_block discuss_right_block">
     <h2><%= children_box_title(statement) %></h2>
     <%= render :partial => 'statements/children_list', :locals => {:statement => statement, :statements => children}%>
   </div>

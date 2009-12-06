@@ -1,6 +1,6 @@
 <% statement ||= @statement %>
 
-<div id="context" class="discuss_right_block">
+<div id="context">
 
   <% arr = [statement.root, statement.parent, statement].compact.uniq || [] %>
   <% arr.each do |s| %>
