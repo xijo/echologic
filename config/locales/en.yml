@@ -299,7 +299,7 @@ en:
       create_improvement_proposal_link: 'Add new thought for improvement'
       echo_tooltip: 'echo this statement to support it!'
       unecho_tooltip: 'Withdraw your vote to stop supporting this statement!'
-      echo_bar_tooltip:
+      echo_indicator_tooltip:
         one: 'This statement has {{supporter_count}} supporter.'
         many: 'This statement has {{supporter_count}} supporters.'
       types:

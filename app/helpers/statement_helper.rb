@@ -99,11 +99,11 @@ module StatementHelper
     link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
-            :class => "ajax")#"ajax header_button text_button create_statement_button #{create_statement_class(type)}")
+            :class => "ajax text_button #{create_statement_button_class(type)}")
   end
 
   # this classname is needed to display the right icon next to the link
-  def create_statement_class(type)
+  def create_statement_button_class(type)
     "create_#{type.underscore}_button"
   end
 
@@ -141,11 +141,16 @@ module StatementHelper
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
   def supporter_ratio_bar(statement,context=nil)
     if statement.supporter_count < 2
-      tooltip = I18n.t('discuss.statements.echo_bar_tooltip.one', :supporter_count => statement.supporter_count)
+      tooltip = I18n.t('discuss.statements.echo_indicator_tooltip.one', :supporter_count => statement.supporter_count)
     else
-      tooltip = I18n.t('discuss.statements.echo_bar_tooltip.many', :supporter_count => statement.supporter_count)
-    end  
-    val = "<span class='ratiobar ttLink' title='#{tooltip}' alt='#{statement.ratio}'></span>"
+      tooltip = I18n.t('discuss.statements.echo_indicator_tooltip.many', :supporter_count => statement.supporter_count)
+    end
+    if statement.ratio > 1
+      val = "<span class='echo_indicator ttLink' title='#{tooltip}' alt='#{statement.ratio}'></span>"
+    else
+      val = "<span class='no_echo_indicator ttLink' title='#{tooltip}'></span>"
+    end
+
   end
 
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
@@ -161,7 +166,7 @@ module StatementHelper
 
   # Returns the context menu link for this statement.
   def statement_context_link(statement)
-    link = link_to(statement_icon(statement, :small)+statement.title, url_for(statement), :class => 'ajax')
+    link = link_to(statement.title, url_for(statement), :class => "ajax statement_link #{statement.class.name.underscore}_link")
     link << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
     return link
   end

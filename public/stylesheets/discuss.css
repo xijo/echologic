@@ -1,9 +1,5 @@
 
-.discuss_right_block {
-  margin-left:  160px;
-  width:        810px;
-}
-
+/*
 #summary ul li {
   list-style: disc;
   list-style-position: inside;
@@ -25,107 +21,127 @@
 
 #context h1 {
   margin:5px 0 5px !important;
-}
+}*/
 
-#discuss_sidebar {
-  float:      left;
-  width:      160px;
-  text-align: center;
-}
-
-
-/* Intended? */
-.create_statement_button2 {
-  display:inline-block;
-  margin-top:-42px;
-  padding-left:34px !important;
-  height:32px;
-  line-height: 32px;
-}
-
-
-.create_statement_button {
-
-}
-
-.create_question_button {
-  background:transparent url(../images/page/discuss/add_question.png) no-repeat scroll 0 0;
-}
-
-.create_proposal_button {
-  background:transparent url(../images/page/discuss/add_proposal.png) no-repeat scroll 0 0;
-}
-
-.create_improvement_proposal_button {
-  background:transparent url(../images/page/discuss/add_improvement_proposal.png) no-repeat scroll 0 0;
-}
-
+/* ------- */
 /* CONTEXT */
-#context {
-  color:          #21587F;
-  font-size:      14px;
-  font-weight:    bold;
-  text-decoration:none;
-  width:          100%;
+/* ------- */
+
+.context_line {
+  height: 35px;
+  overflow: visible;
 }
 
-#context a img { border: 0; }
-
-.context_line { height: 30px; }
-
-.context_line .context_buttons {
+.context_buttons {
   width:          160px;
   min-height:     1px;
   display:        inline-block;
+  float:          left;
 }
 
-.context_line .context_link {
+.context_link {
   width:          830px;
   display:        inline-block;
 }
 
-/* END CONTEXT */
-
-
-#children .pagination {
-  width: 830px !important;
+.context_link .statement_link {
+  background-position: 0 2px;
 }
 
-
-.discuss_header_block {
-  background: url(../images/page/header_left.png) no-repeat scroll left top;
-  padding: 6px 0 0 15px;
-  margin: 0px 0px 25px 125px;
+#context .context_link a {
+  width:          600px;
+  display:        inline-block;
+  color:          #21587F;
+  font-size:      18px;
+  font-weight:    bold;
+  text-decoration:none;
 }
 
-.discuss_header_block h2 {
-  background: url(../images/page/header_right.png) no-repeat scroll right top;
-  height: 31px;
-  margin: -6px 0 10px !important;
-  line-height: 31px;
-  vertical-align: middle;
-  color: #21587f !important;
+#context .context_link a:hover {
+  color: #7bb031;
 }
 
+#context .context_line.active .context_link a {
+  color: #7bb031;
+  font-size: 21px;
+}
 
-.ratiobar {
+/* ------- */
+/* Sidebar */
+/* ------- */
+
+#discuss_sidebar {
+  clear:      both;
+  float:      left;
+  width:      160px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* echo button */
+#echo_button span {
+  height:   80px;
+  width:    80px;
+  display:  inline-block;
+  background-image: url(../images/page/discuss/echo_all.png);
+}
+
+#echo_button .supported           { background-position: 0 -80px; }
+#echo_button .supported:hover     { background-position: 0 80px; }
+#echo_button .not_supported:hover { background-position: 0 -80px; }
+
+
+/* --------- */
+/* Main area */
+/* --------- */
+
+.discuss_right_block {
+  margin-left:  160px;
+  width:        815px;
+}
+
+/* echo indicators */
+
+.echo_indicator, .no_echo_indicator {
   height:       12px !important;
-  width:        170px;
+  width:        160px;
   display:      inline-block;
-  margin:       2px 20px 0;
+  margin:       0 20px;
   float:        right;
 }
 
+#context .echo_indicator {
+  margin-top: 6px;
+}
 
-.statement_link {
-  -moz-background-clip:border;
-  -moz-background-inline-policy:continuous;
-  -moz-background-origin:padding;
+.no_echo_indicator {
+  border:       1px solid #BAC8D0;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+.no_echo_indicator:hover  {
+  border:       1px solid #BAC8D0 !important;
+}
+
+/* Statement links & buttons */
+
+a.statement_link {
+  color: #21587f;
+  font-size: 14px;
+  font-weight: bold;
   display:inline-block;
-  margin-top:-42px;
-  padding-left:18px !important;
-  height:16px;
-  line-height: 16px;
+  height: 20px;
+  padding-left: 18px !important;
+  width: 585px;
+}
+
+a.statement_link:hover {
+  color: #7bb031;
+}
+
+.question_links {
+  list-style:none;
 }
 
 .question_link {
@@ -140,19 +156,34 @@
   background:transparent url(../images/page/discuss/improvement_proposal_small.png) no-repeat scroll 0 0;
 }
 
-.question_links {
-  list-style:none;
+.create_question_button {
+  background:transparent url(../images/page/discuss/add_question_16.png) no-repeat scroll 0 0;
 }
 
-/* ECHO BUTTON */
-
-#echo_button span {
-  height:   80px;
-  width:    80px;
-  display:  inline-block;
-  background-image: url(../images/page/discuss/echo_all.png);
+.create_proposal_button {
+  background:transparent url(../images/page/discuss/add_proposal_16.png) no-repeat scroll 0 0;
 }
 
-#echo_button .supported           { background-position: 0 -80px; }
-#echo_button .supported:hover     { background-position: 0 80px; }
-#echo_button .not_supported:hover { background-position: 0 -80px; }
+.create_improvement_proposal_button {
+  background:transparent url(../images/page/discuss/add_improvement_proposal_16.png) no-repeat scroll 0 0;
+}
+
+
+/* ------------------- */
+/* Children statements */
+/* ------------------- */
+
+#children_list ul {
+  min-height: 100px;
+}
+
+#children .pagination {
+  width: 830px !important;
+}
+
+
+/* New Statement */
+
+#new_statement {
+  padding-left: 2px;
+}

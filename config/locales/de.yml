@@ -316,7 +316,7 @@ de:
       create_improvement_proposal_link: 'Neue ergänzende Gedanke eintragen'
       echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo.!'
       unecho_tooltip: 'Ziehen Sie Ihre Stimme zurück, wenn Sie die Aussage nicht mehr unterstützen möchten.'
-      echo_bar_tooltip:
+      echo_indicator_tooltip:
         one: 'Diese Aussage hat {{supporter_count}} UnterstützerIn.'
         many: 'Diese Aussage hat {{supporter_count}} UnterstützerInnen.'
       types:
