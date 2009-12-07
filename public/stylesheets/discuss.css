@@ -127,7 +127,11 @@
 }
 
 #context .echo_indicator {
-  margin-top: 6px;
+  margin-top: 3px;
+}
+
+#children .echo_indicator {
+  margin-top: 5px;
 }
 
 .no_echo_indicator {

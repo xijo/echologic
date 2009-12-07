@@ -186,7 +186,7 @@ module StatementHelper
       p = statement_button(session[key][index-1], 'Prev') unless index==0
       n = statement_button(session[key][index+1], 'Next') unless index==session[key].length-1
 
-      "&lt; #{p}<br/>&gt; #{n}"
+      "&lt; #{p} - &gt; #{n}"
     end
   end
 

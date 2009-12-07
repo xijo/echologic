@@ -307,7 +307,7 @@ de:
           </p><p>
           Am 27.11.2009 startete echonomy JAM mit einer Auftaktveranstaltung im <strong>Bayerischen Landtag</strong>.<br>
           Ca. <strong>150 interessierte BürgerInnen und EntscheidungsträgerInnen aus Politik und Wirtschaft</strong>
-          haben gemeinsam Ideen und Projekte für einen nachhaltigen Wandel diskutiert und sich für deren Umsetzung miteinander vernetzt.<br/>
+          haben gemeinsam ihre Ideen und Projekte für einen nachhaltigen Wandel diskutiert und sich für deren Umsetzung miteinander vernetzt.<br/>
           Die Ergebnisse haben wir für Sie zusammengefasst. <strong>Die Diskussionen gehen hier online weiter</strong>!
           </p>
       echocracy:
@@ -353,7 +353,7 @@ de:
         published: Published
     summary: 'Zusammenfassung'
     messages:
-      created: "{{type}} wurde erfolgreich eingestellt."
+      created: "{{type}} wurde erfolgreich erstellt."
       updated: "{{type}} wurde erfolgreich bearbeitet."
 
 

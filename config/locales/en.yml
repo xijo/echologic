@@ -305,11 +305,11 @@ en:
       types:
         question:  'Debate'
         proposal:  'Position'
-        improvement_proposal: 'Thought for Improvement'
+        improvement_proposal: 'Improvement Proposal'
       headings:
         question: 'Debates'
         proposal: 'Positions'
-        improvement_proposal: 'Thoughts for Improvement'
+        improvement_proposal: 'Improvement Proposals'
       states:
         new: New
         published: Published
@@ -416,7 +416,7 @@ en:
     models:
       question: "debate"
       proposal: "position"
-      improvement_proposal: "thought for improvement"
+      improvement_proposal: "improvement proposal"
 
 
   authlogic:

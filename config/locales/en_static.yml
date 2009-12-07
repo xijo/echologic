@@ -50,6 +50,10 @@ en:
       questions:
         category: 'echologic - Discussion Topic'
         show: 'echologic - Discussion'
+      proposals:
+        show: 'echologic - Positions in the Debate'
+      improvement_proposals:
+        show: 'echologic - Ideas to Improve the Position'
 
       # connect: de.seo.title.connect
       connect:
