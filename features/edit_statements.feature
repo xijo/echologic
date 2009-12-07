@@ -13,7 +13,7 @@ Feature: Edit Statements within a discussion
     When I go to the proposal
       And I follow "Edit"
       And I fill in the following:
-      | text | This was inappropriate, so I changed it. |
+      | proposal_document_text | This was inappropriate, so I changed it. |
       And I press "Save"
     Then I should see "This was inappropriate"
     

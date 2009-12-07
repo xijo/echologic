@@ -150,7 +150,6 @@ module StatementHelper
     else
       val = "<span class='no_echo_indicator ttLink' title='#{tooltip}'></span>"
     end
-
   end
 
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else
@@ -180,20 +179,28 @@ module StatementHelper
     key   = ("current_" + statement.class.to_s.underscore).to_sym
     if session[key].present? and session[key].include?(statement.id)
       index = session[key].index(statement.id)
-
-      p = statement_button(session[key][index-1], 'Prev') unless index==0
-      n = statement_button(session[key][index+1], 'Next') unless index==session[key].length-1
-
-      "&lt; #{p} - &gt; #{n}"
+      p = if index == 0
+            content_tag(:span, '&nbsp;', :class => 'disabled prev_page')
+          else
+            statement_button(session[key][index-1], '&nbsp;', :class => "prev_page", :rel => 'prev')
+          end
+      n = if index == session[key].length-1
+            content_tag(:span, '&nbsp;', :class => 'disabled next_page')
+          else
+            statement_button(session[key][index+1], '&nbsp;', :class => 'next_page', :rel => 'next')
+          end
+      content_tag(:div, [p, n].join, :class => 'pagination')
     end
   end
 
   # Insert a button that links to the previous statement
   # TODO AR from the helper stinks, but who knows a better way to get the right url?
   # maybe one could code some statement.url method..?
-  def statement_button(id, title)
+  def statement_button(id, title, options={})
     stmt = Statement.find(id)
-    return link_to(title, url_for(stmt), :class => 'ajax')
+    options[:class] ||= ''
+    options[:class] += ' ajax'
+    return link_to(title, url_for(stmt), options)
   end
 
 end

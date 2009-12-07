@@ -10,12 +10,12 @@ Feature: Start a discussion
     Given there are no questions
       And I am logged in as "editor" with password "true"
       And I am on the Discuss Index
-    When I follow "echonomyJAM"
-      And I follow "Create a new Question"
+    When I follow "echonomy JAM"
+      And I follow "Open a new debate"
       And I fill in the following:
-        | title | Is this a Question?   |
-        | text  | Blablabla bla bla bla |
-      And I select "new" from "state"
+        | question_document_title | Is this a Question?   |
+        | question_document_text  | Blablabla bla bla bla |
+      And I select "New" from "state"
       And I press "Save"
     Then I should see "Is this a Question?"
      And there should be one question
@@ -23,11 +23,11 @@ Feature: Start a discussion
   @ok
   Scenario: Publish a question i created as an editor
     Given I am logged in as "editor" with password "true"
-      And a "new" question in "echonomyJAM"
+      And a "New" question in "echonomyJAM"
       And I am on the Discuss Index
     When I go to the question
       And I follow "edit" within "#summary"
-      And I select "published" from "state"
+      And I select "Published" from "state"
       And I press "Save"
     Then the question should be published
 
@@ -37,7 +37,7 @@ Feature: Start a discussion
       And I am logged in as "editor" with password "true"
     When I go to create a question
       And I fill in the following:
-        | text | Blablabla bla bla bla |
+        | question_document_text | Blablabla bla bla bla |
       And I press "Save"
     # Todo: Maybe we should check the content of the error box as well
     Then there should be no questions
@@ -49,12 +49,12 @@ Feature: Start a discussion
       And there is the first question
       And the question has no proposals
       And I am on the Discuss Index
-    When I follow "echonomyJAM"
+    When I follow "echonomy JAM"
       And I choose the first Question
-      And I follow "Create a new Proposal"
+      And I follow "Enter a new position"
       And I fill in the following:
-        | title | a proposal to propose some proposeworthy proposal data |
-        | text  | nothing to propose yet...                              |
+        | proposal_document_title | a proposal to propose some proposeworthy proposal data |
+        | proposal_document_text | nothing to propose yet...                              |
       And I press "Save"
     Then I should see "a proposal to propose some"
       And the question should have one proposal

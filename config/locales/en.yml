@@ -317,10 +317,13 @@ en:
       states:
         new: New
         published: Published
+      delete_link: "Delete"
+      delete_confirmation: "Are you sure you want to delete this statement?"
     summary: 'Summary'
     messages:
       created: "The new {{type}} has been entered successfully."
       updated: "The {{type}} has been updated successfully."
+      deleted: "The {{type}} has been deleted successfully."
 
 
 

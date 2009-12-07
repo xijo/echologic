@@ -1,6 +1,27 @@
 class Statement < ActiveRecord::Base
   include Echoable
   
+  # magically allows Proposal.first.question? et al.
+  #
+  # FIXME: figure out why this sometimes doesn't work, but only in ajax requests
+#  def method_missing(sym, *args)
+#    sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
+#  end
+  
+  # static for now
+  
+  def proposal?
+    self.class == Proposal
+  end
+  
+  def improvement_proposal?
+    self.class == ImprovementProposal
+  end
+  
+  def question?
+    self.class == Question
+  end
+  
   ##
   ## ASSOCIATIONS
   ##
@@ -11,7 +32,7 @@ class Statement < ActiveRecord::Base
 
   belongs_to :root_statement, :foreign_key => "root_id", :class_name => "Statement"
   acts_as_tree :scope => :root_statement
-
+  
   belongs_to :category, :class_name => "Tag"
 
   # not yet implemented
@@ -27,7 +48,7 @@ class Statement < ActiveRecord::Base
   ##
   ## NAMED SCOPES
   ##
-
+    
   named_scope :proposals, lambda {
     { :conditions => { :type => 'Proposal' } } }
   named_scope :improvement_proposals, lambda {
@@ -53,7 +74,26 @@ class Statement < ActiveRecord::Base
 
   named_scope :from_category, lambda { |value|
     { :include => :category, :conditions => ['tags.value = ?', value] } }
- 
+  
+  ## ACCESSORS
+  
+  def title
+    self.document.title
+  end
+
+  def text
+    self.document.text
+  end
+
+  def level
+    # simple hack to gain the level
+    # problem is: as we can't use nested set (too write intensive stuff), we can't easily get the statements level in the tree
+    level = 0
+    level += 1 if self.parent
+    level += 1 if self.root && self.root != self && self.root != self.parent
+    level
+  end
+
   ##
   ## STATES
   ##
@@ -61,7 +101,8 @@ class Statement < ActiveRecord::Base
   cattr_reader :states, :state_lookup
   
   # Map the different states of statements to their database representation
-  # value, translate them ..
+  # value.
+  # TODO: translate them ..
   @@states = [:new, :published]
   @@state_lookup = { :new => 0, :published => 1 }
   
@@ -78,6 +119,25 @@ class Statement < ActiveRecord::Base
   validates_associated :document
   validates_presence_of :category
   
+  def validate
+    # except of questions, all statements need a valid parent
+    errors.add("Parent of #{self.class.name} must be of one of #{self.class.valid_parents.inspect}") unless self.class.valid_parents and self.class.valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
+  end
+
+  # recursive method to get all parents...
+  def parents(parents = [])
+    obj = self
+    while obj.parent && obj.parent != obj
+      parents << obj = obj.parent
+    end
+    parents.reverse!
+  end
+
+  def self_with_parents()
+    list = parents([self])
+    list.size == 1 ? list.pop : list
+  end
+
   class << self
     def valid_parents
       @@valid_parents[self.name]
@@ -85,6 +145,24 @@ class Statement < ActiveRecord::Base
 
     def expected_children
       @@expected_children[self.name]
+    end
+
+    def default_scope
+      { :include => :echo,
+        :order => %Q[echos.supporter_count DESC, created_at ASC] }
+    end
+    
+    def display_name
+      self.name.underscore.gsub(/_/,' ').split(' ').each{|word| word.capitalize!}.join(' ')
+    end
+    
+    def expected_parent_chain
+      chain = []
+      obj_class = self.name.constantize
+      while !obj_class.valid_parents.first.nil?
+        chain << obj = self.valid_parents.first
+      end
+      chain
     end
 
     private
@@ -108,62 +186,5 @@ class Statement < ActiveRecord::Base
       @@expected_children[self.name] ||= []
       @@expected_children[self.name] += klasses
     end
-  end
-
-  def validate
-    # except of questions, all statements need a valid parent
-    errors.add("Parent of #{self.class.name} must be of one of #{self.class.valid_parents.inspect}") unless self.class.valid_parents and self.class.valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
-  end
-
-  def self.display_name
-    self.name.underscore.gsub(/_/,' ').split(' ').each{|word| word.capitalize!}.join(' ')
-  end
-
-  def title
-    self.document.title
-  end
-
-  def text
-    self.document.text
-  end
-
-  def level
-    # simple hack to gain the level
-    # problem is: as we can't use nested set (too write intensive stuff), we can't easily get the statements level in the tree
-    level = 0
-    level += 1 if self.parent
-    level += 1 if self.root && self.root != self && self.root != self.parent
-    level
-  end
-
-  # recursive method to get all parents...
-  def parents(parents = [])
-    obj = self
-    while obj.parent && obj.parent != obj
-      parents << obj = obj.parent
-    end
-    parents.reverse!
-  end
-
-  def self_with_parents()
-    list = parents([self])
-    list.size == 1 ? list.pop : list
-  end
-
-  def self.expected_parent_chain
-    chain = []
-    obj_class = self.name.constantize
-    while !obj_class.valid_parents.first.nil?
-      chain << obj = self.valid_parents.first
-    end
-    chain
-  end
-
-
-  # magically allows Proposal.first.question? et al.
-  #
-  # OPTIMIZE: make this shorter!
-  def method_missing(sym, *args)
-    sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
   end
 end
