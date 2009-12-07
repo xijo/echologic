@@ -1,19 +1,15 @@
-<div id="question_container">
+<div id="questions_container">
 
-<% statements ||= @statements %>
-<% statements.each do |statement| -%>
+  <% statements ||= @statements %>
+  <ul>
+    <% statements.each do |statement| -%>
+      <li><%= link_to(statement.document.title, question_url(statement), :class => 'statement_link question_link') %></li>
+    <% end -%>
+  </ul>
+  <%= will_paginate statements, :previous_label => '', :next_label => '' if defined? statements.total_pages %>
 
-  <div class="function_button_holder">
-    <% link_to question_url(statement), :class => 'question_link' do %>
-      <span class="function_button function_button_my_profile"></span>
-    <% end %>
-    <span class="function_name"><%= statement.document.title %></span><br/>
-  </div>
-
-<% end -%>
-
-<%= will_paginate statements, :previous_label => '', :next_label => '' if defined? statements.total_pages %>
 </div>
+
 <script type="text/javascript">
   $('.pagination a').addClass('ajax');
 </script>

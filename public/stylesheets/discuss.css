@@ -52,6 +52,25 @@
   background:  url(../images/page/discuss/topics/echo.png) no-repeat scroll 0 0;
 }
 
+/* --------- */
+/* Questions */
+/* --------- */
+
+#questions_container ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0 0 0 20px;
+}
+
+#questions_container li {
+  padding: 5px;
+}
+
+#questions_container .statement_link {
+  font-size: 18px;
+  background-position: 0 3px;
+}
+
 /* ------- */
 /* CONTEXT */
 /* ------- */
@@ -168,7 +187,7 @@ a.statement_link {
   font-weight: bold;
   display:inline-block;
   height: 20px;
-  padding-left: 18px !important;
+  padding-left: 21px !important;
   width: 580px;
 }
 
