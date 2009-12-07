@@ -1,5 +1,5 @@
-<div id="new_statement" class="header_block discuss_right_block">
-<h2><%= children_box_title(statement) %></h2>
+<div id="new_statement_block" class="header_block discuss_right_block">
+<h2><%= children_new_box_title(statement) %></h2>
 
 <% statement ||= @statement %>
 <% semantic_form_for statement.self_with_parents do |form| -%>
