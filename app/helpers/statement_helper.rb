@@ -179,17 +179,16 @@ module StatementHelper
     key   = ("current_" + statement.class.to_s.underscore).to_sym
     if session[key].present? and session[key].include?(statement.id)
       index = session[key].index(statement.id)
-      p = if index == 0
-            content_tag(:span, '&nbsp;', :class => 'disabled prev_page')
-          else
-            statement_button(session[key][index-1], '&nbsp;', :class => "prev_page", :rel => 'prev')
-          end
-      n = if index == session[key].length-1
-            content_tag(:span, '&nbsp;', :class => 'disabled next_page')
-          else
-            statement_button(session[key][index+1], '&nbsp;', :class => 'next_page', :rel => 'next')
-          end
-      content_tag(:div, [p, n].join, :class => 'pagination')
+      buttons = if index == 0
+                  content_tag(:span, '&nbsp;', :class => 'disabled prev_stmt')
+                else
+                  statement_button(session[key][index-1], '&nbsp;', :class => "prev_stmt", :rel => 'prev')
+                end
+      buttons << if index == session[key].length-1
+                   content_tag(:span, '&nbsp;', :class => 'disabled next_stmt')
+                 else
+                   statement_button(session[key][index+1], '&nbsp;', :class => 'next_stmt', :rel => 'next')
+                 end
     end
   end
 
