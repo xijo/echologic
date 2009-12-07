@@ -294,7 +294,7 @@ en:
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: 'Open a new debate'
+      create_question_link: 'Open a new debate'
       create_proposal_link: 'Enter a new position'
       create_improvement_proposal_link: 'Add new thought for improvement'
       echo_tooltip: 'echo this statement to support it!'

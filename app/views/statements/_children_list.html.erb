@@ -2,12 +2,14 @@
    children ||= @children
 %>
 <div id="children_list">
-  <ul>
-    <% children.each do |statement| %>
-      <%= render :partial => 'statements/child', :locals => {:statement => statement } %>
-    <% end %>
-  </ul>
-  <%= will_paginate children, :previous_label => '', :next_label => '' if defined? children.total_pages %>
+  <% unless children.empty? %>
+    <ul>
+      <% children.each do |statement| %>
+        <%= render :partial => 'statements/child', :locals => {:statement => statement } %>
+      <% end %>
+    </ul>
+    <%= will_paginate children, :previous_label => '', :next_label => '' if defined? children.total_pages %>
+  <% end %>
 </div>
 
 <script type="text/javascript">

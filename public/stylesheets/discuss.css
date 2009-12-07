@@ -23,6 +23,22 @@
   margin:5px 0 5px !important;
 }*/
 
+/* ------ */
+/* Topics */
+/* ------ */
+
+.topic_button_echonomy_jam {
+  background:  url(../images/page/discuss/topics/echonomyJAM.png) no-repeat scroll 0 0;
+}
+
+.topic_button_echocracy {
+  background:  url(../images/page/discuss/topics/echocracy.png) no-repeat scroll 0 0;
+}
+
+.topic_button_echo {
+  background:  url(../images/page/discuss/topics/echo.png) no-repeat scroll 0 0;
+}
+
 /* ------- */
 /* CONTEXT */
 /* ------- */

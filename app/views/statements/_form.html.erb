@@ -16,8 +16,16 @@
   <% end -%>
   <%= form.hidden_field :parent_id %>
   <%= form.hidden_field :category_id %>
-  <br />
-  <%= form.submit I18n.t('application.general.save'), :id => 'save_button' %>
-  <%= I18n.t('application.general.or') %>
-  <%= link_to I18n.t('application.general.cancel'), statement.parent or discuss_url %>
+
+  <% form.buttons do %>
+    <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>
+    <span class="or_cancel"><%= I18n.t('application.general.or') %></span>
+    <%= link_to I18n.t('application.general.cancel'), (statement.parent or discuss_url), :class => 'ajax text_button cancel_button' %>
+  <% end %>
+
+  <%# form.submit I18n.t('application.general.save'), :id => 'save_button' %>
+  <%# I18n.t('application.general.or') %>
+  <%# link_to I18n.t('application.general.cancel'), statement.parent or discuss_url %>
 <% end -%>
+
+

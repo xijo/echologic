@@ -311,7 +311,7 @@ de:
         description: |
           Here you can contribute your ideas to the further development of echo...
     statements:
-      create_link: 'Neue Debatte eröffnen'
+      create_question_link: 'Neue Debatte eröffnen'
       create_proposal_link: 'Neue Stellungnahme erstellen'
       create_improvement_proposal_link: 'Neue ergänzende Gedanke eintragen'
       echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo.!'
