@@ -297,8 +297,8 @@ en:
       create_question_link: 'Open a new debate'
       create_proposal_link: 'Enter a new position'
       create_improvement_proposal_link: 'Add new thought for improvement'
-      echo_tooltip: 'echo this statement to support it!'
-      unecho_tooltip: 'Withdraw your vote to stop supporting this statement!'
+      echo_tooltip: 'echo this statement to support it.'
+      unecho_tooltip: 'Withdraw your vote to stop supporting this statement.'
       echo_indicator_tooltip:
         one: 'This statement has {{supporter_count}} supporter.'
         many: 'This statement has {{supporter_count}} supporters.'
@@ -306,6 +306,10 @@ en:
         question:  'Debate'
         proposal:  'Position'
         improvement_proposal: 'Improvement Proposal'
+      new:
+        question:  'New Debate'
+        proposal:  'New Position'
+        improvement_proposal: 'New Improvement Proposal'
       headings:
         question: 'Debates'
         proposal: 'Positions'

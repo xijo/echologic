@@ -33,3 +33,6 @@
   border-bottom: 1px solid #7ab030;
 }
 
+.ttLink.no_border, .ttLink.no_border:hover {
+  border-bottom: none;
+}
