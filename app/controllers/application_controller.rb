@@ -36,9 +36,9 @@ class ApplicationController < ActionController::Base
       if object.blank?
         message = @error
       else
-        message = escape_javascript(render(:partial => 'layouts/components/error', :locals => {:object => object}))
+        message = render(:partial => 'layouts/components/error', :locals => {:object => object})
       end
-      page << "error('#{message}');"
+      page << "error('#{escape_javascript(message)}');"
     end
   end
 

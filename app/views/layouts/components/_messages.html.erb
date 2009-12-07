@@ -17,9 +17,9 @@
 
 <script type="text/javascript">
   <% if flash[:notice] %>
-    info('<%= flash[:notice] %>');
+    info('<%= escape_javascript(flash[:notice]) %>');
   <% elsif flash[:error] %>
-    error('<%= flash[:error] %>');
+    error('<%= escape_javascript(flash[:error]) %>');
   <% end %>
 </script>
 
@@ -36,3 +36,6 @@
     </div>
   </div>
 </noscript>
+
+<%# Clear messages, otherwise they appear again on the next page reload.  -%>
+<% flash[:notice] = flash[:error] = nil -%>
