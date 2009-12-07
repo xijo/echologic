@@ -2,9 +2,9 @@
 
 <div id="context">
 
-  <% arr = [statement.root, statement.parent, statement].compact.uniq || [] %>
-  <% arr.each do |s| %>
-  <div class="context_line">
+  <% statement_stack = [statement.root, statement.parent, statement].compact.uniq || [] %>
+  <% statement_stack.each do |s| %>
+  <div class="context_line <%= 'active' if statement_stack.last.eql?(s) %>">
     <div class="context_buttons"><%= prev_next_buttons(s) %></div>
     <div class="context_link"><%= statement_context_link(s)%></div>
   </div>

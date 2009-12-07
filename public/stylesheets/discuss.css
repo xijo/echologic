@@ -57,7 +57,7 @@
 /* ------- */
 
 .context_line {
-  height: 35px;
+  height: 28px;
   overflow: visible;
 }
 
@@ -92,7 +92,6 @@
 
 #context .context_line.active .context_link a {
   color: #7bb031;
-  font-size: 21px;
 }
 
 /* ------- */
@@ -143,11 +142,11 @@
   float:        right;
 }
 
-#context .echo_indicator {
+#context .echo_indicator, #context .no_echo_indicator {
   margin-top: 3px;
 }
 
-#children .echo_indicator {
+#children .echo_indicator, #children .no_echo_indicator {
   margin-top: 5px;
 }
 
