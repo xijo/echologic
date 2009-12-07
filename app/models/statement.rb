@@ -1,6 +1,11 @@
 class Statement < ActiveRecord::Base
   include Echoable
   
+  def self.default_scope
+    { :include => :echo,
+      :order => %Q[echos.supporter_count DESC, created_at ASC] }
+  end
+  
   ##
   ## ASSOCIATIONS
   ##
@@ -27,7 +32,7 @@ class Statement < ActiveRecord::Base
   ##
   ## NAMED SCOPES
   ##
-
+    
   named_scope :proposals, lambda {
     { :conditions => { :type => 'Proposal' } } }
   named_scope :improvement_proposals, lambda {

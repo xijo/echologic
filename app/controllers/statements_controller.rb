@@ -32,7 +32,7 @@ class StatementsController < ApplicationController
   
   # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
   def index
-    @statements = statement_class.all(:order => "#{(statement_class == Question ? 'created_at' : 'updated_at')} DESC").published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 6)
+    @statements = statement_class.all(statement_class.default_scope).published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 6)
     respond_to do |format|
       format.html { render :template => 'questions/index' }
     end
