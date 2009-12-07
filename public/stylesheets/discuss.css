@@ -69,7 +69,7 @@
 #questions_container .statement_link {
   font-size: 18px;
   background-position: 0 3px;
-  width: 800px;
+  width: 820px;
 }
 
 /* ------- */
@@ -82,14 +82,15 @@
 }
 
 .context_buttons {
-  width:          160px;
+  width:          140px;
   min-height:     1px;
   display:        inline-block;
   float:          left;
+  margin-right:   10px;
 }
 
 .context_link {
-  width:          830px;
+  width:          840px;
   display:        inline-block;
 }
 
@@ -98,7 +99,7 @@
 }
 
 #context .context_link a {
-  width:          590px;
+  width:          600px;
   display:        inline-block;
   color:          #21587F;
   font-size:      18px;
@@ -121,7 +122,7 @@
 #discuss_sidebar {
   clear:      both;
   float:      left;
-  width:      160px;
+  width:      140px;
   text-align: center;
   margin-top: 10px;
 }
@@ -144,12 +145,13 @@
 /* --------- */
 
 .discuss_right_block {
-  margin-left:  160px;
-  width:        815px;
+  margin-left:  140px;
+  width:        835px;
+  padding-left: 15px;
 }
 
 #summary.discuss_right_block {
-  width: 830px;
+  width: 800px;
 }
 
 /* echo indicators */
@@ -189,7 +191,7 @@ a.statement_link {
   display:inline-block;
   height: 20px;
   padding-left: 21px !important;
-  width: 580px;
+  width: 600px;
 }
 
 a.statement_link:hover {

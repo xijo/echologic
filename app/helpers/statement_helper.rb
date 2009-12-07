@@ -126,13 +126,13 @@ module StatementHelper
     image_tag("page/discuss/#{statement.class.name.underscore}_#{size.to_s}.png")
   end
 
-  # Returns the block heading for the given statement type
+  # Returns the block heading for the children of the given statement
   def children_box_title(statement)
     type = statement.class.expected_children.first.to_s.underscore
     I18n.t("discuss.statements.headings.#{type}")
   end
 
-  # Returns the block heading for the given statement type
+  # Returns the block heading for entering a new child for the given statement
   def children_new_box_title(statement)
     type = statement.class.expected_children.first.to_s.underscore
     I18n.t("discuss.statements.new.#{type}")
