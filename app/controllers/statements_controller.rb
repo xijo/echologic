@@ -43,8 +43,7 @@ class StatementsController < ApplicationController
   def category
     @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
-    @page = params[:page] || 1
-    @statements = statement_class.from_category(params[:id]).published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 3)
+    @statements = statement_class.from_category(params[:id]).published(current_user.has_role?(:editor)).by_supporters
     respond_to do |format|
       format.html {render :template => 'questions/index'}
       format.js {
@@ -99,12 +98,7 @@ class StatementsController < ApplicationController
     @statement.create_document
     respond_to do |format|
       format.html { render :template => 'statements/new' }
-      if is_question?
-        #FIXME: i changed this from questions/new to statements/new again, beaucse statements/new was messed up, and i didn't see a point in a sperate partial for questions
-        format.js { replace_container('new_statement', :partial => 'statements/new') }
-      else
-        format.js { replace_container('new_statement', :partial => 'statements/new') }
-      end
+      format.js { replace_container('new_statement', :partial => 'statements/new') }
     end
   end
 
@@ -125,7 +119,7 @@ class StatementsController < ApplicationController
       else
         set_error(@statement.document)
         format.html { flash_error and render :template => 'statements/new' }
-        format.js   { show_error_messages }
+        format.js   { show_error_messages(@statement.document) }
       end
     end
   end

@@ -58,6 +58,11 @@ a {
   cursor:       pointer;
 }
 
+p a {
+  color: #21587f;
+  text-decoration: underline;
+}
+
 .link {
   cursor:       pointer;
 }

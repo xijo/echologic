@@ -47,8 +47,12 @@ de:
         index: 'echologic - Diskussion'
         roadmap: 'echologic - Fahrplan für Diskutieren'
       questions:
-        category: 'echologic - Diskussionsthema'
-        show: 'echologic - Diskussion'
+        category: 'echologic - Diskussionsthemen'
+        show: 'echologic - Debatten'
+      proposals:
+        show: 'echologic - Stellungnahmen in der Debate'
+      improvement_proposals:
+        show: 'echologic - Ergänzungsvorschläge für die Stellungnahme'
 
       # connect: de.seo.title.connect
       connect:

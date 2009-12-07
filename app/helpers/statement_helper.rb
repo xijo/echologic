@@ -118,13 +118,6 @@ module StatementHelper
             :class => 'ajax header_button text_button edit_button edit_statement_button') if current_user.may_edit?(statement)
   end
 
-  # DEPRICATED
-  #
-  #
-  def statement_child_line2(statement)
-    ret = link_to(statement.title, url_for(statement), :class => "statement_link #{statement.class.name.underscore}_link")
-    ret << supporter_ratio_bar(statement)
-  end
 
   ## CONVENIENCE and UI
 
@@ -185,7 +178,7 @@ module StatementHelper
       p = statement_button(session[key][index-1], 'Prev') unless index==0
       n = statement_button(session[key][index+1], 'Next') unless index==session[key].length-1
 
-      "&lt; #{p}<br/>&gt; #{n}"
+      "&lt; #{p} - &gt; #{n}"
     end
   end
 

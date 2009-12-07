@@ -37,10 +37,10 @@ de:
       vision: 'Am Ende des Weges'
       discuss:
         status_quo: 'Der Bereich "Diskutieren" ist zu <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Die ersten Diskussionsfunktionen sind in der Entwicklung und werden bald auf echologic veröffentlicht.'
+        next_steps: 'Erste einfache Diskussionsfunktionen sind veröffentlicht. Der Bereich wird kontinuierlich ausgebaut.'
       connect:
         status_quo: 'Der Bereich "Vernetzen" ist zu <strong>{{progress}}% fertig</strong>.'
-        next_steps: 'Der Bereich "Vernetzen" wird weiterentwickelt, sobald die ersten Funktionen in "Diskutieren" und "Handeln" zur Verfügung stehen.'
+        next_steps: 'Eine einfache Personensuche ist veröffentlicht. Der Bereich "Vernetzen" wird weiterentwickelt, sobald die ersten Funktionen in "Diskutieren" und "Handeln" zur Verfügung stehen.'
       act:
         status_quo: 'Der Bereich "Handeln" ist zu <strong>{{progress}}% fertig</strong>.'
         next_steps: 'Mit der Entwicklung von "Handeln" werden wir nach der Veröffentlichung der ersten Funktionen im Bereich "Diskutieren" beginnen.'
@@ -50,7 +50,7 @@ de:
         vision: |
          <p>
          "Mein echo" wird Ihre <strong>persönliche Informationszentrale</strong> auf echo.
-         Hier erhalten Sie einen Überblick über die <strong>wichtigsten Nachrichten</strong> und werden über die <strong>neuesten
+         Hier erhalten Sie einen Überblick über die <strong>wichtigsten Nachrichten</strong> und Sie werden über die <strong>neuesten
          Diskussionen und Aktionen</strong> auf dem Laufenden gehalten.
          </p>
 
@@ -106,25 +106,24 @@ de:
     text: |
       <p>
       <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
-      Das sind die drei Funktionsbereiche von echo, die wir auf echologic Stück für Stück zusammen mit Ihnen entwicklen werden.<br/>
-      Den aktuellen <strong>Fertigkeitsgrad</strong> der jeweiligen Funktionsbereiche können Sie immer an der
-      <strong>Fortschrittsanzeige bei "Fahrplan"</strong> oben rechts ablesen.
+      Das sind die drei Funktionsbereiche von echo, die wir auf echologic Stück für Stück zusammen mit Ihnen ausbauen werden.<br/>
+      Im <strong>Fahrplan</strong> oben rechts können Sie für jeden Bereich den aktuellen <strong>Stand der Entwicklung</strong> sowie die geplanten nächsten Schritte verfolgen.
       </p><p>
-      Unten sehen Sie die bisher veröffentlichten Bereiche.<br>
-      Mit der Zeit werden immer mehr Funktionen hinzukommen, die Ihnen die
-      <strong>Mitgestaltung von echo</strong> zunehmend ermöglichen werden.
-      </p><p>
-      <strong>Neue Bereiche:</strong>
+      Als BewegerIn von echologic sind Sie herzlich eingeladen, die Entwicklung von <strong>echo mit zu gestalten</strong>!<br/>
+      Bisher sind erste einfache Funktionen in folgenden Bereichen veröffentlicht:
       </p>
     function_1:
       name: 'Mein Profil'
-      description: 'Verwalten Sie Ihr Profil, um sich in der Community von echologic zu präsentieren.'
+      description: |
+        Erstellen Sie Ihr aussagekräftiges Profil, um Ihre Kompetenzen darzustellen und sich gezielt findbar zu machen.
     function_2:
       name: 'Vernetzen'
       description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
     function_3:
       name: 'Diskutieren'
-      description: 'Tauschen Sie Ihre Ideen mit anderen NeudenkerInnen über Themen der Nachhaltigkeit und Demokratie aus.'
+      description: |
+        Tauschen Sie Ihre Ideen mit anderen NeudenkerInnen über Themen der Nachhaltigkeit und Demokratie aus.<br/>
+        Bringen Sie sich in die weitere Entwicklung echos ein.
 
   # ------------
   # USERS MODULE
@@ -283,37 +282,59 @@ de:
       title: Überblick
       text: |
         <p>
-        Während der Entwicklung des Diskussionsbereiches können Sie sich hier im Rahmen verschiedener Pilotprojeketen
-        mit anderen NeudenkerInnen austauschen und über die jeweiligen Themenbereiche gemeinsam neue Ideen entwickeln.
-         </p><p>
-        Die aktuelle Diskussionsthemen sind:
+        <strong>Willkommen im Diskussionsbereich von echologic!</strong>
+        </p><p>
+        Wie Sie vom Fahrplan rechts oben entnehmen können, befindet sich der Diskussionsbereich echos noch in der
+        <strong>frühen Entwicklungsphase</strong>.
+        </p><p>
+        Sie können sich aber jetzt schon im Rahmen verschiedener <strong>Pilotprojekte</strong> über
+        interessante Themen mit anderen NeudenkerInnen austauschen und <strong>gemeinsam neue Ideen
+        entwickeln</strong>. Außerdem haben Sie hier die Möglichkeit, sich in die weitere Entwicklung echos einzubringen.<br/>
+        Aktuell sind folgende Diskussionsthemen verfügbar:
         </p>
     topics:
       echonomy_jam:
         name: echonomy JAM
-        teaser: Enwickeln Sie Ideen zum Thema ökosozial nachhaltiges, demokratisches Wirtschaften.
+        teaser: Entwicklen Sie neue Wege zu einer ökosozial nachhaltigen Wirtschaft!
         description: |
           <p>
-          echonomy ist eine neue Form ökologisch und sozial nachhaltiges, demokratisches Witschaften,
-          welche unter Profit auch das Wohl von Mensch und Natur versteht.
-          echonomyJAM bringt kreative Ideenträger, Kapitalgebern, erfahreren Experten sowie Entscheidungsträger
-          aus Politik und Wirtschaft zusammen und ermöglicht Ihnen die gemeinsame Entwicklung, Finanzierung und
-          Realisierung von Ideen und konkrete Projekte - alles in Sinne der echonomischen Nachhaltigkeit.
+          <strong>echonomy</strong> steht für eine neue Form <strong>ökologisch und sozial nachhaltiges, demokratisches Wirtschaften</strong>,
+          die unter Profit auch das Wohl von Mensch und Natur versteht.<br/>
+          <strong>echonomy JAM</strong> bringt kreative Ideenträger, Kapitalgeber, erfahreren Experten sowie Entscheidungsträger
+          aus Politik und Wirtschaft zusammen und ermöglicht Ihnen die <strong>gemeinsame Entwicklung, Finanzierung und
+          Realisierung von Ideen</strong> und konkreten Projekten - alles in Sinne der echonomischen Nachhaltigkeit.
+          (Mehr Infos unter <a href='http://www.echonomyJAM.org' target='_blank'>www.echonomyJAM.org</a>)
+          </p><p>
+          Am 27.11.2009 startete echonomy JAM mit einer Auftaktveranstaltung im <strong>Bayerischen Landtag</strong>.<br>
+          Ca. <strong>150 interessierte BürgerInnen und EntscheidungsträgerInnen aus Politik und Wirtschaft</strong>
+          haben gemeinsam ihre Ideen und Projekte für einen nachhaltigen Wandel diskutiert und sich für deren Umsetzung miteinander vernetzt.<br/>
+          Die Ergebnisse haben wir für Sie zusammengefasst. <strong>Die Diskussionen gehen hier online weiter</strong>!
           </p>
       echocracy:
         name: echocracy
-        teaser: Diskutieren Sie über eine neue Form teilnehmender Demokratie von echo.
+        teaser: Diskutieren Sie Ihre Vision einer globalen Demokratie!
         description: |
-          echocracy ist...
+          <p>
+          echo soll als die globale Agora einer <strong>neuen Form teilnehmender Demokratie</strong> etabliert werden - der echocracy:
+          </p><p>
+          Konstruktiv, gleichberechtigt und selbstorganisierend - weltweit!<br/>
+          Bringen Sie Ihre Ideen ein und helfen Sie mit, die Vision noch visionärer zu machen - und <strong>real werden zu lassen</strong>!
+          </p>
       echo:
         name: echo
-        teaser: Beteiligen Sie sich in der Entwicklung von echo.
+        teaser: Helfen Sie uns echo entsprechend Ihrer Wünsche zu optimieren!
         description: |
-          Here you can contribute your ideas to the further development of echo...
+          <p>
+          Als BewegerIn von echologic sind Sie eingeladen, die <strong>Entwicklung echos mit
+          zu gestalten</strong>! Welche Funktionen halten Sie für notwendig und was sollten die
+          nächsten Schritte sein? Sagen Sie uns Ihre Meinung, diskutieren Sie diese mit
+          anderen BewegerInnen und helfen Sie uns dabei, aus unserer gemeinsamen Demokratie
+          noch mehr zu machen, als wir es uns je hätten vorstellen können!
+          </p>
     statements:
       create_question_link: 'Neue Debatte eröffnen'
       create_proposal_link: 'Neue Stellungnahme erstellen'
-      create_improvement_proposal_link: 'Neue ergänzende Gedanke eintragen'
+      create_improvement_proposal_link: 'Neuen Ergänzungsvorschlag machen'
       echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo.!'
       unecho_tooltip: 'Ziehen Sie Ihre Stimme zurück, wenn Sie die Aussage nicht mehr unterstützen möchten.'
       echo_indicator_tooltip:
@@ -322,11 +343,11 @@ de:
       types:
         question:  'Debatte'
         proposal:  'Stellungnahme'
-        improvement_proposal: 'Ergänzende Gedanke'
+        improvement_proposal: 'Ergänzungsvorschlag'
       headings:
         question: 'Debatten'
         proposal: 'Stellungnahmen'
-        improvement_proposal: 'Ergänzende Gedanken'
+        improvement_proposal: 'Ergänzungsvorschläge'
       states:
         new: New
         published: Published
@@ -334,8 +355,8 @@ de:
       delete_confirmation: "Bist du sicher, dass du dieses Statement l&ouml;schen willst?"
     summary: 'Zusammenfassung'
     messages:
-      created: "Die neue {{type}} wurde erfolgreich eingestellt."
-      updated: "Die {{type}} wurde erfolgreich bearbeitet."
+      created: "{{type}} wurde erfolgreich erstellt."
+      updated: "{{type}} wurde erfolgreich bearbeitet."
       deleted: "Die {{type}} wurde erfolgreich gel&ouml;scht."
 
 
@@ -361,7 +382,7 @@ de:
       actions:
         report: "Melden"
     messages:
-      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit einem anderen Suchbegriff.'
+      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit anderen Suchbegriffen.'
       no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
       no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
@@ -506,12 +527,12 @@ de:
         too_long: "Ihre Eingabe im Feld '{{attribute}}' ist zu lang."
         invalid: "Ihre Eingabe im Feld '{{attribute}}' hat ein falsches Format."
         confirmation: '{{attribute}} muss übereinstimmen.'
-        access_denied: "Leider fehlt Ihnen die nötige Zugangsberechtigung."
+        access_denied: "Leider fehlt Ihnen die notwendige Zugangsberechtigung."
 
       template:
         header:
-          one: "Ein Feld wurde nicht richtig ausgefüllt."
-          other: "{{count}} Felder wurden nicht richtig ausgefüllt."
+          one: "Ein Feld wurde nicht korrekt ausgefüllt."
+          other: "{{count}} Felder wurden nicht korrekt ausgefüllt."
         body: "Bitte überprüfen Sie Ihre Eingaben:"
 
     attributes:
@@ -542,7 +563,7 @@ de:
     models:
       question: "Debatte"
       proposal: "Stellungnahme"
-      improvement_proposal: "ergänzende Gedanke"
+      improvement_proposal: "Ergänzungsvorschlag"
 
   authlogic:
     error_messages:

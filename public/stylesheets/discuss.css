@@ -23,6 +23,19 @@
   margin:5px 0 5px !important;
 }*/
 
+
+#function_container .simple_header_block h2 {
+  color: #21587f !important;
+  border-bottom: 1px solid #a8a8a8;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+#function_container .simple_header_block .header_button {
+  margin-top: -39px;
+}
+
+
 /* ------ */
 /* Topics */
 /* ------ */
@@ -39,12 +52,32 @@
   background:  url(../images/page/discuss/topics/echo.png) no-repeat scroll 0 0;
 }
 
+/* --------- */
+/* Questions */
+/* --------- */
+
+#questions_container ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0 0 0 20px;
+}
+
+#questions_container li {
+  padding: 5px;
+}
+
+#questions_container .statement_link {
+  font-size: 18px;
+  background-position: 0 3px;
+  width: 800px;
+}
+
 /* ------- */
 /* CONTEXT */
 /* ------- */
 
 .context_line {
-  height: 35px;
+  height: 28px;
   overflow: visible;
 }
 
@@ -65,7 +98,7 @@
 }
 
 #context .context_link a {
-  width:          600px;
+  width:          590px;
   display:        inline-block;
   color:          #21587F;
   font-size:      18px;
@@ -79,7 +112,6 @@
 
 #context .context_line.active .context_link a {
   color: #7bb031;
-  font-size: 21px;
 }
 
 /* ------- */
@@ -116,18 +148,26 @@
   width:        815px;
 }
 
+#summary.discuss_right_block {
+  width: 830px;
+}
+
 /* echo indicators */
 
 .echo_indicator, .no_echo_indicator {
   height:       12px !important;
-  width:        160px;
+  width:        170px;
   display:      inline-block;
   margin:       0 20px;
   float:        right;
 }
 
-#context .echo_indicator {
-  margin-top: 6px;
+#context .echo_indicator, #context .no_echo_indicator {
+  margin-top: 3px;
+}
+
+#children .echo_indicator, #children .no_echo_indicator {
+  margin-top: 5px;
 }
 
 .no_echo_indicator {
@@ -148,8 +188,8 @@ a.statement_link {
   font-weight: bold;
   display:inline-block;
   height: 20px;
-  padding-left: 18px !important;
-  width: 585px;
+  padding-left: 21px !important;
+  width: 580px;
 }
 
 a.statement_link:hover {
