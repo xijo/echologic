@@ -152,7 +152,6 @@ module StatementHelper
     else
       val = "<span class='no_echo_indicator ttLink' title='#{tooltip}'></span>"
     end
-
   end
 
   # TODO: instead of adding an image tag, we should use css classes here, like (almost) everywhere else

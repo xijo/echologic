@@ -30,6 +30,8 @@ module Echoable
       # if we have a parent we go the easy way
       if parent && parent.most_supported_child.try(:supporter_count).to_i > 0
         ((supporter_count.to_f / parent.most_supported_child.supporter_count.to_f) * 100).to_i
+      else
+        0
       end
     end
     

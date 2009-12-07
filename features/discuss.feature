@@ -8,7 +8,7 @@ Feature: Take Part on a discussion
   Scenario: Open a question
     Given I am logged in as "user" with password "true"
       And I am on the Discuss Index
-    When I follow "echonomyJAM"
+    When I follow "echonomy JAM"
       And I choose the first Question
     Then I should see the questions title
   
@@ -18,12 +18,12 @@ Feature: Take Part on a discussion
       And there is the first question
       And the question has no proposals
       And I am on the Discuss Index
-    When I follow "echonomyJAM"
+    When I follow "echonomy JAM"
       And I choose the first Question
-      And I follow "Create a new Proposal"
+      And I follow "Enter a new position"
       And I fill in the following:
-        | title | a proposal to propose some proposeworthy proposal data |
-        | text  | nothing to propose yet...                              |
+        | proposal_document_title | a proposal to propose some proposeworthy proposal data |
+        | proposal_document_text | nothing to propose yet...                              |
       And I press "Save"
     Then I should see "a proposal to propose some"
       And the question should have one proposal
@@ -34,10 +34,10 @@ Feature: Take Part on a discussion
       And there is the first question
       And the question has at least on proposal
     When I go to the questions first proposal
-      And I follow "Create a new Improvement Proposal"
+      And I follow "Add new thought for improvement"
       And I fill in the following:
-      | title | Improving the unimprovable                                           |
-      | text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
+      | improvement_proposal_document_title | Improving the unimprovable                                           |
+      | improvement_proposal_document_text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
       And I press "Save"
     Then I should see "Improving the unimprovable"
       And I should see "blubb"
