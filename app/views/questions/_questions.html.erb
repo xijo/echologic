@@ -1,15 +1,10 @@
-<div id="questions_container">
 
+<div id="questions_container">
   <% statements ||= @statements %>
   <ul>
     <% statements.each do |statement| -%>
       <li><%= link_to(statement.document.title, question_url(statement), :class => 'statement_link question_link') %></li>
     <% end -%>
   </ul>
-  <%= will_paginate statements, :previous_label => '', :next_label => '' if defined? statements.total_pages %>
-
 </div>
 
-<script type="text/javascript">
-  $('.pagination a').addClass('ajax');
-</script>

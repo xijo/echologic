@@ -43,8 +43,7 @@ class StatementsController < ApplicationController
   def category
     @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
-    @page = params[:page] || 1
-    @statements = statement_class.from_category(params[:id]).published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 3)
+    @statements = statement_class.from_category(params[:id]).published(current_user.has_role?(:editor)).by_supporters
     respond_to do |format|
       format.html {render :template => 'questions/index'}
       format.js {

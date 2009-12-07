@@ -69,6 +69,7 @@
 #questions_container .statement_link {
   font-size: 18px;
   background-position: 0 3px;
+  width: 800px;
 }
 
 /* ------- */

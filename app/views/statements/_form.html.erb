@@ -20,7 +20,7 @@
   <% form.buttons do %>
     <%= form.commit_button I18n.t('application.general.save'), :button_html => { :alt => 'save_button' } %>
     <span class="or_cancel"><%= I18n.t('application.general.or') %></span>
-    <%= link_to I18n.t('application.general.cancel'), (statement.parent or discuss_url), :class => 'ajax text_button cancel_button' %>
+    <%= link_to I18n.t('application.general.cancel'), (statement.parent or discuss_url), :class => 'text_button cancel_button' %>
   <% end %>
 <% end -%>
 
