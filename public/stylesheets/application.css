@@ -124,11 +124,11 @@
 }
 
 .pagination .prev_page.disabled {
-  background-position: 0 -78px !important;
+  background-position: 0 -78px;
 }
 
 .pagination .next_page.disabled {
-  background-position: -37px -78px !important;
+  background-position: -37px -78px;
 }
 
 

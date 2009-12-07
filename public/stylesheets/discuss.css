@@ -79,19 +79,24 @@
 .context_line {
   height: 28px;
   overflow: visible;
+  position: relative;
 }
 
 .context_buttons {
-  width:          140px;
+  width:          135px;
   min-height:     1px;
   display:        inline-block;
   float:          left;
-  margin-right:   10px;
+  position:       absolute;
+  top:            -8px;
+  text-align:     center;
 }
 
 .context_link {
   width:          840px;
   display:        inline-block;
+  position:       absolute;
+  left:           150px;
 }
 
 .context_link .statement_link {
@@ -114,6 +119,47 @@
 #context .context_line.active .context_link a {
   color: #7bb031;
 }
+
+/* Prev/Next Statement buttons */
+.context_buttons .prev_stmt, .context_buttons .next_stmt {
+  display: inline-block;
+  width: 37px;
+  height: 39px;
+  padding: 0;
+}
+
+.context_buttons .prev_stmt {
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll 0 -117px;
+}
+
+.context_buttons .next_stmt {
+  background:  url(../images/page/prev_next_buttons.png) no-repeat scroll -37px -117px;
+}
+
+.context_line:hover .prev_stmt {
+  background-position: 0 0;
+}
+
+.context_line:hover .next_stmt {
+  background-position: -37px 0px;
+}
+
+.context_line:hover .prev_stmt:hover {
+  background-position: 0 -39px;
+}
+
+.context_line:hover .next_stmt:hover {
+  background-position: -37px -39px;
+}
+
+.context_line:hover .prev_stmt.disabled {
+  background-position: 0 -78px;
+}
+
+.context_line:hover .next_stmt.disabled {
+  background-position: -37px -78px;
+}
+
 
 /* ------- */
 /* Sidebar */
@@ -151,7 +197,7 @@
 }
 
 #summary.discuss_right_block {
-  width: 800px;
+  width: 815px;
 }
 
 /* echo indicators */
@@ -242,6 +288,3 @@ a.statement_link:hover {
 
 /* New Statement */
 
-#new_statement {
-  padding-left: 2px;
-}
