@@ -134,7 +134,7 @@ module StatementHelper
 
   # Returns the block heading for entering a new child for the given statement
   def children_new_box_title(statement)
-    type = statement.class.expected_children.first.to_s.underscore
+    type = statement.class.to_s.underscore
     I18n.t("discuss.statements.new.#{type}")
   end
 
