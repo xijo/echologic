@@ -77,9 +77,8 @@
 /* ------- */
 
 .context_line {
-  height: 28px;
-  overflow: visible;
-  position: relative;
+  clear: both;
+  height: 30px;
 }
 
 .context_buttons {
@@ -87,16 +86,18 @@
   min-height:     1px;
   display:        inline-block;
   float:          left;
-  position:       absolute;
+  position:       relative;
   top:            -8px;
   text-align:     center;
+  height:         30px;
+  overflow:       visible;
 }
 
 .context_link {
-  width:          840px;
   display:        inline-block;
-  position:       absolute;
-  left:           150px;
+  min-height:     30px;
+  width:          855px;
+  float:          left;
 }
 
 .context_link .statement_link {
@@ -110,6 +111,7 @@
   font-size:      18px;
   font-weight:    bold;
   text-decoration:none;
+  overflow: hidden;
 }
 
 #context .context_link a:hover {
@@ -170,7 +172,7 @@
   float:      left;
   width:      140px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /* echo button */
