@@ -5,9 +5,6 @@
 <%= render :partial => 'statements/summary', :locals => {:statement => @statement} %>
 <%= render :partial => 'statements/children', :locals => {:statement => @statement, :children => @children } %>
 
-<div id="new_statement">
-  <%= create_children_statement_link(@statement) %>
-</div>
 
 <script type="text/javascript">
   makeRatiobars();

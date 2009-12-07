@@ -1,6 +1,7 @@
 <% children ||= @children %>
 <% statement ||= @statement %>
 
+<%= create_children_statement_link(@statement) %>
 <% if !statement.class.expected_children.empty? %>
   <div id="children" class="header_block discuss_right_block">
     <h2><%= children_box_title(statement) %></h2>
