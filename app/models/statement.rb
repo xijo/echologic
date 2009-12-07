@@ -3,9 +3,23 @@ class Statement < ActiveRecord::Base
   
   # magically allows Proposal.first.question? et al.
   #
-  # OPTIMIZE: make this shorter!
-  def method_missing(sym, *args)
-    sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
+  # FIXME: figure out why this sometimes doesn't work, but only in ajax requests
+#  def method_missing(sym, *args)
+#    sym.to_s =~ /\?$/ && ((klass = sym.to_s.chop.camelize.constantize) rescue false) ? klass == self.class : super
+#  end
+  
+  # static for now
+  
+  def proposal?
+    self.class == Proposal
+  end
+  
+  def improvement_proposal?
+    self.class == ImprovementProposal
+  end
+  
+  def question?
+    self.class == Question
   end
   
   ##
