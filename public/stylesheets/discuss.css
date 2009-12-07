@@ -23,6 +23,19 @@
   margin:5px 0 5px !important;
 }*/
 
+
+#function_container .simple_header_block h2 {
+  color: #21587f !important;
+  border-bottom: 1px solid #a8a8a8;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+#function_container .simple_header_block .header_button {
+  margin-top: -39px;
+}
+
+
 /* ------ */
 /* Topics */
 /* ------ */
@@ -65,7 +78,7 @@
 }
 
 #context .context_link a {
-  width:          600px;
+  width:          590px;
   display:        inline-block;
   color:          #21587F;
   font-size:      18px;
@@ -116,11 +129,15 @@
   width:        815px;
 }
 
+#summary.discuss_right_block {
+  width: 830px;
+}
+
 /* echo indicators */
 
 .echo_indicator, .no_echo_indicator {
   height:       12px !important;
-  width:        160px;
+  width:        170px;
   display:      inline-block;
   margin:       0 20px;
   float:        right;
@@ -153,7 +170,7 @@ a.statement_link {
   display:inline-block;
   height: 20px;
   padding-left: 18px !important;
-  width: 585px;
+  width: 580px;
 }
 
 a.statement_link:hover {
