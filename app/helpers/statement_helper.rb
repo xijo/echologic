@@ -135,7 +135,7 @@ module StatementHelper
   # Returns the block heading for the given statement type
   def children_new_box_title(statement)
     type = statement.class.expected_children.first.to_s.underscore
-    I18n.t("discuss.statements.headings.#{type}")
+    I18n.t("discuss.statements.new.#{type}")
   end
 
   # Inserts a support ratio bar with the ratio value in its alt-attribute.
