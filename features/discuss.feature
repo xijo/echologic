@@ -25,7 +25,8 @@ Feature: Take Part on a discussion
         | proposal_document_title | a proposal to propose some proposeworthy proposal data |
         | proposal_document_text | nothing to propose yet...                              |
       And I press "Save"
-    Then I should see "a proposal to propose some"
+    Then I should be on the question
+      And I should see "a proposal to propose some"
       And the question should have one proposal
 
   @ok
@@ -39,8 +40,8 @@ Feature: Take Part on a discussion
       | improvement_proposal_document_title | Improving the unimprovable                                           |
       | improvement_proposal_document_text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |
       And I press "Save"
-    Then I should see "Improving the unimprovable"
-      And I should see "blubb"
+    Then I should be on the proposal
+      And I should see "Improving the unimprovable"
       And the proposal should have one improvement proposal
 
   @ok
