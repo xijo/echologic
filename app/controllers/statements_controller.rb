@@ -10,14 +10,14 @@ class StatementsController < ApplicationController
   verify :method => :get, :only => [:index, :show, :new, :edit, :category]
   verify :method => :post, :only => :create
   verify :method => :put, :only => [:update]
-  verify :method => :delete, :only => [:delete]
+  verify :method => :delete, :only => [:detsroy]
 
   # FIXME: we don't need this line anymore if we have the access_control block, right?
   #  before_filter :require_user, :only => [:new, :create, :show, :edit, :update]
 
   # the order of these filters matters. change with caution.
-  before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho]
-  before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update]
+  before_filter :fetch_statement, :only => [:show, :edit, :update, :echo, :unecho, :destroy]
+  before_filter :fetch_category, :only => [:index, :new, :show, :edit, :update, :destroy]
 
   # make custom URL helper available to controller
   include StatementHelper
@@ -27,7 +27,7 @@ class StatementsController < ApplicationController
     allow logged_in, :only => [:index, :show, :echo, :unecho]
     allow logged_in, :only => [:new, :create], :unless => :is_question?
     allow logged_in, :only => [:edit, :update], :if => :may_edit?
-    allow logged_in, :only => [:delete], :if => :may_delete?
+    allow logged_in, :only => [:destroy], :if => :may_delete?
   end
   
   # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
@@ -153,8 +153,10 @@ class StatementsController < ApplicationController
     end
   end
 
-  def delete
-    statement_class.delete(params[:id])
+  def destroy
+    @statement.destroy
+    set_info("discuss.messages.deleted", :type => @statement.class.human_name)
+    flash_info and redirect_to :action => :category, :id => @category.value
   end
 
   #

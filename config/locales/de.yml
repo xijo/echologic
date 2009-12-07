@@ -330,10 +330,13 @@ de:
       states:
         new: New
         published: Published
+      delete_link: "L&ouml;schen"
+      delete_confirmation: "Bist du sicher, dass du dieses Statement l&ouml;schen willst?"
     summary: 'Zusammenfassung'
     messages:
       created: "Die neue {{type}} wurde erfolgreich eingestellt."
       updated: "Die {{type}} wurde erfolgreich bearbeitet."
+      deleted: "Die {{type}} wurde erfolgreich gel&ouml;scht."
 
 
   # ---------------
