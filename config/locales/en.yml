@@ -37,7 +37,7 @@ en:
       vision: 'At The End of The Road'
       discuss:
         status_quo: 'echo "Discuss" is currently <strong>{{progress}}% ready</strong>.'
-        next_steps: 'The first features of echo "Discuss" are under development and will be released soon.'
+        next_steps: 'The first features of echo "Discuss" have been released. Its functionality will be extended step by step in the next releases.'
       connect:
         status_quo: 'echo "Connect" is currently <strong>{{progress}}% ready</strong>.'
         next_steps: 'echo "Connect" will be enhanced after the first features of echo "Discuss" and echo "Act" have been released.'
@@ -107,26 +107,26 @@ en:
     text: |
       <p>
       <strong>Discuss - Connect - Act!</strong><br/>
-      These are the three main functional areas of echo, which we will develop step by step at
+      These are the three functional areas of echo, which we will develop step by step at
       echologic with your active participation.<br/>
-      The <strong>progress indicator next to "Roadmap"</strong> in the upper right corner always shows you the
-      <strong>current state of development</strong> for the functional area you are looking at.
+      The <strong>"Roadmap"</strong> (in the upper right corner of the screen) always shows you the
+      <strong>current state of development</strong> and the next steps planned concerning the
+      functional area you are looking at.
       </p><p>
-      Below you can see the most recently released functionality.<br/>
-      With the time, more and more features will be introduced enabling you to increasingly
-      <strong>engage in the evolution of echo</strong>.
-      </p><p>
-      <strong>New features:</strong>
+      As a mover at echologic you are kindly invited to <strong>engage into the evolution of echo</strong>!<br/>
+      Until now, the following simple features have been released:
       </p>
     function_1:
       name: 'My Profile'
-      description: 'Complete your profile to present yourself in the echologic community.'
+      description: 'Create your meaningful profile to enable others to find you when your competences are needed.'
     function_2:
       name: 'Connect'
-      description: 'Explore other interesting people of the movement.'
+      description: 'Explore the community and connect with other interesting people of the movement.'
     function_3:
       name: 'Discuss'
-      description: 'Exchange your ideas with other newthinkers on topics about sustainablity and democracy.'
+      description: |
+        Exchange your ideas with other newthinkers on topics about sustainablity and democracy.<br/>
+        Engage into the evolution of echo.
 
   # ------------
   # USERS MODULE
@@ -276,27 +276,55 @@ en:
     topics_overview:
       title: Overview
       text: |
-        Here you can see the current discussion topics.
+        <p>
+        As you can see in the Roadmap (in the upper right corner of the screen),
+        the discussion area of echo is in an <strong>early development stage</strong>.
+        </p><p>
+        At the moment it offers you the possibility to discuss about different <strong>pilot projects</strong> and
+        jointly <strong>develop new ideas</strong> with other newthinkers of the community.
+        Additionally, you can also engage into the development of echo.<br/>
+        Currently available topics are:
+        </p>
     topics:
       echonomy_jam:
         name: echonomy JAM
-        teaser: Discuss topics about eco-socially sustainable, democratic economy.
+        teaser: Find new ways towards an eco-socially sustainable, democratic economy.
         description: |
-          echonomy JAM is ...
+          <p>
+          <strong>echonomy</strong> stands for a new form of <strong>ecologically and socially sustainable, democratic economy</strong>,
+          which defines profit also through the welfare of humans and nature.<br>
+          <strong>echonomy JAM</strong> brings together creative heads, investors, business experts and
+          decision makers from politics and economy, and enables them to jointly develop,
+          finance and realize concrete projects - all this in the spirit of echonomic sustainability.
+          </p><p>
+          The discussions on the most important topics and ideas brought up by the ca. <strong>150 participants</strong> of the
+          <strong>kick-off event in the Bavarian Parliament</strong> are now continued online here at echologic.
+          (More infos under <a href='http://www.echonomyJAM.org' target='_blank'>www.echonomyJAM.org</a>).
+          </p>
       echocracy:
         name: echocracy
-        teaser: Discuss topics about the participatory democracy of echo.
+        teaser: Discuss your vision of a global democracy of echo.
         description: |
-          echocracy is...
+          <p>
+          echo aims to serve as the global agora of a <strong>new form of participatory democracy</strong>, which we call echocracy.<br>
+          <strong>echocracy</strong> is constructive, equitable and self organizing - worldwide!
+          </p><p>
+          Contribute your ideas! Let's <strong>turn this vision of global democracy into reality</strong>!
+          </p>
       echo:
         name: echo
-        teaser: Participate in the further development of echo.
+        teaser: Contribute your ideas to the further development of echo.
         description: |
-          Here you can contribute your ideas to the further development of echo...
+          <p>
+          As a mover at echologic you are kindly invited to actively <strong>engage into the evolution of echo</strong>!
+          Which functions are the most important for you and which of them should be implemented next?
+          Discuss your idees with other movers and contribute to <strong>make more (out of) echo</strong> 
+          than we might have ever imagined!
+          </p>
     statements:
       create_question_link: 'Open a new debate'
       create_proposal_link: 'Enter a new position'
-      create_improvement_proposal_link: 'Add new thought for improvement'
+      create_improvement_proposal_link: 'Add new improvement proposal'
       echo_tooltip: 'echo this statement to support it.'
       unecho_tooltip: 'Withdraw your vote to stop supporting this statement.'
       echo_indicator_tooltip:

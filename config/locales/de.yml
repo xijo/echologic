@@ -106,8 +106,9 @@ de:
     text: |
       <p>
       <strong>Diskutieren - Vernetzen - Handeln!</strong><br/>
-      Das sind die drei Funktionsbereiche von echo, die wir auf echologic Stück für Stück zusammen mit Ihnen ausbauen werden.<br/>
-      Im <strong>Fahrplan</strong> oben rechts können Sie für jeden Bereich den aktuellen <strong>Stand der Entwicklung</strong> sowie die geplanten nächsten Schritte verfolgen.
+      Die drei Funktionsbereiche von echo werden wir auf echologic gemeinsam mit Ihnen Stück für Stück ausbauen.<br/>
+      Im <strong>"Fahrplan"</strong> (rechts oben im Bild) können Sie für jeden Bereich den aktuellen <strong>Stand der
+      Entwicklung</strong> sowie die geplanten nächsten Schritte verfolgen.
       </p><p>
       Als BewegerIn von echologic sind Sie herzlich eingeladen, die Entwicklung von <strong>echo mit zu gestalten</strong>!<br/>
       Bisher sind erste einfache Funktionen in folgenden Bereichen veröffentlicht:
@@ -115,10 +116,10 @@ de:
     function_1:
       name: 'Mein Profil'
       description: |
-        Erstellen Sie Ihr aussagekräftiges Profil, um Ihre Kompetenzen darzustellen und sich gezielt findbar zu machen.
+        Erstellen Sie Ihr aussagekräftiges Profil, um von Anderen gefunden zu werden, wenn Ihre Kompetenzen gebraucht werden.
     function_2:
       name: 'Vernetzen'
-      description: 'Entdecken Sie andere interessante Menschen der Bewegung.'
+      description: 'Entdecken Sie die Community und vernetzen Sie sich mit anderen interessanten Menschen der Bewegung.'
     function_3:
       name: 'Diskutieren'
       description: |
@@ -282,15 +283,13 @@ de:
       title: Überblick
       text: |
         <p>
-        <strong>Willkommen im Diskussionsbereich von echologic!</strong>
+        Wie Sie dem Fahrplan (oben rechts im Bild) entnehmen können, befindet sich der Diskussionsbereich echos
+        noch in einer <strong>frühen Entwicklungsphase</strong>.
         </p><p>
-        Wie Sie vom Fahrplan rechts oben entnehmen können, befindet sich der Diskussionsbereich echos noch in der
-        <strong>frühen Entwicklungsphase</strong>.
-        </p><p>
-        Sie können sich aber jetzt schon im Rahmen verschiedener <strong>Pilotprojekte</strong> über
-        interessante Themen mit anderen NeudenkerInnen austauschen und <strong>gemeinsam neue Ideen
-        entwickeln</strong>. Außerdem haben Sie hier die Möglichkeit, sich in die weitere Entwicklung echos einzubringen.<br/>
-        Aktuell sind folgende Diskussionsthemen verfügbar:
+        Derzeit können Sie hier im Rahmen verschiedener <strong>Pilotprojekte</strong>
+        gemeinsam mit anderen NeudenkerInnen <strong>neue Ideen entwickeln</strong>.
+        Außerdem haben Sie die Möglichkeit, sich in die weitere Entwicklung echos einzubringen.<br/>
+        Die aktuelle Diskussionsthemen sind:
         </p>
     topics:
       echonomy_jam:
@@ -298,44 +297,45 @@ de:
         teaser: Entwicklen Sie neue Wege zu einer ökosozial nachhaltigen Wirtschaft.
         description: |
           <p>
-          <strong>echonomy</strong> steht für eine neue Form <strong>ökologisch und sozial nachhaltiges, demokratisches Wirtschaften</strong>,
+          <strong>echonomy</strong> steht für eine <strong>ökologisch und sozial nachhaltige, demokratische Wirtschaftsform</strong>,
           die unter Profit auch das Wohl von Mensch und Natur versteht.<br/>
-          <strong>echonomy JAM</strong> bringt kreative Ideenträger, Kapitalgeber, erfahreren Experten sowie Entscheidungsträger
-          aus Politik und Wirtschaft zusammen und ermöglicht Ihnen die <strong>gemeinsame Entwicklung, Finanzierung und
-          Realisierung von Ideen</strong> und konkreten Projekten - alles in Sinne der echonomischen Nachhaltigkeit.
-          (Mehr Infos unter <a href='http://www.echonomyJAM.org' target='_blank'>www.echonomyJAM.org</a>)
+          <strong>echonomy JAM</strong> bringt kreative IdeenträgerInnen, KapitalgeberInnen, erfahreren ExpertenInnen
+          sowie EntscheidungsträgerInnen aus Politik und Wirtschaft zusammen und ermöglicht Ihnen die
+          <strong>gemeinsame Entwicklung, Finanzierung und Realisierung von konkreten Projekten</strong> -
+          im Sinne der echonomischen Nachhaltigkeit.
           </p><p>
-          Am 27.11.2009 startete echonomy JAM mit einer Auftaktveranstaltung im <strong>Bayerischen Landtag</strong>.<br>
-          Ca. <strong>150 interessierte BürgerInnen und EntscheidungsträgerInnen aus Politik und Wirtschaft</strong>
-          haben gemeinsam ihre Ideen und Projekte für einen nachhaltigen Wandel diskutiert und sich für deren Umsetzung miteinander vernetzt.<br/>
-          Die Ergebnisse haben wir für Sie zusammengefasst. <strong>Die Diskussionen gehen hier online weiter</strong>!
+          Die wichtigsten Themen und Ideen der ca. <strong>150 TeilnehmerInnen</strong> an der <strong>Auftaktveranstaltung
+          im Bayerischen Landtag</strong>, werden nun hier online weiterdiskutiert.
+          (Mehr Infos unter <a href='http://www.echonomyJAM.org' target='_blank'>www.echonomyJAM.org</a>)
           </p>
       echocracy:
         name: echocracy
-        teaser: Diskutieren Sie Ihre Vision einer globalen Demokratie.
+        teaser: Diskutieren Sie über die neue Form teilnehmender Demokratie von echo.
         description: |
           <p>
-          echo soll als die globale Agora einer <strong>neuen Form teilnehmender Demokratie</strong> etabliert werden - der echocracy:
+          echo soll als die globale Agora einer <strong>neuen Form teilnehmender Demokratie</strong> etabliert werden -
+          der echocracy.<br/>
+          <strong>echocracy</strong> ist konstruktiv, gleichberechtigt und selbstorganisierend - weltweit!
           </p><p>
-          Konstruktiv, gleichberechtigt und selbstorganisierend - weltweit!<br/>
-          Bringen Sie Ihre Ideen ein und helfen Sie mit, die Vision noch visionärer zu machen - und <strong>real werden zu lassen</strong>!
+          Bringen Sie Ihre Ideen ein und helfen Sie mit, die Vision einer globalen Demokratie <strong>real werden zu lassen</strong>!
           </p>
       echo:
         name: echo
-        teaser: Helfen Sie uns echo entsprechend Ihrer Wünsche zu optimieren.
+        teaser: Beteiligen Sie sich in der weiteren Entwicklung von echo.
         description: |
           <p>
-          Als BewegerIn von echologic sind Sie eingeladen, die <strong>Entwicklung echos mit
-          zu gestalten</strong>! Welche Funktionen halten Sie für notwendig und was sollten die
+          Als BewegerIn von echologic sind Sie herzlich eingeladen, die <strong>Entwicklung echos mit
+          zu gestalten</strong>.
+          </p><p>
+          Welche Funktionen halten Sie für notwendig und was sollten die
           nächsten Schritte sein? Sagen Sie uns Ihre Meinung, diskutieren Sie diese mit
-          anderen BewegerInnen und helfen Sie uns dabei, aus unserer gemeinsamen Demokratie
-          noch mehr zu machen, als wir es uns je hätten vorstellen können!
+          anderen BewegerInnen und tragen Sie dazu bei, noch <strong>mehr (aus) echo zu machen</strong>, als wir es uns je hätten vorstellen können!
           </p>
     statements:
       create_question_link: 'Neue Debatte eröffnen'
       create_proposal_link: 'Neue Stellungnahme erstellen'
-      create_improvement_proposal_link: 'Neuen Ergänzungsvorschlag machen'
-      echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo.'
+      create_improvement_proposal_link: 'Neuen Ergänzungsvorschlag erstellen'
+      echo_tooltip: 'Unterstützen Sie diese Aussage durch Ihr Echo!'
       unecho_tooltip: 'Ziehen Sie Ihre Stimme zurück, wenn Sie die Aussage nicht mehr unterstützen möchten.'
       echo_indicator_tooltip:
         one: 'Diese Aussage hat {{supporter_count}} UnterstützerIn.'
@@ -359,9 +359,9 @@ de:
       delete_confirmation: "Bist du sicher, dass du dieses Statement l&ouml;schen willst?"
     summary: 'Zusammenfassung'
     messages:
-      created: "{{type}} wurde erfolgreich erstellt."
+      created: "{{type}} wurde erfolgreich eingestellt."
       updated: "{{type}} wurde erfolgreich bearbeitet."
-      deleted: "{{type}} wurde erfolgreich gel&ouml;scht."
+      deleted: "{{type}} wurde erfolgreich gelöscht."
 
 
   # ---------------
@@ -386,7 +386,7 @@ de:
       actions:
         report: "Melden"
     messages:
-      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit anderen Suchbegriffen.'
+      empty:           'Zu Ihrer Suchanfrage wurden keine Ergebnisse gefunden. Bitte versuchen Sie es mit einem anderen Suchbegriff.'
       no_concernments: 'Dieses Mitgleid hat noch keine Betroffenheiten und Kompetenzen eingetragen.'
       no_web_profiles: 'Dieses Mitglied hat noch keine Web Adressen eingetragen.'
 
