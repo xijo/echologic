@@ -7,18 +7,15 @@
   <% unless statement.question? %>
 
     <% unless current_user.supported?(statement) %>
-
       <% link_to(url_for(url_options.merge :action => :echo), :class => "ajax_put", :id => 'echo_button') do %>
-        <span class="not_supported"></span>
+        <span class="not_supported ttLink no_border" title="<%= I18n.t('discuss.statements.echo_tooltip') %>"></span>
       <% end %>
-
     <% else %>
-
       <% link_to(url_for(url_options.merge :action => :unecho), :class => "ajax_delete", :id => 'echo_button') do %>
-        <span class="supported"></span>
+        <span class="supported ttLink no_border" title="<%= I18n.t('discuss.statements.unecho_tooltip') %>"></span>
       <% end %>
-
     <% end %>
 
   <% end %>
 </div>
+
