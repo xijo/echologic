@@ -99,7 +99,7 @@ module StatementHelper
     link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
-            :class => "ajax text_button #{create_statement_button_class(type)}")
+            :class => "ajax header_button text_button #{create_statement_button_class(type)}")
   end
 
   # this classname is needed to display the right icon next to the link

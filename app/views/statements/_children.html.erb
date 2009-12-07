@@ -5,9 +5,9 @@
 %>
 
 <div id="children" class="<%= has_children ? 'header_block discuss_right_block' : '' %>">
+  <h2><%= children_box_title(statement) %></h2>
   <%= create_children_statement_link(@statement) %>
   <% if has_children %>
-    <h2><%= children_box_title(statement) %></h2>
     <%= render :partial => 'statements/children_list', :locals => {:statement => statement, :statements => children}%>
   <% end -%>
 </div>
