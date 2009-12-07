@@ -1,13 +1,14 @@
-<% children ||= @children %>
-<% statement ||= @statement %>
+<%
+  children ||= @children 
+  statement ||= @statement
+  has_children = statement.class.expected_children.any?
+%>
 
-<%= create_children_statement_link(@statement) %>
-<% if !statement.class.expected_children.empty? %>
-  <div id="children" class="header_block discuss_right_block">
+<div id="children" class="<%= has_children ? 'header_block discuss_right_block' : '' %>">
+  <%= create_children_statement_link(@statement) %>
+  <% if has_children %>
     <h2><%= children_box_title(statement) %></h2>
     <%= render :partial => 'statements/children_list', :locals => {:statement => statement, :statements => children}%>
-  </div>
-<% else %>
-  <div id="children"></div>
-<% end %>
+  <% end -%>
+</div>
 
