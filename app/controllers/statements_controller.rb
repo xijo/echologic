@@ -32,7 +32,7 @@ class StatementsController < ApplicationController
   
   # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
   def index
-    @statements = statement_class.all(statement_class.default_scope).published(current_user.has_role?(:editor)).by_supporters.paginate(:page => @page, :per_page => 6)
+    @statements = statement_class.published(current_user.has_role?(:editor)).by_supporters.paginate(statement_class.default_scope.merge(:page => @page, :per_page => 6))
     respond_to do |format|
       format.html { render :template => 'questions/index' }
     end
@@ -59,6 +59,11 @@ class StatementsController < ApplicationController
       child_type = ("current_" + @statement.class.expected_children.first.to_s.underscore).to_sym
       # FIXME: why is this necessary?
       session[child_type] = @statement.children.by_supporters.collect { |c| c.id }
+    end
+    if session[:last_info]
+      @info = session[:last_info]
+      flash_info
+      session[:last_info] = nil
     end
 
     @page = params[:page] || 1
@@ -117,7 +122,12 @@ class StatementsController < ApplicationController
         # render parent statement after creation, if any
         @statement = @statement.parent if @statement.parent
         format.html { flash_info and redirect_to url_for(@statement) }
-        format.js   { show }
+        format.js   {
+          session[:last_info] = @info # save @info so it doesn't get lost during redirect
+          render :update do |page|
+            page << "window.location.replace('#{url_for(@statement)}');" 
+          end
+        }
       else
         set_error(@statement.document)
         format.html { flash_error and render :template => 'statements/new' }
