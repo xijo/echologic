@@ -17,8 +17,8 @@ $('#summary').replaceWith(summary);
 if($('#children').size() == 0)
   $('<div id="children"></div>').insertAfter('#summary');
 $('#children').replaceWith(children);
-if($('#new_statement_block').size() != 0)
-  $('#new_statement_block').remove();
+if($('#new_statement').size() != 0)
+  $('#new_statement').remove();
 
 makeRatiobars();
 makeTooltips();
