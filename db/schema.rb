@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091203141234) do
+ActiveRecord::Schema.define(:version => 20091207054420) do
 
   create_table "concernments", :force => true do |t|
     t.integer  "user_id"
@@ -118,15 +118,17 @@ ActiveRecord::Schema.define(:version => 20091203141234) do
   end
 
   create_table "statements", :force => true do |t|
-    t.string  "type"
-    t.integer "parent_id"
-    t.integer "root_id"
-    t.integer "document_id"
-    t.integer "creator_id"
-    t.integer "work_package_id"
-    t.integer "echo_id"
-    t.integer "category_id"
-    t.integer "state"
+    t.string   "type"
+    t.integer  "parent_id"
+    t.integer  "root_id"
+    t.integer  "document_id"
+    t.integer  "creator_id"
+    t.integer  "work_package_id"
+    t.integer  "echo_id"
+    t.integer  "category_id"
+    t.integer  "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tags", :force => true do |t|
