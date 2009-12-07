@@ -1,8 +1,6 @@
 <% statement ||= @statement -%>
 
-<div id="new_statement">
-  <%= render :partial => 'statements/form', :locals => {:statement => statement} %>
-</div>
+<%= render :partial => 'statements/form', :locals => {:statement => statement} %>
 
 <% unless statement.class.name == 'Question' %>
   <script type="text/javascript">

@@ -99,14 +99,7 @@ class StatementsController < ApplicationController
     respond_to do |format|
       format.html { render :template => 'statements/new' }
       format.js {
-        if @statement.kind_of?(Question)
-          replace_container('questions_container', :partial => 'statements/new')
-        else
-          render :update do |page|
-            page << "$('#new_statement').replaceWith('');"
-            page << "$('#children').replaceWith('#{escape_javascript(render(:partial => 'statements/new'))}');"
-          end
-        end
+        replace_container(@statement.kind_of?(Question) ? 'questions_container' : 'children', :partial => 'statements/new')
       }
     end
   end

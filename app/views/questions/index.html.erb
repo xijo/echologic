@@ -2,8 +2,8 @@
 
 <h1><%= I18n.t("discuss.topics.#{@category.value.underscore}.name") %></h1>
 <%= I18n.t("discuss.topics.#{@category.value.underscore}.description") %>
+
 <%= render :partial => 'questions', :locals => {:statements => @statements} %>
 
-<div id="new_statement">
-  <%= create_question_link_for(@category)%>
-</div>
+<%= create_question_link_for(@category)%>
+
