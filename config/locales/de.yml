@@ -361,7 +361,7 @@ de:
     messages:
       created: "{{type}} wurde erfolgreich erstellt."
       updated: "{{type}} wurde erfolgreich bearbeitet."
-      deleted: "Die {{type}} wurde erfolgreich gel&ouml;scht."
+      deleted: "{{type}} wurde erfolgreich gel&ouml;scht."
 
 
   # ---------------
