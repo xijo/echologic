@@ -4,9 +4,11 @@
 <div id="children_list">
   <% unless children.empty? %>
     <ul>
+      <% last_child = children.pop -%>
       <% children.each do |statement| %>
-        <%= render :partial => 'statements/child', :locals => {:statement => statement } %>
+        <%= render :partial => 'statements/child', :locals => { :statement => statement } %>
       <% end %>
+      <%= render :partial => 'statements/child', :locals => { :statement => last_child, :extra_classes => "active" } %>
     </ul>
     <%= will_paginate children, :previous_label => '', :next_label => '' if defined? children.total_pages %>
   <% end %>
