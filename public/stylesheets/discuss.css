@@ -78,7 +78,8 @@
 
 .context_line {
   clear: both;
-  height: 30px;
+  min-height: 30px;
+  display: inline-block;
 }
 
 .context_buttons {
@@ -111,7 +112,6 @@
   font-size:      18px;
   font-weight:    bold;
   text-decoration:none;
-  overflow: hidden;
 }
 
 #context .context_link a:hover {
@@ -237,9 +237,11 @@ a.statement_link {
   font-size: 14px;
   font-weight: bold;
   display:inline-block;
-  height: 20px;
+  min-height: 20px;
   padding-left: 21px !important;
   width: 600px;
+  vertical-align: top;
+  margin-bottom: 5px;
 }
 
 a.statement_link:hover {
@@ -281,6 +283,10 @@ a.statement_link:hover {
 
 #children_list ul {
   min-height: 100px;
+}
+
+#children_list li {
+  margin: 4px 0;
 }
 
 #children .pagination {
