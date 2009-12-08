@@ -197,6 +197,15 @@
   margin-right: -5px;
 }
 
+#newsContainer img {
+  border: none;
+}
+
+#newsContainer p {
+  margin: 0;
+}
+
+
 #newsContainer #twitterBird {
   border:      none;
   cursor:      pointer;
@@ -231,6 +240,20 @@
 
 #newsHolder .newsText {
   font-size:   14px;
+}
+
+#newsHolder .continues, #newsHolder .register_here {
+  position: relative;
+  top: -10px;
+  color: #21587f;
+}
+
+#newsHolder .register_here {
+  font-weight: bold;
+}
+
+#newsHolder a:hover .register_here {
+  color: #7bb031;
 }
 
 #mainBoxContent {

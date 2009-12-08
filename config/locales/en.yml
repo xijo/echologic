@@ -287,6 +287,8 @@ en:
         </p>
     topics:
       echonomy_jam:
+        continues: 'continues online!'
+        register_here: 'Click here to register!'
         name: echonomy JAM
         teaser: Find new ways towards an eco-socially sustainable, democratic economy.
         description: |

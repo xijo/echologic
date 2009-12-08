@@ -293,6 +293,8 @@ de:
         </p>
     topics:
       echonomy_jam:
+        continues: 'geht online weiter!'
+        register_here: 'Hier lang zur Erstanmeldung!'
         name: echonomy JAM
         teaser: Entwicklen Sie neue Wege zu einer ökosozial nachhaltigen Wirtschaft.
         description: |

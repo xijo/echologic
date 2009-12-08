@@ -4,6 +4,16 @@
   </div>
   <div id="newsHolder">
     <div class="newsTitle"><%= I18n.t('static.echologic.show.news_title') %></div>
-    <%= get_twitter_content %>
+    <%# get_twitter_content %>
+
+    <span class='newsDate'>08.12.2009</span><br/>
+    <% link_to({:url => join_path}, :href => join_path, :class => 'ajax') do %>
+      <p>
+        <%= image_tag("page/discuss/topics/echonomyJAM_Logo.png") %>
+        <span class="continues"><%= I18n.t('discuss.topics.echonomy_jam.continues') %></span><br/>
+        <span class="register_here"><%= I18n.t('discuss.topics.echonomy_jam.register_here') %></span>
+      </p>
+    <% end %>
+    
   </div>
 </div>
