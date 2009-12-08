@@ -391,15 +391,6 @@
   background: url(../images/page/icons/report.png) no-repeat scroll 0 0;
 }
 
-#actions .admin_action {
-  background-color: #db4c3d;
-  color: #fff;
-  margin: 0 3px;
-  padding: 3px 9px;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-}
-
 /* Report */
 
 #new_report_form .hidden, #new_report_form .buttons {

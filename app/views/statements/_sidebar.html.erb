@@ -18,7 +18,9 @@
 
   <% end %>
   <% if current_user.may_delete?(statement) -%>
-    <%= link_to I18n.t('discuss.statements.delete_link'), url_for(statement), :method => :delete, :confirm => I18n.t('discuss.statements.delete_confirmation') %>
+    <br/><br/>
+    <%= link_to I18n.t('discuss.statements.delete_link'), url_for(statement), :class => 'admin_action', 
+                :method => :delete, :confirm => I18n.t('discuss.statements.delete_confirmation') %>
   <% end -%>
 </div>
 

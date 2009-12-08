@@ -74,6 +74,19 @@
   display: inline-block;
 }
 
+.admin_action {
+  background-color: #db4c3d;
+  color: #fff !important;
+  margin: 0 3px;
+  padding: 3px 9px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+.admin_action:hover {
+  text-decoration: underline;
+}
+
 /* PAGINATION */
 
 .pagination {
