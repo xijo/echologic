@@ -162,7 +162,7 @@ class StatementsController < ApplicationController
   def destroy
     @statement.destroy
     set_info("discuss.messages.deleted", :type => @statement.class.human_name)
-    flash_info and redirect_to :action => :category, :id => @category.value
+    flash_info and redirect_to :controller => 'questions', :action => :category, :id => @category.value
   end
 
   #
