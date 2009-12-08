@@ -35,10 +35,18 @@ form.formtastic fieldset ol li.text textarea, form.formtastic fieldset ol li.str
   color: #21587f;
 }
 
+form.formtastic.wide_from fieldset ol li.text textarea, form.formtastic.wide_form fieldset ol li.string input {
+  width: 600px;
+}
+
 form.formtastic fieldset ol li.text textarea {
   min-height: 68px !important;
   max-height: 200px;
   height:     68px;
+}
+
+form.formtastic.wide_form fieldset ol li.text textarea {
+  width: 600px;
 }
 
 form.formtastic fieldset ol li fieldset legend span {
