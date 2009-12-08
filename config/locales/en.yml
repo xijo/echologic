@@ -325,7 +325,7 @@ en:
       create_question_link: 'Open a new debate'
       create_proposal_link: 'Enter a new position'
       create_improvement_proposal_link: 'Add new improvement proposal'
-      echo_tooltip: 'echo this statement to support it.'
+      echo_tooltip: 'echo this statement to support it!'
       unecho_tooltip: 'Withdraw your vote to stop supporting this statement.'
       echo_indicator_tooltip:
         one: 'This statement has {{supporter_count}} supporter.'
