@@ -1,6 +1,9 @@
 <% statement ||= @statement -%>
 
-<%= render :partial => 'statements/form', :locals => {:statement => statement} %>
+<div id="new_statement" class="header_block discuss_right_block">
+  <h2><%= children_new_box_title(statement) %></h2>
+  <%= render :partial => 'statements/form', :locals => {:statement => statement} %>
+</div>
 
 <% unless statement.class.name == 'Question' %>
   <script type="text/javascript">

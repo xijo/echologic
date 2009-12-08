@@ -1,8 +1,6 @@
-<div id="new_statement" class="header_block discuss_right_block">
-<h2><%= children_new_box_title(statement) %></h2>
 
 <% statement ||= @statement %>
-<% semantic_form_for statement.self_with_parents do |form| -%>
+<% semantic_form_for statement.self_with_parents, :html => {:class => 'wide_form'} do |form| -%>
   <%= form.error_messages %>
   <%= render :partial => "statements/document_form", :locals => { :form => form, :statement => statement } %>
   <% #FIXME: i don't know how to do this manually with formtastics. enums are not really supported by rails, and everywhere else where we use enum like statefulness in models, views do it like this %>
@@ -26,5 +24,3 @@
     <%= link_to I18n.t('application.general.cancel'), (statement.parent or discuss_url), :class => 'text_button cancel_button' %>
   <% end %>
 <% end -%>
-
-</div>
