@@ -68,7 +68,7 @@ class StatementsController < ApplicationController
 
     @page = params[:page] || 1
     # find alle child statements, which are published (except user is an editor) sorted by supporters count, and paginate them
-    @children = @statement.children.published(current_user.has_role?(:editor)).by_supporters.paginate(Statement.default_scope.merge(:page => @page, :per_page => 3))
+    @children = @statement.children.published(current_user.has_role?(:editor)).by_supporters.paginate(Statement.default_scope.merge(:page => @page, :per_page => 5))
     respond_to do |format|
       format.html { render :template => 'statements/show' } # show.html.erb
       format.js   { render :template => 'statements/show' } # show.js.erb
