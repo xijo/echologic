@@ -29,7 +29,8 @@ module Echoable
     def supporters_supporters_ratio
       # if we have a parent we go the easy way
       if parent && parent.most_supported_child.try(:supporter_count).to_i > 0
-        ((supporter_count.to_f / parent.most_supported_child.supporter_count.to_f) * 100).to_i
+        max_support_count = parent.most_supported_child.supporter_count;
+        ((supporter_count.to_f / max_support_count.to_f) * [10*max_support_count, 100].min).to_i
       else
         0
       end
