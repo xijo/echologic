@@ -15,8 +15,9 @@ $('#dialogContent').dialog({
   buttons:  { <%= I18n.t('application.general.close') %>: function() { $(this).dialog('destroy'); }},
   close:    function(event, ui) { $(this).dialog('destroy'); },
   width:    650,
-  resizable: false
+  resizable: false,
+  dialogClass: "dialog_popup"
 });
 
-
+makeTooltips();
 

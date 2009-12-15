@@ -267,6 +267,45 @@
   padding:     2px 5px;
 }
 
+/* Sponsors */
+.sponsors_container {
+  padding-left: 210px;
+  width: 510px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: auto;
+}
+
+.dialog_popup .sponsors_container {
+  padding-left: 0 !important;
+}
+
+.sponsors_container ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sponsors_container li {
+  display: inline-block;
+}
+
+.sponsor_text {
+  color: #7691A2;
+  font-size: 11px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.sponsor_logo img {
+  float: left;
+  display: inline-block;
+  height: 30px;
+  vertical-align: top;
+  margin: 0 15px;
+  border: none;
+}
+
 /* Boxes */
 
 .mainBox {

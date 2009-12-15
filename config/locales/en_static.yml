@@ -87,6 +87,16 @@ en:
         echonomy, eco-social democractic economy, your-profit, glocal, glocality
 
 
+  # Supporters & Sponsors
+  sponsors:
+    text: 'From 01.02.2010 echo is supported by' 
+    exist: EXIST
+    eu: European Union
+    esf: European Social Fund for Germany
+    bmwi: Federal Ministry of Economics and Technolgy
+    grm: GründerRegio M
+
+
   # Static content
   static:
 

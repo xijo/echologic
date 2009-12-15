@@ -88,6 +88,16 @@ de:
         Wirtschaftsdemokratie, Your-Profit, Echokratie, Echonomie, partizipative Demokratie, glokal, Glokalität
 
 
+  # Supporters & Sponsors
+  sponsors:
+    text: 'Ab 01.02.2010 wird echo unterstützt durch'
+    exist: EXIST
+    eu: Europäische Union
+    esf: Europäische Sozialfonds für Deutschland
+    bmwi: Bundesministerium für Wirtschaft und Technologie
+    grm: GründerRegio M
+    
+
   # Static content
   static:
 
