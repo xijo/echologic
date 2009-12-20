@@ -269,15 +269,14 @@
 
 /* Sponsors */
 .sponsors_container {
-  padding-left: 210px;
-  width: 510px;
+  width: 640px;
   margin: 0 auto;
   text-align: center;
   overflow: auto;
 }
 
-.dialog_popup .sponsors_container {
-  padding-left: 0 !important;
+#staticContent .sponsors_container {
+  padding-left: 145px;
 }
 
 .sponsors_container ul {
