@@ -14,7 +14,8 @@
   <div id="language_selector" class="rounded-box rounded-box-green-iwot" style="display:none;">
     <ul>
       <li><%= link_to("English", url_for(:controller => request[:controller], :action => request[:action], :locale => :en)) %></li>
-      <li><%= link_to("Deutsch", url_for(:controller => request[:controller], :action => request[:action], :locale => :de)) %></li>
+      <li><%= link_to("Deutsch für Sie", url_for(:controller => request[:controller], :action => request[:action], :locale => :de)) %></li>
+      <li><%= link_to("Deutsch für Dich", url_for(:controller => request[:controller], :action => request[:action], :locale => :de2)) %></li>
       <%=  %>
     </ul>
   </div> 
