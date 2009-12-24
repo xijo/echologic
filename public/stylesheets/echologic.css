@@ -199,6 +199,7 @@
 
 #newsContainer img {
   border: none;
+  margin-top: 3px;
 }
 
 #newsContainer p {
@@ -217,7 +218,7 @@
   height:      90px;
   display:     block;
   position:    relative;
-  right:       -222px;
+  right:       -224px;
   top:         -14px;
   cursor:      pointer;
   z-index:     10;
@@ -248,7 +249,7 @@
 
 #newsHolder .continues, #newsHolder .register_here {
   position: relative;
-  top: -10px;
+  top: -7px;
   color: #21587f;
 }
 
