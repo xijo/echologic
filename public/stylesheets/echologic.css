@@ -211,7 +211,11 @@
   cursor:      pointer;
 }
 
-#twitterBird img {
+#twitterBird a {
+  background:  url(../images/page/echologic_twitter_xmas.png) no-repeat scroll;
+  width:       75px;
+  height:      90px;
+  display:     block;
   position:    relative;
   right:       -222px;
   top:         -14px;
