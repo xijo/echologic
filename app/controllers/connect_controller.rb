@@ -11,16 +11,22 @@ class ConnectController < ApplicationController
     @profiles = search(@sort, @value.split(' ').first)
 
     if @value.split(' ').size > 1
-      for value in @value.split(' ')[1..-1] do
+       for value in @value.split(' ')[1..-1] do
         @profiles &= search(@sort, value)
       end
     end
 
     @profiles = @profiles.paginate(:page => @page, :per_page => 6)
-
+    
+    # decide which rjs template to render, based on if a search query was entered
+    # atm we don't want to toggle profile details when we paginate, but when we search
+    # TODO: if search and paginate logic drift more apart, consider seperate controller actions
+    
+    js_template = @value.size >= 1 ? 'search' : 'paginate' 
+    
     respond_to do |format|
       format.html { render :template => 'connect/search' }
-      format.js   { render :template => 'connect/search' }
+      format.js   { render :template => 'connect/'+js_template }
     end
   end
 

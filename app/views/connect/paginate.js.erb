@@ -2,6 +2,4 @@ var content = "<%= escape_javascript(render(:partial => 'connect/profiles/result
 
 $("#results_container").replaceWith(content);
 
-$.scrollTo('top', 400, function() {$('#profile_details_container:visible').animate(toggleParams, 500)});
-
 roundCorners();
