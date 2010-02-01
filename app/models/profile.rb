@@ -9,7 +9,8 @@ class Profile < ActiveRecord::Base
   validates_presence_of :user_id
   validates_length_of :about_me, :maximum => 1024, :allow_nil => true
   validates_length_of :motivation, :maximum => 1024, :allow_nil => true
-
+  
+  include ProfileExtension::Completeness
 
   # There are two kind of people in the world..
   @@gender = {

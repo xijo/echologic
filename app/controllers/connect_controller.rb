@@ -1,6 +1,9 @@
 class ConnectController < ApplicationController
 
   before_filter :require_user
+  
+  # if the users profile is not fullfilled, we display a message and won't let him into the other users profiles
+  before_filter :check_completeness, :except => 'fill_out_profile'
 
   # Show the connect page
   # method: GET
@@ -65,7 +68,19 @@ class ConnectController < ApplicationController
     END
 
     profiles = Profile.find_by_sql(query)
-
+    
+  end
+  
+  # checks wether the users profile is complete enough to view other users profiles
+  def check_completeness
+    # something like...
+    # maybe trigger ajax, but i think redirecting is better
+    redirect_to :action => :fill_out_profile if current_user.profile.completeness.nil? || current_user.profile.completeness < 0.5
   end
 
+  # displays a message to the user, explaining that he needs to add more information to his profile in order to take part in connect
+  def fill_out_profile
+    # render :template => 'fill_out_profile'
+  end
+  
 end

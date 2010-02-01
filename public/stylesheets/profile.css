@@ -164,3 +164,10 @@
   padding: 2px;
   width: 195px;
 }
+
+#profile_completeness_bar {
+  width: 130px;
+  height: 9px;
+  display: inline-block;
+  margin-left: 10px;
+}
