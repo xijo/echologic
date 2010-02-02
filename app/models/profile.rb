@@ -10,7 +10,12 @@ class Profile < ActiveRecord::Base
   validates_length_of :about_me, :maximum => 1024, :allow_nil => true
   validates_length_of :motivation, :maximum => 1024, :allow_nil => true
   
+ 
   include ProfileExtension::Completeness
+
+    
+  # callback for paperclip
+ 
 
   # There are two kind of people in the world..
   @@gender = {
@@ -33,7 +38,8 @@ class Profile < ActiveRecord::Base
                     :default_url => "/images/default_:style_avatar.png"
   validates_attachment_size :avatar, :less_than => 5.megabytes
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png']
-
+  # paperclip callback, used to recalculate completeness when uploading an avatar
+  after_avatar_post_process :calculate_completeness
 
   # Return the full name of the user composed of first- and lastname
   def full_name

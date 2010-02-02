@@ -6,13 +6,12 @@ module ProfileExtension::Completeness
       # we use it when calculating the profiles completeness (after_save :calculate_completeness)
       # key => the columns name to check if it is filled
       # value => the minimum count of chars (size) to accept it as beeing filled
-      @@fillable_fields = [:about_me, :city, :country, :first_name, :last_name, :motivation, [:concernments,:affected], [:concernments, :engaged], [:concernments, :scientist], [:concernments, :representative], :memberships, :web_profiles]
+      @@fillable_fields = [:about_me, :city, :country, :first_name, :last_name, :motivation, [:concernments,:affected], [:concernments, :engaged], [:concernments, :scientist], [:concernments, :representative], :memberships, :web_profiles, :avatar]
       cattr_reader :fillable_fields
     end
     
     base.instance_eval do
       before_save :calculate_completeness
-      
       include InstanceMethods
     end
   end
@@ -24,20 +23,20 @@ module ProfileExtension::Completeness
       # we use floats, so we can add fields which seem uncomplete with a lower value
       fields_filled = 0.0 
        self.class.fillable_fields.each do |f| 
-        # evalute the field, and rescue if an error occurs (e.g. it doesn't exist)
-        begin         
-          if f.kind_of?(Array)
-            field = self.send(f[0]).send(f[1])
-          else
-            field = self.send(f)
-          end
-        #rescue
-          #TODO: Log!
-        #  next
-        end
+        # evalute the field, and rescue if an error occurs (e.g. it doesn't exist)   
+         if f.kind_of?(Array)
+           field = self.send(f[0]).send(f[1])
+         else
+          field = self.send(f)
+         end
         # if the field is not empty we count it
         # TODO: consider verifying that it's not only one letter
-        fields_filled += 1.0 unless field.empty?
+        if f == :avatar
+          # TODO: this will break, once the default_*_avatar url changes
+          fields_filled += 1.0 unless field.url.match(/images\/default_.+_avatar\.png/)
+        else
+          fields_filled += 1.0 unless field.empty?
+        end
       end
       # save completeness into the database
       self.completeness = (fields_filled/self.class.fillable_fields.size.to_f)
