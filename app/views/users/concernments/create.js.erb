@@ -13,3 +13,5 @@ $('#concernments_<%= params[:sort] %>').append(tag).fadeIn();
 
 /* Reset the form. */
 $('#new_concernment_<%= params[:sort] %>').reset();
+
+<%= render :partial => 'users/profile/update_completeness' %>

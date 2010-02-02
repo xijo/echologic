@@ -17,3 +17,5 @@ $('#<%= dom_class(object, :new) %>').reset();
 <% if object.instance_of?(Membership) %>
   $('input[id=membership_organisation]').select();
 <% end %>
+
+<%= render :partial => 'users/profile/update_completeness' %>

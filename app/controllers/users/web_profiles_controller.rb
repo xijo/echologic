@@ -84,7 +84,10 @@ class Users::WebProfilesController < ApplicationController
 
     respond_to do |format|
       format.js do
-        remove_container "web_profile_#{id}"
+        # sorry, but this was crap. you can't add additional js actions like this...
+        # either use a rjs, a js, or a render :update block
+        #remove_container "web_profile_#{id}"
+        render :template => 'users/profile/remove_object', :locals => { :object => @web_profile }
       end
     end
   end

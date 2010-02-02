@@ -2,6 +2,8 @@ class WebProfile < ActiveRecord::Base
 
   belongs_to :user
 
+  include ProfileUpdater
+  
   validates_presence_of :sort, :location, :user_id
 
   # Map the different sorts of web profiles to their database representation

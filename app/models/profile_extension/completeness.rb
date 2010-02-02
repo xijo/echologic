@@ -1,3 +1,4 @@
+# this module is meant to be included in models/profile.rb
 module ProfileExtension::Completeness
   def self.included(base)
     base.class_eval do 
@@ -5,7 +6,7 @@ module ProfileExtension::Completeness
       # we use it when calculating the profiles completeness (after_save :calculate_completeness)
       # key => the columns name to check if it is filled
       # value => the minimum count of chars (size) to accept it as beeing filled
-      @@fillable_fields = {:about_me => 20, :city => 2, :country => 2 , :first_name => 2 , :last_name => 2, :motivation => 20, :gender => 1}
+      @@fillable_fields = [:about_me, :city, :country, :first_name, :last_name, :motivation, [:concernments,:affected], [:concernments, :engaged], [:concernments, :scientist], [:concernments, :representative], :memberships, :web_profiles]
       cattr_reader :fillable_fields
     end
     
@@ -17,26 +18,34 @@ module ProfileExtension::Completeness
   end
   
   module InstanceMethods
+    
     # we want to store a percent value of the profiles completenetss. therefore we run a method calculating it each time the profile is modified
     def calculate_completeness
       # we use floats, so we can add fields which seem uncomplete with a lower value
       fields_filled = 0.0 
-       self.class.fillable_fields.each do |k,v| 
+       self.class.fillable_fields.each do |f| 
         # evalute the field, and rescue if an error occurs (e.g. it doesn't exist)
         begin         
-          field = self.send(k)
-        rescue
+          if f.kind_of?(Array)
+            field = self.send(f[0]).send(f[1])
+          else
+            field = self.send(f)
+          end
+        #rescue
           #TODO: Log!
-          next
+        #  next
         end
-        # if the field is empty, we don't count it at all. if it is at least as full as expected we count it as filled, if it is less filled we count it accordingly less
-        unless field.empty?
-          field.size >= v ? fields_filled += 1.0 : fields_filled += field.size.to_f / v.to_f
-        end
+        # if the field is not empty we count it
+        # TODO: consider verifying that it's not only one letter
+        fields_filled += 1.0 unless field.empty?
       end
       # save completeness into the database
-      self.completeness = (fields_filled/self.class.fillable_fields.size.to_f).inspect
+      self.completeness = (fields_filled/self.class.fillable_fields.size.to_f)
     end
     
+    # lets make the float a proper percent value
+    def percent_completed
+      (self.completeness*100).round
+    end
   end
 end

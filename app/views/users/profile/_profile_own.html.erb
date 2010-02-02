@@ -1,7 +1,7 @@
 <% # Show profile details at the my_profile area in my_echo.
 %>
 <div id="personal_container" class="header_block two_columns_block">
-  <h2><%= I18n.t('users.profile.title') %></h2>
+  <h2><%= I18n.t('users.profile.title') %><span class="completeness"></span></h2>
   
   <%= link_to I18n.t('application.general.edit'), edit_profile_path(@profile), :class => 'ajax header_button text_button edit_button' %>
 
@@ -35,5 +35,4 @@
       <span class="value"><%=h @profile.motivation %></span>
     </li>
   </ul>
-  <%= profile_completeness_bar(@profile.completeness || 0)%>
 </div>

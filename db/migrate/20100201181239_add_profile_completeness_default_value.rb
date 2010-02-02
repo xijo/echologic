@@ -1,6 +1,6 @@
 class AddProfileCompletenessDefaultValue < ActiveRecord::Migration
   def self.up
-    change_column :profiles, :completeness, :float, :defaul => 0.1
+    change_column :profiles, :completeness, :float, :default => 0.01
   end
 
   def self.down

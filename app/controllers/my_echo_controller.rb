@@ -23,5 +23,5 @@ class MyEchoController < ApplicationController
   def welcome
     render
   end
-
+  
 end

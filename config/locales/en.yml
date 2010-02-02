@@ -97,7 +97,8 @@ en:
       tabs:
         welcome: Welcome
         profile: My Profile
-
+      profile_complete: '{{complete}}% complete'
+ 
   # ----------------
   # Welcome function
   # ----------------

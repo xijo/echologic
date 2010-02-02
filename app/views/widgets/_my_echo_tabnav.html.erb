@@ -10,7 +10,7 @@ render_tabnav :my_echo,
   end
 
   add_tab do |t|
-    t.named I18n.t('layouts.my_echo.tabs.profile')
+    t.named I18n.t('layouts.my_echo.tabs.profile')+' <span id="my_profile_completeness">('+I18n.t('layouts.my_echo.profile_complete', :complete => current_user.profile.percent_completed || 0)+')</span>'
     t.links_to hash_for_my_profile_path
   end
 

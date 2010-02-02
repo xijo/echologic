@@ -1,5 +1,8 @@
 class Concernment < ActiveRecord::Base
 
+  # module to update the profile (e.g. completeness) after_save, after_destroy
+  include ProfileUpdater
+  
   # Join table implementation, connect users and tags
   belongs_to :user
   belongs_to :tag

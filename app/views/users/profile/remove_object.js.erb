@@ -1,0 +1,10 @@
+/**
+ * @author jrw
+ *
+ * Template for removing am object from the dom, and updating profiles completeness
+ */
+
+
+$('#<%=dom_class(object)%>_<%=object.id%>').remove();
+
+<%= render :partial => 'users/profile/update_completeness' %>
