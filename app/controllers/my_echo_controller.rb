@@ -24,4 +24,8 @@ class MyEchoController < ApplicationController
     render
   end
   
+  # called from connect, when the profile is not complete enough to see other peoples profile
+  def fill_out_profile
+  end
+  
 end
