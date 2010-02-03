@@ -129,6 +129,15 @@ en:
         Exchange your ideas with other newthinkers on topics about sustainablity and democracy.<br/>
         Engage into the evolution of echo.
 
+  #------------
+  # MY ECHO
+  #------------
+  
+  my_echo:
+    fill_out_profile:
+      title: Please complete your profile at least 50%
+      text: To make sure that...
+
   # ------------
   # USERS MODULE
   # ------------
