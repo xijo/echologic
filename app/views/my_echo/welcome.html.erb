@@ -4,11 +4,7 @@
 
 <%= I18n.t('welcome.text') %><br/>
 
-<div class="function_button_holder">
-  <%= link_to('<span class="function_button function_button_my_profile"></span>', {:url => my_profile_path}, :href => my_profile_path) %>
-  <span class="function_name"><%= I18n.t('welcome.function_1.name') %></span><br/>
-  <span class="function_description"><%= I18n.t('welcome.function_1.description') %></span>
-</div>
+<%= render :partial => 'my_profile' %>
 
 <div class="function_button_holder">
   <%= link_to('<span class="function_button function_button_connect"></span>', {:url => connect_path}, :href => connect_path) %>

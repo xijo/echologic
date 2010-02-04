@@ -8,6 +8,7 @@ render_tabnav :connect,
     t.named I18n.t('layouts.connect.tabs.search')
     t.links_to hash_for_connect_path
     t.highlights_on :action => 'search'
+    t.highlights_on :action => 'fill_out_profile'
   end
 
   add_tab :html => {:id => 'roadmap_tab'} do |t|

@@ -50,7 +50,6 @@ class Users::ProfileController < ApplicationController
           ##replace_container('personal_container', :partial => 'users/profile/profile_own') 
           render :update do |page|
             page.replace('personal_container', :partial => 'users/profile/profile_own')
-            page.replace_html('my_profile_completeness', profile_complete)
           end
         }
       else
@@ -82,7 +81,6 @@ class Users::ProfileController < ApplicationController
         render :update do |page|
           page.replace 'loginContainer',    :partial => 'users/user_sessions/login'
           page.replace 'profile_avatar_container', :partial => 'users/avatar/picture'
-          page.replace_html 'my_profile_completeness', profile_complete
         end
       end
     end
