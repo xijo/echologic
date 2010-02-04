@@ -30,16 +30,8 @@ class StatementsController < ApplicationController
     allow logged_in, :only => [:destroy], :if => :may_delete?
   end
   
-  # FIXME: I tink this method is never used - it should possibly do nothing, or redirect to category...
-  def index
-    @statements = statement_class.published(current_user.has_role?(:editor)).by_supporters.paginate(statement_class.default_scope.merge(:page => @page, :per_page => 6))
-    respond_to do |format|
-      format.html { render :template => 'questions/index' }
-    end
-
-  end
-
   # TODO use find or create category tag?
+  # displays all questions in a category
   def category
     @category = Tag.find_or_create_by_value(params[:id])
     redirect_to(:controller => 'discuss', :action => 'index') and return unless @category
@@ -53,6 +45,7 @@ class StatementsController < ApplicationController
   end
 
   # TODO visited! throws error with current fixtures.
+  # displays a  specific statement
   def show
     current_user.visited!(@statement)
     unless @statement.children.empty?
@@ -97,7 +90,7 @@ class StatementsController < ApplicationController
     end  
   end
 
-  # Create a new statement
+  # renders form for creating a new statement
   def new
     @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
     @statement.create_document
@@ -109,6 +102,7 @@ class StatementsController < ApplicationController
     end
   end
 
+  # actually creates a new statement
   def create
     attrs = params[statement_class_param]
     attrs[:state] = Statement.state_lookup[:published] unless statement_class == Question
@@ -136,6 +130,7 @@ class StatementsController < ApplicationController
     end
   end
 
+  # renders a form to edit statements
   def edit
     respond_to do |format|
       format.html { render :template => 'statements/edit' }
@@ -143,6 +138,7 @@ class StatementsController < ApplicationController
     end
   end
 
+  # actually update statements
   def update
     attrs = params[statement_class_param]
     (attrs[:document] || attrs[:statement_document])[:author] = current_user
@@ -159,6 +155,7 @@ class StatementsController < ApplicationController
     end
   end
 
+  # destroys a statement
   def destroy
     @statement.destroy
     set_info("discuss.messages.deleted", :type => @statement.class.human_name)
@@ -188,6 +185,7 @@ class StatementsController < ApplicationController
                 end or redirect_to :controller => 'discuss', :action => 'index'
   end
 
+  # returns the statement class, corresponding to the controllers name
   def statement_class
     params[:controller].singularize.camelize.constantize
   end
