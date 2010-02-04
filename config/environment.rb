@@ -58,5 +58,6 @@ Rails::Initializer.run do |config|
 
   # Session Storage
   config.action_controller.session_store = :active_record_store
+  config.load_paths += Dir["#{RAILS_ROOT}/app/models/*"].find_all { |f| File.stat(f).directory?} 
 
 end

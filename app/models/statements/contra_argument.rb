@@ -1,0 +1,2 @@
+class ContraArgument < Argument
+end
