@@ -20,6 +20,14 @@ user_profile:
   user_id: <%= Fixtures.identify(:user) %>
   last_name: Test
   first_name: User
+  country: Germany
+  city: berlin
+  female: false
+  about_me: I am a test user, so what do you expect me to say here?
+  motivation: I want to get all those tests running, harhar!
+  birthday: 1986-06-17
+  completeness: 0.55
+  
 
 
 admin_profile:

@@ -9,11 +9,23 @@ Feature: Use connect functionality
 
   Scenario: View user list
     Given I am logged in as "user" with password "true"
+    And my profile is complete enough
     When I am on the connect page
     Then I should see the profile of "Joe"
       And I should see the profile of "User"
       And I should see the profile of "Ben"
       And I should see the "Search" form
+  
+  # As an logged in user, without a complete enough profile
+  # i cannot access the connect area 
+
+
+  Scenario: Try to access connect with too empty profile
+    Given I am logged in as "ben" with password "benrocks"
+    And my profile is not complete enough
+    When I go to the connect page
+    Then I should be redirected to "connect/fill_out_profile"
+
 
   # As an logged in user I am able to search for everything
   # ones profile includes:
@@ -21,6 +33,7 @@ Feature: Use connect functionality
 
   Scenario Outline: Find users by different values
     Given I am logged in as "user" with password "true"
+    And my profile is complete enough
     When I go to the connect page
       And I fill in "value" with "<value>"
       And I press the "Search" button
@@ -42,7 +55,8 @@ Feature: Use connect functionality
 
   Scenario: View user details
     Given I am logged in as "user" with password "true"
-      And I am on the connect page
+    And my profile is complete enough
+    And I am on the connect page
     When I follow the "Show" link for the profile of "Joe"
     Then I should see the profile details of "Joe"
       And I should see a "Close" link

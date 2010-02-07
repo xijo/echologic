@@ -35,7 +35,7 @@ module ProfileExtension::Completeness
           # TODO: this will break, once the default_*_avatar url changes
           fields_filled += 1.0 unless field.url.match(/images\/default_.+_avatar\.png/)
         else
-          fields_filled += 1.0 unless field.empty?
+          fields_filled += 1.0 unless field.nil? || field.empty?
         end
       end
       # save completeness into the database
