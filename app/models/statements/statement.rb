@@ -125,6 +125,7 @@ class Statement < ActiveRecord::Base
   validates_associated :document
   validates_presence_of :category
   
+  
   def validate
     # except of questions, all statements need a valid parent
     errors.add("Parent of #{self.class.name} must be of one of #{self.class.valid_parents.inspect}") unless self.class.valid_parents and self.class.valid_parents.select { |k| parent.instance_of?(k.to_s.constantize) }.any?
@@ -146,10 +147,14 @@ class Statement < ActiveRecord::Base
   end
 
   class << self
+    # returns which statement types are alowed as a parent of this one
+    # the class var is set in the specific model
     def valid_parents
       @@valid_parents[self.name]
     end
 
+    # returns which types of child statements to expect
+    # the class var is set in the specific model
     def expected_children
       @@expected_children[self.name]
     end
@@ -159,10 +164,14 @@ class Statement < ActiveRecord::Base
         :order => %Q[echos.supporter_count DESC, created_at ASC] }
     end
     
+    # returns the statement classes display name
+    # overwrite this in your specific statement-models
     def display_name
       self.name.underscore.gsub(/_/,' ').split(' ').each{|word| word.capitalize!}.join(' ')
     end
     
+    # returns an sorted Array, representing a chain of valid types for parent statements
+    # a chain means e.g. (improvementproposal)->proposal->question
     def expected_parent_chain
       chain = []
       obj_class = self.name.constantize
