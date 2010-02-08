@@ -99,7 +99,8 @@ module StatementHelper
     link_to(I18n.t("discuss.statements.create_#{type.underscore}_link"),
             new_child_statement_url(statement, type),
             :id => "create_#{type.underscore}_link",
-            :class => "ajax header_button text_button #{create_statement_button_class(type)}")
+            :class => "ajax header_button text_button #{create_statement_button_class(type)} ttLink", 
+            :title => I18n.t("discuss.statements.create_#{type.underscore}_tooltip"))
   end
 
   # this classname is needed to display the right icon next to the link
@@ -110,7 +111,7 @@ module StatementHelper
   def create_question_link_for(category)
     return unless current_user.has_role?(:editor)
     link_to(I18n.t("discuss.statements.create_question_link", :type => Question.display_name),
-            new_question_url(:category => category.value), :class=>'ajax text_button create_question_button')
+            new_question_url(:category => category.value), :class=>'ajax text_button create_question_button ttLink', :title => I18n.t("discuss.statements.create_question_tooltip"))
   end
 
   def edit_statement_link(statement)
@@ -165,7 +166,7 @@ module StatementHelper
 
   # Returns the context menu link for this statement.
   def statement_context_link(statement)
-    link = link_to(statement.title, url_for(statement), :class => "ajax statement_link #{statement.class.name.underscore}_link")
+    link = link_to(statement.title, url_for(statement), :class => "ajax no_border statement_link #{statement.class.name.underscore}_link ttLink", :title => I18n.t("discuss.statements.back_to_#{statement.class.name.underscore}_tooltip"))
     link << supporter_ratio_bar(statement,'context') unless statement.class.name == 'Question'
     return link
   end
@@ -176,20 +177,29 @@ module StatementHelper
 
   # Insert prev/next buttons for the current statement.
   def prev_next_buttons(statement)
-    key   = ("current_" + statement.class.to_s.underscore).to_sym
+    type = statement.class.to_s.underscore
+    key   = ("current_" + type).to_sym
     if session[key].present? and session[key].include?(statement.id)
       index = session[key].index(statement.id)
       buttons = if index == 0
-                  content_tag(:span, '&nbsp;', :class => 'disabled prev_stmt')
+                  prev_statement_tag(type,true)
                 else
-                  statement_button(session[key][index-1], '&nbsp;', :class => "prev_stmt", :rel => 'prev')
+                  statement_button(session[key][index-1], prev_statement_tag(type), :class => "prev_stmt", :rel => 'prev')
                 end
       buttons << if index == session[key].length-1
-                   content_tag(:span, '&nbsp;', :class => 'disabled next_stmt')
+                   next_statement_tag(true)
                  else
-                   statement_button(session[key][index+1], '&nbsp;', :class => 'next_stmt', :rel => 'next')
+                   statement_button(session[key][index+1], next_statement_tag(type), :class => 'next_stmt', :rel => 'next')
                  end
     end
+  end
+  
+  def prev_statement_tag(class_identifier, disabled=false)
+    content_tag(:span, '&nbsp;', :class => "prev_stmt no_border#{disabled ? ' disabled' : ' ttLink'}", :title => I18n.t("discuss.statements.prev_#{class_identifier}_tooltip"))  
+  end
+  
+  def next_statement_tag(class_identifier, disabled=false)
+    content_tag(:span, '&nbsp;', :class => "next_stmt no_border#{disabled ? ' disabled' : ' ttLink'}", :title => I18n.t("discuss.statements.next_#{class_identifier}_tooltip")) 
   end
 
   # Insert a button that links to the previous statement
