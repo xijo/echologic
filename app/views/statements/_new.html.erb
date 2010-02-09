@@ -7,6 +7,6 @@
 
 <% unless statement.class.name == 'Question' %>
   <script type="text/javascript">
-    $('#new_<%=statement.class.name.underscore%>').ajaxForm({ dataType : 'script' });
+    $('#new_<%=statement_class_dom_id(statement)%>').ajaxForm({ dataType : 'script' });
   </script>
 <% end %>

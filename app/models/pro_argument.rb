@@ -1,2 +1,0 @@
-class ProArgument < Argument
-end

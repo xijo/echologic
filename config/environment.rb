@@ -58,6 +58,9 @@ Rails::Initializer.run do |config|
 
   # Session Storage
   config.action_controller.session_store = :active_record_store
-  config.load_paths += Dir["#{RAILS_ROOT}/app/models/*"].find_all { |f| File.stat(f).directory?} 
-
+  
+  # add load paths for models in subfolders... this can be extended by further subfolders if neccessary
+  config.load_paths += %w(statements).collect{|dir|"#{RAILS_ROOT}/app/models/#{dir}"}
+  # the same for controllers
+  config.load_paths += %w(statements).collect{|dir|"#{RAILS_ROOT}/app/controllers/#{dir}"}
 end
