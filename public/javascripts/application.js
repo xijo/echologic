@@ -164,7 +164,8 @@ if (jQuery.support.opacity) {
  *   http://bassistance.de/jquery-plugins/jquery-plugin-tooltip */
 function makeTooltips() {
   $(".ttLink[title]").tooltip({
-    track:  true
+    track:  true,
+    showURL: false
   });
 }
 

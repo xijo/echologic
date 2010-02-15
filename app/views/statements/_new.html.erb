@@ -2,6 +2,7 @@
 
 <div id="new_statement" class="header_block discuss_right_block">
   <h2><%= children_new_box_title(statement) %></h2>
+  <p><%= I18n.t("discuss.statements.create_#{statement.class.name.underscore}_explanation")%></p>
   <%= render :partial => 'statements/form', :locals => {:statement => statement} %>
 </div>
 
