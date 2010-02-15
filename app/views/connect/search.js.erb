@@ -1,8 +1,8 @@
-
 var content = "<%= escape_javascript(render(:partial => 'connect/profiles/results')) %>";
 
 $("#results_container").replaceWith(content);
 
+<% if @value.size > 1 %>
 $.scrollTo('top', 400, function() {$('#profile_details_container:visible').animate(toggleParams, 500)});
-
+<% end %>
 roundCorners();

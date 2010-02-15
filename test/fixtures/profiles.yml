@@ -39,3 +39,11 @@ editor_profile:
   user_id: <%= Fixtures.identify(:editor) %>
   last_name: Tor
   first_name: Edi
+
+<% ["theodor","friedrich","luise","charlotte","lisa","red","blue","green","yellow","red"].each do |name| %>
+<%= name %>_profile:
+  user_id: <%= Fixtures.identify(name.to_sym) %>
+  last_name: Echmeier
+  first_name: <%= name %>
+
+<% end %>

@@ -39,3 +39,17 @@ editor:
   crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("true" + salt) %>
   persistence_token: 6cde0674657a8a313ce952df979de2830309aa4c11ca65805dd00bfdc65dbcc2f5e36718660a1d2e68c1a08c276d996763985d2f06fd3d076eb7bc4d97b1e317
   perishable_token: <%= Authlogic::Random.friendly_token %>
+
+
+# Important: If you change these names her, you also have to change in all user related fixtures (e.g. profiles)
+# Todo: Switch to Factory Girl ;) 
+<% ["theodor","friedrich","luise","charlotte","lisa","red","blue","green","yellow","red"].each do |name| %>
+<%= name %>:
+  email: <%= name %>@echologic.org
+  active: true
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt(name + salt) %>
+  persistence_token: 6cde0674657a8a313ce952df979de2830309aa4c11ca65805dd00bfdc65dbcc2f5e36718660a1d2e68c1a08c276d996763985d2f06fd3d076eb7bc4d97b1e317
+  perishable_token: <%= Authlogic::Random.friendly_token %>
+
+<% end %>
