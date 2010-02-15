@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
 
   # Initializes translate_routes
   before_filter :set_locale
+  
+  # session timeout
+  
+  before_filter :session_expiry
 
   # Set locale to the best fitting one
   def set_locale
@@ -173,4 +177,15 @@ class ApplicationController < ActionController::Base
       flash[:error] = I18n.t('activerecord.errors.messages.access_denied')
       redirect_to welcome_path
     end
+    
+    def session_expiry
+      if current_user_session and session[:expiry_time] and session[:expiry_time] < Time.now
+        current_user_session.destroy
+        flash[:notice] = I18n.t('users.user_sessions.messages.session_timeout')
+        redirect_to root_path
+      end
+      session[:expiry_time] = MAX_SESSION_PERIOD.seconds.from_now
+      return true
+    end   
+     
 end
