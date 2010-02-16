@@ -18,10 +18,9 @@ Feature: Manage web profiles
     
     Examples:
       | sort     | location                    |
-      | homepage | http://www.homepage.com     |
       | twitter  | http://www.twitter.com/user |
       | blog     | http://www.blog.com         |
-  
+      | homepage | http://www.homepage.com     |
   # When a new web profile is added it should be shown on
   # the users profile page.
   

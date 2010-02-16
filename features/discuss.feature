@@ -35,7 +35,7 @@ Feature: Take Part on a discussion
       And there is the first question
       And the question has at least on proposal
     When I go to the questions first proposal
-      And I follow "Add new thought for improvement"
+      And I follow localized "discuss.statements.create_improvement_proposal_link"
       And I fill in the following:
       | improvement_proposal_document_title | Improving the unimprovable                                           |
       | improvement_proposal_document_text  | blubb (oh, and of cause a lot of foo and a little bit of (mars-)bar) |

@@ -28,3 +28,4 @@ Feature: Authentication
       | user  | password | action                  |
       | admin | true     | see the "Admin" tab     |
       | user  | true     | not see the "Admin" tab |
+

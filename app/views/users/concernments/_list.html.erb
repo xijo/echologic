@@ -2,10 +2,10 @@
 <div class="form_container">
   <span class="label"><%= I18n.t("users.concernments.sorts.#{name}") %></span>
   <% form_tag url_for(:controller => "users/concernments", :action => "create"), :id => "new_concernment_#{sort}" do -%>
-    <%= text_field :tag, :value, :class => 'tag_value_autocomplete' %>
+    <%= text_field :tag, :value, :class => 'tag_value_autocomplete', :id => "tag_#{sort}_id" %>
     <%= hidden_field_tag :user_id, @user.id %>
     <%= hidden_field_tag :sort, sort %>
-    <%= submit_tag I18n.t('application.general.create'), :class => 'text_button add_button' %>
+    <%= submit_tag I18n.t('application.general.create'), :class => 'text_button add_button', :id => "add_tag_#{sort}" %>
   <% end %>
 </div>
 
