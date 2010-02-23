@@ -2,49 +2,59 @@ test-question-doc:
   title: 'Test Question?'
   text: 'The Question is: is this a question?'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('test-question') %>
 
 first-proposal-doc:
   title: 'A first proposal!'
   text: 'I think, a good proposal would be a first one!'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('first-proposal') %>
 
 second-proposal-doc:
   title: 'Second Proposal'
   text: 'I think we should have a second proposal as well!'
   author_id: <%= Fixtures.identify(:user) %>
+  statement_id: <%=Fixtures.identify('second-proposal') %>
 
 third-proposal-doc:
   title: 'Third Proposal'
   text: 'I think we should have a third proposal as well!'
   author_id: <%= Fixtures.identify(:user) %>
+  statement_id: <%=Fixtures.identify('third-proposal') %>
 
 inbetween-proposal-doc:
   title: 'Inbetween Proposal'
   text: 'I think we should have a proposal inbetween as well!'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('inbetween-proposal') %>
 
 fourth-proposal-doc:
   title: 'Fourth Proposal'
   text: 'I think we should have a fourth proposal as well!'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('fourth-proposal') %>
 
 fifth-proposal-doc:
   title: 'Fifth Proposal'
   text: 'I think we should have a fifth proposal as well!'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('fifth-proposal') %>
 
 sixth-proposal-doc:
   title: 'Sixth Proposal'
   text: 'I think we should have a sixth proposal as well!'
   author_id: <%= Fixtures.identify(:editor) %>
-
+  statement_id: <%=Fixtures.identify('sixth-proposal') %>
 
 first-impro-proposal-doc:
   title: 'A better first proposal'
   text: 'I think, a better first proposal would be a better one!'
   author_id: <%= Fixtures.identify(:ben) %>
+  statement_id: <%=Fixtures.identify('first-impro-proposal') %>
 
 not-published-proposal-doc:
   title: 'This proposal should not be seen...'
   text: 'unless you are an editor'
   author_id: <%= Fixtures.identify(:editor) %>
+  statement_id: <%=Fixtures.identify('not-published-proposal') %>		
+

@@ -93,7 +93,8 @@ class StatementsController < ApplicationController
   # renders form for creating a new statement
   def new
     @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
-    @statement.create_document
+    # this does not work
+    # @statement.documents.create
     respond_to do |format|
       format.html { render :template => 'statements/new' }
       format.js {
@@ -106,8 +107,11 @@ class StatementsController < ApplicationController
   def create
     attrs = params[statement_class_param]
     attrs[:state] = Statement.state_lookup[:published] unless statement_class == Question
+    attrs[:document][:author] = current_user
     @statement = statement_class.new(attrs)
-    @statement.creator = @statement.document.author = current_user
+    @statement.creator = current_user
+    @statement.save!
+    @statement.documents.create(attrs[:document])
     
     respond_to do |format|
       if @statement.save
@@ -143,7 +147,7 @@ class StatementsController < ApplicationController
     attrs = params[statement_class_param]
     (attrs[:document] || attrs[:statement_document])[:author] = current_user
     respond_to do |format|
-      if @statement.update_attributes(attrs)
+      if @statement.update_attributes(attrs) && @statement.document.update_attributes(attrs[:document])
         set_info("discuss.messages.updated", :type => @statement.class.human_name)
         format.html { flash_info and redirect_to url_for(@statement) }
         format.js   { show }

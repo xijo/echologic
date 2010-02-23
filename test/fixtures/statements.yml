@@ -1,5 +1,4 @@
 test-question:
-  document_id: <%= Fixtures.identify(:'test-question-doc') %>
   type: Question
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -8,7 +7,6 @@ test-question:
 first-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'first-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -17,7 +15,6 @@ first-proposal:
 second-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'second-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:user) %>
   state: 1
@@ -26,7 +23,6 @@ second-proposal:
 third-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'third-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:user) %>
   state: 1
@@ -35,7 +31,6 @@ third-proposal:
 inbetween-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'inbetween-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -44,7 +39,6 @@ inbetween-proposal:
 fourth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'fourth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -53,7 +47,6 @@ fourth-proposal:
 fifth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'fifth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -62,7 +55,6 @@ fifth-proposal:
 sixth-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'sixth-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 1
@@ -71,7 +63,6 @@ sixth-proposal:
 not-published-proposal:
   parent_id: <%= Fixtures.identify(:'test-question') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'not-published-proposal-doc') %>
   type: Proposal
   creator_id: <%= Fixtures.identify(:editor) %>
   state: 0
@@ -80,7 +71,6 @@ not-published-proposal:
 first-impro-proposal:
   parent_id: <%= Fixtures.identify(:'first-proposal') %>
   root_id: <%= Fixtures.identify(:'test-question') %>
-  document_id: <%= Fixtures.identify(:'first-impro-proposal-doc') %>
   type: ImprovementProposal
   creator_id: <%= Fixtures.identify(:ben) %>
   state: 1

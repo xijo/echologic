@@ -34,7 +34,7 @@ module StatementHelper
       edit_question_path(statement)
     when 'proposal'
       edit_proposal_path(statement)
-    when 'improvementProposal'
+    when 'improvement_proposal'
       edit_improvement_proposal_path(statement)
     else
       raise ArgumentError.new("Unhandled type: #{statement_dom_id(statement).downcase}")

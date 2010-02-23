@@ -27,7 +27,8 @@ class Statement < ActiveRecord::Base
   ##
 
   belongs_to :creator, :class_name => "User"
-  belongs_to :document, :class_name => "StatementDocument"
+  #belongs_to :document, :class_name => "StatementDocument"
+  has_many :documents, :class_name => "StatementDocument"
   has_one :author, :through => :document
 
   belongs_to :root_statement, :foreign_key => "root_id", :class_name => "Statement"
@@ -42,9 +43,15 @@ class Statement < ActiveRecord::Base
   # allow mass-assignment of document data.
   # FIXME: there has to be some more convenient way of doing this...
   def document=(obj)
-    obj.kind_of?(Hash) ? (document ? document.update_attributes!(obj) : create_document(obj)) : super
+    #obj.kind_of?(Hash) ? (document ? document.update_attributes!(obj) : documents.create(obj)) : super
+    #super
   end ; alias :statement_document= :document=
 
+  # returns the actual document that we will display to the user
+  def document
+    documents.first
+  end    
+  
   ##
   ## NAMED SCOPES
   ##
@@ -115,8 +122,10 @@ class Statement < ActiveRecord::Base
 
   validates_presence_of :creator
   validates_associated :creator
-  validates_presence_of :document
-  validates_associated :document
+  
+  # i had to remove validations for document, because we need to save the statement independently from its document (the document needs a statement_id)
+  # validates_presence_of :document
+  # validates_associated :document
   validates_presence_of :category
   
   def validate
@@ -157,6 +166,7 @@ class Statement < ActiveRecord::Base
         :order => %Q[echos.supporter_count DESC, created_at ASC] }
     end
     
+    # returns the display_name of the statement / can be overwritten by subclases - default is class name humanized
     def display_name
       self.name.underscore.gsub(/_/,' ').split(' ').each{|word| word.capitalize!}.join(' ')
     end
