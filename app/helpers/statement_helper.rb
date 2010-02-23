@@ -14,28 +14,30 @@ module StatementHelper
   ##
 
   def new_child_statement_url(parent, type)
-    case type.to_s
-    when 'Question'
+    case type.downcase
+    when 'question'
       new_question_url(parent)
-    when 'Proposal'
+    when 'proposal'
       new_proposal_url(parent)
-    when 'ImprovementProposal'
+    when 'improvement_proposal'
       new_improvement_proposal_url(parent)
-    when 'ProArgument'
+    when 'pro_argument'
       new_pro_argument_proposal_url(parent)
+    else
+      raise ArgumentError.new("Unhandled type: #{type.downcase}")
     end
   end
 
   def edit_statement_path(statement)
-    case statement.type.to_s
-    when 'Question'
+    case statement_class_dom_id(statement).downcase
+    when 'question'
       edit_question_path(statement)
-    when 'Proposal'
+    when 'proposal'
       edit_proposal_path(statement)
-    when 'ImprovementProposal'
+    when 'improvementProposal'
       edit_improvement_proposal_path(statement)
     else
-      raise ArgumentError.new("Unhandled type: #{statement.type}")
+      raise ArgumentError.new("Unhandled type: #{statement_dom_id(statement).downcase}")
     end
   end
 
@@ -203,7 +205,12 @@ module StatementHelper
   
   # returns the statement class dom identifier (used to identifiy dom objects, e.g. for javascript)
   def statement_class_dom_id(statement)
-    statement.class.name.downcase    
+    if statement.kind_of?(Symbol)
+      statement_class = statement.to_s.constantize
+     elsif statement.kind_of?(Statement)
+      statement_class = statement.class
+    end
+    statement_class.name.underscore.downcase
   end
   
   # returns the dom identifier for a particular statement
