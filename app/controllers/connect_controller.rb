@@ -75,7 +75,7 @@ class ConnectController < ApplicationController
   def check_completeness
     # something like...
     # maybe trigger ajax, but i think redirecting is better
-    redirect_to :controller => 'my_echo', :action => 'fill_out_profile' if current_user.profile.completeness.nil? || current_user.profile.completeness < 0.5
+    redirect_to :controller => 'my_echo', :action => 'fill_out_profile' if current_user.profile.completeness.nil? || current_user.profile.completeness < 0.1
   end
 
 end

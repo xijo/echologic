@@ -49,7 +49,7 @@ Feature: Start a discussion
       And there is the first question
       And the question has no proposals
       And I am on the Discuss Index
-    When I follow "echonomy JAM"
+    When I follow localized "discuss.topics.echonomy_jam.name"
       And I choose the first Question
       And I follow "Enter a new position"
       And I fill in the following:

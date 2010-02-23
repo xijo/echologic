@@ -70,8 +70,8 @@ Given /^a "([^\"]*)" question in "([^\"]*)"$/ do |state, category|
   end
   @category = Tag.find_by_value(category)
   @question = Question.new(:state => state, :category => @category, :creator => @user)
-  @question.create_document(:title => "Am I a new statement?", :text => "I wonder what i really am! Maybe a statement? Or even a question?", :author => @user)
   @question.save!
+  @question.documents.create(:title => "Am I a new statement?", :text => "I wonder what i really am! Maybe a statement? Or even a question?", :author => @user)
 end
 
 Then /^the question should be published$/ do
