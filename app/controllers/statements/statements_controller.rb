@@ -93,6 +93,7 @@ class StatementsController < ApplicationController
   # renders form for creating a new statement
   def new
     @statement ||= statement_class.new(:parent => parent, :category_id => @category.id)
+    @statement_document ||= StatementDocument.new
     # this does not work
     # @statement.documents.create
     respond_to do |format|
@@ -110,11 +111,11 @@ class StatementsController < ApplicationController
     attrs[:document][:author] = current_user
     @statement = statement_class.new(attrs)
     @statement.creator = current_user
-    @statement.save!
-    @statement.documents.create(attrs[:document])
-    
+    # we need to create the document, before adding it to the statement
+    @statement_document = StatementDocument.create(attrs[:document])
     respond_to do |format|
-      if @statement.save
+      # if the document is valid, and the question saves without complaints, and if its possible to add the valid_doc to the statement, we want to proceed. if not we're going to throw an error
+      if @statement_document.valid? && @statement.save && @statement.documents << @statement_document
         set_info("discuss.messages.created", :type => @statement.class.display_name)
         current_user.supported!(@statement)
         # render parent statement after creation, if any
@@ -127,15 +128,16 @@ class StatementsController < ApplicationController
           end
         }
       else
-        set_error(@statement.document)
+        set_error(@statement_document)
         format.html { flash_error and render :template => 'statements/new' }
-        format.js   { show_error_messages(@statement.document) }
+        format.js   { show_error_messages(@statement_document) }
       end
     end
   end
 
   # renders a form to edit statements
   def edit
+    @statement_document ||= @statement.document
     respond_to do |format|
       format.html { render :template => 'statements/edit' }
       format.js { replace_container('summary', :partial => 'statements/edit') }

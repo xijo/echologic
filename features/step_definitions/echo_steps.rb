@@ -1,4 +1,4 @@
-Given /^a proposal wihout echos$/ do
+Given /^a proposal without echos$/ do
   @proposal = Proposal.first
   @proposal.echo_details.destroy_all
 end
@@ -12,7 +12,6 @@ Then /^the proposal should have one visitor but no echos$/ do
   @proposal.reload
   @proposal.echo.visitor_count.should >= 1
 end
-
 
 Given /^I gave an echo already to a proposal$/ do
   @proposal = Proposal.first
