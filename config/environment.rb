@@ -19,23 +19,25 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  
+
   # Authlogic authentication gem.
   config.gem "binarylogic-authlogic",   :lib => "authlogic",    :source => "http://gems.github.com"
-  
+
   # Access control list gem Acl9.
-  config.gem "acl9",                    :lib => "acl9" ,        :source => "http://gemcutter.org"  
-  
+  config.gem "acl9",                    :lib => "acl9" ,        :source => "http://gemcutter.org"
+
   # Require the searchlogic gem.
   config.gem "binarylogic-searchlogic", :lib => "searchlogic",  :source => 'http://gems.github.com'
-  
+
   # Pagination gem from github
   config.gem 'mislav-will_paginate',    :lib => 'will_paginate', :source => 'http://gems.github.com'
-  
+
   # Require formtastic gem to build semantic forms
   config.gem "formtastic"
 
   config.gem 'test-unit', :lib => 'test/unit'
+
+  config.gem 'rubycas-client', :lib => 'casclient', :version => '2.1.0git171ccef'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

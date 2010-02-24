@@ -6,14 +6,16 @@
       <%= I18n.t('users.user_sessions.login.hello', :name => current_user.profile.full_name) %><br/>
     </span>
   <% else %>
-
-    <% form_for UserSession.new, :url => user_session_path do |f| %>
-      <span class="label"><%= I18n.t('users.user_sessions.login.email') %></span>
-      <span class="label"><%= I18n.t('users.user_sessions.login.password') %></span><br/>
-      <%= f.text_field :email, :class => 'loginField' %>
-      <%= f.password_field :password, :class => 'loginField' %>
-      <%= f.submit 'Login', :class => 'loginButton' %><br/>
-    <% end %>
+  <% cas_login_path = CASClient::Frameworks::Rails::Filter.config[:cas_base_url] + '?onlyLoginForm=true' -%>
+    <!-- <iframe src="<%= cas_login_path %>" style="border:none;"></iframe> -->
+    <!-- <% form_for UserSession.new, :url => user_session_path do |f| %> -->
+    <!--   <span class="label"><%= I18n.t('users.user_sessions.login.email') %></span> -->
+    <!--   <span class="label"><%= I18n.t('users.user_sessions.login.password') %></span><br/> -->
+    <!--   <%= f.text_field :email, :class => 'loginField' %> -->
+    <!--   <%= f.password_field :password, :class => 'loginField' %> -->
+    <!--   <%= f.submit 'Login', :class => 'loginButton' %><br/> -->
+    <!-- <% end %> -->
+    <%= link_to 'login with cas', CASClient::Frameworks::Rails::Filter.config[:cas_base_url] + "?service=#{root_url}" %>
 
     <%= link_to I18n.t('users.user_sessions.login.signup'), join_path, :class => 'ajaxLink bottomLabel' %>
     <%= link_to I18n.t('users.user_sessions.login.set_password'), new_password_reset_path, :class => 'ajaxLink bottomLabel' %><br/>

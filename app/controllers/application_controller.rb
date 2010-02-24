@@ -26,6 +26,12 @@ class ApplicationController < ActionController::Base
     flash[:notice] = I18n.t(i18n)
   end
 
+  before_filter CASClient::Frameworks::Rails::GatewayFilter
+  before_filter :check_for_cas_user
+
+  def check_for_cas_user
+    @user_session = UserSession.create(User.find_by_email(session[:cas_user])) if session[:cas_user]
+  end
 
   # GENERIC AJAX METHODS SECTION
 

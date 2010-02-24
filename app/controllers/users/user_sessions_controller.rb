@@ -1,5 +1,5 @@
 class Users::UserSessionsController < ApplicationController
-  before_filter :require_no_user, :only => [:new, :create]
+  before_filter :require_no_user, :only => [:new, :create, :login_with_cas]
   before_filter :require_user, :only => :destroy
 
   def new
@@ -26,6 +26,7 @@ class Users::UserSessionsController < ApplicationController
   def destroy
     current_user_session.destroy
     flash[:notice] = I18n.t('users.user_sessions.messages.logout_success')
-    redirect_to root_path
+    CASClient::Frameworks::Rails::GatewayFilter.logout(self, root_url)
+#    redirect_to root_path
   end
 end
